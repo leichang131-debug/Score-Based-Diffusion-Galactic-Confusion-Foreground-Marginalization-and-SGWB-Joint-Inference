@@ -1,0 +1,769 @@
+% !TeX program = xelatex
+% Standalone source; compile twice with XeLaTeX for references and contents.
+\documentclass[UTF8,fontset=fandol,a4paper,11pt]{ctexart}
+\usepackage[margin=24mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,bm,mathtools}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{xcolor,enumitem,fancyhdr}
+\usepackage{needspace,etoolbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{bookmark}
+\definecolor{accent}{HTML}{174E63}
+\definecolor{muted}{HTML}{52616B}
+\definecolor{pale}{HTML}{EDF3F5}
+\hypersetup{pdftitle={基于得分扩散模型的银河混淆前景边缘化与随机引力波背景联合推断研究思路及框架与实施方案},pdfauthor={研究方案整理},pdfsubject={TDC II / Score-based diffusion / SGWB}}
+\ctexset{section={format=\Large\bfseries},subsection={format=\large\bfseries},subsubsection={format=\normalsize\bfseries}}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt}
+\linespread{1.18}
+\setlist{nosep,topsep=5pt,leftmargin=2em}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.25}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 银河混淆前景边缘化与 SGWB 联合推断}
+\fancyhead[R]{\small 研究实施方案 v1.0}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\numberwithin{equation}{section}
+\pretocmd{\section}{\Needspace{9\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{7\baselineskip}}{}{}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Normal}{\mathcal N}
+\newcommand{\btheta}{\boldsymbol\vartheta}
+\newcommand{\bxi}{\boldsymbol\xi}
+\newcommand{\bs}{\boldsymbol s}
+\newcommand{\br}{\boldsymbol r}
+\newcommand{\bx}{\boldsymbol x}
+\newcommand{\bF}{\boldsymbol F}
+\newcommand{\bn}{\boldsymbol n}
+\newcommand{\bg}{\boldsymbol g}
+\newcommand{\key}[1]{\par\smallskip\noindent\colorbox{pale}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\textbf{#1}}}\par\smallskip}
+\begin{document}
+\begin{titlepage}
+\vspace*{17mm}
+\noindent{\color{accent}\large TDC II \quad / \quad SCORE-BASED DIFFUSION}
+\vspace{13mm}
+\begin{center}
+{\huge\bfseries 基于得分扩散模型的\\[6pt]银河混淆前景边缘化与\\[6pt]随机引力波背景联合推断\\[10pt]研究思路及框架与实施方案\par}
+\end{center}
+\vspace{12mm}
+\noindent\rule{\linewidth}{0.7pt}
+\vspace{6mm}
+\noindent\textbf{研究目标}\par
+在数值轨道与 TDI 2.0 观测模型下，对银河混淆前景进行概率建模和边缘化，在仪器噪声不确定性存在时，实现目标随机引力波背景的可校准检出与联合参数推断。\par
+\vspace{5mm}
+\noindent\textbf{方案定位}\par
+承接王赫老师前期与 GPT 讨论形成的课题框架，补齐可辨识性、完整似然、跨历元统计、人口泛化及科学验证接口；将信息诊断、条件后验矩检查与匹配二阶统计的增益归因纳入统一实施流程。
+\vfill
+\noindent 版本：v1.0（讨论与实施基准稿）\hfill 日期：2026 年 10 月 7 日\par
+\smallskip
+\noindent\small 状态说明：本文是研究设计与执行规范。官方脚本的生成逻辑已核对；小规模解析恒等式已数值验证。TDC 数据上的神经似然、推断精度和灵敏度增益尚待执行验证。PRL 是研究目标，不是预先确定的结果。
+\end{titlepage}
+
+\section*{一页研究逻辑与决策摘要}
+\addcontentsline{toc}{section}{一页研究逻辑与决策摘要}
+\key{主问题：银河前景中是否存在强二阶模型尚未利用、且能在前景与噪声未知时改善 SGWB 推断的信息？得分扩散模型能否可靠提取它？}
+\noindent\textbf{观测与推断对象。}将处理后的 XYZ 复数系数转成实向量，建立 $\br=\bF+\bg+\bn$。第一版固定 SGWB 谱形，联合推断四个功率尺度 $\btheta=(a,b_F,b_{\rm acc},b_{\rm oms})$；对前景随机实现积分，输出联合后验及 SGWB 边缘后验。
+
+\noindent\textbf{核心方法。}从独立前景实现和高斯 SGWB、仪器噪声生成条件观测样本，训练多扩散时间的条件 score；用概率流 ODE 计算完整模型似然；direct 与 residual score 作为两种竞争实现。
+
+\noindent\textbf{三个研究补充。}（1）先绘制分离信息地图，选择频带与表示；（2）以物理幅度热方程、前景条件后验矩和解析似然导数形成交叉检查；（3）以匹配联合协方差的高斯替代前景定位高阶信息的贡献。
+
+\begin{center}
+\begin{tikzpicture}[node distance=4mm, every node/.style={font=\small}, box/.style={draw=accent,rounded corners=2pt,fill=pale,text width=13.6cm,align=center,minimum height=8mm},arr/.style={-{Stealth[length=2mm]},thick,color=accent}]
+\node[box](a){物理与数据契约：源目录、明亮源选择、数值轨道、TDI、单位、边界};
+\node[box,below=of a](b){可解闭合：高斯、非高斯混合、不可辨识控制};
+\node[box,below=of b](c){信息诊断与强基线：联合协方差、前景自由度、参数退化};
+\node[box,below=of c](d){条件 score → 完整似然 → 四参数联合后验};
+\node[box,below=of d](e){覆盖率与零注入 → 等误报检出 → 增益归因 → 人口与扣除误差};
+\draw[arr](a)--(b);\draw[arr](b)--(c);\draw[arr](c)--(d);\draw[arr](d)--(e);
+\end{tikzpicture}
+\end{center}
+\noindent\textbf{最小可行规模。}先在可解低维模型上闭合，再接入约 192 维的联合观测（3 通道、实虚部、16 个频率系数、2 个历元）。此维数是起点；频率和时间选择以物理诊断为准，两个历元不等于完整年度分析。
+
+\noindent\textbf{首个里程碑。}交付可信的数据适配器、解析控制、强高斯基线、一个条件 score 似然及四参数后验；通过独立注入检验。未达到数值闭合时修复接口；没有额外信息时缩小或调整科学主张。
+
+\noindent\textbf{论文需要的证据。}增益在 nuisance 参数未知、误报率一致且覆盖率合格时仍成立；可定位其物理来源，并明确在人口变化、扣除误差及信息退化条件下的适用边界。
+\clearpage
+\begingroup
+\small\linespread{1.0}\selectfont
+\tableofcontents
+\endgroup
+\clearpage
+
+\section{课题的收敛定位与证据边界}
+\subsection{承接前期框架，明确科学主线}
+王赫老师与 GPT 的讨论经历了从地面探测器 learned-score detection，到时变 TDI 概率建模，再到银河混淆前景边缘化与 SGWB 联合推断的收敛过程\cite{discussion}。本文采用最后一个定位。TDI 与数值轨道处理是观测物理基础；得分模型服务于前景边缘化；单个双星参数估计与全局源拟合提供相关经验，但不作为本课题完成的前置要求。
+
+将科学问题分成三个层次：\textbf{可辨识性}决定数据能区分什么；\textbf{统计建模}决定模型是否正确利用可用信息；\textbf{科学性能}决定在校准成立时，SGWB 的误报、检出、偏差或精度是否改善。这三层不能用训练损失的下降合并替代。
+
+第一篇工作的候选主张是：在明确的银河前景残余条件下，源级统计结构能够提供强二阶模型之外的有效信息，并改善未知前景与仪器噪声条件下的 SGWB 推断。另一种可接受但需要独立证据的主张是：更可靠的前景概率模型降低了前景失配引起的 SGWB 偏差或假检出。两者应依据实验结果选择，不预设同时成立。
+
+\subsection{四类信息的可信程度}
+\noindent\begin{tabularx}{\linewidth}{P{2.7cm}Y}
+\toprule
+类别 & 本文使用方式\\\midrule
+已核对的公开实现 & Triangle/TDC 官方仓库与前景、SGWB、噪声脚本用于定义实际模拟入口；正式实验还须锁定提交版本。\\
+数学推导 & 在指定独立性、条件高斯和光滑性假设下成立；不能直接推广到未知非高斯仪器噪声或非高斯目标背景。\\
+前期讨论中的实验报告 & 作为研究动机和教训；未独立复核其附件、服务器代码和原始数据，不将其数字作为本课题的新结果。\\
+方案中的配置与门槛 & 作为首轮建议，需在开发集上确定后冻结；不得看过最终测试结果后反向调节。\\\bottomrule
+\end{tabularx}
+
+本文不宣称“首次用 AI 边缘化随机前景”。既有 SGWB 的模拟驱动推断研究已经使用神经似然比处理复杂 nuisance 成分\cite{saqqara}。年度调制和循环平稳分析也已有研究基础\cite{gaussianity,cyclo}。本课题的贡献需要落在可利用物理信息、经过验证的推断机制与现实条件下的可靠增益上。
+
+\subsection{第一阶段范围}
+第一阶段选定一个目标 SGWB 谱族、固定轨道产品和 TDI 组合，采用有限频带及少量联合历元，允许前景与两类仪器噪声强度未知。暂固定目标谱指数与人口形状，随后逐步释放。完整年度调制、多个前景人口参数、链路级噪声参数和明亮源扣除误差均有后续入口，但按风险顺序增加。
+
+\section{统一生成模型、符号与统计假设}
+\subsection{数据空间与三种随机成分}
+令 $\br\in\mathbb R^D$ 为预先定义的观测向量，可由若干历元与频率上的 XYZ 复数系数实数化得到。所有分量必须采用一致的单位、采样时间、窗函数和 FFT 归一化。建立
+\begin{equation}
+\br=\bF+\bg+\bn.
+\label{eq:data}
+\end{equation}
+这里 $\bF$ 是给定明亮源处理规则后的银河前景，$\bg$ 是指定的目标 SGWB，$\bn$ 是仪器噪声。银河前景本身也是引力波，因此目标是区分随机成分，而非简单区分引力波与噪声。目标 SGWB 的测量也不自动确定其宇宙学起源。
+
+\par\noindent\begin{minipage}{\linewidth}\centering
+\begin{tabular}{P{2.5cm}P{12cm}}
+\toprule 符号 & 含义\\\midrule
+$a\geq0$ & 目标 SGWB 相对于参考背景的功率尺度；零背景为 $a=0$。\\
+$\gamma$ & SGWB 谱指数，第一阶段固定为 $\gamma_0$。\\
+$b_F$ & 受控实验中的前景功率尺度，时间序列振幅乘 $\sqrt{b_F}$。\\
+$b_{\rm acc},b_{\rm oms}$ & 加速度噪声与光学测量噪声的功率尺度。\\
+$\lambda_F$ & 后续释放的人口、谱形、各向异性或选择规则参数。\\
+$\bxi$ & 已知的轨道、历元、TDI、采样及外部仪器状态；未知噪声强度属于推断参数。\\
+$\tau\in[0,T]$ & 人工扩散时间，既不是观测时间，也不是 SGWB 的物理幅度。\\
+$\psi$ & 神经网络参数，与物理参数 $\btheta$ 区分。\\
+$K_\xi$、$C_{{\rm acc},\xi}$、$C_{{\rm oms},\xi}$ & 在相同观测表示下的单位功率协方差。\\\bottomrule
+\end{tabular}
+\end{minipage}\par\smallskip
+
+\subsection{第一版四参数模型}
+定义无量纲参考功率谱
+\begin{equation}
+\Omega_{\rm GW}(f)=a\,\Omega_{\rm ref}
+\left(\frac{f}{f_{\rm ref}}\right)^{\gamma_0},\qquad
+\btheta=(a,b_F,b_{\rm acc},b_{\rm oms}).
+\end{equation}
+由响应与预处理得到 $K_\xi$。从 $\Omega_{\rm GW}$ 到应变谱再到 TDI 数据的系数必须遵循所用模拟器的单边/双边谱、极化与单位约定，并用注入验证，不能从另一套约定直接复制常数。
+
+在给定参数与状态时，先假设三成分独立，且
+\begin{align}
+\bg&\sim\Normal(0,aK_\xi),\\
+\bn&\sim\Normal(0,C_n),\qquad
+C_n=b_{\rm acc}C_{{\rm acc},\xi}+b_{\rm oms}C_{{\rm oms},\xi}.
+\end{align}
+前景可以非高斯，并允许在同一观测向量内部有跨频率、通道和历元相关性。仪器噪声的两类成分若存在互相关，需将其交叉项纳入模型；当前加法形式默认它们独立。
+
+\subsection{边缘化与联合推断的准确含义}
+记 $C=C_n+aK_\xi$，则
+\begin{equation}
+p(\br\mid\btheta,\bxi)=
+\int p_F(\bF\mid b_F,\bxi)\,
+\Normal(\br-\bF;0,C)\,\dd\bF.
+\label{eq:marginal}
+\end{equation}
+这是对\textbf{前景随机实现}的边缘化；$b_F$ 仍是待推断参数。然后
+\begin{equation}
+p(\btheta\mid\br,\bxi)\propto
+p(\br\mid\btheta,\bxi)\,p(\btheta),
+\qquad
+p(a\mid\br)=\int p(\btheta\mid\br)\,\dd b_F\dd b_{\rm acc}\dd b_{\rm oms}.
+\end{equation}
+第二个积分才是对前景与噪声强度等 nuisance 参数的边缘化。训练模拟器在每个参数条件下抽取独立前景实现，可以直接学习式\eqref{eq:marginal}的分布，无需给每次观测固定一条前景估计。
+
+各成分的后验均值或后验样本可作为诊断，但单次混合观测通常不确定唯一的真实随机波形。主结果应报告参数、成分谱及其不确定性。
+
+\section{六个关键环节的详细论证与处理}
+\subsection{环节一：可辨识性与扩散增益必须分别验证}
+数据可以通过谱形、天区分布、轨道调制、通道响应及高阶统计区分成分。若一个高斯模型已经正确描述全部均值和联合协方差，那么所有纯高斯信息已被利用。非平稳性不等于非高斯性，检测到峰度也不等于 SGWB 可测性提高。
+
+\textbf{不可辨识反例。}令 $\bF\sim\Normal(0,bK)$、$\bg\sim\Normal(0,aK)$ 且独立，其他噪声已知，则 $p(\br\mid a,b)$ 只依赖 $a+b$。似然沿该和不变的方向形成脊；后验的横向约束来自先验边界或附加信息。此控制必须检验模型没有凭空制造成分分离。
+
+\textbf{实施。}先计算参数变化引起的均值、协方差和可测高阶结构变化；检查基线后验相关性和局部信息矩阵的病态程度。对 $b_F$ 或噪声固定的结果只称为条件实验，不能称为完成联合分离。随后在独立测试集上比较同样 nuisance 自由度下的增益。
+
+\textbf{验收。}高斯可辨识控制能恢复真值；不可辨识控制保持正确退化；对先验范围变化敏感的约束需明确标注。若只在强先验下得到窄后验，主张应限定为先验辅助推断。
+
+\subsection{环节二：源级结构与独立人口不是同一回事}
+官方 TDCII2.8 的前景脚本读取全体 GB 数据，并用明亮源目录重建其波形后相减；注释说明明亮源选择使用 SNR 阈值 7 的迭代流程\cite{foreground}。这为源级结构提供了入口。但它不保证当前数据包含大量独立人口，也不等同于实际参数估计误差下的残余。
+
+建议将数据分为四级：D0 是官方固定实现；D1 保持人口参数，改变允许变化的随机相位等条件实现；D2 重采样独立源人口；D3 对明亮源进行估计后扣除，保留误差。每级结果必须注明所条件于的人口信息。
+
+源位置、频率和相位对应共享的长期结构。把固定前景切为许多窗口，或只换仪器噪声种子，不能视为 D2。独立目录也不能仅靠任意打乱数据生成，重采样应符合人口模型。若人口生成工具尚未获得，可先执行 D0/D1 的受控实验，但最终泛化结论受限。
+
+\textbf{明亮源选择的影响。}改变人口、观测时长、背景或噪声后，可分辨源集合可能变化。简单令 $\bF\mapsto\sqrt{b_F}\bF$ 只对应固定选择集合的幅度实验。现实扩展应重新执行选择规则，或显式条件于固定目录并解释其限制。若选择依赖观测数据，选择与扣除过程应进入模拟流程，避免忽略选择偏差。
+
+\subsection{环节三：TDI 复杂性先进入强二阶基线}
+给定状态，确定线性操作满足
+\begin{equation}
+\boldsymbol y\sim\Normal(0,C_y),\quad
+\boldsymbol d=T_\xi\boldsymbol y
+\quad\Rightarrow\quad
+\boldsymbol d\mid\bxi\sim\Normal(0,T_\xi C_yT_\xi^{\mathsf T}).
+\end{equation}
+即便 $T_\xi$ 含时变延迟、不等臂与有限窗，条件高斯性仍保持。因此要区分三种模型缺失：二阶协方差没建全、状态混合没条件化、真正的条件非高斯结构。前两者也可产生表观“复杂分布”，但不能据此宣称发现高阶物理信息。
+
+XYZ 与 AET 若由可逆矩阵 $U$ 连接，则 $C_{\rm AET}=UC_{\rm XYZ}U^{\mathsf T}$（复表示用共轭转置）。完整密度变换只差已知 Jacobian。丢弃 T 通道、只用自功率、忽略互谱或强行对角化才可能损失信息。T 通道也不应在所有频率下被当作严格无信号通道。
+
+\textbf{实施。}以 XYZ 为统一输入，AET 为独立变换检查；构建当前有限联合向量的协方差，检验跨频率与历元的残余相关。有限样本协方差需收缩或结构化估计，正则化在开发集选定。经验协方差的不确定性应通过独立模拟或重采样评估，不能把一个噪声很大的估计器当作理想高斯极限。
+
+\subsection{环节四：从数据 score 到完整似然}
+数据 score 给出 $\nabla_r\log p$，而参数推断比较的是不同 $\btheta$ 的密度。对于任意只依赖参数的 $c(\btheta)$，$\nabla_r[\log p+c]=\nabla_r\log p$。因此单次数据空间路径积分不能确定联合参数似然的归一化。
+
+第一版主路采用条件概率流 ODE；用已知终端密度和散度积分定义归一化的流模型密度。近似 score 对应的流密度不保证等于真实数据分布，必须验证其参数间似然差、后验和覆盖率。物理幅度积分只作为辅助交叉检查；固定 nuisance 时的幅度比，不能直接拼成完整四参数似然。
+
+\textbf{数值接口。}使用固定训练集标准化，保留 Jacobian；审计 $\tau_{\min}>0$ 与有限终端时间近似；先在低维使用精确散度，再检验随机迹估计。固定探针可减少参数比较中的随机抖动，但仍需增加探针数做收敛检查。无偏对数似然估计不等于无偏似然，不能未经证明就作为精确伪边缘 MCMC 的输入。
+
+\subsection{环节五：边缘化共享前景后，历元通常仍相关}
+设源目录或潜变量为 $z$，则多个历元的正确联合模型是
+\begin{equation}
+p(r_1,\ldots,r_m\mid\btheta)=
+\int p(z\mid\btheta)\,p(r_1,\ldots,r_m\mid z,\btheta)\,\dd z.
+\end{equation}
+即使给定 $z$ 后各段独立，对 $z$ 积分后也一般不独立。第一版将少量历元联合输入；同一模拟样本中的各历元使用同一源目录并保持相位演化。跨历元相关不能通过给每段独立重采样前景来人为消除。
+
+如果未来高维计算需要分块，可选择：显式共享潜变量的层级模型；经诊断支持的弱相关近似；或明确的复合似然并校准其不确定性。不能直接把重叠窗口或已边缘化的历元密度连乘后宣称得到精确年度似然。
+
+\textbf{验收。}在可解共享潜变量模型上比较联合密度与乘积近似，测量后者对区间的影响；TDC 实验再比较历元数、时间间隔及分块策略。增加观测量后，校准不能随之系统性恶化。
+
+\subsection{环节六：检出、精度与校准共同决定是否成功}
+定义 $H_0:a=0$ 与 $H_1:a>0$。参数估计阶段可用正幅度先验，但零假设必须另行实现；对数幅度参数化不包含 $a=0$，不能把很小的正值无条件当作零假设。
+
+首轮可采用经过零注入校准的剖面似然比
+\begin{equation}
+q(\br)=2\left[max_{a\geq0,u}\ell(a,u;\br)-\max_u\ell(0,u;\br)\right],
+\end{equation}
+其中 $u$ 为 nuisance 参数。$a=0$ 位于边界，且模型可能有退化，不能默认使用普通 Wilks 渐近分布。Bayes factor 可作为后续指标，但要明确 $H_1$ 的幅度先验及证据积分误差。
+
+独立零注入集确定阈值，另一测试集测误报；有注入集在相同阈值规则下测检出。前景与噪声参数应覆盖预定范围，既报告先验平均误报，也报告困难参数切片的条件误报。覆盖率同样需要同时检查先验预测平均与固定真值网格，避免平均值掩盖局部失效。
+
+\key{一个更窄的后验只有在偏差、覆盖率与误报仍合格时，才能解释为更好的测量。}
+
+\section{三个补充思路及其实现优先级}
+\subsection{补充一：分离信息地图}
+\textbf{目的。}在训练大模型前找到真正有用的观测区域，区别“统计结构明显”和“对 SGWB 分离有帮助”。按频率、历元及前景选择规则计算成分功率、互谱、相干性、跨频率相关、年度调制及非高斯诊断。非高斯量应先排除状态混合与方差变化的影响，并报告有限样本误差；不能预设偏离一定表现为重尾或正峰度。
+
+设 $t_i(\br)=\partial_{\vartheta_i}\log p(\br\mid\btheta)$ 是\emph{物理参数得分}，与数据 score $\nabla_r\log p$ 区分。局部 Fisher 信息为
+\begin{equation}
+I_{ij}=\E[t_it_j].
+\end{equation}
+对于 $\btheta=(a,u)$，在正则且 nuisance 信息块可逆的条件下，定义
+\begin{equation}
+I_{a\mid u}=I_{aa}-I_{au}I_{uu}^{-1}I_{ua}.
+\label{eq:fisher}
+\end{equation}
+它衡量 nuisance 未知时，局部还剩多少关于 $a$ 的信息。若均值为零且分布为高斯，
+\begin{equation}
+I_{ij}^{G}=\frac12\tr\left(C_G^{-1}C_{G,i}C_G^{-1}C_{G,j}\right),
+\quad C_{G,i}=\partial_{\vartheta_i}C_G.
+\end{equation}
+有参数依赖均值时还需增加均值导数项。
+
+\textbf{执行顺序。}先用高斯解析信息检查退化；再在可解非高斯模型比较完整信息；最后在训练充分、似然导数可靠的模型上估计对应信息。频带与历元选择仅使用开发数据并冻结。奇异信息块应报告秩亏或退化，不能靠强正则化制造可辨识性。边界 $a=0$ 与非局部后验使用注入实验，不依赖 Fisher 近似代替。
+
+\textbf{产物。}一张频率--历元信息图、若干候选联合观测表示及选择理由；特别标出加入 nuisance 后信息下降的位置。对不同频带的信息不能在存在相关性时简单相加。
+
+\subsection{补充二：物理幅度、数据 score 与前景后验矩的连接}
+固定前景与噪声参数、轨道及 SGWB 谱形，写 $p_a(\br)$。由于增加 $a$ 等价于增加协方差 $aK$ 的高斯卷积，满足
+\begin{equation}
+\partial_a p_a=\frac12\tr(K\nabla_r^2p_a).
+\end{equation}
+在足够光滑、可交换微分与积分的条件下，令 $\bs_a=\nabla_r\log p_a$，得到
+\begin{equation}
+\partial_a\log p_a
+=\frac12\left[\tr(K\nabla_r\bs_a)+\bs_a^{\mathsf T}K\bs_a\right].
+\label{eq:heat}
+\end{equation}
+这里 $K$ 不随 $a$ 改变；如果释放谱指数，应使用相应协方差导数重新推导。有限人工扩散时间的 score 对应扰动分布，不可直接替换式\eqref{eq:heat}中的原始数据 score。
+
+令 $C=C_n+aK$、$\boldsymbol u=\br-\bF$。对式\eqref{eq:marginal}求导，得到 Fisher 条件期望恒等式
+\begin{equation}
+\partial_a\log p_a(\br)=\frac12\left\{
+\E_{F\mid r,a}\!\left[\boldsymbol u^{\mathsf T}C^{-1}KC^{-1}\boldsymbol u\right]
+-\tr(C^{-1}K)\right\}.
+\label{eq:moment}
+\end{equation}
+设 $m_F=\E[\bF\mid\br,a]$、$V_F=\Cov(\bF\mid\br,a)$，则
+\begin{align}
+\bs_a&=C^{-1}(m_F-\br),\label{eq:tweedie}\\
+\nabla_r\bs_a&=-C^{-1}+C^{-1}V_FC^{-1}.
+\label{eq:hessian}
+\end{align}
+将式\eqref{eq:tweedie}、\eqref{eq:hessian}代入式\eqref{eq:heat}即恢复式\eqref{eq:moment}。它们将前景边缘化、数据空间几何和物理幅度似然导数连接起来。
+
+\textbf{研究价值。}这提供三路交叉检查：解析或概率流似然的参数导数；数据 score 及其导数；前景条件后验矩。不能仅因三路都来自同一个近似网络且相互一致，就断言它们接近真实似然；至少在可解模型中需要独立真值。
+
+\textbf{数值验证状态。}已在一个六维、三成分高斯混合前景模型的 100 个随机点验证。热方程与后验矩表达最大差约 $6.7\times10^{-15}$；与步长 $10^{-5}$ 的中心差分最大差约 $2.4\times10^{-10}$。这只验证解析实现，不是 TDC 或学习模型的性能。正式实现需将此控制保存成版本化测试。
+
+\textbf{风险与定位。}式\eqref{eq:heat}需要 score 的导数，式\eqref{eq:moment}需要可靠条件后验矩，两者均可能较贵。第一阶段只将其作为低维验证和误差诊断。幅度积分
+\begin{equation}
+\log\frac{p(\br\mid a_1,u)}{p(\br\mid a_0,u)}
+=\int_{a_0}^{a_1}\partial_a\log p(\br\mid a,u)\,\dd a
+\end{equation}
+仍缺少随 $u$ 变化的锚点 $p(\br\mid a_0,u)$；联合推断继续使用完整似然。标准恒等式及其数值验证不单独构成原创性声明。
+
+\subsection{补充三：匹配二阶统计的替代实验}
+在相同参数与观测表示下估计源级前景的均值 $\mu_F$ 和协方差 $C_F$，构造
+\begin{equation}
+\bF_G\sim\Normal(\mu_F,C_F).
+\end{equation}
+将真实前景与高斯替代前景分别和同样的 SGWB、仪器噪声模型组合，比较各方法。均值、跨通道、跨频率和跨历元协方差应匹配；只匹配平均 PSD 不足以隔离高阶效应。
+
+协方差估计使用独立样本或与训练一致的预算。替代数据需验证二阶匹配误差及其不确定性。另可提供使用更大模拟预算的“近 oracle 二阶基线”，但应标明其额外成本；它有助于排除弱协方差估计造成的虚假优势。
+
+\textbf{归因逻辑。}若 score 对源级前景有增益，对二阶匹配高斯前景恢复到高斯基线，支持高阶信息解释；若两者均改善，应首先排查协方差遗漏、状态处理或数值差异；若 source-level 非高斯性明显但 SGWB 无增益，可能说明这部分结构不携带可用于解除参数退化的信息。
+
+\noindent\begin{tabularx}{\linewidth}{P{3cm}Y P{2.3cm}}
+\toprule 补充思路 & 第一阶段角色 & 实现优先级\\\midrule
+信息地图 & 选择物理频带、历元与 nuisance 范围 & 高，训练前\\
+后验矩交叉检查 & 可解模型上的数学闭合；后续诊断 & 中，先低维\\
+二阶匹配替代 & 检验科学增益的归因 & 高，结果前必做\\\bottomrule
+\end{tabularx}
+
+\section{数据、模拟器与预处理的实施契约}
+\subsection{官方入口与组件组合}
+Triangle-Simulator 提供时域观测和 TDI 模拟；Triangle-GB 提供快速 GB 响应\cite{simulator,gb}。TDCII2.8 的前景、SGWB、噪声与组合脚本是本课题的具体入口\cite{foreground,sgwb,noise,combine}。正式实验锁定相同轨道、时间轴、TDI 组合、单位、插值与响应约定；快速响应必须在所选频带和历元对高保真实现做抽样比较。
+
+已核对脚本中的几个细节需要在适配时记录：前景以完整 GB 减去明亮 GB 构造；SGWB 使用幂律与多方向响应求和；噪声脚本启用加速度与光学测量噪声，具有链路间幅度差异；部分生成脚本将边界若干样本置零。\textbf{边界置零不等于物理数据为零}，进入 FFT 前应确定统一有效区间和裁剪规则，避免不同成分的边界指纹成为网络捷径。具体数值随版本核对并写入元数据。
+
+保持线性预处理 $M$ 对三种成分完全一致，使 $M(F+g+n)=MF+Mg+Mn$。若包含数据依赖扣除、阈值或其他非线性步骤，须整体模拟其作用，不能继续默认简单独立高斯卷积。
+
+\Needspace{23\baselineskip}
+\subsection{建议的统一数据对象}
+每次模拟至少保存下列字段。真值组件仅用于训练数据生成及离线评价，推断接口不能读入测试样本的真值组件。
+\par\noindent\begin{minipage}{\linewidth}\centering
+\begin{tabular}{P{3.4cm}P{11.1cm}}
+\toprule 字段 & 内容与约束\\\midrule
+版本与物理状态 & 仓库 commit、轨道文件哈希、TDI 组合、插值阶数、响应版本、单位约定。\\
+人口与选择 & population ID、人口参数、明亮源选择规则、目录哈希、扣除方式及误差模型。\\
+时间与频率 & $t_0$、采样间隔、时长、有效边界、窗函数、频点索引、FFT 缩放。\\
+随机数标识 & 人口、相位、SGWB、各噪声成分、训练扰动分别使用可追踪随机流。\\
+物理参数 & $a,\gamma,b_F,b_{\rm acc},b_{\rm oms}$，以及后续释放的参数。\\
+观测与标签 & XYZ、可选 AET、组件真值、最终实向量；标签访问与推断路径隔离。\\
+表示与划分 & real/imag 打包顺序、标准化版本、训练/开发/校准/测试分组标识。\\\bottomrule
+\end{tabular}
+\end{minipage}\par\smallskip
+
+\subsection{FFT、实数化与固定标准化}
+在论文与代码中给出唯一 FFT 定义，例如 $\tilde x_k=\Delta t\sum_j w_jx_j e^{-2\pi i jk/N}$。对应协方差应包含窗与缩放，不把 periodogram 的 PSD 单位直接当作 Fourier 系数方差。实信号的负频率由正频率确定，不能作为独立样本重复计数；DC 与 Nyquist 实系数需单独处理或排除。
+
+采用 $\br=(\Re\tilde d,\Im\tilde d)$ 的固定排列，直接定义 $\Cov(\br)$，避免复高斯表示中常见的 $1/2$ 因子错误。若复变量不是 proper complex Gaussian，仅有 $\E[dd^\dagger]$ 不够，还需伪协方差 $\E[dd^{\mathsf T}]$；实数化完整协方差可统一处理。
+
+为稳定训练，可用训练集确定的可逆矩阵 $W$ 与中心 $\mu_0$，令 $\bx=W(\br-\mu_0)$。于是
+\begin{equation}
+\log p_r(\br\mid\btheta)=\log p_x(\bx\mid\btheta)+\log|\det W|,
+\quad \bs_r=W^{\mathsf T}\bs_x.
+\end{equation}
+固定 $W$ 的 Jacobian 在参数间似然比中抵消。若改为参数依赖的白化，必须保留其 Jacobian，且求参数导数时包含输入变化；首轮避免这一额外复杂度。降维投影不可逆时只能声称推断投影数据的分布，并以同样投影比较所有方法。
+
+\subsection{数据划分与泄漏控制}
+按最上层共享潜变量划分，至少保证同一 population ID 不跨训练与独立人口测试。同一目录衍生的相位样本、噪声重抽样和窗口应带完整谱系，以便判断独立性。建立五个用途明确的数据子集：训练集拟合参数；开发集选择模型与超参数；校准集设检出阈值；同分布测试集评估泛化；外分布测试集评估人口/噪声/扣除变化。
+
+频带选择、标准化、协方差收缩与阈值均不能使用最终测试标签。数据缓存复用时需防止用相同源实现形成训练与测试配对。评价两种方法时则应使用相同测试观测；配对评价可降低比较方差，但置信区间重采样应按独立人口或实现簇进行。
+
+\section{四层研究基线与公平比较}
+\subsection{B0：可解控制与数学真值}
+建立三类可解数据：（i）全高斯可辨识模型；（ii）高斯混合前景加高斯背景与噪声；（iii）同协方差形状的不可辨识模型。B0 应有精确条件密度、数据 score、物理参数导数和可计算后验。它是整个方案的真值检查工具，不用于证明天体物理效果。
+
+\subsection{B1：强二阶高斯基线}
+在当前有限观测向量上定义
+\begin{align}
+C_G&=b_FC_F+aK_\xi+b_{\rm acc}C_{{\rm acc},\xi}
++b_{\rm oms}C_{{\rm oms},\xi},\\
+\ell_G&=-\frac12\left[(\br-\mu)^{\mathsf T}C_G^{-1}(\br-\mu)
++\log\det C_G+D\log(2\pi)\right].
+\end{align}
+这里固定选择集合、线性功率缩放及成分独立假设与生成器一致。Cholesky 分解与线性求解优先于显式逆矩阵。协方差必须正定，若存在观测冗余应先固定满秩表示；正则化不能隐藏退化。
+
+B1 保留所选向量中的所有二阶相关。如果计算上进一步使用分块或每频点 $3\times3$ 模型，应单独命名并测量近似误差，不将其称为完全联合基线。
+
+\subsection{B2：具有前景自由度的物理基线}
+加入少量前景谱形、调制或噪声自由度，检验 score 优势是否依赖固定前景模板。参数变化保持协方差正定，可在已验证的物理谱族上插值，或对正谱采用平滑参数化。避免同时放开大量无约束频点导致问题主要由先验决定。
+
+既有研究表明前景建模的复杂度会影响 SGWB 重建\cite{foregroundmodel}。B2 与神经模型应使用相同的物理参数范围和先验；若模型允许的前景族不同，应明确把差异归于模型假设，而非单纯归于估计器。
+
+\subsection{B3：一种其他模拟驱动方法}
+选择条件 normalizing flow 密度估计或神经似然比估计之一。前者提供易比较的归一化密度接口；后者与已有 SGWB SBI 工作连接较直接\cite{saqqara}。第一轮不同时维护多个框架。输入、模拟预算、先验、数据划分与调参预算尽量一致，并报告训练成本和单次推断成本。
+
+\subsection{比较矩阵的最小集合}
+\noindent\begin{tabularx}{\linewidth}{P{2.7cm}Y Y}
+\toprule 数据场景 & 必要对照 & 必须回答的问题\\\midrule
+可解高斯 & 精确似然、B1、score & 是否恢复已知概率模型？\\
+可解混合前景 & 精确似然、B1、score & 是否正确利用非高斯信息？\\
+TDC 源级前景 & B1、B2、direct/residual & nuisance 未知时是否改善？\\
+匹配二阶高斯替代 & B1、score & 增益是否源于高阶结构？\\
+人口/扣除变化 & B1、B2、最终 score、B3 & 增益是否稳健且可归因？\\\bottomrule
+\end{tabularx}
+
+\section{得分扩散模型的训练与完整似然实现}
+\subsection{学习对象与条件变量}
+直接学习边缘化后的观测分布 $p_x(\bx\mid\btheta,\bxi)$。训练中先抽取参数，再从生成器抽取前景、SGWB 和噪声实现。物理参数作为条件，是在评估候选参数的概率分布；推断时只扫描候选参数，不读取观测的真实参数。已知轨道与处理状态可作为 $\bxi$，未知仪器量必须纳入 $\btheta$ 或外部约束。
+
+若训练参数分布与目标先验不同，只要条件密度学得充分，推断仍应乘目标先验；训练分布的主要影响是覆盖与误差分配。任何截断训练都需检查后验质量是否跑到训练边界。保留专门的 $a=0$ 训练与验证样本，以支持零假设计算。
+
+\subsection{扰动过程与训练目标}
+采用易复用的 VP 类过程或其他具有已知高斯扰动核的 SDE。记
+\begin{equation}
+\bx_\tau=\alpha_\tau\bx_0+\sigma_\tau\boldsymbol\epsilon,
+\qquad\boldsymbol\epsilon\sim\Normal(0,I).
+\end{equation}
+条件去噪得分匹配目标为
+\begin{equation}
+\mathcal L(\psi)=\E\left[
+w(\tau)\left\|\bs_\psi(\bx_\tau,\tau\mid\btheta,\bxi)
++\frac{\boldsymbol\epsilon}{\sigma_\tau}\right\|^2\right].
+\label{eq:dsm}
+\end{equation}
+在理想总体最优下，网络恢复扰动后观测分布的 score。损失权重、扩散时间采样和噪声预测/score 参数化均需记录。不同表示或不同权重下的 loss 数值不能直接横比科学性能。
+
+\subsection{direct 与 residual 的公平实现}
+首轮采用相近参数量、相同数据和训练预算的小 MLP。direct 模型直接输出 $\bs_\psi$；residual 模型为
+\begin{equation}
+\bs_\psi=\bs_{{\rm ref},\tau}+\Delta\bs_\psi.
+\end{equation}
+若参考原始分布为 $\Normal(\mu_{\rm ref},C_{\rm ref})$，则
+\begin{equation}
+\bs_{{\rm ref},\tau}(\bx_\tau)=
+-\left(\alpha_\tau^2C_{\rm ref}+\sigma_\tau^2I\right)^{-1}
+\left(\bx_\tau-\alpha_\tau\mu_{\rm ref}\right).
+\end{equation}
+参考分布应与条件参数一致。残差为零可恢复参考模型，但训练后的非零残差并不保证性能自动不差于基线，仍需独立验证。比较模型容量、样本效率、完整似然误差与下游校准，不以哪一种形式更“物理”预先裁决。
+
+\subsection{从噪声生成样本与计算密度}
+对于前向 SDE
+\begin{equation}
+\dd\bx=f(\bx,\tau)\dd\tau+g(\tau)\dd W_\tau,
+\end{equation}
+反向生成从终端噪声开始，按递减的 $\tau$ 积分
+\begin{equation}
+\dd\bx=\left[f-g^2\bs_\psi\right]\dd\tau+g\dd\overline W_\tau.
+\end{equation}
+对应概率流速度场为
+\begin{equation}
+v_\psi=f-\frac12g^2\bs_\psi,\qquad
+\frac{\dd\bx}{\dd\tau}=v_\psi.
+\end{equation}
+沿由数据流向噪声的轨迹，连续变量变换给出
+\begin{equation}
+\log p_{\psi,0}(\bx_0\mid\btheta,\bxi)
+=\log p_T(\bx_T\mid\btheta,\bxi)
++\int_0^T\nabla_x\cdot v_\psi(\bx_\tau,\tau)\,\dd\tau.
+\label{eq:pf}
+\end{equation}
+符号通过解析高斯模型检查。精确 score、适当端点与理想求解时，概率流与 SDE 具有相同边缘分布\cite{scoresde}；近似模型下两种采样方式未必完全一致，生成诊断也不能代替密度验证。
+
+\subsection{必须记录的数值误差预算}
+\begin{enumerate}
+\item \textbf{终端误差：}有限 $T$ 时原始数据依赖未必完全消失；测试各参数条件下终端分布是否足够接近所用 $p_T$。
+\item \textbf{小时间截断：}实际积分若从 $\tau_{\min}>0$ 开始，需明确所评估的是平滑分布还是采用了经过验证的端点近似。通过降低 $\tau_{\min}$ 检查参数后验稳定性。
+\item \textbf{散度估计：}低维用自动微分精确迹；高维使用随机迹时检查探针数和种子敏感性，固定评估策略以避免采样器读到不可控抖动。
+\item \textbf{ODE 误差：}扫描容差，比较关心区域内的参数间 $\Delta\log p$，并测量后验位移，不只检查单点绝对密度。
+\item \textbf{统计学习误差：}多初始化或独立训练估计模型变动；将模拟、训练与推断成本分开记录。
+\end{enumerate}
+在可解模型上建议先将后验主要质量区域内 $\Delta\log p$ 的典型误差压到 $0.1$ 量级以下，并检查尾部；这只是开发目标，是否足够取决于后验实际变化。最终门槛应根据允许的偏差和覆盖误差冻结。
+
+\section{整体实施流程与阶段验收}
+\subsection{P0：冻结研究问题与实验定义}
+\textbf{输入：}老师确认的目标谱族、人口与轨道资源。\textbf{工作：}确定参数范围、先验、明亮源定义、目标频带候选、方法预算和成功标准。\textbf{产物：}一页科学问题规范与实验配置。\textbf{验收：}每个自由参数有物理含义，零假设可执行，数据与人口资源缺口明确。
+
+科学规范需明确：结果条件于哪些已知量；哪些未知量被联合推断；哪种结构被假设为高斯；什么证据足以称为高阶信息增益；哪些系统误差只在后续测试。此时预设发展路线，不能预设模型必须胜出。
+
+\subsection{P1：运行教程，形成统一适配器}
+\textbf{工作：}运行 Triangle-Simulator 的噪声、科学分析与预处理教程；连接 GB 快速响应；复现 TDCII2.8 各组件及组合逻辑；生成短数据 smoke run 和代表性长段诊断。\textbf{产物：}统一数据对象、版本记录、PSD/互谱、边界与单位报告。
+
+\textbf{验收：}成分线性和重建一致；XYZ/AET 变换闭合；FFT 能量与方差归一化一致；边界裁剪有依据；固定配置与种子可复现；不同种子确实改变目标随机成分。快速响应误差要在本课题选定表示下检查，不能仅引用仓库对其他场景的验证。
+
+\subsection{P2：可解模型与似然闭合}
+\textbf{顺序：}解析高斯 $\rightarrow$ 线性 learned score $\rightarrow$ 小网络 $\rightarrow$ 高斯混合前景 $\rightarrow$ 共享潜变量与不可辨识控制。\textbf{产物：}精确密度、score、物理参数导数、低维网格后验以及误差报告。
+
+\textbf{验收：}高斯 score 与矩阵公式一致；固定参数数据路径积分正确；概率流归一化和参数似然比正确；热方程与条件后验矩闭合；不可辨识控制保持退化；共享历元模型能暴露独立乘积近似的错误。线性高斯控制未通过时，优先修复协方差、符号、尺度和端点。
+
+\subsection{P3：信息地图与基线落地}
+\textbf{工作：}用官方源级数据及允许的重采样，检查功率比例、时变协方差和条件非高斯性；构建 B1，再加入少量 B2 前景自由度；形成候选频率与历元组合。
+
+\textbf{验收：}选择理由同时考虑物理信息与计算维数；数据选择不使用最终测试结果；基线在自己正确设定的控制中校准；对强相关和退化有定量记录。若没有可用的额外信息，优先检查其他频带或更现实的前景误差问题，不能靠削弱基线制造优势。
+
+\subsection{P4：训练最小条件得分模型}
+先复现 score-SDE 的基础训练和采样流程，再将损失、条件输入和密度接口接入自建可解数据与 TDC 向量\cite{reproduction}。图像任务中的 FID/Inception 评价不作为本课题指标。
+
+首轮只比较 direct/residual，固定表示与条件方案。条件变量的消融随后开展，避免一次展开模型大小、表示、SDE、频带和状态等全笛卡尔积。只有出现明确学习瓶颈后再增加网络容量。\textbf{验收：}不仅生成统计合理，独立数据上的参数恢复与密度数值误差也达到目标。
+
+\subsection{P5：四参数联合推断与检出}
+\textbf{工作：}对同一批测试观测运行 B1/B2 与两类 score；输出四参数后验、边缘后验、剖面似然比和成分谱。可解低维先用网格，TDC 四参数使用已验证采样器。梯度不稳定时先采用无需梯度的推断，并检查多链或独立重复的一致性。
+
+\textbf{验收：}采样误差小于方法差异；真值网格与先验预测实验的覆盖率合格；零注入阈值与测试独立；在等误报率下比较检出；前景与噪声参数完全同等放开。窄后验与偏差同时增大时不能判为成功。
+
+\subsection{P6：增益归因}
+\textbf{必须完成：}匹配二阶统计的高斯替代；不可辨识控制；direct/residual 比较；有无历元或状态条件的对照；增加协方差完整度的基线对照。\textbf{按需要完成：}加入少量高阶统计的简单模型，判断收益是否需要扩散模型的复杂度；B3 同预算比较。
+
+消融中一次改变一个关键假设。不同输入维度的模型应有对应基线；若条件模型获得额外已知状态信息，无条件对照的差异只能归于利用该状态，而不自动归于高阶结构。\textbf{产物：}“哪些信息、哪些机制、多少增益”的归因图。
+
+\subsection{P7：现实扩展与论文收敛}
+按以下优先顺序扩展：独立人口与谱形变化；明亮源扣除误差；SGWB 谱指数；更多年度历元；仪器噪声时间变化或链路自由度。时变噪声已有相关 SGWB 分析研究，可作为比较背景\cite{timenoise}。
+
+加入扣除误差后，观测为 $\br=F_{\rm unres}+\delta h_{\rm bright}+g+n$。$\delta h_{\rm bright}$ 若来源于同一观测的拟合，可能与其他成分相关，不能随意独立添加一个噪声分布就声称重现真实扣除。先用受控误差注入，再运行端到端选择和估计流程，分别报告。
+
+\textbf{验收：}每次扩展后重新检查校准；明确训练范围外失效条件；最终主张覆盖经过实际验证的场景。若现实条件消除了增益，应如实限定前景条件或转向模型误差控制的科学问题。
+
+\section{最小可行实验的具体配置}
+\subsection{M0：可解数学实验}
+选择 $D=6$ 到 $16$ 的实向量，高斯混合前景包含若干均值与协方差不同的成分，SGWB 与仪器噪声使用非平凡且不成比例的协方差。最初只扫描 $a$，随后加入一个前景尺度和两类噪声尺度。参数范围在确保数值稳定的同时覆盖不同成分占比。
+
+先用解析密度生成基准，再训练小 MLP，对比原始 score、不同扰动时间的 score、概率流密度和四参数后验。加入前景与背景协方差成比例的反例，以及两个历元共享潜变量的反例。此实验主要在 CPU 完成解析部分，小模型可使用单卡；无需生产规模 TDC 数据。
+
+\subsection{M1：TDC 受控联合推断}
+\noindent\begin{tabularx}{\linewidth}{P{3.1cm}Y}
+\toprule 配置项 & 首轮建议\\\midrule
+观测物理 & 锁定 TDC 数值轨道与 TDI2 XYZ；统一有效时间、窗与单位。\\
+参数 & $a,b_F,b_{\rm acc},b_{\rm oms}$，固定 $\gamma_0$ 和人口形状。\\
+历元 & 两个相隔较远的历元，共享同一源目录与相位演化。\\
+频率 & 总计约 16 个复系数位置，可分布于几个有物理意义的相邻频率小块；由 P3 决定。\\
+维数 & $3\times2\times16\times2=192$；该数值为工程起点，不是物理最优承诺。\\
+模型 & 小 MLP，direct/residual 同预算；有限维联合密度，不乘独立历元密度。\\
+数据级别 & 先固定官方人口验证接入，再独立人口测试；两者结论分开标记。\\
+基线 & B1 必须完成；B2 随前景自由度增加；B3 在主线稳定后加入。\\
+结果 & 联合后验、覆盖率、零注入与等误报检出、二阶匹配替代。\\\bottomrule
+\end{tabularx}
+
+两个历元仅支撑初始的跨历元研究。正式声称利用年度调制时，扩大到覆盖全年不同相位的历元集合，例如 4--8 个初始节点，并检查时间采样加密后的结果。频率数量也应通过信息损失和似然误差而非内存方便性决定。
+
+\subsection{数据规模与逐步扩展原则}
+不预设一次生成百万条高保真全年数据。先基准测试单个模拟与单次密度评估成本，再使用成分缓存和允许的快速响应构建数据。缓存不同成分有助于降低成本，但重复使用同一前景不增加独立人口数量。报告有效独立实现数、重组样本数与人口数三项。
+
+可从数千个受控实现的小训练集起步，按 $N,2N,4N$ 观察学习曲线；这些规模不是最终充分性的保证。独立人口数由泛化曲线决定。针对检出，先做小规模阈值探索，再冻结设置并增大独立零注入与有注入数量。所有结果同时报告模拟预算、训练时长、显存、单次 likelihood 和单次 posterior 成本。
+
+\subsection{建议交付的首轮六组图}
+\begin{enumerate}
+\item 成分功率、通道互谱及前景在不同历元的变化。
+\item 可解模型中的参数似然差、热方程与后验矩误差。
+\item 基线与 score 的四参数联合后验，包含相关性与真值。
+\item 多可信度水平的覆盖率或 SBC 诊断，并给统计误差。
+\item 独立零注入误报与等误报率下的注入检出曲线。
+\item 源级前景、高斯替代与人口变化下的增益对照。
+\end{enumerate}
+
+\section{验证指标、统计精度与判决规范}
+\subsection{四层指标}
+\par\noindent\begin{minipage}{\linewidth}\centering
+\begin{tabular}{P{2.1cm}P{5.7cm}P{6.3cm}}
+\toprule 层次 & 指标 & 解读\\\midrule
+数值闭合 & 协方差、白化、score、Jacobian、参数似然差、端点与迹估计收敛 & 定位实现错误；只在可解模型中有精确 score 真值。\\
+分布拟合 & 留出密度、模拟统计、条件生成的互谱与高阶量 & 检查模型拟合；生成像真不保证科学推断正确。\\
+参数估计 & 偏差、RMSE、区间宽度、覆盖率、SBC、后验相关 & 同时报告准确性和不确定性；不只展示单张 corner plot。\\
+科学与成本 & FAP、等 FAP 检出率、上限、人口稳健性、训练与推断成本 & 决定结果是否有实际意义与可复用性。\\\bottomrule
+\end{tabular}
+\end{minipage}\par\smallskip
+
+\subsection{覆盖率与模拟校准}
+令 $C_q(r)$ 为后验可信度 $q$ 的区间或区域，经验覆盖率为
+\begin{equation}
+\widehat{\operatorname{cov}}_q=\frac1N\sum_{i=1}^N
+\boldsymbol1\{\btheta_i\in C_q(r_i)\}.
+\end{equation}
+需区分单参数区间与联合区域，不混用其标称概率。对于从先验生成的参数和观测，正确贝叶斯后验在适当定义下应满足相应平均校准；固定真值下的频率学覆盖并非所有先验自动精确成立，应与精确模型或强基线比较并解释边界影响。
+
+SBC 从先验生成参数与数据，再检查真值在后验样本中的秩。有效样本量不足与相关采样会影响秩图，应先控制采样误差。SBC 通过也不能替代人口失配测试，因为错误但自洽的模拟器可通过自身的 SBC。
+
+\subsection{误报与检出曲线的样本量}
+若独立 Bernoulli 事件概率为 $p$，经验比例的标准误差约为 $\sqrt{p(1-p)/N}$。例如 $p=0.9,N=1000$ 时，95\% 正态近似半宽约 0.019；$p=0.01,N=1000$ 时预期仅 10 次误报，标准误差约 0.0031。对 1\% 误报率使用 10000 次独立测试时，近似 95\% 半宽约 0.002。正式报告优先使用 Wilson 或精确二项区间。
+
+如果重复观测共享人口，独立 Bernoulli 公式可能过于乐观；应按人口簇重采样或使用层级误差估计。阈值本身也有校准样本误差，需要重复校准或重采样传播。多频带搜索若实际用于检出，应整体纳入零注入流程，以计入搜索带来的试验次数效应。
+
+\subsection{建议的预注册判决表}
+\noindent\begin{tabularx}{\linewidth}{P{3.2cm}Y}
+\toprule 情形 & 判决与下一步\\\midrule
+解析控制失败 & 暂停神经规模扩展，修复数值与表示；保留最小失败案例。\\
+模型密度不稳定 & 收紧误差预算、减少维数或改进端点/迹估计，再做推断。\\
+后验更窄但失配 & 不认定增益，定位先验、归一化、相关性与训练覆盖问题。\\
+仅胜过弱 PSD 基线 & 补齐联合二阶基线，不做高阶信息声明。\\
+高阶存在但无分离增益 & 报告该区域的信息限制，检查其他频带或模型失配问题。\\
+同分布有效、外分布失效 & 扩大人口族或限制适用范围，不用域内结果替代稳健性。\\
+校准与归因均通过 & 扩展现实条件，组织论文主结果。\\\bottomrule
+\end{tabularx}
+
+\clearpage
+\section{工程模块、算力安排与风险控制}
+\subsection{建议模块与稳定接口}
+\par\noindent\begin{minipage}{\linewidth}\centering
+\begin{tabular}{P{4.6cm}P{9.9cm}}
+\toprule 模块 & 职责\\\midrule
+\texttt{simulator\_adapter} & 封装官方模拟器、轨道、TDI、随机流与成分生成。\\
+\texttt{population\_adapter} & 管理目录、相位、独立人口、明亮源选择和扣除误差。\\
+\texttt{representation} & 边界、分段、FFT、实数化、标准化及 Jacobian。\\
+\texttt{reference\_likelihood} & 高斯与可解混合模型、协方差、精确导数。\\
+\texttt{score\_model} & 条件输入、扩散扰动、direct/residual 与训练。\\
+\texttt{density} & 概率流、散度、端点处理、误差诊断。\\
+\texttt{inference} & 先验、联合后验、零假设、剖面统计量与采样诊断。\\
+\texttt{validation} & 覆盖率、SBC、误报、注入恢复、替代与 OOD 测试。\\
+\texttt{experiment\_registry} & 配置、版本、数据谱系、预算、指标和报告。\\\bottomrule
+\end{tabular}
+\end{minipage}\par\smallskip
+
+各 likelihood 实现统一接收 $(r,\btheta,\bxi)$，返回同一观测测度下的 log density 及数值诊断。推断模块不应依赖某个模型的真值组件。训练与评价路径共用预处理接口，同时用独立解析测试避免共用错误。
+
+\subsection{按资源和风险分层推进}
+\noindent\begin{tabularx}{\linewidth}{P{2.5cm}Y P{3.5cm}}
+\toprule 任务 & 主要资源与瓶颈 & 优先控制\\\midrule
+数学闭合 & CPU；低维矩阵与自动微分 & 精确可验证\\
+TDC 数据适配 & CPU/存储；长时间模拟与响应 & 先短段，锁定约定\\
+独立人口 & 人口工具、目录资源与模拟成本 & 尽早确认可获得性\\
+小 score 训练 & 单 GPU 起步；样本多样性 & 学习曲线与同预算\\
+完整似然推断 & ODE、散度、多次参数评估 & 先低维，测单次成本\\
+稳健性验证 & 大量独立重复和数据管理 & 缓存合法复用、分组统计\\\bottomrule
+\end{tabularx}
+
+不在未知硬件和数据获取条件下承诺固定完成周数。采用里程碑排期：首先并行推进基础学习与物理适配（这是工作流并行，不要求多人或代理并行）；可解控制通过后开展小模型；完整似然与基线稳定后再投入大规模注入。每个阶段先测算单次成本，再估计总预算。
+
+\subsection{高保真与快速模型的使用边界}
+官方数值轨道和 TDI 作为物理依据。允许用经验证的快速 GB 响应、预计算响应与组件缓存降低成本；必须保存误差评估并在代表性参数点回到高保真模型检查。若快速模型误差与预期增益相当，应先修复或作为系统误差纳入模型。
+
+最主要风险依次是：独立人口不足；前景高阶信息在目标混合中被稀释；物理参数退化；完整似然数值误差；训练分布不覆盖现实人口；选择与扣除造成额外相关。每个风险都有前置实验，避免投入大模型后才发现问题。
+
+\section{从最小结果到 PRL 导向科学结论}
+\subsection{建议的四组论文主图}
+\begin{enumerate}
+\item \textbf{信息在哪里：}成分重叠、条件非高斯诊断与 nuisance 边缘后的信息量，解释选择的频带与历元。
+\item \textbf{推断是否可信：}可解闭合、联合后验、覆盖率及不可辨识控制，说明模型知道自己的限制。
+\item \textbf{科学改善有多大：}同误报率下的检出曲线、参数偏差与区间宽度，比较强二阶与灵活前景基线。
+\item \textbf{增益来自哪里、何时失效：}二阶匹配替代、人口变化、扣除误差与计算成本。
+\end{enumerate}
+
+若主要结果是灵敏度改善，需说明其对观测条件、前景选择与目标谱形的依赖。若主要结果是失配偏差改善，应展示误差机制如何把前景误认为目标背景，以及边缘化如何降低这一影响。若高阶增益很小，严谨的失效边界可以形成方法研究，但是否支持 PRL 需要依据科学影响重新判断。
+
+\subsection{暂不预先扩展的方向}
+完整 global fit、跨维源数推断、RL/MCTS、多个源族通用推断算子等可以作为后续项目。当前优先把一个明确随机成分问题做出可校准、有物理解释的结果。模型架构、条件变量和表示的消融应服务于该问题，不能代替它。
+
+\Needspace{27\baselineskip}
+\section{与王赫老师确认的关键接口}
+以下项目会改变实验定义，建议在 P0/P1 明确；可以在资源缺口未解决时继续开展可解控制与公开教程。
+\par\noindent\begin{minipage}{\linewidth}\centering
+\begin{tabular}{P{3.3cm}P{6.1cm}P{4.8cm}}
+\toprule 接口 & 需要确认的内容 & 未确认时的首轮假设\\\midrule
+人口数据 & 是否有独立人口生成器、原始目录及使用权限；哪些参数可采样？ & 固定目录受控实验，限制泛化声明。\\
+未分辨源定义 & 沿用官方明亮源选择，还是重新执行检测与扣除？ & 固定官方选择集合。\\
+扣除误差 & 第一篇是否必须包含估计参数误差和选择相关性？ & 理想扣除起步，列为主要现实扩展。\\
+目标背景 & 固定哪种幂律、参考频率与幅度范围，是否需要宇宙学谱族？ & 固定幂律，功率尺度未知。\\
+仪器噪声 & 两个总体尺度是否足够；链路不等噪声如何保留？ & 固定链路相对模式，放开两类总体尺度。\\
+观测设定 & 轨道产品、时长、历元、频带及可用数据版本？ & 官方数值轨道，小维联合向量。\\
+科学重点 & 优先高阶信息增益，还是前景失配下偏差与误报降低？ & 同时设计诊断，依据证据收敛主张。\\
+资源与代码 & 已有 adapter、测试、服务器与 GPU；是否有可复用的闭合报告？ & 复用前必须核对版本与接口。\\\bottomrule
+\end{tabular}
+\end{minipage}\par\smallskip
+
+\section{可直接执行的第一轮任务清单}
+\begin{enumerate}
+\item 建立配置与数据谱系记录，冻结 $a,b_F,b_{\rm acc},b_{\rm oms}$ 的含义以及零假设。
+\item 跑通 score-SDE 的基础训练与采样，明确 loss、反向 SDE 与概率流 ODE 各自职责。
+\item 跑通 Triangle 教程与 TDCII2.8 成分处理，完成统一单位、边界和 FFT 检查。
+\item 实现低维高斯、混合前景、不可辨识及共享历元四种控制。
+\item 实现数据 score、物理幅度导数、后验矩与完整似然的交叉测试。
+\item 构建 192 维候选表示和强二阶基线，用开发数据确定频率与历元。
+\item 训练 direct/residual 小模型，验证数值密度与四参数后验。
+\item 独立校准检出阈值，完成覆盖率、零注入和有注入初筛。
+\item 构造匹配二阶统计的高斯替代，判断增益来源。
+\item 输出首轮报告：哪些检查通过、哪些条件失败、下一阶段需要何种人口或算力资源。
+\end{enumerate}
+
+\key{首轮成功标准：物理接口可复现、数学链条闭合、联合推断校准、基线公平，并能清楚说明当前数据支持或不支持哪一种科学增益。}
+
+\appendix
+\section{可解高斯混合前景的完整公式}
+设前景为 $J$ 个高斯成分的混合，$\sum_j\pi_j=1$，
+\begin{equation}
+p_F(F)=\sum_{j=1}^{J}\pi_j\Normal(F;\mu_j,V_j).
+\end{equation}
+令 $C=C_n+aK$、$S_j=V_j+C$，则
+\begin{equation}
+p(r)=\sum_j\pi_j\Normal(r;\mu_j,S_j),\quad
+q_j(r)=\frac{\pi_j\Normal(r;\mu_j,S_j)}{p(r)}.
+\end{equation}
+采用 log-sum-exp 计算密度以保持数值稳定。分量 score $s_j=-S_j^{-1}(r-\mu_j)$，总 score 与 Hessian 为
+\begin{align}
+s&=\sum_jq_js_j,\\
+H&=-\sum_jq_jS_j^{-1}+\sum_jq_js_js_j^{\mathsf T}-ss^{\mathsf T}.
+\end{align}
+前景条件于分量 $j$ 的后验均值与协方差为
+\begin{align}
+m_j&=\mu_j+V_jS_j^{-1}(r-\mu_j),\\
+P_j&=V_j-V_jS_j^{-1}V_j.
+\end{align}
+混合条件均值与协方差为
+\begin{align}
+m_F&=\sum_jq_jm_j,\\
+V_F&=\sum_jq_j\left[P_j+(m_j-m_F)(m_j-m_F)^{\mathsf T}\right].
+\end{align}
+取 $A=C^{-1}KC^{-1}$，后验矩中的期望为
+\begin{equation}
+\E[(r-F)^{\mathsf T}A(r-F)\mid r]
+=(r-m_F)^{\mathsf T}A(r-m_F)+\tr(AV_F).
+\end{equation}
+这套公式允许在完全独立于神经网络的路径上计算式\eqref{eq:heat}与式\eqref{eq:moment}。扩散扰动后的混合仍可解析表示：分量均值变为 $\alpha_\tau\mu_j$，协方差变为 $\alpha_\tau^2S_j+\sigma_\tau^2I$，因此所有扩散时间都可以有 score 真值。
+
+\section{高斯闭合与路径积分的使用边界}
+对于 $p(r)=\Normal(0,C)$，
+\begin{equation}
+s=-C^{-1}r,\qquad H=-C^{-1},
+\end{equation}
+所以物理幅度导数恢复为
+\begin{equation}
+\partial_a\log p=
+\frac12\left[r^{\mathsf T}C^{-1}KC^{-1}r-\tr(C^{-1}K)\right].
+\end{equation}
+固定同一个参数条件，对位移 $h$ 有
+\begin{equation}
+\log p(r-h)-\log p(r)
+=-\int_0^1h^{\mathsf T}s(r-\alpha h)\,\dd\alpha.
+\end{equation}
+该式检验数据 score 的方向与符号，但不比较不同参数对应分布的归一化。原始网络未必严格是保守向量场；闭合回路积分或 Jacobian 对称性可作为诊断，但不能仅靠小回路误差证明全局密度正确。本文联合推断以式\eqref{eq:pf}定义和验证的流密度为主。
+
+\section{一个说明高阶信息如何帮助分离的最小例子}
+这个例子用于理解机制，不代表真实银河前景。设标量前景 $F=\sqrt b\,mZ$，其中 $Z$ 以相等概率取 $+1$ 或 $-1$；目标背景和已知噪声之和为 $G+N\sim\Normal(0,ak+c)$，并与 $F$ 独立。$m,k,c$ 暂时已知，待推断 $a,b\geq0$。
+
+观测的方差和四阶累积量分别为
+\begin{equation}
+\operatorname{Var}(R)=bm^2+ak+c,\qquad
+\kappa_4(R)=\E[R^4]-3\E[R^2]^2=-2b^2m^4.
+\end{equation}
+如果只测总方差，$a$ 与 $b$ 退化；四阶累积量则提供关于 $b$ 的额外信息，因为独立高斯成分没有四阶累积量。在理想总体统计可得时，可先约束 $b$，再由方差约束 $a$。这里的前景是负超额峰度，说明有用非高斯性并不一定是重尾。
+
+但标准化超额峰度为
+\begin{equation}
+\frac{\kappa_4(R)}{\operatorname{Var}(R)^2}
+=\frac{-2b^2m^4}{(bm^2+ak+c)^2}.
+\end{equation}
+噪声或背景占比增大时，非高斯诊断会被稀释；有限样本估计四阶矩的误差也可能很大。若 $c$ 同样未知而且与 $ak$ 在当前标量表示下具有完全相同作用，高阶信息只能先识别前景，仍无法区分 $a$ 与 $c$。这正是本课题需要多频率、多通道响应和联合噪声参数的原因。
+
+将此前景替换为同方差的 $F_G\sim\Normal(0,bm^2)$ 后，四阶累积量消失，观测只剩总方差。这个简单例子同时说明信息地图、匹配二阶替代和不可辨识控制各自的作用；得分模型的任务是学习并利用实际数据中存在的概率结构，而不是保证任何随机混合都能分开。
+
+\section{结果报告的最小模板}
+每个实验报告包含：科学问题与假设；生成器及版本；参数与先验；独立人口和实现数；数据表示；训练与评价预算；精确或近似 likelihood 的定义；主要数值误差；采样诊断；带置信区间的校准与检出；公平基线；失败案例；下一步判决。
+
+应同时保存可复现实验配置、数据清单或哈希、模型权重、逐样本评价结果及作图脚本。论文图中的每个点应能回溯到配置与独立测试样本。开发过程中的候选实验与最终冻结测试分开标记，避免选择性报告。
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{section}{参考资料与来源}
+\bibitem{discussion} 王赫老师前期与 GPT 的共享讨论，项目定位及研究路线来源。\url{https://chatgpt.com/share/6ac50198-303c-83ec-bffa-09319b0cc083}。本文件不将对话中的未复核实验报告视为已独立验证结果。
+\bibitem{scoresde} Y. Song et al. \textit{Score-Based Generative Modeling through Stochastic Differential Equations}. ICLR 2021. \url{https://arxiv.org/abs/2011.13456}.
+\bibitem{reproduction} iphysresearch. \textit{score-sde-reproduction}. JAX/Flax 复现与兼容实现。\url{https://github.com/iphysresearch/score-sde-reproduction}.
+\bibitem{simulator} TriangleDataCenter. \textit{Triangle-Simulator}. \url{https://github.com/TriangleDataCenter/Triangle-Simulator}.
+\bibitem{gb} TriangleDataCenter. \textit{Triangle-GB}. \url{https://github.com/TriangleDataCenter/Triangle-GB}.
+\bibitem{foreground} TriangleDataCenter. \textit{TDCII2.8 / Foreground.ipynb}. \url{https://github.com/TriangleDataCenter/TDCII_Training_Sets/blob/main/Scripts/TDCII2.8/Foreground.ipynb}.
+\bibitem{sgwb} TriangleDataCenter. \textit{TDCII2.8 / SGWB.ipynb}. \url{https://github.com/TriangleDataCenter/TDCII_Training_Sets/blob/main/Scripts/TDCII2.8/SGWB.ipynb}.
+\bibitem{noise} TriangleDataCenter. \textit{TDCII2.8 / Noise.ipynb}. \url{https://github.com/TriangleDataCenter/TDCII_Training_Sets/blob/main/Scripts/TDCII2.8/Noise.ipynb}.
+\bibitem{combine} TriangleDataCenter. \textit{TDCII2.8 / Combination.ipynb}. \url{https://github.com/TriangleDataCenter/TDCII_Training_Sets/blob/main/Scripts/TDCII2.8/Combination.ipynb}.
+\bibitem{saqqara} J. Alvey et al. \textit{Simulation-based inference for stochastic gravitational wave background data analysis}. \url{https://arxiv.org/abs/2309.07954}.
+\bibitem{gaussianity} R. Buscicchio et al. \textit{Test for LISA foreground Gaussianity and stationarity: galactic white-dwarf binaries}. \url{https://arxiv.org/abs/2410.08263}.
+\bibitem{cyclo} \textit{Cyclostationary signals in LISA: a practical application to Milky Way satellites}. \url{https://arxiv.org/abs/2410.08274}.
+\bibitem{foregroundmodel} J. Kume et al. \textit{Assessing the Impact of Unequal Noises and Foreground Modeling on SGWB Reconstruction with LISA}. \url{https://arxiv.org/abs/2410.10342}.
+\bibitem{timenoise} \textit{Leveraging Time-Dependent Instrumental Noise for LISA SGWB Analysis}. \url{https://arxiv.org/abs/2408.00832}.
+\end{thebibliography}
+\end{document}

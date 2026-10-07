@@ -1,0 +1,18 @@
+{
+  "document_version": "1.0",
+  "document_date": "2026-10-07",
+  "language": "zh",
+  "content_preserved": true,
+  "files": [
+    {
+      "path": "research-framework-and-implementation-plan.pdf",
+      "sha256": "306168dc925bb12c0eb780ee0a6d4e692a41d14ca26bc56f53d0980566eff40e",
+      "bytes": 601298
+    },
+    {
+      "path": "research-framework-and-implementation-plan.tex",
+      "sha256": "4e7d31edf7089e5ec21e577e1f87bdf98113e276b8c5ab44339c3f18842a0b23",
+      "bytes": 63568
+    }
+  ]
+}
