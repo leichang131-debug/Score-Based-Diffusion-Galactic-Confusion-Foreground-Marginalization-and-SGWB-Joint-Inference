@@ -1,0 +1,10 @@
+{
+  "experiment_id": "TO_BE_ASSIGNED",
+  "status": "template_only",
+  "source_commit": null,
+  "environment_lock": null,
+  "config_path": null,
+  "seed": null,
+  "data_provenance": null,
+  "artifacts": []
+}
