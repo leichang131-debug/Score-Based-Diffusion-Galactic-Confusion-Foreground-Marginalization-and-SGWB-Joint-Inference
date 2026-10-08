@@ -2,7 +2,7 @@
 
 Research workspace for probabilistic marginalization of the Galactic confusion foreground and joint inference of a target stochastic gravitational-wave background (SGWB) using score-based diffusion models.
 
-**Status:** repository architecture and research plan. Upstream deployment, training, and numerical reproduction have not yet been completed in this repository. No performance improvement is claimed.
+**Status:** research architecture and plan, plus a validated macOS ARM64 CPU environment for Score-SDE. The pinned Score-SDE source is available as a recursive Git submodule. Synthetic gradient-update, checkpoint-roundtrip, and sampling checks passed; real CIFAR-10 training and numerical reproduction have not yet been completed. No performance improvement is claimed.
 
 ## Scientific objective
 
@@ -78,7 +78,7 @@ Time modulation and nonstationarity do not automatically imply non-Gaussianity. 
 └── runs/                         # Local generated outputs; ignored by Git
 ```
 
-Directories currently contain English guidance files, not completed implementations. Upstream repositories have not been downloaded or registered as submodules. See [the reproduction roadmap](docs/reproduction/README.md).
+Score-SDE is now integrated as an unmodified, pinned Git submodule, with environment and launch scripts. Other upstream component directories remain source slots. See [the reproduction roadmap](docs/reproduction/README.md).
 
 ## Research plan
 
@@ -107,7 +107,7 @@ Use pinned upstream commits and preserve upstream licenses when integrating code
 
 Use independent environments for Score-SDE, TDC, and TaijiSGWB. Validate and lock the dependency versions for each platform before publishing installation commands.
 
-Local macOS CPU runs will establish minimal functionality and support learning. Linux cluster resources will support full training, large simulations, posterior sampling, and repeated injection studies. Apple GPU compatibility has not been validated. No installation or execution command is advertised as tested yet.
+Local macOS CPU runs will establish minimal functionality and support learning. Linux cluster resources will support full training, large simulations, posterior sampling, and repeated injection studies. Apple GPU compatibility has not been validated. Score-SDE environment setup, command-line configuration parsing, and synthetic CPU execution have been validated on macOS. See [Score-SDE setup](environments/score-sde/README.md). Other component installation commands are not yet validated.
 
 ## Reproducibility and results
 

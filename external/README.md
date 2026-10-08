@@ -1,5 +1,9 @@
 # Upstream source integration
 
-The component directories currently document planned upstream sources only. No upstream code has been downloaded or deployed.
+Score-SDE reproduction is integrated as an unmodified Git submodule at commit `8c399ccd8079e5fe7e264f8a72ec97a598b33be1`. Its original Score-SDE submodule is pinned to `0acb9e0ea3b8cccd935068cd9c657318fbc6ce4c`.
 
-During reproduction, replace each source slot with a pinned Git submodule or an explicitly documented vendored snapshot. Preserve original licenses and notices. Record recursive submodule commits for Score-SDE, whose reference repository contains its own original-code submodule. Store local patches in the parent project with attribution.
+```bash
+git submodule update --init --recursive
+```
+
+The other component directories remain source slots; their code has not been downloaded or deployed. Preserve upstream licenses and notices. Project-owned launch adapters live under `scripts/reproduction/`; upstream source is unchanged.

@@ -1,0 +1,45 @@
+{
+  "purpose": "synthetic environment validation; no real-data training or quality claim",
+  "python": "3.12.14",
+  "devices": [
+    "TFRT_CPU_0"
+  ],
+  "versions": {
+    "jax": "0.4.30",
+    "jaxlib": "0.4.30",
+    "flax": "0.8.5",
+    "optax": "0.2.2",
+    "tensorflow": "2.21.0",
+    "tensorflow-gan": "2.1.0",
+    "tensorflow-hub": "0.16.1",
+    "tensorflow-probability": "0.25.0",
+    "tf-keras": "2.21.0",
+    "numpy": "1.26.4"
+  },
+  "losses": [
+    1.0328339338302612,
+    1.0256707668304443
+  ],
+  "updates": 2,
+  "max_parameter_change": 0.00020026952552143484,
+  "checkpoint_roundtrip": "all state leaves exactly equal",
+  "sample_shape": [
+    1,
+    1,
+    32,
+    32,
+    3
+  ],
+  "sampling_function_evaluations": 64,
+  "reduced_config": {
+    "nf": 32,
+    "num_res_blocks": 1,
+    "num_scales": 32,
+    "batch_size": 1,
+    "warmup": 1
+  },
+  "validation_date": "2026-10-08",
+  "platform": "macOS 27.0 ARM64; CPU",
+  "upstream_commit": "8c399ccd8079e5fe7e264f8a72ec97a598b33be1",
+  "original_score_sde_commit": "0acb9e0ea3b8cccd935068cd9c657318fbc6ce4c"
+}
