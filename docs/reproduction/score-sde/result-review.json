@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "date": "2026-10-09T20:24:55.083172+08:00",
+  "loss_plots": {
+    "both_y_axes": "log",
+    "full_window_actual_updates": [
+      1,
+      200
+    ],
+    "late_window_actual_updates": [
+      100,
+      200
+    ],
+    "late_window_interpretation": "Later warmup only, not the teacher post-5000 convergence view",
+    "ma20": "20 records; smoothing uses the same global trailing average in both panels",
+    "upstream_difference": "Teacher reference contains 214k loop labels and its right panel starts at label 5000; this local run has no observations at or beyond 5000"
+  },
+  "parameter_semantics": {
+    "training": "current optimizer parameters, training mode",
+    "validation_and_sampling": "EMA parameters, evaluation mode",
+    "ema_rate": 0.9999,
+    "theoretical_initialization_term_weight_at_update_200": 0.9801976930432228,
+    "interpretation": "EMA lag can contribute to the differing loss/sample behavior; this is not proof of future convergence."
+  },
+  "other_checks": {
+    "npz_csv_step_and_value_parity": "passed",
+    "all_200_training_and_14_validation_records": "passed",
+    "published_file_checksums_before_relabeling": "passed",
+    "four_raw_sample_ranges_and_clipping_fractions": "passed",
+    "checkpoint_and_sample_integrity_rerun": "passed",
+    "configuration_alignment_rerun": "passed"
+  },
+  "training_or_sampling_executed_during_review": false
+}

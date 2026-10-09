@@ -84,11 +84,11 @@ smooth=np.convolve(train_values,np.ones(20)/20,mode='valid');sx=x[19:]
 def panel(ax,late=False):
     lo=100 if late else 1
     mask=x>=lo;em=ex>=lo;sm=sx>=lo
-    ax.plot(x[mask],train_values[mask],color='#3069b4',alpha=.35,lw=.8,label='Train (raw)')
+    ax.plot(x[mask],train_values[mask],color='#3069b4',alpha=.35,lw=.8,label='Train (raw, current params)')
     ax.plot(sx[sm],smooth[sm],color='#164b94',lw=1.8,label='Train (MA-20 records)')
-    ax.plot(ex[em],eval_values[em],'o--',color='#b33d32',ms=4,lw=1,label='Eval (batch 1)')
-    ax.set(xlabel='Completed optimizer updates',ylabel='Loss',yscale='log',xlim=(lo,201),
-           title='Later warmup: updates 100–200' if late else 'Full run: updates 1–200')
+    ax.plot(ex[em],eval_values[em],'o--',color='#b33d32',ms=4,lw=1,label='Eval (EMA, batch 1)')
+    ax.set(xlabel='Completed optimizer updates',ylabel='Loss (log scale)',yscale='log',xlim=(lo,201),
+           title='Later warmup: updates 100–200 (log scale)' if late else 'Full run: updates 1–200 (log scale)')
     if not late:
         for pos in [20.5,22.5]:ax.axvline(pos,color='#777777',lw=.7,ls=':')
     ax.grid(alpha=.2,which='both');ax.legend(fontsize=8,loc='lower left')
@@ -110,6 +110,7 @@ summary={'status':'passed','training_entries':200,'validation_entries':14,
     'interpretation':'Small-scale functionality reproduction only; still within 5000-update warmup; no overfitting/convergence assessment or standard image metrics.',
     'original_teacher_extraction_function':'external/score-sde-reproduction/plot_loss.py:extract_losses',
     'published_tensorboard_readback':'step/value comparison to all three stage reports passed',
+    'parameter_semantics':'Training uses current optimizer parameters with train=True; evaluation and sampling use params_ema with train=False. The curves are not losses from the same parameter set.',
     'teacher_plot_difference':'Uses our actual 1–200 and 100–200 ranges; does not run the teacher 5k+ panel or heuristic overfitting classifier.'}
 (OUT/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
 # Verify the portable binary export itself before delivery.

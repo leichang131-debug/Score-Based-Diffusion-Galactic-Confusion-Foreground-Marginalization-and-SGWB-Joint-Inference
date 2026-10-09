@@ -21,7 +21,7 @@
       720
     ]
   },
-  "plot_visual_inspection": "combined figure visually checked for labels, legend and clipping",
+  "plot_visual_inspection": "Updated combined figure checked: explicit log-scale axes/titles and current-parameter versus EMA legend labels.",
   "replay": "Default exporter executed successfully using published evidence paths; no training/sampling or checkpoint/data access",
   "files": [
     {
@@ -101,18 +101,18 @@
     },
     {
       "path": "results/score-sde/final-summary/loss-full.png",
-      "bytes": 136873,
-      "sha256": "4e99a95e12d7ff6ec1b18e47cc42b8d08455fce53ac420c0e7c1b9c67eaa12ba"
+      "bytes": 145216,
+      "sha256": "689d5f05359eb9d38ecf064a762680056b873c809ecef6b58b18642478442f65"
     },
     {
       "path": "results/score-sde/final-summary/loss-late.png",
-      "bytes": 110498,
-      "sha256": "904549891cd16480c1f7c73f4cd3baae87d37938fdfe3f907730d86459b4cf8d"
+      "bytes": 118748,
+      "sha256": "b0cde34f834744d914a189fce61fb97d1276ad40b997dcdfd39275ce96fe9f51"
     },
     {
       "path": "results/score-sde/final-summary/loss_curve.png",
-      "bytes": 245136,
-      "sha256": "dd5c9506a46b9f58e152cc097d4ff69746fad11dff34b3458af9268e4f6797da"
+      "bytes": 260139,
+      "sha256": "5233f0b6650d8a6a951343ffb2f0f9c288f0d016d251ee279b7599a8c89b41b0"
     },
     {
       "path": "results/score-sde/final-summary/loss_history.csv",
@@ -136,8 +136,8 @@
     },
     {
       "path": "results/score-sde/final-summary/summary.json",
-      "bytes": 1224,
-      "sha256": "e4054a957f90a477285caad363c777cdf5e13e8ccb7f6fa4941b431014f468ed"
+      "bytes": 1424,
+      "sha256": "e61543f51a347423d26370cae22661edc24e31c3655bc460b4d7c7f3171933ea"
     }
   ]
 }

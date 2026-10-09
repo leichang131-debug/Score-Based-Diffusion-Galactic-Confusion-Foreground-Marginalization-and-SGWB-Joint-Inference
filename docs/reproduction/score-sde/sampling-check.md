@@ -31,6 +31,8 @@ The upstream function returns the generic counter `N * (n_steps_each + 1) = 2000
 
 The generated arrays are finite but have large ranges and approximately 99% of RGB components lie outside [0,1]. Saved PNGs clip these values to [0,1] and map them to uint8, matching the original display convention. The previews therefore look like saturated colored noise. Their successful creation does **not** demonstrate effective denoising or realistic CIFAR-10 generation.
 
+Original evaluation and sampling use EMA parameters, while training loss uses current parameters. At EMA 0.9999, the initialization contribution retains approximately 98% weight after 200 updates; a falling current-parameter training loss does not guarantee improved EMA samples yet.
+
 The 200-update model is still in the early portion of its original 5,000-update learning-rate warmup, and its EMA has not undergone enough training to establish image quality. The present success criterion is the working checkpoint-to-EMA-to-reverse-sampling-to-artifact pipeline. Raw arrays are preserved so display clipping cannot hide their behavior. Do not interpret finite values alone as evidence that the learned reverse process is accurate.
 
 The 2 by 2 contact sheet orders seeds 1001, 1002, 1003, 1004 from left to right and top to bottom. It is a native 64 by 64 display image:

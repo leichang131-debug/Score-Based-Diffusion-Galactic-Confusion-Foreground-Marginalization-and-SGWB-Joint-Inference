@@ -16,5 +16,6 @@
   "interpretation": "Small-scale functionality reproduction only; still within 5000-update warmup; no overfitting/convergence assessment or standard image metrics.",
   "original_teacher_extraction_function": "external/score-sde-reproduction/plot_loss.py:extract_losses",
   "published_tensorboard_readback": "step/value comparison to all three stage reports passed",
+  "parameter_semantics": "Training uses current optimizer parameters with train=True; evaluation and sampling use params_ema with train=False. The curves are not losses from the same parameter set.",
   "teacher_plot_difference": "Uses our actual 1\u2013200 and 100\u2013200 ranges; does not run the teacher 5k+ panel or heuristic overfitting classifier."
 }

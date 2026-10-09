@@ -47,6 +47,8 @@ The two views show completed updates 1–200 and 100–200. Both use log loss ax
 
 The data use the teacher's unchanged `plot_loss.extract_losses` reader. NPZ fields are exactly `train_steps`, `train_losses`, `eval_steps`, `eval_losses`, preserving original loop labels 0–199. CSV adds stage and completed update (`loop_step + 1`). Our MA-20 spans 20 updates; teacher reference data log every 50 labels, so their MA-20 spans approximately 1,000 updates. The original 5k+ right panel is inapplicable here.
 
+The original training loss uses current optimizer parameters with training mode enabled; evaluation and sampling use EMA parameters in evaluation mode. These curves therefore do not compare the same parameter set. With EMA 0.9999, its initialization term retains approximately 98% weight after 200 updates, so a lagging validation curve and poor EMA samples are unsurprising at this stage. This is an explanation consistent with the method, not a proof that later training will succeed.
+
 The decreasing training moving average does not establish convergence. Validation is sparse, batch size is one, and validation sampling/preprocessing is stochastic. The last train/eval observations are from different updates; no same-update final ratio or “No overfitting” status is reported. Train-mode validation uses the original CIFAR-10 test split, not an untouched final scientific test set.
 
 - [Individual full view](../../../results/score-sde/final-summary/loss-full.png), [individual late view](../../../results/score-sde/final-summary/loss-late.png).
