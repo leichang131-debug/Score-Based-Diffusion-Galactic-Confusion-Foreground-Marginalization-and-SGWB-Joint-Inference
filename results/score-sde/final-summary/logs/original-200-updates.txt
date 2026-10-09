@@ -1,0 +1,310 @@
+Matplotlib is building the font cache; this may take a moment.
+<REPOSITORY_ROOT>/environments/score-sde/.venv/lib/python3.12/site-packages/tensorflow_hub/__init__.py:61: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+[compat_patch] All compatibility patches applied successfully.
+[compat_patch] Patched evaluation.run_inception_distributed for CPU
+<REPOSITORY_ROOT>/environments/score-sde/.venv/lib/python3.12/site-packages/jax/_src/xla_bridge.py:1167: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+2026-10-09 15:48:49,974 INFO Restoring orbax checkpoint from <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_21
+2026-10-09 15:48:49,983 INFO Restoring item from <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_21.
+2026-10-09 15:48:50,510 WARNING The transformations API will eventually be replaced by an upgraded design. The current API will not be removed until this point, but it will no longer be actively worked on.
+2026-10-09 15:48:50,534 INFO Finished restoring checkpoint from <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_21.
+2026-10-09 15:48:50,535 INFO Skipping global process sync, barrier name: Checkpointer:restore.checkpoint_21
+RESTORE VERIFIED: update 22; full typed state matches verified source
+2026-10-09 15:48:50,926 INFO Load dataset info from <REPOSITORY_ROOT>/data/raw/tensorflow_datasets/cifar10/3.0.2
+2026-10-09 15:48:50,927 WARNING options.experimental_threading is deprecated. Use options.threading instead.
+2026-10-09 15:48:50,927 WARNING options.experimental_threading is deprecated. Use options.threading instead.
+2026-10-09 15:48:50,927 INFO Reusing dataset cifar10 (<REPOSITORY_ROOT>/data/raw/tensorflow_datasets/cifar10/3.0.2)
+2026-10-09 15:48:50,928 INFO Creating a tf.data.Dataset reading 1 files located in folders: <REPOSITORY_ROOT>/data/raw/tensorflow_datasets/cifar10/3.0.2.
+2026-10-09 15:48:50,947 INFO Constructing tf.data.Dataset cifar10 for split train, from <REPOSITORY_ROOT>/data/raw/tensorflow_datasets/cifar10/3.0.2
+2026-10-09 15:48:51,037 WARNING options.experimental_threading is deprecated. Use options.threading instead.
+2026-10-09 15:48:51,037 WARNING options.experimental_threading is deprecated. Use options.threading instead.
+2026-10-09 15:48:51,037 INFO Reusing dataset cifar10 (<REPOSITORY_ROOT>/data/raw/tensorflow_datasets/cifar10/3.0.2)
+2026-10-09 15:48:51,038 INFO Creating a tf.data.Dataset reading 1 files located in folders: <REPOSITORY_ROOT>/data/raw/tensorflow_datasets/cifar10/3.0.2.
+2026-10-09 15:48:51,045 INFO Constructing tf.data.Dataset cifar10 for split test, from <REPOSITORY_ROOT>/data/raw/tensorflow_datasets/cifar10/3.0.2
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1791532131.061676  115823 cpu_utils.cc:145] Failed to get CPU frequency: 0 Hz
+W0000 00:00:1791532131.062906  115823 op_level_cost_estimator.cc:743] Invalid device specifications for CPU: goo.gle/debugstr  type: "CPU" model: "0" num_cores: 10 environment { key: "cpu_instruction_set" value: "ARM NEON" } environment { key: "eigen" value: "3.5.0" } l1_cache_size: 16384 l2_cache_size: 524288 l3_cache_size: 524288 memory_size: 268435456
+<REPOSITORY_ROOT>/environments/score-sde/.venv/lib/python3.12/site-packages/jax/_src/xla_bridge.py:1167: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+2026-10-09 15:48:51,126 INFO Starting training loop at step 22.
+I0000 00:00:1791532131.148159  116480 tf_record_dataset_op.cc:396] The default buffer size is 262144, which is overridden by the user specified `buffer_size` of 8388608
+<REPOSITORY_ROOT>/environments/score-sde/.venv/lib/python3.12/site-packages/jax/_src/interpreters/mlir.py:910: UserWarning: Some donated buffers were not usable: ShapedArray(float32[1,1,32,32,3]), ShapedArray(float32[1,1]).
+See an explanation at https://jax.readthedocs.io/en/latest/faq.html#buffer-donation.
+  warnings.warn("Some donated buffers were not usable:"
+<REPOSITORY_ROOT>/environments/score-sde/.venv/lib/python3.12/site-packages/jax/_src/xla_bridge.py:1167: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+2026-10-09 15:50:34,882 INFO step: 22, training_loss: 9.64863e-01
+2026-10-09 15:50:39,190 INFO step: 23, training_loss: 1.01955e+00
+2026-10-09 15:50:43,264 INFO step: 24, training_loss: 1.05119e+00
+2026-10-09 15:50:47,371 INFO step: 25, training_loss: 1.01967e+00
+2026-10-09 15:50:51,437 INFO step: 26, training_loss: 1.01253e+00
+2026-10-09 15:50:55,514 INFO step: 27, training_loss: 9.84938e-01
+2026-10-09 15:50:59,573 INFO step: 28, training_loss: 1.01076e+00
+2026-10-09 15:51:03,662 INFO step: 29, training_loss: 9.86132e-01
+2026-10-09 15:51:07,750 INFO step: 30, training_loss: 9.92954e-01
+2026-10-09 15:51:11,858 INFO step: 31, training_loss: 1.00670e+00
+2026-10-09 15:51:15,974 INFO step: 32, training_loss: 9.93132e-01
+2026-10-09 15:51:20,303 INFO step: 33, training_loss: 1.02632e+00
+2026-10-09 15:51:24,693 INFO step: 34, training_loss: 9.86643e-01
+2026-10-09 15:51:28,871 INFO step: 35, training_loss: 9.73727e-01
+2026-10-09 15:51:33,048 INFO step: 36, training_loss: 9.57934e-01
+2026-10-09 15:51:37,672 INFO step: 37, training_loss: 1.01435e+00
+2026-10-09 15:51:43,575 INFO step: 38, training_loss: 1.00150e+00
+2026-10-09 15:51:47,814 INFO step: 39, training_loss: 9.97712e-01
+2026-10-09 15:51:52,041 INFO step: 40, training_loss: 9.95466e-01
+<REPOSITORY_ROOT>/environments/score-sde/.venv/lib/python3.12/site-packages/jax/_src/interpreters/mlir.py:910: UserWarning: Some donated buffers were not usable: ShapedArray(float32[1,1,32,32,3]), ShapedArray(float32[1,1]).
+See an explanation at https://jax.readthedocs.io/en/latest/faq.html#buffer-donation.
+  warnings.warn("Some donated buffers were not usable:"
+<REPOSITORY_ROOT>/environments/score-sde/.venv/lib/python3.12/site-packages/jax/_src/xla_bridge.py:1167: UserWarning: jax.host_id has been renamed to jax.process_index. This alias will eventually be removed; please update your code.
+  warnings.warn(
+2026-10-09 15:51:58,895 INFO step: 40, eval_loss: 1.04359e+00
+2026-10-09 15:52:03,262 INFO step: 41, training_loss: 9.92601e-01
+2026-10-09 15:52:07,463 INFO step: 42, training_loss: 9.50542e-01
+2026-10-09 15:52:11,625 INFO step: 43, training_loss: 1.02884e+00
+2026-10-09 15:52:15,956 INFO step: 44, training_loss: 9.93807e-01
+2026-10-09 15:52:20,159 INFO step: 45, training_loss: 9.57339e-01
+2026-10-09 15:52:24,332 INFO step: 46, training_loss: 9.84968e-01
+2026-10-09 15:52:28,553 INFO step: 47, training_loss: 9.53499e-01
+2026-10-09 15:52:32,751 INFO step: 48, training_loss: 9.82568e-01
+2026-10-09 15:52:36,942 INFO step: 49, training_loss: 9.79840e-01
+2026-10-09 15:52:41,154 INFO step: 50, training_loss: 9.40727e-01
+2026-10-09 15:52:41,165 INFO Saving checkpoint at step: 51
+2026-10-09 15:52:41,166 INFO Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+2026-10-09 15:52:41,167 WARNING SaveArgs.aggregate is deprecated, please use custom TypeHandler (https://orbax.readthedocs.io/en/latest/custom_handlers.html#typehandler) or contact Orbax team to migrate before August 1st, 2024.
+2026-10-09 15:52:41,169 INFO Saving checkpoint to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_51.
+2026-10-09 15:52:41,170 INFO Skipping global process sync, barrier name: create_tmp_directory:pre.checkpoint_51
+2026-10-09 15:52:41,170 INFO Wrote CheckpointMetadata=CheckpointMetadata(init_timestamp_nsecs=1791532361170233000, commit_timestamp_nsecs=None), json={"init_timestamp_nsecs": 1791532361170233000, "commit_timestamp_nsecs": null} to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_51.orbax-checkpoint-tmp-0
+2026-10-09 15:52:41,170 INFO Skipping global process sync, barrier name: create_tmp_directory:post.checkpoint_51
+2026-10-09 15:52:41,997 INFO Skipping global process sync, barrier name: Checkpointer:save.checkpoint_51
+2026-10-09 15:52:41,999 INFO Renaming <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_51.orbax-checkpoint-tmp-0 to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_51
+2026-10-09 15:52:42,000 INFO Read CheckpointMetadata=CheckpointMetadata(init_timestamp_nsecs=1791532361170233000, commit_timestamp_nsecs=None) from <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_51
+2026-10-09 15:52:42,000 INFO Updated CheckpointMetadata=CheckpointMetadata(init_timestamp_nsecs=1791532361170233000, commit_timestamp_nsecs=1791532362000337000) to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_51
+2026-10-09 15:52:42,000 INFO Finished saving checkpoint to `<REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_51`.
+2026-10-09 15:52:42,000 INFO Skipping global process sync, barrier name: Checkpointer:finalize.checkpoint_51
+2026-10-09 15:52:42,002 INFO Removing checkpoint at <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_21
+2026-10-09 15:52:42,018 INFO Saving checkpoint at step: 51
+2026-10-09 15:52:42,018 INFO Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+2026-10-09 15:52:42,022 INFO Saving checkpoint to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_51.
+2026-10-09 15:52:42,022 INFO Skipping global process sync, barrier name: create_tmp_directory:pre.checkpoint_51
+2026-10-09 15:52:42,022 INFO Skipping global process sync, barrier name: create_tmp_directory:post.checkpoint_51
+2026-10-09 15:52:42,983 INFO Skipping global process sync, barrier name: Checkpointer:save.checkpoint_51
+2026-10-09 15:52:42,987 INFO Renaming <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_51.orbax-checkpoint-tmp-1 to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_51
+2026-10-09 15:52:42,988 INFO Finished saving checkpoint to `<REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_51`.
+2026-10-09 15:52:42,988 INFO Skipping global process sync, barrier name: Checkpointer:finalize.checkpoint_51
+2026-10-09 15:52:47,394 INFO step: 51, training_loss: 1.03240e+00
+2026-10-09 15:52:51,609 INFO step: 52, training_loss: 9.69157e-01
+2026-10-09 15:52:55,831 INFO step: 53, training_loss: 9.96795e-01
+2026-10-09 15:53:00,036 INFO step: 54, training_loss: 1.04693e+00
+2026-10-09 15:53:04,274 INFO step: 55, training_loss: 9.62383e-01
+2026-10-09 15:53:08,516 INFO step: 56, training_loss: 1.03354e+00
+2026-10-09 15:53:12,743 INFO step: 57, training_loss: 9.68369e-01
+2026-10-09 15:53:17,009 INFO step: 58, training_loss: 9.39280e-01
+2026-10-09 15:53:21,243 INFO step: 59, training_loss: 9.74278e-01
+2026-10-09 15:53:25,485 INFO step: 60, training_loss: 1.03810e+00
+2026-10-09 15:53:25,635 INFO step: 60, eval_loss: 1.03284e+00
+2026-10-09 15:53:29,891 INFO step: 61, training_loss: 9.82381e-01
+2026-10-09 15:53:34,147 INFO step: 62, training_loss: 9.89287e-01
+2026-10-09 15:53:38,380 INFO step: 63, training_loss: 9.78954e-01
+2026-10-09 15:53:42,629 INFO step: 64, training_loss: 9.76987e-01
+2026-10-09 15:53:46,860 INFO step: 65, training_loss: 1.03812e+00
+2026-10-09 15:53:51,118 INFO step: 66, training_loss: 9.87768e-01
+2026-10-09 15:53:55,374 INFO step: 67, training_loss: 9.80174e-01
+2026-10-09 15:53:59,658 INFO step: 68, training_loss: 1.00455e+00
+2026-10-09 15:54:03,984 INFO step: 69, training_loss: 1.00761e+00
+2026-10-09 15:54:08,488 INFO step: 70, training_loss: 9.98843e-01
+2026-10-09 15:54:12,791 INFO step: 71, training_loss: 9.83857e-01
+2026-10-09 15:54:17,102 INFO step: 72, training_loss: 9.82992e-01
+2026-10-09 15:54:21,374 INFO step: 73, training_loss: 1.01014e+00
+2026-10-09 15:54:25,949 INFO step: 74, training_loss: 9.54997e-01
+2026-10-09 15:54:30,199 INFO step: 75, training_loss: 9.52898e-01
+2026-10-09 15:54:34,492 INFO step: 76, training_loss: 9.54686e-01
+2026-10-09 15:54:38,840 INFO step: 77, training_loss: 1.03017e+00
+2026-10-09 15:54:43,153 INFO step: 78, training_loss: 9.96933e-01
+2026-10-09 15:54:47,408 INFO step: 79, training_loss: 9.66343e-01
+2026-10-09 15:54:51,717 INFO step: 80, training_loss: 9.73515e-01
+2026-10-09 15:54:51,870 INFO step: 80, eval_loss: 9.96400e-01
+2026-10-09 15:54:56,354 INFO step: 81, training_loss: 1.00285e+00
+2026-10-09 15:55:00,659 INFO step: 82, training_loss: 9.88135e-01
+2026-10-09 15:55:04,965 INFO step: 83, training_loss: 9.30974e-01
+2026-10-09 15:55:09,256 INFO step: 84, training_loss: 9.90178e-01
+2026-10-09 15:55:13,546 INFO step: 85, training_loss: 9.54155e-01
+2026-10-09 15:55:17,851 INFO step: 86, training_loss: 9.65415e-01
+2026-10-09 15:55:22,173 INFO step: 87, training_loss: 9.71468e-01
+2026-10-09 15:55:26,458 INFO step: 88, training_loss: 9.85336e-01
+2026-10-09 15:55:30,753 INFO step: 89, training_loss: 9.61377e-01
+2026-10-09 15:55:35,060 INFO step: 90, training_loss: 1.01983e+00
+2026-10-09 15:55:39,393 INFO step: 91, training_loss: 9.51723e-01
+2026-10-09 15:55:43,775 INFO step: 92, training_loss: 9.94038e-01
+2026-10-09 15:55:48,109 INFO step: 93, training_loss: 9.59056e-01
+2026-10-09 15:55:52,461 INFO step: 94, training_loss: 9.33247e-01
+2026-10-09 15:55:56,810 INFO step: 95, training_loss: 9.63498e-01
+2026-10-09 15:56:01,116 INFO step: 96, training_loss: 9.24099e-01
+2026-10-09 15:56:05,441 INFO step: 97, training_loss: 9.73363e-01
+2026-10-09 15:56:09,757 INFO step: 98, training_loss: 9.64086e-01
+2026-10-09 15:56:14,092 INFO step: 99, training_loss: 9.44960e-01
+2026-10-09 15:56:18,408 INFO step: 100, training_loss: 9.59344e-01
+2026-10-09 15:56:18,419 INFO Saving checkpoint at step: 101
+2026-10-09 15:56:18,419 INFO Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+2026-10-09 15:56:18,423 INFO Saving checkpoint to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_101.
+2026-10-09 15:56:18,423 INFO Skipping global process sync, barrier name: create_tmp_directory:pre.checkpoint_101
+2026-10-09 15:56:18,423 INFO Skipping global process sync, barrier name: create_tmp_directory:post.checkpoint_101
+2026-10-09 15:56:19,280 INFO Skipping global process sync, barrier name: Checkpointer:save.checkpoint_101
+2026-10-09 15:56:19,282 INFO Renaming <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_101.orbax-checkpoint-tmp-2 to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_101
+2026-10-09 15:56:19,283 INFO Finished saving checkpoint to `<REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_101`.
+2026-10-09 15:56:19,283 INFO Skipping global process sync, barrier name: Checkpointer:finalize.checkpoint_101
+2026-10-09 15:56:19,284 INFO Removing checkpoint at <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_51
+2026-10-09 15:56:19,605 INFO step: 100, eval_loss: 1.03272e+00
+2026-10-09 15:56:19,615 INFO Saving checkpoint at step: 101
+2026-10-09 15:56:19,615 INFO Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+2026-10-09 15:56:19,618 INFO Saving checkpoint to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_101.
+2026-10-09 15:56:19,618 INFO Skipping global process sync, barrier name: create_tmp_directory:pre.checkpoint_101
+2026-10-09 15:56:19,618 INFO Skipping global process sync, barrier name: create_tmp_directory:post.checkpoint_101
+2026-10-09 15:56:20,655 INFO Skipping global process sync, barrier name: Checkpointer:save.checkpoint_101
+2026-10-09 15:56:20,684 INFO Renaming <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_101.orbax-checkpoint-tmp-3 to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_101
+2026-10-09 15:56:20,686 INFO Finished saving checkpoint to `<REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_101`.
+2026-10-09 15:56:20,686 INFO Skipping global process sync, barrier name: Checkpointer:finalize.checkpoint_101
+2026-10-09 15:56:25,162 INFO step: 101, training_loss: 9.95409e-01
+2026-10-09 15:56:29,484 INFO step: 102, training_loss: 9.62870e-01
+2026-10-09 15:56:33,804 INFO step: 103, training_loss: 9.47380e-01
+2026-10-09 15:56:38,114 INFO step: 104, training_loss: 1.00924e+00
+2026-10-09 15:56:42,459 INFO step: 105, training_loss: 9.76060e-01
+2026-10-09 15:56:47,046 INFO step: 106, training_loss: 9.74464e-01
+2026-10-09 15:56:51,474 INFO step: 107, training_loss: 9.48399e-01
+2026-10-09 15:56:55,971 INFO step: 108, training_loss: 9.47920e-01
+2026-10-09 15:57:00,394 INFO step: 109, training_loss: 9.89237e-01
+2026-10-09 15:57:05,060 INFO step: 110, training_loss: 9.35973e-01
+2026-10-09 15:57:09,575 INFO step: 111, training_loss: 9.38559e-01
+2026-10-09 15:57:13,963 INFO step: 112, training_loss: 9.59105e-01
+2026-10-09 15:57:18,328 INFO step: 113, training_loss: 9.40230e-01
+2026-10-09 15:57:22,763 INFO step: 114, training_loss: 9.72125e-01
+2026-10-09 15:57:27,168 INFO step: 115, training_loss: 9.41635e-01
+2026-10-09 15:57:31,550 INFO step: 116, training_loss: 8.72129e-01
+2026-10-09 15:57:35,911 INFO step: 117, training_loss: 9.31354e-01
+2026-10-09 15:57:40,297 INFO step: 118, training_loss: 9.25555e-01
+2026-10-09 15:57:44,692 INFO step: 119, training_loss: 9.88043e-01
+2026-10-09 15:57:49,087 INFO step: 120, training_loss: 9.81105e-01
+2026-10-09 15:57:49,241 INFO step: 120, eval_loss: 9.97516e-01
+2026-10-09 15:57:53,626 INFO step: 121, training_loss: 9.70150e-01
+2026-10-09 15:57:58,052 INFO step: 122, training_loss: 9.68829e-01
+2026-10-09 15:58:02,527 INFO step: 123, training_loss: 8.95166e-01
+2026-10-09 15:58:06,897 INFO step: 124, training_loss: 9.36624e-01
+2026-10-09 15:58:11,269 INFO step: 125, training_loss: 9.88640e-01
+2026-10-09 15:58:15,651 INFO step: 126, training_loss: 9.41099e-01
+2026-10-09 15:58:20,021 INFO step: 127, training_loss: 9.73759e-01
+2026-10-09 15:58:24,357 INFO step: 128, training_loss: 9.40409e-01
+2026-10-09 15:58:28,717 INFO step: 129, training_loss: 9.75752e-01
+2026-10-09 15:58:33,084 INFO step: 130, training_loss: 9.47973e-01
+2026-10-09 15:58:37,443 INFO step: 131, training_loss: 9.33743e-01
+2026-10-09 15:58:41,810 INFO step: 132, training_loss: 9.61459e-01
+2026-10-09 15:58:46,346 INFO step: 133, training_loss: 9.24872e-01
+2026-10-09 15:58:50,753 INFO step: 134, training_loss: 9.45993e-01
+2026-10-09 15:58:55,174 INFO step: 135, training_loss: 9.36049e-01
+2026-10-09 15:58:59,601 INFO step: 136, training_loss: 1.00229e+00
+2026-10-09 15:59:04,075 INFO step: 137, training_loss: 8.69695e-01
+2026-10-09 15:59:08,455 INFO step: 138, training_loss: 9.46330e-01
+2026-10-09 15:59:12,813 INFO step: 139, training_loss: 9.36058e-01
+2026-10-09 15:59:17,205 INFO step: 140, training_loss: 9.33640e-01
+2026-10-09 15:59:17,359 INFO step: 140, eval_loss: 9.96859e-01
+2026-10-09 15:59:21,756 INFO step: 141, training_loss: 9.24554e-01
+2026-10-09 15:59:26,128 INFO step: 142, training_loss: 9.08556e-01
+2026-10-09 15:59:30,510 INFO step: 143, training_loss: 9.21374e-01
+2026-10-09 15:59:34,927 INFO step: 144, training_loss: 8.91736e-01
+2026-10-09 15:59:39,326 INFO step: 145, training_loss: 9.18348e-01
+2026-10-09 15:59:43,747 INFO step: 146, training_loss: 9.15130e-01
+2026-10-09 15:59:48,191 INFO step: 147, training_loss: 9.04187e-01
+2026-10-09 15:59:52,644 INFO step: 148, training_loss: 8.91098e-01
+2026-10-09 15:59:57,123 INFO step: 149, training_loss: 9.04797e-01
+2026-10-09 16:00:01,603 INFO step: 150, training_loss: 9.12039e-01
+2026-10-09 16:00:01,616 INFO Saving checkpoint at step: 151
+2026-10-09 16:00:01,616 INFO Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+2026-10-09 16:00:01,619 INFO Saving checkpoint to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_151.
+2026-10-09 16:00:01,620 INFO Skipping global process sync, barrier name: create_tmp_directory:pre.checkpoint_151
+2026-10-09 16:00:01,621 INFO Skipping global process sync, barrier name: create_tmp_directory:post.checkpoint_151
+2026-10-09 16:00:02,769 INFO Skipping global process sync, barrier name: Checkpointer:save.checkpoint_151
+2026-10-09 16:00:02,771 INFO Renaming <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_151.orbax-checkpoint-tmp-4 to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_151
+2026-10-09 16:00:02,771 INFO Finished saving checkpoint to `<REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_151`.
+2026-10-09 16:00:02,772 INFO Skipping global process sync, barrier name: Checkpointer:finalize.checkpoint_151
+2026-10-09 16:00:02,772 INFO Removing checkpoint at <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_101
+2026-10-09 16:00:02,817 INFO Saving checkpoint at step: 151
+2026-10-09 16:00:02,817 INFO Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+2026-10-09 16:00:02,820 INFO Saving checkpoint to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_151.
+2026-10-09 16:00:02,820 INFO Skipping global process sync, barrier name: create_tmp_directory:pre.checkpoint_151
+2026-10-09 16:00:02,820 INFO Skipping global process sync, barrier name: create_tmp_directory:post.checkpoint_151
+2026-10-09 16:00:03,626 INFO Skipping global process sync, barrier name: Checkpointer:save.checkpoint_151
+2026-10-09 16:00:03,627 INFO Renaming <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_151.orbax-checkpoint-tmp-5 to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_151
+2026-10-09 16:00:03,628 INFO Finished saving checkpoint to `<REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_151`.
+2026-10-09 16:00:03,628 INFO Skipping global process sync, barrier name: Checkpointer:finalize.checkpoint_151
+2026-10-09 16:00:03,628 INFO Removing checkpoint at <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_51
+2026-10-09 16:00:08,042 INFO step: 151, training_loss: 9.11932e-01
+2026-10-09 16:00:12,683 INFO step: 152, training_loss: 9.02517e-01
+2026-10-09 16:00:17,304 INFO step: 153, training_loss: 9.05833e-01
+2026-10-09 16:00:21,816 INFO step: 154, training_loss: 8.97592e-01
+2026-10-09 16:00:26,353 INFO step: 155, training_loss: 8.19385e-01
+2026-10-09 16:00:30,885 INFO step: 156, training_loss: 9.17840e-01
+2026-10-09 16:00:35,422 INFO step: 157, training_loss: 9.22535e-01
+2026-10-09 16:00:39,963 INFO step: 158, training_loss: 8.93916e-01
+2026-10-09 16:00:44,514 INFO step: 159, training_loss: 8.75126e-01
+2026-10-09 16:00:49,038 INFO step: 160, training_loss: 8.84623e-01
+2026-10-09 16:00:49,192 INFO step: 160, eval_loss: 9.53591e-01
+2026-10-09 16:00:53,773 INFO step: 161, training_loss: 8.86073e-01
+2026-10-09 16:00:58,363 INFO step: 162, training_loss: 9.05944e-01
+2026-10-09 16:01:02,914 INFO step: 163, training_loss: 9.12461e-01
+2026-10-09 16:01:07,491 INFO step: 164, training_loss: 9.11159e-01
+2026-10-09 16:01:12,054 INFO step: 165, training_loss: 8.97977e-01
+2026-10-09 16:01:16,624 INFO step: 166, training_loss: 8.29912e-01
+2026-10-09 16:01:21,326 INFO step: 167, training_loss: 9.09870e-01
+2026-10-09 16:01:26,042 INFO step: 168, training_loss: 9.16129e-01
+2026-10-09 16:01:30,622 INFO step: 169, training_loss: 9.00247e-01
+2026-10-09 16:01:35,234 INFO step: 170, training_loss: 9.05908e-01
+2026-10-09 16:01:39,799 INFO step: 171, training_loss: 8.71645e-01
+2026-10-09 16:01:44,479 INFO step: 172, training_loss: 8.75243e-01
+2026-10-09 16:01:49,132 INFO step: 173, training_loss: 9.02329e-01
+2026-10-09 16:01:53,747 INFO step: 174, training_loss: 8.66697e-01
+2026-10-09 16:01:58,368 INFO step: 175, training_loss: 8.83392e-01
+2026-10-09 16:02:03,040 INFO step: 176, training_loss: 8.76173e-01
+2026-10-09 16:02:07,688 INFO step: 177, training_loss: 9.22355e-01
+2026-10-09 16:02:12,612 INFO step: 178, training_loss: 9.90563e-01
+2026-10-09 16:02:17,331 INFO step: 179, training_loss: 8.89914e-01
+2026-10-09 16:02:22,179 INFO step: 180, training_loss: 8.37227e-01
+2026-10-09 16:02:22,349 INFO step: 180, eval_loss: 9.88733e-01
+2026-10-09 16:02:27,314 INFO step: 181, training_loss: 9.01700e-01
+2026-10-09 16:02:32,001 INFO step: 182, training_loss: 8.39739e-01
+2026-10-09 16:02:36,692 INFO step: 183, training_loss: 8.34882e-01
+2026-10-09 16:02:41,338 INFO step: 184, training_loss: 8.60879e-01
+2026-10-09 16:02:46,033 INFO step: 185, training_loss: 8.52735e-01
+2026-10-09 16:02:50,728 INFO step: 186, training_loss: 8.52939e-01
+2026-10-09 16:02:55,377 INFO step: 187, training_loss: 8.60589e-01
+2026-10-09 16:03:00,108 INFO step: 188, training_loss: 8.54670e-01
+2026-10-09 16:03:04,807 INFO step: 189, training_loss: 8.28002e-01
+2026-10-09 16:03:09,491 INFO step: 190, training_loss: 8.55975e-01
+2026-10-09 16:03:14,173 INFO step: 191, training_loss: 9.06808e-01
+2026-10-09 16:03:18,887 INFO step: 192, training_loss: 8.32901e-01
+2026-10-09 16:03:23,652 INFO step: 193, training_loss: 8.66983e-01
+2026-10-09 16:03:28,574 INFO step: 194, training_loss: 8.61583e-01
+2026-10-09 16:03:33,334 INFO step: 195, training_loss: 8.44617e-01
+2026-10-09 16:03:38,153 INFO step: 196, training_loss: 8.29031e-01
+2026-10-09 16:03:43,039 INFO step: 197, training_loss: 8.54304e-01
+2026-10-09 16:03:47,923 INFO step: 198, training_loss: 8.52234e-01
+2026-10-09 16:03:52,734 INFO step: 199, training_loss: 8.44115e-01
+2026-10-09 16:03:52,747 INFO Saving checkpoint at step: 200
+2026-10-09 16:03:52,747 INFO Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+2026-10-09 16:03:52,751 INFO Saving checkpoint to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_200.
+2026-10-09 16:03:52,751 INFO Skipping global process sync, barrier name: create_tmp_directory:pre.checkpoint_200
+2026-10-09 16:03:52,752 INFO Skipping global process sync, barrier name: create_tmp_directory:post.checkpoint_200
+2026-10-09 16:03:53,592 INFO Skipping global process sync, barrier name: Checkpointer:save.checkpoint_200
+2026-10-09 16:03:53,593 INFO Renaming <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_200.orbax-checkpoint-tmp-6 to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_200
+2026-10-09 16:03:53,594 INFO Finished saving checkpoint to `<REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_200`.
+2026-10-09 16:03:53,594 INFO Skipping global process sync, barrier name: Checkpointer:finalize.checkpoint_200
+2026-10-09 16:03:53,594 INFO Removing checkpoint at <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints/checkpoint_101
+W0000 00:00:1791533033.661757  115823 cache_dataset_ops.cc:912] The calling iterator did not fully read the dataset being cached. In order to avoid unexpected truncation of the dataset, the partially cached contents of the dataset  will be discarded. This can happen if you have an input pipeline similar to `dataset.cache().take(k).repeat()`. You should use `dataset.take(k).cache().repeat()` instead.
+2026-10-09 16:03:54,263 INFO Saving checkpoint at step: 200
+2026-10-09 16:03:54,263 INFO Using Orbax as backend to save Flax checkpoints. For potential troubleshooting see: https://flax.readthedocs.io/en/latest/guides/training_techniques/use_checkpointing.html#orbax-as-backend-troubleshooting
+2026-10-09 16:03:54,266 INFO Saving checkpoint to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_200.
+2026-10-09 16:03:54,266 INFO Skipping global process sync, barrier name: create_tmp_directory:pre.checkpoint_200
+2026-10-09 16:03:54,267 INFO Skipping global process sync, barrier name: create_tmp_directory:post.checkpoint_200
+2026-10-09 16:03:54,690 INFO Skipping global process sync, barrier name: Checkpointer:save.checkpoint_200
+2026-10-09 16:03:54,691 INFO Renaming <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_200.orbax-checkpoint-tmp-7 to <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_200
+2026-10-09 16:03:54,691 INFO Finished saving checkpoint to `<REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_200`.
+2026-10-09 16:03:54,691 INFO Skipping global process sync, barrier name: Checkpointer:finalize.checkpoint_200
+2026-10-09 16:03:54,692 INFO Removing checkpoint at <REPOSITORY_ROOT>/runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_151

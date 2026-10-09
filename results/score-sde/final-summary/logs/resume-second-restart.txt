@@ -1,0 +1,36 @@
+<REPOSITORY_ROOT>/environments/score-sde/.venv/lib/python3.12/site-packages/tensorflow_hub/__init__.py:61: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+[compat_patch] All compatibility patches applied successfully.
+[compat_patch] Patched evaluation.run_inception_distributed for CPU
+2026-10-09 15:28:53,298 INFO Restoring orbax checkpoint from <REPOSITORY_ROOT>/runs/score-sde/resume-check/checkpoints/checkpoint_21
+2026-10-09 15:28:53,307 INFO Restoring item from <REPOSITORY_ROOT>/runs/score-sde/resume-check/checkpoints/checkpoint_21.
+2026-10-09 15:28:53,827 WARNING The transformations API will eventually be replaced by an upgraded design. The current API will not be removed until this point, but it will no longer be actively worked on.
+2026-10-09 15:28:53,852 INFO Finished restoring checkpoint from <REPOSITORY_ROOT>/runs/score-sde/resume-check/checkpoints/checkpoint_21.
+2026-10-09 15:28:53,852 INFO Skipping global process sync, barrier name: Checkpointer:restore.checkpoint_21
+2026-10-09 15:28:54,557 INFO Restoring orbax checkpoint from <REPOSITORY_ROOT>/runs/score-sde/resume-check/checkpoints-meta/checkpoint_21
+2026-10-09 15:28:54,566 INFO Restoring item from <REPOSITORY_ROOT>/runs/score-sde/resume-check/checkpoints-meta/checkpoint_21.
+2026-10-09 15:28:55,193 WARNING The transformations API will eventually be replaced by an upgraded design. The current API will not be removed until this point, but it will no longer be actively worked on.
+2026-10-09 15:28:55,232 INFO Finished restoring checkpoint from <REPOSITORY_ROOT>/runs/score-sde/resume-check/checkpoints-meta/checkpoint_21.
+2026-10-09 15:28:55,232 INFO Skipping global process sync, barrier name: Checkpointer:restore.checkpoint_21
+{
+  "pid": 4990,
+  "directory": "checkpoints",
+  "typed_restore_exactly_equals_saved_state": true,
+  "state_step": 22,
+  "adam_counts": [
+    22
+  ],
+  "field_sha256": {
+    "step": "703c96f9f116510c17d9a7649f869816fb3be64d7fdf17828323e4e53ab3a43f",
+    "optimizer": "fe2e6c15f1266fdea90fe9989fe894c96547fbccf0358cf900f432bc08477da7",
+    "lr": "7d67d96a71ea07e5bb562cf1672d15e7dbcbc3046640fe2cac688f00aca2ab33",
+    "model_state": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ema_rate": "6a8d798a0845512f9f39254847fa1f98e96e9032bee52f1b19d441c5a0856935",
+    "params_ema": "f69d676b38d5a0ba7c058b71261762b1776b9a08bf83e5eac2b505d968f221bb",
+    "rng": "ec0e6b87bcfed163c1ec3f5b4278acc702d338cf96f630202b11785527b60974"
+  },
+  "optimizer_parameter_sha256": "66e2be010207023dadf83eaa2648d524d82ef49224112644806790733ceb16c6",
+  "adam_state_sha256": "0ea8c0a012c07b3cb6c0905152d26047c7afcc72b93f71ac6d2dc6dc5aa0a886",
+  "ema_sha256": "f69d676b38d5a0ba7c058b71261762b1776b9a08bf83e5eac2b505d968f221bb",
+  "all_state_values_finite": true
+}

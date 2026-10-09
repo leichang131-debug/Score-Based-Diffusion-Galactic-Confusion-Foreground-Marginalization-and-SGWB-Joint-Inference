@@ -1,0 +1,50 @@
+{
+  "stages": [
+    {
+      "stage": "original-20-updates",
+      "start_updates": 0,
+      "end_updates": 20,
+      "invocation_seconds": 198.80632329100035,
+      "peak_rss_gib": 5.62554931640625,
+      "scope": "Training invocation including initialization, first compilation, evaluation and saves; imports/readback excluded"
+    },
+    {
+      "stage": "resume-check",
+      "start_updates": 20,
+      "end_updates": 22,
+      "invocation_seconds": 133.26837712500037,
+      "peak_rss_gib": 4.3248748779296875,
+      "scope": "Typed restore diagnostics and two original training/evaluation updates; second interpreter verification excluded"
+    },
+    {
+      "stage": "original-200-updates",
+      "start_updates": 22,
+      "end_updates": 200,
+      "invocation_seconds": 908.0903116250001,
+      "peak_rss_gib": 4.3712921142578125,
+      "scope": "Training invocation including restoration diagnostics, compilation, periodic outputs and final saves; later readback excluded"
+    },
+    {
+      "stage": "original-200-sampling",
+      "start_updates": 200,
+      "end_updates": 200,
+      "invocation_seconds": 357.699984375,
+      "peak_rss_gib": 3.1834716796875,
+      "scope": "Restore, four sampler calls, diagnostics and artifact writes; interpreter imports excluded"
+    }
+  ],
+  "sum_measured_invocations_seconds": 1597.8649964160008,
+  "sum_scope": "Sum of the four listed calls only, not total project time. Excludes installation/downloads, separate verification interpreters, unsuccessful diagnostic attempts, plotting, audits and manual work.",
+  "benchmark_first_training_call_seconds": 103.60697737499959,
+  "benchmark_first_validation_call_seconds": 6.751542291000078,
+  "benchmark_late_training_median_seconds": 4.509156271000393,
+  "benchmark_sum_checkpoint_call_seconds": 7.061894374000076,
+  "sampling_warm_timing": {
+    "count": 3,
+    "mean_seconds": 89.1133103196674,
+    "median_seconds": 88.9674817920004,
+    "min_seconds": 87.89550766700086,
+    "max_seconds": 90.47694150000098,
+    "note": "Three full warm calls provide a preliminary estimate, not a sustained-speed benchmark or a precise tail distribution."
+  }
+}

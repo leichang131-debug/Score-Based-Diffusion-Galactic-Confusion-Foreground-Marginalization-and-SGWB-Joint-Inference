@@ -19,6 +19,7 @@ All teacher source lives unchanged in `external/score-sde-reproduction/`, includ
 | `analyze-score-sde-200.py` | Fresh checkpoint readback and timing records/figure |
 | `check-score-sde-sampling.py` | Four original EMA samples, finite-value checks and warm-call timing |
 | `audit-score-sde-source.py` | Every tracked upstream file and recursive Git link; online HEAD check |
+| `export-score-sde-results.py` | Publish portable logs/events and regenerate merged loss exports/figures without model execution |
 | `audit-score-sde-evidence.py` | Original TensorBoard reader, configuration parity and artifact checksums |
 
 Run audits from the repository root using `environments/score-sde/.venv/bin/python`. Source audit is online by default; `--offline` explicitly skips current remote HEAD verification. Evidence audit requires the preserved local run directories and checkpoints. Neither audit executes training or sampling.

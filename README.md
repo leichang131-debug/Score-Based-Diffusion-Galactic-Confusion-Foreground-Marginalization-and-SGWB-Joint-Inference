@@ -4,7 +4,7 @@ Research workspace for probabilistic marginalization of the Galactic confusion f
 
 **Status:** original Score-SDE is preserved as pinned recursive Git submodules. The macOS CPU workflow passed data preparation, 200 original-network updates, typed optimizer/EMA continuation and four finite EMA sampling calls. Sample previews remain saturated noise; converged training, standard image metrics and reproduction of the teacher's 214k result are not established.
 
-See the [complete source and evidence audit](docs/reproduction/score-sde/source-alignment.md), [training/speed report](docs/reproduction/score-sde/original-200-updates.md) and [sampling report](docs/reproduction/score-sde/sampling-check.md).
+The [final small-scale reproduction report](docs/reproduction/score-sde/final-report.md) collects loss curves, runtime/issues and configuration/log/restoration/sampling evidence. See the [complete source and evidence audit](docs/reproduction/score-sde/source-alignment.md), [training/speed report](docs/reproduction/score-sde/original-200-updates.md) and [sampling report](docs/reproduction/score-sde/sampling-check.md).
 
 ## Scientific objective
 
@@ -110,6 +110,14 @@ Use pinned upstream commits and preserve upstream licenses when integrating code
 Use independent environments for Score-SDE, TDC, and TaijiSGWB. Validate and lock the dependency versions for each platform before publishing installation commands.
 
 Local macOS CPU runs will establish minimal functionality and support learning. Linux cluster resources will support full training, large simulations, posterior sampling, and repeated injection studies. Apple GPU compatibility has not been validated. Score-SDE environment setup, command-line configuration parsing, and synthetic CPU execution have been validated on macOS. See [Score-SDE setup](environments/score-sde/README.md). Other component installation commands are not yet validated.
+
+## Score-SDE local reproduction results
+
+The original-method workflow completed 200 updates and four EMA sampling calls. Training, validation, typed restoration and finite-output checks passed. Generated previews remain saturated noise; numerical reproduction of the teacher's 214k run is not established.
+
+![Local 200-update loss views](results/score-sde/final-summary/loss_curve.png)
+
+[Final report](docs/reproduction/score-sde/final-report.md) · [Portable evidence package](results/score-sde/final-summary/) · [Source correspondence](docs/reproduction/score-sde/source-alignment.md)
 
 ## Reproducibility and results
 

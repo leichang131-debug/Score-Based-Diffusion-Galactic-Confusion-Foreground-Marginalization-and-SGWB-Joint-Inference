@@ -63,12 +63,11 @@ Step/value checks against published stage JSON records passed. Console formattin
 - [20-update report](original-20-updates.md), [typed continuation](resume-check.md), [200-update benchmark](original-200-updates.md), [EMA sampling](sampling-check.md).
 - Raw TensorBoard event files, console logs and model checkpoints remain in ignored local `runs/` directories. Published hashes and records support review, but a new clone cannot read those local files until artifacts are provided.
 
-### Remaining publication work
+### Final publication package
 
-1. Merge the three TensorBoard runs into `loss_history.npz` with the teacher's four field names, plus CSV and run provenance. Preserve original loop labels and document their relation to completed updates.
-2. Produce full 1–200 and late 100–200 loss views. The teacher's 5k+ panel is not applicable yet. MA-20 covers 20 records: our logs are every update, while teacher reference logs are every 50 labels.
-3. Publish a normalized log index/excerpts and a consolidated issue/runtime ledger, linked to hashes of original local logs. Keep resolved audit-format mismatches distinct from actual training failures.
-4. Mark the result as small-scale workflow reproduction. No convergence, standard image metric, absence of overfitting, or reproduction of the teacher's 214k numerical result has been established.
+The [final report](final-report.md) completes the publication work: merged four-field NPZ/CSV, full and late warmup loss views, normalized completed-stage logs, byte-identical TensorBoard copies, runtime/issue ledgers and linked restoration/sampling evidence. The package is under `results/score-sde/final-summary/` and can regenerate its plots without local model checkpoints or CIFAR-10.
+
+Original model checkpoints remain local; their checksums and typed restoration evidence are published. This remains a small-scale workflow reproduction, without convergence, standard image metrics or reproduction of the teacher's 214k numerical results.
 
 The teacher plotting script's overfitting label is a heuristic based on recent train/eval averages. It is not a statistically supported overfitting assessment for this short, batch-one, changing-validation-frequency run.
 

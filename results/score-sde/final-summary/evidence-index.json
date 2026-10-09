@@ -1,0 +1,103 @@
+{
+  "normalization": "Text logs replace repository/workspace/home paths and hostname; original local logs are unchanged. TensorBoard files are byte-identical copies with portable names.",
+  "text_logs": [
+    {
+      "original_path": "runs/score-sde/cifar10-download.log",
+      "published_path": "results/score-sde/final-summary/logs/cifar10-download.txt",
+      "original_sha256": "37a9e63896fedc1b963e6922e9359d2332608953c45d38f569f0e1d8bc1ceff9",
+      "normalized_sha256": "37a9e63896fedc1b963e6922e9359d2332608953c45d38f569f0e1d8bc1ceff9",
+      "original_bytes": 1403,
+      "normalized_bytes": 1403
+    },
+    {
+      "original_path": "runs/score-sde/cifar10-preparation.log",
+      "published_path": "results/score-sde/final-summary/logs/cifar10-preparation.txt",
+      "original_sha256": "3640b441aed7d07634b7c04ec82318d0a26e3fcb31b1494197bda52b31a47e5c",
+      "normalized_sha256": "086db5eae9efcddcdf2631c8ec4f693038184d5dccc6349fd65dc772cc269f55",
+      "original_bytes": 5411,
+      "normalized_bytes": 5317
+    },
+    {
+      "original_path": "runs/score-sde/original-20-checkpoint-validation.log",
+      "published_path": "results/score-sde/final-summary/logs/original-20-checkpoint-validation.txt",
+      "original_sha256": "7bc04a39874b1a29502009e050877d5ab39de6ae31dac442aa2ca0154072123e",
+      "normalized_sha256": "a2cb2629e598d0ad83fa520796d725ecdacf4b6edd19e172c339eca4b200450a",
+      "original_bytes": 1332,
+      "normalized_bytes": 1238
+    },
+    {
+      "original_path": "runs/score-sde/original-20-updates.log",
+      "published_path": "results/score-sde/final-summary/logs/original-20-updates.txt",
+      "original_sha256": "91649f44b06b4dca3b4eef09deb2e3ccb0b437d516aad32824c67ee16072e104",
+      "normalized_sha256": "fc94ed2dd8c613f79a3eb13c18c7d4aa9e45e15c39853073e912b24a8c52915d",
+      "original_bytes": 16397,
+      "normalized_bytes": 13953
+    },
+    {
+      "original_path": "runs/score-sde/original-200-analysis.log",
+      "published_path": "results/score-sde/final-summary/logs/original-200-analysis.txt",
+      "original_sha256": "77e1262bb337f43fda1b44162e22afbfc4b725033f25f8e02110d9cccb555a3c",
+      "normalized_sha256": "afb4f231e8ddfc54e17f8b3a2c2538321b34e48a45ed0c9001d272f4e13faf4f",
+      "original_bytes": 4542,
+      "normalized_bytes": 4448
+    },
+    {
+      "original_path": "runs/score-sde/original-200-sampling.log",
+      "published_path": "results/score-sde/final-summary/logs/original-200-sampling.txt",
+      "original_sha256": "a2af78d309123221eb183f45f8d284ae23b3e4bfebb71a3355d1326b6c7ec6e3",
+      "normalized_sha256": "36bd95230f078ac4ab42fe8e01ff39f90ed90e4464fd11b3b36cc85a42f90420",
+      "original_bytes": 4828,
+      "normalized_bytes": 4452
+    },
+    {
+      "original_path": "runs/score-sde/original-200-updates.log",
+      "published_path": "results/score-sde/final-summary/logs/original-200-updates.txt",
+      "original_sha256": "d119978015df4094f9c74d2e328e61c3b5d67b475ba303285a8425e4bc86e6e4",
+      "normalized_sha256": "be6eed68a4d247d2421a513d21540ba00545a7a16210610214e7894e99393a60",
+      "original_bytes": 35317,
+      "normalized_bytes": 29865
+    },
+    {
+      "original_path": "runs/score-sde/resume-check.log",
+      "published_path": "results/score-sde/final-summary/logs/resume-check.txt",
+      "original_sha256": "dfc617aa090e80e12c8c33d1f607091172f76cba809ef1619883182bbfe96101",
+      "normalized_sha256": "6e418e86c22db29ff3fcff4d92aa02c4a5d4fad95b73d18f9967f3fa976ccb7b",
+      "original_bytes": 16429,
+      "normalized_bytes": 12575
+    },
+    {
+      "original_path": "runs/score-sde/resume-second-restart.log",
+      "published_path": "results/score-sde/final-summary/logs/resume-second-restart.txt",
+      "original_sha256": "9d03476bd9dd9f12d6b97a8bf2dc778761ae9ffcf8d874c0299d36b3f78981c6",
+      "normalized_sha256": "51f073fc54c71837677e33e7d13395b15f4abdda2dee481f10c19aa190a8fc2f",
+      "original_bytes": 3671,
+      "normalized_bytes": 3013
+    }
+  ],
+  "tensorboard_files": [
+    {
+      "stage": "original-20-updates",
+      "original_path": "runs/score-sde/original-20-updates/tensorboard/events.out.tfevents.1791524385.leideMacBook-Air.local.2595.0.v2",
+      "published_path": "results/score-sde/final-summary/evidence/original-20-updates/tensorboard/events.out.tfevents.published",
+      "bytes": 1762,
+      "sha256": "801fd8a3e6dd29bf08e1896c54c6f3c4b300d842c340537a8cf3100128906fb0",
+      "byte_identical": true
+    },
+    {
+      "stage": "resume-check",
+      "original_path": "runs/score-sde/resume-check/tensorboard/events.out.tfevents.1791530607.leideMacBook-Air.local.4754.0.v2",
+      "published_path": "results/score-sde/final-summary/evidence/resume-check/tensorboard/events.out.tfevents.published",
+      "bytes": 354,
+      "sha256": "11bae681ba812159356518ffb270cee9146bfb3b3b1cd4ec6ec5bb98e27b13d0",
+      "byte_identical": true
+    },
+    {
+      "stage": "original-200-updates",
+      "original_path": "runs/score-sde/original-200-updates/tensorboard/events.out.tfevents.1791532126.leideMacBook-Air.local.5659.0.v2",
+      "published_path": "results/score-sde/final-summary/evidence/original-200-updates/tensorboard/events.out.tfevents.published",
+      "bytes": 13327,
+      "sha256": "608d27fe31ef0b749297a4193aed6e921ab7fe652f4c91f33db59c1a8feed486",
+      "byte_identical": true
+    }
+  ]
+}

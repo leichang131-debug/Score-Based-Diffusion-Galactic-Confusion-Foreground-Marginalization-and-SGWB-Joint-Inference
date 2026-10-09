@@ -1,0 +1,5 @@
+stage,start_updates,end_updates,invocation_seconds,peak_rss_gib,scope
+original-20-updates,0,20,198.80632329100035,5.62554931640625,"Training invocation including initialization, first compilation, evaluation and saves; imports/readback excluded"
+resume-check,20,22,133.26837712500037,4.3248748779296875,Typed restore diagnostics and two original training/evaluation updates; second interpreter verification excluded
+original-200-updates,22,200,908.0903116250001,4.3712921142578125,"Training invocation including restoration diagnostics, compilation, periodic outputs and final saves; later readback excluded"
+original-200-sampling,200,200,357.699984375,3.1834716796875,"Restore, four sampler calls, diagnostics and artifact writes; interpreter imports excluded"

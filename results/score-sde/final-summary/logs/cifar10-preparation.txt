@@ -1,0 +1,168 @@
+<REPOSITORY_ROOT>/environments/score-sde/.venv/lib/python3.12/site-packages/tensorflow_hub/__init__.py:61: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+[compat_patch] All compatibility patches applied successfully.
+[compat_patch] Patched evaluation.run_inception_distributed for CPU
+Download/preparation finished
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1791516319.492403   97957 cpu_utils.cc:145] Failed to get CPU frequency: 0 Hz
+W0000 00:00:1791516319.492978   97957 op_level_cost_estimator.cc:743] Invalid device specifications for CPU: goo.gle/debugonly    type: "CPU" model: "0" num_cores: 10 environment { key: "cpu_instruction_set" value: "ARM NEON" } environment { key: "eigen" value: "3.5.0" } l1_cache_size: 16384 l2_cache_size: 524288 l3_cache_size: 524288 memory_size: 268435456
+I0000 00:00:1791516319.498713   98089 tf_record_dataset_op.cc:396] The default buffer size is 262144, which is overridden by the user specified `buffer_size` of 8388608
+Checked raw split: train 50000
+Checked raw split: test 10000
+WARNING:absl:options.experimental_threading is deprecated. Use options.threading instead.
+WARNING:absl:options.experimental_threading is deprecated. Use options.threading instead.
+WARNING:absl:options.experimental_threading is deprecated. Use options.threading instead.
+WARNING:absl:options.experimental_threading is deprecated. Use options.threading instead.
+W0000 00:00:1791516320.283199   97957 cache_dataset_ops.cc:912] The calling iterator did not fully read the dataset being cached. In order to avoid unexpected truncation of the dataset, the partially cached contents of the dataset  will be discarded. This can happen if you have an input pipeline similar to `dataset.cache().take(k).repeat()`. You should use `dataset.take(k).cache().repeat()` instead.
+{
+  "status": "passed",
+  "purpose": "real CIFAR-10 preparation and input validation; no training",
+  "date": "2026-10-09",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "python": "3.12.14",
+  "versions": {
+    "jax": "0.4.30",
+    "jaxlib": "0.4.30",
+    "flax": "0.8.5",
+    "tensorflow": "2.21.0",
+    "tensorflow-datasets": "4.9.4",
+    "numpy": "1.26.4",
+    "protobuf": "6.33.5"
+  },
+  "devices": [
+    "TFRT_CPU_0"
+  ],
+  "tfds_dataset": "cifar10",
+  "tfds_version": "3.0.2",
+  "data_directory_relative_to_repository": "data/raw/tensorflow_datasets",
+  "upstream_commit": "8c399ccd8079e5fe7e264f8a72ec97a598b33be1",
+  "original_commit": "0acb9e0ea3b8cccd935068cd9c657318fbc6ce4c",
+  "raw_splits": {
+    "train": {
+      "class_counts": [
+        5000,
+        5000,
+        5000,
+        5000,
+        5000,
+        5000,
+        5000,
+        5000,
+        5000,
+        5000
+      ],
+      "count": 50000,
+      "image_shape": [
+        32,
+        32,
+        3
+      ],
+      "image_dtype": "uint8",
+      "pixel_range": [
+        0,
+        255
+      ],
+      "label_range": [
+        0,
+        9
+      ]
+    },
+    "test": {
+      "class_counts": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "count": 10000,
+      "image_shape": [
+        32,
+        32,
+        3
+      ],
+      "image_dtype": "uint8",
+      "pixel_range": [
+        0,
+        255
+      ],
+      "label_range": [
+        0,
+        9
+      ]
+    }
+  },
+  "pipeline": {
+    "train": {
+      "tensor_shape": [
+        1,
+        1,
+        1,
+        32,
+        32,
+        3
+      ],
+      "dtype": "float32",
+      "pre_scaler_range": [
+        0.0470588281750679,
+        1.0
+      ],
+      "centered_range": [
+        -0.9058823585510254,
+        1.0
+      ],
+      "network_input_shape": [
+        1,
+        32,
+        32,
+        3
+      ]
+    },
+    "eval": {
+      "tensor_shape": [
+        1,
+        1,
+        1,
+        32,
+        32,
+        3
+      ],
+      "dtype": "float32",
+      "pre_scaler_range": [
+        0.08235294371843338,
+        0.9921569228172302
+      ],
+      "centered_range": [
+        -0.8352941274642944,
+        0.9843138456344604
+      ],
+      "network_input_shape": [
+        1,
+        32,
+        32,
+        3
+      ]
+    }
+  },
+  "configuration_overrides": {
+    "training.batch_size": 1,
+    "eval.batch_size": 1,
+    "training.n_jitted_steps": 1
+  },
+  "model_training_configuration": "original; no network/loss/optimizer/warmup/EMA changes",
+  "eval_split_note": "Upstream train-mode evaluation uses CIFAR-10 test split with its original preprocessing, including random flip. This is not an independent final test set.",
+  "official_archive": {
+    "url": "https://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz",
+    "bytes": 170052171,
+    "expected_sha256": "c4a38c50a1bc5f3a1c5537f2155ab9d68f9f25eb1ed8d9ddda3db29a59bca1dd",
+    "verification": "TFDS forced checksum validation"
+  },
+  "timing_scope": "this preparation/reuse and validation invocation; excludes optional ranged downloading",
+  "elapsed_seconds": 0.992020916999536,
+  "free_disk_gib_after_preparation": 360.870361328125
+}

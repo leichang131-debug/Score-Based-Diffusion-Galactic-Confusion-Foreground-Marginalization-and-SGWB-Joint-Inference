@@ -1,0 +1,27 @@
+<REPOSITORY_ROOT>/environments/score-sde/.venv/lib/python3.12/site-packages/tensorflow_hub/__init__.py:61: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+[compat_patch] All compatibility patches applied successfully.
+[compat_patch] Patched evaluation.run_inception_distributed for CPU
+{
+  "checkpoint_validation": {
+    "checkpoints": {
+      "restored_state_step": 20,
+      "all_state_leaves_finite": true,
+      "tensor_leaf_count": 2261
+    },
+    "checkpoints-meta": {
+      "restored_state_step": 20,
+      "all_state_leaves_finite": true,
+      "tensor_leaf_count": 2261
+    }
+  },
+  "timing": {
+    "first_training_loss_elapsed_seconds": 108.35114525000017,
+    "training_interval_median_seconds_excluding_validation": 4.077420208000149,
+    "training_interval_range_seconds_excluding_validation": [
+      4.022690582999985,
+      4.50815108300003
+    ],
+    "note": "Short-run timing; not the planned 200-update sustained-speed benchmark. Includes host scheduling and synchronization."
+  }
+}

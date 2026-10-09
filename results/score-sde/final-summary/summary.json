@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "training_entries": 200,
+  "validation_entries": 14,
+  "step_semantics": "NPZ *_steps are original zero-based loop labels; plots/CSV actual_update = loop_step + 1.",
+  "smoothing": "Trailing mean over 20 training records computed on the full sequence; no validation smoothing.",
+  "min_train_loss": 0.8193851709365845,
+  "min_train_actual_update": 156,
+  "min_eval_loss": 0.9535908102989197,
+  "min_eval_actual_update": 161,
+  "final_train_loss": 0.8441149592399597,
+  "final_train_actual_update": 200,
+  "last_eval_loss": 0.9887334704399109,
+  "last_eval_actual_update": 181,
+  "same_update_final_ratio": "not available; final train and last eval are at different updates",
+  "interpretation": "Small-scale functionality reproduction only; still within 5000-update warmup; no overfitting/convergence assessment or standard image metrics.",
+  "original_teacher_extraction_function": "external/score-sde-reproduction/plot_loss.py:extract_losses",
+  "published_tensorboard_readback": "step/value comparison to all three stage reports passed",
+  "teacher_plot_difference": "Uses our actual 1\u2013200 and 100\u2013200 ranges; does not run the teacher 5k+ panel or heuristic overfitting classifier."
+}
