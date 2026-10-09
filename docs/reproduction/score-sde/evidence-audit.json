@@ -1,0 +1,269 @@
+{
+  "original-20-updates": {
+    "tensorboard_training_entries": 20,
+    "tensorboard_eval_entries": 4,
+    "training_loop_range": [
+      0,
+      19
+    ],
+    "max_json_loss_rounding_difference": 4.976577758775136e-06
+  },
+  "resume-check": {
+    "tensorboard_training_entries": 2,
+    "tensorboard_eval_entries": 2,
+    "training_loop_range": [
+      20,
+      21
+    ],
+    "max_json_loss_rounding_difference": 3.835906982496695e-06
+  },
+  "original-200-updates": {
+    "tensorboard_training_entries": 178,
+    "tensorboard_eval_entries": 8,
+    "training_loop_range": [
+      22,
+      199
+    ],
+    "max_json_loss_rounding_difference": 4.898071289005657e-06
+  },
+  "teacher_npz": {
+    "keys": [
+      "train_steps",
+      "train_losses",
+      "eval_steps",
+      "eval_losses"
+    ],
+    "train_entries": 4281,
+    "eval_entries": 2141,
+    "last_logged_train_step": 214000,
+    "first_train_log_intervals": [
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50,
+      50
+    ],
+    "min_train_loss": 0.02152240090072155,
+    "min_eval_loss": 0.02079353667795658
+  },
+  "combined_local": {
+    "training_entries": 200,
+    "eval_entries": 14,
+    "loop_step_range": [
+      0,
+      199
+    ],
+    "actual_update_range": [
+      1,
+      200
+    ],
+    "final_train_loss": 0.8441149592399597,
+    "last_eval_actual_update": 181,
+    "minimum_train": [
+      155,
+      0.8193851709365845
+    ],
+    "minimum_eval": [
+      160,
+      0.9535908102989197
+    ]
+  },
+  "configuration_alignment": {
+    "cifar10-original-20-updates.py": {
+      "only_allowlisted_execution_overrides": true,
+      "network_loss_optimizer_warmup_ema_and_sampler_preserved": true,
+      "overrides": {
+        "eval.batch_size": {
+          "reference": 1024,
+          "local": 1
+        },
+        "training.batch_size": {
+          "reference": 128,
+          "local": 1
+        },
+        "training.eval_freq": {
+          "reference": 100,
+          "local": 5
+        },
+        "training.log_freq": {
+          "reference": 50,
+          "local": 1
+        },
+        "training.n_iters": {
+          "reference": 1300001,
+          "local": 19
+        },
+        "training.n_jitted_steps": {
+          "reference": 5,
+          "local": 1
+        },
+        "training.snapshot_freq": {
+          "reference": 50000,
+          "local": 19
+        },
+        "training.snapshot_freq_for_preemption": {
+          "reference": 10000,
+          "local": 19
+        },
+        "training.snapshot_sampling": {
+          "reference": true,
+          "local": false
+        }
+      }
+    },
+    "cifar10-resume-check.py": {
+      "only_allowlisted_execution_overrides": true,
+      "network_loss_optimizer_warmup_ema_and_sampler_preserved": true,
+      "overrides": {
+        "eval.batch_size": {
+          "reference": 1024,
+          "local": 1
+        },
+        "training.batch_size": {
+          "reference": 128,
+          "local": 1
+        },
+        "training.eval_freq": {
+          "reference": 100,
+          "local": 1
+        },
+        "training.log_freq": {
+          "reference": 50,
+          "local": 1
+        },
+        "training.n_iters": {
+          "reference": 1300001,
+          "local": 21
+        },
+        "training.n_jitted_steps": {
+          "reference": 5,
+          "local": 1
+        },
+        "training.snapshot_freq": {
+          "reference": 50000,
+          "local": 1
+        },
+        "training.snapshot_freq_for_preemption": {
+          "reference": 10000,
+          "local": 1
+        },
+        "training.snapshot_sampling": {
+          "reference": true,
+          "local": false
+        }
+      }
+    },
+    "cifar10-original-200-updates.py": {
+      "only_allowlisted_execution_overrides": true,
+      "network_loss_optimizer_warmup_ema_and_sampler_preserved": true,
+      "overrides": {
+        "eval.batch_size": {
+          "reference": 1024,
+          "local": 1
+        },
+        "training.batch_size": {
+          "reference": 128,
+          "local": 1
+        },
+        "training.eval_freq": {
+          "reference": 100,
+          "local": 20
+        },
+        "training.log_freq": {
+          "reference": 50,
+          "local": 1
+        },
+        "training.n_iters": {
+          "reference": 1300001,
+          "local": 199
+        },
+        "training.n_jitted_steps": {
+          "reference": 5,
+          "local": 1
+        },
+        "training.snapshot_freq": {
+          "reference": 50000,
+          "local": 50
+        },
+        "training.snapshot_freq_for_preemption": {
+          "reference": 10000,
+          "local": 50
+        },
+        "training.snapshot_sampling": {
+          "reference": true,
+          "local": false
+        }
+      }
+    }
+  },
+  "artifact_integrity": {
+    "original-200-updates-validation.json": {
+      "matched_files": 6,
+      "missing_or_modified": 0
+    },
+    "sampling-validation.json": {
+      "matched_files": 9,
+      "missing_or_modified": 0
+    }
+  },
+  "duplicated_report": {
+    "canonical": "docs/reproduction/score-sde/sampling-validation.json",
+    "mirror": "results/score-sde/original-200-sampling/summary.json",
+    "currently_identical": true
+  },
+  "status": "passed",
+  "method": "Unmodified upstream plot_loss.extract_losses; TensorBoard step/value cross-check against each published stage JSON. Console-formatted JSON values may be rounded.",
+  "log_files": [
+    {
+      "path": "runs/score-sde/original-20-updates.log",
+      "bytes": 16397,
+      "sha256": "91649f44b06b4dca3b4eef09deb2e3ccb0b437d516aad32824c67ee16072e104"
+    },
+    {
+      "path": "runs/score-sde/resume-check.log",
+      "bytes": 16429,
+      "sha256": "dfc617aa090e80e12c8c33d1f607091172f76cba809ef1619883182bbfe96101"
+    },
+    {
+      "path": "runs/score-sde/resume-second-restart.log",
+      "bytes": 3671,
+      "sha256": "9d03476bd9dd9f12d6b97a8bf2dc778761ae9ffcf8d874c0299d36b3f78981c6"
+    },
+    {
+      "path": "runs/score-sde/original-200-updates.log",
+      "bytes": 35317,
+      "sha256": "d119978015df4094f9c74d2e328e61c3b5d67b475ba303285a8425e4bc86e6e4"
+    },
+    {
+      "path": "runs/score-sde/original-200-analysis.log",
+      "bytes": 4542,
+      "sha256": "77e1262bb337f43fda1b44162e22afbfc4b725033f25f8e02110d9cccb555a3c"
+    },
+    {
+      "path": "runs/score-sde/original-200-sampling.log",
+      "bytes": 4828,
+      "sha256": "a2af78d309123221eb183f45f8d284ae23b3e4bfebb71a3355d1326b6c7ec6e3"
+    }
+  ],
+  "tensorboard_files": [
+    {
+      "path": "runs/score-sde/original-20-updates/tensorboard/events.out.tfevents.1791524385.leideMacBook-Air.local.2595.0.v2",
+      "bytes": 1762,
+      "sha256": "801fd8a3e6dd29bf08e1896c54c6f3c4b300d842c340537a8cf3100128906fb0"
+    },
+    {
+      "path": "runs/score-sde/resume-check/tensorboard/events.out.tfevents.1791530607.leideMacBook-Air.local.4754.0.v2",
+      "bytes": 354,
+      "sha256": "11bae681ba812159356518ffb270cee9146bfb3b3b1cd4ec6ec5bb98e27b13d0"
+    },
+    {
+      "path": "runs/score-sde/original-200-updates/tensorboard/events.out.tfevents.1791532126.leideMacBook-Air.local.5659.0.v2",
+      "bytes": 13327,
+      "sha256": "608d27fe31ef0b749297a4193aed6e921ab7fe652f4c91f33db59c1a8feed486"
+    }
+  ]
+}
