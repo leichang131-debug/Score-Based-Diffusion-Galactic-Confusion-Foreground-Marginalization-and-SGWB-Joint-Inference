@@ -1,0 +1,322 @@
+{
+  "status": "passed",
+  "date": "2026-10-09T13:39:45.685252+08:00",
+  "purpose": "original-network 20-update training/evaluation smoke check; not convergence or sample-quality validation",
+  "devices": [
+    "TFRT_CPU_0"
+  ],
+  "configuration": {
+    "data": {
+      "centered": true,
+      "dataset": "CIFAR10",
+      "image_size": 32,
+      "num_channels": 3,
+      "random_flip": true,
+      "uniform_dequantization": false
+    },
+    "eval": {
+      "batch_size": 1,
+      "begin_ckpt": 9,
+      "bpd_dataset": "test",
+      "enable_bpd": false,
+      "enable_loss": true,
+      "enable_sampling": false,
+      "end_ckpt": 26,
+      "num_samples": 50000
+    },
+    "model": {
+      "attention_type": "ddpm",
+      "attn_resolutions": [
+        16
+      ],
+      "beta_max": 20.0,
+      "beta_min": 0.1,
+      "ch_mult": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "conditional": true,
+      "conv_size": 3,
+      "dropout": 0.1,
+      "ema_rate": 0.9999,
+      "embedding_type": "positional",
+      "fir": false,
+      "fir_kernel": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "fourier_scale": 16,
+      "init_scale": 0.0,
+      "name": "ncsnpp",
+      "nf": 128,
+      "nonlinearity": "swish",
+      "normalization": "GroupNorm",
+      "num_res_blocks": 4,
+      "num_scales": 1000,
+      "progressive": "none",
+      "progressive_combine": "sum",
+      "progressive_input": "none",
+      "resamp_with_conv": true,
+      "resblock_type": "biggan",
+      "scale_by_sigma": false,
+      "sigma_max": 50,
+      "sigma_min": 0.01,
+      "skip_rescale": true
+    },
+    "optim": {
+      "beta1": 0.9,
+      "eps": 1e-08,
+      "grad_clip": 1.0,
+      "lr": 0.0002,
+      "optimizer": "Adam",
+      "warmup": 5000,
+      "weight_decay": 0
+    },
+    "sampling": {
+      "corrector": "none",
+      "method": "pc",
+      "n_steps_each": 1,
+      "noise_removal": true,
+      "predictor": "euler_maruyama",
+      "probability_flow": false,
+      "snr": 0.16
+    },
+    "seed": 42,
+    "training": {
+      "batch_size": 1,
+      "continuous": true,
+      "eval_freq": 5,
+      "likelihood_weighting": false,
+      "log_freq": 1,
+      "n_iters": 19,
+      "n_jitted_steps": 1,
+      "reduce_mean": true,
+      "sde": "vpsde",
+      "snapshot_freq": 19,
+      "snapshot_freq_for_preemption": 19,
+      "snapshot_sampling": false
+    }
+  },
+  "upstream_commit": "8c399ccd8079e5fe7e264f8a72ec97a598b33be1",
+  "original_commit": "0acb9e0ea3b8cccd935068cd9c657318fbc6ce4c",
+  "actual_updates": 20,
+  "validation_batches": 4,
+  "checkpoint_saved": true,
+  "observed_memory_error": false,
+  "loss_records": [
+    {
+      "loop_step": 0,
+      "kind": "training_loss",
+      "loss": 0.995031,
+      "elapsed_seconds": 108.35114525000017
+    },
+    {
+      "loop_step": 0,
+      "kind": "eval_loss",
+      "loss": 0.986175,
+      "elapsed_seconds": 114.9685228330004
+    },
+    {
+      "loop_step": 1,
+      "kind": "training_loss",
+      "loss": 0.979865,
+      "elapsed_seconds": 119.10855412500041
+    },
+    {
+      "loop_step": 2,
+      "kind": "training_loss",
+      "loss": 1.00981,
+      "elapsed_seconds": 123.21962995800004
+    },
+    {
+      "loop_step": 3,
+      "kind": "training_loss",
+      "loss": 1.02653,
+      "elapsed_seconds": 127.24232054100003
+    },
+    {
+      "loop_step": 4,
+      "kind": "training_loss",
+      "loss": 0.978867,
+      "elapsed_seconds": 131.3045257910003
+    },
+    {
+      "loop_step": 5,
+      "kind": "training_loss",
+      "loss": 1.01088,
+      "elapsed_seconds": 135.3688745000004
+    },
+    {
+      "loop_step": 5,
+      "kind": "eval_loss",
+      "loss": 1.00256,
+      "elapsed_seconds": 135.50329708300023
+    },
+    {
+      "loop_step": 6,
+      "kind": "training_loss",
+      "loss": 1.00219,
+      "elapsed_seconds": 139.53657354100005
+    },
+    {
+      "loop_step": 7,
+      "kind": "training_loss",
+      "loss": 1.0009,
+      "elapsed_seconds": 143.62903462500026
+    },
+    {
+      "loop_step": 8,
+      "kind": "training_loss",
+      "loss": 0.949559,
+      "elapsed_seconds": 147.7224744580003
+    },
+    {
+      "loop_step": 9,
+      "kind": "training_loss",
+      "loss": 1.00534,
+      "elapsed_seconds": 151.8217372500003
+    },
+    {
+      "loop_step": 10,
+      "kind": "training_loss",
+      "loss": 1.00036,
+      "elapsed_seconds": 155.88199737500008
+    },
+    {
+      "loop_step": 10,
+      "kind": "eval_loss",
+      "loss": 1.00249,
+      "elapsed_seconds": 156.02299575000006
+    },
+    {
+      "loop_step": 11,
+      "kind": "training_loss",
+      "loss": 0.984841,
+      "elapsed_seconds": 160.1228567080002
+    },
+    {
+      "loop_step": 12,
+      "kind": "training_loss",
+      "loss": 1.03055,
+      "elapsed_seconds": 164.20027691600035
+    },
+    {
+      "loop_step": 13,
+      "kind": "training_loss",
+      "loss": 0.988658,
+      "elapsed_seconds": 168.58092375000024
+    },
+    {
+      "loop_step": 14,
+      "kind": "training_loss",
+      "loss": 1.01159,
+      "elapsed_seconds": 172.6905898330001
+    },
+    {
+      "loop_step": 15,
+      "kind": "training_loss",
+      "loss": 1.01368,
+      "elapsed_seconds": 177.19874091600013
+    },
+    {
+      "loop_step": 15,
+      "kind": "eval_loss",
+      "loss": 1.03057,
+      "elapsed_seconds": 177.34308562500019
+    },
+    {
+      "loop_step": 16,
+      "kind": "training_loss",
+      "loss": 1.0541,
+      "elapsed_seconds": 185.42945716600025
+    },
+    {
+      "loop_step": 17,
+      "kind": "training_loss",
+      "loss": 1.01734,
+      "elapsed_seconds": 189.46934341600036
+    },
+    {
+      "loop_step": 18,
+      "kind": "training_loss",
+      "loss": 1.02337,
+      "elapsed_seconds": 193.52549
+    },
+    {
+      "loop_step": 19,
+      "kind": "training_loss",
+      "loss": 1.02034,
+      "elapsed_seconds": 197.5802533750002
+    }
+  ],
+  "elapsed_seconds": 198.80632329100035,
+  "peak_process_rss_gib": 5.62554931640625,
+  "memory_note": "macOS process peak resident set; excludes other processes and does not measure total system pressure",
+  "checkpoint_validation": {
+    "checkpoints": {
+      "restored_state_step": 20,
+      "all_state_leaves_finite": true,
+      "tensor_leaf_count": 2261
+    },
+    "checkpoints-meta": {
+      "restored_state_step": 20,
+      "all_state_leaves_finite": true,
+      "tensor_leaf_count": 2261
+    }
+  },
+  "timing": {
+    "first_training_loss_elapsed_seconds": 108.35114525000017,
+    "training_interval_median_seconds_excluding_validation": 4.077420208000149,
+    "training_interval_range_seconds_excluding_validation": [
+      4.022690582999985,
+      4.50815108300003
+    ],
+    "note": "Short-run timing; not the planned 200-update sustained-speed benchmark. Includes host scheduling and synchronization."
+  },
+  "artifact_files": [
+    {
+      "path": "runs/score-sde/original-20-updates/checkpoints/checkpoint_1/_CHECKPOINT_METADATA",
+      "bytes": 92,
+      "sha256": "9c250da89e68f2346107923c8203f0f6077936d0db3efef69684e8f82a98d4af"
+    },
+    {
+      "path": "runs/score-sde/original-20-updates/checkpoints/checkpoint_1/_METADATA",
+      "bytes": 833375,
+      "sha256": "026f78491c3024b898c249f808dba30a406323200d44661d072a0b30d74e4455"
+    },
+    {
+      "path": "runs/score-sde/original-20-updates/checkpoints/checkpoint_1/checkpoint",
+      "bytes": 988949541,
+      "sha256": "0ba3d9510ec55af89cf9abc89996d8709698aca164b209bcaff9cd6dd7d4938f"
+    },
+    {
+      "path": "runs/score-sde/original-20-updates/checkpoints-meta/checkpoint_1/_CHECKPOINT_METADATA",
+      "bytes": 92,
+      "sha256": "f28f27ad33b0d2b4f14827d0095c43661763ee914ee079494fc16e79b2c4180e"
+    },
+    {
+      "path": "runs/score-sde/original-20-updates/checkpoints-meta/checkpoint_1/_METADATA",
+      "bytes": 833375,
+      "sha256": "026f78491c3024b898c249f808dba30a406323200d44661d072a0b30d74e4455"
+    },
+    {
+      "path": "runs/score-sde/original-20-updates/checkpoints-meta/checkpoint_1/checkpoint",
+      "bytes": 988949541,
+      "sha256": "0ba3d9510ec55af89cf9abc89996d8709698aca164b209bcaff9cd6dd7d4938f"
+    },
+    {
+      "path": "runs/score-sde/original-20-updates/matplotlib/fontlist-v3.11.0.json",
+      "bytes": 289954,
+      "sha256": "e012feb1388f3ab5036053c3500cd9e6691e7cd93d52ccb5e8e62a7edb33a72b"
+    },
+    {
+      "path": "runs/score-sde/original-20-updates/tensorboard/events.out.tfevents.1791524385.leideMacBook-Air.local.2595.0.v2",
+      "bytes": 1762,
+      "sha256": "801fd8a3e6dd29bf08e1896c54c6f3c4b300d842c340537a8cf3100128906fb0"
+    }
+  ]
+}
