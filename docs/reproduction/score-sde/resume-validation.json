@@ -1,0 +1,236 @@
+{
+  "status": "passed",
+  "date": "2026-10-09T15:23:27.798618+08:00",
+  "pid": 4754,
+  "configuration": {
+    "data": {
+      "centered": true,
+      "dataset": "CIFAR10",
+      "image_size": 32,
+      "num_channels": 3,
+      "random_flip": true,
+      "uniform_dequantization": false
+    },
+    "eval": {
+      "batch_size": 1,
+      "begin_ckpt": 9,
+      "bpd_dataset": "test",
+      "enable_bpd": false,
+      "enable_loss": true,
+      "enable_sampling": false,
+      "end_ckpt": 26,
+      "num_samples": 50000
+    },
+    "model": {
+      "attention_type": "ddpm",
+      "attn_resolutions": [
+        16
+      ],
+      "beta_max": 20.0,
+      "beta_min": 0.1,
+      "ch_mult": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "conditional": true,
+      "conv_size": 3,
+      "dropout": 0.1,
+      "ema_rate": 0.9999,
+      "embedding_type": "positional",
+      "fir": false,
+      "fir_kernel": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "fourier_scale": 16,
+      "init_scale": 0.0,
+      "name": "ncsnpp",
+      "nf": 128,
+      "nonlinearity": "swish",
+      "normalization": "GroupNorm",
+      "num_res_blocks": 4,
+      "num_scales": 1000,
+      "progressive": "none",
+      "progressive_combine": "sum",
+      "progressive_input": "none",
+      "resamp_with_conv": true,
+      "resblock_type": "biggan",
+      "scale_by_sigma": false,
+      "sigma_max": 50,
+      "sigma_min": 0.01,
+      "skip_rescale": true
+    },
+    "optim": {
+      "beta1": 0.9,
+      "eps": 1e-08,
+      "grad_clip": 1.0,
+      "lr": 0.0002,
+      "optimizer": "Adam",
+      "warmup": 5000,
+      "weight_decay": 0
+    },
+    "sampling": {
+      "corrector": "none",
+      "method": "pc",
+      "n_steps_each": 1,
+      "noise_removal": true,
+      "predictor": "euler_maruyama",
+      "probability_flow": false,
+      "snr": 0.16
+    },
+    "seed": 42,
+    "training": {
+      "batch_size": 1,
+      "continuous": true,
+      "eval_freq": 1,
+      "likelihood_weighting": false,
+      "log_freq": 1,
+      "n_iters": 21,
+      "n_jitted_steps": 1,
+      "reduce_mean": true,
+      "sde": "vpsde",
+      "snapshot_freq": 1,
+      "snapshot_freq_for_preemption": 1,
+      "snapshot_sampling": false
+    }
+  },
+  "source": "runs/score-sde/original-20-updates/checkpoints-meta",
+  "scope": "State continuation; does not promise the same next batches as an uninterrupted TFDS iterator.",
+  "initial_restore": {
+    "exact_match_to_checkpoint": true,
+    "fresh_template": {
+      "state_step": 0,
+      "adam_counts": [
+        0
+      ],
+      "field_sha256": {
+        "step": "ee717a7b91416701f62dbdcf309f64980492361ebd2358776aa9f283e920f535",
+        "optimizer": "a622b16d457322bb5fe8b4a0d76d9fed42c5cf04a0323674c6183fb2beab843f",
+        "lr": "325ee5c4b7d31bf69c2cdf9a50ca634ddb8038cb1f5c6b7f97498759a4132cd1",
+        "model_state": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "ema_rate": "ea28cd6b5d09fb3f6490e99d52bba467fa58de641524995197b9fc30a34772be",
+        "params_ema": "cb9fc2980669e353ccd4c29c4daf7c92ee355160527f2ed0198d55883011ca38",
+        "rng": "a10e90486ed0f9c9afdac7b28375ed320b4da926b4982d2f2bac8f7093a7a978"
+      },
+      "optimizer_parameter_sha256": "cb9fc2980669e353ccd4c29c4daf7c92ee355160527f2ed0198d55883011ca38",
+      "adam_state_sha256": "5df66de5b4816929c14861490a0ef48a6793e16a876872ea2a0ad37c086517f5",
+      "ema_sha256": "cb9fc2980669e353ccd4c29c4daf7c92ee355160527f2ed0198d55883011ca38",
+      "all_state_values_finite": true
+    },
+    "restored": {
+      "state_step": 20,
+      "adam_counts": [
+        20
+      ],
+      "field_sha256": {
+        "step": "3ecd42685ecdcb865b8e24f356126bc19fa19f685bc42c5e4b424bce7ae8e828",
+        "optimizer": "2e0566c7b3b057863efbe4f794bdb7544186471f550302a0a54e0b53e43fe9be",
+        "lr": "7d67d96a71ea07e5bb562cf1672d15e7dbcbc3046640fe2cac688f00aca2ab33",
+        "model_state": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "ema_rate": "6a8d798a0845512f9f39254847fa1f98e96e9032bee52f1b19d441c5a0856935",
+        "params_ema": "5ccf6bd370d13f3dcab1aea22d52d7eccf9e40216a0d829a7eec81d3a01c314d",
+        "rng": "56f7bb83c93d7a994a5e26b26e0e2e8151d8d296c8cb44f10c2be4c181a8eebf"
+      },
+      "optimizer_parameter_sha256": "4540358a2a955556eb7d1c14d7a3f7b3e0ab1f50c33e7b5ab6fd4b6fd2953d02",
+      "adam_state_sha256": "347faea3aba0b16145eb0df2583e4ba99073ace0cddb801a74d203878c929924",
+      "ema_sha256": "5ccf6bd370d13f3dcab1aea22d52d7eccf9e40216a0d829a7eec81d3a01c314d",
+      "all_state_values_finite": true
+    }
+  },
+  "last_saved_state": {
+    "state_step": 22,
+    "adam_counts": [
+      22
+    ],
+    "field_sha256": {
+      "step": "703c96f9f116510c17d9a7649f869816fb3be64d7fdf17828323e4e53ab3a43f",
+      "optimizer": "fe2e6c15f1266fdea90fe9989fe894c96547fbccf0358cf900f432bc08477da7",
+      "lr": "7d67d96a71ea07e5bb562cf1672d15e7dbcbc3046640fe2cac688f00aca2ab33",
+      "model_state": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ema_rate": "6a8d798a0845512f9f39254847fa1f98e96e9032bee52f1b19d441c5a0856935",
+      "params_ema": "f69d676b38d5a0ba7c058b71261762b1776b9a08bf83e5eac2b505d968f221bb",
+      "rng": "ec0e6b87bcfed163c1ec3f5b4278acc702d338cf96f630202b11785527b60974"
+    },
+    "optimizer_parameter_sha256": "66e2be010207023dadf83eaa2648d524d82ef49224112644806790733ceb16c6",
+    "adam_state_sha256": "0ea8c0a012c07b3cb6c0905152d26047c7afcc72b93f71ac6d2dc6dc5aa0a886",
+    "ema_sha256": "f69d676b38d5a0ba7c058b71261762b1776b9a08bf83e5eac2b505d968f221bb",
+    "all_state_values_finite": true
+  },
+  "additional_updates": 2,
+  "loss_records": [
+    {
+      "loop_step": 20,
+      "kind": "training_loss",
+      "loss": 0.945921
+    },
+    {
+      "loop_step": 20,
+      "kind": "eval_loss",
+      "loss": 0.971441
+    },
+    {
+      "loop_step": 21,
+      "kind": "training_loss",
+      "loss": 1.00174
+    },
+    {
+      "loop_step": 21,
+      "kind": "eval_loss",
+      "loss": 0.997999
+    }
+  ],
+  "elapsed_seconds": 133.26837712500037,
+  "peak_process_rss_gib": 4.3248748779296875,
+  "second_restart": {
+    "pid": 4990,
+    "directory": "checkpoints",
+    "typed_restore_exactly_equals_saved_state": true,
+    "state_step": 22,
+    "adam_counts": [
+      22
+    ],
+    "field_sha256": {
+      "step": "703c96f9f116510c17d9a7649f869816fb3be64d7fdf17828323e4e53ab3a43f",
+      "optimizer": "fe2e6c15f1266fdea90fe9989fe894c96547fbccf0358cf900f432bc08477da7",
+      "lr": "7d67d96a71ea07e5bb562cf1672d15e7dbcbc3046640fe2cac688f00aca2ab33",
+      "model_state": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ema_rate": "6a8d798a0845512f9f39254847fa1f98e96e9032bee52f1b19d441c5a0856935",
+      "params_ema": "f69d676b38d5a0ba7c058b71261762b1776b9a08bf83e5eac2b505d968f221bb",
+      "rng": "ec0e6b87bcfed163c1ec3f5b4278acc702d338cf96f630202b11785527b60974"
+    },
+    "optimizer_parameter_sha256": "66e2be010207023dadf83eaa2648d524d82ef49224112644806790733ceb16c6",
+    "adam_state_sha256": "0ea8c0a012c07b3cb6c0905152d26047c7afcc72b93f71ac6d2dc6dc5aa0a886",
+    "ema_sha256": "f69d676b38d5a0ba7c058b71261762b1776b9a08bf83e5eac2b505d968f221bb",
+    "all_state_values_finite": true
+  },
+  "preemption_restart": {
+    "directory": "checkpoints-meta",
+    "parameters_optimizer_ema_match_final": true,
+    "rng_note": "Upstream saves preemption state before validation and final state after validation; RNG keys may differ legitimately.",
+    "state_step": 22,
+    "adam_counts": [
+      22
+    ],
+    "field_sha256": {
+      "step": "703c96f9f116510c17d9a7649f869816fb3be64d7fdf17828323e4e53ab3a43f",
+      "optimizer": "fe2e6c15f1266fdea90fe9989fe894c96547fbccf0358cf900f432bc08477da7",
+      "lr": "7d67d96a71ea07e5bb562cf1672d15e7dbcbc3046640fe2cac688f00aca2ab33",
+      "model_state": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ema_rate": "6a8d798a0845512f9f39254847fa1f98e96e9032bee52f1b19d441c5a0856935",
+      "params_ema": "f69d676b38d5a0ba7c058b71261762b1776b9a08bf83e5eac2b505d968f221bb",
+      "rng": "1e31a54f2f84bd7a7e46b3ec3d9a75b3493abbfb3a71d1f002e7d16f4082166f"
+    },
+    "optimizer_parameter_sha256": "66e2be010207023dadf83eaa2648d524d82ef49224112644806790733ceb16c6",
+    "adam_state_sha256": "0ea8c0a012c07b3cb6c0905152d26047c7afcc72b93f71ac6d2dc6dc5aa0a886",
+    "ema_sha256": "f69d676b38d5a0ba7c058b71261762b1776b9a08bf83e5eac2b505d968f221bb",
+    "all_state_values_finite": true
+  },
+  "source_commits": {
+    "upstream_commit": "8c399ccd8079e5fe7e264f8a72ec97a598b33be1",
+    "original_commit": "0acb9e0ea3b8cccd935068cd9c657318fbc6ce4c"
+  }
+}
