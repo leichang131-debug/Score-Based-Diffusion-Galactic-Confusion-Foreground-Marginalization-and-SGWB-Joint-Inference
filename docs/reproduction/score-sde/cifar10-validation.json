@@ -1,0 +1,179 @@
+{
+  "status": "passed",
+  "purpose": "real CIFAR-10 preparation and input validation; no training",
+  "date": "2026-10-09",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "python": "3.12.14",
+  "versions": {
+    "jax": "0.4.30",
+    "jaxlib": "0.4.30",
+    "flax": "0.8.5",
+    "tensorflow": "2.21.0",
+    "tensorflow-datasets": "4.9.4",
+    "numpy": "1.26.4",
+    "protobuf": "6.33.5"
+  },
+  "devices": [
+    "TFRT_CPU_0"
+  ],
+  "tfds_dataset": "cifar10",
+  "tfds_version": "3.0.2",
+  "data_directory_relative_to_repository": "data/raw/tensorflow_datasets",
+  "upstream_commit": "8c399ccd8079e5fe7e264f8a72ec97a598b33be1",
+  "original_commit": "0acb9e0ea3b8cccd935068cd9c657318fbc6ce4c",
+  "raw_splits": {
+    "train": {
+      "class_counts": [
+        5000,
+        5000,
+        5000,
+        5000,
+        5000,
+        5000,
+        5000,
+        5000,
+        5000,
+        5000
+      ],
+      "count": 50000,
+      "image_shape": [
+        32,
+        32,
+        3
+      ],
+      "image_dtype": "uint8",
+      "pixel_range": [
+        0,
+        255
+      ],
+      "label_range": [
+        0,
+        9
+      ]
+    },
+    "test": {
+      "class_counts": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "count": 10000,
+      "image_shape": [
+        32,
+        32,
+        3
+      ],
+      "image_dtype": "uint8",
+      "pixel_range": [
+        0,
+        255
+      ],
+      "label_range": [
+        0,
+        9
+      ]
+    }
+  },
+  "pipeline": {
+    "train": {
+      "tensor_shape": [
+        1,
+        1,
+        1,
+        32,
+        32,
+        3
+      ],
+      "dtype": "float32",
+      "pre_scaler_range": [
+        0.0470588281750679,
+        1.0
+      ],
+      "centered_range": [
+        -0.9058823585510254,
+        1.0
+      ],
+      "network_input_shape": [
+        1,
+        32,
+        32,
+        3
+      ]
+    },
+    "eval": {
+      "tensor_shape": [
+        1,
+        1,
+        1,
+        32,
+        32,
+        3
+      ],
+      "dtype": "float32",
+      "pre_scaler_range": [
+        0.08235294371843338,
+        0.9921569228172302
+      ],
+      "centered_range": [
+        -0.8352941274642944,
+        0.9843138456344604
+      ],
+      "network_input_shape": [
+        1,
+        32,
+        32,
+        3
+      ]
+    }
+  },
+  "configuration_overrides": {
+    "training.batch_size": 1,
+    "eval.batch_size": 1,
+    "training.n_jitted_steps": 1
+  },
+  "model_training_configuration": "original; no network/loss/optimizer/warmup/EMA changes",
+  "eval_split_note": "Upstream train-mode evaluation uses CIFAR-10 test split with its original preprocessing, including random flip. This is not an independent final test set.",
+  "official_archive": {
+    "url": "https://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz",
+    "bytes": 170052171,
+    "expected_sha256": "c4a38c50a1bc5f3a1c5537f2155ab9d68f9f25eb1ed8d9ddda3db29a59bca1dd",
+    "verification": "TFDS forced checksum validation"
+  },
+  "prepared_files": [
+    {
+      "path": "cifar10/3.0.2/cifar10-test.tfrecord-00000-of-00001",
+      "bytes": 23292469,
+      "sha256": "e7d33d867590780e22a3e1e755faca05398c00dd6733ec2b8809c35c6a70d7b1"
+    },
+    {
+      "path": "cifar10/3.0.2/cifar10-train.tfrecord-00000-of-00001",
+      "bytes": 116500776,
+      "sha256": "ec557121e901044ec50c91a52ed147f68c2d4bd03610fe5bea49471e3fea5288"
+    },
+    {
+      "path": "cifar10/3.0.2/dataset_info.json",
+      "bytes": 1190,
+      "sha256": "f2ae3df52f31c97983d3cabc23dfaee7e308b964228d63f80b6a2071654d76b0"
+    },
+    {
+      "path": "cifar10/3.0.2/features.json",
+      "bytes": 963,
+      "sha256": "fc6f1ce5a0c3dd696ac48a5f6c62b589f78f42c42a8f848eb4a9e110650da063"
+    },
+    {
+      "path": "cifar10/3.0.2/label.labels.txt",
+      "bytes": 60,
+      "sha256": "2ce042b1e0b48db4bb214408e6414ba18b2731c24af244f2d6c112fddf31af00"
+    }
+  ],
+  "timing_scope": "this preparation/reuse and validation invocation; excludes optional ranged downloading",
+  "elapsed_seconds": 0.992020916999536,
+  "free_disk_gib_after_preparation": 360.870361328125
+}

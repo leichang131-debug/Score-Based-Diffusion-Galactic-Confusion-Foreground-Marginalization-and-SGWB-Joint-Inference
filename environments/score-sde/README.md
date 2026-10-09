@@ -47,7 +47,8 @@ Upstream source is unchanged. Its license remains applicable. Environments, inte
 
 - Setuptools 80.9.0 supplies `pkg_resources`, required by TF Hub 0.16.1.
 - ML Collections 1.1.0 avoids the removed Python 3.12 `imp` module.
+- Protobuf 6.33.5 retains `FieldDescriptor.label`, needed by TFDS 4.9.4 when restoring prepared dataset metadata. Protobuf 7 passed dependency resolution but failed this real-data operation.
 - `score_sde_bootstrap.py` skips the unused TF-GAN legacy Estimator import, as suggested by the upstream reproduction guide. Real TF-GAN evaluation functions remain available. The upstream wrapper supplies its own Estimator stubs; Estimator-based GAN training is not supported here.
 - Run the provided launcher rather than invoking upstream `run_train.py` directly. No upstream source or installed package source was edited.
 
-See [validation record](../../docs/reproduction/score-sde/environment-validation.json). CIFAR-10 is downloaded on the first real-data run; that download and real-data training have not yet been executed. Full FID/IS/KID evaluation is not validated by the synthetic smoke check.
+See [validation record](../../docs/reproduction/score-sde/environment-validation.json). CIFAR-10 has been downloaded, prepared, and validated across all 60000 examples and the original input pipeline. See [data preparation](../../docs/reproduction/score-sde/data-preparation.md). Real-data training has not yet been executed. Full FID/IS/KID evaluation is not validated by the synthetic smoke check.

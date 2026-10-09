@@ -2,7 +2,7 @@
 
 Research workspace for probabilistic marginalization of the Galactic confusion foreground and joint inference of a target stochastic gravitational-wave background (SGWB) using score-based diffusion models.
 
-**Status:** research architecture and plan, plus a validated macOS ARM64 CPU environment for Score-SDE. The pinned Score-SDE source is available as a recursive Git submodule. Synthetic gradient-update, checkpoint-roundtrip, and sampling checks passed; real CIFAR-10 training and numerical reproduction have not yet been completed. No performance improvement is claimed.
+**Status:** research architecture and plan, plus a validated macOS ARM64 CPU environment for Score-SDE. The pinned Score-SDE source is available as a recursive Git submodule. Synthetic gradient-update, checkpoint-roundtrip, and sampling checks passed. Full CIFAR-10 preparation and original input-pipeline validation also passed; real CIFAR-10 training and numerical reproduction have not yet been completed. No performance improvement is claimed.
 
 ## Scientific objective
 

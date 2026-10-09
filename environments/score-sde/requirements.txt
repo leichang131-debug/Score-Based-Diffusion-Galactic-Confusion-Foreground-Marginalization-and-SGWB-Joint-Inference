@@ -19,3 +19,6 @@ tensorboard
 
 # TF Hub imports pkg_resources, removed in newer setuptools.
 setuptools==80.9.0
+
+# TFDS 4.9.4 needs FieldDescriptor.label, removed in Protobuf 7.
+protobuf==6.33.5
