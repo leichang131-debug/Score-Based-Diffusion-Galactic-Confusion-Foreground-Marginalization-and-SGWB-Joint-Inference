@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "start_update": 22,
+  "actual_updates": 200,
+  "additional_updates": 178,
+  "validation_batches": 8,
+  "speed_analysis": {
+    "first_training_call_seconds": 103.60697737499959,
+    "first_validation_call_seconds": 6.751542291000078,
+    "steady_training_excluding_first_five_calls": {
+      "count": 173,
+      "mean_seconds": 4.423453515895939,
+      "median_seconds": 4.37049720899995,
+      "p10_seconds": 4.209907800200199,
+      "p90_seconds": 4.683811599599539,
+      "min_seconds": 4.051686083000277,
+      "max_seconds": 5.895242707999387
+    },
+    "last_100_training_updates": {
+      "count": 100,
+      "mean_seconds": 4.524674528319983,
+      "median_seconds": 4.509156271000393,
+      "p10_seconds": 4.352764599699822,
+      "p90_seconds": 4.723545917000502,
+      "min_seconds": 4.301680415999726,
+      "max_seconds": 4.938616249999541
+    },
+    "training_windows": {
+      "50-99": {
+        "count": 50,
+        "mean_seconds": 4.284763650880013,
+        "median_seconds": 4.281296666500111,
+        "p10_seconds": 4.215945829500015,
+        "p90_seconds": 4.341513720899639,
+        "min_seconds": 4.1816714579999825,
+        "max_seconds": 4.563748583000233
+      },
+      "100-149": {
+        "count": 50,
+        "mean_seconds": 4.393304997559971,
+        "median_seconds": 4.376577771000029,
+        "p10_seconds": 4.325183866999851,
+        "p90_seconds": 4.467605425000056,
+        "min_seconds": 4.301680415999726,
+        "max_seconds": 4.642959290999897
+      },
+      "150-200": {
+        "count": 51,
+        "mean_seconds": 4.649535705803917,
+        "median_seconds": 4.636936625000089,
+        "p10_seconds": 4.522717499999999,
+        "p90_seconds": 4.836928416999399,
+        "min_seconds": 4.405855957999847,
+        "max_seconds": 4.938616249999541
+      }
+    },
+    "training_log_intervals_including_other_work": {
+      "count": 177,
+      "mean_seconds": 4.50764357556497,
+      "median_seconds": 4.382272541999555,
+      "p10_seconds": 4.209363733200007,
+      "p90_seconds": 4.716824308600371,
+      "min_seconds": 4.0591675830000895,
+      "max_seconds": 11.221020625000165
+    },
+    "validation_after_first_call": {
+      "count": 7,
+      "mean_seconds": 0.17021359500021,
+      "median_seconds": 0.1525679169999421,
+      "p10_seconds": 0.1492024916002265,
+      "p90_seconds": 0.2083272328003659,
+      "min_seconds": 0.14799004100041202,
+      "max_seconds": 0.2678113330002816
+    },
+    "sum_training_call_seconds": 885.3505331239967,
+    "sum_validation_call_seconds": 7.943037456001548,
+    "sum_checkpoint_call_seconds": 7.061894374000076,
+    "last_window_to_first_window_median_ratio": 1.0830682819256037,
+    "interpretation": "A single short CPU run with explicit output synchronization. A timing trend cannot by itself establish thermal throttling; no temperature or clock telemetry was collected."
+  },
+  "loss_summary": {
+    "train_min": 0.8193851709365845,
+    "train_max": 1.051191806793213,
+    "train_final": 0.8441149592399597,
+    "eval_min": 0.9535908102989197,
+    "eval_max": 1.0435913801193237,
+    "all_finite": true,
+    "note": "Batch-one noisy losses and 5000-update warmup; no convergence or image-quality claim."
+  },
+  "peak_process_rss_gib": 4.3712921142578125,
+  "training_invocation_seconds": 908.0903116250001,
+  "checkpoint_readback": {
+    "checkpoints": {
+      "state_step": 200,
+      "all_fields_match_saved_state": true,
+      "all_state_values_finite": true
+    },
+    "checkpoints-meta": {
+      "state_step": 200,
+      "all_fields_match_saved_state": true,
+      "all_state_values_finite": true
+    }
+  }
+}

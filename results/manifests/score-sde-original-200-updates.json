@@ -1,0 +1,37 @@
+{
+  "actual_updates": 200,
+  "storage": "Local repository ignored runs directory; not uploaded to GitHub",
+  "restoration": "Both final checkpoints passed fresh-process typed-state readback and all-field equality checks",
+  "files": [
+    {
+      "path": "runs/score-sde/original-200-updates/checkpoints/checkpoint_200/_CHECKPOINT_METADATA",
+      "bytes": 92,
+      "sha256": "f9b2ccb331962bc560e0ed44b08d67764a28c349b85dfc63ff57063db037ae62"
+    },
+    {
+      "path": "runs/score-sde/original-200-updates/checkpoints/checkpoint_200/_METADATA",
+      "bytes": 833375,
+      "sha256": "026f78491c3024b898c249f808dba30a406323200d44661d072a0b30d74e4455"
+    },
+    {
+      "path": "runs/score-sde/original-200-updates/checkpoints/checkpoint_200/checkpoint",
+      "bytes": 988949541,
+      "sha256": "0fc92d6c4be4fc96c79f9415afd7abbd6c13fcaafd548d446e24e65a1bcae4e7"
+    },
+    {
+      "path": "runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_200/_CHECKPOINT_METADATA",
+      "bytes": 92,
+      "sha256": "7137fd086fd023b683584734c6d66c69a8ba9075234a844707c0d8ab5f34aa09"
+    },
+    {
+      "path": "runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_200/_METADATA",
+      "bytes": 833375,
+      "sha256": "026f78491c3024b898c249f808dba30a406323200d44661d072a0b30d74e4455"
+    },
+    {
+      "path": "runs/score-sde/original-200-updates/checkpoints-meta/checkpoint_200/checkpoint",
+      "bytes": 988949541,
+      "sha256": "0fc92d6c4be4fc96c79f9415afd7abbd6c13fcaafd548d446e24e65a1bcae4e7"
+    }
+  ]
+}
