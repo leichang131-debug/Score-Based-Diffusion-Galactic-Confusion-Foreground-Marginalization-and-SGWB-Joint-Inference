@@ -1,0 +1,15 @@
+PASS python_source_and_notebook_provenance
+PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1
+No phenomxpy.
+No pyseobnr.
+no cupy
+PASS imports_and_editable_source
+PASS fft_interpolation_and_plot
+PASS waveform_IMRPhenomT
+PASS waveform_SEOBNRv4_opt
+PASS bundled_data_readability
+PASS triangle_orbit_light_travel_time
+PASS synthetic_hdf5_interface
+PASS cpu_multiprocessing
+PASS fresh_jupyter_kernel
+Overall: True

@@ -1,0 +1,13 @@
+[I 2026-10-10 17:15:49.077 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-10-10 17:15:49.078 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2026-10-10 17:15:49.079 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-10-10 17:15:49.080 ServerApp] notebook | extension was successfully linked.
+[I 2026-10-10 17:15:49.150 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-10-10 17:15:49.169 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-10-10 17:15:49.170 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-10-10 17:15:49.170 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-10-10 17:15:49.171 LabApp] JupyterLab extension loaded from <REPO_ROOT>/environments/tdc/.venv/lib/python3.9/site-packages/jupyterlab
+[I 2026-10-10 17:15:49.171 LabApp] JupyterLab application directory is <REPO_ROOT>/environments/tdc/.venv/share/jupyter/lab
+[I 2026-10-10 17:15:49.171 LabApp] Extension Manager is 'pypi'.
+[I 2026-10-10 17:15:49.203 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-10-10 17:15:49.205 ServerApp] notebook | extension was successfully loaded.

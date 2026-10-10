@@ -1,0 +1,7 @@
+Using Python 3.9.19 environment at: environments/tdc/.venv
+Resolved 1 package in 1ms
+   Building triangle @ file://<REPO_ROOT>/external/triangle-simulator
+      Built triangle @ file://<REPO_ROOT>/external/triangle-simulator
+Prepared 1 package in 296ms
+Installed 1 package in 1ms
+ + triangle==0.1.0 (from file://<REPO_ROOT>/external/triangle-simulator)

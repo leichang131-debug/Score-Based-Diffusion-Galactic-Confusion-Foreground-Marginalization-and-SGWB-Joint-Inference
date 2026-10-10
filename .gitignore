@@ -23,6 +23,7 @@ data/processed/*
 # LaTeX build intermediates; PDF and TeX remain tracked
 *.aux
 *.log
+!results/tdc/environment/*.log
 *.out
 *.toc
 *.synctex.gz
