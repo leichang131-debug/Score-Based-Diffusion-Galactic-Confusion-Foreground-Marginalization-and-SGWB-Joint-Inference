@@ -1,0 +1,14 @@
+{
+  "python": "3.9.19",
+  "start_method": "fork",
+  "cpu_count": 10,
+  "response_samples": 864000,
+  "response": {
+    "shape": [
+      864000
+    ],
+    "finite": true,
+    "sha256": "e77afb180a5f6246ef1c35299714e6c310f1d9fe20dfe80e445f522205c752ad",
+    "rms": 3.463530446458662e-24
+  }
+}

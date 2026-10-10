@@ -1,0 +1,90 @@
+{
+  "python": "3.9.19",
+  "start_method": "fork",
+  "cpu_count": 10,
+  "size": 86400,
+  "sample_rate_hz": 0.1,
+  "duration_seconds": 864000.0,
+  "interpolation_order": 31,
+  "default_noise": true,
+  "TDI_method": "fast_michelson",
+  "source_count": 303,
+  "sky_count": 300,
+  "workers": 6,
+  "channels": {
+    "A2": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "952ce51ba970bf2461f4ac35bcd234dbe2638fb52826a8b005943f92994b9496",
+      "rms": 0.0001934765934031166
+    },
+    "E2": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "ce2fa132b7636eeb0116ad26449824413f6a293c012fbf4cb73d7f6c82d34a2d",
+      "rms": 0.00014452235822858962
+    },
+    "T2": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "8fcf243f2aa444aaeaa4e784a3c1dd029489e03c096bb209c31556693011b8b5",
+      "rms": 9.84905510155615e-05
+    }
+  },
+  "raw_links": {
+    "12": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "8ff6b031827a1d4216b06139b120c37ec31cbcfde676fbf3556e22e1165b2227",
+      "rms": 3.711184881617562e-05
+    },
+    "13": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "5b3ded4af1b15c0924c813e31240c7bc272c846c32974ca60cc36d640d4f2546",
+      "rms": 3.3455493668960905e-05
+    },
+    "23": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "1e0a699e974b9d5d6f77a960501b6a3057bbb9b1147e0997ecda71829f9c7bac",
+      "rms": 3.217201513027459e-05
+    },
+    "21": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "c6be3f273badc07e8a5653290a3ce9a67f9413a0f39e2b746871ff20e130e006",
+      "rms": 3.7091752510596236e-05
+    },
+    "31": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "f361317a6a80d32edc10cccd2074848b94d8ca3dfb043e7adc0ddc695f734ef3",
+      "rms": 3.780454090493394e-05
+    },
+    "32": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "55a4a230b7f83587d270c6d56d88b20e23896e4d1145ac7026aad9dd5fd23fa5",
+      "rms": 3.238294037477408e-05
+    }
+  }
+}

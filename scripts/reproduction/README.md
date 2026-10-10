@@ -42,3 +42,6 @@ See [environment instructions](../../environments/tdc/README.md). Full notebooks
 
 - `run-tdc-tutorial-3.py`: execute all unchanged GW injection cells at original scale, recording GB/MBHB/EMRI/SGWB stage evidence and resource use.
 - `audit-tdc-tutorial-3.py`: audit source, configurations, finite outputs and all seven exported figures without simulation.
+
+- `run-tdc-tutorial-4.py`: execute unchanged joint simulation, 100-GB fast responses, MBHB/EMRI and sensitivity examples with provenance.
+- `audit-tdc-tutorial-4.py`: verify source correspondence, original scales, finite outputs and six figure exports.

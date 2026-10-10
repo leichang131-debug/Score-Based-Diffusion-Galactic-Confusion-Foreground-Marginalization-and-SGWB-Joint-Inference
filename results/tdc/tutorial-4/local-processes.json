@@ -1,0 +1,18 @@
+{
+  "captured_utc": "2026-10-10T14:17:44.805177+00:00",
+  "hardware": [
+    "Apple M5",
+    "17179869184"
+  ],
+  "process_columns": "  PID  PPID  ELAPSED  %CPU    RSS COMMAND",
+  "processes": [
+    "12760 12430    00:18   0.7  23744 environments/tdc/.venv/bin/python -u scripts/reproduction/run-tdc-tutorial-4.py",
+    "12766 12760    00:18  21.0 827824 <REPOSITORY>/environments/tdc/.venv/bin/python -m ipykernel_launcher -f /private/var/folders/1b/lwtq73nn0s9263c3y9fss5b80000gn/T/tmpefbkyu94.json",
+    "12773 12766    00:16  16.0 235280 <REPOSITORY>/environments/tdc/.venv/bin/python -m ipykernel_launcher -f /private/var/folders/1b/lwtq73nn0s9263c3y9fss5b80000gn/T/tmpefbkyu94.json",
+    "12774 12766    00:16  14.7 276032 <REPOSITORY>/environments/tdc/.venv/bin/python -m ipykernel_launcher -f /private/var/folders/1b/lwtq73nn0s9263c3y9fss5b80000gn/T/tmpefbkyu94.json",
+    "12775 12766    00:16  15.6 359728 <REPOSITORY>/environments/tdc/.venv/bin/python -m ipykernel_launcher -f /private/var/folders/1b/lwtq73nn0s9263c3y9fss5b80000gn/T/tmpefbkyu94.json",
+    "12776 12766    00:16  18.4 397680 <REPOSITORY>/environments/tdc/.venv/bin/python -m ipykernel_launcher -f /private/var/folders/1b/lwtq73nn0s9263c3y9fss5b80000gn/T/tmpefbkyu94.json",
+    "12777 12766    00:16  26.2 384688 <REPOSITORY>/environments/tdc/.venv/bin/python -m ipykernel_launcher -f /private/var/folders/1b/lwtq73nn0s9263c3y9fss5b80000gn/T/tmpefbkyu94.json",
+    "12778 12766    00:16  16.3 283072 <REPOSITORY>/environments/tdc/.venv/bin/python -m ipykernel_launcher -f /private/var/folders/1b/lwtq73nn0s9263c3y9fss5b80000gn/T/tmpefbkyu94.json"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "checks": {
+    "original_filename": true,
+    "same_cell_count": true,
+    "same_sources_and_types": true,
+    "same_attachments": true,
+    "source_clean": true,
+    "pinned_commit": true,
+    "source_hash": true,
+    "executed_hash": true,
+    "all_nonempty_code_executed": true,
+    "execution_passed": true,
+    "no_error_outputs": true,
+    "six_figures": true,
+    "fork_used": true,
+    "original_combined_scale": true,
+    "original_combined_sources_and_noise": true,
+    "combined_finite_channels": true,
+    "combined_six_finite_links": true,
+    "original_fast_gb_scale": true,
+    "all_100_gb_responses_finite": true,
+    "fast_mbhb_original_backend_parameters": true,
+    "fast_mbhb_finite_shape": true,
+    "fast_emri_finite_shape": true,
+    "sensitivity_finite_positive": true,
+    "saved_sensitivity_finite": true,
+    "original_frequency_range": true,
+    "image_exports_match": true,
+    "local_hardware_evidence": true
+  },
+  "reference_image_comparison": [
+    {
+      "cell_index": 25,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    },
+    {
+      "cell_index": 27,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    },
+    {
+      "cell_index": 36,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    },
+    {
+      "cell_index": 42,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    },
+    {
+      "cell_index": 48,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    },
+    {
+      "cell_index": 56,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    }
+  ],
+  "cell_count": 58,
+  "nonempty_code_cells": 31,
+  "limitations": "Original default branches only; one random realization; no inference or statistical calibration."
+}

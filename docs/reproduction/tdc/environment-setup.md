@@ -1,12 +1,12 @@
 # Triangle-Simulator shared environment setup
 
-Current scope update: Tutorials 1–3 completed at original scale; see [Tutorial 1](tutorial-1.md), [Tutorial 2](tutorial-2.md) and [Tutorial 3](tutorial-3.md). Tutorial 4 remains pending. Tutorial 5 is excluded following teacher guidance. The setup notes below retain the earlier environment-only validation scope.
+Current scope update: Tutorials 1–4 completed at original scale; see [Tutorial 1](tutorial-1.md), [Tutorial 2](tutorial-2.md) and [Tutorial 3](tutorial-3.md). Tutorial 4 is complete; see [Tutorial 4 report](tutorial-4.md). Tutorial 5 is excluded following teacher guidance. The setup notes below retain the earlier environment-only validation scope.
 
 ## Outcome and scope
 
-The shared macOS ARM64 CPU environment is installed for all five tutorial notebooks at upstream commit `ab796358e9a36c8987f6bb53a97230d603bfdfd5`. The source is unchanged, including its five notebooks, example waveforms, orbit data and GPL-3.0 license. Setup and smoke checks passed on 2026-10-10. **Full tutorial execution and scientific output reproduction have not yet been performed.**
+The shared macOS ARM64 CPU environment is installed for all five tutorial notebooks at upstream commit `ab796358e9a36c8987f6bb53a97230d603bfdfd5`. The source is unchanged, including its five notebooks, example waveforms, orbit data and GPL-3.0 license. Setup and smoke checks passed on 2026-10-10. At the environment-only validation stage, full tutorial execution had not yet been performed; see the current completion status above.
 
-Tutorial 5 additionally requires external TDC II challenge data. Teacher confirmation of that file is pending; environment readiness does not imply dataset readiness.
+Tutorial 5 additionally requires external TDC II challenge data. Tutorial 5 is now excluded following teacher guidance; environment readiness does not imply dataset readiness.
 
 ## Environment
 

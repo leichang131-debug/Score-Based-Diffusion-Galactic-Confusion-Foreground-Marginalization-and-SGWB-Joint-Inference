@@ -1,0 +1,31 @@
+{
+  "python": "3.9.19",
+  "start_method": "fork",
+  "cpu_count": 10,
+  "orbit_time_seconds": 1727087.4013083442,
+  "frequency": {
+    "shape": [
+      512
+    ],
+    "finite": true,
+    "sha256": "f92ff4f47c2f99b0da99d803776d73d17d137592d9235ec2faf630e504768cf5",
+    "rms": 0.23486849594750253
+  },
+  "X2": {
+    "shape": [
+      512
+    ],
+    "finite": true,
+    "sha256": "ed372ea0965c6d2242ddafabe4ea0592b6f780274ca58924ba97157c1d398967",
+    "rms": 2.9597080346700017e-34
+  },
+  "A2": {
+    "shape": [
+      512
+    ],
+    "finite": true,
+    "sha256": "8f6d20caf8ca274708263eebf49533e87dc86069cbc34adb2492363a83f3bd64",
+    "rms": 2.861525800634759e-34
+  },
+  "positive": true
+}

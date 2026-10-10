@@ -1,0 +1,28 @@
+{
+  "python": "3.9.19",
+  "start_method": "fork",
+  "cpu_count": 10,
+  "response_samples": 864000,
+  "approximant": "IMRPhenomT",
+  "parameters": {
+    "chirp_mass": 400000.0,
+    "mass_ratio": 0.3640815267051051,
+    "spin_1z": 0.7899406190510447,
+    "spin_2z": 0.015424596359292053,
+    "coalescence_time": 50.0,
+    "coalescence_phase": 3.2535342675592966,
+    "luminosity_distance": 106039.10941463517,
+    "inclination": 1.4495086550199021,
+    "longitude": 3.032776598141215,
+    "latitude": -1.1817968279048852,
+    "psi": 0.2409146690555858
+  },
+  "response": {
+    "shape": [
+      864000
+    ],
+    "finite": true,
+    "sha256": "a3bd7ccb389ccb4ea295cba8a0e0d690be9ff662b0a7e91a0227b99377150978",
+    "rms": 1.483671372524977e-22
+  }
+}
