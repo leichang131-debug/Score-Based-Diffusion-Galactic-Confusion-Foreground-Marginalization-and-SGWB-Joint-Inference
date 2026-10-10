@@ -25,3 +25,11 @@ All teacher source lives unchanged in `external/score-sde-reproduction/`, includ
 Run audits from the repository root using `environments/score-sde/.venv/bin/python`. Source audit is online by default; `--offline` explicitly skips current remote HEAD verification. Evidence audit requires the preserved local run directories and checkpoints. Neither audit executes training or sampling.
 
 Shared hashing, model-state initialization and log parsing could later be extracted into a common utility. Stage scripts currently preserve the exact operations used for each completed check; their different update counts and assertions are intentional.
+
+## Triangle-Simulator
+
+- `setup-tdc-macos.sh`: install locked Python 3.9.19 CPU environment and project-local kernel.
+- `launch-tdc-jupyter.sh`: launch Jupyter in upstream Tutorials with project-local runtime/cache directories.
+- `check-tdc-environment.py`: dependency/source/backend/data/kernel smoke checks, emitting curated evidence.
+
+See [environment instructions](../../environments/tdc/README.md). Full notebooks are not executed by these scripts.

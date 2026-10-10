@@ -2,6 +2,8 @@
 
 Score-SDE small-scale workflow and final evidence export are complete. See [the final report](score-sde/final-report.md). Full numerical image-generation reproduction remains pending.
 
+Triangle-Simulator shared environment is prepared separately from full tutorial execution. See [setup and evidence](tdc/environment-setup.md). Tutorial 5 external data remain pending teacher confirmation.
+
 ## Planned order
 
 1. Score-SDE: verify imports and devices, inspect a batch, run a small training configuration, save and resume, and generate a few samples.

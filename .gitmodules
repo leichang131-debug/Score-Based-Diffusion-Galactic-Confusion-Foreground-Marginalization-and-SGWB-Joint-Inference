@@ -1,3 +1,6 @@
 [submodule "external/score-sde-reproduction"]
 	path = external/score-sde-reproduction
 	url = https://github.com/iphysresearch/score-sde-reproduction.git
+[submodule "external/triangle-simulator"]
+	path = external/triangle-simulator
+	url = https://github.com/TriangleDataCenter/Triangle-Simulator.git

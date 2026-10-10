@@ -1,0 +1,501 @@
+{
+  "scope": "Shared environment smoke checks; full tutorials not executed",
+  "created_utc": "2026-10-10T09:13:52.789726+00:00",
+  "python": "3.9.19",
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "source_commit": "ab796358e9a36c8987f6bb53a97230d603bfdfd5",
+  "checks": {
+    "python_source_and_notebook_provenance": {
+      "passed": true,
+      "detail": {
+        "source_clean": true,
+        "notebooks": [
+          {
+            "path": "Tutorials/1_Demo_Laser_Interferometry_and_TDI.ipynb",
+            "sha256": "8f861dcfb63853fddb20f6c46af715aa346fb4922dbb5afb1491c01d620e866c"
+          },
+          {
+            "path": "Tutorials/2_Demo_More_Advanced_Noise_and_TDI_Simulation.ipynb",
+            "sha256": "c8d2489589c7e4650239c7ab4bce20e04248cda32575d6079fd2049981ed5093"
+          },
+          {
+            "path": "Tutorials/3_Demo_GW_Injection.ipynb",
+            "sha256": "5ecc9009759f2e3cfce577339bead56393dce82e2741a849c7a23292728b0684"
+          },
+          {
+            "path": "Tutorials/4_Demo_Simulation_for_Scientific_Data_Analysis.ipynb",
+            "sha256": "48c58a1c51962629678336fdccd422faa9132a08dce00121ecf4bfd8b38a85eb"
+          },
+          {
+            "path": "Tutorials/5_Demo_TDC_Data_Preprocessing.ipynb",
+            "sha256": "4e706f82f5468b8413a24e0af1a0220d27b125c86e4ea4fca880bc28977c8517"
+          }
+        ],
+        "uv_lock_sha256": "8e2ce1962f7a39d6a0c0a936757cc79de4d4489c07eccd29e3d0ee1617b1097d",
+        "requirements_sha256": "1231019ca34f772be6906550d0e4e142084747f1cf0423334e233b70d6e86d09"
+      },
+      "seconds": 0.012046917000000004
+    },
+    "imports_and_editable_source": {
+      "passed": true,
+      "detail": {
+        "numpy": "imported",
+        "scipy": "imported",
+        "matplotlib": "imported",
+        "healpy": "imported",
+        "pycbc": "imported",
+        "h5py": "imported",
+        "tqdm": "imported",
+        "jupyterlab": "imported",
+        "ipykernel": "imported",
+        "nbclient": "imported",
+        "lal": "imported",
+        "lalsimulation": "imported",
+        "Triangle": "imported"
+      },
+      "seconds": 1.088245375
+    },
+    "fft_interpolation_and_plot": {
+      "passed": true,
+      "detail": {
+        "fft_max_error": 4.440892098500626e-16
+      },
+      "seconds": 0.026799417000000103
+    },
+    "waveform_IMRPhenomT": {
+      "passed": true,
+      "detail": {
+        "length": 420,
+        "delta_t": 0.0009765625,
+        "scope": "Backend smoke check using small stellar masses, not tutorial MBHB physics"
+      },
+      "seconds": 0.002745457999999923
+    },
+    "waveform_SEOBNRv4_opt": {
+      "passed": true,
+      "detail": {
+        "length": 385,
+        "delta_t": 0.0009765625,
+        "scope": "Backend smoke check using small stellar masses, not tutorial MBHB physics"
+      },
+      "seconds": 0.007690792000000002
+    },
+    "bundled_data_readability": {
+      "passed": true,
+      "detail": [
+        {
+          "path": "OrbitData/LDC2BOrbit/SCP1.dat",
+          "bytes": 28102,
+          "sha256": "862de6a8bfd57bd5efad264d07bd13d1af0166024283caafb9072734536149c4",
+          "shapes": [
+            367,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/LDC2BOrbit/SCP2.dat",
+          "bytes": 28100,
+          "sha256": "f19ed680bc2e6ff1a4cacb142727beb840245377311fb1a3c39756b786def0c5",
+          "shapes": [
+            367,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/LDC2BOrbit/SCP3.dat",
+          "bytes": 28097,
+          "sha256": "83ff1661605303265729aca22a0e420b0afb4523cfcbd08f1ccdf8d31e11f704",
+          "shapes": [
+            367,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/LDC2BOrbit/SCV1.dat",
+          "bytes": 28114,
+          "sha256": "08a2f5aeb448d7f98aa91b338270cd32c1fab5a3394b1ce81805742983bd7ff0",
+          "shapes": [
+            367,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/LDC2BOrbit/SCV2.dat",
+          "bytes": 28113,
+          "sha256": "4d5f9fb3f1f7b58e36e89be3ebf8f8931dfdc0a462ef58f07e6b52536d2bdba0",
+          "shapes": [
+            367,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/LDC2BOrbit/SCV3.dat",
+          "bytes": 28113,
+          "sha256": "95ce4ff9dde74180550342fc503462246e074a87fc9d6380df2c3455c748c12f",
+          "shapes": [
+            367,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/MicroSateOrbitEclipticTCB/SCP1.dat",
+          "bytes": 27978,
+          "sha256": "f4fecedeb43bdf1ad70259f412671b3a89f1aa2ce27d3e28173e56ca1b8801a4",
+          "shapes": [
+            365,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/MicroSateOrbitEclipticTCB/SCP2.dat",
+          "bytes": 27982,
+          "sha256": "999e0e7654a249822e1249962d4db826a388fe253a84ef1659334a68ab3226ab",
+          "shapes": [
+            365,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/MicroSateOrbitEclipticTCB/SCP3.dat",
+          "bytes": 27981,
+          "sha256": "4a80a9134386a7b4d3c5f048cfcfa81cd29cccb585a04893daf282e3bd6557d0",
+          "shapes": [
+            365,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/MicroSateOrbitEclipticTCB/SCV1.dat",
+          "bytes": 28108,
+          "sha256": "24b718a50d463ad196a60cfc8f43515ff9cbf96a823fa9d281b1cc5c03802f41",
+          "shapes": [
+            365,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/MicroSateOrbitEclipticTCB/SCV2.dat",
+          "bytes": 28108,
+          "sha256": "d5d417f17a354c8bf3a32486a63bd09017102a9af2cb6f60989e3730fda2e12c",
+          "shapes": [
+            365,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/MicroSateOrbitEclipticTCB/SCV3.dat",
+          "bytes": 28107,
+          "sha256": "9812800fbda9de9d271fd9df980dd5fa49fa19fe00d04e96f1a339d15b834301",
+          "shapes": [
+            365,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/TaijiEqualArmOrbit/SCP1.dat",
+          "bytes": 167676,
+          "sha256": "eb096d372ef40bc47015fd9309d10657ed5dd5baa05df3fb33a6d35a97f6fa6e",
+          "shapes": [
+            2192,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/TaijiEqualArmOrbit/SCP2.dat",
+          "bytes": 167696,
+          "sha256": "a3ed8ae49c352dde2e4a9485a53af081ad92cbec5eca152097b1424436a56f43",
+          "shapes": [
+            2192,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/TaijiEqualArmOrbit/SCP3.dat",
+          "bytes": 167678,
+          "sha256": "44a43bd7483178286ceba4ff358cd7c5a36a25558dda601e178e4a20e9037fa3",
+          "shapes": [
+            2192,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/TaijiEqualArmOrbit/SCV1.dat",
+          "bytes": 167698,
+          "sha256": "90e494f6c334d69e4579733cee341920bf0210b68c624c342325be5fa34e8de0",
+          "shapes": [
+            2192,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/TaijiEqualArmOrbit/SCV2.dat",
+          "bytes": 167690,
+          "sha256": "224db96e296d4b70e1c88c38daf13cdccbd0cd58569fed8c05d4ecdfd1adcd2d",
+          "shapes": [
+            2192,
+            3
+          ]
+        },
+        {
+          "path": "OrbitData/TaijiEqualArmOrbit/SCV3.dat",
+          "bytes": 167674,
+          "sha256": "4d591ccb887792ec391462acb4997d39305856d81cf4cab8517afac79898e318",
+          "shapes": [
+            2192,
+            3
+          ]
+        },
+        {
+          "path": "GWData/Demo_EMRI_waveform_data.npz",
+          "bytes": 30296552,
+          "sha256": "892fbe2fefe4df884dca11be5e47ace5f7c387af141daf08a9a0dd0d75c7c6e3",
+          "shapes": {
+            "t": [
+              1262326
+            ],
+            "h1": [
+              1262326
+            ],
+            "h2": [
+              1262326
+            ]
+          }
+        },
+        {
+          "path": "GWData/Demo_MBHB_waveform_data.npy",
+          "bytes": 12441728,
+          "sha256": "4a01ec0142a46106ddea3fe7659dceed2b6118c84f44f4fff63156637810f471",
+          "shapes": [
+            518400,
+            3
+          ]
+        }
+      ],
+      "seconds": 0.035905166999999905
+    },
+    "triangle_orbit_light_travel_time": {
+      "passed": true,
+      "detail": {
+        "orbit_rows": 365,
+        "time_range_seconds": [
+          0.0,
+          31449600.0
+        ],
+        "sample_times_seconds": [
+          1000.0,
+          10000.0,
+          100000.0
+        ],
+        "light_travel_times_seconds": {
+          "12": [
+            9.971133556866722,
+            9.971080618624988,
+            9.97054736565243
+          ],
+          "13": [
+            9.971696182659656,
+            9.971745812012141,
+            9.972240321183147
+          ],
+          "23": [
+            10.008137939358301,
+            10.0081361027113,
+            10.008110351328556
+          ],
+          "21": [
+            9.971563249731968,
+            9.971512563528366,
+            9.971001651999984
+          ],
+          "31": [
+            9.9709067482517,
+            9.970959082119354,
+            9.971480676411712
+          ],
+          "32": [
+            10.006901649782286,
+            10.006900265611053,
+            10.006879257843798
+          ]
+        }
+      },
+      "seconds": 0.004163083999999984
+    },
+    "synthetic_hdf5_interface": {
+      "passed": true,
+      "detail": "Synthetic HDF5 roundtrip only; actual Tutorial 5 data pending teacher confirmation",
+      "seconds": 0.0013981669999998392
+    },
+    "cpu_multiprocessing": {
+      "passed": true,
+      "detail": {
+        "start_method": "spawn",
+        "workers": 2,
+        "result": [
+          1,
+          4,
+          9,
+          16
+        ],
+        "scope": "Generic process test; full Triangle notebook pool workloads not executed"
+      },
+      "seconds": 0.038182084000000005
+    },
+    "fresh_jupyter_kernel": {
+      "passed": true,
+      "detail": "Fresh registered Jupyter kernel executed NumPy/Triangle import cell in Tutorials directory",
+      "seconds": 1.7165965410000001
+    }
+  },
+  "versions": {
+    "soupsieve": "2.7",
+    "Cython": "3.0.12",
+    "arrow": "1.3.0",
+    "astropy": "6.0.1",
+    "uri-template": "1.3.0",
+    "rfc3339-validator": "0.1.4",
+    "pexpect": "4.9.0",
+    "Pygments": "2.19.1",
+    "tomli": "2.0.1",
+    "fqdn": "1.5.1",
+    "idna": "3.10",
+    "babel": "2.17.0",
+    "lalsuite": "7.25.1",
+    "traitlets": "5.14.3",
+    "nest-asyncio": "1.6.0",
+    "debugpy": "1.8.14",
+    "ptyprocess": "0.7.0",
+    "PyCBC": "2.7.2",
+    "prometheus_client": "0.21.1",
+    "isoduration": "20.11.0",
+    "scipy": "1.13.1",
+    "matplotlib": "3.9.4",
+    "pillow": "11.2.1",
+    "overrides": "7.7.0",
+    "parso": "0.8.4",
+    "webencodings": "0.5.1",
+    "tinycss2": "1.4.0",
+    "zipp": "3.19.2",
+    "gwdatafind": "2.0.0",
+    "pyzmq": "26.4.0",
+    "fonttools": "4.57.0",
+    "jupyterlab_widgets": "3.0.14",
+    "beautifulsoup4": "4.13.4",
+    "anyio": "4.9.0",
+    "defusedxml": "0.7.1",
+    "requests": "2.32.3",
+    "attrs": "25.3.0",
+    "async-lru": "2.0.5",
+    "safe-netrc": "1.0.1",
+    "ligo-segments": "1.4.0",
+    "cryptography": "44.0.2",
+    "Triangle": "0.1.0",
+    "pyparsing": "3.2.3",
+    "jupyter-console": "6.6.3",
+    "jedi": "0.19.2",
+    "igwn-auth-utils": "1.3.1",
+    "rpds-py": "0.24.0",
+    "jupyter": "1.1.1",
+    "jupyter_client": "8.6.3",
+    "asttokens": "3.0.0",
+    "tqdm": "4.67.1",
+    "pandocfilters": "1.5.1",
+    "json5": "0.12.0",
+    "fastjsonschema": "2.21.1",
+    "exceptiongroup": "1.2.2",
+    "jsonpointer": "3.0.0",
+    "appnope": "0.1.4",
+    "numpy": "1.26.4",
+    "jupyter_server": "2.15.0",
+    "typing_extensions": "4.12.2",
+    "httpcore": "1.0.9",
+    "decorator": "5.2.1",
+    "pegasus-wms.common": "5.0.9",
+    "cffi": "1.17.1",
+    "jsonschema": "4.23.0",
+    "executing": "2.2.0",
+    "nbformat": "5.10.4",
+    "stack-data": "0.6.3",
+    "argon2-cffi": "23.1.0",
+    "ipywidgets": "8.1.6",
+    "PyJWT": "2.10.1",
+    "kiwisolver": "1.4.7",
+    "setuptools": "80.0.0",
+    "pyerfa": "2.0.1.5",
+    "jupyter_core": "5.7.2",
+    "nbconvert": "7.16.6",
+    "referencing": "0.36.2",
+    "certifi": "2025.4.26",
+    "contourpy": "1.3.0",
+    "Send2Trash": "1.8.3",
+    "jupyter-lsp": "2.2.5",
+    "nbclient": "0.10.2",
+    "h11": "0.16.0",
+    "sniffio": "1.3.1",
+    "psutil": "7.0.0",
+    "python-dateutil": "2.9.0.post0",
+    "jupyterlab_pygments": "0.3.0",
+    "mistune": "3.1.3",
+    "charset-normalizer": "3.4.1",
+    "ipython": "8.18.1",
+    "wcwidth": "0.2.13",
+    "pegasus-wms.api": "5.0.9",
+    "notebook": "7.4.1",
+    "Mako": "1.3.10",
+    "jupyter-events": "0.12.0",
+    "prompt_toolkit": "3.0.51",
+    "platformdirs": "4.2.2",
+    "packaging": "24.2",
+    "jupyterlab_server": "2.27.3",
+    "urllib3": "2.4.0",
+    "webcolors": "24.11.1",
+    "jsonschema-specifications": "2025.4.1",
+    "healpy": "1.17.3",
+    "pycparser": "2.22",
+    "cycler": "0.12.1",
+    "Jinja2": "3.1.6",
+    "lscsoft-glue": "4.1.0",
+    "comm": "0.2.2",
+    "pure_eval": "0.2.3",
+    "tornado": "6.4.2",
+    "mpld3": "0.5.10",
+    "h5py": "3.13.0",
+    "rfc3986-validator": "0.1.1",
+    "python-ligo-lw": "1.8.3",
+    "python-json-logger": "3.3.0",
+    "terminado": "0.18.1",
+    "jupyterlab": "4.4.1",
+    "astropy-iers-data": "0.2025.4.28.0.37.27",
+    "argon2-cffi-bindings": "21.2.0",
+    "PyYAML": "6.0.2",
+    "httpx": "0.28.1",
+    "matplotlib-inline": "0.1.7",
+    "importlib_metadata": "8.0.0",
+    "scitokens": "1.8.1",
+    "pykerr": "0.1.0",
+    "jupyter_server_terminals": "0.5.3",
+    "types-python-dateutil": "2.9.0.20241206",
+    "bleach": "6.2.0",
+    "ipykernel": "6.29.5",
+    "igwn-segments": "2.0.0",
+    "widgetsnbextension": "4.0.14",
+    "six": "1.17.0",
+    "importlib_resources": "6.5.2",
+    "notebook_shim": "0.2.4",
+    "websocket-client": "1.8.0",
+    "MarkupSafe": "3.0.2",
+    "jaraco.text": "3.12.1",
+    "jaraco.collections": "5.1.0",
+    "jaraco.functools": "4.0.1",
+    "jaraco.context": "5.3.0",
+    "inflect": "7.3.1",
+    "autocommand": "2.2.2",
+    "backports.tarfile": "1.2.0",
+    "typeguard": "4.3.0",
+    "wheel": "0.45.1",
+    "more-itertools": "10.3.0"
+  },
+  "seconds": 3.012950708,
+  "passed": true
+}

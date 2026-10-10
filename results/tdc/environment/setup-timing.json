@@ -1,0 +1,7 @@
+{
+  "first_validation_seconds": 91.425866959,
+  "first_validation_note": "Includes initial font cache creation; measured before adding provenance check; all then-present checks passed",
+  "dependency_preparation_seconds": 16.08,
+  "dependency_install_seconds": 0.325,
+  "timing_scope": "Installer timings exclude clone/Python download; final validation timings are in validation.json"
+}

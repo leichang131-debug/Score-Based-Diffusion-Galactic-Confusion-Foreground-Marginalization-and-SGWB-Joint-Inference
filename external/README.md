@@ -6,4 +6,4 @@ Score-SDE reproduction is integrated as an unmodified Git submodule at commit `8
 git submodule update --init --recursive
 ```
 
-The other component directories remain source slots; their code has not been downloaded or deployed. Preserve upstream licenses and notices. Project-owned launch adapters live under `scripts/reproduction/`; upstream source is unchanged.
+Triangle-Simulator is integrated at `ab796358e9a36c8987f6bb53a97230d603bfdfd5` with all five notebooks and bundled orbit/waveform data. Its GPL-3.0 license is preserved. The source checkout is shallow but contains the complete pinned file tree. Triangle-GB and TaijiSGWB remain source slots; their code has not been downloaded or deployed. Preserve upstream licenses and notices. Project-owned launch adapters live under `scripts/reproduction/`; upstream source is unchanged.

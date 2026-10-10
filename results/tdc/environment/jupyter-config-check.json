@@ -1,0 +1,13 @@
+{
+  "LabApp": {
+    "default_url": "/lab/tree/external/triangle-simulator/Tutorials"
+  },
+  "NotebookApp": {},
+  "ServerApp": {
+    "default_url": "/lab/tree/external/triangle-simulator/Tutorials",
+    "file_url_prefix": "/lab/tree",
+    "jpserver_extensions": "<LazyConfigValue value={'jupyterlab': True, 'jupyter_lsp': True, 'jupyter_server_terminals': True, 'notebook': True, 'notebook_shim': True}>",
+    "open_browser": true,
+    "root_dir": "<REPO_ROOT>"
+  }
+}
