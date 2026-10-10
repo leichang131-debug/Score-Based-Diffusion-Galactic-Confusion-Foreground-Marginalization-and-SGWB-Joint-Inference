@@ -1,0 +1,82 @@
+{
+  "python": "3.9.19",
+  "size": 129600,
+  "sample_rate_hz": 0.1,
+  "interpolation_order": 11,
+  "workers": 6,
+  "duration_seconds": 1296000.0,
+  "NSIDE": 5,
+  "NPIX": 300,
+  "number_waveforms": 300,
+  "drop_points": 100,
+  "response_mc_samples": 1024,
+  "channels": {
+    "X2": {
+      "shape": [
+        129600
+      ],
+      "finite": true,
+      "sha256": "3dddc1a30144b6733db50ad9771154f6fb272c5f176b21731acdb829c11f6dba"
+    },
+    "Y2": {
+      "shape": [
+        129600
+      ],
+      "finite": true,
+      "sha256": "33e5ec94e5939be0c2a5b25c19b58e47cf0874fc8815414b19aa601a7967e4f7"
+    },
+    "Z2": {
+      "shape": [
+        129600
+      ],
+      "finite": true,
+      "sha256": "c64b4546eb7fd8e6ff6f209304971a65ac1ae1b6f8aef228ea222fb7961162bd"
+    }
+  },
+  "A2": {
+    "shape": [
+      129600
+    ],
+    "finite": true,
+    "sha256": "f089a705d0ee4dfa155a20b36a577f3275017ea90cb707dbd5af267c4d778fcf"
+  },
+  "measured_psd": {
+    "shape": [
+      6470
+    ],
+    "finite": true,
+    "sha256": "93ca337a0b3c75af37d9d97211cebc86f0ff330b80fa51de08b7c3b84564bcc6"
+  },
+  "precise_response": {
+    "shape": [
+      10000
+    ],
+    "finite": true,
+    "sha256": "1fa1f38abc5b590171aed3d597994775cb831a9a826b5888bb2f0dda8d634ba5"
+  },
+  "approximate_response": {
+    "shape": [
+      10000
+    ],
+    "finite": true,
+    "sha256": "165f9199d14bc78feda5c6e0af9e566d8793c5df3b90dd80882df808288645b7"
+  },
+  "bands": {
+    "(0.0003, 0.001)": {
+      "bins": 91,
+      "median_measured_over_precise_psd": 1.0131569300299363
+    },
+    "(0.001, 0.003)": {
+      "bins": 259,
+      "median_measured_over_precise_psd": 0.9913833245561106
+    },
+    "(0.003, 0.01)": {
+      "bins": 906,
+      "median_measured_over_precise_psd": 1.0036914156690437
+    },
+    "(0.01, 0.03)": {
+      "bins": 2589,
+      "median_measured_over_precise_psd": 1.0036856070329392
+    }
+  }
+}

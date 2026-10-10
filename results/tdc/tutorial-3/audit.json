@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "checks": {
+    "same_filename": true,
+    "same_cell_count": true,
+    "same_cell_types_and_sources": true,
+    "same_markdown_attachments": true,
+    "original_source_clean": true,
+    "pinned_commit": true,
+    "static_image_identical": true,
+    "all_nonempty_code_cells_executed": true,
+    "no_error_outputs": true,
+    "seven_generated_figures": true,
+    "execution_passed": true,
+    "executed_notebook_hash_matches": true,
+    "gb_original_scale": true,
+    "gb_finite_channels": true,
+    "gb_finite_raw_links": true,
+    "mbhb_original_scale": true,
+    "mbhb_finite_channels": true,
+    "mbhb_finite_raw_links": true,
+    "emri_original_scale": true,
+    "emri_finite_channels": true,
+    "emri_finite_raw_links": true,
+    "sgwb_original_scale": true,
+    "sgwb_finite_channels": true,
+    "mbhb_original_backend": true,
+    "sgwb_original_sky_and_mc": true,
+    "finite_sgwb_psd_and_responses": true,
+    "finite_saved_spectral_subset": true,
+    "saved_images_match_executed_notebook": true
+  },
+  "reference_image_comparison": [
+    {
+      "cell_index": 16,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        true
+      ]
+    },
+    {
+      "cell_index": 17,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        true
+      ]
+    },
+    {
+      "cell_index": 29,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        true
+      ]
+    },
+    {
+      "cell_index": 37,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    },
+    {
+      "cell_index": 48,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    },
+    {
+      "cell_index": 51,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    },
+    {
+      "cell_index": 53,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    }
+  ],
+  "cell_count": 57,
+  "nonempty_code_cells": 26,
+  "source_commit": "ab796358e9a36c8987f6bb53a97230d603bfdfd5",
+  "limitations": "Single original-scale execution; random EMRI orientation/SGWB/response Monte Carlo are not bitwise reference replication or ensemble calibration"
+}

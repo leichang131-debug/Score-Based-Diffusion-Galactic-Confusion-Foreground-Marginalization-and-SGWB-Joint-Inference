@@ -1,0 +1,72 @@
+{
+  "observed_utc": "2026-10-10T14:02:35.876822+00:00",
+  "cpu": "Apple M5",
+  "memory_bytes": 17179869184,
+  "processes": [
+    {
+      "pid": 11828,
+      "ppid": 10019,
+      "elapsed": "01:02",
+      "cpu_percent": 0.2,
+      "rss_kib": 21568,
+      "command": "environments/tdc/.venv/bin/python scripts/reproduction/run-tdc-tutorial-3.py"
+    },
+    {
+      "pid": 11832,
+      "ppid": 11828,
+      "elapsed": "01:02",
+      "cpu_percent": 0.2,
+      "rss_kib": 433568,
+      "command": "<REPO_ROOT>/environments/tdc/.venv/bin/python -m ipykernel_launcher -f /private/var/folders/1b/lwtq73nn0s9263c3y9fss5b80000gn/T/tmp2a9aklh9.json"
+    },
+    {
+      "pid": 11839,
+      "ppid": 11832,
+      "elapsed": "01:00",
+      "cpu_percent": 1.9,
+      "rss_kib": 1056400,
+      "command": "<REPO_ROOT>/environments/tdc/.venv/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=77, pipe_handle=88) --multiprocessing-fork"
+    },
+    {
+      "pid": 11840,
+      "ppid": 11832,
+      "elapsed": "01:00",
+      "cpu_percent": 27.9,
+      "rss_kib": 924528,
+      "command": "<REPO_ROOT>/environments/tdc/.venv/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=77, pipe_handle=90) --multiprocessing-fork"
+    },
+    {
+      "pid": 11841,
+      "ppid": 11832,
+      "elapsed": "01:00",
+      "cpu_percent": 29.1,
+      "rss_kib": 993808,
+      "command": "<REPO_ROOT>/environments/tdc/.venv/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=77, pipe_handle=92) --multiprocessing-fork"
+    },
+    {
+      "pid": 11842,
+      "ppid": 11832,
+      "elapsed": "01:00",
+      "cpu_percent": 30.7,
+      "rss_kib": 846112,
+      "command": "<REPO_ROOT>/environments/tdc/.venv/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=77, pipe_handle=94) --multiprocessing-fork"
+    },
+    {
+      "pid": 11843,
+      "ppid": 11832,
+      "elapsed": "01:00",
+      "cpu_percent": 29.5,
+      "rss_kib": 869856,
+      "command": "<REPO_ROOT>/environments/tdc/.venv/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=77, pipe_handle=96) --multiprocessing-fork"
+    },
+    {
+      "pid": 11844,
+      "ppid": 11832,
+      "elapsed": "01:00",
+      "cpu_percent": 30.4,
+      "rss_kib": 827056,
+      "command": "<REPO_ROOT>/environments/tdc/.venv/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=77, pipe_handle=98) --multiprocessing-fork"
+    }
+  ],
+  "scope": "Live local process snapshot during original-default Tutorial 3 execution; snapshot CPU percentages are not total run utilization"
+}

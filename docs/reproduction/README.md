@@ -2,7 +2,7 @@
 
 Score-SDE small-scale workflow and final evidence export are complete. See [the final report](score-sde/final-report.md). Full numerical image-generation reproduction remains pending.
 
-Triangle-Simulator shared environment is prepared separately from full tutorial execution. See [setup and evidence](tdc/environment-setup.md). Tutorials 1–2 original-default reproductions are complete: see [Tutorial 1](tdc/tutorial-1.md) and [Tutorial 2](tdc/tutorial-2.md). Tutorials 3–4 remain pending; Tutorial 5 is excluded following teacher guidance.
+Triangle-Simulator shared environment is prepared separately from full tutorial execution. See [setup and evidence](tdc/environment-setup.md). Tutorials 1–3 original-default reproductions are complete: see [Tutorial 1](tdc/tutorial-1.md), [Tutorial 2](tdc/tutorial-2.md) and [Tutorial 3](tdc/tutorial-3.md). Tutorial 4 remains pending; Tutorial 5 is excluded following teacher guidance.
 
 ## Planned order
 

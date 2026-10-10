@@ -1,0 +1,71 @@
+START cell 1
+DONE cell 1 seconds 0.011150208999999967
+START cell 2
+DONE cell 2 seconds 1.2030608330000003
+START cell 4
+DONE cell 4 seconds 0.02731041699999981
+START cell 7
+DONE cell 7 seconds 0.010227374999999927
+START cell 9
+DONE cell 9 seconds 0.0029826250000000165
+START cell 12
+DONE cell 12 seconds 67.757567959
+START cell 14
+DONE cell 14 seconds 14.628935374999998
+START cell 16
+DONE cell 16 seconds 0.9037462080000012
+START cell 17
+DONE cell 17 seconds 0.6473724169999997
+START cell 20
+DONE cell 20 seconds 0.008761832999994112
+START cell 22
+DONE cell 22 seconds 0.1658476669999942
+START cell 25
+DONE cell 25 seconds 6.491219417000011
+START cell 27
+DONE cell 27 seconds 2.3840172499999994
+START cell 29
+DONE cell 29 seconds 0.3654223749999943
+START cell 32
+DONE cell 32 seconds 0.01016112500001043
+START cell 34
+DONE cell 34 seconds 0.23792525000000353
+START cell 36
+DONE cell 36 seconds 0.839641125
+START cell 37
+DONE cell 37 seconds 0.07345150000000444
+START cell 41
+DONE cell 41 seconds 0.006764375000003042
+START cell 43
+DONE cell 43 seconds 8.240297833
+START cell 45
+DONE cell 45 seconds 17.220588667
+START cell 47
+DONE cell 47 seconds 0.2962028339999989
+START cell 48
+DONE cell 48 seconds 0.3077953330000014
+START cell 50
+DONE cell 50 seconds 0.9178202500000054
+START cell 51
+DONE cell 51 seconds 0.09695654099999729
+START cell 53
+DONE cell 53 seconds 0.32750154199999315
+No phenomxpy.
+No pyseobnr.
+no cupy
+No phenomxpy.
+No pyseobnr.
+no cupy
+No phenomxpy.
+No pyseobnr.
+no cupy
+No phenomxpy.
+No pyseobnr.
+no cupy
+No phenomxpy.
+No pyseobnr.
+no cupy
+No phenomxpy.
+No pyseobnr.
+no cupy
+RESULT {"created_utc": "2026-10-10T14:01:33.281331+00:00", "source_commit": "ab796358e9a36c8987f6bb53a97230d603bfdfd5", "source_sha256": "5ecc9009759f2e3cfce577339bead56393dce82e2741a849c7a23292728b0684", "scope": "Unchanged original default Tutorial 3; no seed imposed", "cell_timings": [{"cell_index": 1, "seconds": 0.011150208999999967, "execution_count": 1}, {"cell_index": 2, "seconds": 1.2030608330000003, "execution_count": 2}, {"cell_index": 4, "seconds": 0.02731041699999981, "execution_count": 3}, {"cell_index": 7, "seconds": 0.010227374999999927, "execution_count": 4}, {"cell_index": 9, "seconds": 0.0029826250000000165, "execution_count": 5}, {"cell_index": 12, "seconds": 67.757567959, "execution_count": 6}, {"cell_index": 14, "seconds": 14.628935374999998, "execution_count": 7}, {"cell_index": 16, "seconds": 0.9037462080000012, "execution_count": 8}, {"cell_index": 17, "seconds": 0.6473724169999997, "execution_count": 9}, {"cell_index": 20, "seconds": 0.008761832999994112, "execution_count": 11}, {"cell_index": 22, "seconds": 0.1658476669999942, "execution_count": 12}, {"cell_index": 25, "seconds": 6.491219417000011, "execution_count": 13}, {"cell_index": 27, "seconds": 2.3840172499999994, "execution_count": 14}, {"cell_index": 29, "seconds": 0.3654223749999943, "execution_count": 15}, {"cell_index": 32, "seconds": 0.01016112500001043, "execution_count": 17}, {"cell_index": 34, "seconds": 0.23792525000000353, "execution_count": 18}, {"cell_index": 36, "seconds": 0.839641125, "execution_count": 19}, {"cell_index": 37, "seconds": 0.07345150000000444, "execution_count": 20}, {"cell_index": 41, "seconds": 0.006764375000003042, "execution_count": 22}, {"cell_index": 43, "seconds": 8.240297833, "execution_count": 23}, {"cell_index": 45, "seconds": 17.220588667, "execution_count": 24}, {"cell_index": 47, "seconds": 0.2962028339999989, "execution_count": 25}, {"cell_index": 48, "seconds": 0.3077953330000014, "execution_count": 26}, {"cell_index": 50, "seconds": 0.9178202500000054, "execution_count": 27}, {"cell_index": 51, "seconds": 0.09695654099999729, "execution_count": 28}, {"cell_index": 53, "seconds": 0.32750154199999315, "execution_count": 29}], "resource_note": "Sum of RSS of runner and descendants; shared pages may be counted repeatedly; sampled every 2 seconds", "execution_passed": true, "wall_seconds": 127.949482709, "peak_sampled_process_tree_rss_kib": 7349872, "source_cells_unchanged": true, "generated_figures": ["cell-16-output-1.png", "cell-17-output-1.png", "cell-29-output-1.png", "cell-37-output-1.png", "cell-48-output-1.png", "cell-51-output-1.png", "cell-53-output-1.png"], "error_outputs": [], "executed_notebook_sha256": "4099d90523706b331efafc95bbe808de87784c3422c734abb8021918c1c439a0"}

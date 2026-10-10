@@ -1,0 +1,87 @@
+{
+  "python": "3.9.19",
+  "size": 86400,
+  "sample_rate_hz": 0.1,
+  "interpolation_order": 15,
+  "workers": 6,
+  "duration_seconds": 864000.0,
+  "channels": {
+    "A2": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "86013552c578e613a6bacfe4986cbc6cf59e01beb66c1138ba76259a18a82d1a"
+    },
+    "E2": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "a1f027d28419a43a9db6e7270cec4b69d72173172f446941973f6fab7a97089d"
+    },
+    "T2": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "b244bc770929a4e7e8579283e6508742ed6690a8e5fff0d696c5e44a8a23f8ab"
+    }
+  },
+  "raw_links": {
+    "12": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "6e6d1d3947dba3e1ea8b5edfed34eb2aba857cff3dc9a9a2138d4b8712136074"
+    },
+    "13": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "4872a3340509e723e06373a1692146e74df4f29bd04492b2b77d31d6efb95dc4"
+    },
+    "23": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "fd2f4d78e3fbe9e68c937e5620f8c8b9e15aa86b9c93e193fea54d68559d4b9a"
+    },
+    "21": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "619ae4ab54d5978948634ac0e985626d470b6b0eaadb38830fba1edb571fa871"
+    },
+    "31": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "e3130486081667b601d70f1886febba91729377ac583a4354fd39784dd234784"
+    },
+    "32": {
+      "shape": [
+        86400
+      ],
+      "finite": true,
+      "sha256": "c2ce089b4ec807b265cb59e21a89ca80c17ea57af9e55cd100965fa5452cf566"
+    }
+  },
+  "extrinsic_parameters": {
+    "longitude": 4.602163233081508,
+    "latitude": 1.0961649309768486,
+    "psi": 1.249462266309936
+  },
+  "waveform_input": {
+    "shape": [
+      1262326
+    ],
+    "finite": true,
+    "sha256": "4d78095f0c19e9848c65bbfaf47a79584ecc26c1231e0f10353b56da6358f23f"
+  }
+}

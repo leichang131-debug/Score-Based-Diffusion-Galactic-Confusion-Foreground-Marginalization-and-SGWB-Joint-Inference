@@ -39,3 +39,6 @@ See [environment instructions](../../environments/tdc/README.md). Full notebooks
 
 - `run-tdc-tutorial-2.py`: execute all unchanged Tutorial 2 cells and record noise/glitch/method-comparison evidence.
 - `audit-tdc-tutorial-2.py`: audit cell/static-image correspondence, finite results and exported figures without rerunning.
+
+- `run-tdc-tutorial-3.py`: execute all unchanged GW injection cells at original scale, recording GB/MBHB/EMRI/SGWB stage evidence and resource use.
+- `audit-tdc-tutorial-3.py`: audit source, configurations, finite outputs and all seven exported figures without simulation.
