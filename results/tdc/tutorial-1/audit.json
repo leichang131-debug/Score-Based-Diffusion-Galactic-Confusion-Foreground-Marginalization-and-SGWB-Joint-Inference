@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checks": {
+    "same_filename": true,
+    "same_cell_count": true,
+    "same_cell_types_and_sources": true,
+    "same_markdown_attachments": true,
+    "original_source_clean": true,
+    "static_image_identical": true,
+    "all_nonempty_code_cells_executed": true,
+    "no_error_outputs": true,
+    "four_generated_figures": true,
+    "default_scale": true,
+    "finite_measurements_and_tdi": true,
+    "finite_spectra": true,
+    "execution_passed": true,
+    "executed_notebook_hash_matches": true,
+    "finite_saved_spectral_subset": true
+  },
+  "cell_count": 34,
+  "nonempty_code_cells": 16,
+  "source_commit": "ab796358e9a36c8987f6bb53a97230d603bfdfd5",
+  "limitations": "Single stochastic realization; no claim of bitwise equality of regenerated stochastic figures or ensemble statistical calibration"
+}

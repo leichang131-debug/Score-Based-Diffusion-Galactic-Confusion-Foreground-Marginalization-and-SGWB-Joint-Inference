@@ -33,3 +33,6 @@ Shared hashing, model-state initialization and log parsing could later be extrac
 - `check-tdc-environment.py`: dependency/source/backend/data/kernel smoke checks, emitting curated evidence.
 
 See [environment instructions](../../environments/tdc/README.md). Full notebooks are not executed by these scripts.
+
+- `run-tdc-tutorial-1.py`: execute unchanged Tutorial 1 and record outputs, timings, sampled process RSS and numerical diagnostics.
+- `audit-tdc-tutorial-1.py`: audit code/Markdown/static-image correspondence and saved evidence, without rerunning simulation.

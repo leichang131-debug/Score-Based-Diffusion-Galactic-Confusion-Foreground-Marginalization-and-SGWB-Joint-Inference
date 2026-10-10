@@ -1,5 +1,7 @@
 # Triangle-Simulator shared environment setup
 
+Current scope update: Tutorial 1 completed at original scale; see [report](tutorial-1.md). Tutorials 2–4 remain pending. Tutorial 5 is excluded following teacher guidance. The setup notes below retain the earlier environment-only validation scope.
+
 ## Outcome and scope
 
 The shared macOS ARM64 CPU environment is installed for all five tutorial notebooks at upstream commit `ab796358e9a36c8987f6bb53a97230d603bfdfd5`. The source is unchanged, including its five notebooks, example waveforms, orbit data and GPL-3.0 license. Setup and smoke checks passed on 2026-10-10. **Full tutorial execution and scientific output reproduction have not yet been performed.**

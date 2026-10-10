@@ -33,4 +33,4 @@ Source, scripts, requirements and curated evidence are versioned. The interprete
 
 Environment checks establish imports, waveform backends, bundled-data readability and Jupyter execution. They do not reproduce five full tutorial outputs. See [validation report](../../docs/reproduction/tdc/environment-setup.md).
 
-Tutorials 1–4 use supplied orbit/waveform examples. Tutorial 5 also needs the external TDC II HDF5 dataset, awaiting teacher confirmation. Synthetic HDF5 tests check interfaces and do not replace the actual dataset.
+Tutorials 1–4 use supplied orbit/waveform examples. Tutorial 5 is excluded from the current reproduction scope following teacher guidance; its external HDF5 dataset is not a blocker. Synthetic HDF5 tests check interfaces and do not replace the actual dataset.
