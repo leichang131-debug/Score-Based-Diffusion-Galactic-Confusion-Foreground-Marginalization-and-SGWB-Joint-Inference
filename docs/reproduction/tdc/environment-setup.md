@@ -1,6 +1,6 @@
 # Triangle-Simulator shared environment setup
 
-Current scope update: Tutorial 1 completed at original scale; see [report](tutorial-1.md). Tutorials 2–4 remain pending. Tutorial 5 is excluded following teacher guidance. The setup notes below retain the earlier environment-only validation scope.
+Current scope update: Tutorials 1–2 completed at original scale; see [Tutorial 1](tutorial-1.md) and [Tutorial 2](tutorial-2.md). Tutorials 3–4 remain pending. Tutorial 5 is excluded following teacher guidance. The setup notes below retain the earlier environment-only validation scope.
 
 ## Outcome and scope
 

@@ -1,0 +1,111 @@
+{
+  "python": "3.9.19",
+  "size": 400000,
+  "sample_rate_hz": 4.0,
+  "interpolation_order": 31,
+  "workers": 6,
+  "drop_points": 4000,
+  "methods": {
+    "method1": {
+      "shape": [
+        400000
+      ],
+      "finite": true,
+      "sha256": "67c1b79f0d3b445a05377d72d5e99815d33030d243f4a39520d08130b45e10d8"
+    },
+    "method2": {
+      "shape": [
+        400000
+      ],
+      "finite": true,
+      "sha256": "2ff8c587d7f8310cf57574a241eaa090a6463b165e4df6dcd6f139ca72da29af"
+    },
+    "method3": {
+      "shape": [
+        400000
+      ],
+      "finite": true,
+      "sha256": "67c1b79f0d3b445a05377d72d5e99815d33030d243f4a39520d08130b45e10d8"
+    },
+    "method4": {
+      "shape": [
+        400000
+      ],
+      "finite": true,
+      "sha256": "c2f53b8d787a4db68c1df09227b7803c2c7240e437102811e61f19030d3f02bb"
+    }
+  },
+  "differences": {
+    "method1": {
+      "identical_to_method1": true,
+      "max_abs_after_crop": 0.0,
+      "rms_after_crop": 0.0,
+      "relative_rms": 0.0
+    },
+    "method2": {
+      "identical_to_method1": false,
+      "max_abs_after_crop": 16.832631009657618,
+      "rms_after_crop": 3.502601129291539,
+      "relative_rms": 0.9036455312508731
+    },
+    "method3": {
+      "identical_to_method1": true,
+      "max_abs_after_crop": 0.0,
+      "rms_after_crop": 0.0,
+      "relative_rms": 0.0
+    },
+    "method4": {
+      "identical_to_method1": false,
+      "max_abs_after_crop": 18.446213472862052,
+      "rms_after_crop": 3.8758134187932316,
+      "relative_rms": 0.9999315784389885
+    }
+  },
+  "spectra": {
+    "method1": {
+      "shape": [
+        196000
+      ],
+      "finite": true,
+      "sha256": "3cea2a0f835bf045426ea7148d96774ec612344f1790368c91a20740663c6689"
+    },
+    "method2": {
+      "shape": [
+        196000
+      ],
+      "finite": true,
+      "sha256": "3fb7f84865873c24a8bca60f945e99d4f34d481746b165e40a79c075f987417c"
+    },
+    "method3": {
+      "shape": [
+        196000
+      ],
+      "finite": true,
+      "sha256": "6a6b5ff9ac7e2d02d6266fe4db0c151564885ef70e2b85d9a933901688960c8f"
+    },
+    "method4": {
+      "shape": [
+        196000
+      ],
+      "finite": true,
+      "sha256": "3195e3148120ec40a3f69d0c279f44cc27829c6e6016838b937a6c77882668e4"
+    }
+  },
+  "bands": {
+    "(0.001, 0.01)": {
+      "method2": 2.520919843842255e-06,
+      "method3": 0.0,
+      "method4": 2.715673412576575e-06
+    },
+    "(0.01, 0.1)": {
+      "method2": 1.7787382374696364e-07,
+      "method3": 0.0,
+      "method4": 2.3056360424088e-07
+    },
+    "(0.1, 0.3)": {
+      "method2": 4.587921418196978e-08,
+      "method3": 0.0,
+      "method4": 5.8634666952745115e-08
+    }
+  }
+}

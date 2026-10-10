@@ -1,0 +1,47 @@
+START cell 1
+DONE cell 1 seconds 0.011477542000000063
+START cell 2
+DONE cell 2 seconds 1.093905167
+START cell 5
+DONE cell 5 seconds 0.0024396669999999787
+START cell 6
+DONE cell 6 seconds 0.026926582999999837
+START cell 9
+DONE cell 9 seconds 8.238489042
+START cell 11
+DONE cell 11 seconds 0.3018112500000001
+START cell 13
+DONE cell 13 seconds 6.611138584000001
+START cell 15
+DONE cell 15 seconds 0.05466095799999948
+START cell 17
+DONE cell 17 seconds 0.0031797080000011135
+START cell 19
+DONE cell 19 seconds 0.0035330000000008965
+START cell 20
+DONE cell 20 seconds 0.005074125000000151
+START cell 22
+DONE cell 22 seconds 5.208782290999999
+START cell 24
+DONE cell 24 seconds 7.841138291
+START cell 26
+DONE cell 26 seconds 0.22122933400000022
+No phenomxpy.
+No pyseobnr.
+no cupy
+No phenomxpy.
+No pyseobnr.
+no cupy
+No phenomxpy.
+No pyseobnr.
+no cupy
+No phenomxpy.
+No pyseobnr.
+no cupy
+No phenomxpy.
+No pyseobnr.
+no cupy
+No phenomxpy.
+No pyseobnr.
+no cupy
+RESULT {"created_utc": "2026-10-10T13:42:37.834091+00:00", "source_commit": "ab796358e9a36c8987f6bb53a97230d603bfdfd5", "source_sha256": "c8d2489589c7e4650239c7ab4bce20e04248cda32575d6079fd2049981ed5093", "scope": "Unchanged original default Tutorial 2; no seed imposed", "cell_timings": [{"cell_index": 1, "seconds": 0.011477542000000063, "execution_count": 1}, {"cell_index": 2, "seconds": 1.093905167, "execution_count": 2}, {"cell_index": 5, "seconds": 0.0024396669999999787, "execution_count": 3}, {"cell_index": 6, "seconds": 0.026926582999999837, "execution_count": 4}, {"cell_index": 9, "seconds": 8.238489042, "execution_count": 5}, {"cell_index": 11, "seconds": 0.3018112500000001, "execution_count": 6}, {"cell_index": 13, "seconds": 6.611138584000001, "execution_count": 8}, {"cell_index": 15, "seconds": 0.05466095799999948, "execution_count": 9}, {"cell_index": 17, "seconds": 0.0031797080000011135, "execution_count": 11}, {"cell_index": 19, "seconds": 0.0035330000000008965, "execution_count": 12}, {"cell_index": 20, "seconds": 0.005074125000000151, "execution_count": 13}, {"cell_index": 22, "seconds": 5.208782290999999, "execution_count": 14}, {"cell_index": 24, "seconds": 7.841138291, "execution_count": 15}, {"cell_index": 26, "seconds": 0.22122933400000022, "execution_count": 16}], "resource_note": "Sum of RSS of runner and descendants; shared pages may be counted repeatedly; sampled every 2 seconds", "execution_passed": true, "wall_seconds": 33.264140459, "peak_sampled_process_tree_rss_kib": 4863840, "source_cells_unchanged": true, "generated_figures": ["cell-11-output-1.png", "cell-15-output-1.png", "cell-26-output-1.png"], "error_outputs": [], "executed_notebook_sha256": "f1fe10672775f6d131ba209dbc9910dcab4ac1632d202fa1385c16197bce70fb"}

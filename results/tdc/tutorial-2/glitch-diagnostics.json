@@ -1,0 +1,32 @@
+{
+  "size": 400000,
+  "sample_rate_hz": 4.0,
+  "workers": 6,
+  "interpolation_order": 31,
+  "drop_points": 4000,
+  "injection_time_seconds": 30000.0,
+  "X2": {
+    "shape": [
+      400000
+    ],
+    "finite": true,
+    "sha256": "a213ef6159ee52499190b80bc90c2f912af79d6b72b2597bb857291010d2bf45"
+  },
+  "injected_acceleration": {
+    "shape": [
+      400000
+    ],
+    "finite": true,
+    "sha256": "b972e242a8cc2789976fb3f33eb955bf020a2375fe533abab3164d5e1692b96a"
+  },
+  "injected_ffd": {
+    "shape": [
+      400000
+    ],
+    "finite": true,
+    "sha256": "c0a072225458783985b9b51e430662a19be19bd8f1ee5cb3c60033128afe987a"
+  },
+  "peak_time_seconds": 30040.25,
+  "peak_ffd": 6.56511018712234e-21,
+  "window_samples": 8001
+}

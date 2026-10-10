@@ -36,3 +36,6 @@ See [environment instructions](../../environments/tdc/README.md). Full notebooks
 
 - `run-tdc-tutorial-1.py`: execute unchanged Tutorial 1 and record outputs, timings, sampled process RSS and numerical diagnostics.
 - `audit-tdc-tutorial-1.py`: audit code/Markdown/static-image correspondence and saved evidence, without rerunning simulation.
+
+- `run-tdc-tutorial-2.py`: execute all unchanged Tutorial 2 cells and record noise/glitch/method-comparison evidence.
+- `audit-tdc-tutorial-2.py`: audit cell/static-image correspondence, finite results and exported figures without rerunning.

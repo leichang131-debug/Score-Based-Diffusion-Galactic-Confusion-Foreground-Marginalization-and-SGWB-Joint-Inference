@@ -1,0 +1,74 @@
+{
+  "size": 400000,
+  "sample_rate_hz": 4.0,
+  "interpolation_order": 31,
+  "workers": 6,
+  "nbin": 4,
+  "drop_points": 4000,
+  "X2": {
+    "shape": [
+      400000
+    ],
+    "finite": true,
+    "sha256": "39ef00723dcdd3e4566aa6d5592804ab4104aeb86f5cb96995ee0d59a1309800"
+  },
+  "modified_readout_arrays": {
+    "12": {
+      "shape": [
+        400000
+      ],
+      "finite": true,
+      "sha256": "afb0dbe3d70e233ae0fc2a2b69d886d2aba696801ee9cb5e2a149d2b9e49d287"
+    },
+    "13": {
+      "shape": [
+        400000
+      ],
+      "finite": true,
+      "sha256": "8646802d39a223e8c3913bc504578c46a373409bff6f074aa052311b9e8cb730"
+    },
+    "23": {
+      "shape": [
+        400000
+      ],
+      "finite": true,
+      "sha256": "017b9829a110766f86ec5a20caa44ea14bc437352184e69e0969137a8e1782ac"
+    },
+    "21": {
+      "shape": [
+        400000
+      ],
+      "finite": true,
+      "sha256": "a8c4de0ddbf24af623c82f4eb36e9f200f5a7f7079d2fe0fa7241462e71dd583"
+    },
+    "31": {
+      "shape": [
+        400000
+      ],
+      "finite": true,
+      "sha256": "3b708edd669018b97c10b27a6de62d19a6b78211d57ec9ac1462c197c68f66ca"
+    },
+    "32": {
+      "shape": [
+        400000
+      ],
+      "finite": true,
+      "sha256": "6e1d1e92489b4b1910e0e05a907b39d5238b9b242178c9948d391a07faf3a8a4"
+    }
+  },
+  "spectrum": {
+    "shape": [
+      49000
+    ],
+    "finite": true,
+    "sha256": "9002f8c394b1da9f408e10e2839ce33d456c5fc6ed5c384cf651153fb433ad60"
+  },
+  "theory": {
+    "shape": [
+      49000
+    ],
+    "finite": true,
+    "sha256": "59376b6254b0c3bd800c5760e7cf61d3b6859b3760ebaff9125212666f173562"
+  },
+  "median_asd_over_nominal_0p01_0p1_hz": 1.9771984278258365
+}

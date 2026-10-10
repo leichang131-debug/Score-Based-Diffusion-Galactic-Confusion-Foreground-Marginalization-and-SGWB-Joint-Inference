@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "reference_image_comparison": [
+    {
+      "cell_index": 11,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    },
+    {
+      "cell_index": 15,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    },
+    {
+      "cell_index": 26,
+      "reference_count": 1,
+      "local_count": 1,
+      "byte_identical": [
+        false
+      ]
+    }
+  ],
+  "checks": {
+    "same_filename": true,
+    "same_cell_count": true,
+    "same_cell_types_and_sources": true,
+    "same_markdown_attachments": true,
+    "original_source_clean": true,
+    "static_image_identical": true,
+    "all_nonempty_code_cells_executed": true,
+    "no_error_outputs": true,
+    "three_generated_figures": true,
+    "default_scale": true,
+    "finite_four_tdi_methods": true,
+    "path_method_identical_to_named_method": true,
+    "finite_spectra": true,
+    "execution_passed": true,
+    "executed_notebook_hash_matches": true,
+    "finite_modified_noise": true,
+    "finite_glitch": true,
+    "glitch_injection_config": true,
+    "finite_saved_subsets": true,
+    "saved_images_match_executed_notebook": true
+  },
+  "cell_count": 28,
+  "nonempty_code_cells": 14,
+  "source_commit": "ab796358e9a36c8987f6bb53a97230d603bfdfd5",
+  "limitations": "Single stochastic realization; no claim of bitwise equality of regenerated stochastic figures or ensemble statistical calibration"
+}
