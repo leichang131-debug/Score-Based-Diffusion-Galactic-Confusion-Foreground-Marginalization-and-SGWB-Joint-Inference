@@ -45,3 +45,5 @@ See [environment instructions](../../environments/tdc/README.md). Full notebooks
 
 - `run-tdc-tutorial-4.py`: execute unchanged joint simulation, 100-GB fast responses, MBHB/EMRI and sensitivity examples with provenance.
 - `audit-tdc-tutorial-4.py`: verify source correspondence, original scales, finite outputs and six figure exports.
+
+- `audit-triangle-gb-source.py`: check full pinned source preservation and inventory without importing or executing Triangle-GB.

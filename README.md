@@ -53,6 +53,7 @@ Time modulation and nonstationarity do not automatically imply non-Gaussianity. 
 ├── environments/                 # Separate component/platform environments
 │   ├── score-sde/
 │   ├── tdc/
+│   ├── triangle-gb/
 │   └── taiji-sgwb/
 ├── configs/                      # Local, cluster, and inference configurations
 │   ├── local/
@@ -82,7 +83,7 @@ Time modulation and nonstationarity do not automatically imply non-Gaussianity. 
 └── runs/                         # Local generated outputs; ignored by Git
 ```
 
-Score-SDE is now integrated as an unmodified, pinned Git submodule, with environment and launch scripts. Triangle-Simulator is also integrated as an unmodified pinned submodule with a dedicated macOS CPU environment. Triangle-GB and TaijiSGWB remain source slots. See [the reproduction roadmap](docs/reproduction/README.md).
+Score-SDE is now integrated as an unmodified, pinned Git submodule, with environment and launch scripts. Triangle-Simulator is also integrated as an unmodified pinned submodule with a dedicated macOS CPU environment. Triangle-GB is now preserved as an unmodified submodule pinned to `cbc0a1b0cbf4ec05ec969fa39405394168c3e06c`, with the full package, five examples and orbit files; its environment and example execution remain pending. See [Triangle-GB source integration](docs/reproduction/triangle-gb/source-integration.md). TaijiSGWB remains a source slot. See [the reproduction roadmap](docs/reproduction/README.md).
 
 ## Research plan
 
@@ -109,7 +110,7 @@ Use pinned upstream commits and preserve upstream licenses when integrating code
 
 ## Environment and execution policy
 
-Use independent environments for Score-SDE, TDC, and TaijiSGWB. Validate and lock the dependency versions for each platform before publishing installation commands.
+Use independent environments for Score-SDE, TDC, Triangle-GB, and TaijiSGWB. Validate and lock the dependency versions for each platform before publishing installation commands.
 
 Local macOS CPU runs will establish minimal functionality and support learning. Linux cluster resources will support full training, large simulations, posterior sampling, and repeated injection studies. Apple GPU compatibility has not been validated. Score-SDE environment setup, command-line configuration parsing, and synthetic CPU execution have been validated on macOS. See [Score-SDE setup](environments/score-sde/README.md). See [Triangle-Simulator setup](environments/tdc/README.md) and its [validation record](docs/reproduction/tdc/environment-setup.md). Original-default Tutorials 1–4 have completed; Triangle-GB and TaijiSGWB environments are not deployed.
 

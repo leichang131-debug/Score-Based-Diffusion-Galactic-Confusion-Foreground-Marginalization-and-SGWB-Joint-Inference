@@ -4,3 +4,6 @@
 [submodule "external/triangle-simulator"]
 	path = external/triangle-simulator
 	url = https://github.com/TriangleDataCenter/Triangle-Simulator.git
+[submodule "external/triangle-gb"]
+	path = external/triangle-gb
+	url = https://github.com/TriangleDataCenter/Triangle-GB.git

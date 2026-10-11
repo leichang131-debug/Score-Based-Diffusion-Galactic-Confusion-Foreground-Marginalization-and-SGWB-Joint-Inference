@@ -1,0 +1,90 @@
+{
+  "pinned_commit": "cbc0a1b0cbf4ec05ec969fa39405394168c3e06c",
+  "files": [
+    {
+      "path": "external/triangle-gb/.gitignore",
+      "bytes": 10699,
+      "sha256": "7099762f5350d36a82e67cc117d2a9c89505a85a842d39023ce36c7a76a05887"
+    },
+    {
+      "path": "external/triangle-gb/Examples/0_TDIFlyGB_Compare_TD_FD_Waveforms(CPU).ipynb",
+      "bytes": 139331,
+      "sha256": "a0dadfa652ccb8a5c2ccbe444ddd48771edaf00b4f36093264d656c5f4c0017e"
+    },
+    {
+      "path": "external/triangle-gb/Examples/1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+      "bytes": 317897,
+      "sha256": "968320875119c54292bd6b697d987028c31592d1f753fc1ee9f8a3d118fa2947"
+    },
+    {
+      "path": "external/triangle-gb/Examples/2_TDIFlyGB_Parameter_Estimation(CPU).ipynb",
+      "bytes": 845646,
+      "sha256": "ebc05218330aacbf72b552d24a5fb008b58dc716793e0c9a418cb0b36ab36aa8"
+    },
+    {
+      "path": "external/triangle-gb/Examples/3_LDC2a_GB_Reconstruction.ipynb",
+      "bytes": 465028,
+      "sha256": "7815f6c1d3488bccdb60751ddeccf0e084652e6ad079e0e7288d089b541fe705"
+    },
+    {
+      "path": "external/triangle-gb/Examples/GB_network_PE_example_for_2609.16477.ipynb",
+      "bytes": 968066,
+      "sha256": "a2ce8b964a8cfa14a60563ada0109f39f93b5e4d0af706961ff64019a6216eb0"
+    },
+    {
+      "path": "external/triangle-gb/Examples/LDCEqualArmOrbit/SCP1.dat",
+      "bytes": 139777,
+      "sha256": "930d39ba14831eafec1609017a55db39a76342a256344f4b0782bd2152e9ee6d"
+    },
+    {
+      "path": "external/triangle-gb/Examples/LDCEqualArmOrbit/SCP2.dat",
+      "bytes": 139761,
+      "sha256": "11d49ca3820328784138c5a1d7224e02657797121e9c6a1a8ccaee117241f425"
+    },
+    {
+      "path": "external/triangle-gb/Examples/LDCEqualArmOrbit/SCP3.dat",
+      "bytes": 139755,
+      "sha256": "fc54ff8962ad8e17728548325a345738efe4b9033c8116037f02993cd4a7d8fc"
+    },
+    {
+      "path": "external/triangle-gb/Examples/LDCEqualArmOrbit/SCV1.dat",
+      "bytes": 139772,
+      "sha256": "130d8412ac15924115fc389038d429fa9b6792113d2ef2aca034436e043f4e16"
+    },
+    {
+      "path": "external/triangle-gb/Examples/LDCEqualArmOrbit/SCV2.dat",
+      "bytes": 139758,
+      "sha256": "3adadf9b9b7c764d55d9439e9b859164df2ed659fe9d673d9cce356c75120a78"
+    },
+    {
+      "path": "external/triangle-gb/Examples/LDCEqualArmOrbit/SCV3.dat",
+      "bytes": 139767,
+      "sha256": "6fcdbf8e29a4ac79800315aab74db9b2c64e28aec72ab1f519242d7d1f92dafa"
+    },
+    {
+      "path": "external/triangle-gb/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "external/triangle-gb/README.md",
+      "bytes": 2788,
+      "sha256": "05e922784fb503ad9121d03af063a02456cb2ec68d243f8575e27f5470adad65"
+    },
+    {
+      "path": "external/triangle-gb/Triangle_GB/TDIFly.py",
+      "bytes": 50553,
+      "sha256": "57a08754774557db06841cf64532f474580ee97960de2e239847ab0aa493b5ae"
+    },
+    {
+      "path": "external/triangle-gb/Triangle_GB/__init__.py",
+      "bytes": 1061,
+      "sha256": "a633ac09a14448a4c9909a54e56f1ddd3ed754cae7244a4e9e25fc001d546c85"
+    },
+    {
+      "path": "external/triangle-gb/pyproject.toml",
+      "bytes": 1248,
+      "sha256": "487228db49fb103cf4b202b75f41bd1673927e738e3942282dbdd246d601c8ca"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "scope": "Source preservation only; no environment installation, data download or example execution.",
+  "upstream_url": "https://github.com/TriangleDataCenter/Triangle-GB.git",
+  "pinned_commit": "cbc0a1b0cbf4ec05ec969fa39405394168c3e06c",
+  "upstream_commit_date": "2026-09-16T12:05:25+08:00",
+  "shallow_checkout": true,
+  "tracked_files": 17,
+  "notebooks": [
+    {
+      "filename": "0_TDIFlyGB_Compare_TD_FD_Waveforms(CPU).ipynb",
+      "cells": 17,
+      "code_cells": 11,
+      "outputs_origin": "upstream reference outputs; not locally executed"
+    },
+    {
+      "filename": "1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+      "cells": 28,
+      "code_cells": 18,
+      "outputs_origin": "upstream reference outputs; not locally executed"
+    },
+    {
+      "filename": "2_TDIFlyGB_Parameter_Estimation(CPU).ipynb",
+      "cells": 26,
+      "code_cells": 16,
+      "outputs_origin": "upstream reference outputs; not locally executed"
+    },
+    {
+      "filename": "3_LDC2a_GB_Reconstruction.ipynb",
+      "cells": 27,
+      "code_cells": 17,
+      "outputs_origin": "upstream reference outputs; not locally executed"
+    },
+    {
+      "filename": "GB_network_PE_example_for_2609.16477.ipynb",
+      "cells": 22,
+      "code_cells": 13,
+      "outputs_origin": "upstream reference outputs; not locally executed"
+    }
+  ],
+  "checks": {
+    "pinned_commit": true,
+    "clean_source": true,
+    "complete_expected_tree": true,
+    "all_files_match_pinned_git_blobs": true,
+    "notebook_json_0_TDIFlyGB_Compare_TD_FD_Waveforms(CPU).ipynb": true,
+    "notebook_json_1_TDIFlyGB_Rapid_Search(CPU).ipynb": true,
+    "notebook_json_2_TDIFlyGB_Parameter_Estimation(CPU).ipynb": true,
+    "notebook_json_3_LDC2a_GB_Reconstruction.ipynb": true,
+    "notebook_json_GB_network_PE_example_for_2609.16477.ipynb": true,
+    "required_core_classes": true,
+    "public_class_imports": true,
+    "six_orbit_files": true,
+    "original_gpl3_license": true,
+    "declared_python_minimum": true,
+    "registered_submodule_url": true,
+    "simulator_pin_preserved": true,
+    "simulator_source_clean": true
+  },
+  "all_checks_pass": true
+}
