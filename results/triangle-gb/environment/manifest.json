@@ -1,0 +1,100 @@
+{
+  "scope": "Independent environment configuration and locally generated interface evidence, not full example execution.",
+  "files": [
+    {
+      "path": "docs/reproduction/triangle-gb/README.md",
+      "bytes": 831,
+      "sha256": "cb67901333e011d8a6c3f533c074dbf8a9b8b2748e4eb3abb54efa75e8cb6756"
+    },
+    {
+      "path": "docs/reproduction/triangle-gb/environment-setup.md",
+      "bytes": 5132,
+      "sha256": "2f0b6224d3722b5fbb8c4a3cf0a74b19b6e7004164ee3f3dcb1e2fa6aa3a96a3"
+    },
+    {
+      "path": "docs/reproduction/triangle-gb/source-integration.md",
+      "bytes": 3725,
+      "sha256": "ca1a2c57f47adc1e41b3a44863456f7be617e5ac2017d17aa4c85c399fc44290"
+    },
+    {
+      "path": "environments/triangle-gb/README.md",
+      "bytes": 3756,
+      "sha256": "0683f474a3a7f3890c31b45c1436a8a62ba274df65bf84cf82375f486d165c85"
+    },
+    {
+      "path": "environments/triangle-gb/requirements-macos-arm64-py311.txt",
+      "bytes": 176652,
+      "sha256": "9be2df00e79a7398cf400e594d13dca54591cfbfa64bafe32a5f36f85e9dd525"
+    },
+    {
+      "path": "environments/triangle-gb/requirements.in",
+      "bytes": 353,
+      "sha256": "7f7dedb7b91de14f54fa51338672782e982af7e58156cfa3a6cd92c6a73c446a"
+    },
+    {
+      "path": "results/triangle-gb/environment/README.md",
+      "bytes": 1159,
+      "sha256": "4a8559f60c2b24c55f248102e42ea3199f282519b5da9b9780af8f13b4c63dad"
+    },
+    {
+      "path": "results/triangle-gb/environment/dependency-check.txt",
+      "bytes": 134,
+      "sha256": "40548898a6542d648520305ee0b2e7905511457085fa00cc3ef27088d16fe5d4"
+    },
+    {
+      "path": "results/triangle-gb/environment/installation.txt",
+      "bytes": 2770,
+      "sha256": "d6bc627d4de4256662c21f158442fe6cb45554e9726e92b195d1355b2e7f8e43"
+    },
+    {
+      "path": "results/triangle-gb/environment/installed-packages.json",
+      "bytes": 6449,
+      "sha256": "b43417f9036982c4db9f967d3d6ca96f21500f4bc185c0a5c3ad6f5792ff0775"
+    },
+    {
+      "path": "results/triangle-gb/environment/kernel-smoke.ipynb",
+      "bytes": 1824,
+      "sha256": "5c6eaff4d82c935b252441a7ed1e97485e8d5d009147489de2691d72a9bf96d3"
+    },
+    {
+      "path": "results/triangle-gb/environment/python312-build-failure.txt",
+      "bytes": 5324,
+      "sha256": "379ce790219b0e5e93ef7437242d17b656ac3e2a992918a0477d9cefcae76e65"
+    },
+    {
+      "path": "results/triangle-gb/environment/validation.json",
+      "bytes": 6975,
+      "sha256": "2bf6d9a8567cc26836788b6ba601b7eb11e65ccccb4c77088f4a1ca1587b9f63"
+    },
+    {
+      "path": "results/triangle-gb/environment/validation.txt",
+      "bytes": 3142,
+      "sha256": "773f4bd49a937f526bad7bf53b247763771fa2ef45fd7b4d497c22ec8a0dd982"
+    },
+    {
+      "path": "scripts/reproduction/audit-triangle-gb-source.py",
+      "bytes": 4709,
+      "sha256": "7b11e512e9d682d10bd85237f988ca2d83b69f86246b0a1b0188c7fd1655a61c"
+    },
+    {
+      "path": "scripts/reproduction/check-triangle-gb-environment.py",
+      "bytes": 9350,
+      "sha256": "c31fb4b74f5728144af7aacfc72a0916ebdc080abf922a85467ca05af673ae86"
+    },
+    {
+      "path": "scripts/reproduction/launch-triangle-gb-jupyter.sh",
+      "bytes": 814,
+      "sha256": "9048dc5b059c507afa7599f24a0035a987e07a8a2cd9b93a8585af4e9fa36297"
+    },
+    {
+      "path": "scripts/reproduction/prepare-triangle-gb-paths.py",
+      "bytes": 1605,
+      "sha256": "3deda23eb65f7a310b3219971280cd6c90d924700fa8a867eec6bce62bf3553a"
+    },
+    {
+      "path": "scripts/reproduction/setup-triangle-gb-macos.sh",
+      "bytes": 1558,
+      "sha256": "3a9746ad1bf83660edebe7ba71ca4f92ec2830bef7f6157179f45262c6f7dbfd"
+    }
+  ]
+}

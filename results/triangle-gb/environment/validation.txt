@@ -1,0 +1,46 @@
+PASS isolated_runtime
+PASS import_numpy
+PASS import_scipy
+PASS import_matplotlib
+PASS import_healpy
+PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1
+PASS import_pycbc
+PASS import_lal
+PASS import_h5py
+PASS import_tqdm
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/pycbc/waveform/plugin.py:99: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+No phenomxpy.
+No pyseobnr.
+no cupy 
+PASS import_Triangle.Constants
+PASS import_Triangle.FFTTools
+PASS import_Triangle.Noise
+PASS import_Triangle.Orbit
+PASS import_Triangle.Data
+PASS import_Triangle.TDI
+PASS import_Triangle.GW
+no cupy 
+PASS import_Triangle_GB
+PASS import_bilby
+PASS import_nessai
+PASS import_nessai_bilby
+PASS import_torch
+PASS import_glasflow
+PASS import_ipykernel
+PASS import_nbclient
+PASS import_jupyterlab
+PASS editable_source_origins
+PASS workspace_orbit_paths
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-simulator/Triangle/Orbit.py:21: UserWarning: Input line 1 contained no data and will not be counted towards `max_rows=256`.  This differs from the behaviour in NumPy <=1.22 which counted lines rather than rows.  If desired, the previous behaviour can be achieved by using `itertools.islice`.
+Please see the 1.23 release notes for an example on how to do this.  If you wish to ignore this warning, use `warnings.filterwarnings`.  This warning is expected to be removed in the future and is given only once per `loadtxt` call.
+  self.rdata = {key: np.loadtxt(OrbitDir + "/SCP" + key + ".dat", max_rows=max_rows) * AU for key in SC_labels}
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-simulator/Triangle/Orbit.py:22: UserWarning: Input line 1 contained no data and will not be counted towards `max_rows=256`.  This differs from the behaviour in NumPy <=1.22 which counted lines rather than rows.  If desired, the previous behaviour can be achieved by using `itertools.islice`.
+Please see the 1.23 release notes for an example on how to do this.  If you wish to ignore this warning, use `warnings.filterwarnings`.  This warning is expected to be removed in the future and is given only once per `loadtxt` call.
+  self.vdata = {key: np.loadtxt(OrbitDir + "/SCV" + key + ".dat", max_rows=max_rows) * AU / DAY for key in SC_labels}
+PASS small_cpu_response
+PASS glasflow_torch_cpu_backward
+PASS bilby_nessai_plugin
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+PASS dedicated_jupyter_kernel
+Environment checks: 31 / 31

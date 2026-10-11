@@ -47,3 +47,12 @@ See [environment instructions](../../environments/tdc/README.md). Full notebooks
 - `audit-tdc-tutorial-4.py`: verify source correspondence, original scales, finite outputs and six figure exports.
 
 - `audit-triangle-gb-source.py`: check full pinned source preservation and inventory without importing or executing Triangle-GB.
+
+## Triangle-GB independent environment
+
+- `setup-triangle-gb-macos.sh`: install the hashed Python 3.11.14 ARM64 dependency set and both pinned editable packages.
+- `prepare-triangle-gb-paths.py`: build ignored working paths and original orbit-path links.
+- `check-triangle-gb-environment.py`: run local CPU interface, flow-gradient, plugin and Jupyter-kernel checks.
+- `launch-triangle-gb-jupyter.sh`: open the prepared working directory with the dedicated environment.
+
+See [environment instructions](../../environments/triangle-gb/README.md). These scripts do not execute full upstream examples.

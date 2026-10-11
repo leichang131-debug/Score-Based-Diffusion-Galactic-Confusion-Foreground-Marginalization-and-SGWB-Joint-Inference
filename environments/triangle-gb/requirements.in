@@ -1,0 +1,16 @@
+# macOS ARM64 / CPython 3.11.14; preserve Triangle-Simulator scientific pins.
+numpy==1.26.4
+scipy==1.13.1
+healpy==1.17.3
+PyCBC==2.7.2
+matplotlib
+jupyter
+ipykernel
+nbclient
+h5py
+tqdm
+bilby==2.8.2
+nessai==0.15.2
+nessai-bilby==0.3.2
+torch==2.14.1
+setuptools==80.9.0  # PyCBC waveform plugin discovery needs legacy pkg_resources; also satisfies torch >=77.

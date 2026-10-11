@@ -1,0 +1,82 @@
+Triangle-GB source audit: 17/17 checks passed; 17 files, 5 notebooks.
+warning: Failed to install executable for cpython-3.12.14-macos-aarch64-none
+  cause: Executable already exists at `/Users/leichang/.local/bin/python3.12` but is not managed by uv; use `--force` to replace it
+Using CPython 3.12.14 interpreter at: ../.python-runtimes/cpython-3.12.14-macos-aarch64-none/bin/python3.12
+Creating virtual environment at: environments/triangle-gb/.venv
+Activate with: source environments/triangle-gb/.venv/bin/activate
+Using Python 3.12.14 environment at: environments/triangle-gb/.venv
+Resolved 149 packages in 5ms
+   Building python-ligo-lw==1.8.4
+Downloading pygments (1.2MiB)
+Downloading astropy-iers-data (1.9MiB)
+Downloading jupyterlab (16.4MiB)
+Downloading notebook (5.3MiB)
+Downloading networkx (2.0MiB)
+Downloading pyzmq (1.4MiB)
+Downloading sympy (6.0MiB)
+Downloading babel (9.7MiB)
+Downloading pykerr (45.9MiB)
+Downloading pillow (4.6MiB)
+Downloading fonttools (3.0MiB)
+Downloading widgetsnbextension (2.1MiB)
+Downloading matplotlib (8.9MiB)
+Downloading h5py (2.9MiB)
+Downloading pandas (9.6MiB)
+Downloading numpy (13.1MiB)
+Downloading jedi (4.7MiB)
+Downloading torch (121.4MiB)
+Downloading bilby (2.2MiB)
+Downloading cryptography (3.7MiB)
+Downloading cython (3.0MiB)
+Downloading debugpy (2.4MiB)
+Downloading lalsuite (37.5MiB)
+Downloading astropy (6.2MiB)
+Downloading scipy (29.0MiB)
+Downloading pycbc (4.4MiB)
+Downloading healpy (2.5MiB)
+   Building ligo-segments==1.4.0
+error: Failed to build `ligo-segments==1.4.0`
+  cause: The build backend returned an error
+  cause: Call to `setuptools.build_meta:__legacy__.build_wheel` failed (exit status: 1)
+
+         [stderr]
+         /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/runs/triangle-gb-setup/uv-cache/builds-v0/.tmpaYBXK1/lib/python3.12/site-packages/setuptools/dist.py:810: SetuptoolsDeprecationWarning: The namespace_packages parameter is deprecated.
+         !!
+
+                 ********************************************************************************
+                 Please replace its usage with implicit namespaces (PEP 420).
+
+                 See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages for details.
+                 ********************************************************************************
+
+         !!
+           ep.load()(self, ep.name, value)
+         /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/runs/triangle-gb-setup/uv-cache/builds-v0/.tmpaYBXK1/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+         !!
+
+                 ********************************************************************************
+                 Please consider removing the following classifiers in favor of a SPDX license expression:
+
+                 License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+
+                 See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+                 ********************************************************************************
+
+         !!
+           self._finalize_license_expression()
+         src/infinity.c:271:2: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+           271 |         PyObject_HEAD_INIT(NULL)
+               |         ^~~~~~~~~~~~~~~~~~~~~~~~
+         /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.12.14-macos-aarch64-none/include/python3.12/object.h:141:11: note: expanded from macro 'PyObject_HEAD_INIT'
+           141 |         { 1 },                   \
+               |           ^
+         src/infinity.c:271:2: error: incompatible pointer to integer conversion initializing 'Py_ssize_t' (aka 'long') with an expression of type 'void *' [-Wint-conversion]
+           271 |         PyObject_HEAD_INIT(NULL)
+               |         ^~~~~~~~~~~~~~~~~~~~~~~~
+         /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.12.14-macos-aarch64-none/include/python3.12/object.h:142:9: note: expanded from macro 'PyObject_HEAD_INIT'
+           142 |         (type)                   \
+               |         ^~~~~~
+         1 warning and 1 error generated.
+         error: Command '['cc', '-fno-strict-overflow', '-Wsign-compare', '-Wunreachable-code', '-DNDEBUG', '-g', '-O3', '-Wall', '-O3', '-arch', 'arm64', '-mmacosx-version-min=11.0', '-Wno-nullability-completeness', '-Wno-expansion-to-defined', '-Wno-undef-prefix', '-fPIC', '-Isrc', '-I/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/runs/triangle-gb-setup/uv-cache/builds-v0/.tmpaYBXK1/include', '-I/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.12.14-macos-aarch64-none/include/python3.12', '-c', 'src/infinity.c', '-o', 'build/temp.macosx-11.0-arm64-cpython-312/src/infinity.o']' returned non-zero exit status 1.
+
+hint: Build failures usually indicate a problem with the package or the build environment

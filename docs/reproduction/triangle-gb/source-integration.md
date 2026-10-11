@@ -48,3 +48,5 @@ python3 scripts/reproduction/audit-triangle-gb-source.py
 The script compares every working-tree file with the pinned Git blob, verifies clean source, checks the five original notebooks and required core classes, and hashes all tracked files. It parses Python/JSON as data without importing or executing upstream code. This establishes complete source preservation, not waveform accuracy or posterior convergence.
 
 The original notebooks contain sibling `Triangle-Simulator` relative paths and author-specific data paths. Resolve and document these interfaces before execution; do not imply the README-only execution directories are runnable notebooks. Example 1/2 download links are present in their first Markdown cells; see [data provenance](../../../data/triangle-gb/README.md).
+
+The subsequent independent environment milestone is recorded in [environment setup](environment-setup.md); statements above describe the source-only milestone.
