@@ -1,0 +1,133 @@
+{
+  "python": "3.11.14",
+  "numpy": "1.26.4",
+  "GB_TYPE": "dgb",
+  "catalog_shape": [
+    26000000,
+    1
+  ],
+  "cache_shape": [
+    26000000,
+    8
+  ],
+  "dt_seconds": 5.0,
+  "time_axis": {
+    "shape": [
+      6307200
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "b508f9fea4f536dc3ced8a377621d762265e1c47c034c608f21d7c23d38caf40"
+  },
+  "td": {
+    "shape": [
+      3,
+      6307200
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "bbc0cc5d7fc03b5b6a267370202166e6e01c29570efcb84359ba10518499299c"
+  },
+  "fd": {
+    "shape": [
+      2,
+      3153600
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "9e2d012c37caf964b0dde8fe6faeffc83d99d57bca6088b7194104fe13181617"
+  },
+  "band_frequency": {
+    "shape": [
+      315
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "aed191539ab8b9ec3efb360dee0841eef408fcb1d08c882ef42a5a6f5e261f2d"
+  },
+  "band_data": {
+    "shape": [
+      2,
+      315
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "0bf1ab6800cd605f0e31ea2712500033c2f5c7bbf980a41b30abe03449a8112b"
+  },
+  "template": {
+    "shape": [
+      2,
+      315
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "d5bd0bb3173e83424c3bbe9e1eb5236a7db165a48db55dab5abc70783d6fc50c"
+  },
+  "residual": {
+    "shape": [
+      2,
+      315
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "b0096f776171171fd786815360cd5af10759201d8c33d8873481049bfeb7ddcb"
+  },
+  "center_hz": 0.004000163435084699,
+  "FMIN": 0.0039951634350846995,
+  "FMAX": 0.004005163435084699,
+  "source_count": 39,
+  "Nsparse": 512,
+  "orbit_pn_order": 0,
+  "selected_parameters_finite": true,
+  "source_indices": [
+    187405,
+    712457,
+    1021408,
+    2471041,
+    2858587,
+    3152704,
+    4142183,
+    4189938,
+    4717282,
+    5126491,
+    6474731,
+    6690017,
+    7213021,
+    8118738,
+    8178250,
+    9435532,
+    10379727,
+    10815001,
+    11128201,
+    11711158,
+    12653688,
+    12675142,
+    12829496,
+    13874112,
+    15049513,
+    16865293,
+    17077868,
+    17912068,
+    19817189,
+    20056166,
+    20308371,
+    20701952,
+    20901729,
+    21986687,
+    22399728,
+    24423767,
+    24749671,
+    24828317,
+    25137047
+  ],
+  "parameter_conversion": "Original cell 15: psi += pi/2; phase0 *= -1",
+  "per_channel_relative_l2_difference": [
+    0.034578646392676826,
+    0.02611900613379838
+  ],
+  "mismatch_unweighted": 0.0004676316374585543,
+  "module_files": {
+    "Triangle.Orbit": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-simulator/Triangle/Orbit.py",
+    "Triangle_GB.TDIFly": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-gb/Triangle_GB/TDIFly.py"
+  }
+}

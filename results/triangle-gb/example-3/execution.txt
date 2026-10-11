@@ -1,0 +1,34 @@
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+START cell 0
+DONE cell 0 1.1451988749977318
+START cell 3
+DONE cell 3 0.004087875000550412
+START cell 4
+DONE cell 4 0.011821791998954723
+START cell 6
+DONE cell 6 0.20480558300187113
+START cell 7
+DONE cell 7 1.3955501669988735
+START cell 9
+DONE cell 9 0.17314158299996052
+START cell 10
+DONE cell 10 0.490698292000161
+START cell 12
+DONE cell 12 0.514332791997731
+START cell 13
+DONE cell 13 24.91023358300299
+START cell 15
+DONE cell 15 0.31953608299954794
+START cell 17
+DONE cell 17 0.16745308299869066
+START cell 18
+DONE cell 18 0.004557208998448914
+START cell 19
+DONE cell 19 0.06397550000110641
+START cell 22
+DONE cell 22 0.0498972089990275
+START cell 24
+DONE cell 24 0.02204895799877704
+START cell 25
+DONE cell 25 0.10895699999673525
+RESULT {"started_utc": "2026-10-11T13:24:45.535359+00:00", "host": "leideMacBook-Air.local", "machine": "arm64", "source_commit": "cbc0a1b0cbf4ec05ec969fa39405394168c3e06c", "source_sha256": "7815f6c1d3488bccdb60751ddeccf0e084652e6ad079e0e7288d089b541fe705", "cell_timings": [{"cell_index": 0, "seconds": 1.1451988749977318, "execution_count": 1}, {"cell_index": 3, "seconds": 0.004087875000550412, "execution_count": 2}, {"cell_index": 4, "seconds": 0.011821791998954723, "execution_count": 3}, {"cell_index": 6, "seconds": 0.20480558300187113, "execution_count": 4}, {"cell_index": 7, "seconds": 1.3955501669988735, "execution_count": 5}, {"cell_index": 9, "seconds": 0.17314158299996052, "execution_count": 6}, {"cell_index": 10, "seconds": 0.490698292000161, "execution_count": 7}, {"cell_index": 12, "seconds": 0.514332791997731, "execution_count": 8}, {"cell_index": 13, "seconds": 24.91023358300299, "execution_count": 9}, {"cell_index": 15, "seconds": 0.31953608299954794, "execution_count": 10}, {"cell_index": 17, "seconds": 0.16745308299869066, "execution_count": 11}, {"cell_index": 18, "seconds": 0.004557208998448914, "execution_count": 12}, {"cell_index": 19, "seconds": 0.06397550000110641, "execution_count": 13}, {"cell_index": 22, "seconds": 0.0498972089990275, "execution_count": 14}, {"cell_index": 24, "seconds": 0.02204895799877704, "execution_count": 15}, {"cell_index": 25, "seconds": 0.10895699999673525, "execution_count": 16}], "scope": "Original full Sangria dgb reconstruction, complete 26-million-source cache, original band and orbit; fresh outputs; no source edits or imposed seed", "resource_note": "Runner and descendant RSS sum sampled every 2 seconds; shared pages may be counted repeatedly.", "execution_passed": true, "wall_seconds": 30.475161166999897, "peak_sampled_process_tree_rss_kib": 3668640, "source_cells_unchanged": true, "generated_figures": ["cell-07-output-1.png", "cell-10-output-1.png", "cell-19-output-1.png", "cell-25-output-0.png"], "error_outputs": [], "executed_notebook_sha256": "108b8158d54c39460f21990693fcfaa07a73975c5eae1125869f0077d8024a50"}

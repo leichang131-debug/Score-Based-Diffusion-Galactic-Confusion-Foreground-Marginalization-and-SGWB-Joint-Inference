@@ -87,3 +87,7 @@ See [prerequisite completion](../../docs/reproduction/triangle-gb/prerequisites-
 ## Triangle-GB Example 2
 
 `run-triangle-gb-example-2.py` executes the unchanged eight-parameter Bilby/NESSAI notebook with original nlive=500, stopping=0.01 and CPU pool settings. `export-triangle-gb-example-2.py` exports final scientific sampler artifacts and insertion diagnostics while retaining checkpoints/flow weights in ignored runs. `audit-triangle-gb-example-2.py` verifies inputs, original source, settings, posterior bounds/finiteness and likelihood/evidence consistency, separately from scientific calibration. See [report](../../docs/reproduction/triangle-gb/example-2.md).
+
+## Triangle-GB Example 3
+
+`run-triangle-gb-example-3.py` executes the full unchanged Sangria notebook using the complete original-supported catalog cache and original LDC orbit/band/response settings. `audit-triangle-gb-example-3.py` rehashes the raw file and complete cache, checks selected catalog conventions, original source, finite reconstruction and local outputs, and writes the evidence manifest. See [report](../../docs/reproduction/triangle-gb/example-3.md).
