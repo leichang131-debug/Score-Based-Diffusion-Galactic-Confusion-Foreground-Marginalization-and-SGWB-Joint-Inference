@@ -7,3 +7,5 @@ git submodule update --init --recursive
 ```
 
 Triangle-Simulator is integrated at `ab796358e9a36c8987f6bb53a97230d603bfdfd5` with all five notebooks and bundled orbit/waveform data. Its GPL-3.0 license is preserved. The source checkout is shallow but contains the complete pinned file tree. Triangle-GB is now a complete unmodified submodule pinned to `cbc0a1b0cbf4ec05ec969fa39405394168c3e06c`, including its package, five examples, orbit files and GPL-3.0 license. Its independent environment is installed; full example execution remains pending. TaijiSGWB remains a source slot; its code has not been downloaded or deployed. Preserve upstream licenses and notices. Project-owned launch adapters live under `scripts/reproduction/`; upstream source is unchanged.
+
+Triangle-BBH is pinned at `f99b0a34ea8d085aff67220bdc165a746ba5ceda` to provide the GB network Fisher dependency. Its complete 80-file tree and bundled modified WF4Py are preserved with original licenses; both are installed editable in the Triangle-GB CPU environment.

@@ -1,33 +1,45 @@
 Triangle-GB source audit: 17/17 checks passed; 17 files, 5 notebooks.
+Triangle-BBH source audit: 80 files unchanged.
 warning: Failed to install executable for cpython-3.11.14-macos-aarch64-none
   cause: Executable already exists at `/Users/leichang/.local/bin/python3.11` but is not managed by uv; use `--force` to replace it
 Using Python 3.11.14 environment at: environments/triangle-gb/.venv
-Resolved 150 packages in 18ms
-Downloading setuptools (1.1MiB)
- Downloaded setuptools
-Prepared 1 package in 2.37s
-Uninstalled 3 packages in 47ms
-Installed 1 package in 6ms
- - setuptools==84.0.0
- + setuptools==80.9.0
+Resolved 150 packages in 1.40s
+Uninstalled 4 packages in 6ms
  - triangle==0.1.0 (from file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-simulator)
+ - triangle-bbh==0.1.0 (from file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-bbh)
  - triangle-gb==0.1.0 (from file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-gb)
+ - wf4py==1.1.0 (from file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-bbh/WF4Py)
 Using Python 3.11.14 environment at: environments/triangle-gb/.venv
 Resolved 1 package in 1ms
    Building triangle @ file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-simulator
       Built triangle @ file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-simulator
-Prepared 1 package in 251ms
+Prepared 1 package in 178ms
 Installed 1 package in 1ms
  + triangle==0.1.0 (from file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-simulator)
 Using Python 3.11.14 environment at: environments/triangle-gb/.venv
-Resolved 1 package in 0.40ms
+Resolved 1 package in 0.41ms
    Building triangle-gb @ file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-gb
       Built triangle-gb @ file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-gb
-Prepared 1 package in 128ms
-Installed 1 package in 0.94ms
+Prepared 1 package in 129ms
+Installed 1 package in 0.88ms
  + triangle-gb==0.1.0 (from file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-gb)
 Using Python 3.11.14 environment at: environments/triangle-gb/.venv
-Checked 152 packages in 1ms
+Resolved 1 package in 80ms
+   Building wf4py @ file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-bbh/WF4Py
+      Built wf4py @ file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-bbh/WF4Py
+Prepared 1 package in 97ms
+Installed 1 package in 1ms
+ + wf4py==1.1.0 (from file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-bbh/WF4Py)
+Using Python 3.11.14 environment at: environments/triangle-gb/.venv
+Resolved 1 package in 78ms
+   Building triangle-bbh @ file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-bbh
+      Built triangle-bbh @ file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-bbh
+Prepared 1 package in 92ms
+Installed 1 package in 1ms
+ + triangle-bbh==0.1.0 (from file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/triangle-bbh)
+Using Python 3.11.14 environment at: environments/triangle-gb/.venv
+Checked 154 packages in 1ms
 All installed packages are compatible
 Installed kernelspec triangle-gb in /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/share/jupyter/kernels/triangle-gb
-Prepared ignored Triangle-GB workspace; no notebooks copied or executed.
+Prepared ignored Triangle-GB workspace; no notebook executed.
+Five same-name working notebooks retain all source/Markdown; no upstream outputs copied.

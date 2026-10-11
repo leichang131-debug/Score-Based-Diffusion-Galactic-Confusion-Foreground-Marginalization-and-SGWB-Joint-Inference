@@ -1,0 +1,248 @@
+{
+  "scope": "Prerequisite completion only; source preservation, installed interfaces, full default input/cache and original non-sampling cells checked. Full notebook runs pending.",
+  "files": [
+    {
+      "path": ".gitmodules",
+      "bytes": 552,
+      "sha256": "db557392842c007bfe05340885a89cb88cb5a04c7e0dbb01c9f4611c2cd840d3"
+    },
+    {
+      "path": "data/triangle-gb/README.md",
+      "bytes": 1704,
+      "sha256": "eb739794a6cd2efb9077e4d598cd8b97ec1618bec692cf40195ce61e141eabf6"
+    },
+    {
+      "path": "docs/reproduction/triangle-gb/README.md",
+      "bytes": 1049,
+      "sha256": "c7162a8d457ab59ae8f0fca0995704ce71d7fb069b964d9de8f975283ec696ec"
+    },
+    {
+      "path": "docs/reproduction/triangle-gb/data-preparation.md",
+      "bytes": 6902,
+      "sha256": "81389fad85e0357781a1be4b11921d02bd070c2fd908cef22360683165f309a8"
+    },
+    {
+      "path": "docs/reproduction/triangle-gb/environment-setup.md",
+      "bytes": 5849,
+      "sha256": "0409b98313fdf0c08cabf233bcd6d8f2c0aae393fa048b87698d49435fdb467a"
+    },
+    {
+      "path": "docs/reproduction/triangle-gb/prerequisites-completion.md",
+      "bytes": 9593,
+      "sha256": "0f19efa6475ea6131846205c2fd20c9102e5e3c7f54f4d3ea6cff227f7e1a724"
+    },
+    {
+      "path": "docs/reproduction/triangle-gb/source-integration.md",
+      "bytes": 3725,
+      "sha256": "ca1a2c57f47adc1e41b3a44863456f7be617e5ac2017d17aa4c85c399fc44290"
+    },
+    {
+      "path": "environments/triangle-gb/README.md",
+      "bytes": 4309,
+      "sha256": "ba7de751895becd1e42111960e99e29fc3f4f3ef6bc958e2613deee107683c62"
+    },
+    {
+      "path": "environments/triangle-gb/requirements-macos-arm64-py311.txt",
+      "bytes": 176652,
+      "sha256": "9be2df00e79a7398cf400e594d13dca54591cfbfa64bafe32a5f36f85e9dd525"
+    },
+    {
+      "path": "environments/triangle-gb/requirements.in",
+      "bytes": 353,
+      "sha256": "7f7dedb7b91de14f54fa51338672782e982af7e58156cfa3a6cd92c6a73c446a"
+    },
+    {
+      "path": "results/triangle-gb/environment/README.md",
+      "bytes": 1159,
+      "sha256": "4a8559f60c2b24c55f248102e42ea3199f282519b5da9b9780af8f13b4c63dad"
+    },
+    {
+      "path": "results/triangle-gb/environment/dependency-check.txt",
+      "bytes": 134,
+      "sha256": "e6c22f18955b05282c960b5812ff0ab5103e95a3022c82f82513c56dbd3805e4"
+    },
+    {
+      "path": "results/triangle-gb/environment/installation.txt",
+      "bytes": 4519,
+      "sha256": "1bc0d988d143ae26d566332920a6dcc7ee3d9a67a036cbf5abacae8882c482a1"
+    },
+    {
+      "path": "results/triangle-gb/environment/installed-packages.json",
+      "bytes": 6860,
+      "sha256": "d730e90d466b301e26e01c8f10f8513f277efcad7747ba1d5abd6fa0b97f82fe"
+    },
+    {
+      "path": "results/triangle-gb/environment/kernel-smoke.ipynb",
+      "bytes": 2340,
+      "sha256": "95380f3cd037ac42306025349bb26d6f1a551076341d704af156d1c5202008eb"
+    },
+    {
+      "path": "results/triangle-gb/environment/python312-build-failure.txt",
+      "bytes": 5324,
+      "sha256": "379ce790219b0e5e93ef7437242d17b656ac3e2a992918a0477d9cefcae76e65"
+    },
+    {
+      "path": "results/triangle-gb/environment/validation.json",
+      "bytes": 7360,
+      "sha256": "6b69c33a0c5fafea16097bc8640817c92260f3388d90dc610d5387898685413f"
+    },
+    {
+      "path": "results/triangle-gb/environment/validation.txt",
+      "bytes": 3227,
+      "sha256": "b88aa8864f9f47d205881b725ae6020415536c35c23221c9e0b607822ab4ef0c"
+    },
+    {
+      "path": "results/triangle-gb/fisher/README.md",
+      "bytes": 508,
+      "sha256": "cb6a673e38d4cbf2755c845ad67f8a6c3b583ddd2f97b6c8e94b8dbcc7f30c19"
+    },
+    {
+      "path": "results/triangle-gb/fisher/dependency-check.txt",
+      "bytes": 134,
+      "sha256": "cf2212a250175f7accb58532290d838ed3bc21fba410e4e48d15d54abe0ba1dd"
+    },
+    {
+      "path": "results/triangle-gb/fisher/installed-packages.json",
+      "bytes": 6860,
+      "sha256": "d730e90d466b301e26e01c8f10f8513f277efcad7747ba1d5abd6fa0b97f82fe"
+    },
+    {
+      "path": "results/triangle-gb/fisher/latex-render-check.png",
+      "bytes": 15190,
+      "sha256": "65782fdd9e9ab37237314273c4c6456db700eff7c2d35842bf28141d83de6d62"
+    },
+    {
+      "path": "results/triangle-gb/fisher/source-audit.json",
+      "bytes": 15769,
+      "sha256": "a4790478443eb9c383325a662e7f4b7712fd1027c25107d10d761c99d22c1f72"
+    },
+    {
+      "path": "results/triangle-gb/fisher/validation.json",
+      "bytes": 5157,
+      "sha256": "f95854bf47b2595c92b197c803cb8d51970190ef7ef67203b4a6b341e6d2fa84"
+    },
+    {
+      "path": "results/triangle-gb/fisher/validation.txt",
+      "bytes": 5414,
+      "sha256": "4b9ab626ec419eafd3fa5e93499c321224ca9574562f105577819e4a75ca1438"
+    },
+    {
+      "path": "results/triangle-gb/prerequisites/README.md",
+      "bytes": 578,
+      "sha256": "270e5deb9970a61b82a92b5dfff0df186373c452cebce5602acc3d2083dad7f2"
+    },
+    {
+      "path": "results/triangle-gb/prerequisites/readiness.json",
+      "bytes": 2909,
+      "sha256": "90e0accdad58319a001c5f9ca9cc373fe158c4f77017e0fddc85092f0856792c"
+    },
+    {
+      "path": "results/triangle-gb/prerequisites/validation.txt",
+      "bytes": 144,
+      "sha256": "6a2464dfe1240f7a7404bbb66630459b23070dfa2b560656f351b5f9a7f65918"
+    },
+    {
+      "path": "results/triangle-gb/sangria/README.md",
+      "bytes": 644,
+      "sha256": "95c2b5b715c703f8b5080f7b5761f4940c10ce1e44ac11a8b3ce28154e92f32d"
+    },
+    {
+      "path": "results/triangle-gb/sangria/download-provenance.json",
+      "bytes": 735,
+      "sha256": "84c6563d43c5e2d308d75f47219a41333f9a153cd6fc4bc2ea3ea0da65b289d9"
+    },
+    {
+      "path": "results/triangle-gb/sangria/download.txt",
+      "bytes": 1719,
+      "sha256": "058bc55fe43c7ddfdf53db7c745e4ed53dbeec95b527743b3556475ea5079076"
+    },
+    {
+      "path": "results/triangle-gb/sangria/hdf5-schema.json",
+      "bytes": 52887,
+      "sha256": "273fd00ca7fe808584e07a5798d781b6d2979dd4d000c84c7009b55cda05f11d"
+    },
+    {
+      "path": "results/triangle-gb/sangria/validation.json",
+      "bytes": 3579,
+      "sha256": "418477b96499ee81459332ebddd00bf41b72986aafc63814e9950acb0cce7a10"
+    },
+    {
+      "path": "results/triangle-gb/sangria/validation.txt",
+      "bytes": 6939,
+      "sha256": "445b8b9caf9ff8db8823a0c5e98641e563a4bba576dd99e223bc28e1ad628d08"
+    },
+    {
+      "path": "scripts/reproduction/audit-triangle-gb-source.py",
+      "bytes": 4709,
+      "sha256": "7b11e512e9d682d10bd85237f988ca2d83b69f86246b0a1b0188c7fd1655a61c"
+    },
+    {
+      "path": "scripts/reproduction/check-triangle-gb-environment.py",
+      "bytes": 10112,
+      "sha256": "dba6856e3cf5faaa33182d3eeb997768046fc000fab409ef970e4d5f15908aee"
+    },
+    {
+      "path": "scripts/reproduction/check-triangle-gb-fisher.py",
+      "bytes": 5175,
+      "sha256": "a28da8a7f3c18940a488e2709df969f44c6f8ef400dcc8c4458fd3d0c51a88fa"
+    },
+    {
+      "path": "scripts/reproduction/check-triangle-gb-prerequisites.py",
+      "bytes": 3512,
+      "sha256": "0e889ce4c453a6574d7601e53afc60f43606e5d5c5adc998e5d5b0fe69749188"
+    },
+    {
+      "path": "scripts/reproduction/check-triangle-gb-vgb-data.py",
+      "bytes": 14499,
+      "sha256": "ec1cec6cfe32738a409dd01eced5b26538ddd3ee94352082ec58106fc1e6fc6d"
+    },
+    {
+      "path": "scripts/reproduction/download-triangle-gb-sangria.py",
+      "bytes": 4125,
+      "sha256": "e99e3ab31acacc8e7f99ecad45ed030333254cf43827b415a29cb9a42d186c8b"
+    },
+    {
+      "path": "scripts/reproduction/download-triangle-gb-vgb.py",
+      "bytes": 3579,
+      "sha256": "535ccde47fea1a895e909754c04180cb1b3a5f633a5707bb1f3c5ab522b1e5c3"
+    },
+    {
+      "path": "scripts/reproduction/launch-triangle-gb-jupyter.sh",
+      "bytes": 870,
+      "sha256": "6991e9f234734b9b5dfd74e6639e358f0a19803187828af9bab81fe1525bcc65"
+    },
+    {
+      "path": "scripts/reproduction/prepare-triangle-gb-paths.py",
+      "bytes": 3315,
+      "sha256": "b81551ee6bc450195fd218915523b615bb7d37ee8366ea840df89a104107e395"
+    },
+    {
+      "path": "scripts/reproduction/prepare-triangle-gb-sangria.py",
+      "bytes": 8190,
+      "sha256": "4825b0d4b6c61958acd257603072ae77a4885a1e271f11148ef6417456e658e8"
+    },
+    {
+      "path": "scripts/reproduction/setup-triangle-gb-macos.sh",
+      "bytes": 2003,
+      "sha256": "480226a75120ea0ade51f75760ef5d4e78a4bb410c299e0a2783374c73a21ac8"
+    },
+    {
+      "path": "scripts/reproduction/triangle_gb_path_adapter.py",
+      "bytes": 1415,
+      "sha256": "f9f0074f0f962cd362796bb173dcfc2fc93051896ee757d8824005bbaa8a4b25"
+    }
+  ],
+  "ignored_large_files": [
+    {
+      "path": "data/raw/triangle-gb/LDC2_sangria_training_v2.h5",
+      "bytes": 3082321484,
+      "md5": "b8369cb5c06bcf984ef8057198683250",
+      "sha256": "f54ca61355d0c6208fbea5fc1b2dcce7332025de264fef33ebe87dea657c7ee6"
+    },
+    {
+      "path": "runs/triangle-gb/workspace/Triangle-GB/Test/dgb_parameters.txt",
+      "bytes": 5218391053,
+      "sha256": "38177fda2a108b1076055237e737a4d2a3ef03ce5aeba7994e87014f138aa3c3"
+    }
+  ]
+}

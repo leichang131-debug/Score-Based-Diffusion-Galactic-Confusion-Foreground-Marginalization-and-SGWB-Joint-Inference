@@ -7,3 +7,6 @@
 [submodule "external/triangle-gb"]
 	path = external/triangle-gb
 	url = https://github.com/TriangleDataCenter/Triangle-GB.git
+[submodule "external/triangle-bbh"]
+	path = external/triangle-bbh
+	url = https://github.com/TriangleDataCenter/Triangle-BBH.git

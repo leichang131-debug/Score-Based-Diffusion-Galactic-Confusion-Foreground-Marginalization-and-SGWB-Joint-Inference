@@ -53,12 +53,12 @@ def main():
                'tqdm', 'Triangle.Constants', 'Triangle.FFTTools', 'Triangle.Noise',
                'Triangle.Orbit', 'Triangle.Data', 'Triangle.TDI', 'Triangle.GW',
                'Triangle_GB', 'bilby', 'nessai', 'nessai_bilby', 'torch', 'glasflow',
-               'ipykernel', 'nbclient', 'jupyterlab']
+               'ipykernel', 'nbclient', 'jupyterlab', 'Triangle_BBH.Fisher', 'WF4Py.waveforms']
     for name in modules:
         check('import_' + name, lambda name=name: {'module': importlib.import_module(name).__name__})
     for name in ['numpy', 'scipy', 'healpy', 'PyCBC', 'lalsuite', 'matplotlib',
                  'bilby', 'nessai', 'nessai-bilby', 'torch', 'glasflow', 'h5py',
-                 'jupyterlab', 'ipykernel', 'Triangle', 'Triangle_GB']:
+                 'jupyterlab', 'ipykernel', 'Triangle', 'Triangle_GB', 'Triangle_BBH', 'WF4Py']:
         try:
             report['versions'][name] = metadata.version(name)
         except metadata.PackageNotFoundError:
@@ -141,7 +141,13 @@ def main():
         ksm = KernelSpecManager(kernel_dirs=[str(kernel_root)])
         km = KernelManager(kernel_name='triangle-gb', kernel_spec_manager=ksm)
         nb = nbformat.v4.new_notebook(cells=[nbformat.v4.new_code_cell(
-            "import sys, json, numpy, Triangle_GB, bilby\n"
+            "import sys, json, numpy, Triangle_GB, bilby, h5py\n"
+            "with h5py.File('/Users/taijidatacenter/workspace/TDCData/0_1_VGB_TDIXYZ.h5') as f:\n"
+            "    assert isinstance(f, h5py.File) and f['time'][0] == 2000\n"
+            "with h5py.File('/Users/taijidatacenter/workspace/TDCData/0_1_VGB_parameters.h5') as f:\n"
+            "    assert isinstance(f, h5py.File) and len(f['A']) == 55\n"
+            "with h5py.File('/Users/taijidatacenter/Downloads/LDCData/LDC2_sangria_training_v2.h5') as f:\n"
+            "    assert isinstance(f, h5py.File) and len(f['sky/dgb/cat']) == 26000000\n"
             "assert sys.version_info[:2] == (3,11)\n"
             "print(json.dumps({'python': sys.version.split()[0], 'sum': int(numpy.arange(4).sum())}))")])
         try:
@@ -156,15 +162,14 @@ def main():
         nbformat.write(result, OUT / 'kernel-smoke.ipynb')
         return 'Dedicated kernel executed a new synthetic import/array cell locally; upstream examples untouched.'
     check('dedicated_jupyter_kernel', kernel)
-    missing = []
-    try:
-        importlib.import_module('Triangle_BBH.Fisher')
-    except ModuleNotFoundError:
-        missing.append('Triangle_BBH.Fisher: required by network example Fisher/prior cell, not provided by the two pinned repositories.')
-    report['remaining_example_requirements'] = missing + [
-        'Examples 1/2: download and verify public VGB HDF5 files before running.',
-        'Example 3: obtain LDC2_sangria_training_v2.h5 before running.',
-        'Create fresh executed copies with explicit author-specific data-path adapters before full reproduction.']
+    prepared_inputs = [ROOT/'data/raw/triangle-gb'/name for name in
+        ['0_1_VGB_TDIXYZ.h5','0_1_VGB_parameters.h5','LDC2_sangria_training_v2.h5']]
+    cache = WORK/'Triangle-GB/Test/dgb_parameters.txt'
+    report['all_five_example_input_files_available'] = all(p.is_file() for p in prepared_inputs) and cache.is_file()
+    report['remaining_example_requirements'] = [
+        'Original-scale complete notebook execution and scientific output audits remain pending.',
+        'Example 1/2 original default orbit has documented boundary extrapolation; strict coverage is not a verified accuracy claim.',
+        'Parameter-estimation multiprocessing budgets and posterior convergence require separate validation.']
     report['all_environment_checks_pass'] = all(c['passed'] for c in report['checks'].values())
     report['all_five_examples_ready'] = False
     report['elapsed_seconds'] = time.perf_counter() - started

@@ -1,6 +1,6 @@
 {
   "scope": "Locally executed environment checks only; no upstream notebook or posterior sampling run.",
-  "created_utc": "2026-10-11T08:08:29.361508+00:00",
+  "created_utc": "2026-10-11T09:14:18.134541+00:00",
   "python": "3.11.14",
   "machine": "arm64",
   "platform": "macOS-27.0-arm64-arm-64bit",
@@ -11,185 +11,199 @@
         "prefix": "environments/triangle-gb/.venv",
         "cpu": true
       },
-      "seconds": 0.00011004199950548355
+      "seconds": 0.00010750000001280569
     },
     "import_numpy": {
       "passed": true,
       "detail": {
         "module": "numpy"
       },
-      "seconds": 0.024441208001007908
+      "seconds": 0.023514708000220708
     },
     "import_scipy": {
       "passed": true,
       "detail": {
         "module": "scipy"
       },
-      "seconds": 0.0021088339999550954
+      "seconds": 0.0022095000003901077
     },
     "import_matplotlib": {
       "passed": true,
       "detail": {
         "module": "matplotlib"
       },
-      "seconds": 0.03090229099871067
+      "seconds": 0.0313681669995276
     },
     "import_healpy": {
       "passed": true,
       "detail": {
         "module": "healpy"
       },
-      "seconds": 0.18616012500024226
+      "seconds": 0.19112145799954305
     },
     "import_pycbc": {
       "passed": true,
       "detail": {
         "module": "pycbc"
       },
-      "seconds": 0.1320131249995029
+      "seconds": 0.1363460419997864
     },
     "import_lal": {
       "passed": true,
       "detail": {
         "module": "lal"
       },
-      "seconds": 1.5829991752980277e-06
+      "seconds": 2.040998879238032e-06
     },
     "import_h5py": {
       "passed": true,
       "detail": {
         "module": "h5py"
       },
-      "seconds": 9.169998520519584e-07
+      "seconds": 9.999985195463523e-07
     },
     "import_tqdm": {
       "passed": true,
       "detail": {
         "module": "tqdm"
       },
-      "seconds": 0.0025610000011511147
+      "seconds": 0.0026003750008385396
     },
     "import_Triangle.Constants": {
       "passed": true,
       "detail": {
         "module": "Triangle.Constants"
       },
-      "seconds": 0.4541105840016826
+      "seconds": 0.465712250001161
     },
     "import_Triangle.FFTTools": {
       "passed": true,
       "detail": {
         "module": "Triangle.FFTTools"
       },
-      "seconds": 1.1249994713580236e-06
+      "seconds": 1.1669999366858974e-06
     },
     "import_Triangle.Noise": {
       "passed": true,
       "detail": {
         "module": "Triangle.Noise"
       },
-      "seconds": 6.250011210795492e-07
+      "seconds": 6.669997674180195e-07
     },
     "import_Triangle.Orbit": {
       "passed": true,
       "detail": {
         "module": "Triangle.Orbit"
       },
-      "seconds": 4.169996827840805e-07
+      "seconds": 5.829988367622718e-07
     },
     "import_Triangle.Data": {
       "passed": true,
       "detail": {
         "module": "Triangle.Data"
       },
-      "seconds": 5.420006345957518e-07
+      "seconds": 5.83999280934222e-07
     },
     "import_Triangle.TDI": {
       "passed": true,
       "detail": {
         "module": "Triangle.TDI"
       },
-      "seconds": 4.579997039400041e-07
+      "seconds": 5.000001692678779e-07
     },
     "import_Triangle.GW": {
       "passed": true,
       "detail": {
         "module": "Triangle.GW"
       },
-      "seconds": 3.749992174562067e-07
+      "seconds": 4.169996827840805e-07
     },
     "import_Triangle_GB": {
       "passed": true,
       "detail": {
         "module": "Triangle_GB"
       },
-      "seconds": 0.00021887500042794272
+      "seconds": 0.00023525000142399222
     },
     "import_bilby": {
       "passed": true,
       "detail": {
         "module": "bilby"
       },
-      "seconds": 0.16034208400014904
+      "seconds": 0.1631840000009106
     },
     "import_nessai": {
       "passed": true,
       "detail": {
         "module": "nessai"
       },
-      "seconds": 0.0002455829999234993
+      "seconds": 0.00024699999994481914
     },
     "import_nessai_bilby": {
       "passed": true,
       "detail": {
         "module": "nessai_bilby"
       },
-      "seconds": 0.0001520830010122154
+      "seconds": 0.00015995799913071096
     },
     "import_torch": {
       "passed": true,
       "detail": {
         "module": "torch"
       },
-      "seconds": 0.34945895900091273
+      "seconds": 0.3542199580006127
     },
     "import_glasflow": {
       "passed": true,
       "detail": {
         "module": "glasflow"
       },
-      "seconds": 0.002696249999644351
+      "seconds": 0.0030128339985822095
     },
     "import_ipykernel": {
       "passed": true,
       "detail": {
         "module": "ipykernel"
       },
-      "seconds": 0.018791791999319685
+      "seconds": 0.02000650000081805
     },
     "import_nbclient": {
       "passed": true,
       "detail": {
         "module": "nbclient"
       },
-      "seconds": 0.38549124999917694
+      "seconds": 0.38983591699980025
     },
     "import_jupyterlab": {
       "passed": true,
       "detail": {
         "module": "jupyterlab"
       },
-      "seconds": 0.05700408299890114
+      "seconds": 0.059012542000346
+    },
+    "import_Triangle_BBH.Fisher": {
+      "passed": true,
+      "detail": {
+        "module": "Triangle_BBH.Fisher"
+      },
+      "seconds": 0.0017680000000837026
+    },
+    "import_WF4Py.waveforms": {
+      "passed": true,
+      "detail": {
+        "module": "WF4Py.waveforms"
+      },
+      "seconds": 1.1669999366858974e-06
     },
     "editable_source_origins": {
       "passed": true,
       "detail": "Both packages import from pinned editable source checkouts.",
-      "seconds": 5.920900002820417e-05
+      "seconds": 6.175000089569949e-05
     },
     "workspace_orbit_paths": {
       "passed": true,
       "detail": "Original relative orbit paths resolve in ignored working-copy directory.",
-      "seconds": 6.312500045169145e-05
+      "seconds": 5.279099968902301e-05
     },
     "small_cpu_response": {
       "passed": true,
@@ -226,7 +240,7 @@
         "frequency_peak": 7.180466871380739e-20,
         "note": "Small synthetic interface check; two identical orbits are not a physical detector network validation."
       },
-      "seconds": 0.01290658300058567
+      "seconds": 0.013255415999083198
     },
     "glasflow_torch_cpu_backward": {
       "passed": true,
@@ -237,7 +251,7 @@
         ],
         "finite_gradients": true
       },
-      "seconds": 0.01439224999921862
+      "seconds": 0.017153791999589885
     },
     "bilby_nessai_plugin": {
       "passed": true,
@@ -245,12 +259,12 @@
         "registered_class": "nessai_bilby.plugin.Nessai",
         "scope": "Plugin discovery only; nested sampling not started."
       },
-      "seconds": 0.04787166700043599
+      "seconds": 0.0515073750011652
     },
     "dedicated_jupyter_kernel": {
       "passed": true,
       "detail": "Dedicated kernel executed a new synthetic import/array cell locally; upstream examples untouched.",
-      "seconds": 1.7327465420003136
+      "seconds": 1.6890248750005412
     }
   },
   "versions": {
@@ -269,16 +283,18 @@
     "jupyterlab": "4.6.4",
     "ipykernel": "7.4.0",
     "Triangle": "0.1.0",
-    "Triangle_GB": "0.1.0"
+    "Triangle_GB": "0.1.0",
+    "Triangle_BBH": "0.1.0",
+    "WF4Py": "1.1.0"
   },
+  "all_five_example_input_files_available": true,
   "remaining_example_requirements": [
-    "Triangle_BBH.Fisher: required by network example Fisher/prior cell, not provided by the two pinned repositories.",
-    "Examples 1/2: download and verify public VGB HDF5 files before running.",
-    "Example 3: obtain LDC2_sangria_training_v2.h5 before running.",
-    "Create fresh executed copies with explicit author-specific data-path adapters before full reproduction."
+    "Original-scale complete notebook execution and scientific output audits remain pending.",
+    "Example 1/2 original default orbit has documented boundary extrapolation; strict coverage is not a verified accuracy claim.",
+    "Parameter-estimation multiprocessing budgets and posterior convergence require separate validation."
   ],
   "all_environment_checks_pass": true,
   "all_five_examples_ready": false,
-  "elapsed_seconds": 3.6265805830007594,
+  "elapsed_seconds": 3.6274151669986168,
   "requirements_sha256": "9be2df00e79a7398cf400e594d13dca54591cfbfa64bafe32a5f36f85e9dd525"
 }

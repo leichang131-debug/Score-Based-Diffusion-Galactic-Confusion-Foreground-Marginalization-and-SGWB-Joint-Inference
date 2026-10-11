@@ -63,3 +63,15 @@ See [environment instructions](../../environments/triangle-gb/README.md). These 
 - `check-triangle-gb-vgb-data.py`: scan complete HDF5 arrays, execute unchanged input-preparation cells and check source selection, FFT bands and orbit coverage. Exit 2 records the currently diagnosed strict orbit-coverage gap; it is not a full tutorial runner.
 
 See [data preparation and orbit issue](../../docs/reproduction/triangle-gb/data-preparation.md).
+
+## Sangria and network Fisher prerequisites
+
+- `download-triangle-gb-sangria.py`: resumable official Sangria input download, complete-file MD5/SHA-256 verification.
+- `prepare-triangle-gb-sangria.py`: bounded full HDF5 scan, complete original dgb text-cache preparation and unchanged non-plot tutorial input/template checks.
+- `audit-triangle-bbh-source.py`: compare all pinned Triangle-BBH/WF4Py files to Git blobs.
+- `check-triangle-gb-fisher.py`: original imports, independent analytic Fisher/error test, actual LaTeX rendering and original network Fisher/prior cells.
+- `triangle_gb_path_adapter.py`: dedicated-kernel external hook for exact original HDF5 paths; source cells stay unchanged.
+
+See [prerequisite completion](../../docs/reproduction/triangle-gb/prerequisites-completion.md). None of these scripts claims complete posterior-sampling reproduction.
+
+- `check-triangle-gb-prerequisites.py`: consolidate actual validated data/import readiness and verify all five same-name working notebook source/Markdown cells, with full reproduction explicitly pending.

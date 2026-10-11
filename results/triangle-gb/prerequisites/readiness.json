@@ -1,0 +1,51 @@
+{
+  "all_five_input_and_import_prerequisites_available": true,
+  "full_five_notebook_reproduction_completed": false,
+  "environment_checks_passed": 33,
+  "fisher_checks_passed": 4,
+  "Sangria_preparation_checks_passed": 5,
+  "working_notebooks": [
+    {
+      "filename": "0_TDIFlyGB_Compare_TD_FD_Waveforms(CPU).ipynb",
+      "same_source_and_markdown_and_attachments": true,
+      "historical_outputs_cleared": true,
+      "working_path": "runs/triangle-gb/workspace/Triangle-GB/Examples/0_TDIFlyGB_Compare_TD_FD_Waveforms(CPU).ipynb",
+      "source_file_sha256": "a0dadfa652ccb8a5c2ccbe444ddd48771edaf00b4f36093264d656c5f4c0017e"
+    },
+    {
+      "filename": "1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+      "same_source_and_markdown_and_attachments": true,
+      "historical_outputs_cleared": true,
+      "working_path": "runs/triangle-gb/workspace/Triangle-GB/Examples/1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+      "source_file_sha256": "968320875119c54292bd6b697d987028c31592d1f753fc1ee9f8a3d118fa2947"
+    },
+    {
+      "filename": "2_TDIFlyGB_Parameter_Estimation(CPU).ipynb",
+      "same_source_and_markdown_and_attachments": true,
+      "historical_outputs_cleared": true,
+      "working_path": "runs/triangle-gb/workspace/Triangle-GB/Examples/2_TDIFlyGB_Parameter_Estimation(CPU).ipynb",
+      "source_file_sha256": "ebc05218330aacbf72b552d24a5fb008b58dc716793e0c9a418cb0b36ab36aa8"
+    },
+    {
+      "filename": "3_LDC2a_GB_Reconstruction.ipynb",
+      "same_source_and_markdown_and_attachments": true,
+      "historical_outputs_cleared": true,
+      "working_path": "runs/triangle-gb/workspace/Triangle-GB/Examples/3_LDC2a_GB_Reconstruction.ipynb",
+      "source_file_sha256": "7815f6c1d3488bccdb60751ddeccf0e084652e6ad079e0e7288d089b541fe705"
+    },
+    {
+      "filename": "GB_network_PE_example_for_2609.16477.ipynb",
+      "same_source_and_markdown_and_attachments": true,
+      "historical_outputs_cleared": true,
+      "working_path": "runs/triangle-gb/workspace/Triangle-GB/Examples/GB_network_PE_example_for_2609.16477.ipynb",
+      "source_file_sha256": "a2ce8b964a8cfa14a60563ada0109f39f93b5e4d0af706961ff64019a6216eb0"
+    }
+  ],
+  "scope": "Full original inputs/cache and interfaces prepared; original source/Markdown preserved. No search/sampler completion claim.",
+  "scientific_issues_to_retain": [
+    "Examples 1/2 strict original orbit coverage fails; inherited boundary extrapolation remains explicitly documented.",
+    "Sangria delayed starting boundary uses approximately 25 seconds of extrapolation; full scientific waveform accuracy is not established by finiteness checks.",
+    "Original network Fisher raw-unit conditioning warning is retained; posterior convergence is a separate validation."
+  ],
+  "next_step": "Run each same-name working notebook freshly, save outputs/logs/timing and audit scientific results; plan sampling multiprocessing memory before long runs."
+}

@@ -1,0 +1,105 @@
+PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/pycbc/waveform/plugin.py:99: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+No phenomxpy.
+No pyseobnr.
+no cupy 
+no cupy
+no BBHx waveform
+PASS original_import_and_all_autoloaded_modules
+PASS analytic_correlated_two_channel_fisher_and_errors
+PASS original_network_tex_plotting_prerequisite
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:83: FutureWarning: <class 'triangle_gb_network_preflight.GBNetworkLikelihood'> log_likelihood or log_likelihood_ratio method does not accept 'parameters' as an argument. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:127: FutureWarning: Setting non-trivial parameters for <class 'triangle_gb_network_preflight.GBNetworkLikelihood'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:113: FutureWarning: Parameter attribute queried for <class 'triangle_gb_network_preflight.GBNetworkLikelihood'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)
+no cupy 
+Orbits created for: ['TianQin', 'Taiji', 'LISA']
+GB Tobs = 4.0 yr,  dt = 10.0 s,  N_time = 12623259,  Nf = 6311630,  df = 7.92e-09 Hz
+TDIFlyGBNetwork created: 3 detectors, full_freq grid matches freq_data: True
+f0 = 3.000000e-03 Hz,  A  = 1.000e-22
+Shared band: 3202 bins, [2.9873e-03, 3.0127e-03] Hz
+Joint GB signal: (6, 3202)
+Injected GB network SNR: 319.8
+LL at truth: -19073.45
+SNR from likelihood: 319.8
+8 parameters in total: ['A', 'f0', 'fdot0', 'inclination', 'longitude', 'latitude', 'phase0', 'psi']
+8 analyzed parameters: ['A', 'f0', 'fdot0', 'inclination', 'longitude', 'latitude', 'phase0', 'psi']
+parameters whose steps should be tested: ['A', 'f0', 'fdot0', 'inclination', 'longitude', 'latitude', 'phase0', 'psi']
+Auto-tuning step sizes ...
+
+ ========= testing parameter A ==========
+initial 1-sigma error = 5.592e-13
+error = 5.592e-13
+shift = 5.000e-27, rel diff = 1.541e-13
+shift of parameter A is 5e-27
+
+ ========= testing parameter f0 ==========
+initial 1-sigma error = 2.611e-06
+error = 2.611e-06
+shift = 5.000e-11, rel diff = 1.180e-04
+shift of parameter f0 is 5e-11
+
+ ========= testing parameter fdot0 ==========
+initial 1-sigma error = 3.734e-10
+error = 3.733e-10
+shift = 5.000e-19, rel diff = 4.327e-05
+shift of parameter fdot0 is 5e-19
+
+ ========= testing parameter inclination ==========
+initial 1-sigma error = 8.872e-02
+error = 8.872e-02
+shift = 5.000e-05, rel diff = 7.072e-10
+shift of parameter inclination is 5e-05
+
+ ========= testing parameter longitude ==========
+initial 1-sigma error = 2.400e-02
+error = 2.400e-02
+shift = 5.000e-05, rel diff = 1.933e-08
+shift of parameter longitude is 5e-05
+
+ ========= testing parameter latitude ==========
+initial 1-sigma error = 5.645e-02
+error = 5.645e-02
+shift = 5.000e-05, rel diff = 1.411e-09
+shift of parameter latitude is 5e-05
+
+ ========= testing parameter phase0 ==========
+initial 1-sigma error = 5.592e-02
+error = 5.592e-02
+shift = 5.000e-05, rel diff = 2.071e-07
+shift of parameter phase0 is 5e-05
+
+ ========= testing parameter psi ==========
+initial 1-sigma error = 3.954e-02
+error = 3.954e-02
+shift = 5.000e-05, rel diff = 1.573e-09
+shift of parameter psi is 5e-05
+all parameters tested.
+index of Fisher: ['A', 'f0', 'fdot0', 'inclination', 'longitude', 'latitude', 'phase0', 'psi']
+Fisher matrix computed.
+Fisher matrix condition number: 1.3e+49
+WARNING: Fisher matrix condition number (1.3e+49) exceeds threshold 1e15, results may be unreliable.
+1-sigma parameter uncertainties:
+  A                         7.739e-24
+  f0                        5.561e-11
+  fdot0                     8.506e-19
+  inclination               1.948e-01
+  longitude                 5.828e-04
+  latitude                  3.207e-03
+  phase0                    1.023e+00
+  psi                       5.116e-01
+
+Fisher 1-sigma errors (instrumental-noise-only model):
+  sigma(A           ) = 7.739e-24
+  sigma(f0          ) = 5.561e-11
+  sigma(fdot0       ) = 8.506e-19
+  sigma(inclination ) = 1.948e-01
+  sigma(longitude   ) = 5.828e-04
+  sigma(latitude    ) = 3.207e-03
+  sigma(phase0      ) = 1.023e+00
+  sigma(psi         ) = 5.116e-01
+PASS original_network_fisher_and_prior_preparation
+Fisher checks: 4 passed

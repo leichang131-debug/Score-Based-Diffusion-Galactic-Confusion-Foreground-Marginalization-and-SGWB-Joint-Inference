@@ -1,0 +1,1 @@
+All five example input/import prerequisites available; 5/5 working copies preserve source/Markdown. Full notebook reproduction remains pending.

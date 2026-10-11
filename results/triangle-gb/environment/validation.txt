@@ -30,6 +30,10 @@ PASS import_glasflow
 PASS import_ipykernel
 PASS import_nbclient
 PASS import_jupyterlab
+no cupy
+no BBHx waveform
+PASS import_Triangle_BBH.Fisher
+PASS import_WF4Py.waveforms
 PASS editable_source_origins
 PASS workspace_orbit_paths
 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-simulator/Triangle/Orbit.py:21: UserWarning: Input line 1 contained no data and will not be counted towards `max_rows=256`.  This differs from the behaviour in NumPy <=1.22 which counted lines rather than rows.  If desired, the previous behaviour can be achieved by using `itertools.islice`.
@@ -43,4 +47,4 @@ PASS glasflow_torch_cpu_backward
 PASS bilby_nessai_plugin
 [IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
 PASS dedicated_jupyter_kernel
-Environment checks: 31 / 31
+Environment checks: 33 / 33

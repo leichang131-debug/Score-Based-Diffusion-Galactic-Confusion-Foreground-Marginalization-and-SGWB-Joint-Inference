@@ -1,15 +1,15 @@
 {
-  "scope": "Independent environment configuration and locally generated interface evidence, not full example execution.",
+  "scope": "Current files snapshot; original source/data scientific checks retain their recorded scope and dates.",
   "files": [
     {
       "path": "docs/reproduction/triangle-gb/README.md",
-      "bytes": 831,
-      "sha256": "cb67901333e011d8a6c3f533c074dbf8a9b8b2748e4eb3abb54efa75e8cb6756"
+      "bytes": 1049,
+      "sha256": "c7162a8d457ab59ae8f0fca0995704ce71d7fb069b964d9de8f975283ec696ec"
     },
     {
       "path": "docs/reproduction/triangle-gb/environment-setup.md",
-      "bytes": 5132,
-      "sha256": "2f0b6224d3722b5fbb8c4a3cf0a74b19b6e7004164ee3f3dcb1e2fa6aa3a96a3"
+      "bytes": 5849,
+      "sha256": "0409b98313fdf0c08cabf233bcd6d8f2c0aae393fa048b87698d49435fdb467a"
     },
     {
       "path": "docs/reproduction/triangle-gb/source-integration.md",
@@ -18,8 +18,8 @@
     },
     {
       "path": "environments/triangle-gb/README.md",
-      "bytes": 3756,
-      "sha256": "0683f474a3a7f3890c31b45c1436a8a62ba274df65bf84cf82375f486d165c85"
+      "bytes": 4309,
+      "sha256": "ba7de751895becd1e42111960e99e29fc3f4f3ef6bc958e2613deee107683c62"
     },
     {
       "path": "environments/triangle-gb/requirements-macos-arm64-py311.txt",
@@ -39,22 +39,22 @@
     {
       "path": "results/triangle-gb/environment/dependency-check.txt",
       "bytes": 134,
-      "sha256": "40548898a6542d648520305ee0b2e7905511457085fa00cc3ef27088d16fe5d4"
+      "sha256": "e6c22f18955b05282c960b5812ff0ab5103e95a3022c82f82513c56dbd3805e4"
     },
     {
       "path": "results/triangle-gb/environment/installation.txt",
-      "bytes": 2770,
-      "sha256": "d6bc627d4de4256662c21f158442fe6cb45554e9726e92b195d1355b2e7f8e43"
+      "bytes": 4519,
+      "sha256": "1bc0d988d143ae26d566332920a6dcc7ee3d9a67a036cbf5abacae8882c482a1"
     },
     {
       "path": "results/triangle-gb/environment/installed-packages.json",
-      "bytes": 6449,
-      "sha256": "b43417f9036982c4db9f967d3d6ca96f21500f4bc185c0a5c3ad6f5792ff0775"
+      "bytes": 6860,
+      "sha256": "d730e90d466b301e26e01c8f10f8513f277efcad7747ba1d5abd6fa0b97f82fe"
     },
     {
       "path": "results/triangle-gb/environment/kernel-smoke.ipynb",
-      "bytes": 1824,
-      "sha256": "5c6eaff4d82c935b252441a7ed1e97485e8d5d009147489de2691d72a9bf96d3"
+      "bytes": 2340,
+      "sha256": "95380f3cd037ac42306025349bb26d6f1a551076341d704af156d1c5202008eb"
     },
     {
       "path": "results/triangle-gb/environment/python312-build-failure.txt",
@@ -63,13 +63,13 @@
     },
     {
       "path": "results/triangle-gb/environment/validation.json",
-      "bytes": 6975,
-      "sha256": "2bf6d9a8567cc26836788b6ba601b7eb11e65ccccb4c77088f4a1ca1587b9f63"
+      "bytes": 7360,
+      "sha256": "6b69c33a0c5fafea16097bc8640817c92260f3388d90dc610d5387898685413f"
     },
     {
       "path": "results/triangle-gb/environment/validation.txt",
-      "bytes": 3142,
-      "sha256": "773f4bd49a937f526bad7bf53b247763771fa2ef45fd7b4d497c22ec8a0dd982"
+      "bytes": 3227,
+      "sha256": "b88aa8864f9f47d205881b725ae6020415536c35c23221c9e0b607822ab4ef0c"
     },
     {
       "path": "scripts/reproduction/audit-triangle-gb-source.py",
@@ -78,23 +78,23 @@
     },
     {
       "path": "scripts/reproduction/check-triangle-gb-environment.py",
-      "bytes": 9350,
-      "sha256": "c31fb4b74f5728144af7aacfc72a0916ebdc080abf922a85467ca05af673ae86"
+      "bytes": 10112,
+      "sha256": "dba6856e3cf5faaa33182d3eeb997768046fc000fab409ef970e4d5f15908aee"
     },
     {
       "path": "scripts/reproduction/launch-triangle-gb-jupyter.sh",
-      "bytes": 814,
-      "sha256": "9048dc5b059c507afa7599f24a0035a987e07a8a2cd9b93a8585af4e9fa36297"
+      "bytes": 870,
+      "sha256": "6991e9f234734b9b5dfd74e6639e358f0a19803187828af9bab81fe1525bcc65"
     },
     {
       "path": "scripts/reproduction/prepare-triangle-gb-paths.py",
-      "bytes": 1605,
-      "sha256": "3deda23eb65f7a310b3219971280cd6c90d924700fa8a867eec6bce62bf3553a"
+      "bytes": 3315,
+      "sha256": "b81551ee6bc450195fd218915523b615bb7d37ee8366ea840df89a104107e395"
     },
     {
       "path": "scripts/reproduction/setup-triangle-gb-macos.sh",
-      "bytes": 1558,
-      "sha256": "3a9746ad1bf83660edebe7ba71ca4f92ec2830bef7f6157179f45262c6f7dbfd"
+      "bytes": 2003,
+      "sha256": "480226a75120ea0ade51f75760ef5d4e78a4bb410c299e0a2783374c73a21ac8"
     }
   ]
 }

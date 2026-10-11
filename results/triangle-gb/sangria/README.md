@@ -1,0 +1,3 @@
+# Local Sangria prerequisite evidence
+
+`download-provenance.json` records official metadata, complete-file checksums and local SHA-256. `download.txt` is the actual range-download log. `hdf5-schema.json` scans dataset shapes, compound types and all numeric values in bounded blocks. `validation.json`/`validation.txt` record full default dgb cache verification, unchanged tutorial preparation/interface cells, selected band/template and orbit timing. The large HDF5 and complete parameter cache stay ignored. Full notebook plotting/execution is not claimed. See the [report](../../../docs/reproduction/triangle-gb/prerequisites-completion.md).

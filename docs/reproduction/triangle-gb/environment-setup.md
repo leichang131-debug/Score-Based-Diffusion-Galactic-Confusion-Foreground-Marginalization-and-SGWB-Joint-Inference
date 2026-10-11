@@ -42,3 +42,7 @@ The dedicated kernel executed a freshly created synthetic notebook locally and w
 | Network | `Triangle_BBH.Fisher.MultiChannelFisher` source/version and separate installation/validation, then full inference run |
 
 No author-specific absolute directories are created. Notebook source strings are unchanged. The working-directory orbit links satisfy original relative paths; the future execution runner must explicitly substitute unavailable absolute HDF5 paths. Future curated notebooks retain their upstream names and explanatory content, with all adapters documented separately.
+
+## Subsequent prerequisite extension
+
+The initial 31-check milestone above is preserved as historical context. The latest independent environment now includes pinned Triangle-BBH and its bundled WF4Py, with **33/33 checks passing** and **154 installed packages** passing dependency consistency. The updated synthetic kernel check opens all three original author HDF5 paths through the dedicated external startup hook. Latest evidence at the same environment result paths describes this expanded setup. See [Sangria/Fisher completion](prerequisites-completion.md) and consolidated readiness for actual input state; earlier missing-data/Fisher entries are superseded. No full notebook/sampler reproduction is claimed.

@@ -2,11 +2,8 @@
 
 Source integration is complete. Independent environment and path setup is documented in [environment setup](environment-setup.md); consult its validation evidence for readiness. See [source integration and scope](source-integration.md).
 
-Next milestones:
+All public input/dependency prerequisites are now prepared, including Sangria and the complete dgb cache, pinned Triangle-BBH/WF4Py, and original network Fisher/prior interfaces. See [prerequisite completion](prerequisites-completion.md). The VGB strict orbit-coverage gap remains explicitly documented.
 
-1. Download/verify public TDC II verification data and inspect the HDF5 schema.
-2. Reproduce Example 0 at original settings; audit TD/FD response comparison and mismatch.
-3. Reproduce Example 1 search and Example 2 posterior inference with runtime budgeting.
-4. Prepare LDC reconstruction and the network example as separate documented milestones.
+Next milestones are complete fresh same-name executions of Example 0, Examples 1/2, Example 3 and the network notebook, with per-notebook runtime/resource budgets and scientific output audits. Input-preparation cells and interface checks are not complete notebook reproductions.
 
 Running examples validates the core `Triangle_GB/` methods they call. It does not establish all auxiliary methods, arbitrary configurations or GPU paths. Keep source and executed evidence separate.

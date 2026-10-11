@@ -1,0 +1,3107 @@
+[
+  {
+    "path": "/header/date",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_AAFILTER_ATTENUATION",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_AAFILTER_TRANSITION_BAND_0",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_AAFILTER_TRANSITION_BAND_1",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_ACC_NOISE_A_LEVEL",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_ACC_NOISE_F_KNEE",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_ACC_NOISE_USE_PZM",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_ADC_RECURSION_ORDER",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_BACKLINK_NOISE_A_LEVEL",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_BACKLINK_NOISE_F_KNEE",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_DEBUG_CLOCK_OFFSETS",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_FREQUENCY_OFFSETS_12",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_FREQUENCY_OFFSETS_13",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_FREQUENCY_OFFSETS_21",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_FREQUENCY_OFFSETS_23",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_FREQUENCY_OFFSETS_31",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_FREQUENCY_OFFSETS_32",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_GLITCH_FILE",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_GW_FILE_FS",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_GW_FILE_UPSAMPLING",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_GW_TYPE",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_LASER_CENTRAL_FREQUENCY",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_LOCKING_SCHEME",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_MEASUREMENT_DOWNSAMPLING",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_MEASUREMENT_FS",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_ORBIT_TYPE_0",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_ORBIT_TYPE_1",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_PHYSICS_FS",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/LISA_PRIMARY_LASER",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_PUBLISH_BEATNOTE_COMPONENTS",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_PUBLISH_TOTAL_BEATNOTE",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_SIMULATE_DOPPLER",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/LISA_TDI_FS",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/OB_INDICES_0",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/OB_INDICES_1",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/OB_INDICES_2",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/OB_INDICES_3",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/OB_INDICES_4",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/OB_INDICES_5",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/SC_INDICES_0",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/SC_INDICES_1",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/SC_INDICES_2",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TDI_CLOCKCOR_MICHELSON",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TDI_CLOCKCOR_ORTHVAR",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TDI_CLOCKCOR_SAGNAC",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TDI_GENERATION",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/TDI_INPUT_FORMAT",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TDI_MEASUREMENT_FS",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/instru/config/TDI_PUBLISH_INTERVAR",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TDI_PUBLISH_MICHELSON",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TDI_PUBLISH_ORTHVAR",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TDI_PUBLISH_SAGNAC",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TDI_USE_DOPPLER_CORRECTION",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TDI_USE_FREQUENCY_FLUCTUATIONS",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TDI_USE_UPDATED_CLOCKCOR",
+    "shape": [],
+    "dtype": "bool",
+    "dtype_descr": [
+      [
+        "",
+        "|b1"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TRIPLET_INDICES_0",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TRIPLET_INDICES_1",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TRIPLET_INDICES_2",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TRIPLET_INDICES_3",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TRIPLET_INDICES_4",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/instru/config/TRIPLET_INDICES_5",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/obs/config/accnoise",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/backlinknoise",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/dirname",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/obs/config/dt",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/dt_instrument",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/dt_orbits",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/dt_tdi",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/initial_position",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/initial_rotation",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/interp_order",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/nbatch",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/nominal_arm_length",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/orbit_type",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/obs/config/physic_upsampling",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/readoutnoise",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/sim_kaiser_attenuation",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/sim_kaiser_delay",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/sim_kaiser_passband",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/sim_kaiser_stopband",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/t_max",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/t_min",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/tdi_kaiser_attenuation",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/tdi_kaiser_cutoff",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/tdi_kaiser_delay",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/tdi_kaiser_passband",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/tdi_kaiser_stopband",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/config/travel_time_order",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/obs/tdi",
+    "shape": [
+      6307200,
+      1
+    ],
+    "dtype": "[('t', '<f8'), ('X', '<f8'), ('Y', '<f8'), ('Z', '<f8')]",
+    "dtype_descr": [
+      [
+        "t",
+        "<f8"
+      ],
+      [
+        "X",
+        "<f8"
+      ],
+      [
+        "Y",
+        "<f8"
+      ],
+      [
+        "Z",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "t": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "X": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Y": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Z": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/dgb/cat",
+    "shape": [
+      26000000,
+      1
+    ],
+    "dtype": "[('Name', '<i8'), ('Amplitude', '<f8'), ('EclipticLatitude', '<f8'), ('EclipticLongitude', '<f8'), ('Frequency', '<f8'), ('FrequencyDerivative', '<f8'), ('Inclination', '<f8'), ('InitialPhase', '<f8'), ('Polarization', '<f8')]",
+    "dtype_descr": [
+      [
+        "Name",
+        "<i8"
+      ],
+      [
+        "Amplitude",
+        "<f8"
+      ],
+      [
+        "EclipticLatitude",
+        "<f8"
+      ],
+      [
+        "EclipticLongitude",
+        "<f8"
+      ],
+      [
+        "Frequency",
+        "<f8"
+      ],
+      [
+        "FrequencyDerivative",
+        "<f8"
+      ],
+      [
+        "Inclination",
+        "<f8"
+      ],
+      [
+        "InitialPhase",
+        "<f8"
+      ],
+      [
+        "Polarization",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "Name": {
+        "values": 26000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Amplitude": {
+        "values": 26000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "EclipticLatitude": {
+        "values": 26000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "EclipticLongitude": {
+        "values": 26000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Frequency": {
+        "values": 26000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "FrequencyDerivative": {
+        "values": 26000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Inclination": {
+        "values": 26000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "InitialPhase": {
+        "values": 26000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Polarization": {
+        "values": 26000000,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/dgb/config/approximant",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/dgb/config/catalogs",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/dgb/config/nsource",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/dgb/config/random_frequency",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/dgb/config/random_inclination",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/dgb/config/random_mass",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/dgb/config/seed",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/dgb/config/snr_0",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/dgb/config/snr_1",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/dgb/config/source_type",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/dgb/tdi",
+    "shape": [
+      6307200,
+      1
+    ],
+    "dtype": "[('t', '<f8'), ('X', '<f8'), ('Y', '<f8'), ('Z', '<f8')]",
+    "dtype_descr": [
+      [
+        "t",
+        "<f8"
+      ],
+      [
+        "X",
+        "<f8"
+      ],
+      [
+        "Y",
+        "<f8"
+      ],
+      [
+        "Z",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "t": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "X": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Y": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Z": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/igb/cat",
+    "shape": [
+      3000000,
+      1
+    ],
+    "dtype": "[('Name', 'S7'), ('Amplitude', '<f8'), ('EclipticLatitude', '<f8'), ('EclipticLongitude', '<f8'), ('Frequency', '<f8'), ('FrequencyDerivative', '<f4'), ('Inclination', '<f8'), ('InitialPhase', '<f8'), ('Polarization', '<f8')]",
+    "dtype_descr": [
+      [
+        "Name",
+        [
+          "|S7",
+          {
+            "h5py_encoding": "ascii"
+          }
+        ]
+      ],
+      [
+        "Amplitude",
+        "<f8"
+      ],
+      [
+        "EclipticLatitude",
+        "<f8"
+      ],
+      [
+        "EclipticLongitude",
+        "<f8"
+      ],
+      [
+        "Frequency",
+        "<f8"
+      ],
+      [
+        "FrequencyDerivative",
+        "<f4"
+      ],
+      [
+        "Inclination",
+        "<f8"
+      ],
+      [
+        "InitialPhase",
+        "<f8"
+      ],
+      [
+        "Polarization",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "Amplitude": {
+        "values": 3000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "EclipticLatitude": {
+        "values": 3000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "EclipticLongitude": {
+        "values": 3000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Frequency": {
+        "values": 3000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "FrequencyDerivative": {
+        "values": 3000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Inclination": {
+        "values": 3000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "InitialPhase": {
+        "values": 3000000,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Polarization": {
+        "values": 3000000,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/igb/config/approximant",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/igb/config/catalogs",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/igb/config/nsource",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/igb/config/random_frequency",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/igb/config/random_inclination",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/igb/config/random_mass",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/igb/config/seed",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/igb/config/source_type",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/igb/tdi",
+    "shape": [
+      6307200,
+      1
+    ],
+    "dtype": "[('t', '<f8'), ('X', '<f8'), ('Y', '<f8'), ('Z', '<f8')]",
+    "dtype_descr": [
+      [
+        "t",
+        "<f8"
+      ],
+      [
+        "X",
+        "<f8"
+      ],
+      [
+        "Y",
+        "<f8"
+      ],
+      [
+        "Z",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "t": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "X": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Y": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Z": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/cat",
+    "shape": [
+      15,
+      1
+    ],
+    "dtype": "[('EclipticLatitude', '<f8'), ('EclipticLongitude', '<f8'), ('PolarAngleOfSpin1', '<f8'), ('PolarAngleOfSpin2', '<f8'), ('Spin1', '<f8'), ('Spin2', '<f8'), ('Mass1', '<f8'), ('Mass2', '<f8'), ('CoalescenceTime', '<f8'), ('PhaseAtCoalescence', '<f8'), ('InitialPolarAngleL', '<f8'), ('InitialAzimuthalAngleL', '<f8'), ('Redshift', '<f8'), ('Distance', '<f8'), ('ObservationDuration', '<f8'), ('Cadence', '<f8')]",
+    "dtype_descr": [
+      [
+        "EclipticLatitude",
+        "<f8"
+      ],
+      [
+        "EclipticLongitude",
+        "<f8"
+      ],
+      [
+        "PolarAngleOfSpin1",
+        "<f8"
+      ],
+      [
+        "PolarAngleOfSpin2",
+        "<f8"
+      ],
+      [
+        "Spin1",
+        "<f8"
+      ],
+      [
+        "Spin2",
+        "<f8"
+      ],
+      [
+        "Mass1",
+        "<f8"
+      ],
+      [
+        "Mass2",
+        "<f8"
+      ],
+      [
+        "CoalescenceTime",
+        "<f8"
+      ],
+      [
+        "PhaseAtCoalescence",
+        "<f8"
+      ],
+      [
+        "InitialPolarAngleL",
+        "<f8"
+      ],
+      [
+        "InitialAzimuthalAngleL",
+        "<f8"
+      ],
+      [
+        "Redshift",
+        "<f8"
+      ],
+      [
+        "Distance",
+        "<f8"
+      ],
+      [
+        "ObservationDuration",
+        "<f8"
+      ],
+      [
+        "Cadence",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "EclipticLatitude": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "EclipticLongitude": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "PolarAngleOfSpin1": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "PolarAngleOfSpin2": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Spin1": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Spin2": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Mass1": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Mass2": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "CoalescenceTime": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "PhaseAtCoalescence": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "InitialPolarAngleL": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "InitialAzimuthalAngleL": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Redshift": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Distance": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "ObservationDuration": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Cadence": {
+        "values": 15,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/approximant",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/mbhb/config/catalogs",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/mbhb/config/coalescence_time_0",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/coalescence_time_1",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_0",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_1",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_10",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_11",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_12",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_13",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_14",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_2",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_3",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_4",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_5",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_6",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_7",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_8",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/indices_9",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/mass_ratio_0",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/mass_ratio_1",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/mass_total_0",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/mass_total_1",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/nsource",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/seed",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/source_type",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/mbhb/config/spin1_0",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/spin1_1",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/spin2_0",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/config/spin2_1",
+    "shape": [],
+    "dtype": "float64",
+    "dtype_descr": [
+      [
+        "",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/mbhb/tdi",
+    "shape": [
+      6307200,
+      1
+    ],
+    "dtype": "[('t', '<f8'), ('X', '<f8'), ('Y', '<f8'), ('Z', '<f8')]",
+    "dtype_descr": [
+      [
+        "t",
+        "<f8"
+      ],
+      [
+        "X",
+        "<f8"
+      ],
+      [
+        "Y",
+        "<f8"
+      ],
+      [
+        "Z",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "t": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "X": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Y": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Z": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/vgb/cat",
+    "shape": [
+      36,
+      1
+    ],
+    "dtype": "[('Name', 'S9'), ('Amplitude', '<f8'), ('Distance', '<f8'), ('Drift', '<f8'), ('EclipticLatitude', '<f8'), ('EclipticLongitude', '<f8'), ('ErrorDistance', '<f8'), ('ErrorMass1', '<f8'), ('ErrorMass2', '<f8'), ('Frequency', '<f8'), ('FrequencyDerivative', '<f8'), ('GalacticLatitude', '<f8'), ('GalacticLongitude', '<f8'), ('Inclination', '<f8'), ('InitialPhase', '<f8'), ('Mass1', '<f8'), ('Mass2', '<f8'), ('Period', '<f8'), ('Polarization', '<f8')]",
+    "dtype_descr": [
+      [
+        "Name",
+        [
+          "|S9",
+          {
+            "h5py_encoding": "ascii"
+          }
+        ]
+      ],
+      [
+        "Amplitude",
+        "<f8"
+      ],
+      [
+        "Distance",
+        "<f8"
+      ],
+      [
+        "Drift",
+        "<f8"
+      ],
+      [
+        "EclipticLatitude",
+        "<f8"
+      ],
+      [
+        "EclipticLongitude",
+        "<f8"
+      ],
+      [
+        "ErrorDistance",
+        "<f8"
+      ],
+      [
+        "ErrorMass1",
+        "<f8"
+      ],
+      [
+        "ErrorMass2",
+        "<f8"
+      ],
+      [
+        "Frequency",
+        "<f8"
+      ],
+      [
+        "FrequencyDerivative",
+        "<f8"
+      ],
+      [
+        "GalacticLatitude",
+        "<f8"
+      ],
+      [
+        "GalacticLongitude",
+        "<f8"
+      ],
+      [
+        "Inclination",
+        "<f8"
+      ],
+      [
+        "InitialPhase",
+        "<f8"
+      ],
+      [
+        "Mass1",
+        "<f8"
+      ],
+      [
+        "Mass2",
+        "<f8"
+      ],
+      [
+        "Period",
+        "<f8"
+      ],
+      [
+        "Polarization",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "Amplitude": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Distance": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Drift": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "EclipticLatitude": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "EclipticLongitude": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "ErrorDistance": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "ErrorMass1": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "ErrorMass2": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Frequency": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "FrequencyDerivative": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "GalacticLatitude": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "GalacticLongitude": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Inclination": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "InitialPhase": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Mass1": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Mass2": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Period": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Polarization": {
+        "values": 36,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/vgb/config/approximant",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/vgb/config/catalogs",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/vgb/config/nsource",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/vgb/config/seed",
+    "shape": [],
+    "dtype": "int64",
+    "dtype_descr": [
+      [
+        "",
+        "<i8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "<value>": {
+        "values": 1,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  },
+  {
+    "path": "/sky/vgb/config/source_type",
+    "shape": [],
+    "dtype": "object",
+    "dtype_descr": [
+      [
+        "",
+        "|O"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {}
+  },
+  {
+    "path": "/sky/vgb/tdi",
+    "shape": [
+      6307200,
+      1
+    ],
+    "dtype": "[('t', '<f8'), ('X', '<f8'), ('Y', '<f8'), ('Z', '<f8')]",
+    "dtype_descr": [
+      [
+        "t",
+        "<f8"
+      ],
+      [
+        "X",
+        "<f8"
+      ],
+      [
+        "Y",
+        "<f8"
+      ],
+      [
+        "Z",
+        "<f8"
+      ]
+    ],
+    "compression": null,
+    "numeric_fields": {
+      "t": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "X": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Y": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      },
+      "Z": {
+        "values": 6307200,
+        "nan_count": 0,
+        "inf_count": 0
+      }
+    }
+  }
+]

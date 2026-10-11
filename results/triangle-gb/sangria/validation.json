@@ -1,0 +1,125 @@
+{
+  "scope": "Full input scan, full dgb parameter-cache preparation and unchanged non-plot Example 3 interface cells; not a complete notebook execution.",
+  "created_utc": "2026-10-11T09:09:42.474639+00:00",
+  "checks": {
+    "verified_input_sha256": true,
+    "default_dgb_all_numeric_values_finite": true,
+    "full_cache_exact_roundtrip_against_catalog": true,
+    "original_dgb_channel_fft_parameter_band_and_template_interfaces": true,
+    "observed_and_nominal_sparse_orbit_coverage": true
+  },
+  "original_cells": [
+    {
+      "zero_based_index": 6,
+      "sha256": "06cafcdc401dd0dc48e3337ee48c4515d302d7605c353e9c89295d89e4630f2a",
+      "modified": false
+    },
+    {
+      "zero_based_index": 9,
+      "sha256": "78d3cba30869d1b08e6f945e78c426e986ffc86ebbbbd90bad88c8be5d872d0a",
+      "modified": false
+    },
+    {
+      "zero_based_index": 12,
+      "sha256": "77a6d5b8a2a3fafc257aa71a6c8336b58bf70f2721403615c8fe4ac2e97f5ae6",
+      "modified": false
+    },
+    {
+      "zero_based_index": 13,
+      "sha256": "a8f63563896b11fc1fbcbb1f1b90ff1746435d6919c3238a0a42a56e3f220409",
+      "modified": false
+    },
+    {
+      "zero_based_index": 15,
+      "sha256": "f60085e211abac3cd5ca679f7584f044ef0fe1829bf54b77101ec55c4593bb9e",
+      "modified": false
+    },
+    {
+      "zero_based_index": 17,
+      "sha256": "d8a7978141cfa6c0f129b6edd23c6d1e914b6168c75cecdae5ec1dc9a6c71275",
+      "modified": false
+    },
+    {
+      "zero_based_index": 18,
+      "sha256": "b5043fd17b4caf8dd2972ee39eb9e5b8236a1ac717e286853282d24215db13a2",
+      "modified": false
+    },
+    {
+      "zero_based_index": 22,
+      "sha256": "498200fec3afddd8ac018a5cd7a8c7cbbf26bb65b0dc742df768ebfcbb882237",
+      "modified": false
+    },
+    {
+      "zero_based_index": 24,
+      "sha256": "aa786ca58f79e1f4c54a692c78e074720d1165a4539fb71d73845b6829f1a944",
+      "modified": false
+    }
+  ],
+  "default_shapes": {
+    "cat": [
+      26000000,
+      1
+    ],
+    "tdi": [
+      6307200,
+      1
+    ]
+  },
+  "time_and_orbit": {
+    "dt_seconds": 5.0,
+    "data_start_seconds": 0.0,
+    "data_end_seconds": 31535995.0,
+    "samples": 6307200,
+    "orbit_rows": 1827,
+    "orbit_start_seconds": 0.0,
+    "orbit_end_seconds": 157766400.0,
+    "sparse_end_seconds": 31536000.0,
+    "delayed_query_min_seconds": -25.017307139861366,
+    "delayed_query_max_seconds": 31536000.0,
+    "negative_start_boundary_extrapolation_seconds": 25.017307139861366
+  },
+  "selected_band": {
+    "center_hz": 0.004000163435084699,
+    "sources": 39,
+    "frequency_bins": 315,
+    "template_shape": [
+      2,
+      315
+    ]
+  },
+  "parameter_conventions": {
+    "cache_columns": [
+      "A",
+      "f0",
+      "fdot0",
+      "phase0",
+      "inclination",
+      "longitude",
+      "latitude",
+      "psi"
+    ],
+    "catalog_fields": [
+      "Amplitude",
+      "Frequency",
+      "FrequencyDerivative",
+      "InitialPhase",
+      "Inclination",
+      "EclipticLongitude",
+      "EclipticLatitude",
+      "Polarization"
+    ],
+    "after_loading": "Original cell 15: psi += pi/2; phase0 *= -1. Cache retains original pre-transform catalog values."
+  },
+  "cache": {
+    "local_ignored_path": "runs/triangle-gb/workspace/Triangle-GB/Test/dgb_parameters.txt",
+    "rows": 26000000,
+    "columns": 8,
+    "bytes": 5218391053,
+    "sha256": "38177fda2a108b1076055237e737a4d2a3ef03ce5aeba7994e87014f138aa3c3",
+    "all_rows_verified": true,
+    "upstream_supported_loadtxt_branch_used": true
+  },
+  "nonfinite_optional_fields": [],
+  "all_preparation_checks_pass": true,
+  "elapsed_seconds": 95.77267516699976
+}

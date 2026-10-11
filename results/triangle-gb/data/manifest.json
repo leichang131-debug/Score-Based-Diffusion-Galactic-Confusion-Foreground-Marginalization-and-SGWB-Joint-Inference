@@ -1,15 +1,15 @@
 {
-  "scope": "Local input download and checks; strict orbit coverage remains unconfirmed. Bulk inputs are ignored, not committed.",
+  "scope": "Current files snapshot; original source/data scientific checks retain their recorded scope and dates.",
   "files": [
     {
       "path": "data/triangle-gb/README.md",
-      "bytes": 1543,
-      "sha256": "1679a1677ed2368dcc97d45fac979e4c53af157a85f6c87cdc44bf3aa11a9d18"
+      "bytes": 1704,
+      "sha256": "eb739794a6cd2efb9077e4d598cd8b97ec1618bec692cf40195ce61e141eabf6"
     },
     {
       "path": "docs/reproduction/triangle-gb/data-preparation.md",
-      "bytes": 6731,
-      "sha256": "2cc9006983b5cf83452b7ea9cebbf12a8267949d28cd44cee5574de4794cd6e4"
+      "bytes": 6902,
+      "sha256": "81389fad85e0357781a1be4b11921d02bd070c2fd908cef22360683165f309a8"
     },
     {
       "path": "results/triangle-gb/data/README.md",

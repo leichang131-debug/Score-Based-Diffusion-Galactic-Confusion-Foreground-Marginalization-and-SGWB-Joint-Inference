@@ -1,0 +1,152 @@
+{
+  "scope": "Prerequisite/interface checks, including original network preparation and Fisher/prior cells; no likelihood scans or nested sampling.",
+  "created_utc": "2026-10-11T09:06:57.724899+00:00",
+  "checks": {
+    "original_import_and_all_autoloaded_modules": {
+      "passed": true,
+      "seconds": 1.231620374999693,
+      "detail": {
+        "Triangle_BBH": "external/triangle-bbh/Triangle_BBH/__init__.py",
+        "Triangle_BBH.Fisher": "external/triangle-bbh/Triangle_BBH/Fisher.py",
+        "Triangle_BBH.Utils": "external/triangle-bbh/Triangle_BBH/Utils.py",
+        "Triangle_BBH.Waveform": "external/triangle-bbh/Triangle_BBH/Waveform.py",
+        "Triangle_BBH.Response": "external/triangle-bbh/Triangle_BBH/Response.py",
+        "WF4Py": "external/triangle-bbh/WF4Py/WF4Py/__init__.py",
+        "WF4Py.waveforms": "external/triangle-bbh/WF4Py/WF4Py/waveforms.py"
+      }
+    },
+    "analytic_correlated_two_channel_fisher_and_errors": {
+      "passed": true,
+      "seconds": 0.0011061249988415511,
+      "detail": {
+        "Fisher": [
+          [
+            151.99999999996652,
+            57.055999999987336
+          ],
+          [
+            57.055999999987336,
+            94.11199999997879
+          ]
+        ],
+        "expected_Fisher": [
+          [
+            152.00000000000028,
+            57.05599999999998
+          ],
+          [
+            57.05599999999998,
+            94.11199999999998
+          ]
+        ],
+        "CovMatrix": [
+          [
+            0.008517202977650792,
+            -0.005163608605627819
+          ],
+          [
+            -0.005163608605627819,
+            0.013756108175396626
+          ]
+        ],
+        "param_errors": {
+          "a": 0.09228869366098315,
+          "b": 0.11728643645109449
+        },
+        "tuned_steps": {
+          "a": 0.0005,
+          "b": 0.0005
+        },
+        "condition_number": 3.165859130332988
+      }
+    },
+    "original_network_tex_plotting_prerequisite": {
+      "passed": true,
+      "seconds": 0.09599704100037343,
+      "detail": {
+        "latex": "/Users/leichang/Downloads/Python\u5e93/TinyTeX/bin/universal-darwin/latex",
+        "dvipng": "/Users/leichang/Downloads/Python\u5e93/TinyTeX/bin/universal-darwin/dvipng",
+        "real_png_render": true
+      }
+    },
+    "original_network_fisher_and_prior_preparation": {
+      "passed": true,
+      "seconds": 0.9638882500003092,
+      "detail": {
+        "original_cells": [
+          {
+            "cell_zero_based": 0,
+            "source_sha256": "9604fd937448a20577f78c6ec50aa6e4123f9c22499e5380ef273032dcb7b168",
+            "modified": false
+          },
+          {
+            "cell_zero_based": 2,
+            "source_sha256": "fbbdd1edb010df046599c144ce0f123b2c68d8622ec0d0f83adb9b91e7c63084",
+            "modified": false
+          },
+          {
+            "cell_zero_based": 4,
+            "source_sha256": "4954f72f9724b6af84fff3e7e3d6131990d0c101014bbe4bc0fe522220e2454c",
+            "modified": false
+          },
+          {
+            "cell_zero_based": 5,
+            "source_sha256": "4781e75ba7f3ec25abd5a6cb42573391736176a28b5ed080edaba9a106f6bd71",
+            "modified": false
+          },
+          {
+            "cell_zero_based": 7,
+            "source_sha256": "d9bac5b3f7fa316d204834d6e84d4df34326cd388e61d57e6e644c7a0acd8771",
+            "modified": false
+          },
+          {
+            "cell_zero_based": 9,
+            "source_sha256": "f3be9c7e86f021208c78cc44b393b2deebc8dcaabd654c9933d16f13fb3ead76",
+            "modified": false
+          },
+          {
+            "cell_zero_based": 11,
+            "source_sha256": "cdb3b5ab92866c652f9a71170d7e2316aea53883c70583cc9920a482ee8495ad",
+            "modified": false
+          },
+          {
+            "cell_zero_based": 13,
+            "source_sha256": "d4b049e78a91e94732a7fa1e57e730bbdda9d404268fba6ac7e44453c031a56c",
+            "modified": false
+          },
+          {
+            "cell_zero_based": 15,
+            "source_sha256": "d70089b9ed78294f6cb055b4a12cd506ea3355f0a654c069ae0e6eda5e273df7",
+            "modified": false
+          },
+          {
+            "cell_zero_based": 17,
+            "source_sha256": "3314402f1fa3f0d50dbbfd8de93f4ebac0cb76f242fbfa066f733dbcc9cbf08a",
+            "modified": false
+          }
+        ],
+        "Fisher_shape": [
+          8,
+          8
+        ],
+        "condition_number": 1.3382425267932264e+49,
+        "param_errors": {
+          "A": 7.738633909011062e-24,
+          "f0": 5.5607156891737156e-11,
+          "fdot0": 8.505766164365281e-19,
+          "inclination": 0.19476611851431097,
+          "longitude": 0.0005827773433147217,
+          "latitude": 0.003206846627452248,
+          "phase0": 1.023372125335684,
+          "psi": 0.5115771401350871
+        },
+        "sampled_priors_finite": true,
+        "likelihood_at_truth": -19073.446987945455,
+        "note": "Original four-year grid and Fisher/prior preparation only; no scan or sampler cells executed."
+      }
+    }
+  },
+  "all_checks_pass": true,
+  "elapsed_seconds": 2.2928052920015034,
+  "bbh_commit": "f99b0a34ea8d085aff67220bdc165a746ba5ceda"
+}

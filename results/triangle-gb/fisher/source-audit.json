@@ -1,0 +1,408 @@
+{
+  "pinned_commit": "f99b0a34ea8d085aff67220bdc165a746ba5ceda",
+  "source_url": "https://github.com/TriangleDataCenter/Triangle-BBH",
+  "all_tracked_files_match_git_blobs": true,
+  "source_clean": true,
+  "files": [
+    {
+      "path": "external/triangle-bbh/.gitignore",
+      "bytes": 10700,
+      "sha256": "4ff5fa1bf824240c15ce475fae5beed8739221232e367e95f2b002f4a4b92b6e"
+    },
+    {
+      "path": "external/triangle-bbh/BBHx-master.zip",
+      "bytes": 6488253,
+      "sha256": "9458571ff8a3e25514ee9c20e60223566bc36da7c5e49eea5e908ffc008d568a"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/0_Frequency_Domain_Simulation(GPU).ipynb",
+      "bytes": 137586,
+      "sha256": "b38542219118dbed704097dd154fcb8304932f00dac93bdb9e2f98a86770c20e"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/1_MBHB_Parameter_Estimation_AE_Full(GPU).ipynb",
+      "bytes": 4183335,
+      "sha256": "407678492a77fb4c94e049119bd2d6bec72bd17f019e9c6a66a8548b11c24b1d"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/2_MBHB_Parameter_Estimation_AE_Heterodyne(GPU).ipynb",
+      "bytes": 5310496,
+      "sha256": "f5b749d2bff83e430427fb408842da34aaa438035b5b42cfb23c159b22da990e"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/3_Compare_TD_FD(CPU).ipynb",
+      "bytes": 311080,
+      "sha256": "7d69c9d63837e3a991eee5036ce39165bc13824bc7072df88cf85554f17e57e7"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/4_TDC_Verification_MBHB_Search_and_Estimation(CPU).ipynb",
+      "bytes": 2176695,
+      "sha256": "79bc05d15241678d0d21e3a2d96a7f30495fd04816510a6069df1038fe65ce45"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/5_TDC_Verification_MBHB_Search_and_Estimation(GPU).ipynb",
+      "bytes": 3518663,
+      "sha256": "1d5850a865ea2432e515f1e6ce8fb439f24ac7cffcd0f688aca5a458a6513921"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/6_Search_MBHB_in_LDC2B_Data.ipynb",
+      "bytes": 323330,
+      "sha256": "58b589e94695651212014f8b0150b2c2ad2ffb4909c439ed8b4beb41daf3a000"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/7_ParameterEstimationForHMWaveform.ipynb",
+      "bytes": 1585942,
+      "sha256": "8478b415a3dbd6987a41770facfd7e88b38a4dcfb558e211e3ca0719fbe58e53"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/FDSimulationData.pkl",
+      "bytes": 1160751,
+      "sha256": "fe46f43e807ed1eb1004345b4e12408669ef9e55472db4382a04b25bae4e38fa"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/MBHB_network_PE_example_for_2609.16477.ipynb",
+      "bytes": 1614925,
+      "sha256": "8193294cef438ef68fd825ee1fbde83f190668615ca97b33e0ff83196f799734"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/MCMC_corner_compare.jpg",
+      "bytes": 3599756,
+      "sha256": "d60446e65fafff7579384b70990319c180c41d5c7e60401601a1169fbf49cd25"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/MCMC_corner_full.jpg",
+      "bytes": 3572181,
+      "sha256": "db778715b58964291a303a76f555eb4c4bb5608f69146499bd84d19568c0cd40"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/MCMC_corner_het.jpg",
+      "bytes": 3241789,
+      "sha256": "613c2f23773148a1e9d905beda7ab8919446af4a8ed18fb39a8679324a53698e"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/chain_full.npy",
+      "bytes": 704128,
+      "sha256": "bb0f540c35efcc3024e2678fd7d124622d27cfd05237eee2c8b9aca6acf99dd3"
+    },
+    {
+      "path": "external/triangle-bbh/Examples/chain_het.npy",
+      "bytes": 2816128,
+      "sha256": "e42dac3629831f9f70e8dd02374228e340c08e373a5c1b23b40fdc15611af304"
+    },
+    {
+      "path": "external/triangle-bbh/Figures/TD_vs_FD.jpg",
+      "bytes": 117210,
+      "sha256": "1b8a961c1859c18a092b64203f0d43967126ab0776d49f14d8e4f806e138322d"
+    },
+    {
+      "path": "external/triangle-bbh/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "external/triangle-bbh/README.md",
+      "bytes": 3006,
+      "sha256": "171448d0f97acd64d58ae13b7189efe88d20810bb378d490fa0150d2e78ad2e2"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/Fisher.py",
+      "bytes": 22186,
+      "sha256": "d1bc5e4a3e78f8764a620ed4e7ac66135675c0d926b90fb2cd6ee2da3aa2b710"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/Response.py",
+      "bytes": 91435,
+      "sha256": "c9b2525d20b76c78c2ab9ddeece12355ba2deb972bf61f2f4d3edd55680728b7"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/Utils.py",
+      "bytes": 98189,
+      "sha256": "5656459005db2c398b88ee3c552e3afec68b91ab24918aa38bdf05df9a186144"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/Waveform.py",
+      "bytes": 21043,
+      "sha256": "1e6ce46036c154cb63aa0d9bb2cd02685d1d6d0439c1c4007c96fc4688e9c447"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/__init__.py",
+      "bytes": 431,
+      "sha256": "54d7c423200bc0ea681a664d25a94be6c72feab871fa1e5c25d4e029e326bc4a"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/__pycache__/Constants.cpython-39.pyc",
+      "bytes": 1233,
+      "sha256": "b354dc2b42ccaac554458e215a310f12c58ec279aea84874f2e4d08ed3b51082"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/__pycache__/FFTTools.cpython-39.pyc",
+      "bytes": 2937,
+      "sha256": "f2dceeb6927d8e98cdb6538d1dbb00e1e8a136b5368feea4413a3b8b6a9370e0"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/__pycache__/Fisher.cpython-39.pyc",
+      "bytes": 9704,
+      "sha256": "8bda48ebde37f28a3e5a49b2ed20080faec7a498fb6a57e005464886e7d3a7db"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/__pycache__/Noise.cpython-39.pyc",
+      "bytes": 9231,
+      "sha256": "73495bfdb88dc6a363b2d3706bdebaa16ff706af949708a756917b9398e4df70"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/__pycache__/Orbit.cpython-39.pyc",
+      "bytes": 3268,
+      "sha256": "66f0dcecc7983fe5da41cb07658dda2bc60ff3687344f05aacb3d79537a9e708"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/__pycache__/Response.cpython-39.pyc",
+      "bytes": 33227,
+      "sha256": "7bbad969d8ac6294c3e73b03a0ecbb988aa7f6eaa5a69f657f296e9ae9ac4183"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/__pycache__/Utils.cpython-39.pyc",
+      "bytes": 14925,
+      "sha256": "8ee451ef46103a78c22cba0ac278836bdc3cf11573988236df03447152e88c65"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/__pycache__/Waveform.cpython-39.pyc",
+      "bytes": 7723,
+      "sha256": "ea5573f13f6c13a5cfc605f30deceaf0d1172dc88b64bdfd6838e26cf2cfcd23"
+    },
+    {
+      "path": "external/triangle-bbh/Triangle_BBH/__pycache__/__init__.cpython-39.pyc",
+      "bytes": 445,
+      "sha256": "ad13b358950b90470c8291b46ee859d89d9b51f8642f1146baa5fcf3f1b68fa9"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/.gitignore",
+      "bytes": 10661,
+      "sha256": "8922fcb6a71bb175db607941e6796c2dd4fff2df0abe9ceb9821263067eb2fb3"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/CITATION.cff",
+      "bytes": 825,
+      "sha256": "eeaa733c82128c62b4f62a39b48031ca7f2144209aa4a1990852fc2cb5bc1dfe"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/IMRPhenomXAS_Comparison.png",
+      "bytes": 602043,
+      "sha256": "9a9f5897c44904063cfa8a080fb7f77af4e20e332d6c5941c4c05adc1a3c796a"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/LICENSE",
+      "bytes": 35242,
+      "sha256": "ea49b4819f0c446d9520096e9191eb51d1813235fa31827fea6b6a8593240cc7"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/README.md",
+      "bytes": 7345,
+      "sha256": "19d2fb4289a6a80df0aeaabf3d4b4a7966141be98b1cd8707a4b3029291dbe0a"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/.gitignore",
+      "bytes": 10661,
+      "sha256": "8922fcb6a71bb175db607941e6796c2dd4fff2df0abe9ceb9821263067eb2fb3"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/WFfiles/QNMData_a.txt",
+      "bytes": 25576,
+      "sha256": "d225586b13d6438b09053de9d24034493661b8dcb26187fcc51fdbba6c67bbf5"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/WFfiles/QNMData_fdamp.txt",
+      "bytes": 25075,
+      "sha256": "e211ca6e227b4a892f58de1b2604ebfa3c3ecf5ec626809c397d31d9ec46ada6"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/WFfiles/QNMData_fring.txt",
+      "bytes": 25075,
+      "sha256": "9f695695a2342f1ef42075d3ebc4ec56ffe864edc4b9fec03a2cdbf0d52cddff"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/WFfiles/xiTide_Table_200.h5",
+      "bytes": 47802143,
+      "sha256": "437eb4af8ce291a0da6f34c1e6c191329c5cf47765b2cdc5581029e37d56f70b"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/WFutils.py",
+      "bytes": 17308,
+      "sha256": "4912c88b1d958a3d774a99fc427f7fe507372c361b57309c767796ebb5dfbb65"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/__init__.py",
+      "bytes": 48,
+      "sha256": "65d7375ced3610f3f3e831f4471511f94d582654c2dd6e57cb62b0345ce4a1b7"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/IMRPhenomD.py",
+      "bytes": 37675,
+      "sha256": "36cf0480592bfa9642c2be0088185a5ed7a3fc807ee5cf59bc839fc3005ddb11"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/IMRPhenomD_NRTidalv2.py",
+      "bytes": 44545,
+      "sha256": "c123fa60a3e6e64b465dc6d3191569dffa231b748cb0a2cac6bff0456fb47bd5"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/IMRPhenomHM.py",
+      "bytes": 88353,
+      "sha256": "157914664fa28bfa9aa67a212daddccef8f1f65501120b825be6c583e1dd8f25"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/IMRPhenomNSBH.py",
+      "bytes": 47415,
+      "sha256": "5fe21e805a0999fe9607bb2a26f0b6846fd2a3883a73584b36e598974d2aa5ad"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/IMRPhenomXAS.py",
+      "bytes": 103859,
+      "sha256": "312c3297f5f5241b12ad05eea71058f97bf66e65e499ef0e4cf271a479572bfc"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/TaylorF2_RestrictedPN.py",
+      "bytes": 21339,
+      "sha256": "e3f297fec037d0dd21072759a3c02efe6907fa79f06463e10e746b02c9de8ac8"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/WFclass_definition.py",
+      "bytes": 8431,
+      "sha256": "0d1b6f73200c57619c24460fccd65538fcb3582c718b8bd1d27904dde3e932fd"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/__pycache__/IMRPhenomD.cpython-39.pyc",
+      "bytes": 24573,
+      "sha256": "11fc84d76f06ccb554c1be8785bcb62d7cb3504e4b360332255aa0cc33566b45"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/__pycache__/IMRPhenomD_NRTidalv2.cpython-39.pyc",
+      "bytes": 28215,
+      "sha256": "1338db7698d687c86eb08494e106727627819e4b62beb6ee105e7642b42c6450"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/__pycache__/IMRPhenomHM.cpython-39.pyc",
+      "bytes": 52705,
+      "sha256": "20fcdbda1629c8e8a58ea03026ba25b1732eb3302380bab085e879b96e8f09be"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/__pycache__/IMRPhenomNSBH.cpython-39.pyc",
+      "bytes": 28866,
+      "sha256": "6e2f2685ef46056cea9357a722c6e6a13d523e21a42c17ab348921bd7abe6bec"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/__pycache__/IMRPhenomXAS.cpython-39.pyc",
+      "bytes": 67469,
+      "sha256": "370c92ef47fa531170940739b37a8b6736866c4a7c3ba4e8a9882ce9d40d6628"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/__pycache__/TaylorF2_RestrictedPN.cpython-39.pyc",
+      "bytes": 15044,
+      "sha256": "f068fe0bfab6c7c3c9947b0ae367eff00d14985b8cd30624c805d0b87d122333"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveform_models/__pycache__/WFclass_definition.cpython-39.pyc",
+      "bytes": 6019,
+      "sha256": "b7091520241f2ce4960191a60c84adf55466e4ce1a437eb5a772e50cbb70fd95"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py/waveforms.py",
+      "bytes": 896,
+      "sha256": "c9ccd874f761a20fbc1d37bc444ec9748a294ab6838648cb8acfcfd1b0ced5bf"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/WF4Py_tutorial.ipynb",
+      "bytes": 1598424,
+      "sha256": "3ce44b59bc4a9fffa66bab2776a562f04387fb5014d97071cc9a5bc4c47db044"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/Makefile",
+      "bytes": 638,
+      "sha256": "e33bf74d59130029ba24168a813112dd923d7044d780ce942db6645d93f56acf"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/README.md",
+      "bytes": 1273,
+      "sha256": "4af44db33e6e1212b5cc000858ba01b5de3473110d42ef334c19729195be9970"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/docs_requirements.txt",
+      "bytes": 172,
+      "sha256": "cbf8b215c5da0cae83f14603b7aef05c1e46317f2bd0ffa0d651f1faf4872870"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/make.bat",
+      "bytes": 804,
+      "sha256": "2f82394fbb835088f01b231127ecbd1684fad6cc48c82b9a62e2722edf1cfa70"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/source/WF4Py_logo.png",
+      "bytes": 58931,
+      "sha256": "3a4487535c9c717ce9356e5ce8c95312d95e328e3ae4d5f04fba2cf6685dda96"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/source/_static/WF4Py_logo.png",
+      "bytes": 58931,
+      "sha256": "3a4487535c9c717ce9356e5ce8c95312d95e328e3ae4d5f04fba2cf6685dda96"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/source/_static/custom.css",
+      "bytes": 4222,
+      "sha256": "747b8b0f001b96920f3ec17865f800921e0b4863c40e54790290749a89805601"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/source/citation.rst",
+      "bytes": 1537,
+      "sha256": "06c48a65e65fc7caa6b5096c2a5d5bff46d6c7027b5b6fb1c8c2c37f5bd1fbb3"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/source/conf.py",
+      "bytes": 4204,
+      "sha256": "2c0d0e5fe53f744892fb902ac08e40c1e180186be83f6273d9248e5e9302e96d"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/source/events_parameters.rst",
+      "bytes": 16955,
+      "sha256": "4551ee86ff52b91f0402cfbb7fef32519589a2c06bfda93c33e0694aead65714"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/source/index.rst",
+      "bytes": 1153,
+      "sha256": "aad5cba1782908cb88743768bb763c449f184f3bf35ceae6272220f3361f0fee"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/source/installation.rst",
+      "bytes": 484,
+      "sha256": "e189b3292b48dd57ad83e6a17aae0a842f1d8e4944562ed6207e097959639ff5"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/source/notebooks/WF4Py_tutorial.ipynb",
+      "bytes": 923084,
+      "sha256": "14daef1c2f9c76f1cfa3e6b26c8a7cff799738d66cc34a1d591b6e0fb398d558"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/source/utilities.rst",
+      "bytes": 1510,
+      "sha256": "75f42c436f1db3e4af6f0cab9638fac3be6c886ee0c6e4a22b20ba56738998d9"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/docs/source/waveforms.rst",
+      "bytes": 7763,
+      "sha256": "0a0e51db0d63166fccac9d552f71e396dcca959671f9ec606b766747ef5b80d0"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/requirements.txt",
+      "bytes": 16,
+      "sha256": "c81ce271b9aa152d3af22a2d77c080b4fdcca2cdaaf39677dc6755ff33662dec"
+    },
+    {
+      "path": "external/triangle-bbh/WF4Py/setup.py",
+      "bytes": 733,
+      "sha256": "6922a5577edd0e2e0be28fc111cf2d4c52d72c1e6a9592f41aca1db3670a3937"
+    },
+    {
+      "path": "external/triangle-bbh/setup.py",
+      "bytes": 2185,
+      "sha256": "02530e3fbdc1803cd628e5d19c003c20176335656df0289eca15eb41d7288b4c"
+    }
+  ]
+}

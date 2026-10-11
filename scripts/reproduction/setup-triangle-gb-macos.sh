@@ -7,6 +7,7 @@ export UV_PYTHON_INSTALL_DIR="${UV_PYTHON_INSTALL_DIR:-$REPO_ROOT/../.python-run
 mkdir -p "$UV_CACHE_DIR"
 [[ "$(uname -m)" == arm64 && "$(uname -s)" == Darwin ]]
 python3 "$REPO_ROOT/scripts/reproduction/audit-triangle-gb-source.py"
+python3 "$REPO_ROOT/scripts/reproduction/audit-triangle-bbh-source.py"
 uv python install 3.11.14
 if [[ ! -x "$ENV_DIR/.venv/bin/python" ]]; then
   uv venv --python "$UV_PYTHON_INSTALL_DIR/cpython-3.11.14-macos-aarch64-none/bin/python3.11" "$ENV_DIR/.venv"
@@ -16,6 +17,9 @@ uv pip sync --python "$ENV_DIR/.venv/bin/python" --require-hashes "$ENV_DIR/requ
 # Triangle must precede Triangle_GB. Editable installation preserves pinned source.
 uv pip install --python "$ENV_DIR/.venv/bin/python" --no-deps --no-build-isolation --editable "$REPO_ROOT/external/triangle-simulator"
 uv pip install --python "$ENV_DIR/.venv/bin/python" --no-deps --no-build-isolation --editable "$REPO_ROOT/external/triangle-gb"
+test "$(git -C "$REPO_ROOT/external/triangle-bbh" rev-parse HEAD)" = f99b0a34ea8d085aff67220bdc165a746ba5ceda
+uv pip install --python "$ENV_DIR/.venv/bin/python" --no-deps --no-build-isolation --editable "$REPO_ROOT/external/triangle-bbh/WF4Py"
+uv pip install --python "$ENV_DIR/.venv/bin/python" --no-deps --no-build-isolation --editable "$REPO_ROOT/external/triangle-bbh"
 uv pip check --python "$ENV_DIR/.venv/bin/python"
 "$ENV_DIR/.venv/bin/python" -m ipykernel install --prefix "$ENV_DIR/.venv" --name triangle-gb --display-name 'Triangle-GB — Python 3.11.14 (CPU)'
 "$ENV_DIR/.venv/bin/python" "$REPO_ROOT/scripts/reproduction/prepare-triangle-gb-paths.py"
