@@ -79,3 +79,7 @@ See [prerequisite completion](../../docs/reproduction/triangle-gb/prerequisites-
 ## Triangle-GB Example 0
 
 `run-triangle-gb-example-0.py` executes all unchanged original cells at full default scale, clears source outputs, saves the same-name notebook and local figures, times and numerical evidence. `audit-triangle-gb-example-0.py` verifies source correspondence, execution, finite arrays and upstream mismatch precision, and writes the evidence manifest. See the [report](../../docs/reproduction/triangle-gb/example-0.md).
+
+## Triangle-GB Example 1
+
+`run-triangle-gb-example-1.py` executes the unchanged original VGB rapid-search notebook with fresh local outputs and original multiprocessing defaults. `audit-triangle-gb-example-1.py` verifies input hashes, source correspondence, optimization, the F-statistic/residual identity and saved local outputs. See [report](../../docs/reproduction/triangle-gb/example-1.md).

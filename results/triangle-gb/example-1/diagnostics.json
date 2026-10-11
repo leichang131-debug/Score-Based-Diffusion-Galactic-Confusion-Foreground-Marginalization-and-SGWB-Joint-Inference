@@ -1,0 +1,150 @@
+{
+  "python": "3.11.14",
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "cpu_count": 10,
+  "start_method": "fork",
+  "dt_seconds": 10.0,
+  "Tobs_seconds": 31471750.0,
+  "Nsparse": 512,
+  "source_index": 4,
+  "time_axis": {
+    "shape": [
+      3147175
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "eb7af7898d33995d40d258cb8a1ff9b732241bbcf420a39f9f78b1e26c8bdecb"
+  },
+  "td": {
+    "shape": [
+      2,
+      3147175
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "132e1f799aee07ff593fb1d373a3941efb2f71f3f049a1fc536bc82a300c2103"
+  },
+  "band_frequency": {
+    "shape": [
+      157
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "4d31ff548c704004f9e72b5be2eacb0163cb498160195716a3bbd1c91da0fb93"
+  },
+  "band_data": {
+    "shape": [
+      2,
+      157
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "cafab0f4f26ca3fbb8aa5eaadcf13375cd2f46dcaa7976b8aa740f3dfe392869"
+  },
+  "recovered_waveform": {
+    "shape": [
+      2,
+      157
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "b5e81172c0f0076c15f06dfd8fc93df891ce0b19d865a2833ce7a2127a1ef351"
+  },
+  "residual": {
+    "shape": [
+      2,
+      157
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "6d940649ce7b32d97f8ffd56acdb31d2c20bd9a622c6e1e8cf8bd658c77e36d3"
+  },
+  "PSDlevel": 9.052560408655443e-43,
+  "band_width_hz": 5e-06,
+  "band_first_index": 101408,
+  "band_last_index": 101564,
+  "priors": [
+    [
+      0.003222223104847999,
+      0.003227179931208147
+    ],
+    [
+      0.0,
+      7.298560749333524e-16
+    ],
+    [
+      0.0,
+      6.283185307179586
+    ],
+    [
+      -1.0,
+      1.0
+    ]
+  ],
+  "true_parameters": {
+    "A": 9.517180373037876e-23,
+    "f0": 0.0032247077104776,
+    "fdot0": 5.536765590227253e-17,
+    "inclination": 1.0471975511965976,
+    "latitude": -0.3548927927646199,
+    "longitude": 0.4294914200344345,
+    "phase0": 1.3208186729980294,
+    "psi": 2.099368941065471
+  },
+  "searched_parameters": {
+    "f0": 0.003224708582897065,
+    "fdot0": 6.6626683450372284e-18,
+    "longitude": 0.43158728171252797,
+    "latitude": -0.35419369150036634,
+    "A": 9.774896235018748e-23,
+    "inclination": 1.0655360926051698,
+    "psi": 2.114852146710723,
+    "phase0": 1.2455487002954408
+  },
+  "parameter_absolute_differences": {
+    "f0": 8.724194647952155e-10,
+    "fdot0": 4.8704987557235307e-17,
+    "longitude": 0.002095861678093447,
+    "latitude": 0.0006991012642535432,
+    "A": 2.5771586198087253e-24,
+    "inclination": 0.018338541408572162,
+    "psi": 0.015483205645252074,
+    "phase0": 0.0752699727025885
+  },
+  "optimizer": {
+    "success": true,
+    "message": "Optimization terminated successfully.",
+    "fun": -3126.034075702296,
+    "nit": 85,
+    "nfev": 6880,
+    "x": [
+      0.5014252807096056,
+      0.00912874273964992,
+      0.06868924926014319,
+      0.3265828900029642
+    ],
+    "population_shape": [
+      80,
+      4
+    ],
+    "population_energy_std": 0.002034939322257418
+  },
+  "true_F": [
+    3125.9607886122253
+  ],
+  "best_F": [
+    3126.034075702296
+  ],
+  "per_channel_residual_over_data_l2": [
+    0.2732071358304736,
+    0.32722815185735626
+  ],
+  "data_weighted_norm": 6873.85147942747,
+  "residual_weighted_norm": 621.7833280228776,
+  "module_files": {
+    "Triangle.GW": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-simulator/Triangle/GW.py",
+    "Triangle.Orbit": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-simulator/Triangle/Orbit.py",
+    "Triangle_GB.TDIFly": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-gb/Triangle_GB/TDIFly.py"
+  }
+}

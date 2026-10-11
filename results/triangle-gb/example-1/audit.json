@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "checks": {
+    "same_filename": true,
+    "same_cell_count": true,
+    "same_code_and_markdown": true,
+    "same_attachments": true,
+    "upstream_clean": true,
+    "execution_success": true,
+    "all_nonempty_code_cells_executed": true,
+    "no_errors": true,
+    "four_local_figures": true,
+    "notebook_hash_matches": true,
+    "original_full_scale": true,
+    "finite_waveforms": true,
+    "positive_finite_psd": true,
+    "optimizer_success": true,
+    "search_inside_bounds": true,
+    "finite_recovered_parameters": true,
+    "objective_recomputed": true,
+    "best_F_not_worse_than_truth": true,
+    "upstream_objective_neighborhood": true,
+    "saved_arrays_finite": true,
+    "residual_matches_data_minus_waveform": true,
+    "F_residual_identity": true,
+    "residual_power_reduced": true,
+    "simulator_pin_and_clean": true,
+    "actual_module_origins": true,
+    "input_identity_0_1_VGB_TDIXYZ.h5": true,
+    "input_identity_0_1_VGB_parameters.h5": true,
+    "figure_7_matches_local_notebook": true,
+    "figure_10_matches_local_notebook": true,
+    "figure_15_matches_local_notebook": true,
+    "figure_26_matches_local_notebook": true
+  },
+  "inputs": [
+    {
+      "path": "data/raw/triangle-gb/0_1_VGB_TDIXYZ.h5",
+      "bytes": 100707680,
+      "md5": "01b91a77eef8ae14b12473fa11b9f5ce",
+      "sha256": "766b50adaabe7dfca1a7cff853845a920f5467b2ffb7ef6e064231ba1ed6bdb3"
+    },
+    {
+      "path": "data/raw/triangle-gb/0_1_VGB_parameters.h5",
+      "bytes": 7904,
+      "md5": "53ac143f8537996bf73c2dcd2419f4f4",
+      "sha256": "484862f47179b295f8750a5733ee93d912b9a717faef88cecc7d011ad439ce9e"
+    }
+  ],
+  "figure_comparison": [
+    {
+      "cell_index": 7,
+      "reference_shape": [
+        448,
+        578,
+        4
+      ],
+      "local_shape": [
+        447,
+        579,
+        4
+      ],
+      "pixel_equal": false
+    },
+    {
+      "cell_index": 10,
+      "reference_shape": [
+        437,
+        584,
+        4
+      ],
+      "local_shape": [
+        435,
+        584,
+        4
+      ],
+      "pixel_equal": false
+    },
+    {
+      "cell_index": 15,
+      "reference_shape": [
+        432,
+        584,
+        4
+      ],
+      "local_shape": [
+        433,
+        584,
+        4
+      ],
+      "pixel_equal": false
+    },
+    {
+      "cell_index": 26,
+      "reference_shape": [
+        371,
+        1018,
+        4
+      ],
+      "local_shape": [
+        371,
+        1018,
+        4
+      ],
+      "pixel_equal": false
+    }
+  ],
+  "nonempty_code_cells": 17,
+  "source_commit": "cbc0a1b0cbf4ec05ec969fa39405394168c3e06c",
+  "reference_objective": -3126.0335911147595,
+  "local_objective": -3126.034075702296,
+  "limitations": "Unseeded single differential-evolution run: iteration counts and parameters need not be identical. Objective-neighborhood check is a reference sanity check, not proof of a global optimum. Original F-statistic maximizes linear amplitudes rather than computing a Bayesian marginal posterior. Orbit extrapolation and constant estimated PSD remain original defaults."
+}
