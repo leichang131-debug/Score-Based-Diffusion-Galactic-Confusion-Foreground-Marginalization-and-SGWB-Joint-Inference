@@ -1,0 +1,85 @@
+{
+  "python": "3.11.14",
+  "numpy": "1.26.4",
+  "dt_seconds": 10.0,
+  "Tobs_seconds": 31558140.0,
+  "Nsparse": 1024,
+  "parameters": {
+    "A": 8.940469264128556e-23,
+    "f0": 0.009033907931613525,
+    "fdot0": 6.564216806261172e-15,
+    "inclination": 4.462999448312989,
+    "phase0": 2.533771869700649,
+    "longitude": 4.604070621363085,
+    "latitude": -0.20885717630049166,
+    "psi": 1.0218235953759827
+  },
+  "time_axis": {
+    "shape": [
+      3155814
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "02d2ecbab2091f75bfa98aaa63d9d6698d123bc566d4bd2b1e09f8aba70d6b5f"
+  },
+  "td": {
+    "shape": [
+      3,
+      3155814
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "6540faff554c9d4e1e16d444e27a50c9579e47046b2a0ecf167d9fe57875871a"
+  },
+  "fd_full": {
+    "shape": [
+      3,
+      1577907
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "42950d8d8e1bca4d3c35fa2941e3d2d37f4c717633aa65d60c245533bd9496ad"
+  },
+  "band_frequency": {
+    "shape": [
+      631
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "63b0e406d9649e338abeae41fed1dfd5d839e2854829ac61e60be99eed85d1e4"
+  },
+  "td_fft_band": {
+    "shape": [
+      3,
+      631
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "4ce114cf96d321e437eec724153e2adaf3a67acab22b1d3ce14f98acd77bea6f"
+  },
+  "fd_template_band": {
+    "shape": [
+      3,
+      631
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "3d98a3b59d104441b2a1f605296fa5cdb9e2fc19234d4f69c4b5a45400e67347"
+  },
+  "mismatch": [
+    0.00036493088281219777
+  ],
+  "per_channel_relative_l2_difference": [
+    0.03439918476096339,
+    0.018011885833891444,
+    0.02430446906321291
+  ],
+  "band_width_hz": 1e-05,
+  "first_time": 0.0,
+  "last_time": 31558130.0,
+  "module_files": {
+    "Triangle.GW": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-simulator/Triangle/GW.py",
+    "Triangle.Orbit": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-simulator/Triangle/Orbit.py",
+    "Triangle_GB.TDIFly": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-gb/Triangle_GB/TDIFly.py"
+  }
+}

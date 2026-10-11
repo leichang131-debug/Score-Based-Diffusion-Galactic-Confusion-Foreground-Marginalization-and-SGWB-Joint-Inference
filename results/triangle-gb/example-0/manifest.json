@@ -1,0 +1,202 @@
+[
+  {
+    "path": "docs/reproduction/triangle-gb/example-0.md",
+    "bytes": 5441,
+    "sha256": "c560da80432ff22c8320ffe68ea701467f224d140c468cb7f45d2ed457b6aebf"
+  },
+  {
+    "path": "environments/triangle-gb/requirements-macos-arm64-py311.txt",
+    "bytes": 176652,
+    "sha256": "9be2df00e79a7398cf400e594d13dca54591cfbfa64bafe32a5f36f85e9dd525"
+  },
+  {
+    "path": "environments/triangle-gb/requirements.in",
+    "bytes": 353,
+    "sha256": "7f7dedb7b91de14f54fa51338672782e982af7e58156cfa3a6cd92c6a73c446a"
+  },
+  {
+    "path": "external/triangle-gb/Examples/0_TDIFlyGB_Compare_TD_FD_Waveforms(CPU).ipynb",
+    "bytes": 139331,
+    "sha256": "a0dadfa652ccb8a5c2ccbe444ddd48771edaf00b4f36093264d656c5f4c0017e"
+  },
+  {
+    "path": "external/triangle-gb/Triangle_GB/TDIFly.py",
+    "bytes": 50553,
+    "sha256": "57a08754774557db06841cf64532f474580ee97960de2e239847ab0aa493b5ae"
+  },
+  {
+    "path": "external/triangle-gb/Triangle_GB/__init__.py",
+    "bytes": 1061,
+    "sha256": "a633ac09a14448a4c9909a54e56f1ddd3ed754cae7244a4e9e25fc001d546c85"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCP1.dat",
+    "bytes": 27978,
+    "sha256": "f4fecedeb43bdf1ad70259f412671b3a89f1aa2ce27d3e28173e56ca1b8801a4"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCP2.dat",
+    "bytes": 27982,
+    "sha256": "999e0e7654a249822e1249962d4db826a388fe253a84ef1659334a68ab3226ab"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCP3.dat",
+    "bytes": 27981,
+    "sha256": "4a80a9134386a7b4d3c5f048cfcfa81cd29cccb585a04893daf282e3bd6557d0"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCV1.dat",
+    "bytes": 28108,
+    "sha256": "24b718a50d463ad196a60cfc8f43515ff9cbf96a823fa9d281b1cc5c03802f41"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCV2.dat",
+    "bytes": 28108,
+    "sha256": "d5d417f17a354c8bf3a32486a63bd09017102a9af2cb6f60989e3730fda2e12c"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCV3.dat",
+    "bytes": 28107,
+    "sha256": "9812800fbda9de9d271fd9df980dd5fa49fa19fe00d04e96f1a339d15b834301"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Constants.py",
+    "bytes": 3877,
+    "sha256": "7c6070cff005acd46e843b00864b1890a3b8c59319fcf94894325f2fd0caa760"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Cosmology.py",
+    "bytes": 651,
+    "sha256": "6a5b84fb65a99ff34d5135b9796b9e4eb43207d2b365a7e024a6e4ced8c39a2c"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Data.py",
+    "bytes": 34913,
+    "sha256": "91d6672333606f1b80ef559ad8ec84359a0e967426ed89b79f9ff4df01bdcb0d"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/FFTTools.py",
+    "bytes": 5606,
+    "sha256": "f3c4a7245df9ca727885fa115872730d8ca0c92cc463547d9cfb55d991e0458e"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/GW.py",
+    "bytes": 80123,
+    "sha256": "e307e83a5ffb4051ebedecf0adf1220aee73d60c8f15234c98cebd3562149bc8"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Glitch.py",
+    "bytes": 4774,
+    "sha256": "83ea220f988c35438d8761e8ec5bd3a9254994e9f100bcc3edcc86f09e783821"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Interferometer.py",
+    "bytes": 55096,
+    "sha256": "58616869bef2ab1ebfb1a4bfc0062ca75b3dfb1b69812d5f3e5e7cdd4394e8fe"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Noise.py",
+    "bytes": 35381,
+    "sha256": "245938297b3511c9792bdef4163877f8140e70464a8795695ac67275d7ec2daa"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Offset.py",
+    "bytes": 1972,
+    "sha256": "e03841bcc645239e79c0ace9b593bc1f2676c36be03b254a7bd7839d76a55e3d"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Orbit.py",
+    "bytes": 15574,
+    "sha256": "af2c4d83a2128cfa9837bcd9a85d7c626aefab4598380bf797ca7f233e94473e"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Plot.py",
+    "bytes": 3770,
+    "sha256": "ace78dfc28870465c03c8c052a0d07d935338d901e76b69382a38c9f10d3a3d5"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/TDI.py",
+    "bytes": 50196,
+    "sha256": "ddce68ddd669b5da63fcd109a040500f2b4fd5cc5eaae6d0e308c6b187cad19a"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/TDIFly.py",
+    "bytes": 50553,
+    "sha256": "57a08754774557db06841cf64532f474580ee97960de2e239847ab0aa493b5ae"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/TTL.py",
+    "bytes": 5907,
+    "sha256": "14fabcc80c26f27a862153374a179e5b8b35efff2735b824d16d506101e89621"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/__init__.py",
+    "bytes": 428,
+    "sha256": "ee514af9cc26642d1345a41ad827abb8d278ea83dc9a13a338ea882acc657d96"
+  },
+  {
+    "path": "notebooks/reproduction/triangle-gb/Examples/0_TDIFlyGB_Compare_TD_FD_Waveforms(CPU).ipynb",
+    "bytes": 167324,
+    "sha256": "1f4c9fb76d0eaf9e562944c2fa20fb4e30fef84e430606a20449758fe4c018e8"
+  },
+  {
+    "path": "results/triangle-gb/example-0/README.md",
+    "bytes": 434,
+    "sha256": "8c1a8ebff388166f4a9a26ad93e8a57697755fa05ebd206651900a3e3af304a5"
+  },
+  {
+    "path": "results/triangle-gb/example-0/audit.json",
+    "bytes": 1876,
+    "sha256": "ea3ff9f519bf2b1cc538d8f88a36414591d9ad812ad96bacd2e3f5ceb2b6ac01"
+  },
+  {
+    "path": "results/triangle-gb/example-0/cell-09-output-1.png",
+    "bytes": 25840,
+    "sha256": "c7c02709ef51e3c630b46bacecf09dc1333e598972d027c17aabf072aa7d0e79"
+  },
+  {
+    "path": "results/triangle-gb/example-0/cell-14-output-0.png",
+    "bytes": 89985,
+    "sha256": "9a9565dcab3e93afb1021200879368ece851dac3222daa5f5f9db57a8ac4e920"
+  },
+  {
+    "path": "results/triangle-gb/example-0/diagnostics.json",
+    "bytes": 2364,
+    "sha256": "6df07d50bfe975472959607adc6b8675b7d612aa6af4135bd549f459bff7d5e0"
+  },
+  {
+    "path": "results/triangle-gb/example-0/execution.json",
+    "bytes": 1864,
+    "sha256": "d59ad84da4fc10d37e4cb6ea55240e844eba04a416c087f3869af3f4021d2644"
+  },
+  {
+    "path": "results/triangle-gb/example-0/execution.txt",
+    "bytes": 2281,
+    "sha256": "69016fd631641913b3f99dae514423da184c3a54b096283039a588e46d16dca7"
+  },
+  {
+    "path": "results/triangle-gb/example-0/resources.csv",
+    "bytes": 160,
+    "sha256": "a2d3e61bf0cdabb91d2dc90534cccce39b9eee84b29c2d175c7bd1151937371e"
+  },
+  {
+    "path": "results/triangle-gb/example-0/sandbox-startup.txt",
+    "bytes": 4759,
+    "sha256": "aae25ab2867a0ded30b73b2fc79474f5549e8255c9c23070ede0b62def3991ce"
+  },
+  {
+    "path": "results/triangle-gb/example-0/waveform-band.npz",
+    "bytes": 62985,
+    "sha256": "75bd65525d41b5878c867d4ab4b7dd7bdee85933140540eb2c1a5fcd936deee3"
+  },
+  {
+    "path": "scripts/reproduction/audit-triangle-gb-example-0.py",
+    "bytes": 4909,
+    "sha256": "51355eb02a0273210fdff03144bbb6f2e7c4c2e500e86a83a61b3cb10dbadf28"
+  },
+  {
+    "path": "scripts/reproduction/run-triangle-gb-example-0.py",
+    "bytes": 5787,
+    "sha256": "ba215d3146048d30f1964ffef1fab23c3cb4a241232ede0b18bb3432ac6be0b9"
+  }
+]

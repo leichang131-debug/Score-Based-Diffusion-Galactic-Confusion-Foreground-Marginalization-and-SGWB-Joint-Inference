@@ -75,3 +75,7 @@ See [data preparation and orbit issue](../../docs/reproduction/triangle-gb/data-
 See [prerequisite completion](../../docs/reproduction/triangle-gb/prerequisites-completion.md). None of these scripts claims complete posterior-sampling reproduction.
 
 - `check-triangle-gb-prerequisites.py`: consolidate actual validated data/import readiness and verify all five same-name working notebook source/Markdown cells, with full reproduction explicitly pending.
+
+## Triangle-GB Example 0
+
+`run-triangle-gb-example-0.py` executes all unchanged original cells at full default scale, clears source outputs, saves the same-name notebook and local figures, times and numerical evidence. `audit-triangle-gb-example-0.py` verifies source correspondence, execution, finite arrays and upstream mismatch precision, and writes the evidence manifest. See the [report](../../docs/reproduction/triangle-gb/example-0.md).

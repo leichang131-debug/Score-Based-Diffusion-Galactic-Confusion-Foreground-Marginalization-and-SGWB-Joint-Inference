@@ -1,7 +1,5 @@
 # Triangle-GB executed notebook copies
 
-Status: directory prepared; no Triangle-GB notebook has been executed or copied here yet.
+Example 0 is fully executed at original default scale. See [report](../../../docs/reproduction/triangle-gb/example-0.md). The other four examples remain pending.
 
-Original references are under `external/triangle-gb/Examples/`. Future executed copies belong in `Examples/`, retaining the exact upstream filenames, Markdown and code wherever possible. Clear original computation outputs before local execution. Keep upstream source unchanged and put any necessary path adaptations in explicitly documented project-owned adapters. Externally mapping paths must not silently change science parameters.
-
-Generated outputs, timing and source correspondence will be audited separately. Do not copy reference outputs and describe them as local computation.
+The `Examples/` directory retains exact upstream notebook filenames, all Markdown, code and attachments. Generated outputs are produced locally after clearing upstream outputs. Original references remain unchanged in `external/triangle-gb/Examples/`; runtime paths and evidence are managed outside the notebook source.

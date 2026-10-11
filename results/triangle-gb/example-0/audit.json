@@ -1,0 +1,64 @@
+{
+  "figure_comparison": [
+    {
+      "cell_index": 9,
+      "reference_shape": [
+        386,
+        1012,
+        4
+      ],
+      "local_shape": [
+        386,
+        1013,
+        4
+      ],
+      "pixel_equal": false,
+      "note": "Original plotting source retained; one-pixel canvas/layout differences are not waveform disagreement."
+    },
+    {
+      "cell_index": 14,
+      "reference_shape": [
+        393,
+        1214,
+        4
+      ],
+      "local_shape": [
+        392,
+        1214,
+        4
+      ],
+      "pixel_equal": false,
+      "note": "Original plotting source retained; one-pixel canvas/layout differences are not waveform disagreement."
+    }
+  ],
+  "passed": true,
+  "checks": {
+    "same_filename": true,
+    "same_cell_count": true,
+    "same_code_and_markdown": true,
+    "same_attachments": true,
+    "upstream_clean": true,
+    "execution_success": true,
+    "all_nonempty_code_cells_executed": true,
+    "no_errors": true,
+    "two_local_figures": true,
+    "notebook_hash_matches": true,
+    "original_full_scale": true,
+    "all_waveforms_finite": true,
+    "upstream_displayed_mismatch_agreement": true,
+    "saved_band_finite": true,
+    "mismatch_formula_consistent": true,
+    "simulator_pin_and_clean": true,
+    "actual_module_origins": true,
+    "figure_9_matches_local_notebook": true,
+    "figure_14_matches_local_notebook": true
+  },
+  "nonempty_code_cells": 10,
+  "source_commit": "cbc0a1b0cbf4ec05ec969fa39405394168c3e06c",
+  "mismatch": [
+    0.00036493088281219777
+  ],
+  "independent_mismatch": 0.00036493088281219777,
+  "reference_mismatch_display": 0.00036493,
+  "limitations": "Single default source and band. Original mismatch is unweighted across A/E/T, not PSD-weighted inference accuracy. Orbit boundary extrapolation remains part of upstream defaults. Pixel equality across plotting versions is not required."
+}

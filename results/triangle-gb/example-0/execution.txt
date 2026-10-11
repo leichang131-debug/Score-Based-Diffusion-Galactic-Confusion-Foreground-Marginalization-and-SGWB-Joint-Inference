@@ -1,0 +1,22 @@
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+START cell 0
+DONE cell 0 1.3943304579988762
+START cell 2
+DONE cell 2 1.0667431660003786
+START cell 4
+DONE cell 4 0.01409741699899314
+START cell 6
+DONE cell 6 0.002584750000096392
+START cell 8
+DONE cell 8 8.826465957998153
+START cell 9
+DONE cell 9 1.0244105830024637
+START cell 10
+DONE cell 10 0.5570260419990518
+START cell 12
+DONE cell 12 0.006324499998299871
+START cell 14
+DONE cell 14 0.11033116600083304
+START cell 15
+DONE cell 15 0.002916666999226436
+RESULT {"started_utc": "2026-10-11T11:18:37.642931+00:00", "host": "leideMacBook-Air.local", "machine": "arm64", "source_commit": "cbc0a1b0cbf4ec05ec969fa39405394168c3e06c", "source_sha256": "a0dadfa652ccb8a5c2ccbe444ddd48771edaf00b4f36093264d656c5f4c0017e", "cell_timings": [{"cell_index": 0, "seconds": 1.3943304579988762, "execution_count": 1}, {"cell_index": 2, "seconds": 1.0667431660003786, "execution_count": 2}, {"cell_index": 4, "seconds": 0.01409741699899314, "execution_count": 3}, {"cell_index": 6, "seconds": 0.002584750000096392, "execution_count": 4}, {"cell_index": 8, "seconds": 8.826465957998153, "execution_count": 5}, {"cell_index": 9, "seconds": 1.0244105830024637, "execution_count": 6}, {"cell_index": 10, "seconds": 0.5570260419990518, "execution_count": 7}, {"cell_index": 12, "seconds": 0.006324499998299871, "execution_count": 8}, {"cell_index": 14, "seconds": 0.11033116600083304, "execution_count": 9}, {"cell_index": 15, "seconds": 0.002916666999226436, "execution_count": 10}], "scope": "Original full one-year default; fresh outputs; no source edits or imposed seed", "resource_note": "Runner and descendant RSS sum sampled every 2 seconds; shared pages may be counted repeatedly.", "execution_passed": true, "wall_seconds": 13.757345417001488, "peak_sampled_process_tree_rss_kib": 4482784, "source_cells_unchanged": true, "generated_figures": ["cell-09-output-1.png", "cell-14-output-0.png"], "error_outputs": [], "executed_notebook_sha256": "1f4c9fb76d0eaf9e562944c2fa20fb4e30fef84e430606a20449758fe4c018e8"}
