@@ -1,0 +1,199 @@
+[
+  {
+    "filename": "0_1_VGB_TDIXYZ.h5",
+    "groups": [
+      {
+        "path": "/XYZ",
+        "attributes": []
+      }
+    ],
+    "datasets": [
+      {
+        "path": "/XYZ/X2",
+        "shape": [
+          3146975
+        ],
+        "dtype": "float64",
+        "elements": 3146975,
+        "logical_bytes": 25175800,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 3146975
+      },
+      {
+        "path": "/XYZ/Y2",
+        "shape": [
+          3146975
+        ],
+        "dtype": "float64",
+        "elements": 3146975,
+        "logical_bytes": 25175800,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 3146975
+      },
+      {
+        "path": "/XYZ/Z2",
+        "shape": [
+          3146975
+        ],
+        "dtype": "float64",
+        "elements": 3146975,
+        "logical_bytes": 25175800,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 3146975
+      },
+      {
+        "path": "/time",
+        "shape": [
+          3146975
+        ],
+        "dtype": "float64",
+        "elements": 3146975,
+        "logical_bytes": 25175800,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 3146975
+      }
+    ]
+  },
+  {
+    "filename": "0_1_VGB_parameters.h5",
+    "groups": [],
+    "datasets": [
+      {
+        "path": "/A",
+        "shape": [
+          55
+        ],
+        "dtype": "float64",
+        "elements": 55,
+        "logical_bytes": 440,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 55
+      },
+      {
+        "path": "/f0",
+        "shape": [
+          55
+        ],
+        "dtype": "float64",
+        "elements": 55,
+        "logical_bytes": 440,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 55
+      },
+      {
+        "path": "/fdot0",
+        "shape": [
+          55
+        ],
+        "dtype": "float64",
+        "elements": 55,
+        "logical_bytes": 440,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 55
+      },
+      {
+        "path": "/inclination",
+        "shape": [
+          55
+        ],
+        "dtype": "float64",
+        "elements": 55,
+        "logical_bytes": 440,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 55
+      },
+      {
+        "path": "/latitude",
+        "shape": [
+          55
+        ],
+        "dtype": "float64",
+        "elements": 55,
+        "logical_bytes": 440,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 55
+      },
+      {
+        "path": "/longitude",
+        "shape": [
+          55
+        ],
+        "dtype": "float64",
+        "elements": 55,
+        "logical_bytes": 440,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 55
+      },
+      {
+        "path": "/phase0",
+        "shape": [
+          55
+        ],
+        "dtype": "float64",
+        "elements": 55,
+        "logical_bytes": 440,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 55
+      },
+      {
+        "path": "/psi",
+        "shape": [
+          55
+        ],
+        "dtype": "float64",
+        "elements": 55,
+        "logical_bytes": 440,
+        "chunks": null,
+        "compression": null,
+        "attributes": [],
+        "nan_count": 0,
+        "inf_count": 0,
+        "finite_count": 55
+      }
+    ]
+  }
+]

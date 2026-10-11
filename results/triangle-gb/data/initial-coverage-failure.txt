@@ -1,0 +1,26 @@
+PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/pycbc/waveform/plugin.py:99: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+No phenomxpy.
+No pyseobnr.
+no cupy 
+no cupy 
+PASS file_checksums
+PASS full_hdf5_inventory_and_finiteness
+PASS common_tutorial_cells_identical
+PASS tutorial_reader_and_parameter_alignment
+PASS time_axis_zero_padding_and_channel_conversion
+PASS original_tutorial_windowed_fft
+PASS original_example_source_selection_and_band
+Traceback (most recent call last):
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-triangle-gb-vgb-data.py", line 226, in <module>
+    main()
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-triangle-gb-vgb-data.py", line 213, in main
+    check('default_orbit_and_delayed_time_compatibility', orbit_range)
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-triangle-gb-vgb-data.py", line 64, in check
+    detail = fn()
+             ^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-triangle-gb-vgb-data.py", line 191, in orbit_range
+    assert low <= raw[0] <= raw[-1] <= high
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

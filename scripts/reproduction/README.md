@@ -56,3 +56,10 @@ See [environment instructions](../../environments/tdc/README.md). Full notebooks
 - `launch-triangle-gb-jupyter.sh`: open the prepared working directory with the dedicated environment.
 
 See [environment instructions](../../environments/triangle-gb/README.md). These scripts do not execute full upstream examples.
+
+## Triangle-GB public VGB inputs
+
+- `download-triangle-gb-vgb.py`: download the original Example 1/2 filenames, verify official byte counts/MD5 and record local SHA-256; raw files stay ignored.
+- `check-triangle-gb-vgb-data.py`: scan complete HDF5 arrays, execute unchanged input-preparation cells and check source selection, FFT bands and orbit coverage. Exit 2 records the currently diagnosed strict orbit-coverage gap; it is not a full tutorial runner.
+
+See [data preparation and orbit issue](../../docs/reproduction/triangle-gb/data-preparation.md).

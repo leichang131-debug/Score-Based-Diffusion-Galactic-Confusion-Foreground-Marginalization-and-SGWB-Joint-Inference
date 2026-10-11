@@ -1,0 +1,74 @@
+{
+  "scope": "Local input download and checks; strict orbit coverage remains unconfirmed. Bulk inputs are ignored, not committed.",
+  "files": [
+    {
+      "path": "data/triangle-gb/README.md",
+      "bytes": 1543,
+      "sha256": "1679a1677ed2368dcc97d45fac979e4c53af157a85f6c87cdc44bf3aa11a9d18"
+    },
+    {
+      "path": "docs/reproduction/triangle-gb/data-preparation.md",
+      "bytes": 6731,
+      "sha256": "2cc9006983b5cf83452b7ea9cebbf12a8267949d28cd44cee5574de4794cd6e4"
+    },
+    {
+      "path": "results/triangle-gb/data/README.md",
+      "bytes": 1464,
+      "sha256": "c458f7adb01897f00b3b55ca1e3e89d6d9c06719bfc5bbf7a6dff741e52bc34a"
+    },
+    {
+      "path": "results/triangle-gb/data/download-provenance.json",
+      "bytes": 1784,
+      "sha256": "7fb90845294a762594f4b3504d2c5928d8e2df3debf36c6300f923b24ba7cfe0"
+    },
+    {
+      "path": "results/triangle-gb/data/download.txt",
+      "bytes": 516,
+      "sha256": "39db976a4a89686914ab3431217e839abab4f10ae6789611e748bd8376e86066"
+    },
+    {
+      "path": "results/triangle-gb/data/hdf5-schema.json",
+      "bytes": 4202,
+      "sha256": "f87279bfb18ecac74c202421d5517c137be8324c1f984d9af398e105f02be099"
+    },
+    {
+      "path": "results/triangle-gb/data/initial-coverage-failure.txt",
+      "bytes": 1882,
+      "sha256": "82f32dec72e9057d312463de6a97a522ff6a7b033671780e643045a5442ebdf8"
+    },
+    {
+      "path": "results/triangle-gb/data/validation.json",
+      "bytes": 14363,
+      "sha256": "9c6aa38a1c99febb56afdfd81ee6985d047447e7b23a89d304f77a8aa19b5efc"
+    },
+    {
+      "path": "results/triangle-gb/data/validation.txt",
+      "bytes": 949,
+      "sha256": "deb7951aa6554fe91d91bfb544277b1cd82669fb1ea4af3c338d20ee5a9a0cd9"
+    },
+    {
+      "path": "scripts/reproduction/check-triangle-gb-vgb-data.py",
+      "bytes": 14499,
+      "sha256": "ec1cec6cfe32738a409dd01eced5b26538ddd3ee94352082ec58106fc1e6fc6d"
+    },
+    {
+      "path": "scripts/reproduction/download-triangle-gb-vgb.py",
+      "bytes": 3579,
+      "sha256": "535ccde47fea1a895e909754c04180cb1b3a5f633a5707bb1f3c5ab522b1e5c3"
+    }
+  ],
+  "local_ignored_inputs": [
+    {
+      "path": "data/raw/triangle-gb/0_1_VGB_TDIXYZ.h5",
+      "bytes": 100707680,
+      "md5": "01b91a77eef8ae14b12473fa11b9f5ce",
+      "sha256": "766b50adaabe7dfca1a7cff853845a920f5467b2ffb7ef6e064231ba1ed6bdb3"
+    },
+    {
+      "path": "data/raw/triangle-gb/0_1_VGB_parameters.h5",
+      "bytes": 7904,
+      "md5": "53ac143f8537996bf73c2dcd2419f4f4",
+      "sha256": "484862f47179b295f8750a5733ee93d912b9a717faef88cecc7d011ad439ce9e"
+    }
+  ]
+}

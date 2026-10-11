@@ -1,0 +1,452 @@
+{
+  "scope": "Public VGB full-data checks and unchanged tutorial input/preprocessing cells only; no search, waveform fitting or nested sampling.",
+  "created_utc": "2026-10-11T08:35:23.116440+00:00",
+  "checks": {
+    "file_checksums": {
+      "passed": true,
+      "detail": "Both entire local files match official byte counts/MD5 and recorded SHA-256.",
+      "seconds": 0.1373621250004362
+    },
+    "full_hdf5_inventory_and_finiteness": {
+      "passed": true,
+      "detail": [
+        {
+          "filename": "0_1_VGB_TDIXYZ.h5",
+          "groups": [
+            {
+              "path": "/XYZ",
+              "attributes": []
+            }
+          ],
+          "datasets": [
+            {
+              "path": "/XYZ/X2",
+              "shape": [
+                3146975
+              ],
+              "dtype": "float64",
+              "elements": 3146975,
+              "logical_bytes": 25175800,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 3146975
+            },
+            {
+              "path": "/XYZ/Y2",
+              "shape": [
+                3146975
+              ],
+              "dtype": "float64",
+              "elements": 3146975,
+              "logical_bytes": 25175800,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 3146975
+            },
+            {
+              "path": "/XYZ/Z2",
+              "shape": [
+                3146975
+              ],
+              "dtype": "float64",
+              "elements": 3146975,
+              "logical_bytes": 25175800,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 3146975
+            },
+            {
+              "path": "/time",
+              "shape": [
+                3146975
+              ],
+              "dtype": "float64",
+              "elements": 3146975,
+              "logical_bytes": 25175800,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 3146975
+            }
+          ]
+        },
+        {
+          "filename": "0_1_VGB_parameters.h5",
+          "groups": [],
+          "datasets": [
+            {
+              "path": "/A",
+              "shape": [
+                55
+              ],
+              "dtype": "float64",
+              "elements": 55,
+              "logical_bytes": 440,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 55
+            },
+            {
+              "path": "/f0",
+              "shape": [
+                55
+              ],
+              "dtype": "float64",
+              "elements": 55,
+              "logical_bytes": 440,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 55
+            },
+            {
+              "path": "/fdot0",
+              "shape": [
+                55
+              ],
+              "dtype": "float64",
+              "elements": 55,
+              "logical_bytes": 440,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 55
+            },
+            {
+              "path": "/inclination",
+              "shape": [
+                55
+              ],
+              "dtype": "float64",
+              "elements": 55,
+              "logical_bytes": 440,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 55
+            },
+            {
+              "path": "/latitude",
+              "shape": [
+                55
+              ],
+              "dtype": "float64",
+              "elements": 55,
+              "logical_bytes": 440,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 55
+            },
+            {
+              "path": "/longitude",
+              "shape": [
+                55
+              ],
+              "dtype": "float64",
+              "elements": 55,
+              "logical_bytes": 440,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 55
+            },
+            {
+              "path": "/phase0",
+              "shape": [
+                55
+              ],
+              "dtype": "float64",
+              "elements": 55,
+              "logical_bytes": 440,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 55
+            },
+            {
+              "path": "/psi",
+              "shape": [
+                55
+              ],
+              "dtype": "float64",
+              "elements": 55,
+              "logical_bytes": 440,
+              "chunks": null,
+              "compression": null,
+              "attributes": [],
+              "nan_count": 0,
+              "inf_count": 0,
+              "finite_count": 55
+            }
+          ]
+        }
+      ],
+      "seconds": 0.015260083000612212
+    },
+    "common_tutorial_cells_identical": {
+      "passed": true,
+      "detail": {
+        "zero_based_cell_indices": [
+          5,
+          6,
+          9,
+          17
+        ],
+        "equal_source": true
+      },
+      "seconds": 2.5000008463393897e-06
+    },
+    "tutorial_reader_and_parameter_alignment": {
+      "passed": true,
+      "detail": {
+        "time_shape": [
+          3146975
+        ],
+        "XYZ_keys": [
+          "X2",
+          "Y2",
+          "Z2"
+        ],
+        "parameter_fields": [
+          "A",
+          "f0",
+          "fdot0",
+          "inclination",
+          "latitude",
+          "longitude",
+          "phase0",
+          "psi"
+        ],
+        "source_count": 55,
+        "parameter_lengths": {
+          "A": 55,
+          "f0": 55,
+          "fdot0": 55,
+          "inclination": 55,
+          "latitude": 55,
+          "longitude": 55,
+          "phase0": 55,
+          "psi": 55
+        },
+        "meaning": "Parameter arrays share source-index ordering; XYZ is the aggregate data, not a separate per-source channel table."
+      },
+      "seconds": 0.009894291999444249
+    },
+    "time_axis_zero_padding_and_channel_conversion": {
+      "passed": true,
+      "detail": {
+        "dt_seconds": 10.0,
+        "raw_start_seconds": 2000.0,
+        "raw_end_seconds": 31471740.0,
+        "raw_samples": 3146975,
+        "zero_padding_samples": 200,
+        "padded_samples": 3147175,
+        "Tobs_seconds": 31471750.0,
+        "AE_shape": [
+          2,
+          3147175
+        ],
+        "XYZ_AET_roundtrip_max_relative_error": 2.9003060249280593e-16
+      },
+      "seconds": 0.05380262499966193
+    },
+    "original_tutorial_windowed_fft": {
+      "passed": true,
+      "detail": {
+        "frequency_samples": 1573587,
+        "df_hz": 3.177452794966915e-08,
+        "min_frequency_hz": 3.177452794966915e-08,
+        "max_frequency_hz": 0.049999984112736026,
+        "AE_frequency_shape": [
+          2,
+          1573587
+        ],
+        "tukey_alpha": 0.0003177452794966915,
+        "normalization": "Original FFT_window implementation; DC excluded, Tukey window and coherent-gain correction retained."
+      },
+      "seconds": 0.4239911659988138
+    },
+    "original_example_source_selection_and_band": {
+      "passed": true,
+      "detail": [
+        {
+          "filename": "1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+          "source_index_zero_based": 4,
+          "parameters": {
+            "A": 9.517180373037876e-23,
+            "f0": 0.0032247077104776,
+            "fdot0": 5.536765590227253e-17,
+            "inclination": 1.0471975511965976,
+            "latitude": -0.3548927927646199,
+            "longitude": 0.4294914200344345,
+            "phase0": 1.3208186729980294,
+            "psi": 2.099368941065471
+          },
+          "band_width_hz": 5e-06,
+          "band_bins": 157,
+          "band_first_index_in_DC_excluded_fft": 101408,
+          "band_last_index_in_DC_excluded_fft": 101564,
+          "band_start_hz": 0.003222223104847999,
+          "band_end_hz": 0.003227179931208147,
+          "PSDlevel": 9.052560408655443e-43
+        },
+        {
+          "filename": "2_TDIFlyGB_Parameter_Estimation(CPU).ipynb",
+          "source_index_zero_based": 1,
+          "parameters": {
+            "A": 9.402415441563616e-23,
+            "f0": 0.0048216991071498,
+            "fdot0": 2.53782494976533e-16,
+            "inclination": 1.4686945655532282,
+            "latitude": 1.1547376242549767,
+            "longitude": 3.578406556800828,
+            "phase0": 2.680478779022586,
+            "psi": 2.4599687248082027
+          },
+          "band_width_hz": 5e-06,
+          "band_bins": 157,
+          "band_first_index_in_DC_excluded_fft": 151668,
+          "band_last_index_in_DC_excluded_fft": 151824,
+          "band_start_hz": 0.004819210879598371,
+          "band_end_hz": 0.004824167705958519,
+          "PSDlevel": 3.217451233914247e-42
+        }
+      ],
+      "seconds": 0.0014424999990296783
+    },
+    "default_orbit_and_delayed_time_compatibility": {
+      "passed": false,
+      "detail": {
+        "orbit_rows": 365,
+        "orbit_dt_seconds": 86400.0,
+        "orbit_min_seconds": 0.0,
+        "orbit_max_seconds": 31449600.0,
+        "raw_data_covered": false,
+        "padded_grid_covered": false,
+        "sparse_endpoint_covered": false,
+        "strict_coverage_pass": false,
+        "default_interpolators_finite_on_required_sparse_queries": true,
+        "observed_samples_outside_orbit": 2214,
+        "observed_fraction_outside_orbit": 0.0007035327576482177,
+        "observed_end_excess_seconds": 22140.0,
+        "sparse_end_excess_seconds": 22150.0,
+        "Nsparse": 512,
+        "sparse_min_seconds": 0.0,
+        "sparse_max_seconds": 31471750.0,
+        "TDI_delayed_query_min_seconds": -69.94435704947405,
+        "TDI_delayed_query_max_seconds": 31471750.0,
+        "max_cumulative_delay_seconds": 70.15666863196392,
+        "boundary_extrapolation_seconds_below_orbit": 69.94435704947405,
+        "observed_start_minus_max_delay_seconds": 1929.8433313680362,
+        "note": "Actual default Orbit and Nsparse=512 constructor used; no waveform generation, search or sampling."
+      },
+      "seconds": 0.021754416999101522
+    }
+  },
+  "notebook_cells_executed": [
+    {
+      "filename": "1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+      "zero_based_cell_index": 5,
+      "source_sha256": "a265ad4fa0ee5bfa7dc80cc74f241863bcbcaec69bcd57c4bd1419bcd35a7435",
+      "source_modified": false
+    },
+    {
+      "filename": "1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+      "zero_based_cell_index": 6,
+      "source_sha256": "ce33644517b9f0bbf50f76c6b3533883ddbefc9332283507896f963f8612f183",
+      "source_modified": false
+    },
+    {
+      "filename": "1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+      "zero_based_cell_index": 9,
+      "source_sha256": "44fcdf5d79ab387aac427d98ea74ca3b1edf4fb5ed8ec24f479e27b685d4e32f",
+      "source_modified": false
+    },
+    {
+      "filename": "1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+      "zero_based_cell_index": 12,
+      "source_sha256": "67e29f602dfd08104fbc9cb1b525fe802826956a5456702078d12aa958068e04",
+      "source_modified": false
+    },
+    {
+      "filename": "1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+      "zero_based_cell_index": 13,
+      "source_sha256": "e45df34070c0c6dca4d0bde3f4e3af2add92beac5dbc3022ca1c08ca6122412e",
+      "source_modified": false
+    },
+    {
+      "filename": "1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+      "zero_based_cell_index": 14,
+      "source_sha256": "9328b4980dc04c07f47d1ff1633cd26eea65510c94443edd3d14a8a54135ec39",
+      "source_modified": false
+    },
+    {
+      "filename": "2_TDIFlyGB_Parameter_Estimation(CPU).ipynb",
+      "zero_based_cell_index": 12,
+      "source_sha256": "9a8599653116f01277e81b34c582c54e8c048c7243e688baf55b414d8328e24d",
+      "source_modified": false
+    },
+    {
+      "filename": "2_TDIFlyGB_Parameter_Estimation(CPU).ipynb",
+      "zero_based_cell_index": 13,
+      "source_sha256": "b74ac634c361dac3dc75c489e3bf2100fe2ce0bdccf64a6d6bf2ca3ceca2967b",
+      "source_modified": false
+    },
+    {
+      "filename": "2_TDIFlyGB_Parameter_Estimation(CPU).ipynb",
+      "zero_based_cell_index": 14,
+      "source_sha256": "9328b4980dc04c07f47d1ff1633cd26eea65510c94443edd3d14a8a54135ec39",
+      "source_modified": false
+    },
+    {
+      "filename": "1_TDIFlyGB_Rapid_Search(CPU).ipynb",
+      "zero_based_cell_index": 17,
+      "source_sha256": "4222dd62f65e99d42ed9cae6e93b91569621bcd51234046a8eb3a582b1ee3c4c",
+      "source_modified": false
+    }
+  ],
+  "notes": [
+    "Strict orbit coverage is NOT satisfied: observed tail and zero-padded sparse boundary delayed times require default spline extrapolation. Finite interface output does not validate extrapolation accuracy. Source/data are unchanged."
+  ],
+  "source_commits": {
+    "triangle-gb": "cbc0a1b0cbf4ec05ec969fa39405394168c3e06c",
+    "triangle-simulator": "ab796358e9a36c8987f6bb53a97230d603bfdfd5"
+  },
+  "path_adapter": {
+    "type": "Script namespace bindings only; no notebook strings changed.",
+    "DATA_DIR": "data/raw/triangle-gb/0_1_VGB_TDIXYZ.h5",
+    "PARAM_DIR": "data/raw/triangle-gb/0_1_VGB_parameters.h5",
+    "ORBIT_DIR": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB"
+  },
+  "all_checks_pass": false,
+  "elapsed_seconds": 0.6859482920008304,
+  "input_preparation_checks_pass": true,
+  "strict_orbit_coverage_confirmed": false
+}

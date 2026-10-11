@@ -8,7 +8,7 @@ Triangle-Simulator shared environment is prepared separately from full tutorial 
 
 1. Score-SDE: verify imports and devices, inspect a batch, run a small training configuration, save and resume, and generate a few samples.
 2. TDC: run documented tutorials, inspect separate components, and verify output conventions.
-3. Triangle-GB: source integration and independent environment setup are complete; data checks and example execution remain pending. See [environment scope](triangle-gb/environment-setup.md). See [source report](triangle-gb/source-integration.md).
+3. Triangle-GB: source integration and independent environment setup are complete. Examples 1/2 public data are downloaded and checked; a strict orbit-coverage gap remains, documented in [data preparation](triangle-gb/data-preparation.md). Full example execution remains pending. See [environment scope](triangle-gb/environment-setup.md). See [source report](triangle-gb/source-integration.md).
 4. TaijiSGWB: read inputs, reproduce a minimal inference case, and inspect sampling diagnostics before claiming numerical reproduction.
 
 Each component uses a separate environment. Pin the upstream commit before execution. A smoke test is not a full training or inference reproduction.

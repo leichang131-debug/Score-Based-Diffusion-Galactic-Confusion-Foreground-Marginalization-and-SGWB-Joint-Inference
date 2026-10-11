@@ -1,0 +1,37 @@
+{
+  "scope": "Public input-file download and checksum verification only.",
+  "files": [
+    {
+      "record_url": "https://zenodo.org/records/15469724",
+      "metadata_url": "https://zenodo.org/api/records/15469724",
+      "download_url": "https://zenodo.org/api/records/15469724/files/0_1_VGB_TDIXYZ.h5/content",
+      "notebook_download_url": "https://zenodo.org/records/15469724/files/0_1_VGB_TDIXYZ.h5?download=1",
+      "path": "data/raw/triangle-gb/0_1_VGB_TDIXYZ.h5",
+      "filename": "0_1_VGB_TDIXYZ.h5",
+      "official_bytes": 100707680,
+      "local_bytes": 100707680,
+      "official_md5": "01b91a77eef8ae14b12473fa11b9f5ce",
+      "local_md5": "01b91a77eef8ae14b12473fa11b9f5ce",
+      "local_sha256": "766b50adaabe7dfca1a7cff853845a920f5467b2ffb7ef6e064231ba1ed6bdb3",
+      "reused_existing_verified_file": false,
+      "seconds": 111.897643332999,
+      "verified_utc": "2026-10-11T08:31:14.196694+00:00"
+    },
+    {
+      "record_url": "https://zenodo.org/records/15532090",
+      "metadata_url": "https://zenodo.org/api/records/15532090",
+      "download_url": "https://zenodo.org/api/records/15532090/files/0_1_VGB_parameters.h5/content",
+      "notebook_download_url": "https://zenodo.org/records/15532090/files/0_1_VGB_parameters.h5?download=1",
+      "path": "data/raw/triangle-gb/0_1_VGB_parameters.h5",
+      "filename": "0_1_VGB_parameters.h5",
+      "official_bytes": 7904,
+      "local_bytes": 7904,
+      "official_md5": "53ac143f8537996bf73c2dcd2419f4f4",
+      "local_md5": "53ac143f8537996bf73c2dcd2419f4f4",
+      "local_sha256": "484862f47179b295f8750a5733ee93d912b9a717faef88cecc7d011ad439ce9e",
+      "reused_existing_verified_file": false,
+      "seconds": 4.216085000000021,
+      "verified_utc": "2026-10-11T08:31:18.412796+00:00"
+    }
+  ]
+}
