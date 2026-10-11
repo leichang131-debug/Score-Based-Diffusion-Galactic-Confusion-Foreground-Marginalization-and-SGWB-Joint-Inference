@@ -1,0 +1,81 @@
+{
+  "execution_and_integrity_passed": true,
+  "checks": {
+    "same_filename": true,
+    "same_cell_count": true,
+    "same_code_and_markdown": true,
+    "same_attachments": true,
+    "upstream_clean": true,
+    "execution_success": true,
+    "all_nonempty_cells_executed": true,
+    "no_errors": true,
+    "notebook_hash_matches": true,
+    "original_data_scale": true,
+    "original_sampler_settings": true,
+    "finite_data": true,
+    "positive_psd": true,
+    "posterior_samples_exist": true,
+    "eight_parameters": true,
+    "posterior_finite": true,
+    "posterior_loglikelihood_finite": true,
+    "posterior_logprior_finite": true,
+    "finite_evidence": true,
+    "saved_evidence_consistent": true,
+    "best_likelihood_recomputed": true,
+    "stopping_logged": true,
+    "final_diagnostic_recorded": true,
+    "sampler_diagnostic_plot_saved": true,
+    "noise_evidence_nan_explicit": true,
+    "posterior_csv_finite": true,
+    "posterior_csv_count_matches": true,
+    "posterior_within_prior_bounds": true,
+    "saved_band_finite": true,
+    "simulator_pin_and_clean": true,
+    "actual_module_origins": true,
+    "figure_7_matches_local_notebook": true,
+    "figure_10_matches_local_notebook": true,
+    "figure_15_matches_local_notebook": true,
+    "figure_25_matches_local_notebook": true,
+    "input_identity_0_1_VGB_TDIXYZ.h5": true,
+    "input_identity_0_1_VGB_parameters.h5": true
+  },
+  "inputs": [
+    {
+      "path": "data/raw/triangle-gb/0_1_VGB_TDIXYZ.h5",
+      "bytes": 100707680,
+      "md5": "01b91a77eef8ae14b12473fa11b9f5ce",
+      "sha256": "766b50adaabe7dfca1a7cff853845a920f5467b2ffb7ef6e064231ba1ed6bdb3"
+    },
+    {
+      "path": "data/raw/triangle-gb/0_1_VGB_parameters.h5",
+      "bytes": 7904,
+      "md5": "53ac143f8537996bf73c2dcd2419f4f4",
+      "sha256": "484862f47179b295f8750a5733ee93d912b9a717faef88cecc7d011ad439ce9e"
+    }
+  ],
+  "source_commit": "cbc0a1b0cbf4ec05ec969fa39405394168c3e06c",
+  "nonempty_code_cells": 16,
+  "scientific_diagnostics": {
+    "final_p_value": 0.0008381311643863278,
+    "final_ks_statistic": 0.012135275754422525,
+    "log_evidence": -345.51190441337576,
+    "log_evidence_error": 0.2813664624253498,
+    "information": 39.58354308887789,
+    "training_time": 14.148181,
+    "population_time": 58.535849,
+    "sampling_time": 400.086822,
+    "total_likelihood_evaluations": 903749,
+    "nested_weight_effective_sample_size": 3657.8535548530185,
+    "insertion_index_count": 24025,
+    "nested_samples_count": 24525,
+    "posterior_samples_count": 2458,
+    "insertion_indices_range": [
+      0,
+      499
+    ],
+    "diagnostic_warning": true,
+    "scope": "Final insertion-index uniformity diagnostic; a low p-value requires follow-up, a passing value does not prove posterior calibration."
+  },
+  "calibrated_posterior_established": false,
+  "limitations": "Single unseeded nested-sampling run; insertion-index diagnostics are recorded separately from execution integrity. Posterior calibration/global mode completeness requires additional runs and injection studies. Original nonnegative fdot, constant PSD, orbit extrapolation and undefined noise evidence are retained."
+}

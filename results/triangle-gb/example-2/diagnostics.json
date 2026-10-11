@@ -1,0 +1,296 @@
+{
+  "python": "3.11.14",
+  "numpy": "1.26.4",
+  "bilby": "2.8.2",
+  "nessai": "0.15.2",
+  "nessai_bilby": "0.3.2",
+  "torch": "2.14.1",
+  "cpu_count": 10,
+  "start_method": "fork",
+  "dt_seconds": 10.0,
+  "Tobs_seconds": 31471750.0,
+  "Nsparse": 512,
+  "source_index": 1,
+  "time_axis": {
+    "shape": [
+      3147175
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "eb7af7898d33995d40d258cb8a1ff9b732241bbcf420a39f9f78b1e26c8bdecb"
+  },
+  "td": {
+    "shape": [
+      2,
+      3147175
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "132e1f799aee07ff593fb1d373a3941efb2f71f3f049a1fc536bc82a300c2103"
+  },
+  "band_frequency": {
+    "shape": [
+      157
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "6488f0c18e4ade4953c907b9633c5878779b6ef3598fed3a65eedf96e24ddff9"
+  },
+  "band_data": {
+    "shape": [
+      2,
+      157
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "1adcd5a8c7453c615c8afdf6419ea133d9e6dfc5fa76b8683d9d92efebd7a8ae"
+  },
+  "PSDlevel": 3.217451233914247e-42,
+  "band_width_hz": 5e-06,
+  "true_parameters": {
+    "A": 9.402415441563616e-23,
+    "f0": 0.0048216991071498,
+    "fdot0": 2.53782494976533e-16,
+    "inclination": 1.4686945655532282,
+    "latitude": 1.1547376242549767,
+    "longitude": 3.578406556800828,
+    "phase0": 2.680478779022586,
+    "psi": 2.4599687248082027
+  },
+  "priors": {
+    "A": {
+      "class": "LogUniform",
+      "minimum": 1e-23,
+      "maximum": 1e-20,
+      "boundary": null
+    },
+    "f0": {
+      "class": "Uniform",
+      "minimum": 0.004819210879598371,
+      "maximum": 0.004824167705958519,
+      "boundary": null
+    },
+    "fdot0": {
+      "class": "Uniform",
+      "minimum": 0.0,
+      "maximum": 3.193339396586594e-15,
+      "boundary": null
+    },
+    "inclination": {
+      "class": "Sine",
+      "minimum": 0.0,
+      "maximum": 3.141592653589793,
+      "boundary": null
+    },
+    "latitude": {
+      "class": "Cosine",
+      "minimum": -1.5707963267948966,
+      "maximum": 1.5707963267948966,
+      "boundary": null
+    },
+    "longitude": {
+      "class": "Uniform",
+      "minimum": 0.0,
+      "maximum": 6.283185307179586,
+      "boundary": "periodic"
+    },
+    "phase0": {
+      "class": "Uniform",
+      "minimum": 0.0,
+      "maximum": 6.283185307179586,
+      "boundary": "periodic"
+    },
+    "psi": {
+      "class": "Uniform",
+      "minimum": 0.0,
+      "maximum": 3.141592653589793,
+      "boundary": "periodic"
+    }
+  },
+  "sampler": "nessai",
+  "sampler_kwargs": {
+    "n_steps": "10",
+    "n_accept": "None",
+    "step_type": "gaussian",
+    "step_kwargs": "None",
+    "plot_chain": "False",
+    "plot_history": "False",
+    "enforce_likelihood_threshold": "False",
+    "ensemble_fraction": "0.5",
+    "rng": "None",
+    "flow_config": "None",
+    "training_config": "None",
+    "output": "./Samples/vgb_example_nessai/",
+    "poolsize": "1000",
+    "plot": "True",
+    "check_acceptance": "False",
+    "max_poolsize_scale": "10",
+    "update_poolsize": "True",
+    "accumulate_weights": "False",
+    "save_training_data": "False",
+    "reparameterisations": "None",
+    "fallback_reparameterisation": "zscore",
+    "use_default_reparameterisations": "None",
+    "reverse_reparameterisations": "False",
+    "map_to_unit_hypercube": "False",
+    "max_n_clusters": "None",
+    "latent_prior": "truncated_gaussian",
+    "latent_temperature": "None",
+    "constant_volume_mode": "True",
+    "volume_fraction": "0.95",
+    "fuzz": "1.0",
+    "fixed_radius": "False",
+    "drawsize": "None",
+    "truncate_log_q": "False",
+    "expansion_fraction": "4.0",
+    "min_radius": "False",
+    "max_radius": "50.0",
+    "compute_radius_with_all": "False",
+    "augment_dims": "1",
+    "generate_augment": "gaussian",
+    "marginalise_augment": "False",
+    "n_marg": "50",
+    "nlive": "500",
+    "stopping": "0.01",
+    "max_iteration": "None",
+    "checkpointing": "True",
+    "checkpoint_interval": "600",
+    "checkpoint_on_iteration": "False",
+    "checkpoint_on_training": "False",
+    "checkpoint_callback": "None",
+    "logging_interval": "60",
+    "log_on_iteration": "False",
+    "resume_file": "nested_sampler_resume.pkl",
+    "seed": "None",
+    "pool": "None",
+    "close_pool": "None",
+    "n_pool": "10",
+    "proposal_plots": "False",
+    "prior_sampling": "False",
+    "analytic_priors": "False",
+    "maximum_uninformed": "None",
+    "uninformed_proposal": "None",
+    "uninformed_acceptance_threshold": "None",
+    "uninformed_proposal_kwargs": "None",
+    "flow_proposal_class": "None",
+    "flow_class": "None",
+    "training_frequency": "None",
+    "train_on_empty": "True",
+    "cooldown": "200",
+    "memory": "False",
+    "reset_weights": "False",
+    "reset_permutations": "False",
+    "reset_flow": "False",
+    "retrain_acceptance": "True",
+    "reset_acceptance": "False",
+    "acceptance_threshold": "0.01",
+    "shrinkage_expectation": "logt",
+    "trace_parameters": "None",
+    "resume": "False",
+    "resume_data": "None",
+    "weights_file": "None",
+    "weights_path": "None",
+    "exit_code": "130",
+    "pytorch_threads": "1",
+    "eps": "None",
+    "torch_dtype": "None",
+    "disable_vectorisation": "False",
+    "likelihood_chunksize": "None",
+    "allow_multi_valued_likelihood": "None",
+    "parallelise_prior": "None",
+    "result_extension": "hdf5",
+    "plot_indices": "True",
+    "plot_posterior": "False",
+    "plot_logXlogL": "True",
+    "posterior_sampling_method": "None",
+    "nessai_log_level": "None",
+    "nessai_logging_stream": "stdout",
+    "nessai_plot": "True",
+    "nessai_likelihood_constraint": "True"
+  },
+  "posterior_samples": 2458,
+  "posterior_parameters": [
+    "A",
+    "f0",
+    "fdot0",
+    "inclination",
+    "latitude",
+    "longitude",
+    "phase0",
+    "psi"
+  ],
+  "posterior_finite": true,
+  "posterior_loglikelihood_finite": true,
+  "posterior_logprior_finite": true,
+  "quantiles_05_16_50_84_95": {
+    "A": [
+      9.038166364406318e-23,
+      9.117562749021467e-23,
+      9.247419640379445e-23,
+      9.37733623555452e-23,
+      9.468748062257772e-23
+    ],
+    "f0": [
+      0.004821691570200001,
+      0.004821693496175157,
+      0.004821696530997548,
+      0.004821699430103056,
+      0.004821701302402106
+    ],
+    "fdot0": [
+      1.3161970391157068e-16,
+      2.450865237720759e-16,
+      4.2309039273405145e-16,
+      6.103662912848658e-16,
+      7.343240728928112e-16
+    ],
+    "inclination": [
+      1.4654297623228785,
+      1.4701867110334483,
+      1.4775247187500697,
+      1.4846098166576678,
+      1.4891813083459462
+    ],
+    "latitude": [
+      1.1497137354493605,
+      1.1516184945174401,
+      1.1546956062468337,
+      1.1576805871368614,
+      1.1595825770699826
+    ],
+    "longitude": [
+      3.5692473325856167,
+      3.5754902849335086,
+      3.5840081526033476,
+      3.594078474802937,
+      3.600016129301231
+    ],
+    "phase0": [
+      2.63175361052535,
+      2.7093004031324495,
+      5.686657454582835,
+      5.951089545769206,
+      6.046238915574594
+    ],
+    "psi": [
+      0.8924618226267742,
+      0.8996390049662512,
+      0.9277260097409311,
+      2.480632349547872,
+      2.489201161971254
+    ]
+  },
+  "truth_log_likelihood": -308.3057432014772,
+  "best_posterior_log_likelihood": -302.30999435442516,
+  "best_recomputed_log_likelihood": -302.30999435442516,
+  "log_evidence": -345.51190441337576,
+  "log_evidence_err": 0.2813664624253498,
+  "log_noise_evidence": "nan",
+  "log_bayes_factor": "nan",
+  "sampling_time": "400.086822",
+  "module_files": {
+    "Triangle.GW": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-simulator/Triangle/GW.py",
+    "Triangle.Orbit": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-simulator/Triangle/Orbit.py",
+    "Triangle_GB.TDIFly": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-gb/Triangle_GB/TDIFly.py"
+  }
+}

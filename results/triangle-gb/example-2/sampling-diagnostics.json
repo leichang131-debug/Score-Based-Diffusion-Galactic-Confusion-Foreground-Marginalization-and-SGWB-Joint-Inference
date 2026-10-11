@@ -1,0 +1,21 @@
+{
+  "final_p_value": 0.0008381311643863278,
+  "final_ks_statistic": 0.012135275754422525,
+  "log_evidence": -345.51190441337576,
+  "log_evidence_error": 0.2813664624253498,
+  "information": 39.58354308887789,
+  "training_time": 14.148181,
+  "population_time": 58.535849,
+  "sampling_time": 400.086822,
+  "total_likelihood_evaluations": 903749,
+  "nested_weight_effective_sample_size": 3657.8535548530185,
+  "insertion_index_count": 24025,
+  "nested_samples_count": 24525,
+  "posterior_samples_count": 2458,
+  "insertion_indices_range": [
+    0,
+    499
+  ],
+  "diagnostic_warning": true,
+  "scope": "Final insertion-index uniformity diagnostic; a low p-value requires follow-up, a passing value does not prove posterior calibration."
+}

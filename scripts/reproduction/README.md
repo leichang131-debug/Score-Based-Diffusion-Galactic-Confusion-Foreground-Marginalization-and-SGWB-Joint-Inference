@@ -83,3 +83,7 @@ See [prerequisite completion](../../docs/reproduction/triangle-gb/prerequisites-
 ## Triangle-GB Example 1
 
 `run-triangle-gb-example-1.py` executes the unchanged original VGB rapid-search notebook with fresh local outputs and original multiprocessing defaults. `audit-triangle-gb-example-1.py` verifies input hashes, source correspondence, optimization, the F-statistic/residual identity and saved local outputs. See [report](../../docs/reproduction/triangle-gb/example-1.md).
+
+## Triangle-GB Example 2
+
+`run-triangle-gb-example-2.py` executes the unchanged eight-parameter Bilby/NESSAI notebook with original nlive=500, stopping=0.01 and CPU pool settings. `export-triangle-gb-example-2.py` exports final scientific sampler artifacts and insertion diagnostics while retaining checkpoints/flow weights in ignored runs. `audit-triangle-gb-example-2.py` verifies inputs, original source, settings, posterior bounds/finiteness and likelihood/evidence consistency, separately from scientific calibration. See [report](../../docs/reproduction/triangle-gb/example-2.md).

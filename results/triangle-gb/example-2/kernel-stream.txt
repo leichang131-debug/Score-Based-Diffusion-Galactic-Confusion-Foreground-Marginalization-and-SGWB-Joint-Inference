@@ -1,0 +1,153 @@
+PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1
+No phenomxpy.
+No pyseobnr.
+no cupy 
+no cupy 
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/pycbc/waveform/plugin.py:99: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:83: FutureWarning: <class '__main__.bilby_likelihood_wrapper'> log_likelihood or log_likelihood_ratio method does not accept 'parameters' as an argument. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:127: FutureWarning: Setting non-trivial parameters for <class '__main__.bilby_likelihood_wrapper'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)
+19:57 bilby INFO    : Running for label 'vgb_example', output will be saved to './Samples'
+number of cpus = 10
+19:57 bilby INFO    : Analysis priors:
+19:57 bilby INFO    : A=LogUniform(minimum=1e-23, maximum=1e-20, name='A', latex_label='$A$', unit=None, boundary=None)
+19:57 bilby INFO    : f0=Uniform(minimum=0.004819210879598371, maximum=0.004824167705958519, name='f0', latex_label='$f_0$', unit=None, boundary=None)
+19:57 bilby INFO    : fdot0=Uniform(minimum=0, maximum=3.193339396586594e-15, name='fdot0', latex_label='$\\dot{f}_0$', unit=None, boundary=None)
+19:57 bilby INFO    : inclination=Sine(minimum=0.0, maximum=3.141592653589793, name='inclination', latex_label='$\\iota$', unit=None, boundary=None)
+19:57 bilby INFO    : latitude=Cosine(minimum=-1.5707963267948966, maximum=1.5707963267948966, name='latitude', latex_label='$\\beta$', unit=None, boundary=None)
+19:57 bilby INFO    : longitude=Uniform(minimum=0.0, maximum=6.283185307179586, name='longitude', latex_label='$\\lambda$', unit=None, boundary='periodic')
+19:57 bilby INFO    : phase0=Uniform(minimum=0.0, maximum=6.283185307179586, name='phase0', latex_label='$\\varphi_0$', unit=None, boundary='periodic')
+19:57 bilby INFO    : psi=Uniform(minimum=0.0, maximum=3.141592653589793, name='psi', latex_label='$\\psi$', unit=None, boundary='periodic')
+19:57 bilby INFO    : Analysis likelihood class: <class '__main__.bilby_likelihood_wrapper'>
+19:57 bilby INFO    : Analysis likelihood noise evidence: nan
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:64: DeprecationWarning: Using parameters as state for bilby_likelihood_wrapper. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:113: FutureWarning: Parameter attribute queried for <class '__main__.bilby_likelihood_wrapper'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)
+19:57 bilby INFO    : Single likelihood evaluation took 1.517e-03 s
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/nessai/gw/__init__.py:12: FutureWarning: The `nessai.gw` module will be deprecated in the next release in favour of the nessai-gw package. This packages provides the same functionality as`nessai.gw` via the plugin interface.For more details, see: https://github.com/mj-will/nessai-gw
+  warnings.warn(
+19:57 bilby INFO    : Using sampler Nessai with kwargs {'n_steps': 10, 'n_accept': None, 'step_type': 'gaussian', 'step_kwargs': None, 'plot_chain': False, 'plot_history': False, 'enforce_likelihood_threshold': False, 'ensemble_fraction': 0.5, 'rng': None, 'flow_config': None, 'training_config': None, 'output': './Samples/vgb_example_nessai/', 'poolsize': 1000, 'plot': True, 'check_acceptance': False, 'max_poolsize_scale': 10, 'update_poolsize': True, 'accumulate_weights': False, 'save_training_data': False, 'reparameterisations': None, 'fallback_reparameterisation': 'zscore', 'use_default_reparameterisations': None, 'reverse_reparameterisations': False, 'map_to_unit_hypercube': False, 'max_n_clusters': None, 'latent_prior': 'truncated_gaussian', 'latent_temperature': None, 'constant_volume_mode': True, 'volume_fraction': 0.95, 'fuzz': 1.0, 'fixed_radius': False, 'drawsize': None, 'truncate_log_q': False, 'expansion_fraction': 4.0, 'min_radius': False, 'max_radius': 50.0, 'compute_radius_with_all': False, 'augment_dims': 1, 'generate_augment': 'gaussian', 'marginalise_augment': False, 'n_marg': 50, 'nlive': 500, 'stopping': 0.01, 'max_iteration': None, 'checkpointing': True, 'checkpoint_interval': 600, 'checkpoint_on_iteration': False, 'checkpoint_on_training': False, 'checkpoint_callback': None, 'logging_interval': 60, 'log_on_iteration': False, 'resume_file': 'nested_sampler_resume.pkl', 'seed': None, 'pool': None, 'close_pool': None, 'n_pool': 10, 'proposal_plots': False, 'prior_sampling': False, 'analytic_priors': False, 'maximum_uninformed': None, 'uninformed_proposal': None, 'uninformed_acceptance_threshold': None, 'uninformed_proposal_kwargs': None, 'flow_proposal_class': None, 'flow_class': None, 'training_frequency': None, 'train_on_empty': True, 'cooldown': 200, 'memory': False, 'reset_weights': False, 'reset_permutations': False, 'reset_flow': False, 'retrain_acceptance': True, 'reset_acceptance': False, 'acceptance_threshold': 0.01, 'shrinkage_expectation': 'logt', 'trace_parameters': None, 'resume': False, 'resume_data': None, 'weights_file': None, 'weights_path': None, 'exit_code': 130, 'pytorch_threads': 1, 'eps': None, 'torch_dtype': None, 'disable_vectorisation': False, 'likelihood_chunksize': None, 'allow_multi_valued_likelihood': None, 'parallelise_prior': None, 'result_extension': 'hdf5', 'plot_indices': True, 'plot_posterior': False, 'plot_logXlogL': True, 'posterior_sampling_method': None, 'nessai_log_level': None, 'nessai_logging_stream': 'stdout', 'nessai_plot': True, 'nessai_likelihood_constraint': True}
+19:57 bilby INFO    : Global meta data was removed from the result object for compatibility. Use the `BILBY_INCLUDE_GLOBAL_METADATA` environment variable to include it. This behaviour will be removed in a future release. For more details see: https://bilby-dev.github.io/bilby/faq.html#global-meta-data
+10-11 19:57 nessai INFO    : Running Nessai version 0.15.2
+19:57 bilby INFO    : Using bilby pool for multiprocessing with n_pool=10
+19:57 bilby INFO    : Setting up multiproccesing pool with 10 processes
+10-11 19:57 nessai INFO    : Using user specified pool
+10-11 19:57 nessai INFO    : Initialising nested sampler
+10-11 19:57 nessai WARNING : Multiprocessing pool has already been configured.
+10-11 19:57 nessai WARNING : Removing unused keyword arguments ({'plot_chain', 'marginalise_augment', 'ensemble_fraction', 'plot_history', 'augment_dims', 'step_type', 'n_accept', 'generate_augment', 'n_marg', 'max_n_clusters', 'n_steps', 'step_kwargs'}) from kwargs for FlowProposal. These are valid keyword arguments but correspond to other proposal classes.
+10-11 19:57 nessai INFO    : Passing kwargs to FlowProposal: {'enforce_likelihood_threshold': False, 'training_config': None, 'poolsize': 1000, 'check_acceptance': False, 'max_poolsize_scale': 10, 'update_poolsize': True, 'accumulate_weights': False, 'save_training_data': False, 'reparameterisations': None, 'fallback_reparameterisation': 'zscore', 'use_default_reparameterisations': None, 'reverse_reparameterisations': False, 'map_to_unit_hypercube': False, 'latent_prior': 'truncated_gaussian', 'latent_temperature': None, 'constant_volume_mode': True, 'volume_fraction': 0.95, 'fuzz': 1.0, 'fixed_radius': False, 'drawsize': None, 'truncate_log_q': False, 'expansion_fraction': 4.0, 'min_radius': False, 'max_radius': 50.0, 'compute_radius_with_all': False}
+10-11 19:57 nessai WARNING : Signal handling is disabled. nessai will not automatically checkpoint when exited.
+10-11 19:57 nessai INFO    : No reparameterisations provided, using default reparameterisations included in FlowProposal
+10-11 19:57 nessai INFO    : Adding reparameterisations from: {}
+10-11 19:57 nessai INFO    : Assuming fallback reparameterisation (ScaleAndShift) for ['A', 'f0', 'fdot0', 'inclination', 'latitude', 'longitude', 'phase0', 'psi'] with kwargs: {'estimate_scale': True, 'estimate_shift': True, 'prior_bounds': {'A': array([1.e-23, 1.e-20]), 'f0': array([0.00481921, 0.00482417]), 'fdot0': array([0.0000000e+00, 3.1933394e-15]), 'inclination': array([0.        , 3.14159265]), 'latitude': array([-1.57079633,  1.57079633]), 'longitude': array([0.        , 6.28318531]), 'phase0': array([0.        , 6.28318531]), 'psi': array([0.        , 3.14159265])}}.
+10-11 19:57 nessai INFO    : x space parameters: ['A', 'f0', 'fdot0', 'inclination', 'latitude', 'longitude', 'phase0', 'psi']
+10-11 19:57 nessai INFO    : x prime space parameters: ['A_prime', 'f0_prime', 'fdot0_prime', 'inclination_prime', 'latitude_prime', 'longitude_prime', 'phase0_prime', 'psi_prime']
+10-11 19:57 nessai INFO    : Overwriting fuzz factor with expansion fraction
+10-11 19:57 nessai INFO    : New fuzz factor: 1.2228445449938519
+10-11 19:57 nessai INFO    : Verifying rescaling functions
+10-11 19:57 nessai INFO    : Rescaling functions are invertible
+10-11 19:57 nessai INFO    : Populating initial live points
+10-11 19:57 nessai INFO    : Populated 50 / 500 live points
+10-11 19:57 nessai INFO    : Populated 100 / 500 live points
+10-11 19:57 nessai INFO    : Populated 150 / 500 live points
+10-11 19:57 nessai INFO    : Populated 200 / 500 live points
+10-11 19:57 nessai INFO    : Populated 250 / 500 live points
+10-11 19:57 nessai INFO    : Populated 300 / 500 live points
+10-11 19:57 nessai INFO    : Populated 350 / 500 live points
+10-11 19:57 nessai INFO    : Populated 400 / 500 live points
+10-11 19:57 nessai INFO    : Populated 450 / 500 live points
+10-11 19:57 nessai INFO    : Populated 500 / 500 live points
+10-11 19:57 nessai INFO    : Starting nested sampling loop
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:113: FutureWarning: Parameter attribute queried for <class '__main__.bilby_likelihood_wrapper'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)
+10-11 19:57 nessai INFO    : it:   500: Rolling KS test: D=0.044, p-value=0.1401
+10-11 19:57 nessai INFO    : it:  1000: Rolling KS test: D=0.064, p-value=0.01591
+10-11 19:57 nessai INFO    : Switching to FlowProposal
+10-11 19:57 nessai INFO    : it:  1500: Rolling KS test: D=0.014, p-value=0.8144
+10-11 19:57 nessai INFO    : it:  2000: Rolling KS test: D=0.008, p-value=0.933
+10-11 19:57 nessai INFO    : it:  2500: Rolling KS test: D=0.02, p-value=0.6615
+10-11 19:57 nessai INFO    : it:  3000: Rolling KS test: D=0.032, p-value=0.3517
+10-11 19:57 nessai INFO    : it:  3500: Rolling KS test: D=0.034, p-value=0.3078
+10-11 19:58 nessai INFO    : it:  4000: Rolling KS test: D=0.054, p-value=0.0522
+10-11 19:58 nessai INFO    : it:  4500: Rolling KS test: D=0.028, p-value=0.4482
+10-11 19:58 nessai INFO    : it:  4726: n eval: 149729 H: 13.10 dlogZ: 893.271 logZ: -2874.423 +/- 0.162 logLmax: -1971.70
+10-11 19:58 nessai INFO    : it:  5000: Rolling KS test: D=0.02, p-value=0.6615
+10-11 19:59 nessai INFO    : it:  5500: Rolling KS test: D=0.048, p-value=0.0967
+10-11 19:59 nessai INFO    : it:  5628: n eval: 289729 H: 15.10 dlogZ: 717.461 logZ: -2700.417 +/- 0.174 logLmax: -1971.70
+10-11 20:00 nessai INFO    : it:  6000: Rolling KS test: D=0.03, p-value=0.3986
+10-11 20:00 nessai INFO    : it:  6500: Rolling KS test: D=0.042, p-value=0.1666
+10-11 20:00 nessai INFO    : it:  7000: Rolling KS test: D=0.038, p-value=0.2301
+10-11 20:00 nessai INFO    : it:  7059: n eval: 429729 H: 18.18 dlogZ: 1555.418 logZ: -2315.525 +/- 0.191 logLmax: -745.99
+10-11 20:00 nessai INFO    : it:  7500: Rolling KS test: D=0.036, p-value=0.2672
+10-11 20:01 nessai INFO    : it:  8000: Rolling KS test: D=0.03, p-value=0.3986
+10-11 20:01 nessai INFO    : it:  8500: Rolling KS test: D=0.036, p-value=0.2672
+10-11 20:01 nessai INFO    : it:  9000: Rolling KS test: D=0.07, p-value=0.007084
+10-11 20:01 nessai INFO    : it:  9043: n eval: 579729 H: 21.99 dlogZ: 830.088 logZ: -1594.163 +/- 0.210 logLmax: -745.99
+10-11 20:01 nessai INFO    : it:  9500: Rolling KS test: D=0.032, p-value=0.3517
+10-11 20:02 nessai INFO    : it: 10000: Rolling KS test: D=0.056, p-value=0.04183
+10-11 20:02 nessai INFO    : it: 10500: Rolling KS test: D=0.02, p-value=0.6615
+10-11 20:02 nessai INFO    : it: 11000: Rolling KS test: D=0.032, p-value=0.3517
+10-11 20:02 nessai INFO    : it: 11500: Rolling KS test: D=0.032, p-value=0.3517
+10-11 20:02 nessai INFO    : it: 12000: Rolling KS test: D=0.038, p-value=0.2301
+10-11 20:02 nessai INFO    : it: 12500: Rolling KS test: D=0.038, p-value=0.2301
+10-11 20:02 nessai INFO    : it: 13000: Rolling KS test: D=0.046, p-value=0.1169
+10-11 20:02 nessai INFO    : it: 13500: Rolling KS test: D=0.02, p-value=0.6615
+10-11 20:02 nessai INFO    : it: 14000: Rolling KS test: D=0.036, p-value=0.2672
+10-11 20:02 nessai INFO    : it: 14500: Rolling KS test: D=0.006, p-value=0.9608
+10-11 20:02 nessai INFO    : it: 14959: n eval: 715143 H: 31.86 dlogZ: 63.724 logZ: -409.624 +/- 0.252 logLmax: -315.98
+10-11 20:02 nessai INFO    : it: 15000: Rolling KS test: D=0.04, p-value=0.1966
+10-11 20:02 nessai INFO    : it: 15500: Rolling KS test: D=0.006, p-value=0.9608
+10-11 20:03 nessai INFO    : it: 16000: Rolling KS test: D=0.03, p-value=0.3986
+10-11 20:03 nessai INFO    : it: 16500: Rolling KS test: D=0.06, p-value=0.02622
+10-11 20:03 nessai INFO    : it: 17000: Rolling KS test: D=0.024, p-value=0.5533
+10-11 20:03 nessai INFO    : it: 17500: Rolling KS test: D=0.024, p-value=0.5533
+10-11 20:03 nessai INFO    : it: 18000: Rolling KS test: D=0.018, p-value=0.7147
+10-11 20:03 nessai INFO    : it: 18500: Rolling KS test: D=0.05, p-value=0.07937
+10-11 20:03 nessai INFO    : it: 19000: Rolling KS test: D=0.052, p-value=0.06463
+10-11 20:03 nessai INFO    : it: 19500: Rolling KS test: D=0.028, p-value=0.4482
+10-11 20:03 nessai INFO    : it: 20000: Rolling KS test: D=0.014, p-value=0.8144
+10-11 20:03 nessai INFO    : it: 20500: Rolling KS test: D=0.036, p-value=0.2672
+10-11 20:03 nessai INFO    : it: 21000: Rolling KS test: D=0.052, p-value=0.06463
+10-11 20:03 nessai INFO    : it: 21190: n eval: 851085 H: 38.99 dlogZ: 1.365 logZ: -345.942 +/- 0.279 logLmax: -302.49
+10-11 20:03 nessai INFO    : it: 21500: Rolling KS test: D=0.03, p-value=0.3986
+10-11 20:03 nessai INFO    : it: 22000: Rolling KS test: D=0.02, p-value=0.6615
+10-11 20:04 nessai INFO    : it: 22500: Rolling KS test: D=0.04, p-value=0.1966
+10-11 20:04 nessai INFO    : it: 23000: Rolling KS test: D=0.014, p-value=0.8144
+10-11 20:04 nessai INFO    : it: 23500: Rolling KS test: D=0.036, p-value=0.2672
+10-11 20:04 nessai INFO    : it: 24000: Rolling KS test: D=0.046, p-value=0.1169
+10-11 20:04 nessai INFO    : Stopping with difference_log_evidence=0.010
+10-11 20:04 nessai INFO    : Finalising
+10-11 20:04 nessai INFO    : Final ln-evidence: -345.512 +/- 0.281
+10-11 20:04 nessai INFO    : Information: 39.58
+10-11 20:04 nessai INFO    : Final KS test: D=0.01214, p-value=0.0008381
+10-11 20:04 nessai WARNING : Final p-value for the insertion indices is less than 0.05, this could be an indication of problems during sampling. Consider checking the diagnostic plots.
+10-11 20:04 nessai INFO    : Checkpointing nested sampling
+10-11 20:04 nessai INFO    : Total sampling time: 0:06:40.086822
+10-11 20:04 nessai INFO    : Total training time: 0:00:14.148181
+10-11 20:04 nessai INFO    : Total population time: 0:00:58.535849
+10-11 20:04 nessai INFO    : Total likelihood evaluations: 903749
+10-11 20:04 nessai INFO    : Time spent evaluating likelihood: 0:05:04.475820
+10-11 20:04 nessai INFO    : Total sampling time: 0:06:40.086822
+10-11 20:04 nessai INFO    : Total likelihood evaluations: 903749
+10-11 20:04 nessai INFO    : Starting post processing
+10-11 20:04 nessai INFO    : Computing posterior samples
+10-11 20:04 nessai INFO    : Effective sample size: 3657.9
+10-11 20:04 nessai INFO    : Producing posterior samples using rejection sampling
+10-11 20:04 nessai INFO    : Expect 2457.2831564803146 samples from rejection sampling
+10-11 20:04 nessai INFO    : Returned 2458 posterior samples
+20:04 bilby INFO    : Starting to close worker pool.
+20:04 bilby INFO    : Finished closing worker pool.
+20:04 bilby INFO    : Sampling time: 0:06:40.086822
+20:04 bilby WARNING : Result.save_to_file called with extension=True. This will default to json, and ignore the extension from the filename. This behaviour is deprecated and will be removed. 
+20:04 bilby WARNING : Result.save_to_file called with extension=True. This will default to json, and ignore the extension from the filename. This behaviour is deprecated and will be removed. 
+20:04 bilby INFO    : Summary of results:
+nsamples: 2458
+ln_noise_evidence:    nan
+ln_evidence: -345.512 +/-  0.281
+ln_bayes_factor:    nan +/-  0.281
+
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:113: FutureWarning: Parameter attribute queried for <class '__main__.bilby_likelihood_wrapper'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)

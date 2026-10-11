@@ -1,0 +1,537 @@
+[
+  {
+    "path": "docs/reproduction/triangle-gb/example-2.md",
+    "bytes": 9329,
+    "sha256": "5ebd6324f8f2d31b75f6bf88e33f0b257d98fc7ebc3e4d19a0d011a5281e334b"
+  },
+  {
+    "path": "environments/triangle-gb/requirements-macos-arm64-py311.txt",
+    "bytes": 176652,
+    "sha256": "9be2df00e79a7398cf400e594d13dca54591cfbfa64bafe32a5f36f85e9dd525"
+  },
+  {
+    "path": "environments/triangle-gb/requirements.in",
+    "bytes": 353,
+    "sha256": "7f7dedb7b91de14f54fa51338672782e982af7e58156cfa3a6cd92c6a73c446a"
+  },
+  {
+    "path": "external/triangle-gb/Examples/2_TDIFlyGB_Parameter_Estimation(CPU).ipynb",
+    "bytes": 845646,
+    "sha256": "ebc05218330aacbf72b552d24a5fb008b58dc716793e0c9a418cb0b36ab36aa8"
+  },
+  {
+    "path": "external/triangle-gb/Triangle_GB/TDIFly.py",
+    "bytes": 50553,
+    "sha256": "57a08754774557db06841cf64532f474580ee97960de2e239847ab0aa493b5ae"
+  },
+  {
+    "path": "external/triangle-gb/Triangle_GB/__init__.py",
+    "bytes": 1061,
+    "sha256": "a633ac09a14448a4c9909a54e56f1ddd3ed754cae7244a4e9e25fc001d546c85"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCP1.dat",
+    "bytes": 27978,
+    "sha256": "f4fecedeb43bdf1ad70259f412671b3a89f1aa2ce27d3e28173e56ca1b8801a4"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCP2.dat",
+    "bytes": 27982,
+    "sha256": "999e0e7654a249822e1249962d4db826a388fe253a84ef1659334a68ab3226ab"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCP3.dat",
+    "bytes": 27981,
+    "sha256": "4a80a9134386a7b4d3c5f048cfcfa81cd29cccb585a04893daf282e3bd6557d0"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCV1.dat",
+    "bytes": 28108,
+    "sha256": "24b718a50d463ad196a60cfc8f43515ff9cbf96a823fa9d281b1cc5c03802f41"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCV2.dat",
+    "bytes": 28108,
+    "sha256": "d5d417f17a354c8bf3a32486a63bd09017102a9af2cb6f60989e3730fda2e12c"
+  },
+  {
+    "path": "external/triangle-simulator/OrbitData/MicroSateOrbitEclipticTCB/SCV3.dat",
+    "bytes": 28107,
+    "sha256": "9812800fbda9de9d271fd9df980dd5fa49fa19fe00d04e96f1a339d15b834301"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Constants.py",
+    "bytes": 3877,
+    "sha256": "7c6070cff005acd46e843b00864b1890a3b8c59319fcf94894325f2fd0caa760"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Cosmology.py",
+    "bytes": 651,
+    "sha256": "6a5b84fb65a99ff34d5135b9796b9e4eb43207d2b365a7e024a6e4ced8c39a2c"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Data.py",
+    "bytes": 34913,
+    "sha256": "91d6672333606f1b80ef559ad8ec84359a0e967426ed89b79f9ff4df01bdcb0d"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/FFTTools.py",
+    "bytes": 5606,
+    "sha256": "f3c4a7245df9ca727885fa115872730d8ca0c92cc463547d9cfb55d991e0458e"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/GW.py",
+    "bytes": 80123,
+    "sha256": "e307e83a5ffb4051ebedecf0adf1220aee73d60c8f15234c98cebd3562149bc8"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Glitch.py",
+    "bytes": 4774,
+    "sha256": "83ea220f988c35438d8761e8ec5bd3a9254994e9f100bcc3edcc86f09e783821"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Interferometer.py",
+    "bytes": 55096,
+    "sha256": "58616869bef2ab1ebfb1a4bfc0062ca75b3dfb1b69812d5f3e5e7cdd4394e8fe"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Noise.py",
+    "bytes": 35381,
+    "sha256": "245938297b3511c9792bdef4163877f8140e70464a8795695ac67275d7ec2daa"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Offset.py",
+    "bytes": 1972,
+    "sha256": "e03841bcc645239e79c0ace9b593bc1f2676c36be03b254a7bd7839d76a55e3d"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Orbit.py",
+    "bytes": 15574,
+    "sha256": "af2c4d83a2128cfa9837bcd9a85d7c626aefab4598380bf797ca7f233e94473e"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Plot.py",
+    "bytes": 3770,
+    "sha256": "ace78dfc28870465c03c8c052a0d07d935338d901e76b69382a38c9f10d3a3d5"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/TDI.py",
+    "bytes": 50196,
+    "sha256": "ddce68ddd669b5da63fcd109a040500f2b4fd5cc5eaae6d0e308c6b187cad19a"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/TDIFly.py",
+    "bytes": 50553,
+    "sha256": "57a08754774557db06841cf64532f474580ee97960de2e239847ab0aa493b5ae"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/TTL.py",
+    "bytes": 5907,
+    "sha256": "14fabcc80c26f27a862153374a179e5b8b35efff2735b824d16d506101e89621"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/__init__.py",
+    "bytes": 428,
+    "sha256": "ee514af9cc26642d1345a41ad827abb8d278ea83dc9a13a338ea882acc657d96"
+  },
+  {
+    "path": "notebooks/reproduction/triangle-gb/Examples/2_TDIFlyGB_Parameter_Estimation(CPU).ipynb",
+    "bytes": 865831,
+    "sha256": "72521a9ac3102242e40db6f0fd2ed3ed95acf45d407f8474d20a827d6ebd0ff8"
+  },
+  {
+    "path": "results/triangle-gb/data/validation.json",
+    "bytes": 14363,
+    "sha256": "9c6aa38a1c99febb56afdfd81ee6985d047447e7b23a89d304f77a8aa19b5efc"
+  },
+  {
+    "path": "results/triangle-gb/example-2/README.md",
+    "bytes": 432,
+    "sha256": "0223980005671601ec95387ec2229b8a4067a87d9fd84d3074f14599c8bbb7d1"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example.log",
+    "bytes": 9642,
+    "sha256": "75f222bedd09e64dd96f224f2c1f90173e71b610dec0f48267238e02a510e03c"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_corner.png",
+    "bytes": 1706193,
+    "sha256": "d1e9460bcb5b5761878300601a040695a4c3f4798ec32424277d08e6097a19c5"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/config.json",
+    "bytes": 2307,
+    "sha256": "63b3552aeedaf6c2b61148454026d22ecf773db4098b4a3143fecb8de4605663"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_1000.png",
+    "bytes": 53177,
+    "sha256": "fdf2abf1e34e807a8ac8e66c98935f8fc977cffc80ff96415ae723f0b553f88e"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_10000.png",
+    "bytes": 52188,
+    "sha256": "2478499a30ba0c737a71bb803524c82eab85a7dd156070945119e4437645c26a"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_10500.png",
+    "bytes": 51672,
+    "sha256": "3177e72ace4461d4a98261e65e2db004426e7da01540e1cedd5d3fcdb8ec4bd5"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_11000.png",
+    "bytes": 51263,
+    "sha256": "41440f0873e281793f74c9b2193d003f0a6bc5e55fba010224795b56df6500a6"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_11500.png",
+    "bytes": 50804,
+    "sha256": "9767cc3031ca6a5cf3df203f1ee7eab60d6410bec1025975bb465b5f68d83bbe"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_12000.png",
+    "bytes": 51441,
+    "sha256": "83eff685bc1aec7426f9ca8fbd6f8cfd3859ff8ec526f698bb362ad57bec0a4d"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_12500.png",
+    "bytes": 51354,
+    "sha256": "1996ae87b960d286ab3f3355a6e7b83ca9da64b16c26c948338ba4061dcfc67a"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_13000.png",
+    "bytes": 52527,
+    "sha256": "de350467290587612a8cff4444b47b680b9c9e6be7b64d7c982654be77d14358"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_13500.png",
+    "bytes": 52280,
+    "sha256": "91f53dc1d44a1dcd2bccbcfc1131ba5c94f2fc46d5f4a094458125a018a12c78"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_14000.png",
+    "bytes": 51087,
+    "sha256": "fb1a6da4350b88e9ef494cc5feae2dfcc4c21aa2f752420607ad06aeecdabcf5"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_14500.png",
+    "bytes": 52074,
+    "sha256": "94267bdc830fe8f8895cb57108f66d2603f1c0fd18c1f9c762bfb6efa33a6e1b"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_1500.png",
+    "bytes": 51890,
+    "sha256": "cb9bcfdf9c51718a02e7a5ba2d74442c34fddd4599f743edb9992aa0232f3842"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_15000.png",
+    "bytes": 50736,
+    "sha256": "adadd7947b8bbd81dc7850fb0549063e9898f6b34bca7fe534de5888986ff24c"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_15500.png",
+    "bytes": 52146,
+    "sha256": "ea8eb15e9ba8f9fa48517d01403d1c03b57e7f0dab52c1d845df6e20c6866f45"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_16000.png",
+    "bytes": 51899,
+    "sha256": "68b90b35d35274799b509059eadc9700ced60a870801efaad5f75d24c52b7c00"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_16500.png",
+    "bytes": 52079,
+    "sha256": "2e844f0b1d0b83c3284769b01cb16fae83cdde1f7dc994d23be98365fd39cc55"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_17000.png",
+    "bytes": 50581,
+    "sha256": "05fa38964d2a23a4c67c316ae912301f657fda8105dbfb3c43bbc259e02c22ec"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_17500.png",
+    "bytes": 51286,
+    "sha256": "48f306a5136a1733db6f6355e8645c1c8ed5c720d95f1c3e7b3c168e309c64c2"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_18000.png",
+    "bytes": 50991,
+    "sha256": "61ea9ab640d72c1ace32d026a867aaee184901e6f5f481d70a9238f40afe92b1"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_18500.png",
+    "bytes": 52288,
+    "sha256": "8d2069915a8982f870fb1c9048e7f617f60d725f0643aeaaaddd4cadf3140b59"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_19000.png",
+    "bytes": 51276,
+    "sha256": "c37a76fa8c455f7461897ec8903f14950a4b1e3491b1c483bea7db4f05dd7052"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_19500.png",
+    "bytes": 51108,
+    "sha256": "9a1a2a90071c54edb7e86b73553c810c9704f7851465a51366db38ffcbdeca1e"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_2000.png",
+    "bytes": 52871,
+    "sha256": "fe0934093067ef6be47b11216b1ebb66622bd902992afee9641b0a600c39afac"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_20000.png",
+    "bytes": 50573,
+    "sha256": "354c03ec085932e737627c71e20601e4ddf934aee80e2fd52b28b10f867dffb1"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_20500.png",
+    "bytes": 51592,
+    "sha256": "fee562b40b82a132320ed5e4f8e84f9da9d79a7b9cc87b27ec610cbf0e3e8a96"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_21000.png",
+    "bytes": 52117,
+    "sha256": "578c83a120a9d74c23951646bdf6522d3e4350431540c21565ffb82051f5583e"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_21500.png",
+    "bytes": 52128,
+    "sha256": "1fab4c0cb7fe5f23f8b1f85fdfb359a9d0043bb18a1866ee31210099149c652b"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_22000.png",
+    "bytes": 50443,
+    "sha256": "51e3bbfb74e4ea3be7a1fc3028b85219c291561d2a40a35cc4098417dafa03b5"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_22500.png",
+    "bytes": 51112,
+    "sha256": "ee5efb086a26dc8a18275dbe4c1e61f9b9461316db2159e3b921a67aed7e644f"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_23000.png",
+    "bytes": 51723,
+    "sha256": "63fa15d4dcb0e08fe67960f89cd3252dde63de48e388ee5c30f783f1332e41e8"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_23500.png",
+    "bytes": 51486,
+    "sha256": "234f2678c4b61e3d2be5cda12260d42bb1e81247804b5d57714cd455a82ed185"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_24000.png",
+    "bytes": 52543,
+    "sha256": "b579913f6218bcb845ca28a4efc9e8b01129e29b9ff2d70a2a0f216c1079ece2"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_2500.png",
+    "bytes": 50405,
+    "sha256": "2bb186faf1386101babbee26be884ba7c6b4c31cf054f040c4566d4d425a52c1"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_3000.png",
+    "bytes": 52170,
+    "sha256": "7908f1856053411becd4d283bb4f79ab4e5e3ac80dec0ec278d265d206574b79"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_3500.png",
+    "bytes": 50740,
+    "sha256": "0e0d1400d0a65658d82f88c3f9350d17839263eaa252974838ed24ee8d9403a3"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_4000.png",
+    "bytes": 51751,
+    "sha256": "b6758fd3a0c3573f434d5e8e048cd29b17e1b35892d771ac9d27931777d11b99"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_4500.png",
+    "bytes": 51661,
+    "sha256": "7a59b951a5ad462ae80320c38843f6fb82d9ede101c4de3934e51107d2821a41"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_500.png",
+    "bytes": 51744,
+    "sha256": "c3ac593dfc7d9929c679420f307f83baed9689cb23e8e2a4b565a15131cddc60"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_5000.png",
+    "bytes": 50659,
+    "sha256": "c3520d429f4e6284326e559921a9dd56b2270a70a2664ac0d177759dc13c905d"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_5500.png",
+    "bytes": 53280,
+    "sha256": "20bd643196b34a1e846925a02dfc50f40f9d758021f035ecc57fa24c2feeb8d3"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_6000.png",
+    "bytes": 51581,
+    "sha256": "be42b410a8be9af83910f0b83a896d165494fb47c6879d55cc116481b72328fe"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_6500.png",
+    "bytes": 52000,
+    "sha256": "3f70b1162d4d8e255b3a2bfc3ea1128b00096bf84b8c2865e9c7708b1acce6c6"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_7000.png",
+    "bytes": 51420,
+    "sha256": "8418bb4e8520fe468faf0a7027b1496a35ca7f65397cf01fba36fe5ef06f4610"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_7500.png",
+    "bytes": 52024,
+    "sha256": "f96d7ce305f7d4230420ab0442a1463a3de8eba8a8a8393ddf7c23a05120a94e"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_8000.png",
+    "bytes": 51684,
+    "sha256": "fc789787f9edc5bc605bd2e46325322470a30f1c8c4ac0c9dc4534ddffee5e93"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_8500.png",
+    "bytes": 52146,
+    "sha256": "47c87eb6bee03034825b3f74b241c7a1dbd02d23bdde5eebbebd3095f37381d4"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_9000.png",
+    "bytes": 51784,
+    "sha256": "7b464621cb5661deefc7024c7a040b8284499f79bb838fc2e8e1f3ef4c1f2b3e"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/diagnostics/insertion_indices_9500.png",
+    "bytes": 50980,
+    "sha256": "e5e8bec3e98f97038856b856e8c072ae2d62495dae1966794ad58187ee418653"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/insertion_indices.png",
+    "bytes": 145331,
+    "sha256": "8411fcc884962875820b4f48b6e5be57b7d690d24982a8796c0904e1ee4a75de"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/logXlogL.png",
+    "bytes": 15828,
+    "sha256": "09b54d337fe11505e8dd73aac0bf4fe17fc8963ef2b3e7c480964f5d1dba9d45"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/proposal/flow_config.json",
+    "bytes": 181,
+    "sha256": "b40e9ebc69ffa9ab38bc66d3e07f6ea72ef8498c86842f03ef0c8c464c28f274"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/proposal/training_config.json",
+    "bytes": 351,
+    "sha256": "3e7d28a97c005e23140eddbb2e72a1c236ba32c7d74c0f5baf17244fe585bed5"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/result.hdf5",
+    "bytes": 2908604,
+    "sha256": "ea3e140eb688d9952d0fdfdf8d49945d73068ac160dba3ec3c287e13f7fb4091"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/state.png",
+    "bytes": 175604,
+    "sha256": "02aed17dd6618a38f4a45896784eb07a6742db39516109654fb3e55d37a11e09"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_nessai/trace.png",
+    "bytes": 99244,
+    "sha256": "e15270a095a529c58cb9f6dd1fbf2eec366c778ea8ada7b65b1ca66ec5819df1"
+  },
+  {
+    "path": "results/triangle-gb/example-2/Samples/vgb_example_result.json",
+    "bytes": 9335541,
+    "sha256": "f6e4a27d54a20e6e3ce71720032ae04d4ec0cf5cba38b2dd2ab36c98af6043e1"
+  },
+  {
+    "path": "results/triangle-gb/example-2/audit.json",
+    "bytes": 3153,
+    "sha256": "1c44552ffe8de3416a9a6046ae5d0f31f64e037498834f304af2a3c1fb09190d"
+  },
+  {
+    "path": "results/triangle-gb/example-2/cell-07-output-1.png",
+    "bytes": 29178,
+    "sha256": "a0d9f938761a51867c47f438bbe13f1cc0be4aa8f3b45e2124879e6dd8ff72f3"
+  },
+  {
+    "path": "results/triangle-gb/example-2/cell-10-output-1.png",
+    "bytes": 30678,
+    "sha256": "7b435044ae82648541820b84e76b55d30fecc7cd6d4623933a2f8f7d4ac95634"
+  },
+  {
+    "path": "results/triangle-gb/example-2/cell-15-output-1.png",
+    "bytes": 61723,
+    "sha256": "1dd69a31accadb82aaa62fbcd22434caeda090e6850614cf1f33cd4871fb89c0"
+  },
+  {
+    "path": "results/triangle-gb/example-2/cell-25-output-0.png",
+    "bytes": 489345,
+    "sha256": "fd31766bddcaa4b338ed9569406a2b39d66fd54edc478210890d7d3d773b72eb"
+  },
+  {
+    "path": "results/triangle-gb/example-2/diagnostics.json",
+    "bytes": 8078,
+    "sha256": "4e93b4831014790a5dad0bc6804837eca208696e404ceaad9ef8b43ebda6cafb"
+  },
+  {
+    "path": "results/triangle-gb/example-2/execution.json",
+    "bytes": 2586,
+    "sha256": "0cb9bdb375d3098893781bf0df9cb9c1ff3c2f39ac0189995f4320865a6c3167"
+  },
+  {
+    "path": "results/triangle-gb/example-2/execution.txt",
+    "bytes": 3109,
+    "sha256": "7f19caf3268f497564ccb61dd84d8ae57f46177aef45b410cac54eb7ba9e92df"
+  },
+  {
+    "path": "results/triangle-gb/example-2/kernel-stream.txt",
+    "bytes": 18763,
+    "sha256": "f4aaea12ddc06f754421f6672497a9a9932561081422a9c26b660c305b838886"
+  },
+  {
+    "path": "results/triangle-gb/example-2/parameter-estimation-band.npz",
+    "bytes": 6203,
+    "sha256": "855afceadfe429a7e39d1ff5fd049aa3a81af5854907551121b47d6566297707"
+  },
+  {
+    "path": "results/triangle-gb/example-2/posterior.csv",
+    "bytes": 480105,
+    "sha256": "151bbd320a682f4f6adab2dde845f0de3a481cc2255a83d558a1113070892fea"
+  },
+  {
+    "path": "results/triangle-gb/example-2/resources.csv",
+    "bytes": 3793,
+    "sha256": "ee82f310f8316fad8e04f9b3ee659ee3bc98d093fcee8edcdb1ec43bd5a292f1"
+  },
+  {
+    "path": "results/triangle-gb/example-2/sampler-artifacts.json",
+    "bytes": 16253,
+    "sha256": "9c717fd50af1fc391b3d66450dd85772b2c44c36d00ca12e24d36c41ec50316a"
+  },
+  {
+    "path": "results/triangle-gb/example-2/sampling-diagnostics.json",
+    "bytes": 736,
+    "sha256": "369a995d494de9e867d0463e819ea0c3ca97f0d485f690456351658a62c68cd2"
+  },
+  {
+    "path": "scripts/reproduction/audit-triangle-gb-example-2.py",
+    "bytes": 6600,
+    "sha256": "f9f4b3afa84450f3c12880307843868e87484f38e1073e185b7ca970b554a0b3"
+  },
+  {
+    "path": "scripts/reproduction/export-triangle-gb-example-2.py",
+    "bytes": 2354,
+    "sha256": "c515f9f9413bfc2ad5b91a86dbc6a310a5edf4583fe024894b236deb25553e35"
+  },
+  {
+    "path": "scripts/reproduction/run-triangle-gb-example-2.py",
+    "bytes": 7750,
+    "sha256": "765a5b83d99d48e38bb13da5a8c0f30ce5e98d5287fa575aab8094e7af61bd55"
+  },
+  {
+    "path": "scripts/reproduction/triangle_gb_path_adapter.py",
+    "bytes": 1415,
+    "sha256": "f9f0074f0f962cd362796bb173dcfc2fc93051896ee757d8824005bbaa8a4b25"
+  }
+]
