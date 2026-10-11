@@ -1,0 +1,28 @@
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+START cell 0
+DONE cell 0 1.7783166250010254
+START cell 2
+DONE cell 2 0.11132104200078174
+START cell 4
+DONE cell 4 0.008450790999631863
+START cell 5
+DONE cell 5 0.05417312499776017
+START cell 7
+DONE cell 7 0.10261949999767239
+START cell 9
+DONE cell 9 0.0035202080034650862
+START cell 11
+DONE cell 11 0.2536579170009645
+START cell 13
+DONE cell 13 0.031184915998892393
+START cell 15
+DONE cell 15 0.01927758400051971
+START cell 17
+DONE cell 17 0.35915858399675926
+START cell 18
+DONE cell 18 25.003002707999258
+START cell 20
+DONE cell 20 1533.1818780420035
+START cell 21
+DONE cell 21 0.8998376250019646
+RESULT {"started_utc": "2026-10-11T14:24:49.615600+00:00", "host": "leideMacBook-Air.local", "machine": "arm64", "source_commit": "cbc0a1b0cbf4ec05ec969fa39405394168c3e06c", "source_sha256": "a2ce8b964a8cfa14a60563ada0109f39f93b5e4d0af706961ff64019a6216eb0", "cell_timings": [{"cell_index": 0, "seconds": 1.7783166250010254, "execution_count": 1}, {"cell_index": 2, "seconds": 0.11132104200078174, "execution_count": 2}, {"cell_index": 4, "seconds": 0.008450790999631863, "execution_count": 3}, {"cell_index": 5, "seconds": 0.05417312499776017, "execution_count": 4}, {"cell_index": 7, "seconds": 0.10261949999767239, "execution_count": 5}, {"cell_index": 9, "seconds": 0.0035202080034650862, "execution_count": 6}, {"cell_index": 11, "seconds": 0.2536579170009645, "execution_count": 7}, {"cell_index": 13, "seconds": 0.031184915998892393, "execution_count": 8}, {"cell_index": 15, "seconds": 0.01927758400051971, "execution_count": 9}, {"cell_index": 17, "seconds": 0.35915858399675926, "execution_count": 10}, {"cell_index": 18, "seconds": 25.003002707999258, "execution_count": 11}, {"cell_index": 20, "seconds": 1533.1818780420035, "execution_count": 12}, {"cell_index": 21, "seconds": 0.8998376250019646, "execution_count": 13}], "scope": "Original four-year three-detector network defaults: nessai nlive=1000 stopping=0.1; fresh outputs; no source edits or imposed seed", "resource_note": "Runner and descendant RSS sum sampled every 2 seconds; shared pages may be counted repeatedly.", "execution_passed": true, "wall_seconds": 1563.635002166, "peak_sampled_process_tree_rss_kib": 1744048, "source_cells_unchanged": true, "generated_figures": ["cell-11-output-1.png", "cell-18-output-0.png", "cell-21-output-0.png"], "error_outputs": [], "executed_notebook_sha256": "a0e7a6dfc1c5349defe360c4cddca8ab0c43191610d63bcb6c89c0d0eb429418"}

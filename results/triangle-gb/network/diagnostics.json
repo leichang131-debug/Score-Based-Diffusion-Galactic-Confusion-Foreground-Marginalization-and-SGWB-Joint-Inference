@@ -1,0 +1,329 @@
+{
+  "python": "3.11.14",
+  "numpy": "1.26.4",
+  "bilby": "2.8.2",
+  "nessai": "0.15.2",
+  "cpu_count": 10,
+  "start_method": "fork",
+  "dt_seconds": 10.0,
+  "Tobs_seconds": 126232590.0,
+  "mission_list": [
+    "TianQin",
+    "Taiji",
+    "LISA"
+  ],
+  "time_axis": {
+    "shape": [
+      12623259
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "1d7145ad85373291cc50ce54d77d5b61249d06057a86ae21e7e0ff6a721540f6"
+  },
+  "band_frequency": {
+    "shape": [
+      3202
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "sha256": "d62377f1fa51d17460f52da8d9f3bd363555ed868bbbcc78750a1ccb74b496df"
+  },
+  "signal": {
+    "shape": [
+      6,
+      3202
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "5061ca0b610e7091af261a374bd684bd15df8e6d308fb7eb0d43fe23ec01e707"
+  },
+  "noise": {
+    "shape": [
+      6,
+      3202
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "cd183bb1a656c8437a23179562a7e17c10c4b88309ec06332f9d6ec10122c4a9"
+  },
+  "data": {
+    "shape": [
+      6,
+      3202
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "d7e58745207e69bb04b8682812716375998d8f38fd3914892364f98b64c2fcfa"
+  },
+  "inverse_covariance": {
+    "shape": [
+      3202,
+      6,
+      6
+    ],
+    "dtype": "complex128",
+    "finite": true,
+    "sha256": "0d046a01b18c09c5882d00769c3a4130d9a643e2e3baeaf86879ca602cfe2df1"
+  },
+  "noise_seed": 22222,
+  "delta_f": 7.921884514925979e-09,
+  "snr_injected": 319.75076377273973,
+  "snr_recomputed": 319.75076377273973,
+  "confusion_psd_zero": true,
+  "confusion_csd_zero": true,
+  "fisher_sigmas": {
+    "A": 7.738633909011062e-24,
+    "f0": 5.5607156891737156e-11,
+    "fdot0": 8.505766164365281e-19,
+    "inclination": 0.19476611851431097,
+    "longitude": 0.0005827773433147217,
+    "latitude": 0.003206846627452248,
+    "phase0": 1.023372125335684,
+    "psi": 0.5115771401350871
+  },
+  "true_parameters": {
+    "A": 1e-22,
+    "f0": 0.003,
+    "fdot0": 2e-17,
+    "inclination": 0.39112885502328953,
+    "longitude": 1.360788389763224,
+    "latitude": 0.030159653878750685,
+    "phase0": 3.9308171160496683,
+    "psi": 0.21731650286555446
+  },
+  "priors": {
+    "A": {
+      "class": "Uniform",
+      "minimum": 2.2613660909889388e-23,
+      "maximum": 1.7738633909011062e-22,
+      "boundary": null
+    },
+    "f0": {
+      "class": "Uniform",
+      "minimum": 0.002999999443928431,
+      "maximum": 0.003000000556071569,
+      "boundary": null
+    },
+    "latitude": {
+      "class": "Cosine",
+      "minimum": -1.5707963267948966,
+      "maximum": 1.5707963267948966,
+      "boundary": null
+    },
+    "longitude": {
+      "class": "Uniform",
+      "minimum": 0.0,
+      "maximum": 6.283185307179586,
+      "boundary": "periodic"
+    },
+    "fdot0": {
+      "class": "Uniform",
+      "minimum": 1.149423383563472e-17,
+      "maximum": 2.850576616436528e-17,
+      "boundary": null
+    },
+    "inclination": {
+      "class": "Sine",
+      "minimum": 0.0,
+      "maximum": 3.141592653589793,
+      "boundary": null
+    },
+    "phase0": {
+      "class": "Uniform",
+      "minimum": 0.0,
+      "maximum": 6.283185307179586,
+      "boundary": "periodic"
+    },
+    "psi": {
+      "class": "Uniform",
+      "minimum": 0.0,
+      "maximum": 3.141592653589793,
+      "boundary": "periodic"
+    }
+  },
+  "sampler_kwargs": {
+    "n_steps": "10",
+    "n_accept": "None",
+    "step_type": "gaussian",
+    "step_kwargs": "None",
+    "plot_chain": "False",
+    "plot_history": "False",
+    "enforce_likelihood_threshold": "False",
+    "ensemble_fraction": "0.5",
+    "rng": "None",
+    "flow_config": "None",
+    "training_config": "None",
+    "output": "Samples/gb_network_analysis_example_nessai/",
+    "poolsize": "1000",
+    "plot": "True",
+    "check_acceptance": "False",
+    "max_poolsize_scale": "10",
+    "update_poolsize": "True",
+    "accumulate_weights": "False",
+    "save_training_data": "False",
+    "reparameterisations": "None",
+    "fallback_reparameterisation": "zscore",
+    "use_default_reparameterisations": "None",
+    "reverse_reparameterisations": "False",
+    "map_to_unit_hypercube": "False",
+    "max_n_clusters": "None",
+    "latent_prior": "truncated_gaussian",
+    "latent_temperature": "None",
+    "constant_volume_mode": "True",
+    "volume_fraction": "0.95",
+    "fuzz": "1.0",
+    "fixed_radius": "False",
+    "drawsize": "None",
+    "truncate_log_q": "False",
+    "expansion_fraction": "4.0",
+    "min_radius": "False",
+    "max_radius": "50.0",
+    "compute_radius_with_all": "False",
+    "augment_dims": "1",
+    "generate_augment": "gaussian",
+    "marginalise_augment": "False",
+    "n_marg": "50",
+    "nlive": "1000",
+    "stopping": "0.1",
+    "max_iteration": "None",
+    "checkpointing": "True",
+    "checkpoint_interval": "600",
+    "checkpoint_on_iteration": "False",
+    "checkpoint_on_training": "False",
+    "checkpoint_callback": "None",
+    "logging_interval": "60",
+    "log_on_iteration": "False",
+    "resume_file": "nested_sampler_resume.pkl",
+    "seed": "None",
+    "pool": "None",
+    "close_pool": "None",
+    "n_pool": "10",
+    "proposal_plots": "False",
+    "prior_sampling": "False",
+    "analytic_priors": "False",
+    "maximum_uninformed": "None",
+    "uninformed_proposal": "None",
+    "uninformed_acceptance_threshold": "None",
+    "uninformed_proposal_kwargs": "None",
+    "flow_proposal_class": "None",
+    "flow_class": "None",
+    "training_frequency": "None",
+    "train_on_empty": "True",
+    "cooldown": "200",
+    "memory": "False",
+    "reset_weights": "False",
+    "reset_permutations": "False",
+    "reset_flow": "False",
+    "retrain_acceptance": "True",
+    "reset_acceptance": "False",
+    "acceptance_threshold": "0.01",
+    "shrinkage_expectation": "logt",
+    "trace_parameters": "None",
+    "resume": "False",
+    "resume_data": "None",
+    "weights_file": "None",
+    "weights_path": "None",
+    "exit_code": "130",
+    "pytorch_threads": "1",
+    "eps": "None",
+    "torch_dtype": "None",
+    "disable_vectorisation": "False",
+    "likelihood_chunksize": "None",
+    "allow_multi_valued_likelihood": "None",
+    "parallelise_prior": "None",
+    "result_extension": "hdf5",
+    "plot_indices": "True",
+    "plot_posterior": "False",
+    "plot_logXlogL": "True",
+    "posterior_sampling_method": "None",
+    "nessai_log_level": "None",
+    "nessai_logging_stream": "stdout",
+    "nessai_plot": "True",
+    "nessai_likelihood_constraint": "True"
+  },
+  "posterior_samples": 4812,
+  "posterior_parameters": [
+    "A",
+    "f0",
+    "latitude",
+    "longitude",
+    "fdot0",
+    "inclination",
+    "phase0",
+    "psi"
+  ],
+  "posterior_finite": true,
+  "posterior_loglikelihood_finite": true,
+  "posterior_logprior_finite": true,
+  "quantiles_05_16_50_84_95": {
+    "A": [
+      9.391392541522527e-23,
+      9.598727535673773e-23,
+      1.0157363634946964e-22,
+      1.0718145607965364e-22,
+      1.0974228953269434e-22
+    ],
+    "f0": [
+      0.002999999892538921,
+      0.0029999999289859907,
+      0.00299999998147022,
+      0.0030000000348497876,
+      0.003000000070975688
+    ],
+    "latitude": [
+      0.02708138312382785,
+      0.029251182238859308,
+      0.03245709448779971,
+      0.03574860634618692,
+      0.037877236002351156
+    ],
+    "longitude": [
+      1.3598982070553924,
+      1.360297309653828,
+      1.3608577241935835,
+      1.3614392378980442,
+      1.36180387068431
+    ],
+    "fdot0": [
+      1.9033583652860103e-17,
+      1.9613308522216687e-17,
+      2.0425130086694638e-17,
+      2.1243265728622804e-17,
+      2.1778564387382502e-17
+    ],
+    "inclination": [
+      0.16975290152751157,
+      0.270004009951221,
+      0.43002233093432274,
+      0.5387595682522297,
+      0.5819881941191105
+    ],
+    "phase0": [
+      0.21415920951623743,
+      1.465050700108533,
+      3.129005824330612,
+      5.861461395921777,
+      6.139697561950081
+    ],
+    "psi": [
+      0.31748175950924823,
+      0.6097749189005062,
+      1.4134120701789712,
+      2.4117634446560556,
+      2.7358531720724133
+    ]
+  },
+  "truth_log_likelihood": -19073.446987945455,
+  "best_posterior_log_likelihood": -19071.1219860989,
+  "best_recomputed_log_likelihood": -19071.1219860989,
+  "log_evidence": -19105.14274023314,
+  "log_evidence_err": 0.17444519179769075,
+  "sampling_time": "1522.544631",
+  "scan_hidden_last_axis": true,
+  "module_files": {
+    "Triangle.Orbit": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-simulator/Triangle/Orbit.py",
+    "Triangle_GB.TDIFly": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-gb/Triangle_GB/TDIFly.py",
+    "Triangle_BBH.Fisher": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/triangle-bbh/Triangle_BBH/Fisher.py"
+  },
+  "confusion_zero_check_provenance": "Independent unchanged preparation cells, recursive nested-dictionary check in validate-triangle-gb-network-physics.py."
+}

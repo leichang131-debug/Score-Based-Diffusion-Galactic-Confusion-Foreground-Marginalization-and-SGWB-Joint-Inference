@@ -1,0 +1,50 @@
+{
+  "confusion_psd_zero": true,
+  "confusion_csd_zero": true,
+  "fisher_finite": true,
+  "fisher_raw_condition_number": 1.3382425267932264e+49,
+  "fisher_scaled_condition_number": 772090.8024275125,
+  "fisher_scaled_eigenvalues": [
+    4.669964097558193e-06,
+    0.0008170464919275078,
+    0.009467592769017407,
+    0.38620770037348645,
+    0.9403312474729806,
+    1.057568763223034,
+    1.9999666522757964,
+    3.6056363274296603
+  ],
+  "scan_peaks": {
+    "f0": {
+      "truth": 0.003,
+      "grid_peak": 0.0029999999977757138,
+      "finite": true
+    },
+    "A": {
+      "truth": 1e-22,
+      "grid_peak": 1e-22,
+      "finite": true
+    },
+    "longitude": {
+      "truth": 1.360788389763224,
+      "grid_peak": 1.3571680263507908,
+      "finite": true
+    },
+    "latitude": {
+      "truth": 0.030159653878750685,
+      "grid_peak": 0.031415926535897976,
+      "finite": true
+    },
+    "inclination": {
+      "truth": 0.39112885502328953,
+      "grid_peak": 0.3895574890451344,
+      "finite": true
+    },
+    "psi": {
+      "truth": 0.21731650286555446,
+      "grid_peak": 0.21362830044410594,
+      "finite": true
+    }
+  },
+  "scope": "Independent original preparation cells and six 501-point scans; no sampling rerun; raw Fisher condition number depends on parameter units."
+}

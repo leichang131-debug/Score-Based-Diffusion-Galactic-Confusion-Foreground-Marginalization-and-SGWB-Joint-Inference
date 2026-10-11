@@ -1,0 +1,249 @@
+PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/pycbc/waveform/plugin.py:99: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+No phenomxpy.
+No pyseobnr.
+no cupy 
+no cupy 
+Orbits created for: ['TianQin', 'Taiji', 'LISA']
+GB Tobs = 4.0 yr,  dt = 10.0 s,  N_time = 12623259,  Nf = 6311630,  df = 7.92e-09 Hz
+TDIFlyGBNetwork created: 3 detectors, full_freq grid matches freq_data: True
+f0 = 3.000000e-03 Hz,  A  = 1.000e-22
+Shared band: 3202 bins, [2.9873e-03, 3.0127e-03] Hz
+Joint GB signal: (6, 3202)
+Injected GB network SNR: 319.8
+LL at truth: -19073.45
+SNR from likelihood: 319.8
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:83: FutureWarning: <class '__main__.GBNetworkLikelihood'> log_likelihood or log_likelihood_ratio method does not accept 'parameters' as an argument. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:127: FutureWarning: Setting non-trivial parameters for <class '__main__.GBNetworkLikelihood'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:113: FutureWarning: Parameter attribute queried for <class '__main__.GBNetworkLikelihood'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)
+no cupy
+no BBHx waveform
+8 parameters in total: ['A', 'f0', 'fdot0', 'inclination', 'longitude', 'latitude', 'phase0', 'psi']
+8 analyzed parameters: ['A', 'f0', 'fdot0', 'inclination', 'longitude', 'latitude', 'phase0', 'psi']
+parameters whose steps should be tested: ['A', 'f0', 'fdot0', 'inclination', 'longitude', 'latitude', 'phase0', 'psi']
+Auto-tuning step sizes ...
+
+ ========= testing parameter A ==========
+initial 1-sigma error = 5.592e-13
+error = 5.592e-13
+shift = 5.000e-27, rel diff = 1.541e-13
+shift of parameter A is 5e-27
+
+ ========= testing parameter f0 ==========
+initial 1-sigma error = 2.611e-06
+error = 2.611e-06
+shift = 5.000e-11, rel diff = 1.180e-04
+shift of parameter f0 is 5e-11
+
+ ========= testing parameter fdot0 ==========
+initial 1-sigma error = 3.734e-10
+error = 3.733e-10
+shift = 5.000e-19, rel diff = 4.327e-05
+shift of parameter fdot0 is 5e-19
+
+ ========= testing parameter inclination ==========
+initial 1-sigma error = 8.872e-02
+error = 8.872e-02
+shift = 5.000e-05, rel diff = 7.072e-10
+shift of parameter inclination is 5e-05
+
+ ========= testing parameter longitude ==========
+initial 1-sigma error = 2.400e-02
+error = 2.400e-02
+shift = 5.000e-05, rel diff = 1.933e-08
+shift of parameter longitude is 5e-05
+
+ ========= testing parameter latitude ==========
+initial 1-sigma error = 5.645e-02
+error = 5.645e-02
+shift = 5.000e-05, rel diff = 1.411e-09
+shift of parameter latitude is 5e-05
+
+ ========= testing parameter phase0 ==========
+initial 1-sigma error = 5.592e-02
+error = 5.592e-02
+shift = 5.000e-05, rel diff = 2.071e-07
+shift of parameter phase0 is 5e-05
+
+ ========= testing parameter psi ==========
+initial 1-sigma error = 3.954e-02
+error = 3.954e-02
+shift = 5.000e-05, rel diff = 1.573e-09
+shift of parameter psi is 5e-05
+all parameters tested.
+index of Fisher: ['A', 'f0', 'fdot0', 'inclination', 'longitude', 'latitude', 'phase0', 'psi']
+Fisher matrix computed.
+Fisher matrix condition number: 1.3e+49
+WARNING: Fisher matrix condition number (1.3e+49) exceeds threshold 1e15, results may be unreliable.
+1-sigma parameter uncertainties:
+  A                         7.739e-24
+  f0                        5.561e-11
+  fdot0                     8.506e-19
+  inclination               1.948e-01
+  longitude                 5.828e-04
+  latitude                  3.207e-03
+  phase0                    1.023e+00
+  psi                       5.116e-01
+
+Fisher 1-sigma errors (instrumental-noise-only model):
+  sigma(A           ) = 7.739e-24
+  sigma(f0          ) = 5.561e-11
+  sigma(fdot0       ) = 8.506e-19
+  sigma(inclination ) = 1.948e-01
+  sigma(longitude   ) = 5.828e-04
+  sigma(latitude    ) = 3.207e-03
+  sigma(phase0      ) = 1.023e+00
+  sigma(psi         ) = 5.116e-01
+22:25 bilby INFO    : Running for label 'gb_network_analysis_example', output will be saved to 'Samples'
+Number of CPUs: 10
+22:25 bilby INFO    : Analysis priors:
+22:25 bilby INFO    : A=Uniform(minimum=2.2613660909889388e-23, maximum=1.7738633909011062e-22, name='A', latex_label='$A$', unit=None, boundary=None)
+22:25 bilby INFO    : f0=Uniform(minimum=0.002999999443928431, maximum=0.003000000556071569, name='f0', latex_label='$f_0$', unit=None, boundary=None)
+22:25 bilby INFO    : latitude=Cosine(minimum=-1.5707963267948966, maximum=1.5707963267948966, name='latitude', latex_label='$\\beta$', unit=None, boundary=None)
+22:25 bilby INFO    : longitude=Uniform(minimum=0.0, maximum=6.283185307179586, name='longitude', latex_label='$\\lambda$', unit=None, boundary='periodic')
+22:25 bilby INFO    : fdot0=Uniform(minimum=1.149423383563472e-17, maximum=2.850576616436528e-17, name='fdot0', latex_label='$\\dot{f}_0$', unit=None, boundary=None)
+22:25 bilby INFO    : inclination=Sine(minimum=0.0, maximum=3.141592653589793, name='inclination', latex_label='$\\iota$', unit=None, boundary=None)
+22:25 bilby INFO    : phase0=Uniform(minimum=0.0, maximum=6.283185307179586, name='phase0', latex_label='$\\varphi_0$', unit=None, boundary='periodic')
+22:25 bilby INFO    : psi=Uniform(minimum=0.0, maximum=3.141592653589793, name='psi', latex_label='$\\psi$', unit=None, boundary='periodic')
+22:25 bilby INFO    : Analysis likelihood class: <class '__main__.GBNetworkLikelihood'>
+22:25 bilby INFO    : Analysis likelihood noise evidence: nan
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:64: DeprecationWarning: Using parameters as state for GBNetworkLikelihood. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:113: FutureWarning: Parameter attribute queried for <class '__main__.GBNetworkLikelihood'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)
+22:25 bilby INFO    : Single likelihood evaluation took 7.167e-03 s
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/nessai/gw/__init__.py:12: FutureWarning: The `nessai.gw` module will be deprecated in the next release in favour of the nessai-gw package. This packages provides the same functionality as`nessai.gw` via the plugin interface.For more details, see: https://github.com/mj-will/nessai-gw
+  warnings.warn(
+22:25 bilby INFO    : Using sampler Nessai with kwargs {'n_steps': 10, 'n_accept': None, 'step_type': 'gaussian', 'step_kwargs': None, 'plot_chain': False, 'plot_history': False, 'enforce_likelihood_threshold': False, 'ensemble_fraction': 0.5, 'rng': None, 'flow_config': None, 'training_config': None, 'output': 'Samples/gb_network_analysis_example_nessai/', 'poolsize': 1000, 'plot': True, 'check_acceptance': False, 'max_poolsize_scale': 10, 'update_poolsize': True, 'accumulate_weights': False, 'save_training_data': False, 'reparameterisations': None, 'fallback_reparameterisation': 'zscore', 'use_default_reparameterisations': None, 'reverse_reparameterisations': False, 'map_to_unit_hypercube': False, 'max_n_clusters': None, 'latent_prior': 'truncated_gaussian', 'latent_temperature': None, 'constant_volume_mode': True, 'volume_fraction': 0.95, 'fuzz': 1.0, 'fixed_radius': False, 'drawsize': None, 'truncate_log_q': False, 'expansion_fraction': 4.0, 'min_radius': False, 'max_radius': 50.0, 'compute_radius_with_all': False, 'augment_dims': 1, 'generate_augment': 'gaussian', 'marginalise_augment': False, 'n_marg': 50, 'nlive': 1000, 'stopping': 0.1, 'max_iteration': None, 'checkpointing': True, 'checkpoint_interval': 600, 'checkpoint_on_iteration': False, 'checkpoint_on_training': False, 'checkpoint_callback': None, 'logging_interval': 60, 'log_on_iteration': False, 'resume_file': 'nested_sampler_resume.pkl', 'seed': None, 'pool': None, 'close_pool': None, 'n_pool': 10, 'proposal_plots': False, 'prior_sampling': False, 'analytic_priors': False, 'maximum_uninformed': None, 'uninformed_proposal': None, 'uninformed_acceptance_threshold': None, 'uninformed_proposal_kwargs': None, 'flow_proposal_class': None, 'flow_class': None, 'training_frequency': None, 'train_on_empty': True, 'cooldown': 200, 'memory': False, 'reset_weights': False, 'reset_permutations': False, 'reset_flow': False, 'retrain_acceptance': True, 'reset_acceptance': False, 'acceptance_threshold': 0.01, 'shrinkage_expectation': 'logt', 'trace_parameters': None, 'resume': False, 'resume_data': None, 'weights_file': None, 'weights_path': None, 'exit_code': 130, 'pytorch_threads': 1, 'eps': None, 'torch_dtype': None, 'disable_vectorisation': False, 'likelihood_chunksize': None, 'allow_multi_valued_likelihood': None, 'parallelise_prior': None, 'result_extension': 'hdf5', 'plot_indices': True, 'plot_posterior': False, 'plot_logXlogL': True, 'posterior_sampling_method': None, 'nessai_log_level': None, 'nessai_logging_stream': 'stdout', 'nessai_plot': True, 'nessai_likelihood_constraint': True}
+22:25 bilby INFO    : Global meta data was removed from the result object for compatibility. Use the `BILBY_INCLUDE_GLOBAL_METADATA` environment variable to include it. This behaviour will be removed in a future release. For more details see: https://bilby-dev.github.io/bilby/faq.html#global-meta-data
+10-11 22:25 nessai INFO    : Running Nessai version 0.15.2
+22:25 bilby INFO    : Using bilby pool for multiprocessing with n_pool=10
+22:25 bilby INFO    : Setting up multiproccesing pool with 10 processes
+10-11 22:25 nessai INFO    : Using user specified pool
+10-11 22:25 nessai INFO    : Initialising nested sampler
+10-11 22:25 nessai WARNING : Multiprocessing pool has already been configured.
+10-11 22:25 nessai WARNING : Removing unused keyword arguments ({'augment_dims', 'marginalise_augment', 'n_accept', 'ensemble_fraction', 'plot_history', 'generate_augment', 'step_type', 'n_steps', 'plot_chain', 'step_kwargs', 'max_n_clusters', 'n_marg'}) from kwargs for FlowProposal. These are valid keyword arguments but correspond to other proposal classes.
+10-11 22:25 nessai INFO    : Passing kwargs to FlowProposal: {'enforce_likelihood_threshold': False, 'training_config': None, 'poolsize': 1000, 'check_acceptance': False, 'max_poolsize_scale': 10, 'update_poolsize': True, 'accumulate_weights': False, 'save_training_data': False, 'reparameterisations': None, 'fallback_reparameterisation': 'zscore', 'use_default_reparameterisations': None, 'reverse_reparameterisations': False, 'map_to_unit_hypercube': False, 'latent_prior': 'truncated_gaussian', 'latent_temperature': None, 'constant_volume_mode': True, 'volume_fraction': 0.95, 'fuzz': 1.0, 'fixed_radius': False, 'drawsize': None, 'truncate_log_q': False, 'expansion_fraction': 4.0, 'min_radius': False, 'max_radius': 50.0, 'compute_radius_with_all': False}
+10-11 22:25 nessai WARNING : Signal handling is disabled. nessai will not automatically checkpoint when exited.
+10-11 22:25 nessai INFO    : No reparameterisations provided, using default reparameterisations included in FlowProposal
+10-11 22:25 nessai INFO    : Adding reparameterisations from: {}
+10-11 22:25 nessai INFO    : Assuming fallback reparameterisation (ScaleAndShift) for ['A', 'f0', 'latitude', 'longitude', 'fdot0', 'inclination', 'phase0', 'psi'] with kwargs: {'estimate_scale': True, 'estimate_shift': True, 'prior_bounds': {'A': array([2.26136609e-23, 1.77386339e-22]), 'f0': array([0.003, 0.003]), 'latitude': array([-1.57079633,  1.57079633]), 'longitude': array([0.        , 6.28318531]), 'fdot0': array([1.14942338e-17, 2.85057662e-17]), 'inclination': array([0.        , 3.14159265]), 'phase0': array([0.        , 6.28318531]), 'psi': array([0.        , 3.14159265])}}.
+10-11 22:25 nessai INFO    : x space parameters: ['A', 'f0', 'latitude', 'longitude', 'fdot0', 'inclination', 'phase0', 'psi']
+10-11 22:25 nessai INFO    : x prime space parameters: ['A_prime', 'f0_prime', 'latitude_prime', 'longitude_prime', 'fdot0_prime', 'inclination_prime', 'phase0_prime', 'psi_prime']
+10-11 22:25 nessai INFO    : Overwriting fuzz factor with expansion fraction
+10-11 22:25 nessai INFO    : New fuzz factor: 1.2228445449938519
+10-11 22:25 nessai INFO    : Verifying rescaling functions
+10-11 22:25 nessai INFO    : Rescaling functions are invertible
+10-11 22:25 nessai INFO    : Populating initial live points
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:113: FutureWarning: Parameter attribute queried for <class '__main__.GBNetworkLikelihood'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)
+10-11 22:25 nessai INFO    : Populated 100 / 1000 live points
+10-11 22:25 nessai INFO    : Populated 200 / 1000 live points
+10-11 22:25 nessai INFO    : Populated 300 / 1000 live points
+10-11 22:25 nessai INFO    : Populated 400 / 1000 live points
+10-11 22:25 nessai INFO    : Populated 500 / 1000 live points
+10-11 22:25 nessai INFO    : Populated 600 / 1000 live points
+10-11 22:25 nessai INFO    : Populated 700 / 1000 live points
+10-11 22:25 nessai INFO    : Populated 800 / 1000 live points
+10-11 22:25 nessai INFO    : Populated 900 / 1000 live points
+10-11 22:25 nessai INFO    : Populated 1000 / 1000 live points
+10-11 22:25 nessai INFO    : Starting nested sampling loop
+10-11 22:25 nessai INFO    : it:  1000: Rolling KS test: D=0.014, p-value=0.6695
+10-11 22:25 nessai INFO    : it:  2000: Rolling KS test: D=0.023, p-value=0.3419
+10-11 22:25 nessai INFO    : Switching to FlowProposal
+10-11 22:26 nessai INFO    : it:  3000: Rolling KS test: D=0.033, p-value=0.1108
+10-11 22:26 nessai INFO    : it:  3648: n eval: 30515 H: 9.76 dlogZ: 44395.241 logZ: -69352.826 +/- 0.099 logLmax: -24953.94
+10-11 22:26 nessai INFO    : it:  4000: Rolling KS test: D=0.006, p-value=0.9268
+10-11 22:27 nessai INFO    : it:  5000: Rolling KS test: D=0.036, p-value=0.07308
+10-11 22:27 nessai INFO    : it:  6000: Rolling KS test: D=0.012, p-value=0.7438
+10-11 22:27 nessai INFO    : it:  6000: n eval: 63800 H: 12.91 dlogZ: 34979.896 logZ: -56250.216 +/- 0.114 logLmax: -21264.32
+10-11 22:27 nessai INFO    : it:  7000: Rolling KS test: D=0.032, p-value=0.1263
+10-11 22:27 nessai INFO    : it:  8000: Rolling KS test: D=0.015, p-value=0.6313
+10-11 22:28 nessai INFO    : it:  9000: Rolling KS test: D=0.016, p-value=0.593
+10-11 22:28 nessai INFO    : it: 10000: Rolling KS test: D=0.019, p-value=0.4797
+10-11 22:28 nessai INFO    : it: 10407: n eval: 93665 H: 16.36 dlogZ: 5461.327 logZ: -24706.248 +/- 0.128 logLmax: -19234.51
+10-11 22:28 nessai INFO    : it: 11000: Rolling KS test: D=0.023, p-value=0.3419
+10-11 22:28 nessai INFO    : it: 12000: Rolling KS test: D=0.026, p-value=0.2543
+10-11 22:29 nessai INFO    : it: 13000: Rolling KS test: D=0.006, p-value=0.9268
+10-11 22:29 nessai INFO    : it: 14000: Rolling KS test: D=0.026, p-value=0.2543
+10-11 22:29 nessai INFO    : it: 14545: n eval: 125609 H: 19.71 dlogZ: 984.695 logZ: -20127.561 +/- 0.140 logLmax: -19128.32
+10-11 22:29 nessai INFO    : it: 15000: Rolling KS test: D=0.03, p-value=0.162
+10-11 22:29 nessai INFO    : it: 16000: Rolling KS test: D=0.008, p-value=0.8752
+10-11 22:30 nessai INFO    : it: 17000: Rolling KS test: D=0.008, p-value=0.8752
+10-11 22:30 nessai INFO    : it: 17769: n eval: 153499 H: 21.50 dlogZ: 280.291 logZ: -19400.198 +/- 0.147 logLmax: -19102.14
+10-11 22:30 nessai INFO    : it: 18000: Rolling KS test: D=0.028, p-value=0.2046
+10-11 22:31 nessai INFO    : it: 19000: Rolling KS test: D=0.017, p-value=0.5547
+10-11 22:31 nessai INFO    : it: 20000: Rolling KS test: D=0.032, p-value=0.1263
+10-11 22:31 nessai INFO    : it: 20401: n eval: 183348 H: 23.25 dlogZ: 106.925 logZ: -19214.098 +/- 0.152 logLmax: -19086.77
+10-11 22:31 nessai INFO    : it: 21000: Rolling KS test: D=0.012, p-value=0.7438
+10-11 22:32 nessai INFO    : it: 22000: Rolling KS test: D=0.007, p-value=0.9024
+10-11 22:32 nessai INFO    : it: 22922: n eval: 215414 H: 24.73 dlogZ: 46.851 logZ: -19148.966 +/- 0.157 logLmax: -19079.19
+10-11 22:32 nessai INFO    : it: 23000: Rolling KS test: D=0.052, p-value=0.004319
+10-11 22:33 nessai INFO    : it: 24000: Rolling KS test: D=0.017, p-value=0.5547
+10-11 22:33 nessai INFO    : it: 24538: n eval: 243695 H: 25.64 dlogZ: 29.426 logZ: -19129.514 +/- 0.160 logLmax: -19075.55
+10-11 22:34 nessai INFO    : it: 25000: Rolling KS test: D=0.009, p-value=0.8454
+10-11 22:34 nessai INFO    : it: 26000: Rolling KS test: D=0.028, p-value=0.2046
+10-11 22:35 nessai INFO    : it: 26250: n eval: 274790 H: 26.75 dlogZ: 18.141 logZ: -19117.730 +/- 0.164 logLmax: -19073.34
+10-11 22:35 nessai INFO    : Checkpointing nested sampling
+10-11 22:35 nessai INFO    : it: 27000: Rolling KS test: D=0.018, p-value=0.5169
+10-11 22:36 nessai INFO    : it: 27727: n eval: 305964 H: 27.61 dlogZ: 10.827 logZ: -19111.893 +/- 0.166 logLmax: -19073.34
+10-11 22:36 nessai INFO    : it: 28000: Rolling KS test: D=0.006, p-value=0.9268
+10-11 22:37 nessai INFO    : it: 28851: n eval: 332923 H: 28.21 dlogZ: 8.385 logZ: -19109.270 +/- 0.168 logLmax: -19072.04
+10-11 22:37 nessai INFO    : it: 29000: Rolling KS test: D=0.03, p-value=0.162
+10-11 22:38 nessai INFO    : it: 30000: Rolling KS test: D=0.025, p-value=0.2818
+10-11 22:38 nessai INFO    : it: 30001: n eval: 363743 H: 28.76 dlogZ: 5.528 logZ: -19107.560 +/- 0.170 logLmax: -19072.04
+10-11 22:39 nessai INFO    : it: 30802: n eval: 392590 H: 29.12 dlogZ: 4.396 logZ: -19106.753 +/- 0.171 logLmax: -19071.57
+10-11 22:39 nessai INFO    : it: 31000: Rolling KS test: D=0.005, p-value=0.9481
+10-11 22:40 nessai INFO    : it: 31706: n eval: 417757 H: 29.47 dlogZ: 2.918 logZ: -19106.136 +/- 0.172 logLmax: -19071.57
+10-11 22:41 nessai INFO    : it: 32000: Rolling KS test: D=0.017, p-value=0.5547
+10-11 22:41 nessai INFO    : it: 32443: n eval: 445194 H: 29.71 dlogZ: 1.937 logZ: -19105.793 +/- 0.172 logLmax: -19071.57
+10-11 22:42 nessai INFO    : it: 32998: n eval: 475194 H: 29.87 dlogZ: 1.593 logZ: -19105.605 +/- 0.173 logLmax: -19071.24
+10-11 22:42 nessai INFO    : it: 33000: Rolling KS test: D=0.015, p-value=0.6313
+10-11 22:44 nessai INFO    : it: 33608: n eval: 505194 H: 30.00 dlogZ: 1.097 logZ: -19105.458 +/- 0.173 logLmax: -19071.16
+10-11 22:44 nessai INFO    : it: 34000: Rolling KS test: D=0.006, p-value=0.9268
+10-11 22:45 nessai INFO    : it: 34145: n eval: 535194 H: 30.10 dlogZ: 0.724 logZ: -19105.366 +/- 0.173 logLmax: -19071.16
+10-11 22:45 nessai INFO    : Checkpointing nested sampling
+10-11 22:46 nessai INFO    : it: 34678: n eval: 565194 H: 30.18 dlogZ: 0.460 logZ: -19105.300 +/- 0.174 logLmax: -19071.16
+10-11 22:46 nessai INFO    : it: 35000: Rolling KS test: D=0.016, p-value=0.593
+10-11 22:47 nessai INFO    : it: 35135: n eval: 595194 H: 30.24 dlogZ: 0.303 logZ: -19105.258 +/- 0.174 logLmax: -19071.16
+10-11 22:48 nessai INFO    : it: 35632: n eval: 625194 H: 30.28 dlogZ: 0.241 logZ: -19105.224 +/- 0.174 logLmax: -19070.89
+10-11 22:49 nessai INFO    : it: 36000: Rolling KS test: D=0.042, p-value=0.02854
+10-11 22:49 nessai INFO    : it: 36048: n eval: 654320 H: 30.32 dlogZ: 0.162 logZ: -19105.202 +/- 0.174 logLmax: -19070.89
+10-11 22:50 nessai INFO    : Stopping with difference_log_evidence=0.100
+10-11 22:50 nessai INFO    : Finalising
+10-11 22:50 nessai INFO    : Final ln-evidence: -19105.143 +/- 0.174
+10-11 22:50 nessai INFO    : Information: 30.43
+10-11 22:50 nessai INFO    : Final KS test: D=0.004434, p-value=0.2369
+10-11 22:50 nessai INFO    : Checkpointing nested sampling
+10-11 22:50 nessai INFO    : Total sampling time: 0:25:22.544631
+10-11 22:50 nessai INFO    : Total training time: 0:00:22.768322
+10-11 22:50 nessai INFO    : Total population time: 0:00:39.380280
+10-11 22:50 nessai INFO    : Total likelihood evaluations: 674320
+10-11 22:50 nessai INFO    : Time spent evaluating likelihood: 0:23:45.456641
+10-11 22:50 nessai INFO    : Total sampling time: 0:25:22.544631
+10-11 22:50 nessai INFO    : Total likelihood evaluations: 674320
+10-11 22:50 nessai INFO    : Starting post processing
+10-11 22:50 nessai INFO    : Computing posterior samples
+10-11 22:50 nessai INFO    : Effective sample size: 6906.9
+10-11 22:50 nessai INFO    : Producing posterior samples using rejection sampling
+10-11 22:50 nessai INFO    : Expect 4794.8972192479605 samples from rejection sampling
+10-11 22:50 nessai INFO    : Returned 4812 posterior samples
+22:50 bilby INFO    : Starting to close worker pool.
+22:50 bilby INFO    : Finished closing worker pool.
+22:50 bilby INFO    : Sampling time: 0:25:22.544631
+22:50 bilby WARNING : Result.save_to_file called with extension=True. This will default to json, and ignore the extension from the filename. This behaviour is deprecated and will be removed. 
+22:50 bilby WARNING : Result.save_to_file called with extension=True. This will default to json, and ignore the extension from the filename. This behaviour is deprecated and will be removed. 
+22:50 bilby INFO    : Summary of results:
+nsamples: 4812
+ln_noise_evidence:    nan
+ln_evidence: -19105.143 +/-  0.174
+ln_bayes_factor:    nan +/-  0.174
+
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:127: FutureWarning: Setting non-trivial parameters for <class '__main__.GBNetworkLikelihood'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/bilby/core/likelihood.py:113: FutureWarning: Parameter attribute queried for <class '__main__.GBNetworkLikelihood'>. This is deprecated behaviour  and will be removed in Bilby version 3. See https://bilby-dev.github.io/bilby/parameters for more details.
+  warnings.warn(msg, FutureWarning)
