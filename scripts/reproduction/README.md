@@ -97,3 +97,13 @@ See [prerequisite completion](../../docs/reproduction/triangle-gb/prerequisites-
 `audit-taiji-sgwb-source.py` checks the complete pinned upstream tree, exact names and byte contents, Git file modes, clean checkout, submodule registration, Python syntax and original GPL license. It writes a file list, SHA-256 manifest and audit report under `results/taiji-sgwb/source/`. The default audit checks current upstream HEAD online; `--offline` skips only that network check. It uses the standard library and never imports or executes upstream programs.
 
 See [Stage 1 source integration](../../docs/reproduction/taiji-sgwb/source-integration.md).
+
+## TaijiSGWB independent environment
+
+- `setup-taiji-sgwb-macos.sh`: sync the hashed Python 3.11.14 ARM64 environment and install unchanged original source editable.
+- `run-taiji-sgwb-python.sh`: dedicated Python invocation with local plotting cache and CPU thread settings.
+- `check-taiji-sgwb-environment.py`: execute both demos' exact import statements and small synthetic response/Eryn/HDF5 checks.
+- `run-taiji-sgwb-environment-check.py`: preserve command logs, timings and dependency-lock parity; `--setup` also syncs installation.
+- `audit-taiji-sgwb-environment.py`: source/evidence audit and manifest export without re-running sampling.
+
+All 25 Stage 2 checks passed locally. These scripts do not run either complete original demo or establish physical posterior accuracy. See [Stage 2 report](../../docs/reproduction/taiji-sgwb/environment-setup.md).

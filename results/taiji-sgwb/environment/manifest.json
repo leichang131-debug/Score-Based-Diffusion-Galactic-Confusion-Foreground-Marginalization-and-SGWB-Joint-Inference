@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "docs/reproduction/taiji-sgwb/environment-setup.md",
+      "bytes": 5685,
+      "sha256": "62a4b2c84590aba42a873a5d9e43bef897662a2196b748cc6567745642aee8da"
+    },
+    {
+      "path": "environments/taiji-sgwb/README.md",
+      "bytes": 3243,
+      "sha256": "392eda7a4541540b21cdd0f313cd7cb384c79b0cb0e859e98cb9059b9f74a45c"
+    },
+    {
+      "path": "environments/taiji-sgwb/requirements-macos-arm64-py311.txt",
+      "bytes": 113005,
+      "sha256": "338bba6134a4843815f23679b82e16afeac67c91e5002e995390b013cf41df60"
+    },
+    {
+      "path": "environments/taiji-sgwb/requirements.in",
+      "bytes": 181,
+      "sha256": "2154133ad10566ae99a50f995cdd095ee170b7952dfbc02b42b070ba51d4d921"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/README.md",
+      "bytes": 1455,
+      "sha256": "a387d7a33b8a7692b21a31d5a0d88a07c1e0abe30dde5d14faabc8f33e5b73e5"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/audit.json",
+      "bytes": 527,
+      "sha256": "f07d856a01bf1162fd167b70ef14e7aab321159db24532acf5f1ae0039448a96"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/check.json",
+      "bytes": 9875,
+      "sha256": "55ce9e66c364d83a7d7cea68d5e8c212bca2c054c22bd581197d23db6aa20fc5"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/dependency-check.txt",
+      "bytes": 133,
+      "sha256": "489f93c0497a2f14b00ac8de1c03744b2e2c924c3e26cfce8eeb2083e836f10d"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/execution.txt",
+      "bytes": 845,
+      "sha256": "1274e52595511c5f780409012e0834ae129a884cd1303fc42dad24d83b9e6f93"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/first-check-execution.txt",
+      "bytes": 925,
+      "sha256": "57349c9797cc18ec209af314d2781f864b5dc9cc95ab6968ac00155447b8ae0c"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/first-check.json",
+      "bytes": 9788,
+      "sha256": "0ae94712b9466e623d05e7627bc01750622943389bd9f886c9d34aa2a112f041"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/install-final.txt",
+      "bytes": 1071,
+      "sha256": "c433f8ac60efb425b1056852b2c95be0b8fc495404531bbc733f3484146f8490"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/install-retry.txt",
+      "bytes": 2939,
+      "sha256": "3522ab1ec84cfe320b207bb0f6a262d30d607abec256b0dae9d037ceaa784557"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/install.txt",
+      "bytes": 2226,
+      "sha256": "3bc939619fa5c1245ed333bbda3c6597cfbe8806eca929b0f3e247712c2d0912"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/run.json",
+      "bytes": 1665,
+      "sha256": "94843fc58e253f2358ac940ac9b83f8596016554dea3615c4490f5d90e30c483"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/setup-execution.txt",
+      "bytes": 1210,
+      "sha256": "ca9f3e65aa2f4f237278696f4c059796a9eff82700c5cb7afe7134a4fdb02f81"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/source-audit/audit.json",
+      "bytes": 1211,
+      "sha256": "469f8e11ea3f7099417d9694e2d6f6a4f6f67b76728a75f0f748b1ed41d1b7c3"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/source-audit/file-list.txt",
+      "bytes": 482,
+      "sha256": "388a57fb8b09ffbd6c2f768380d4e63b522bdc7fc1dd4adbd864715e7b2ff258"
+    },
+    {
+      "path": "results/taiji-sgwb/environment/source-check.txt",
+      "bytes": 81,
+      "sha256": "96a6ac9e9a4092bf0a585dbdb529db7b8d864b30b0632b5252726b4e53f95b5b"
+    },
+    {
+      "path": "scripts/reproduction/audit-taiji-sgwb-environment.py",
+      "bytes": 3138,
+      "sha256": "486abfda38b6c030bdf651dcadc9d2c43da8a8e3ce690f8b475021f52a386cde"
+    },
+    {
+      "path": "scripts/reproduction/audit-taiji-sgwb-source.py",
+      "bytes": 5958,
+      "sha256": "68aa53df33c90559b916ebcf28400145880e0fab2d3a3cf708437c2f622d66a3"
+    },
+    {
+      "path": "scripts/reproduction/check-taiji-sgwb-environment.py",
+      "bytes": 14228,
+      "sha256": "350fe14d165948ee91532ab64e9507c87b9e8ae7e30332e0f8c59b110e6c6090"
+    },
+    {
+      "path": "scripts/reproduction/run-taiji-sgwb-environment-check.py",
+      "bytes": 3528,
+      "sha256": "c325b0e17a34bcf73c4719413f12e5e8f25b95fb5dc09e4132078b7acd0380a1"
+    },
+    {
+      "path": "scripts/reproduction/run-taiji-sgwb-python.sh",
+      "bytes": 538,
+      "sha256": "250657fb5c949195cae55a4b01a205a4fcfeb35722755864e0b7c2a43ea263e0"
+    },
+    {
+      "path": "scripts/reproduction/setup-taiji-sgwb-macos.sh",
+      "bytes": 1361,
+      "sha256": "e3256d27cc2b61538d6087a77b78fa374f4701fac1dfb706ad3aa313d3822ea2"
+    }
+  ]
+}

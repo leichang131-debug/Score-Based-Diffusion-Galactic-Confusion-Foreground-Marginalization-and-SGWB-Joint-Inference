@@ -30,7 +30,7 @@ def git(*args, cwd=SOURCE):
     return subprocess.check_output(["git", "-C", str(cwd), *args])
 
 
-def audit(offline=False):
+def audit(offline=False, output=OUTPUT):
     checks = {}
     checks["pinned_commit"] = git("rev-parse", "HEAD").decode().strip() == PIN
     checks["clean_source_including_untracked"] = not git("status", "--porcelain", "--untracked-files=all").strip()
@@ -86,11 +86,11 @@ def audit(offline=False):
               "tracked_files": len(files), "python_files": len(python_paths),
               "demo_files": [name for name in paths if name.startswith("demos/")],
               "remote": remote, "checks": checks, "all_checks_pass": all(checks.values())}
-    OUTPUT.mkdir(parents=True, exist_ok=True)
-    (OUTPUT / "manifest.json").write_text(json.dumps({"schema_version": 1,
+    output.mkdir(parents=True, exist_ok=True)
+    (output / "manifest.json").write_text(json.dumps({"schema_version": 1,
         "upstream_url": URL, "pinned_commit": PIN, "files": files}, indent=2) + "\n")
-    (OUTPUT / "audit.json").write_text(json.dumps(report, indent=2) + "\n")
-    (OUTPUT / "file-list.txt").write_text("\n".join(paths) + "\n")
+    (output / "audit.json").write_text(json.dumps(report, indent=2) + "\n")
+    (output / "file-list.txt").write_text("\n".join(paths) + "\n")
     print(f"TaijiSGWB source audit: {sum(checks.values())}/{len(checks)} checks passed; "
           f"{len(files)} files, {len(python_paths)} Python files, 2 demos.")
     if not report["all_checks_pass"]:
@@ -100,4 +100,6 @@ def audit(offline=False):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--offline", action="store_true", help="Skip current upstream remote HEAD verification.")
-    audit(parser.parse_args().offline)
+    parser.add_argument("--output-dir", type=Path, default=OUTPUT, help="Evidence destination; defaults to the Stage 1 source directory.")
+    args = parser.parse_args()
+    audit(args.offline, args.output_dir)

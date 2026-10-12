@@ -1,0 +1,15 @@
+{
+  "scope": "Evidence integrity and unchanged source only; no repeated interface sampling or posterior validation.",
+  "checks": {
+    "all_environment_checks_pass": true,
+    "successful_recorded_execution": true,
+    "locked_versions_verified": true,
+    "original_demo_imports_executed": true,
+    "synthetic_scope_explicit": true,
+    "all_upstream_file_hashes_preserved": true,
+    "upstream_clean": true,
+    "all_checks_in_execution_log": true,
+    "first_check_failure_retained": true
+  },
+  "all_checks_pass": true
+}

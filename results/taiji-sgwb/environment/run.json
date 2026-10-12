@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-12T13:37:02.723685+00:00",
+  "scope": "Environment verification only; no full upstream demos or scientific inference.",
+  "commands": [
+    {
+      "argv": [
+        "bash",
+        "scripts/reproduction/setup-taiji-sgwb-macos.sh"
+      ],
+      "returncode": 0,
+      "seconds": 0.3926982920002047,
+      "log": "setup-execution.txt"
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python"
+      ],
+      "returncode": 0,
+      "seconds": 0.02641612499974144,
+      "log": "dependency-check.txt"
+    },
+    {
+      "argv": [
+        "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python",
+        "-B",
+        "scripts/reproduction/check-taiji-sgwb-environment.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.7912055830001918,
+      "log": "execution.txt"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/reproduction/audit-taiji-sgwb-source.py",
+        "--offline",
+        "--output-dir",
+        "results/taiji-sgwb/environment/source-audit"
+      ],
+      "returncode": 0,
+      "seconds": 0.20688658300059615,
+      "log": "source-check.txt"
+    }
+  ],
+  "locked_package_count": 51,
+  "all_locked_versions_match": true,
+  "only_additional_distribution": "taijisgwb==0.1.0 (pinned editable source)",
+  "check_count": 25,
+  "elapsed_seconds": 2.4185672499997963,
+  "success": true
+}

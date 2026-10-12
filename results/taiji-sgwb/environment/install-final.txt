@@ -1,0 +1,16 @@
+TaijiSGWB source audit: 13/13 checks passed; 19 files, 15 Python files, 2 demos.
+Using Python 3.11.14 environment at: environments/taiji-sgwb/.venv
+Resolved 51 packages in 7ms
+Prepared 1 package in 1.13s
+Installed 1 package in 2ms
+ + editables==0.6
+Using Python 3.11.14 environment at: environments/taiji-sgwb/.venv
+Resolved 1 package in 2ms
+   Building taijisgwb @ file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/taiji-sgwb
+      Built taijisgwb @ file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/taiji-sgwb
+Prepared 1 package in 73ms
+Installed 1 package in 1ms
+ + taijisgwb==0.1.0 (from file:///Users/leichang/Documents/Score-Based%20diffusion%20in%20TDC%20data%20anysis%20and%20parameter%20estimation/research-repository/external/taiji-sgwb)
+Using Python 3.11.14 environment at: environments/taiji-sgwb/.venv
+Checked 52 packages in 0.68ms
+All installed packages are compatible

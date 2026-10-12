@@ -1,0 +1,362 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-12T13:34:12.311381+00:00",
+  "scope": "Stage 2 environment/import and small synthetic CPU interface checks only. No TDC dataset, full demo, SGWB posterior or scientific calibration.",
+  "python": "3.11.14",
+  "machine": "arm64",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "executable": "environments/taiji-sgwb/.venv/bin/python",
+  "checks": {
+    "isolated_runtime": {
+      "passed": true,
+      "detail": {
+        "prefix": "environments/taiji-sgwb/.venv",
+        "CPU": true
+      },
+      "seconds": 8.274999981949804e-05
+    },
+    "original_imports_template_nofg_28t.py": {
+      "passed": true,
+      "detail": {
+        "source": "external/taiji-sgwb/demos/template_nofg_28t.py",
+        "sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
+        "statements": [
+          "import multiprocessing",
+          "import numpy as np",
+          "from scipy.signal import windows, ShortTimeFFT",
+          "import matplotlib.pyplot as plt",
+          "import logging",
+          "import h5py",
+          "from pathlib import Path",
+          "import eryn.ensemble",
+          "import eryn.prior",
+          "import eryn.backends",
+          "from taijisgwb.detector.tdi import tdi_X2, aet_from_xyz, tdi_aet_from_tdi_x",
+          "from taijisgwb.detector.noise import TaijiNoisePSD",
+          "from taijisgwb import Interferometer",
+          "from taijisgwb.detector.orbit import InterpolationOrbit",
+          "from taijisgwb.waveform import calc_omega_powerlaw",
+          "from taijisgwb.utils import psd_from_omega"
+        ],
+        "executed_import_statements": 16,
+        "demo_body_executed": false
+      },
+      "seconds": 21.848977750000813
+    },
+    "original_imports_rj_nofg_28t.py": {
+      "passed": true,
+      "detail": {
+        "source": "external/taiji-sgwb/demos/rj_nofg_28t.py",
+        "sha256": "35ce56931ecda5fb350101a4fda43cee94dcce36772fdf8ab79ad8b9ad37f685",
+        "statements": [
+          "import multiprocessing",
+          "import numpy as np",
+          "from scipy.signal import windows, ShortTimeFFT",
+          "from scipy.interpolate import interp1d",
+          "import matplotlib.pyplot as plt",
+          "import logging",
+          "import h5py",
+          "from pathlib import Path",
+          "import eryn.ensemble",
+          "import eryn.state",
+          "import eryn.prior",
+          "import eryn.moves",
+          "import eryn.backends",
+          "from taijisgwb.detector.tdi import tdi_X2, aet_from_xyz, tdi_aet_from_tdi_x",
+          "from taijisgwb.detector.noise import TaijiNoisePSD",
+          "from taijisgwb import Interferometer",
+          "from taijisgwb.detector.orbit import InterpolationOrbit",
+          "from taijisgwb.waveform import calc_omega_powerlaw",
+          "from taijisgwb.utils import psd_from_omega"
+        ],
+        "executed_import_statements": 19,
+        "demo_body_executed": false
+      },
+      "seconds": 0.016526124999472813
+    },
+    "import_taijisgwb": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb"
+      },
+      "seconds": 3.0830005925963633e-06
+    },
+    "import_taijisgwb.analyorf": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.analyorf"
+      },
+      "seconds": 0.0012280419996386627
+    },
+    "import_taijisgwb.constants": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.constants"
+      },
+      "seconds": 1.7089996617869474e-06
+    },
+    "import_taijisgwb.detector": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.detector"
+      },
+      "seconds": 1.249999513674993e-06
+    },
+    "import_taijisgwb.detector.constants": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.detector.constants"
+      },
+      "seconds": 1.041999894368928e-06
+    },
+    "import_taijisgwb.detector.data": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.detector.data"
+      },
+      "seconds": 9.169998520519584e-07
+    },
+    "import_taijisgwb.detector.interferometer": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.detector.interferometer"
+      },
+      "seconds": 7.500002539018169e-07
+    },
+    "import_taijisgwb.detector.noise": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.detector.noise"
+      },
+      "seconds": 1.0000003385357559e-06
+    },
+    "import_taijisgwb.detector.orbit": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.detector.orbit"
+      },
+      "seconds": 7.500002539018169e-07
+    },
+    "import_taijisgwb.detector.tdi": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.detector.tdi"
+      },
+      "seconds": 7.500002539018169e-07
+    },
+    "import_taijisgwb.plotlib": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.plotlib"
+      },
+      "seconds": 0.00040741700013313675
+    },
+    "import_taijisgwb.utils": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.utils"
+      },
+      "seconds": 1.0840003596968018e-06
+    },
+    "import_taijisgwb.waveform": {
+      "passed": true,
+      "detail": {
+        "module": "taijisgwb.waveform"
+      },
+      "seconds": 6.669997674180195e-07
+    },
+    "original_editable_package": {
+      "passed": false,
+      "error": "AssertionError()",
+      "seconds": 0.0002780839995466522
+    },
+    "original_numeric_interfaces": {
+      "passed": true,
+      "detail": {
+        "AET_shape": [
+          3,
+          512
+        ],
+        "STFT_shape": [
+          65,
+          4
+        ],
+        "synthetic": true
+      },
+      "seconds": 0.0011379170000509475
+    },
+    "hdf5_orbit_interface": {
+      "passed": true,
+      "detail": {
+        "file": "runs/taiji-sgwb/environment-check/synthetic-orbit.hdf5",
+        "synthetic": true,
+        "samples": 8
+      },
+      "seconds": 0.004027874999337655
+    },
+    "original_response_interfaces": {
+      "passed": true,
+      "detail": {
+        "noise_shape": [
+          6,
+          2,
+          3
+        ],
+        "ORF_shape": [
+          2,
+          3
+        ],
+        "sky_nside": 14,
+        "synthetic_equal_arm": true,
+        "full_year_run": false
+      },
+      "seconds": 0.01676549999956478
+    },
+    "fork_pool": {
+      "passed": true,
+      "detail": {
+        "start_method": "fork",
+        "workers": 2
+      },
+      "seconds": 0.00931025000045338
+    },
+    "template_sampler_hdf5_readback": {
+      "passed": true,
+      "detail": {
+        "synthetic_gaussian": true,
+        "physical_parameters": false,
+        "branches": {
+          "acc": 6,
+          "ro": 6,
+          "sgwb": 2
+        },
+        "ntemps": 2,
+        "nwalkers": 32,
+        "stored_steps": 3,
+        "chain_shapes": {
+          "acc": [
+            3,
+            2,
+            32,
+            1,
+            6
+          ],
+          "ro": [
+            3,
+            2,
+            32,
+            1,
+            6
+          ],
+          "sgwb": [
+            3,
+            2,
+            32,
+            1,
+            2
+          ]
+        },
+        "separate_process_readback": {
+          "iteration": 3,
+          "branches": [
+            "acc",
+            "ro",
+            "sgwb"
+          ],
+          "finite_last_state": true
+        }
+      },
+      "seconds": 0.5759895410001263
+    },
+    "rj_sampler_original_move_interfaces": {
+      "passed": true,
+      "detail": {
+        "synthetic_gaussian": true,
+        "physical_spectrum": false,
+        "stored_steps": 8,
+        "nleaves_min": 1,
+        "nleaves_max": 3,
+        "original_move_classes": [
+          "StretchMove",
+          "GaussianMove",
+          "CombineMove"
+        ],
+        "rj_moves": true
+      },
+      "seconds": 0.02859370799978933
+    },
+    "headless_plot_write": {
+      "passed": true,
+      "detail": {
+        "backend": "Agg",
+        "file": "runs/taiji-sgwb/environment-check/headless.png",
+        "bytes": 17900
+      },
+      "seconds": 0.8535582080003223
+    },
+    "upstream_source_unchanged": {
+      "passed": true,
+      "detail": {
+        "pin": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+        "clean": true
+      },
+      "seconds": 0.02747508399988874
+    }
+  },
+  "versions": {
+    "annotated-types": "0.8.0",
+    "astropy": "7.2.2",
+    "astropy-iers-data": "0.2026.10.12.1.3.27",
+    "attrs": "26.1.0",
+    "certifi": "2026.7.22",
+    "charset-normalizer": "3.5.2",
+    "contourpy": "1.3.3",
+    "corner": "2.3.0",
+    "cycler": "0.12.1",
+    "editables": "0.6",
+    "eryn": "1.2.6",
+    "fonttools": "4.66.1",
+    "h5py": "3.16.0",
+    "hatchling": "1.32.4",
+    "healpy": "1.17.3",
+    "idna": "3.20",
+    "jsonschema": "4.26.0",
+    "jsonschema-specifications": "2025.9.1",
+    "kiwisolver": "1.5.1",
+    "markdown-it-py": "4.2.0",
+    "matplotlib": "3.11.2",
+    "mdurl": "0.1.2",
+    "numpy": "1.26.4",
+    "nvidia-ml-py": "13.615.71",
+    "packaging": "26.3",
+    "pandas": "3.0.6",
+    "pathspec": "1.1.1",
+    "pillow": "12.3.0",
+    "platformdirs": "4.13.0",
+    "pluggy": "1.6.0",
+    "pydantic": "2.14.1",
+    "pydantic_core": "2.50.1",
+    "pyerfa": "2.0.1.5",
+    "Pygments": "2.21.0",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "2.9.0.post0",
+    "PyYAML": "6.0.3",
+    "referencing": "0.37.0",
+    "requests": "2.34.2",
+    "rich": "15.0.0",
+    "rpds-py": "2026.9.1",
+    "scipy": "1.13.1",
+    "seaborn": "0.13.2",
+    "six": "1.17.0",
+    "taijisgwb": "0.1.0",
+    "tomlkit": "0.15.1",
+    "tqdm": "4.70.1",
+    "trove-classifiers": "2026.9.21.13",
+    "typing-inspection": "0.4.4",
+    "typing_extensions": "4.16.0",
+    "urllib3": "2.8.0",
+    "wrapt": "2.5.0"
+  },
+  "elapsed_seconds": 23.424677625000186,
+  "all_checks_pass": false
+}

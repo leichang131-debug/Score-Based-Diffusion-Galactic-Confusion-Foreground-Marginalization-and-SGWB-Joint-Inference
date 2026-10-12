@@ -1,0 +1,10 @@
+# macOS ARM64, CPython 3.11.14. Preserve both upstream scientific pins.
+numpy==1.26.4
+scipy==1.13.1
+healpy==1.17.3
+matplotlib
+corner>=2.2
+h5py
+eryn==1.2.6
+hatchling>=1.26
+editables
