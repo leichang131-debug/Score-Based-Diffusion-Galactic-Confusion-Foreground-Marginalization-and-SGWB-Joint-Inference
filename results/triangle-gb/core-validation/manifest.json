@@ -1,0 +1,117 @@
+[
+  {
+    "path": "docs/reproduction/triangle-gb/core-validation.md",
+    "bytes": 8104,
+    "sha256": "4b13a06f6f058ef26f5942cd4e8b0dc89989642d269e9d45b8294bcf600985df"
+  },
+  {
+    "path": "environments/triangle-gb/requirements-macos-arm64-py311.txt",
+    "bytes": 176652,
+    "sha256": "9be2df00e79a7398cf400e594d13dca54591cfbfa64bafe32a5f36f85e9dd525"
+  },
+  {
+    "path": "environments/triangle-gb/requirements.in",
+    "bytes": 353,
+    "sha256": "7f7dedb7b91de14f54fa51338672782e982af7e58156cfa3a6cd92c6a73c446a"
+  },
+  {
+    "path": "external/triangle-gb/Examples/GB_network_PE_example_for_2609.16477.ipynb",
+    "bytes": 968066,
+    "sha256": "a2ce8b964a8cfa14a60563ada0109f39f93b5e4d0af706961ff64019a6216eb0"
+  },
+  {
+    "path": "external/triangle-gb/Triangle_GB/TDIFly.py",
+    "bytes": 50553,
+    "sha256": "57a08754774557db06841cf64532f474580ee97960de2e239847ab0aa493b5ae"
+  },
+  {
+    "path": "external/triangle-gb/Triangle_GB/__init__.py",
+    "bytes": 1061,
+    "sha256": "a633ac09a14448a4c9909a54e56f1ddd3ed754cae7244a4e9e25fc001d546c85"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Constants.py",
+    "bytes": 3877,
+    "sha256": "7c6070cff005acd46e843b00864b1890a3b8c59319fcf94894325f2fd0caa760"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/Orbit.py",
+    "bytes": 15574,
+    "sha256": "af2c4d83a2128cfa9837bcd9a85d7c626aefab4598380bf797ca7f233e94473e"
+  },
+  {
+    "path": "external/triangle-simulator/Triangle/TDI.py",
+    "bytes": 50196,
+    "sha256": "ddce68ddd669b5da63fcd109a040500f2b4fd5cc5eaae6d0e308c6b187cad19a"
+  },
+  {
+    "path": "results/triangle-gb/core-validation/arrays.npz",
+    "bytes": 148752,
+    "sha256": "56cc1f7ac2c584374dc0c65af7a49184e992eb4ee1b8edb479e7286227b0c030"
+  },
+  {
+    "path": "results/triangle-gb/core-validation/audit.json",
+    "bytes": 1030,
+    "sha256": "81cb67315144a80e997c13f0678ac836f69cb53ce8e17884e59bc555b7d292a0"
+  },
+  {
+    "path": "results/triangle-gb/core-validation/consistency.png",
+    "bytes": 96577,
+    "sha256": "90c65fe3f12a7921d2f245be9ab686ed9e0c8a364bdc1cc91d83f2c2d94a73df"
+  },
+  {
+    "path": "results/triangle-gb/core-validation/example-2-fill-impact.npz",
+    "bytes": 11317,
+    "sha256": "c5fedfb647ac5a1d70cd7ea2fe71bb045f2d33f45e0895c8043ed450944a2a3d"
+  },
+  {
+    "path": "results/triangle-gb/core-validation/execution.txt",
+    "bytes": 9188,
+    "sha256": "f4a1ff356e0981fab02201369d4ce1f241ed3f782f10213b0f1fb0b38ec2d82d"
+  },
+  {
+    "path": "results/triangle-gb/core-validation/run.json",
+    "bytes": 1578,
+    "sha256": "a4184511f6e33990e19e2af54c5d707fc2b26fd92a9aac6f0623fd38762916c0"
+  },
+  {
+    "path": "results/triangle-gb/core-validation/tutorial-impact-execution.txt",
+    "bytes": 1710,
+    "sha256": "7f0a76b4aee0473e142a2f5cb1df24624d945597fbb7397090e7a8ce36ab782c"
+  },
+  {
+    "path": "results/triangle-gb/core-validation/tutorial-impact.json",
+    "bytes": 1087,
+    "sha256": "fb9d83b5e6f14b5e6fc2213fd40057713136c5aeb30e2a5d35812928e6f2acb0"
+  },
+  {
+    "path": "results/triangle-gb/core-validation/validation.json",
+    "bytes": 12790,
+    "sha256": "32b3fe641e0e2d6536f3ecd338a725409e9964eecbaceb79fce9efcc7c2d6e74"
+  },
+  {
+    "path": "scripts/reproduction/audit-triangle-gb-core.py",
+    "bytes": 4236,
+    "sha256": "346023be1ee9aaf33fe6f6dc165d065e215ada34a5bdeead0481a6861dcaba4b"
+  },
+  {
+    "path": "scripts/reproduction/check-triangle-gb-core-impact.py",
+    "bytes": 4143,
+    "sha256": "3cb2af2d28f8c40fe3da1935f9d037278624568cc13a8fb4c2f17ecf3f5db420"
+  },
+  {
+    "path": "scripts/reproduction/report-triangle-gb-core.py",
+    "bytes": 8927,
+    "sha256": "662aa0d265c8350345335d20aab9bf9e67d4506aa04e2ba1b2fa01d8752670c6"
+  },
+  {
+    "path": "scripts/reproduction/run-triangle-gb-core-validation.py",
+    "bytes": 1627,
+    "sha256": "15c72e4c4b4491b8405bd157a58319b56ad386067276689de0655c3ffd234826"
+  },
+  {
+    "path": "scripts/reproduction/validate-triangle-gb-core.py",
+    "bytes": 13285,
+    "sha256": "f16f35d5fa291b7b849eb629ec8421a70bd5943f280410b75b725150212175c1"
+  }
+]

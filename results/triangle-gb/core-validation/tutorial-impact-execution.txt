@@ -1,0 +1,43 @@
+PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/lib/python3.11/site-packages/pycbc/waveform/plugin.py:99: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+no cupy 
+No phenomxpy.
+No pyseobnr.
+no cupy 
+Orbits created for: ['TianQin', 'Taiji', 'LISA']
+{
+  "example_2": {
+    "time_axis_hash_matches": true,
+    "source_parameters": "Original recorded injection",
+    "band_indices": [
+      151669,
+      151825
+    ],
+    "sparse_start_indices": [
+      151491
+    ],
+    "Nsparse": 512,
+    "relative_template_error": 0.004512138124396589,
+    "interior_bins_exactly_equal": true,
+    "original_truth_log_likelihood": -308.3057432014772,
+    "proper_crop_truth_log_likelihood": -308.2411044151005,
+    "log_likelihood_change": 0.0646387863766904,
+    "stored_original_truth_likelihood_matches": true
+  },
+  "network": {
+    "band_indices": [
+      377097,
+      380298
+    ],
+    "sparse_start_indices": [
+      378185
+    ],
+    "Nsparse": 1024,
+    "truth_support_fully_inside_band": true,
+    "recorded_signal_reproduced": true,
+    "scope": "Original injection only; not a re-evaluation of every posterior sample."
+  },
+  "wall_seconds": 0.310205083000028,
+  "scope": "Explicit original vs mathematical crop comparison; original results unchanged. Correct-crop values are diagnostic references, not replacement posterior samples."
+}

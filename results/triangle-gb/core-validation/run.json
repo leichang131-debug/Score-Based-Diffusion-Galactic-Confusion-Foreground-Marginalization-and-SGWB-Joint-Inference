@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-12T02:19:10.771962+00:00",
+  "host": "leideMacBook-Air.local",
+  "machine": "arm64",
+  "python_executable": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/bin/python",
+  "commands": [
+    {
+      "argv": [
+        "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/bin/python",
+        "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/validate-triangle-gb-core.py"
+      ],
+      "seconds_including_imports": 1.8757807920001142,
+      "exit_code": 0,
+      "log": "execution.txt"
+    },
+    {
+      "argv": [
+        "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/triangle-gb/.venv/bin/python",
+        "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-triangle-gb-core-impact.py"
+      ],
+      "seconds_including_imports": 1.7350247500000933,
+      "exit_code": 0,
+      "log": "tutorial-impact-execution.txt"
+    }
+  ],
+  "wall_seconds": 3.6108658330001617,
+  "execution_completed": true,
+  "package_acceptance_passed": false,
+  "failed_checks": 6,
+  "scope": "Command exit=0 means every check was recorded, not that all numerical checks passed. Failed original interfaces remain in validation.json."
+}

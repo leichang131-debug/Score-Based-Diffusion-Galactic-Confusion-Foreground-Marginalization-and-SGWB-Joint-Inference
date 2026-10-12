@@ -1,0 +1,28 @@
+{
+  "evidence_integrity_passed": true,
+  "package_acceptance_passed": false,
+  "checks": {
+    "commands_completed": true,
+    "all_original_failures_retained": true,
+    "correct_counts": true,
+    "package_acceptance_explicitly_false": true,
+    "unique_check_names": true,
+    "actual_runtime_includes_imports": true,
+    "original_example2_likelihood_reproduced": true,
+    "original_time_axis_hash_matches": true,
+    "network_truth_support_inside": true,
+    "network_truth_signal_reproduced": true,
+    "figure_exists": true,
+    "log_records_match_json": true,
+    "arrays_finite": true,
+    "network_exact_reference": true,
+    "recorded_likelihood_matches": true,
+    "boundary_failure_demonstrated": true,
+    "physical_boundary_failure_demonstrated": true,
+    "impact_relative_error_recomputed": true,
+    "impact_only_edges": true,
+    "triangle-gb_unchanged": true,
+    "triangle-simulator_unchanged": true
+  },
+  "scope": "Successful audit confirms genuine retained failures, not successful package acceptance."
+}
