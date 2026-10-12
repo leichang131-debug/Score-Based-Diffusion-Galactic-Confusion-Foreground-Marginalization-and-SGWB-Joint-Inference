@@ -1,0 +1,16 @@
+{
+  "entry": "rj_nofg_28t.py",
+  "argv": [
+    "bash",
+    "scripts/reproduction/run-taiji-sgwb-python.sh",
+    "scripts/reproduction/check-taiji-sgwb-preprocessing.py",
+    "--entry",
+    "rj_nofg_28t.py"
+  ],
+  "pid": 8381,
+  "returncode": 0,
+  "wall_seconds": 2.361351833000299,
+  "peak_sampled_worker_rss_kib": 1717184,
+  "monitoring_error": null,
+  "resource_note": "RSS of the single worker sampled approximately every 0.1 seconds; may miss shorter peaks; not system total memory."
+}

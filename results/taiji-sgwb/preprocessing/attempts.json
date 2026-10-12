@@ -1,0 +1,35 @@
+{
+  "initial_launcher_attempt": {
+    "completed": false,
+    "reason": "Sandbox denied ps process-memory monitoring with PermissionError(1, Operation not permitted).",
+    "worker_outputs_retained": false,
+    "action": "Re-run finalized wrapper with allowed process monitoring; no upstream source or scientific configuration changed."
+  },
+  "initial_numeric_check": {
+    "entry": "template_nofg_28t.py",
+    "passed_checks": 19,
+    "total_checks": 20,
+    "reason": "Exact diagonal imaginary==0 assertion rejected relative imaginary terms <=4.287454433616065e-17 from complex floating-point multiplication.",
+    "correction": "Use a documented relative roundoff threshold of 8*float64 machine epsilon; preserve original CSD values unchanged.",
+    "retained_evidence": "attempts/template_nofg_28t/"
+  },
+  "initial_summary_audit": {
+    "reason": "Exact byte comparison of derived means differed due to reduction order after HDF5 contiguous readback; full source/CSD/STFT hashes matched.",
+    "measured_difference": {
+      "template_nofg_28t": {
+        "relative_L2": 2.287031712575696e-16,
+        "max_abs": 1.305060893599705e-54
+      },
+      "rj_nofg_28t": {
+        "relative_L2": 2.287031712575696e-16,
+        "max_abs": 1.305060893599705e-54
+      }
+    },
+    "correction": "Bound mean-summary relative L2 difference by 32*float64 epsilon; no FFT, CSD or original summary values are changed.",
+    "retained_evidence": "attempts/first-audit.json"
+  },
+  "audit_export_correction": {
+    "reason": "Derived-mean comparison initially produced a NumPy boolean, requiring conversion to a Python bool for JSON export.",
+    "action": "Normalize all audit check flags to Python booleans before writing JSON; no arrays changed."
+  }
+}

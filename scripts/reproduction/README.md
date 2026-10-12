@@ -117,3 +117,12 @@ All 25 Stage 2 checks passed locally. These scripts do not run either complete o
 - `audit-taiji-sgwb-data.py`: rehash raw inputs, verify aliases and original source, export evidence manifest.
 
 [Stage 3 report](../../docs/reproduction/taiji-sgwb/data-preparation.md). These commands do not execute a full SGWB inference demo.
+
+## TaijiSGWB Stage 5 full original preprocessing
+
+- `taiji_sgwb_preprocessing.py`: execute unchanged original preprocessing AST nodes with explicit local path routing; provide `load_preprocessing_cache()` for subsequent code.
+- `check-taiji-sgwb-preprocessing.py`: full original prefix per same-name entry, complete direct FFT/CSD/Parseval reference and spectrum-matrix checks, cache export.
+- `run-taiji-sgwb-preprocessing.py`: independent runs for both original entries, execution/timing/resource logs and byte-level scientific array parity.
+- `audit-taiji-sgwb-preprocessing.py`: rehash source/caches/summaries and compare original executed nodes without FFT reruns.
+
+Both original full-year prefixes passed 20/20 checks. See [Stage 5 report](../../docs/reproduction/taiji-sgwb/preprocessing.md). Original names/source are retained; response and inference are subsequent stages.

@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "docs/reproduction/taiji-sgwb/preprocessing.md",
+      "bytes": 10354,
+      "sha256": "f8c3050629988c5f143cea716643487cc4b73c80cfaae6b55e7bd1f6a93b0c94"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/README.md",
+      "bytes": 1097,
+      "sha256": "93e00738dcef27a050b566480184f5cc06f120815eb54ce136f462f77e390e40"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/attempts/first-audit.json",
+      "bytes": 1442,
+      "sha256": "c3196cec4286fb780d59f3d26b98a6641021bb4ecf11398631ce2475a3d21b99"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/attempts/template_nofg_28t/execution.txt",
+      "bytes": 1047,
+      "sha256": "45d42fac24435e36de827f7c439c9a63e4383b850b9a73aaab6558aae79509d4"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/attempts/template_nofg_28t/run.json",
+      "bytes": 502,
+      "sha256": "78b57852f06fa3c1bb01f82a7bd46c9d972a452b8d4b011187ab339ecd14d55f"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/attempts/template_nofg_28t/validation.json",
+      "bytes": 4623,
+      "sha256": "719ab24c6e9dd991814e513cfd644176992897254a39b52b703a930fd62b3b54"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/attempts.json",
+      "bytes": 1747,
+      "sha256": "de770d9a861ea5c9d33c4932f5827af859bebb6e96fdde4305ba33e06fdcb001"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/audit.json",
+      "bytes": 1463,
+      "sha256": "c75ea40bcc41f594c391b2c787ebb38ab187da668f1e082c72a436bd6341d0fc"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/rj_nofg_28t/README.md",
+      "bytes": 814,
+      "sha256": "c04cb3566178c43793964592cf3d6f41bb13535fd19779333ab5f1e136f85718"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/rj_nofg_28t/asd_AET_nofg.png",
+      "bytes": 148759,
+      "sha256": "228f9462ad441d6cdf58a7367da78e1f06b41fddb02cd5587d81f8246f1ff759"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/rj_nofg_28t/execution.txt",
+      "bytes": 1053,
+      "sha256": "6dfce6abfb4bbe444ac9d02bc3f07c7513c1d6aab5a9ceb79f80be529928284d"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/rj_nofg_28t/matrix-preview.npz",
+      "bytes": 1441,
+      "sha256": "46089fff9403d82800520a0e605ed347102ad7db384820cb2ff41995e5a8e1b7"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/rj_nofg_28t/resources.csv",
+      "bytes": 599,
+      "sha256": "1e7281a11442546e2e4c443947adefeaaacca66dfcef16ab77147019f1c7262e"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/rj_nofg_28t/run.json",
+      "bytes": 490,
+      "sha256": "7b9b06e3ba2d1fd2cdde4ada89857599ac1733928b63e5775d644bd92cbf8efc"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/rj_nofg_28t/source-execution.json",
+      "bytes": 17895,
+      "sha256": "948dab174562a61b18c0a5d7a6e71beffc60ecefe182e86666194fc87f1be465"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/rj_nofg_28t/spectral-summary.npz",
+      "bytes": 3103873,
+      "sha256": "a2957574788f743985e978e0a7e838d7d2db4e87ef2aa5f13e96e3fd7a54b4d5"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/rj_nofg_28t/validation.json",
+      "bytes": 4887,
+      "sha256": "bce3d3ba323ac3e70ff028ceafdb5dbc7487c2aa12033012a6c80392e402f473"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/run.json",
+      "bytes": 1457,
+      "sha256": "b0a3f681f0a4247a496fef25b6e44c1e32af651dd6d5972716f9883ead470c63"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/template_nofg_28t/README.md",
+      "bytes": 820,
+      "sha256": "60843f66704448b9558e351df1cc2b32b01874ac0206c9966bb5f5328f879290"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/template_nofg_28t/asd_AET_nofg.png",
+      "bytes": 148759,
+      "sha256": "228f9462ad441d6cdf58a7367da78e1f06b41fddb02cd5587d81f8246f1ff759"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/template_nofg_28t/execution.txt",
+      "bytes": 1059,
+      "sha256": "22355a8fc443900ff508483ac43186a457efc59b52958e7fddcac5c9b1a08c56"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/template_nofg_28t/matrix-preview.npz",
+      "bytes": 1441,
+      "sha256": "46089fff9403d82800520a0e605ed347102ad7db384820cb2ff41995e5a8e1b7"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/template_nofg_28t/resources.csv",
+      "bytes": 629,
+      "sha256": "2ac7e27b415a9b85b4009f1e71b904912f5bca44fc44fb865b82980d21a89539"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/template_nofg_28t/run.json",
+      "bytes": 502,
+      "sha256": "bb12eacd8733d7f1d0557386418f4863b6d29850be080212af8ffed07d866bce"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/template_nofg_28t/source-execution.json",
+      "bytes": 17343,
+      "sha256": "c84e342396bb851e5159f901891f598a066415307d742d1fd4ec7db78c99e6ef"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/template_nofg_28t/spectral-summary.npz",
+      "bytes": 3103873,
+      "sha256": "a2957574788f743985e978e0a7e838d7d2db4e87ef2aa5f13e96e3fd7a54b4d5"
+    },
+    {
+      "path": "results/taiji-sgwb/preprocessing/template_nofg_28t/validation.json",
+      "bytes": 4898,
+      "sha256": "157c566a96e95a40c40a1c82e445046e619a4ac51ed535e2e827ebf29546fc0b"
+    },
+    {
+      "path": "scripts/reproduction/audit-taiji-sgwb-preprocessing.py",
+      "bytes": 5418,
+      "sha256": "dd883e593e9abd42ef41b3b7543c42e09b1a7b717eb1ca7b8871ecb4b1268373"
+    },
+    {
+      "path": "scripts/reproduction/check-taiji-sgwb-preprocessing.py",
+      "bytes": 12310,
+      "sha256": "4a11118ac83f6184ca4889ad146ea716462ef56941704cd10bcb0cbdfadce76b"
+    },
+    {
+      "path": "scripts/reproduction/run-taiji-sgwb-preprocessing.py",
+      "bytes": 3405,
+      "sha256": "2ddb719539fb924de5e76c91c6c2490838dd672c99a42d31f2c8481e18b2dfe9"
+    },
+    {
+      "path": "scripts/reproduction/taiji_sgwb_preprocessing.py",
+      "bytes": 3786,
+      "sha256": "de6192f099c13a09cf0c8d1f2bd3ce8b7061c766360d88417c2774aa5644f348"
+    }
+  ]
+}

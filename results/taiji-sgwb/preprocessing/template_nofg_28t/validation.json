@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-12T14:41:26.046053+00:00",
+  "entry": "template_nofg_28t.py",
+  "scope": "Original full-year preprocessing only; response and inference not executed.",
+  "source_sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
+  "input_sha256": "7bcf2d3df221667677628e96492c6bd9591419980c6d2a214914a0084bb5f7d5",
+  "checks": {
+    "original_scientific_configuration": true,
+    "full_STFT_shape": true,
+    "final_CSD_shape": true,
+    "finite_full_STFT_and_CSD": true,
+    "frequency_sorted_and_in_band": true,
+    "notched_intervals_excluded": true,
+    "frequency_matches_stage3_geometry": true,
+    "window_PSD_normalization": true,
+    "independent_frequency_merge_and_mask": true,
+    "independent_full_complex_FFT": true,
+    "one_sided_PSD_Parseval": true,
+    "independent_full_CSD_merge_and_masks": true,
+    "CSD_Hermitian": true,
+    "diagonal_positive_and_real_to_roundoff": true,
+    "all_spectral_matrices_positive_semidefinite": true,
+    "coherence_bounded": true,
+    "final_FFT_bins_exclude_DC_and_Nyquist": true,
+    "filter_counts_consistent": true,
+    "cache_load_interface_exact": true,
+    "original_named_plot_generated": true
+  },
+  "details": {
+    "full_STFT_shape": [
+      3,
+      52,
+      60481
+    ],
+    "final_CSD_shape": [
+      3,
+      3,
+      52,
+      4426
+    ],
+    "window_PSD_normalization": {
+      "factor": 75.88260812051705,
+      "equivalent_noise_bandwidth_bins": 2.1611435726885295,
+      "fft_mode": "onesided",
+      "phase_shift": 0
+    },
+    "independent_full_complex_FFT": {
+      "max_week_channel_relative_L2": 7.360702548249038e-16,
+      "weeks_checked": 52,
+      "channels_checked": 3
+    },
+    "one_sided_PSD_Parseval": {
+      "max_relative_error": 1.7763568394002505e-15,
+      "DC_Nyquist_weight": 1,
+      "interior_weight": 2,
+      "note": "Original CSD doubles all raw bins, but neither DC nor Nyquist belongs to the retained inference frequency grid."
+    },
+    "independent_full_CSD_merge_and_masks": {
+      "relative_L2": 1.2479448581103776e-15
+    },
+    "CSD_Hermitian": {
+      "relative_L2": 4.04363530732568e-17
+    },
+    "diagonal_positive_and_real_to_roundoff": {
+      "max_relative_imaginary": 4.287454433616065e-17,
+      "relative_limit": 1.7763568394002505e-15,
+      "criterion": "8 * float64 machine epsilon; original arrays are not projected to real or symmetrized."
+    },
+    "all_spectral_matrices_positive_semidefinite": {
+      "matrices_checked": 230152,
+      "minimum_normalized_eigenvalue": 7.298797524684147e-06
+    },
+    "coherence_bounded": {
+      "maximum_including_autos": 1.0
+    },
+    "filter_counts_consistent": {
+      "raw_rfft_bins": 60481,
+      "raw_bins_used_for_merging": 60480,
+      "discarded_raw_tail_bins": 1,
+      "merged_bins": 10080,
+      "in_band_bins_before_notch": 5030,
+      "removed_by_notch": 604,
+      "retained_bins": 4426
+    }
+  },
+  "all_checks_pass": true,
+  "settings": {
+    "f_analow": 0.0001,
+    "f_anaupp": 0.05,
+    "f_res": 1e-05,
+    "dt": 5.0,
+    "fsample": 0.2,
+    "nperseg": 120960,
+    "nseg": 52,
+    "tperseg": 604800.0,
+    "nperbin": 6,
+    "win_bw": 2.1611435726885295,
+    "nf_est": 4426,
+    "ndrop_points": 400,
+    "npool": 62
+  },
+  "settings_note": "npool=62 is preserved but unused; no multiprocessing sampler or response computation executed.",
+  "shapes": {
+    "allocated_STFT_shape": [
+      3,
+      52,
+      60481
+    ],
+    "raw_CSD_shape": [
+      3,
+      3,
+      52,
+      60481
+    ],
+    "merged_CSD_shape": [
+      3,
+      3,
+      52,
+      10080
+    ],
+    "masked_CSD_shape_1": [
+      3,
+      3,
+      52,
+      5030
+    ],
+    "masked_CSD_shape_2": [
+      3,
+      3,
+      52,
+      4426
+    ]
+  },
+  "counts": {
+    "raw_rfft_bins": 60481,
+    "raw_bins_used_for_merging": 60480,
+    "discarded_raw_tail_bins": 1,
+    "merged_bins": 10080,
+    "in_band_bins_before_notch": 5030,
+    "removed_by_notch": 604,
+    "retained_bins": 4426
+  },
+  "timing": {
+    "original_prefix_seconds": 1.3573589579991676,
+    "independent_full_reference_seconds": 0.2427746670000488,
+    "cache_and_exports_seconds": 0.10976341599962325,
+    "worker_seconds": 2.094799000000421
+  },
+  "arrays": {
+    "frequency": "a94294c418c8b0e6a4e24086fe701b3bd33e5e41c2f6f9ccbf7cc5bb51da81f7",
+    "CSD": "aa83812f8a2b2b2f2fceb08de7fd15349bebbbe749975a5a66ee8b861f974d8b",
+    "STFT": "203d87bf4094a566310fe724ca71c4c0f2e64ff3164993f3ff47f053bdd80d82"
+  },
+  "cache": {
+    "path": "data/processed/taiji-sgwb/preprocessing/template_nofg_28t/preprocessing.h5",
+    "bytes": 222819488,
+    "sha256": "b519ba3cc8e3a6d05f16c22a2d6df2d27cab315c6c3c41693434b8a94f85be62"
+  },
+  "CSD_index_convention": "conj(channel_i)*channel_j; original contraction convention retained",
+  "remaining": "Original response construction and physical likelihood/sampling remain pending."
+}

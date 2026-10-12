@@ -1,0 +1,796 @@
+{
+  "original_source": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/taiji-sgwb/demos/template_nofg_28t.py",
+  "working_copy": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/runs/taiji-sgwb/preprocessing/template_nofg_28t/demos/template_nofg_28t.py",
+  "source_sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
+  "runtime_override": {
+    "name": "PROJ_DIR",
+    "value": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/runs/taiji-sgwb/workspace"
+  },
+  "stop_before": "orbit = InterpolationOrbit(...)",
+  "source_nodes_unchanged": true,
+  "scientific_settings_unchanged": true,
+  "executed_nodes": [
+    {
+      "line": 3,
+      "end_line": 3,
+      "source": "import multiprocessing"
+    },
+    {
+      "line": 5,
+      "end_line": 5,
+      "source": "import numpy as np"
+    },
+    {
+      "line": 6,
+      "end_line": 6,
+      "source": "from scipy.signal import windows, ShortTimeFFT"
+    },
+    {
+      "line": 7,
+      "end_line": 7,
+      "source": "import matplotlib.pyplot as plt"
+    },
+    {
+      "line": 8,
+      "end_line": 8,
+      "source": "import logging"
+    },
+    {
+      "line": 9,
+      "end_line": 9,
+      "source": "import h5py"
+    },
+    {
+      "line": 10,
+      "end_line": 10,
+      "source": "from pathlib import Path"
+    },
+    {
+      "line": 12,
+      "end_line": 12,
+      "source": "import eryn.ensemble"
+    },
+    {
+      "line": 13,
+      "end_line": 13,
+      "source": "import eryn.prior"
+    },
+    {
+      "line": 14,
+      "end_line": 14,
+      "source": "import eryn.backends"
+    },
+    {
+      "line": 16,
+      "end_line": 16,
+      "source": "from taijisgwb.detector.tdi import tdi_X2, aet_from_xyz, tdi_aet_from_tdi_x"
+    },
+    {
+      "line": 17,
+      "end_line": 17,
+      "source": "from taijisgwb.detector.noise import TaijiNoisePSD"
+    },
+    {
+      "line": 18,
+      "end_line": 18,
+      "source": "from taijisgwb import Interferometer"
+    },
+    {
+      "line": 19,
+      "end_line": 19,
+      "source": "from taijisgwb.detector.orbit import InterpolationOrbit"
+    },
+    {
+      "line": 20,
+      "end_line": 20,
+      "source": "from taijisgwb.waveform import calc_omega_powerlaw"
+    },
+    {
+      "line": 21,
+      "end_line": 21,
+      "source": "from taijisgwb.utils import psd_from_omega"
+    },
+    {
+      "line": 23,
+      "end_line": 24,
+      "source": "logging.basicConfig(level = logging.INFO, \n                    format = \"%(asctime)s - %(levelname)s: %(message)s\")"
+    },
+    {
+      "line": 25,
+      "end_line": 25,
+      "source": "multiprocessing.set_start_method(\"fork\")"
+    },
+    {
+      "line": 27,
+      "end_line": 27,
+      "source": "PROJ_DIR = Path(\"/home/yang/WorkSpace/taiji_data_challenge_sgwb\")"
+    },
+    {
+      "line": 28,
+      "end_line": 28,
+      "source": "PARENT_DIR = Path(__file__).parent"
+    },
+    {
+      "line": 32,
+      "end_line": 32,
+      "source": "f_analow, f_anaupp = 1e-4, 5e-2"
+    },
+    {
+      "line": 33,
+      "end_line": 33,
+      "source": "f_res = 1e-5"
+    },
+    {
+      "line": 34,
+      "end_line": 34,
+      "source": "tperseg = 7. * 24 * 3600"
+    },
+    {
+      "line": 35,
+      "end_line": 35,
+      "source": "npool = 62"
+    },
+    {
+      "line": 37,
+      "end_line": 37,
+      "source": "strain_file = PROJ_DIR / \"data/TDCII2-8.h5\""
+    },
+    {
+      "line": 38,
+      "end_line": 38,
+      "source": "result_outdir = PARENT_DIR / \"results/\""
+    },
+    {
+      "line": 39,
+      "end_line": 39,
+      "source": "asd_img_name = \"asd_AET_nofg.png\""
+    },
+    {
+      "line": 40,
+      "end_line": 40,
+      "source": "backend_name = \"template_AET_nofg.h5\""
+    },
+    {
+      "line": 43,
+      "end_line": 43,
+      "source": "save_path = Path(result_outdir)"
+    },
+    {
+      "line": 44,
+      "end_line": 44,
+      "source": "save_path.mkdir(parents=True, exist_ok=True)"
+    },
+    {
+      "line": 48,
+      "end_line": 48,
+      "source": "logging.info(\"Read simulation results.\")"
+    },
+    {
+      "line": 49,
+      "end_line": 49,
+      "source": "tdi_names = ['A', 'E', 'T']"
+    },
+    {
+      "line": 50,
+      "end_line": 50,
+      "source": "ntdi = len(tdi_names)"
+    },
+    {
+      "line": 51,
+      "end_line": 51,
+      "source": "tdi_methods = tdi_aet_from_tdi_x(tdi_X2)"
+    },
+    {
+      "line": 53,
+      "end_line": 55,
+      "source": "with h5py.File(strain_file, \"r\") as f:\n    time = f[\"data\"][\"time\"][()]\n    strain_X2, strain_Y2, strain_Z2 = f[\"data\"][\"XYZ\"][()] - f[\"data\"][\"foreground\"][()]"
+    },
+    {
+      "line": 57,
+      "end_line": 57,
+      "source": "dt = time[1] - time[0]"
+    },
+    {
+      "line": 58,
+      "end_line": 58,
+      "source": "fsample = 1. / dt"
+    },
+    {
+      "line": 59,
+      "end_line": 59,
+      "source": "ndrop_points = int(2000 * fsample)"
+    },
+    {
+      "line": 61,
+      "end_line": 61,
+      "source": "time = time[ndrop_points:-ndrop_points]"
+    },
+    {
+      "line": 62,
+      "end_line": 62,
+      "source": "strain_AET2 = aet_from_xyz(strain_X2, strain_Y2, strain_Z2)"
+    },
+    {
+      "line": 63,
+      "end_line": 64,
+      "source": "strain_AET2 = [strain_AET2[i][ndrop_points:-ndrop_points]\n              for i in range(ntdi)]"
+    },
+    {
+      "line": 67,
+      "end_line": 67,
+      "source": "nperseg = int(tperseg * fsample)"
+    },
+    {
+      "line": 68,
+      "end_line": 68,
+      "source": "nseg = len(time) // nperseg"
+    },
+    {
+      "line": 69,
+      "end_line": 69,
+      "source": "tperseg = nperseg * dt"
+    },
+    {
+      "line": 70,
+      "end_line": 70,
+      "source": "f_low = 1. / tperseg"
+    },
+    {
+      "line": 71,
+      "end_line": 71,
+      "source": "nperbin = int(f_res / f_low)"
+    },
+    {
+      "line": 72,
+      "end_line": 72,
+      "source": "logging.info(f\"Cut into {nseg} segments, {tperseg/3600/24 :.1f} days per segment.\")"
+    },
+    {
+      "line": 73,
+      "end_line": 73,
+      "source": "logging.info(f\"Binning in frequency domain, {nperbin} per bin.\")"
+    },
+    {
+      "line": 75,
+      "end_line": 75,
+      "source": "f_est = np.arange(nperseg//2+1) * f_low"
+    },
+    {
+      "line": 76,
+      "end_line": 76,
+      "source": "nbin = len(f_est) // nperbin"
+    },
+    {
+      "line": 78,
+      "end_line": 78,
+      "source": "win_array = windows.kaiser(M=nperseg, beta=14)"
+    },
+    {
+      "line": 79,
+      "end_line": 79,
+      "source": "win_bw = nperseg * np.sum(win_array**2) / np.sum(win_array)**2"
+    },
+    {
+      "line": 80,
+      "end_line": 80,
+      "source": "logging.info(f\"Normalized equivalent noise bandwidth of window: {win_bw :.1f} bins.\")"
+    },
+    {
+      "line": 81,
+      "end_line": 82,
+      "source": "SFT = ShortTimeFFT(win_array, nperseg, fsample,\n                   fft_mode=\"onesided\", scale_to=\"psd\")"
+    },
+    {
+      "line": 83,
+      "end_line": 83,
+      "source": "strain_segs = np.empty((ntdi, nseg, len(f_est)), dtype=complex)"
+    },
+    {
+      "line": 84,
+      "end_line": 86,
+      "source": "for i, strain in enumerate(strain_AET2):\n    strain_segs[i] = SFT.stft_detrend(strain, \"constant\",\n                                        p0=0, p1=nseg, k_offset=nperseg//2).T"
+    },
+    {
+      "line": 88,
+      "end_line": 88,
+      "source": "csd_est = np.conj(strain_segs[:, None, :, :]) * strain_segs[None, :, :, :]"
+    },
+    {
+      "line": 90,
+      "end_line": 90,
+      "source": "csd_est = csd_est[..., :(nbin*nperbin)].reshape(ntdi, ntdi, nseg, -1, nperbin)"
+    },
+    {
+      "line": 91,
+      "end_line": 91,
+      "source": "csd_est = np.mean(csd_est, axis=-1) * 2."
+    },
+    {
+      "line": 92,
+      "end_line": 92,
+      "source": "f_est = np.mean(f_est[:(nbin*nperbin)].reshape(-1, nperbin), axis=-1)"
+    },
+    {
+      "line": 95,
+      "end_line": 95,
+      "source": "mask = (f_est >= f_analow) & (f_est < f_anaupp)"
+    },
+    {
+      "line": 96,
+      "end_line": 96,
+      "source": "f_est = f_est[mask]"
+    },
+    {
+      "line": 97,
+      "end_line": 97,
+      "source": "csd_est = csd_est[..., mask]"
+    },
+    {
+      "line": 100,
+      "end_line": 105,
+      "source": "def notch_mask(x, intervals):\n    ans = np.ones_like(x, dtype=bool)\n    for interval in intervals:\n        idx = (x >= interval[0]) & (x < interval[1])\n        ans[idx] = False\n    return ans"
+    },
+    {
+      "line": 107,
+      "end_line": 109,
+      "source": "f_notch = [\n    (2.35e-2, 2.65e-2), (4.7e-2, 5.2e-2),\n]"
+    },
+    {
+      "line": 111,
+      "end_line": 112,
+      "source": "for i in range(ntdi):\n    plt.loglog(f_est, (np.mean(csd_est[i, i].real, axis=0))**.5, label=tdi_names[i])"
+    },
+    {
+      "line": 113,
+      "end_line": 114,
+      "source": "for interval in f_notch:\n    plt.axvspan(*interval, color=\"grey\", alpha=.5)"
+    },
+    {
+      "line": 115,
+      "end_line": 115,
+      "source": "plt.grid()"
+    },
+    {
+      "line": 116,
+      "end_line": 116,
+      "source": "plt.xlabel(\"Frequency\")"
+    },
+    {
+      "line": 117,
+      "end_line": 117,
+      "source": "plt.ylabel(\"ASD\")"
+    },
+    {
+      "line": 118,
+      "end_line": 118,
+      "source": "plt.legend()"
+    },
+    {
+      "line": 119,
+      "end_line": 119,
+      "source": "plt.title(\"Average ASD of TDI variables\")"
+    },
+    {
+      "line": 120,
+      "end_line": 120,
+      "source": "plt.savefig(PARENT_DIR / asd_img_name, bbox_inches=\"tight\", dpi=300)"
+    },
+    {
+      "line": 121,
+      "end_line": 121,
+      "source": "plt.close()"
+    },
+    {
+      "line": 123,
+      "end_line": 123,
+      "source": "mask = notch_mask(f_est, f_notch)"
+    },
+    {
+      "line": 124,
+      "end_line": 124,
+      "source": "f_est = f_est[mask]"
+    },
+    {
+      "line": 125,
+      "end_line": 125,
+      "source": "nf_est = len(f_est)"
+    },
+    {
+      "line": 126,
+      "end_line": 126,
+      "source": "csd_est = csd_est[..., mask]"
+    }
+  ],
+  "node_timings": [
+    {
+      "line": 3,
+      "end_line": 3,
+      "seconds": 0.0011731670001609018
+    },
+    {
+      "line": 5,
+      "end_line": 5,
+      "seconds": 1.1209000149392523e-05
+    },
+    {
+      "line": 6,
+      "end_line": 6,
+      "seconds": 0.22165074999975332
+    },
+    {
+      "line": 7,
+      "end_line": 7,
+      "seconds": 0.12629754200133902
+    },
+    {
+      "line": 8,
+      "end_line": 8,
+      "seconds": 1.8374999854131602e-05
+    },
+    {
+      "line": 9,
+      "end_line": 9,
+      "seconds": 1.0291998478351161e-05
+    },
+    {
+      "line": 10,
+      "end_line": 10,
+      "seconds": 3.2916999771259725e-05
+    },
+    {
+      "line": 12,
+      "end_line": 12,
+      "seconds": 0.16646708299958846
+    },
+    {
+      "line": 13,
+      "end_line": 13,
+      "seconds": 1.3791999663226306e-05
+    },
+    {
+      "line": 14,
+      "end_line": 14,
+      "seconds": 4.125000486965291e-06
+    },
+    {
+      "line": 16,
+      "end_line": 16,
+      "seconds": 0.18714341600025364
+    },
+    {
+      "line": 17,
+      "end_line": 17,
+      "seconds": 1.1042000551242381e-05
+    },
+    {
+      "line": 18,
+      "end_line": 18,
+      "seconds": 3.666000338853337e-06
+    },
+    {
+      "line": 19,
+      "end_line": 19,
+      "seconds": 3.1250001484295353e-06
+    },
+    {
+      "line": 20,
+      "end_line": 20,
+      "seconds": 0.0001009580009849742
+    },
+    {
+      "line": 21,
+      "end_line": 21,
+      "seconds": 3.249999281251803e-06
+    },
+    {
+      "line": 23,
+      "end_line": 24,
+      "seconds": 3.474999903119169e-05
+    },
+    {
+      "line": 25,
+      "end_line": 25,
+      "seconds": 7.750000804662704e-06
+    },
+    {
+      "line": 27,
+      "end_line": 27,
+      "seconds": 1.2458000128390267e-05
+    },
+    {
+      "line": 28,
+      "end_line": 28,
+      "seconds": 1.024999983201269e-05
+    },
+    {
+      "line": 32,
+      "end_line": 32,
+      "seconds": 5.542000508285128e-06
+    },
+    {
+      "line": 33,
+      "end_line": 33,
+      "seconds": 2.6670004444895312e-06
+    },
+    {
+      "line": 34,
+      "end_line": 34,
+      "seconds": 3.99999953515362e-06
+    },
+    {
+      "line": 35,
+      "end_line": 35,
+      "seconds": 2.3749998945277184e-06
+    },
+    {
+      "line": 37,
+      "end_line": 37,
+      "seconds": 6.125001164036803e-06
+    },
+    {
+      "line": 38,
+      "end_line": 38,
+      "seconds": 4.208000973449089e-06
+    },
+    {
+      "line": 39,
+      "end_line": 39,
+      "seconds": 2.083999788737856e-06
+    },
+    {
+      "line": 40,
+      "end_line": 40,
+      "seconds": 2.0000006770715117e-06
+    },
+    {
+      "line": 43,
+      "end_line": 43,
+      "seconds": 5.583000529441051e-06
+    },
+    {
+      "line": 44,
+      "end_line": 44,
+      "seconds": 1.7500000467407517e-05
+    },
+    {
+      "line": 48,
+      "end_line": 48,
+      "seconds": 7.499999992433004e-05
+    },
+    {
+      "line": 49,
+      "end_line": 49,
+      "seconds": 5.040999894845299e-06
+    },
+    {
+      "line": 50,
+      "end_line": 50,
+      "seconds": 3.249999281251803e-06
+    },
+    {
+      "line": 51,
+      "end_line": 51,
+      "seconds": 0.0001476659999752883
+    },
+    {
+      "line": 53,
+      "end_line": 55,
+      "seconds": 0.05280562500047381
+    },
+    {
+      "line": 57,
+      "end_line": 57,
+      "seconds": 3.108300006715581e-05
+    },
+    {
+      "line": 58,
+      "end_line": 58,
+      "seconds": 5.83300061407499e-06
+    },
+    {
+      "line": 59,
+      "end_line": 59,
+      "seconds": 1.6166000932571478e-05
+    },
+    {
+      "line": 61,
+      "end_line": 61,
+      "seconds": 1.8665999959921464e-05
+    },
+    {
+      "line": 62,
+      "end_line": 62,
+      "seconds": 0.031232500001351582
+    },
+    {
+      "line": 63,
+      "end_line": 64,
+      "seconds": 5.041700023866724e-05
+    },
+    {
+      "line": 67,
+      "end_line": 67,
+      "seconds": 8.042001354624517e-06
+    },
+    {
+      "line": 68,
+      "end_line": 68,
+      "seconds": 5.290999979479238e-06
+    },
+    {
+      "line": 69,
+      "end_line": 69,
+      "seconds": 3.709001248353161e-06
+    },
+    {
+      "line": 70,
+      "end_line": 70,
+      "seconds": 1.2333999620750546e-05
+    },
+    {
+      "line": 71,
+      "end_line": 71,
+      "seconds": 1.5458999769180082e-05
+    },
+    {
+      "line": 72,
+      "end_line": 72,
+      "seconds": 0.00011941699995077215
+    },
+    {
+      "line": 73,
+      "end_line": 73,
+      "seconds": 2.8208000003360212e-05
+    },
+    {
+      "line": 75,
+      "end_line": 75,
+      "seconds": 7.587500113004353e-05
+    },
+    {
+      "line": 76,
+      "end_line": 76,
+      "seconds": 4.875000740867108e-06
+    },
+    {
+      "line": 78,
+      "end_line": 78,
+      "seconds": 0.0018611249997775303
+    },
+    {
+      "line": 79,
+      "end_line": 79,
+      "seconds": 7.433300015691202e-05
+    },
+    {
+      "line": 80,
+      "end_line": 80,
+      "seconds": 4.704200000560377e-05
+    },
+    {
+      "line": 81,
+      "end_line": 82,
+      "seconds": 0.003282542000306421
+    },
+    {
+      "line": 83,
+      "end_line": 83,
+      "seconds": 1.4958000974729657e-05
+    },
+    {
+      "line": 84,
+      "end_line": 86,
+      "seconds": 0.13288770799954364
+    },
+    {
+      "line": 88,
+      "end_line": 88,
+      "seconds": 0.08419966699875658
+    },
+    {
+      "line": 90,
+      "end_line": 90,
+      "seconds": 6.941699939488899e-05
+    },
+    {
+      "line": 91,
+      "end_line": 91,
+      "seconds": 0.06786783300049137
+    },
+    {
+      "line": 92,
+      "end_line": 92,
+      "seconds": 0.0001531670004624175
+    },
+    {
+      "line": 95,
+      "end_line": 95,
+      "seconds": 3.5041999581153505e-05
+    },
+    {
+      "line": 96,
+      "end_line": 96,
+      "seconds": 9.542000043438748e-06
+    },
+    {
+      "line": 97,
+      "end_line": 97,
+      "seconds": 0.0026295000006939517
+    },
+    {
+      "line": 100,
+      "end_line": 105,
+      "seconds": 5.129200144438073e-05
+    },
+    {
+      "line": 107,
+      "end_line": 109,
+      "seconds": 8.582999726058915e-06
+    },
+    {
+      "line": 111,
+      "end_line": 112,
+      "seconds": 0.013362666999455541
+    },
+    {
+      "line": 113,
+      "end_line": 114,
+      "seconds": 0.0005564999992202502
+    },
+    {
+      "line": 115,
+      "end_line": 115,
+      "seconds": 3.541699879860971e-05
+    },
+    {
+      "line": 116,
+      "end_line": 116,
+      "seconds": 1.8167000234825537e-05
+    },
+    {
+      "line": 117,
+      "end_line": 117,
+      "seconds": 1.1916999937966466e-05
+    },
+    {
+      "line": 118,
+      "end_line": 118,
+      "seconds": 0.0005682079990947386
+    },
+    {
+      "line": 119,
+      "end_line": 119,
+      "seconds": 3.3833999623311684e-05
+    },
+    {
+      "line": 120,
+      "end_line": 120,
+      "seconds": 0.2341220409998641
+    },
+    {
+      "line": 121,
+      "end_line": 121,
+      "seconds": 6.333300007099751e-05
+    },
+    {
+      "line": 123,
+      "end_line": 123,
+      "seconds": 4.4082999011152424e-05
+    },
+    {
+      "line": 124,
+      "end_line": 124,
+      "seconds": 1.195900040329434e-05
+    },
+    {
+      "line": 125,
+      "end_line": 125,
+      "seconds": 1.6542000594199635e-05
+    },
+    {
+      "line": 126,
+      "end_line": 126,
+      "seconds": 0.0012679169994953554
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "scope": "Saved source/array/evidence integrity only; no FFT rerun or physical parameter inference.",
+  "checks": {
+    "two_successful_local_runs": true,
+    "both_independent_arrays_match": true,
+    "worker_resource_samples_present": true,
+    "all_original_package_files_unchanged": true,
+    "template_nofg_28t_exact_original_prefix_nodes": true,
+    "template_nofg_28t_same_name_and_exact_working_copy": true,
+    "template_nofg_28t_all_numeric_checks_pass": true,
+    "template_nofg_28t_cache_file_hash_matches": true,
+    "template_nofg_28t_cache_ignored": true,
+    "template_nofg_28t_saved_array_hashes_match": true,
+    "template_nofg_28t_all_weeks_retained": true,
+    "template_nofg_28t_portable_summary_matches_cache_to_roundoff": true,
+    "template_nofg_28t_plot_matches_original_local_output": true,
+    "rj_nofg_28t_exact_original_prefix_nodes": true,
+    "rj_nofg_28t_same_name_and_exact_working_copy": true,
+    "rj_nofg_28t_all_numeric_checks_pass": true,
+    "rj_nofg_28t_cache_file_hash_matches": true,
+    "rj_nofg_28t_cache_ignored": true,
+    "rj_nofg_28t_saved_array_hashes_match": true,
+    "rj_nofg_28t_all_weeks_retained": true,
+    "rj_nofg_28t_portable_summary_matches_cache_to_roundoff": true,
+    "rj_nofg_28t_plot_matches_original_local_output": true,
+    "initial_exact_zero_failure_retained": true,
+    "roundoff_criterion_did_not_change_arrays": true,
+    "upstream_worktree_clean": true
+  },
+  "all_checks_pass": true
+}

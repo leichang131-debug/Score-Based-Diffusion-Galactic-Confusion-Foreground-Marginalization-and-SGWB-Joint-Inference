@@ -1,0 +1,26 @@
+2026-10-12 22:41:27,378 - INFO: Read simulation results.
+2026-10-12 22:41:27,444 - INFO: Cut into 52 segments, 7.0 days per segment.
+2026-10-12 22:41:27,444 - INFO: Binning in frequency domain, 6 per bin.
+2026-10-12 22:41:27,448 - INFO: Normalized equivalent noise bandwidth of window: 2.2 bins.
+Original preprocessing completed rj_nofg_28t.py 1.289s
+PASS original_scientific_configuration
+PASS full_STFT_shape
+PASS final_CSD_shape
+PASS finite_full_STFT_and_CSD
+PASS frequency_sorted_and_in_band
+PASS notched_intervals_excluded
+PASS frequency_matches_stage3_geometry
+PASS window_PSD_normalization
+PASS independent_frequency_merge_and_mask
+PASS independent_full_complex_FFT
+PASS one_sided_PSD_Parseval
+PASS independent_full_CSD_merge_and_masks
+PASS CSD_Hermitian
+PASS diagonal_positive_and_real_to_roundoff
+PASS all_spectral_matrices_positive_semidefinite
+PASS coherence_bounded
+PASS final_FFT_bins_exclude_DC_and_Nyquist
+PASS filter_counts_consistent
+PASS cache_load_interface_exact
+PASS original_named_plot_generated
+Preprocessing checks: 20/20 passed
