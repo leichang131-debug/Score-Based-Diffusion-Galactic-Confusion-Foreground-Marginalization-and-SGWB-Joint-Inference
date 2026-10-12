@@ -91,3 +91,9 @@ See [prerequisite completion](../../docs/reproduction/triangle-gb/prerequisites-
 ## Triangle-GB Example 3
 
 `run-triangle-gb-example-3.py` executes the full unchanged Sangria notebook using the complete original-supported catalog cache and original LDC orbit/band/response settings. `audit-triangle-gb-example-3.py` rehashes the raw file and complete cache, checks selected catalog conventions, original source, finite reconstruction and local outputs, and writes the evidence manifest. See [report](../../docs/reproduction/triangle-gb/example-3.md).
+
+## TaijiSGWB source preservation
+
+`audit-taiji-sgwb-source.py` checks the complete pinned upstream tree, exact names and byte contents, Git file modes, clean checkout, submodule registration, Python syntax and original GPL license. It writes a file list, SHA-256 manifest and audit report under `results/taiji-sgwb/source/`. The default audit checks current upstream HEAD online; `--offline` skips only that network check. It uses the standard library and never imports or executes upstream programs.
+
+See [Stage 1 source integration](../../docs/reproduction/taiji-sgwb/source-integration.md).
