@@ -1,0 +1,66 @@
+PASS both_preprocessing_inputs_identical
+PASS verified_preprocessing_cache
+PASS verified_official_orbit
+2026-10-12 23:05:24,395 INFO Calculate ORF.
+PASS original_full_noise_shapes
+PASS original_times_match_preprocessing
+PASS reuse_matches_original_calc_orf
+PASS three_original_channel_calls_per_block
+PASS ORF_time_frequency_blocking_matches_unblocked
+2026-10-12 23:05:24,893 INFO Calculate ORF.
+PASS acc_direct_original_noise_controls
+PASS acc_both_original_noise_sections_match
+PASS ro_direct_original_noise_controls
+PASS ro_both_original_noise_sections_match
+PASS both_original_ORF_control_sections_match
+PASS both_original_response_node_texts_identical
+ORF blocks 20/611; elapsed 7.1s
+ORF blocks 40/611; elapsed 14.8s
+ORF blocks 60/611; elapsed 22.0s
+ORF blocks 80/611; elapsed 29.8s
+ORF blocks 100/611; elapsed 37.3s
+ORF blocks 120/611; elapsed 44.5s
+ORF blocks 140/611; elapsed 52.4s
+ORF blocks 160/611; elapsed 59.2s
+ORF blocks 180/611; elapsed 66.9s
+ORF blocks 200/611; elapsed 74.0s
+ORF blocks 220/611; elapsed 81.5s
+ORF blocks 240/611; elapsed 88.9s
+ORF blocks 260/611; elapsed 96.1s
+ORF blocks 280/611; elapsed 104.0s
+ORF blocks 300/611; elapsed 110.8s
+ORF blocks 320/611; elapsed 118.5s
+ORF blocks 340/611; elapsed 125.6s
+ORF blocks 360/611; elapsed 133.1s
+ORF blocks 380/611; elapsed 140.4s
+ORF blocks 400/611; elapsed 147.6s
+ORF blocks 420/611; elapsed 155.5s
+ORF blocks 440/611; elapsed 162.3s
+ORF blocks 460/611; elapsed 170.0s
+ORF blocks 480/611; elapsed 177.2s
+ORF blocks 500/611; elapsed 184.5s
+ORF blocks 520/611; elapsed 192.1s
+ORF blocks 540/611; elapsed 199.4s
+ORF blocks 560/611; elapsed 207.4s
+ORF blocks 580/611; elapsed 214.4s
+ORF blocks 600/611; elapsed 222.1s
+ORF blocks 611/611; elapsed 226.2s
+PASS full_ORF_grid_finite
+PASS full_ORF_matches_unblocked_control_points
+PASS block_coverage_complete
+PASS acc_corr_factor_finite
+PASS acc_corr_factor_Hermitian
+PASS acc_corr_factor_nonnegative_diagonal
+PASS acc_corr_factor_normalized_PSD
+PASS ro_corr_factor_finite
+PASS ro_corr_factor_Hermitian
+PASS ro_corr_factor_nonnegative_diagonal
+PASS ro_corr_factor_normalized_PSD
+PASS orf_finite
+PASS orf_Hermitian
+PASS orf_nonnegative_diagonal
+PASS orf_normalized_PSD
+PASS unit_amplitude_noise_spectra_positive_finite
+PASS cache_reader_exact_original_named_arrays
+PASS all_original_source_files_unchanged
+Response checks: 32/32 passed

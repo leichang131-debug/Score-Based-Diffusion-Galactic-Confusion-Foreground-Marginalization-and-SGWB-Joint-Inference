@@ -1,0 +1,121 @@
+{
+  "source_sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
+  "noise_nodes": [
+    {
+      "line": 129,
+      "end_line": 129,
+      "source": "orbit = InterpolationOrbit(PROJ_DIR/\"data/MicroSateOrbitEclipticTCB/MicroSateOrbit.hdf5\")"
+    },
+    {
+      "line": 130,
+      "end_line": 130,
+      "source": "taiji = Interferometer(orbit)"
+    },
+    {
+      "line": 131,
+      "end_line": 131,
+      "source": "t_seg = (np.arange(nseg) + .5) * tperseg + ndrop_points * dt"
+    },
+    {
+      "line": 132,
+      "end_line": 132,
+      "source": "ltt = orbit.calc_ltt(t_seg)"
+    },
+    {
+      "line": 134,
+      "end_line": 134,
+      "source": "acc_corr_factor = np.empty((ntdi, ntdi, 6, nseg, nf_est), dtype=complex)"
+    },
+    {
+      "line": 135,
+      "end_line": 135,
+      "source": "ro_corr_factor = np.empty((ntdi, ntdi, 6, nseg, nf_est), dtype=complex)"
+    },
+    {
+      "line": 136,
+      "end_line": 143,
+      "source": "for i in range(ntdi):\n    acc_corr_factor[i, i] = taiji.calc_noise_acc_corr_factor(f_est, t_seg, tdi_methods[i]).to_array\n    ro_corr_factor[i, i] = taiji.calc_noise_ro_corr_factor(f_est, t_seg, tdi_methods[i]).to_array\n    for j in range(i+1, ntdi):\n        acc_corr_factor[i, j] = taiji.calc_noise_acc_corr_factor(f_est, t_seg, tdi_methods[i], tdi_methods[j]).to_array\n        acc_corr_factor[j, i] = np.conj(acc_corr_factor[i, j])\n        ro_corr_factor[i, j] = taiji.calc_noise_ro_corr_factor(f_est, t_seg, tdi_methods[i], tdi_methods[j]).to_array\n        ro_corr_factor[j, i] = np.conj(ro_corr_factor[i, j])"
+    },
+    {
+      "line": 145,
+      "end_line": 145,
+      "source": "spectrum_acc = TaijiNoisePSD.calc_psd_acc(f_est, 1.)"
+    },
+    {
+      "line": 146,
+      "end_line": 146,
+      "source": "spectrum_ro = TaijiNoisePSD.calc_psd_ro(f_est, 1.)"
+    },
+    {
+      "line": 148,
+      "end_line": 148,
+      "source": "logging.info(\"Calculate ORF.\")"
+    }
+  ],
+  "orf_nodes": [
+    {
+      "line": 149,
+      "end_line": 149,
+      "source": "orf = np.empty((ntdi, ntdi, nseg, nf_est), dtype=complex)"
+    },
+    {
+      "line": 150,
+      "end_line": 155,
+      "source": "for i in range(ntdi):\n    orf[i, i] = taiji.calc_orf(f_est, t_seg, tdi_methods[i])\n    for j in range(i+1, ntdi):\n        orf_ = taiji.calc_orf(f_est, t_seg, tdi_methods[i], tdi_methods[j])\n        orf[i, j] = orf_\n        orf[j, i] = np.conj(orf_)"
+    }
+  ],
+  "original_noise_node_timings": [
+    {
+      "line": 129,
+      "end_line": 129,
+      "seconds": 0.0013830410007358296
+    },
+    {
+      "line": 130,
+      "end_line": 130,
+      "seconds": 7.374999768217094e-06
+    },
+    {
+      "line": 131,
+      "end_line": 131,
+      "seconds": 1.6291998690576293e-05
+    },
+    {
+      "line": 132,
+      "end_line": 132,
+      "seconds": 6.54579998808913e-05
+    },
+    {
+      "line": 134,
+      "end_line": 134,
+      "seconds": 1.5624998923158273e-05
+    },
+    {
+      "line": 135,
+      "end_line": 135,
+      "seconds": 7.624999852851033e-06
+    },
+    {
+      "line": 136,
+      "end_line": 143,
+      "seconds": 1.3288282079993223
+    },
+    {
+      "line": 145,
+      "end_line": 145,
+      "seconds": 0.00012862500079791062
+    },
+    {
+      "line": 146,
+      "end_line": 146,
+      "seconds": 3.5041999581153505e-05
+    },
+    {
+      "line": 148,
+      "end_line": 148,
+      "seconds": 0.00023229200087371282
+    }
+  ],
+  "control_time_override": null,
+  "adaptation": "Original noise nodes on supplied grid; exact original ORF allocation/loop nodes per time-frequency block. Local PROJ_DIR and control/block namespace axes supplied externally; full-grid times use the original formula."
+}

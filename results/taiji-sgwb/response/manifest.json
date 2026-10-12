@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "configs/reproduction/taiji-sgwb/response-macos.json",
+      "bytes": 346,
+      "sha256": "1dfbfcc468b709149f8a1e8c19f7f3b80569da287fcdeec53f16e73ce3a6ccec"
+    },
+    {
+      "path": "docs/reproduction/taiji-sgwb/response.md",
+      "bytes": 10392,
+      "sha256": "51af8b9e6a70f6b68c640e321fdf3668b609f1c2193ec0c91f8933e4ac2cb86c"
+    },
+    {
+      "path": "results/taiji-sgwb/response/README.md",
+      "bytes": 1441,
+      "sha256": "3b0afaf18d57e910864f781acbe64fc9bcf76c60b5f80fa2718a6209069fc0c9"
+    },
+    {
+      "path": "results/taiji-sgwb/response/attempts/initial-boundary-check/execution.txt",
+      "bytes": 1808,
+      "sha256": "5e99de5b53d68d30189bb183d79d8cb5900ac79ea581c5202aa8522f9f0344f5"
+    },
+    {
+      "path": "results/taiji-sgwb/response/attempts/initial-boundary-check/resources.csv",
+      "bytes": 205,
+      "sha256": "3b7819840d531667fa07b061a079174f15c4b2fe53a77bc6a18674707161be4b"
+    },
+    {
+      "path": "results/taiji-sgwb/response/attempts/initial-boundary-check/run.json",
+      "bytes": 547,
+      "sha256": "6046b5a3a5412af0515afd9d75b40d9a79bdfa22b99091fa1f0a94fdbf4c65e7"
+    },
+    {
+      "path": "results/taiji-sgwb/response/attempts.json",
+      "bytes": 372,
+      "sha256": "286095f14ab9f3f774b20d070458ad8a412d01086814c6daa18e242786519856"
+    },
+    {
+      "path": "results/taiji-sgwb/response/audit.json",
+      "bytes": 1148,
+      "sha256": "2be753e03065c43ec4bacbdc3d45a38a773c07a931a150e824d2bdc041ad335b"
+    },
+    {
+      "path": "results/taiji-sgwb/response/block-timings.json",
+      "bytes": 140882,
+      "sha256": "15d4df99d234fa275d564904189224597dcfc678fcfa29a65477f2c2feeff9f1"
+    },
+    {
+      "path": "results/taiji-sgwb/response/execution.txt",
+      "bytes": 2352,
+      "sha256": "88bd8027f3a6118996d3c923445d204e1d372932e475b5162e9e566907b3064c"
+    },
+    {
+      "path": "results/taiji-sgwb/response/initial-benchmark.json",
+      "bytes": 1188,
+      "sha256": "9c753362cd26bdcf616e9e65644510cad9224a34d528570f91919271c39f6692"
+    },
+    {
+      "path": "results/taiji-sgwb/response/orf-auto.png",
+      "bytes": 93416,
+      "sha256": "857cfca609bb08ae1731c710946d4224aa7de95501d05ce5de8f978d122fd12e"
+    },
+    {
+      "path": "results/taiji-sgwb/response/report-execution.txt",
+      "bytes": 92,
+      "sha256": "805b87061ffe15803bf3b059ef7af81aa24432944aef46364758c891ae28f8a4"
+    },
+    {
+      "path": "results/taiji-sgwb/response/resources.csv",
+      "bytes": 11623,
+      "sha256": "9e2de72c6e6a4dcf7db546d8d0d71423f6d43ab07743c83dbb804c623d29319a"
+    },
+    {
+      "path": "results/taiji-sgwb/response/response-summary.npz",
+      "bytes": 602832,
+      "sha256": "e2e0cacb31a54854d065c29ee77ff4067daa152389a72c9eb2840110339fe518"
+    },
+    {
+      "path": "results/taiji-sgwb/response/rj_nofg_28t/README.md",
+      "bytes": 617,
+      "sha256": "bc3b90dff64c94821c07b11eda96b62fd30ce5a5d857bd8dd2a14e763dd7aabd"
+    },
+    {
+      "path": "results/taiji-sgwb/response/rj_nofg_28t/cache-reference.json",
+      "bytes": 583,
+      "sha256": "5828bc1607984e6c2014d8db5b137bdd408efbbaff57ee11ac0a16150c082d12"
+    },
+    {
+      "path": "results/taiji-sgwb/response/rj_nofg_28t/source-execution.json",
+      "bytes": 3732,
+      "sha256": "4cc24f796b9c21d54ce70bd7ccabf5c9e77e965bee0f4a0f781344c48555b4c3"
+    },
+    {
+      "path": "results/taiji-sgwb/response/run.json",
+      "bytes": 547,
+      "sha256": "48c0728a369adf46da65f92b971a9bc2590f8eed508c94d69bc7a8537f1fda05"
+    },
+    {
+      "path": "results/taiji-sgwb/response/template_nofg_28t/README.md",
+      "bytes": 623,
+      "sha256": "db23268d9baa769bd7c508337c45122057fc13c2be0247b38e7b0bcf4273f284"
+    },
+    {
+      "path": "results/taiji-sgwb/response/template_nofg_28t/cache-reference.json",
+      "bytes": 589,
+      "sha256": "2175e42b112cd1bd052c82bcc11030efb0cbe2c5ba79a295971293e74f21206e"
+    },
+    {
+      "path": "results/taiji-sgwb/response/template_nofg_28t/source-execution.json",
+      "bytes": 3684,
+      "sha256": "5baba9250ba8c237ac5e975c6d30bb76974675e88478c14c9c8ee03e616d997e"
+    },
+    {
+      "path": "results/taiji-sgwb/response/unblocked-controls.npz",
+      "bytes": 136744,
+      "sha256": "d1854553ceae2f26b3fd2e6e6ea69149e91f76f247a8c1e0ba0f36de3da38260"
+    },
+    {
+      "path": "results/taiji-sgwb/response/validation.json",
+      "bytes": 6316,
+      "sha256": "f813b4ef3e4b77609e95afdcb46d39277c6e58c9b3cbc4d4b6bc7803a47174c7"
+    },
+    {
+      "path": "scripts/reproduction/audit-taiji-sgwb-response.py",
+      "bytes": 5194,
+      "sha256": "62cd5e7006efbd988b046da9600d8b643c116f446be335b0b49eaca24d8342f4"
+    },
+    {
+      "path": "scripts/reproduction/check-taiji-sgwb-response.py",
+      "bytes": 13548,
+      "sha256": "277bc80e53c3b12677e3d64a385dc0b0ad758074b6c31a3390ca85bda22e9c11"
+    },
+    {
+      "path": "scripts/reproduction/report-taiji-sgwb-response.py",
+      "bytes": 1467,
+      "sha256": "e583b64e720849922c6fbdc1fb4f608728b46ee1f9d2d7fd334b1f4be24d8385"
+    },
+    {
+      "path": "scripts/reproduction/run-taiji-sgwb-response.py",
+      "bytes": 1993,
+      "sha256": "5a1ccae6477d659de3f638cb7818de86ff00fcc4b7566a04f5e57565640269c7"
+    },
+    {
+      "path": "scripts/reproduction/taiji_sgwb_response.py",
+      "bytes": 5464,
+      "sha256": "34cac563bde75d3956f64f4114f07e9d9d802244fb483d7cd5f225ac33a6217c"
+    }
+  ]
+}

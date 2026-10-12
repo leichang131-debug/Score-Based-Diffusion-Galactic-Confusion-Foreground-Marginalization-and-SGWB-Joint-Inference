@@ -1,0 +1,33 @@
+{
+  "scope": "Saved response/source/cache integrity only; no full ORF recomputation or physical likelihood/sampling.",
+  "checks": {
+    "worker_success": true,
+    "all_response_checks_pass": true,
+    "actual_resource_samples": true,
+    "original_sky_settings_preserved": true,
+    "all_original_sources_preserved": true,
+    "original_source_clean": true,
+    "template_nofg_28t_original_response_nodes_match": true,
+    "template_nofg_28t_same_name_byte_identical_copy": true,
+    "rj_nofg_28t_original_response_nodes_match": true,
+    "rj_nofg_28t_same_name_byte_identical_copy": true,
+    "all_grid_points_computed_once": true,
+    "reuse_only_three_original_channels": true,
+    "full_cache_hash_matches": true,
+    "full_cache_ignored": true,
+    "full_array_hashes_match": true,
+    "summary_matches_full_cache_to_roundoff": true,
+    "original_link_order_recorded": true,
+    "cache_grid_matches_preprocessing": true
+  },
+  "array_checks": {
+    "f_est": true,
+    "t_seg": true,
+    "acc_corr_factor": true,
+    "ro_corr_factor": true,
+    "spectrum_acc": true,
+    "spectrum_ro": true,
+    "orf": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "block_time": 4,
+  "block_frequency": 96,
+  "relative_tolerance": 1e-11,
+  "reuse_identical_original_channel_responses": true,
+  "sky_nside": "original hardcoded 14; not changed",
+  "sky_pixels": 2352,
+  "full_grid": "all 52 weeks and 4426 retained frequencies",
+  "workers": 1,
+  "scientific_source_modified": false
+}

@@ -1,0 +1,23 @@
+PASS both_preprocessing_inputs_identical
+PASS verified_preprocessing_cache
+PASS verified_official_orbit
+2026-10-12 23:04:13,286 INFO Calculate ORF.
+PASS original_full_noise_shapes
+PASS original_times_match_preprocessing
+PASS reuse_matches_original_calc_orf
+PASS three_original_channel_calls_per_block
+PASS ORF_time_frequency_blocking_matches_unblocked
+Traceback (most recent call last):
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-taiji-sgwb-response.py", line 187, in <module>
+    if __name__=="__main__":main()
+                            ^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-taiji-sgwb-response.py", line 90, in main
+    secondary,secondary_nodes,second_record=initialize_original_response(second_source,ff,control_settings,ROOT/"runs/taiji-sgwb/workspace",control_times=tt)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/taiji_sgwb_response.py", line 75, in initialize_original_response
+    text, imports, noise_nodes, orf_nodes = original_response_nodes(source)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/taiji_sgwb_response.py", line 61, in original_response_nodes
+    assert len(selected[split:]) == 2
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

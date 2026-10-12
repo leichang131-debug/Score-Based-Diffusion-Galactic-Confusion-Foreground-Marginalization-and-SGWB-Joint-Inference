@@ -1,0 +1,15 @@
+{
+  "started_utc": "2026-10-12T15:05:22.265446+00:00",
+  "argv": [
+    "bash",
+    "scripts/reproduction/run-taiji-sgwb-python.sh",
+    "scripts/reproduction/check-taiji-sgwb-response.py"
+  ],
+  "pid": 9327,
+  "returncode": 0,
+  "wall_seconds": 231.2551614999993,
+  "peak_sampled_worker_rss_kib": 1725424,
+  "monitoring_error": null,
+  "resource_note": "RSS of the single CPU worker sampled approximately every 0.5 seconds; may miss shorter peaks.",
+  "scope": "Full original noise/ORF response cache only; no likelihood or posterior sampling."
+}

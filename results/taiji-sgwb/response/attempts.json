@@ -1,0 +1,7 @@
+{
+  "initial_boundary_check": {
+    "reason": "Adapter initially included RJ log_f_est initialization after the ORF loop; this is interpolation/likelihood setup outside Stage 6.",
+    "action": "Select exactly the original ORF allocation and following loop; original source and scientific calculations unchanged.",
+    "retained": "attempts/initial-boundary-check/"
+  }
+}

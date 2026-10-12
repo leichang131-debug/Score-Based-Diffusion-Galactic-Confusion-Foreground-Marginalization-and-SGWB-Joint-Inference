@@ -126,3 +126,13 @@ All 25 Stage 2 checks passed locally. These scripts do not run either complete o
 - `audit-taiji-sgwb-preprocessing.py`: rehash source/caches/summaries and compare original executed nodes without FFT reruns.
 
 Both original full-year prefixes passed 20/20 checks. See [Stage 5 report](../../docs/reproduction/taiji-sgwb/preprocessing.md). Original names/source are retained; response and inference are subsequent stages.
+
+## TaijiSGWB Stage 6 original response and cache
+
+- `taiji_sgwb_response.py`: original noise/ORF node extraction, bounded execution, exact-input channel-response memoization and original-name cache readback.
+- `check-taiji-sgwb-response.py`: full original-grid noise/ORF cache with unblocked controls and all matrix checks.
+- `run-taiji-sgwb-response.py`: actual execution, return code, per-block progress and sampled RSS.
+- `report-taiji-sgwb-response.py`: render the saved ORF diagnostic without recomputation.
+- `audit-taiji-sgwb-response.py`: verify original node/source correspondence, full-cache/array hashes and exact block coverage.
+
+All 32 response checks passed. Both original examples share a verified full response cache; [Stage 6 report](../../docs/reproduction/taiji-sgwb/response.md). No parameter likelihood or posterior sampling is executed here.

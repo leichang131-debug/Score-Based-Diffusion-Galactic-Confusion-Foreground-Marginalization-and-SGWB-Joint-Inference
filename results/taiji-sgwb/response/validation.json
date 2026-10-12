@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-12T15:09:13.016386+00:00",
+  "scope": "Full original noise transfer arrays and blocked original ORF; no parameter likelihood or posterior sampling.",
+  "checks": {
+    "both_preprocessing_inputs_identical": true,
+    "verified_preprocessing_cache": true,
+    "verified_official_orbit": true,
+    "original_full_noise_shapes": true,
+    "original_times_match_preprocessing": true,
+    "reuse_matches_original_calc_orf": true,
+    "three_original_channel_calls_per_block": true,
+    "ORF_time_frequency_blocking_matches_unblocked": true,
+    "acc_direct_original_noise_controls": true,
+    "acc_both_original_noise_sections_match": true,
+    "ro_direct_original_noise_controls": true,
+    "ro_both_original_noise_sections_match": true,
+    "both_original_ORF_control_sections_match": true,
+    "both_original_response_node_texts_identical": true,
+    "full_ORF_grid_finite": true,
+    "full_ORF_matches_unblocked_control_points": true,
+    "block_coverage_complete": true,
+    "acc_corr_factor_finite": true,
+    "acc_corr_factor_Hermitian": true,
+    "acc_corr_factor_nonnegative_diagonal": true,
+    "acc_corr_factor_normalized_PSD": true,
+    "ro_corr_factor_finite": true,
+    "ro_corr_factor_Hermitian": true,
+    "ro_corr_factor_nonnegative_diagonal": true,
+    "ro_corr_factor_normalized_PSD": true,
+    "orf_finite": true,
+    "orf_Hermitian": true,
+    "orf_nonnegative_diagonal": true,
+    "orf_normalized_PSD": true,
+    "unit_amplitude_noise_spectra_positive_finite": true,
+    "cache_reader_exact_original_named_arrays": true,
+    "all_original_source_files_unchanged": true
+  },
+  "details": {
+    "reuse_matches_original_calc_orf": {
+      "relative_L2": 0.0,
+      "original_seconds": 0.27536095799951,
+      "reuse_seconds": 0.09398558300017612,
+      "calls": {
+        "node_timings": [
+          {
+            "line": 149,
+            "end_line": 149,
+            "seconds": 2.8667000151472166e-05
+          },
+          {
+            "line": 150,
+            "end_line": 155,
+            "seconds": 0.09393633299987414
+          }
+        ],
+        "original_GW_response_calls": 3,
+        "identical_input_reuses": 6
+      }
+    },
+    "ORF_time_frequency_blocking_matches_unblocked": {
+      "relative_L2": 4.382696870011723e-19,
+      "probe_times": [
+        0,
+        26,
+        51
+      ],
+      "probe_frequencies": [
+        0,
+        142,
+        285,
+        428,
+        570,
+        713,
+        856,
+        999,
+        1141,
+        1284,
+        1427,
+        1570,
+        1712,
+        1855,
+        1998,
+        2141,
+        2283,
+        2426,
+        2569,
+        2712,
+        2854,
+        2997,
+        3140,
+        3283,
+        3425,
+        3568,
+        3711,
+        3854,
+        3996,
+        4139,
+        4282,
+        4425
+      ],
+      "probe_block_time": 2,
+      "probe_block_frequency": 7
+    },
+    "acc_direct_original_noise_controls": {
+      "relative_L2": 1.88650761125563e-17
+    },
+    "acc_both_original_noise_sections_match": {
+      "relative_L2": 1.88650761125563e-17
+    },
+    "ro_direct_original_noise_controls": {
+      "relative_L2": 0.0
+    },
+    "ro_both_original_noise_sections_match": {
+      "relative_L2": 0.0
+    },
+    "both_original_ORF_control_sections_match": {
+      "relative_L2": 0.0
+    },
+    "full_ORF_matches_unblocked_control_points": {
+      "relative_L2": 0.0
+    },
+    "block_coverage_complete": {
+      "blocks": 611,
+      "time_frequency_points": 230152
+    },
+    "acc_corr_factor_normalized_PSD": {
+      "minimum_eigenvalue": -1.9035262164805194e-15,
+      "relative_limit": 2.842170943040401e-14
+    },
+    "ro_corr_factor_normalized_PSD": {
+      "minimum_eigenvalue": -1.8848288838168945e-15,
+      "relative_limit": 2.842170943040401e-14
+    },
+    "orf_normalized_PSD": {
+      "minimum_eigenvalue": 2.9714236014986384e-13,
+      "relative_limit": 2.842170943040401e-14
+    }
+  },
+  "all_checks_pass": true,
+  "config": {
+    "schema_version": 1,
+    "block_time": 4,
+    "block_frequency": 96,
+    "relative_tolerance": 1e-11,
+    "reuse_identical_original_channel_responses": true,
+    "sky_nside": "original hardcoded 14; not changed",
+    "sky_pixels": 2352,
+    "full_grid": "all 52 weeks and 4426 retained frequencies",
+    "workers": 1,
+    "scientific_source_modified": false
+  },
+  "original_sky_nside": 14,
+  "original_sky_pixels": 2352,
+  "channels": [
+    "A",
+    "E",
+    "T"
+  ],
+  "link_order": [
+    "12",
+    "13",
+    "23",
+    "21",
+    "31",
+    "32"
+  ],
+  "array_shapes": {
+    "f_est": [
+      4426
+    ],
+    "t_seg": [
+      52
+    ],
+    "acc_corr_factor": [
+      3,
+      3,
+      6,
+      52,
+      4426
+    ],
+    "ro_corr_factor": [
+      3,
+      3,
+      6,
+      52,
+      4426
+    ],
+    "spectrum_acc": [
+      4426
+    ],
+    "spectrum_ro": [
+      4426
+    ],
+    "orf": [
+      3,
+      3,
+      52,
+      4426
+    ]
+  },
+  "array_hashes": {
+    "f_est": "a94294c418c8b0e6a4e24086fe701b3bd33e5e41c2f6f9ccbf7cc5bb51da81f7",
+    "t_seg": "b2524e9ca99d85830f0621a6ee89ab852e3e532983b57381108437d671dc27cd",
+    "acc_corr_factor": "0b475dc6ada069566a6f5b16e1ad0eecba1af1f80b0e96e06590ddf4d475466a",
+    "ro_corr_factor": "b1519b3bcffbe1bcd5591f7fc7c1d09767a675e39aeb018666caf8fe77d03d36",
+    "spectrum_acc": "4966cf669bedd483e1c1d95ea53bf516e9c20ea90f8cf65829d90c82cf33c172",
+    "spectrum_ro": "3aec8f4ac399d6ed0b1a1960574f939a69db3e6db65206e9f11b42526544d16d",
+    "orf": "7f6b734751f560c97a67a16899fece7fc2da2fa664c98d1ff1516b7ea21dbcb1"
+  },
+  "cache": {
+    "path": "data/processed/taiji-sgwb/response/response.h5",
+    "bytes": 430959976,
+    "sha256": "4e8f12c8371a6afa84fdb7f7b3401968d3d23c9433d201cbd14d5a8e0cd2ca13"
+  },
+  "shared_cache_basis": "Original response nodes and preprocessing settings identical; both original sections verified on the actual unblocked control grid.",
+  "timing": {
+    "full_original_noise_seconds": 1.9789566660001583,
+    "full_blocked_ORF_seconds": 226.1856701659999,
+    "worker_seconds": 230.9590458750008
+  },
+  "memory_estimate": {
+    "unblocked_single_sky_array_bytes": 8661080064,
+    "blocked_single_sky_array_bytes": 14450688
+  },
+  "remaining": "Stage 7 physical spectral-model and likelihood verification; sky-resolution convergence is not assessed here."
+}

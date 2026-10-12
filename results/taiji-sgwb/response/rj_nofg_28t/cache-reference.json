@@ -1,0 +1,11 @@
+{
+  "entry": "rj_nofg_28t.py",
+  "shared_cache": {
+    "path": "data/processed/taiji-sgwb/response/response.h5",
+    "bytes": 430959976,
+    "sha256": "4e8f12c8371a6afa84fdb7f7b3401968d3d23c9433d201cbd14d5a8e0cd2ca13"
+  },
+  "basis": "Original response nodes and preprocessing settings identical; both original sections verified on the actual unblocked control grid.",
+  "full_cache_recomputed_per_entry": false,
+  "scope": "Both original response sections verified on the actual unblocked control grid; full common response cache uses template original nodes with bounded calls."
+}
