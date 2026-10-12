@@ -1,0 +1,27 @@
+{
+  "started_utc": "2026-10-12T14:11:09.216179+00:00",
+  "scope": "Official input preparation and full data scan; no complete preprocessing, response grid or inference.",
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "scripts/reproduction/prepare-taiji-sgwb-paths.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.015419166998981382,
+      "log": "path-execution.txt"
+    },
+    {
+      "argv": [
+        "bash",
+        "scripts/reproduction/run-taiji-sgwb-python.sh",
+        "scripts/reproduction/check-taiji-sgwb-data.py"
+      ],
+      "returncode": 1,
+      "seconds": 1.8498980829990614,
+      "log": "validation-execution.txt"
+    }
+  ],
+  "wall_seconds": 1.8657679589996405,
+  "success": false
+}

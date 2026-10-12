@@ -1,0 +1,66 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+100  9470  100  9470    0     0   3145      0  0:00:03  0:00:03 --:--:--  3146
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+100    99  100    99    0     0     48      0  0:00:02  0:00:02 --:--:--    48
+
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+100  9470  100  9470    0     0   3098      0  0:00:03  0:00:03 --:--:--  159k
+Downloaded range 116584448-150138879; 1/18 complete
+Downloaded range 83030016-116584447; 2/18 complete
+Downloaded range 150138880-183693311; 3/18 complete
+Downloaded range 183693312-217247743; 4/18 complete
+Downloaded range 217247744-250802175; 5/18 complete
+Downloaded range 250802176-284356607; 6/18 complete
+Downloaded range 284356608-317911039; 7/18 complete
+Downloaded range 317911040-351465471; 8/18 complete
+Downloaded range 351465472-385019903; 9/18 complete
+Downloaded range 385019904-418574335; 10/18 complete
+Downloaded range 418574336-452128767; 11/18 complete
+Downloaded range 452128768-485683199; 12/18 complete
+Downloaded range 519237632-552792063; 13/18 complete
+Downloaded range 485683200-519237631; 14/18 complete
+Downloaded range 552792064-586346495; 15/18 complete
+curl: (56) LibreSSL SSL_read: LibreSSL/3.3.6: error:06FFF064:digital envelope routines:CRYPTO_internal:bad decrypt, errno 0
+curl: (56) LibreSSL SSL_read: LibreSSL/3.3.6: error:06FFF064:digital envelope routines:CRYPTO_internal:bad decrypt, errno 0
+curl: (56) LibreSSL SSL_read: LibreSSL/3.3.6: error:06FFF064:digital envelope routines:CRYPTO_internal:bad decrypt, errno 0
+Traceback (most recent call last):
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/download-taiji-sgwb-data.py", line 123, in <module>
+    main()
+    ~~~~^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/download-taiji-sgwb-data.py", line 90, in main
+    ranged_download(f"https://zenodo.org/records/{RECORD}/files/{file['key']}?download=1", partial, file["size"])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/download-taiji-sgwb-data.py", line 62, in ranged_download
+    records.append(result.result())
+                   ~~~~~~~~~~~~~^^
+  File "/Users/leichang/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/Users/leichang/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/Users/leichang/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/Users/leichang/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/download-taiji-sgwb-data.py", line 51, in fetch
+    subprocess.run(["curl", "--fail", "--location", "--silent", "--show-error", "--retry", "3",
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "--retry-delay", "2", "--connect-timeout", "30", "--range", f"{start}-{end}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "--max-filesize", str(end-start+1), "--dump-header", str(headers), url, "--output", str(file)], check=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/.local/share/uv/python/cpython-3.14.7-macos-aarch64-none/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['curl', '--fail', '--location', '--silent', '--show-error', '--retry', '3', '--retry-delay', '2', '--connect-timeout', '30', '--range', '619900928-653455359', '--max-filesize', '33554432', '--dump-header', '/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/runs/taiji-sgwb/data-preparation/ranges/619900928-653455359.headers', 'https://zenodo.org/records/17538642/files/TDCII2.8.h5?download=1', '--output', '/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/runs/taiji-sgwb/data-preparation/ranges/619900928-653455359.bin']' returned non-zero exit status 56.

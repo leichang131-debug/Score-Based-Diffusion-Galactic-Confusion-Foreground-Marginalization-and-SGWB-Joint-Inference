@@ -1,0 +1,104 @@
+{
+  "url": "https://github.com/TriangleDataCenter/TDCII_Training_Sets/blob/6d5a0a273dafdc4212526be6c9b3189783be59bf/Scripts/TDCII2.8/SGWB.ipynb",
+  "commit": "6d5a0a273dafdc4212526be6c9b3189783be59bf",
+  "original_notebook_sha256": "76e023ea3e7d3989ea854b8b5d99c3905d3bd2d24cf280b791200fe5ae0be1b6",
+  "scope": "Source text only; upstream outputs excluded; notebook not executed locally.",
+  "cells": [
+    {
+      "index": 0,
+      "type": "code",
+      "source": "import os\nos.environ[\"OMP_NUM_THREADS\"] = \"1\"\nos.environ[\"OPENBLAS_NUM_THREADS\"] = \"1\"\nos.environ[\"MKL_NUM_THREADS\"] = \"1\"\nos.environ[\"NUMEXPR_NUM_THREADS\"] = \"1\"\nos.environ[\"VECLIB_MAXIMUM_THREADS\"] = \"1\"  \n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom tqdm import tqdm\nimport healpy as hlp \nimport pickle\n\nfrom Triangle.Constants import *\nfrom Triangle.FFTTools import *\n\nfrom Triangle.Noise import *\nfrom Triangle.Orbit import *\nfrom Triangle.Offset import *\nfrom Triangle.Plot import *\nfrom Triangle.Data import *\nfrom Triangle.GW import *\nfrom Triangle.Interferometer import *\nfrom Triangle.TDI import *\nfrom Triangle.Cosmology import *\n\nimport multiprocessing\nif __name__ == \"__main__\":\n    multiprocessing.set_start_method(\"fork\")\n\nncpu = multiprocessing.cpu_count()\n# ncpu = 6\npool = multiprocessing.Pool(processes=ncpu)\nprint(\"number of cpus =\", ncpu)\n\nnp.random.seed(114514)"
+    },
+    {
+      "index": 1,
+      "type": "markdown",
+      "source": "## Simulate power-law SGWB "
+    },
+    {
+      "index": 2,
+      "type": "markdown",
+      "source": "### Data settings "
+    },
+    {
+      "index": 3,
+      "type": "code",
+      "source": "dt = 5. \nTobs = int(YEAR/dt)*dt \ndata_times = np.arange(int(Tobs/dt)) * dt "
+    },
+    {
+      "index": 4,
+      "type": "markdown",
+      "source": "### Model settings "
+    },
+    {
+      "index": 5,
+      "type": "code",
+      "source": "# define the PSD of each polarization \nOMEGA0_SGWB = 1e-12\nF0_SGWB = 1e-3\nN_SGWB = 2./3.\ndef S_SGWB(f, Omega0=OMEGA0_SGWB, f0=F0_SGWB, n=N_SGWB): \n    Omega = Omega0 * (f / f0) ** n \n    return 3. * H0 ** 2 / 4. / np.pi ** 2 / f ** 3 * Omega * 1e6 / MPC ** 2 \n\n# initialize random SGWB generator \nsgwb_generator = GeneralNoise(S_SGWB)\n\n# set directions of background sources \nNSIDE=10\nNPIX = hlp.nside2npix(NSIDE)\nprint(\"number of directions:\", NPIX)\ncolatitude, longitude = hlp.pix2ang(nside=NSIDE, ipix=np.arange(NPIX))\nlatitude = np.pi / 2. - colatitude\n\n# set models for orbit, noises (not used), offsets (not used)\nORBIT_DIR = \"../../../Triangle-Simulator/OrbitData/MicroSateOrbitEclipticTCB\" # Path to TDC II orbit \norbit = Orbit(OrbitDir=ORBIT_DIR) \noffset = OffsetFunctions(laser_flag=False, clock_flag=False) # no clock and laser frequency drift \nnoise = InstrumentalPSDs(L=L_nominal) # nominal noise models \n\nsize = int(Tobs/dt)\ninterp_order = 11 # use a relatively lower order for SGWB "
+    },
+    {
+      "index": 6,
+      "type": "markdown",
+      "source": "### Generate interferometer responses to SGWB by batch \nThis takes several hours ... "
+    },
+    {
+      "index": 7,
+      "type": "code",
+      "source": "batch_size = 5\nfor batch_idx in tqdm(range(int(NPIX/batch_size) + 1)):\n    start_idx = batch_idx * batch_size\n    end_idx = min(start_idx + batch_size, NPIX)\n    gw = [] \n    for i in range(start_idx, end_idx): \n        hp_k = sgwb_generator(fsample=1./dt, size=size) / np.sqrt(NPIX) \n        hc_k = sgwb_generator(fsample=1./dt, size=size) / np.sqrt(NPIX)\n        Waveform_k = GeneralWaveform(tdata=data_times, hpdata=hp_k, hcdata=hc_k)\n        GW_k = GW(orbit=orbit, ext_params=[longitude[i], latitude[i], 0.], GWwaveform=Waveform_k) # here we set psi=0, assuming it is absorbed to h+ and hx\n        gw.append(GW_k)\n        \n    ifo = Interferometers(\n        size=size,\n        fsample=1./dt,\n        acc_noise=False, \n        ro_noise=False, \n        laser_noise=False,\n        clock_noise=False,\n        ob_noise=False,\n        bl_noise=False,\n        op_noise=False,\n        ranging_noise=False,\n        modulation_noise=False,\n        orbit_class=orbit,\n        offset_class=offset,\n        noise_class=noise,\n        gw_class=gw, \n        fplan=None,\n        order=interp_order, \n        pool=pool,\n        clean_memory=True, \n        )\n    ifo.SimulateInterferometers()\n    m = ifo.OutputMeasurements(mode='decomposed')\n    ifo.clean()\n\n    # convert to the Barycentric coordinate time of Solar system (TCB)\n    m1 = TPStoTCB(measurement=m, orbit_class=orbit, order=interp_order, pool=pool)\n\n    if batch_idx == 0:\n        m_tot = m1\n    else: \n        m_tot[\"sci_c\"] = m1[\"sci_c\"] + m_tot[\"sci_c\"]"
+    },
+    {
+      "index": 8,
+      "type": "markdown",
+      "source": "### TDI combination "
+    },
+    {
+      "index": 9,
+      "type": "code",
+      "source": "tdi = TDI(measurements=m_tot, delays=m_tot['ltt'], fsample=m_tot['fsample'], order=interp_order, delay_order=5) # input the ifo measuremnts, delays and hyper parameters, the setting of interpolation order should be consistent with ifo simulation  \ntdi.CalculateXi(pool=pool) # calculate intermediate variable \\xi\ntdi.CalculateEta() # calculate intermediate variable \\eta\ntdi.FastMichelson(channel=\"XYZ\")\ntdi.measurements.keys() "
+    },
+    {
+      "index": 10,
+      "type": "code",
+      "source": "# set invalid points (caused by time delay) to 0 \ndrop_points = 200 \nchannel_names = [\"X2\", \"Y2\", \"Z2\"]\n\nfor channel in channel_names: \n    tdi.measurements[channel] *= 1. / F_LASER # convert to fractional frequency fluctuation, the same unit as signals \n    tdi.measurements[channel][:drop_points] *= 0. \n    tdi.measurements[channel][-drop_points:] *= 0. "
+    },
+    {
+      "index": 11,
+      "type": "markdown",
+      "source": "### Visualize in time domain "
+    },
+    {
+      "index": 12,
+      "type": "code",
+      "source": "for channel in channel_names: \n    plt.plot(data_times/DAY, tdi.measurements[channel], label=channel)\nplt.xlabel(\"Time (day)\")\nplt.ylabel(\"TDI\")\nplt.legend(loc=\"upper right\")"
+    },
+    {
+      "index": 13,
+      "type": "markdown",
+      "source": "### Visualize in frequency domain \nA more accurate theoretical SGWB spectrum after TDI combination can be found in a separate notebook. "
+    },
+    {
+      "index": 14,
+      "type": "code",
+      "source": "psd_kwargs = dict(\n    fsample=1./dt, \n    nbin=40, \n    window_type=\"hann\", \n)\n\nfor channel in channel_names:\n    f, xf = PSD_window(\n        data_array=tdi.measurements[channel], \n        **psd_kwargs, \n    )\n    plt.loglog(f, np.sqrt(xf), label=channel)\n\n# average X2 response function in the equal-arm, long-wavelength limits, a good approximation for f < 50mHz\nplot_freqs = np.logspace(-5, -1, 1000)\nplot_u = TWOPI * plot_freqs * L_nominal / C \nResFunction = 96. / 5. * plot_u ** 2 * np.sin(plot_u) ** 2 * np.sin(2. * plot_u) ** 2 * np.cos(plot_u / 2.) ** 2 \nplt.loglog(plot_freqs, np.sqrt(ResFunction * S_SGWB(plot_freqs)), linestyle=\"--\", color='k', label=\"theoretical ASD (low-f approximation)\")\n\nplt.xlabel(\"Frequency (Hz)\")\nplt.ylabel(\"ASD \" + r\"${\\rm (1/\\sqrt{Hz})}$\")\nplt.legend(loc=\"lower center\")\nplt.xlim(1e-5, 0.1)"
+    },
+    {
+      "index": 15,
+      "type": "markdown",
+      "source": "### Output"
+    },
+    {
+      "index": 16,
+      "type": "code",
+      "source": "out_dict = {\n    \"time\": data_times, \n    \"XYZ\": np.array([tdi.measurements[\"X2\"], tdi.measurements[\"Y2\"], tdi.measurements[\"Z2\"]]), \n    \"parameters\": {\n        \"omega0\": OMEGA0_SGWB, \n        \"n\": N_SGWB, \n    },\n}\n\nwith open(\"../../ComponentData/TDCII2.8/sgwb_data.pkl\", \"wb\") as out_file: \n    pickle.dump(out_dict, out_file)"
+    },
+    {
+      "index": 17,
+      "type": "code",
+      "source": ""
+    },
+    {
+      "index": 18,
+      "type": "code",
+      "source": ""
+    }
+  ],
+  "license": "Original TDCII_Training_Sets GPL-3.0 LICENSE retained alongside source excerpts; these are not relicensed by the root MIT license."
+}

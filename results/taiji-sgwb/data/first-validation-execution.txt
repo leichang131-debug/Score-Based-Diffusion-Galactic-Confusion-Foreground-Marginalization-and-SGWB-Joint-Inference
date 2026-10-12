@@ -1,0 +1,12 @@
+SCANNED data 40 datasets
+SCANNED orbit 10 datasets
+Traceback (most recent call last):
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-taiji-sgwb-data.py", line 222, in <module>
+    main()
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-taiji-sgwb-data.py", line 159, in main
+    report["checks"]["noise_truth_inside_original_priors"] = all(.75*3e-15 <= v <= 1.25*3e-15 for v in acc.values()) and all(.75*8e-12 <= v <= 1.25*8e-12 for v in oms.values())
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-taiji-sgwb-data.py", line 159, in <genexpr>
+    report["checks"]["noise_truth_inside_original_priors"] = all(.75*3e-15 <= v <= 1.25*3e-15 for v in acc.values()) and all(.75*8e-12 <= v <= 1.25*8e-12 for v in oms.values())
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<=' not supported between instances of 'float' and 'list'

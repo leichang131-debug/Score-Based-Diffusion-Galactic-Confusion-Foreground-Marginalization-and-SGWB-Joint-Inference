@@ -1,0 +1,134 @@
+{
+  "preserved_prefix_bytes": 83030016,
+  "workers": 4,
+  "range_url": "https://zenodo.org/records/17538642/files/TDCII2.8.h5?download=1",
+  "ranges": [
+    {
+      "start": 83030016,
+      "end": 116584447,
+      "bytes": 33554432,
+      "sha256": "ea7520356818f519095125fce0f26a04c0bf9c53f05d5a8014e0e06ed0485448",
+      "verified_content_range": true
+    },
+    {
+      "start": 116584448,
+      "end": 150138879,
+      "bytes": 33554432,
+      "sha256": "19b8a435fdb08ac7cab9169ba1cdcd70f93065e797c6c3e3a2c59cc22cbb4435",
+      "verified_content_range": true
+    },
+    {
+      "start": 150138880,
+      "end": 183693311,
+      "bytes": 33554432,
+      "sha256": "3a31dded8ee765edf0a13815ae402a345e60edea04992373301f7e77a90357b2",
+      "verified_content_range": true
+    },
+    {
+      "start": 183693312,
+      "end": 217247743,
+      "bytes": 33554432,
+      "sha256": "3a48f9d199a9259eedd0fd69b7c5565101030d89e346af9ca2ce626790cd9c2d",
+      "verified_content_range": true
+    },
+    {
+      "start": 217247744,
+      "end": 250802175,
+      "bytes": 33554432,
+      "sha256": "90e5e9b99f0913ceb2f96de05e9aa0d20654c90d23e622cff826d5f0f70e8e9e",
+      "verified_content_range": true
+    },
+    {
+      "start": 250802176,
+      "end": 284356607,
+      "bytes": 33554432,
+      "sha256": "41234370b000493241546ffcdbcfbc40a60eb59f412b192ec765318cae1ebd42",
+      "verified_content_range": true
+    },
+    {
+      "start": 284356608,
+      "end": 317911039,
+      "bytes": 33554432,
+      "sha256": "02aa6bdb6e5b8bd277889861293bce0c4923b26fd3e708cc287d97f010d850b2",
+      "verified_content_range": true
+    },
+    {
+      "start": 317911040,
+      "end": 351465471,
+      "bytes": 33554432,
+      "sha256": "a62bee5415d3fed657633d2d91c287ae73b8771ccddb6a170b91e9a68735445a",
+      "verified_content_range": true
+    },
+    {
+      "start": 351465472,
+      "end": 385019903,
+      "bytes": 33554432,
+      "sha256": "9601e86bb48efea5befefb4c2f7c23f7587b147defffc65da454fce0709b0639",
+      "verified_content_range": true
+    },
+    {
+      "start": 385019904,
+      "end": 418574335,
+      "bytes": 33554432,
+      "sha256": "09d4b44d7a4484e500b2f2b4cb67fc2a68dc524662ecdd1d4fcd2729f9682e95",
+      "verified_content_range": true
+    },
+    {
+      "start": 418574336,
+      "end": 452128767,
+      "bytes": 33554432,
+      "sha256": "9ba14dc09371aef7f6f31a79a543e13a2a10e1a93e442d1ae2688d0c8fd6d54e",
+      "verified_content_range": true
+    },
+    {
+      "start": 452128768,
+      "end": 485683199,
+      "bytes": 33554432,
+      "sha256": "04d411a663759912dc88038701f729d6f6bc25ad5685756efb783b0b0b86ccce",
+      "verified_content_range": true
+    },
+    {
+      "start": 485683200,
+      "end": 519237631,
+      "bytes": 33554432,
+      "sha256": "5b063f4b6277c173b35bc936097e2e7f0c44bfc82abc830bdbfc6a659ea53232",
+      "verified_content_range": true
+    },
+    {
+      "start": 519237632,
+      "end": 552792063,
+      "bytes": 33554432,
+      "sha256": "f1d8922a99f9d23bcf7baffc0be2cee22f69b2233685ea85feebc762a3c5e5d0",
+      "verified_content_range": true
+    },
+    {
+      "start": 552792064,
+      "end": 586346495,
+      "bytes": 33554432,
+      "sha256": "7e9123502c494103d79651ae7cbe4d860297473a9b9792a405ae16126dd80821",
+      "verified_content_range": true
+    },
+    {
+      "start": 586346496,
+      "end": 619900927,
+      "bytes": 33554432,
+      "sha256": "1e4fdb33fea6aee69f9f296cebeefd7e64f5f285d5ae06a09a0d1e88f675d6ac",
+      "verified_content_range": true
+    },
+    {
+      "start": 619900928,
+      "end": 653455359,
+      "bytes": 33554432,
+      "sha256": "0408c021efec1f419aa6eab29d79ebb05d7c6ed6f7842a55153e3c88170ae474",
+      "verified_content_range": true
+    },
+    {
+      "start": 653455360,
+      "end": 658310879,
+      "bytes": 4855520,
+      "sha256": "31c0cae08e1951f229d24f04a25b54a003bb2bb1525666f1118cca12a52dc295",
+      "verified_content_range": true
+    }
+  ],
+  "note": "Final assembled official MD5 is checked separately before accepting the file."
+}

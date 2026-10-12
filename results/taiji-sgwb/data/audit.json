@@ -1,0 +1,19 @@
+{
+  "scope": "Input/evidence integrity only; does not run full preprocessing, response grids or parameter inference.",
+  "checks": {
+    "all_validation_checks_pass": true,
+    "successful_execution": true,
+    "official_filename_preserved": true,
+    "original_orbit_filename_preserved": true,
+    "both_original_read_interfaces_pass": true,
+    "official_md5_and_orbit_git_blob_verified": true,
+    "data_size_and_hashes_reverified": true,
+    "data_ignored_by_git": true,
+    "orbit_size_and_hashes_reverified": true,
+    "orbit_ignored_by_git": true,
+    "all_runtime_aliases_resolve": true,
+    "runtime_aliases_ignored": true,
+    "original_TaijiSGWB_files_unchanged": true
+  },
+  "all_checks_pass": true
+}

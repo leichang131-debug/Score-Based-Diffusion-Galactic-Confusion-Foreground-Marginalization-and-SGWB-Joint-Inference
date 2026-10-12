@@ -1,0 +1,795 @@
+{
+  "data": {
+    "data/XYZ": {
+      "shape": [
+        3,
+        6311629
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 18934887,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -6.49313291578362e-20,
+          "maximum": 6.742319983560188e-20
+        }
+      }
+    },
+    "data/foreground": {
+      "shape": [
+        3,
+        6311629
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 18934887,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -1.0236261232564242e-21,
+          "maximum": 9.577916666650932e-22
+        }
+      }
+    },
+    "data/noise": {
+      "shape": [
+        3,
+        6311629
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 18934887,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -6.504783714034936e-20,
+          "maximum": 6.706683698179458e-20
+        }
+      }
+    },
+    "data/parameters/noise/ACC_noise_amplitudes/12": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 3.1314397410270625e-15,
+          "maximum": 3.1314397410270625e-15
+        }
+      }
+    },
+    "data/parameters/noise/ACC_noise_amplitudes/13": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 2.9623407294826266e-15,
+          "maximum": 2.9623407294826266e-15
+        }
+      }
+    },
+    "data/parameters/noise/ACC_noise_amplitudes/21": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 3.429310029752728e-15,
+          "maximum": 3.429310029752728e-15
+        }
+      }
+    },
+    "data/parameters/noise/ACC_noise_amplitudes/23": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 3.367259268208045e-15,
+          "maximum": 3.367259268208045e-15
+        }
+      }
+    },
+    "data/parameters/noise/ACC_noise_amplitudes/31": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 3.2650228449374037e-15,
+          "maximum": 3.2650228449374037e-15
+        }
+      }
+    },
+    "data/parameters/noise/ACC_noise_amplitudes/32": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 2.9668354581461654e-15,
+          "maximum": 2.9668354581461654e-15
+        }
+      }
+    },
+    "data/parameters/noise/OMS_noise_amplitudes/12": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 7.731077380570489e-12,
+          "maximum": 7.731077380570489e-12
+        }
+      }
+    },
+    "data/parameters/noise/OMS_noise_amplitudes/13": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 6.560744006423656e-12,
+          "maximum": 6.560744006423656e-12
+        }
+      }
+    },
+    "data/parameters/noise/OMS_noise_amplitudes/21": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 7.678924472883663e-12,
+          "maximum": 7.678924472883663e-12
+        }
+      }
+    },
+    "data/parameters/noise/OMS_noise_amplitudes/23": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 8.64607732297196e-12,
+          "maximum": 8.64607732297196e-12
+        }
+      }
+    },
+    "data/parameters/noise/OMS_noise_amplitudes/31": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 8.597125486567089e-12,
+          "maximum": 8.597125486567089e-12
+        }
+      }
+    },
+    "data/parameters/noise/OMS_noise_amplitudes/32": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 6.418843634624394e-12,
+          "maximum": 6.418843634624394e-12
+        }
+      }
+    },
+    "data/parameters/sgwb/n": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 0.6666666666666666,
+          "maximum": 0.6666666666666666
+        }
+      }
+    },
+    "data/parameters/sgwb/omega0": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 1e-12,
+          "maximum": 1e-12
+        }
+      }
+    },
+    "data/sgwb": {
+      "shape": [
+        3,
+        6311629
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 18934887,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -1.4606416389007442e-21,
+          "maximum": 1.4151142217034602e-21
+        }
+      }
+    },
+    "data/time": {
+      "shape": [
+        6311629
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 6311629,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 0.0,
+          "maximum": 31558140.0
+        }
+      }
+    },
+    "spectra/SGWB_PSD/A": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 1.185241673462637e-52,
+          "maximum": 7.543032950351115e-42
+        }
+      }
+    },
+    "spectra/SGWB_PSD/E": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 1.1836401963069765e-52,
+          "maximum": 7.515286240296749e-42
+        }
+      }
+    },
+    "spectra/SGWB_PSD/T": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 2.605514459505891e-57,
+          "maximum": 7.058193623360226e-43
+        }
+      }
+    },
+    "spectra/SGWB_PSD/X": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 7.890360661116259e-53,
+          "maximum": 5.0194384964470116e-42
+        }
+      }
+    },
+    "spectra/SGWB_PSD/Y": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 7.910413181621193e-53,
+          "maximum": 5.017094043427684e-42
+        }
+      }
+    },
+    "spectra/SGWB_PSD/Z": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 7.888582792374034e-53,
+          "maximum": 5.023961379333244e-42
+        }
+      }
+    },
+    "spectra/foreground_PSD/A": {
+      "shape": [
+        31558
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 31558,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 9.049042408446486e-69,
+          "maximum": 5.808852965040032e-41
+        }
+      }
+    },
+    "spectra/foreground_PSD/E": {
+      "shape": [
+        31558
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 31558,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 7.974304064350193e-69,
+          "maximum": 5.251875472690006e-41
+        }
+      }
+    },
+    "spectra/foreground_PSD/T": {
+      "shape": [
+        31558
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 31558,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 6.945561935219792e-71,
+          "maximum": 9.387211413480384e-46
+        }
+      }
+    },
+    "spectra/foreground_PSD/X": {
+      "shape": [
+        31558
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 31558,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 5.266755574125989e-69,
+          "maximum": 3.4502217204925673e-41
+        }
+      }
+    },
+    "spectra/foreground_PSD/Y": {
+      "shape": [
+        31558
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 31558,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 5.416599591682716e-69,
+          "maximum": 3.5079071057118853e-41
+        }
+      }
+    },
+    "spectra/foreground_PSD/Z": {
+      "shape": [
+        31558
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 31558,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 6.414434340692825e-69,
+          "maximum": 3.9607170769440684e-41
+        }
+      }
+    },
+    "spectra/foreground_PSD/frequency": {
+      "shape": [
+        31558
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 31558,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 3.168768616515622e-06,
+          "maximum": 0.1
+        }
+      }
+    },
+    "spectra/frequency": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 1e-05,
+          "maximum": 0.1
+        }
+      }
+    },
+    "spectra/noise_PSD/A": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 2.451495791743595e-46,
+          "maximum": 9.991352406235622e-39
+        }
+      }
+    },
+    "spectra/noise_PSD/E": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 2.1188428553832356e-46,
+          "maximum": 1.0057501877800814e-38
+        }
+      }
+    },
+    "spectra/noise_PSD/T": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 2.381597844646917e-49,
+          "maximum": 7.142271457143026e-39
+        }
+      }
+    },
+    "spectra/noise_PSD/X": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 8.311754905567863e-47,
+          "maximum": 7.686064774214274e-39
+        }
+      }
+    },
+    "spectra/noise_PSD/Y": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 1.5837741640406603e-46,
+          "maximum": 7.59942392714524e-39
+        }
+      }
+    },
+    "spectra/noise_PSD/Z": {
+      "shape": [
+        1000
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 1000,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 4.053031272829829e-46,
+          "maximum": 7.559019430680633e-39
+        }
+      }
+    },
+    "spectra/transfer_functions": {
+      "shape": [
+        1
+      ],
+      "dtype": "object",
+      "numeric_fields": {},
+      "value": "[b'one_year_avg_transfer_function_data_unequal']"
+    }
+  },
+  "orbit": {
+    "tcb/l_12": {
+      "shape": [
+        374
+      ],
+      "dtype": "[('tt', '<f8')]",
+      "numeric_fields": {
+        "tt": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 9.94182241839401,
+          "maximum": 10.04012419926049
+        }
+      }
+    },
+    "tcb/l_13": {
+      "shape": [
+        374
+      ],
+      "dtype": "[('tt', '<f8')]",
+      "numeric_fields": {
+        "tt": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 9.891241945208765,
+          "maximum": 10.013576046246666
+        }
+      }
+    },
+    "tcb/l_21": {
+      "shape": [
+        374
+      ],
+      "dtype": "[('tt', '<f8')]",
+      "numeric_fields": {
+        "tt": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 9.943035102788722,
+          "maximum": 10.037394684571423
+        }
+      }
+    },
+    "tcb/l_23": {
+      "shape": [
+        374
+      ],
+      "dtype": "[('tt', '<f8')]",
+      "numeric_fields": {
+        "tt": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 9.91801154967312,
+          "maximum": 10.008138135120547
+        }
+      }
+    },
+    "tcb/l_31": {
+      "shape": [
+        374
+      ],
+      "dtype": "[('tt', '<f8')]",
+      "numeric_fields": {
+        "tt": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 9.889227852381248,
+          "maximum": 10.015597863826255
+        }
+      }
+    },
+    "tcb/l_32": {
+      "shape": [
+        374
+      ],
+      "dtype": "[('tt', '<f8')]",
+      "numeric_fields": {
+        "tt": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 9.916765589488014,
+          "maximum": 10.010313677641534
+        }
+      }
+    },
+    "tcb/sc_1": {
+      "shape": [
+        374
+      ],
+      "dtype": "[('x', '<f8'), ('y', '<f8'), ('z', '<f8')]",
+      "numeric_fields": {
+        "x": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -148184484507.25128,
+          "maximum": 150542458586.82443
+        },
+        "y": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -147879409892.55847,
+          "maximum": 150965048672.32422
+        },
+        "z": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -1492246768.193314,
+          "maximum": 1465830920.3196144
+        }
+      }
+    },
+    "tcb/sc_2": {
+      "shape": [
+        374
+      ],
+      "dtype": "[('x', '<f8'), ('y', '<f8'), ('z', '<f8')]",
+      "numeric_fields": {
+        "x": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -149145368129.67734,
+          "maximum": 149577274498.48538
+        },
+        "y": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -149030458234.42557,
+          "maximum": 149840779820.20312
+        },
+        "z": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -1519023732.9133792,
+          "maximum": 1489102344.042965
+        }
+      }
+    },
+    "tcb/sc_3": {
+      "shape": [
+        374
+      ],
+      "dtype": "[('x', '<f8'), ('y', '<f8'), ('z', '<f8')]",
+      "numeric_fields": {
+        "x": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -147669465305.591,
+          "maximum": 151051609074.12378
+        },
+        "y": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -149282584610.01953,
+          "maximum": 149547171806.95703
+        },
+        "z": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": -1519930791.7854018,
+          "maximum": 1488859195.7738872
+        }
+      }
+    },
+    "tcb/t": {
+      "shape": [
+        374
+      ],
+      "dtype": "float64",
+      "numeric_fields": {
+        "values": {
+          "count": 374,
+          "nan": 0,
+          "inf": 0,
+          "minimum": 0.0,
+          "maximum": 32227200.0
+        }
+      }
+    }
+  }
+}

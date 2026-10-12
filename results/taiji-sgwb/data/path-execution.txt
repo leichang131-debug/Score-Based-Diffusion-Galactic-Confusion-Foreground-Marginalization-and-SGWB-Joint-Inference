@@ -1,0 +1,20 @@
+{
+  "scope": "Ignored runtime path aliases only; original input names and upstream programs unchanged.",
+  "original_project_root": "/home/yang/WorkSpace/taiji_data_challenge_sgwb",
+  "local_project_root": "runs/taiji-sgwb/workspace",
+  "links": [
+    {
+      "link": "runs/taiji-sgwb/workspace/data/TDCII2-8.h5",
+      "target": "data/raw/taiji-sgwb/TDCII2.8.h5",
+      "relative_symlink": "../../../../data/raw/taiji-sgwb/TDCII2.8.h5",
+      "verified": true
+    },
+    {
+      "link": "runs/taiji-sgwb/workspace/data/MicroSateOrbitEclipticTCB/MicroSateOrbit.hdf5",
+      "target": "data/raw/taiji-sgwb/MicroSateOrbitEclipticTCB/MicroSateOrbit.hdf5",
+      "relative_symlink": "../../../../../data/raw/taiji-sgwb/MicroSateOrbitEclipticTCB/MicroSateOrbit.hdf5",
+      "verified": true
+    }
+  ],
+  "note": "The original PROJ_DIR is not changed; a future launcher must explicitly supply the local project root."
+}

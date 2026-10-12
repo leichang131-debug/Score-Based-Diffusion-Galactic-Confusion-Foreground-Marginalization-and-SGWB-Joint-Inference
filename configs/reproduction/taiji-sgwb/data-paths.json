@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "dataset": "TDC II 2.8 realistic-orbit training set",
+  "zenodo_record_id": "17538642",
+  "official_data_path": "data/raw/taiji-sgwb/TDCII2.8.h5",
+  "official_orbit_path": "data/raw/taiji-sgwb/MicroSateOrbitEclipticTCB/MicroSateOrbit.hdf5",
+  "runtime_project_root": "runs/taiji-sgwb/workspace",
+  "original_demo_relative_data_path": "data/TDCII2-8.h5",
+  "original_demo_relative_orbit_path": "data/MicroSateOrbitEclipticTCB/MicroSateOrbit.hdf5",
+  "data_filename_adaptation": "Relative symlink only; original official filename retained.",
+  "upstream_demo_modified": false
+}

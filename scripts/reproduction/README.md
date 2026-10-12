@@ -107,3 +107,13 @@ See [Stage 1 source integration](../../docs/reproduction/taiji-sgwb/source-integ
 - `audit-taiji-sgwb-environment.py`: source/evidence audit and manifest export without re-running sampling.
 
 All 25 Stage 2 checks passed locally. These scripts do not run either complete original demo or establish physical posterior accuracy. See [Stage 2 report](../../docs/reproduction/taiji-sgwb/environment-setup.md).
+
+## TaijiSGWB official 2.8 inputs
+
+- `download-taiji-sgwb-data.py`: preserve official filenames, download/check Zenodo 2.8 data and pinned official orbit, verify MD5/Git blob and local SHA-256; four bounded verified ranges for resumable downloads.
+- `prepare-taiji-sgwb-paths.py`: ignored symlinks for original demo-relative filenames; upstream PROJ_DIR remains unchanged.
+- `check-taiji-sgwb-data.py`: complete HDF5 finite-value scan, components/injections, exact original read/AET/trim code and all-week orbit coverage.
+- `run-taiji-sgwb-data-check.py`: record actual commands, logs and timings; `--download` optionally retrieves/rechecks inputs.
+- `audit-taiji-sgwb-data.py`: rehash raw inputs, verify aliases and original source, export evidence manifest.
+
+[Stage 3 report](../../docs/reproduction/taiji-sgwb/data-preparation.md). These commands do not execute a full SGWB inference demo.

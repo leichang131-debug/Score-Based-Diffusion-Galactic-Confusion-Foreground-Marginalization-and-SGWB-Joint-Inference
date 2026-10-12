@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "configs/reproduction/taiji-sgwb/data-paths.json",
+      "bytes": 603,
+      "sha256": "9ffb1c8a7c133d85090b342e9ef6c52f8708e14d117685c10ce73a8df6f866c1"
+    },
+    {
+      "path": "docs/reproduction/taiji-sgwb/data-preparation.md",
+      "bytes": 8812,
+      "sha256": "ca6afc2771ba245d57c35f5eccf44a277fd447622181343861b50b76b10836db"
+    },
+    {
+      "path": "results/taiji-sgwb/data/README.md",
+      "bytes": 1494,
+      "sha256": "cf35abef3d552e6c9549fc931f9636d072bd25720a19ff7c854ff92ede45a0ae"
+    },
+    {
+      "path": "results/taiji-sgwb/data/analysis-grid.npz",
+      "bytes": 28808,
+      "sha256": "8e9e0fc84ee16a5e648ccf036476da99708c15e45528e10219bf39d6e59416f0"
+    },
+    {
+      "path": "results/taiji-sgwb/data/audit.json",
+      "bytes": 713,
+      "sha256": "46292a3be22743580d97fd5ad8c3237423886e2ec1b8aee2b2505fae0f5d6ba6"
+    },
+    {
+      "path": "results/taiji-sgwb/data/download-execution.txt",
+      "bytes": 4787,
+      "sha256": "c3e06a4c347553ff7d84137d490c8fe6956c10572015f9e15aea903314a46442"
+    },
+    {
+      "path": "results/taiji-sgwb/data/download-ranges.json",
+      "bytes": 4009,
+      "sha256": "83a527cfe5c421b5847ae9eab3e0dbbe1e725ce78bc3d43e65e381cf13363e9c"
+    },
+    {
+      "path": "results/taiji-sgwb/data/download.json",
+      "bytes": 1706,
+      "sha256": "c8b02c42d896dc4cff836dd56572996dc2b1fb0f9cc102131f36a156922d45af"
+    },
+    {
+      "path": "results/taiji-sgwb/data/first-ranged-download-execution.txt",
+      "bytes": 5765,
+      "sha256": "8817472f98018b37ecf3d5f5eca0ad4151e066198db070da77ea3b03f2c27b7a"
+    },
+    {
+      "path": "results/taiji-sgwb/data/first-validation-execution.txt",
+      "bytes": 1299,
+      "sha256": "4a3099383a19aa4faa33e1411622f8ac4b183c000f21536b1384802043f25af7"
+    },
+    {
+      "path": "results/taiji-sgwb/data/first-validation-run.json",
+      "bytes": 728,
+      "sha256": "8107b623076f1e78843b776bfa7abf484acea02bcaeacf9bcb4170c8c8b04936"
+    },
+    {
+      "path": "results/taiji-sgwb/data/hdf5-inventory.json",
+      "bytes": 16909,
+      "sha256": "05b25452eabdfda795bd6ecde0c34e500841ff77d751958361e66591620ed2b8"
+    },
+    {
+      "path": "results/taiji-sgwb/data/initial-download-execution.txt",
+      "bytes": 18863,
+      "sha256": "a80377d5a91dc4eecb781c9e37ed7564439eb619c29c930fab4da3a8b5a94787"
+    },
+    {
+      "path": "results/taiji-sgwb/data/input-preview.npz",
+      "bytes": 7287,
+      "sha256": "5ec0ff0e5bec7178a6de595d222025ab5f49abac3cf4d1b0838ec956499e22e5"
+    },
+    {
+      "path": "results/taiji-sgwb/data/official-reference/Combination-source.json",
+      "bytes": 10558,
+      "sha256": "5b5f8bd9bfb09ecbd1ee4b273037795c16d45f429666fbcb8b5834a29f8e5081"
+    },
+    {
+      "path": "results/taiji-sgwb/data/official-reference/LICENSE",
+      "bytes": 1067,
+      "sha256": "55310d8e79381243843f08252f46def0858427e606d41fece84a28c74e0e3180"
+    },
+    {
+      "path": "results/taiji-sgwb/data/official-reference/Noise-source.json",
+      "bytes": 6534,
+      "sha256": "d147f0277e48902de14fbe04e581d5478c2510123641a1e19398732541647559"
+    },
+    {
+      "path": "results/taiji-sgwb/data/official-reference/SGWB-source.json",
+      "bytes": 8142,
+      "sha256": "34ec4ad7182a9d8a91e9d000aa8c0acb9751274f2968e7933a9e59f79cbefed4"
+    },
+    {
+      "path": "results/taiji-sgwb/data/path-execution.txt",
+      "bytes": 914,
+      "sha256": "3e0a028d575a0ac0e023986ca81b8c84717397f03d6302ddb5b867b0c1662359"
+    },
+    {
+      "path": "results/taiji-sgwb/data/path-map.json",
+      "bytes": 914,
+      "sha256": "3e0a028d575a0ac0e023986ca81b8c84717397f03d6302ddb5b867b0c1662359"
+    },
+    {
+      "path": "results/taiji-sgwb/data/run.json",
+      "bytes": 728,
+      "sha256": "4493e46ddd75538bd1c889818665a48025169a9ca2373cceefc08fc3b9022c48"
+    },
+    {
+      "path": "results/taiji-sgwb/data/second-validation-execution.txt",
+      "bytes": 2444,
+      "sha256": "6f0c768633a7785f61808a866764aba25a3a2fa3f9a7e0960156fd34c7ac3b4e"
+    },
+    {
+      "path": "results/taiji-sgwb/data/second-validation-run.json",
+      "bytes": 729,
+      "sha256": "4e55a6d0a749ff8e62fa0a8dd6793a644108393cfea6f2f66ba2283554b9207e"
+    },
+    {
+      "path": "results/taiji-sgwb/data/validation-execution.txt",
+      "bytes": 800,
+      "sha256": "f8ec8db92fbb44e75da3b55c0793580cbec760ffaf2e6173b6f71a229f9ab508"
+    },
+    {
+      "path": "results/taiji-sgwb/data/validation.json",
+      "bytes": 11431,
+      "sha256": "53178b6ee065bd46fce4d545940fef6bc32b1b05062f918e10a160b8fa794bc2"
+    },
+    {
+      "path": "results/taiji-sgwb/data/zenodo-latest.json",
+      "bytes": 9470,
+      "sha256": "d2106b0d9a37354893e9de70461f02c2e96c378f4bab64dc27f352f0506907f2"
+    },
+    {
+      "path": "results/taiji-sgwb/data/zenodo-record.json",
+      "bytes": 9470,
+      "sha256": "d2106b0d9a37354893e9de70461f02c2e96c378f4bab64dc27f352f0506907f2"
+    },
+    {
+      "path": "scripts/reproduction/audit-taiji-sgwb-data.py",
+      "bytes": 3712,
+      "sha256": "6fc907c80613e32f1a3604f19111e94e748b0e6626f9680a6629e48ef96d49e0"
+    },
+    {
+      "path": "scripts/reproduction/check-taiji-sgwb-data.py",
+      "bytes": 12918,
+      "sha256": "692c34e88feb1db34955c9206bff0d9329674ba9735574a608b5933e248b594b"
+    },
+    {
+      "path": "scripts/reproduction/download-taiji-sgwb-data.py",
+      "bytes": 6812,
+      "sha256": "11874b2fdbf7ee4c5e4640313803ca30b56a16aeaa141b02acdf909e6e1d4798"
+    },
+    {
+      "path": "scripts/reproduction/prepare-taiji-sgwb-paths.py",
+      "bytes": 1845,
+      "sha256": "399558cc2a2d52bde58b32d129cbe0616fd363fb7f45028b1e2556163a3ebea0"
+    },
+    {
+      "path": "scripts/reproduction/run-taiji-sgwb-data-check.py",
+      "bytes": 2027,
+      "sha256": "605c6e5b05fc0ec7635a024222571e54a10861630ef67e96ff7fe551d42fb441"
+    }
+  ]
+}

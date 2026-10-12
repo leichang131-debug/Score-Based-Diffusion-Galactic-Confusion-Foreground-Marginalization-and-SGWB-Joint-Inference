@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-12T14:11:42.054330+00:00",
+  "scope": "Complete official 2.8 input and orbit validation; original read/AET/trim interfaces only. No response-grid construction or inference.",
+  "checks": {
+    "data_sha256_matches_download": true,
+    "data_complete_numeric_scan_finite": true,
+    "orbit_sha256_matches_download": true,
+    "orbit_complete_numeric_scan_finite": true,
+    "all_original_and_component_fields_exist": true,
+    "time_strictly_increasing_uniform": true,
+    "time_origin_matches_original_segment_formula": true,
+    "all_component_shapes_match_XYZ": true,
+    "sampling_matches_official_generation": true,
+    "total_component_identity": true,
+    "residual_component_identity": true,
+    "powerlaw_injection_matches_baseline": true,
+    "six_ACC_and_six_OMS_injections": true,
+    "noise_truth_inside_original_priors": true,
+    "original_read_template_nofg_28t.py": true,
+    "original_read_rj_nofg_28t.py": true,
+    "orbit_time_strictly_increasing": true,
+    "orbit_covers_full_data_time": true,
+    "orbit_covers_trimmed_data_time": true,
+    "orbit_covers_all_original_segment_centers": true,
+    "original_orbit_interpolation_finite": true,
+    "positive_nonempty_analysis_grid": true,
+    "clean_taiji-sgwb": true,
+    "clean_triangle-simulator": true
+  },
+  "issues": [],
+  "component_identities": {
+    "total_sum_squared_error": 0.0,
+    "total_sum_squared_reference": 2.672062383786205e-33,
+    "residual_sum_squared_error": 7.414690507805405e-66,
+    "residual_sum_squared_reference": 2.6715913551149143e-33,
+    "total_max_abs_error": 0.0,
+    "residual_max_abs_error": 1.2037062152420224e-35,
+    "total_relative_L2_error": 0.0,
+    "residual_relative_L2_error": 5.2681908453650875e-17
+  },
+  "injected_parameters": {
+    "noise/ACC_noise_amplitudes/12": 3.1314397410270625e-15,
+    "noise/ACC_noise_amplitudes/13": 2.9623407294826266e-15,
+    "noise/ACC_noise_amplitudes/21": 3.429310029752728e-15,
+    "noise/ACC_noise_amplitudes/23": 3.367259268208045e-15,
+    "noise/ACC_noise_amplitudes/31": 3.2650228449374037e-15,
+    "noise/ACC_noise_amplitudes/32": 2.9668354581461654e-15,
+    "noise/OMS_noise_amplitudes/12": 7.731077380570489e-12,
+    "noise/OMS_noise_amplitudes/13": 6.560744006423656e-12,
+    "noise/OMS_noise_amplitudes/21": 7.678924472883663e-12,
+    "noise/OMS_noise_amplitudes/23": 8.64607732297196e-12,
+    "noise/OMS_noise_amplitudes/31": 8.597125486567089e-12,
+    "noise/OMS_noise_amplitudes/32": 6.418843634624394e-12,
+    "sgwb/n": 0.6666666666666666,
+    "sgwb/omega0": 1e-12
+  },
+  "time_axis": {
+    "samples": 6311629,
+    "first_seconds": 0.0,
+    "last_seconds": 31558140.0,
+    "dt_seconds": 5.0,
+    "sampling_Hz": 0.2,
+    "nyquist_Hz": 0.1
+  },
+  "original_read_interfaces": [
+    {
+      "source": "external/taiji-sgwb/demos/template_nofg_28t.py",
+      "sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
+      "executed_nodes": [
+        {
+          "line": 3,
+          "source": "import multiprocessing"
+        },
+        {
+          "line": 5,
+          "source": "import numpy as np"
+        },
+        {
+          "line": 6,
+          "source": "from scipy.signal import windows, ShortTimeFFT"
+        },
+        {
+          "line": 7,
+          "source": "import matplotlib.pyplot as plt"
+        },
+        {
+          "line": 8,
+          "source": "import logging"
+        },
+        {
+          "line": 9,
+          "source": "import h5py"
+        },
+        {
+          "line": 10,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 12,
+          "source": "import eryn.ensemble"
+        },
+        {
+          "line": 13,
+          "source": "import eryn.prior"
+        },
+        {
+          "line": 14,
+          "source": "import eryn.backends"
+        },
+        {
+          "line": 16,
+          "source": "from taijisgwb.detector.tdi import tdi_X2, aet_from_xyz, tdi_aet_from_tdi_x"
+        },
+        {
+          "line": 17,
+          "source": "from taijisgwb.detector.noise import TaijiNoisePSD"
+        },
+        {
+          "line": 18,
+          "source": "from taijisgwb import Interferometer"
+        },
+        {
+          "line": 19,
+          "source": "from taijisgwb.detector.orbit import InterpolationOrbit"
+        },
+        {
+          "line": 20,
+          "source": "from taijisgwb.waveform import calc_omega_powerlaw"
+        },
+        {
+          "line": 21,
+          "source": "from taijisgwb.utils import psd_from_omega"
+        },
+        {
+          "line": 49,
+          "source": "tdi_names = ['A', 'E', 'T']"
+        },
+        {
+          "line": 50,
+          "source": "ntdi = len(tdi_names)"
+        },
+        {
+          "line": 53,
+          "source": "with h5py.File(strain_file, \"r\") as f:\n    time = f[\"data\"][\"time\"][()]\n    strain_X2, strain_Y2, strain_Z2 = f[\"data\"][\"XYZ\"][()] - f[\"data\"][\"foreground\"][()]"
+        },
+        {
+          "line": 57,
+          "source": "dt = time[1] - time[0]"
+        },
+        {
+          "line": 58,
+          "source": "fsample = 1. / dt"
+        },
+        {
+          "line": 59,
+          "source": "ndrop_points = int(2000 * fsample)"
+        },
+        {
+          "line": 61,
+          "source": "time = time[ndrop_points:-ndrop_points]"
+        },
+        {
+          "line": 62,
+          "source": "strain_AET2 = aet_from_xyz(strain_X2, strain_Y2, strain_Z2)"
+        },
+        {
+          "line": 63,
+          "source": "strain_AET2 = [strain_AET2[i][ndrop_points:-ndrop_points]\n              for i in range(ntdi)]"
+        }
+      ],
+      "AET_shape": [
+        3,
+        6310829
+      ],
+      "all_AET_finite": true,
+      "full_demo_executed": false
+    },
+    {
+      "source": "external/taiji-sgwb/demos/rj_nofg_28t.py",
+      "sha256": "35ce56931ecda5fb350101a4fda43cee94dcce36772fdf8ab79ad8b9ad37f685",
+      "executed_nodes": [
+        {
+          "line": 3,
+          "source": "import multiprocessing"
+        },
+        {
+          "line": 5,
+          "source": "import numpy as np"
+        },
+        {
+          "line": 6,
+          "source": "from scipy.signal import windows, ShortTimeFFT"
+        },
+        {
+          "line": 7,
+          "source": "from scipy.interpolate import interp1d"
+        },
+        {
+          "line": 8,
+          "source": "import matplotlib.pyplot as plt"
+        },
+        {
+          "line": 9,
+          "source": "import logging"
+        },
+        {
+          "line": 10,
+          "source": "import h5py"
+        },
+        {
+          "line": 11,
+          "source": "from pathlib import Path"
+        },
+        {
+          "line": 13,
+          "source": "import eryn.ensemble"
+        },
+        {
+          "line": 14,
+          "source": "import eryn.state"
+        },
+        {
+          "line": 15,
+          "source": "import eryn.prior"
+        },
+        {
+          "line": 16,
+          "source": "import eryn.moves"
+        },
+        {
+          "line": 17,
+          "source": "import eryn.backends"
+        },
+        {
+          "line": 19,
+          "source": "from taijisgwb.detector.tdi import tdi_X2, aet_from_xyz, tdi_aet_from_tdi_x"
+        },
+        {
+          "line": 20,
+          "source": "from taijisgwb.detector.noise import TaijiNoisePSD"
+        },
+        {
+          "line": 21,
+          "source": "from taijisgwb import Interferometer"
+        },
+        {
+          "line": 22,
+          "source": "from taijisgwb.detector.orbit import InterpolationOrbit"
+        },
+        {
+          "line": 23,
+          "source": "from taijisgwb.waveform import calc_omega_powerlaw"
+        },
+        {
+          "line": 24,
+          "source": "from taijisgwb.utils import psd_from_omega"
+        },
+        {
+          "line": 52,
+          "source": "tdi_names = [\"A\", \"E\", \"T\"]"
+        },
+        {
+          "line": 53,
+          "source": "ntdi = len(tdi_names)"
+        },
+        {
+          "line": 56,
+          "source": "with h5py.File(strain_file, \"r\") as f:\n    time = f[\"data\"][\"time\"][()]\n    strain_X2, strain_Y2, strain_Z2 = f[\"data\"][\"XYZ\"][()] - f[\"data\"][\"foreground\"][()]"
+        },
+        {
+          "line": 60,
+          "source": "dt = time[1] - time[0]"
+        },
+        {
+          "line": 61,
+          "source": "fsample = 1. / dt"
+        },
+        {
+          "line": 62,
+          "source": "ndrop_points = int(2000 * fsample)"
+        },
+        {
+          "line": 64,
+          "source": "time = time[ndrop_points:-ndrop_points]"
+        },
+        {
+          "line": 65,
+          "source": "strain_AET2 = aet_from_xyz(strain_X2, strain_Y2, strain_Z2)"
+        },
+        {
+          "line": 66,
+          "source": "strain_AET2 = [strain_AET2[i][ndrop_points:-ndrop_points]\n              for i in range(ntdi)]"
+        }
+      ],
+      "AET_shape": [
+        3,
+        6310829
+      ],
+      "all_AET_finite": true,
+      "full_demo_executed": false
+    }
+  ],
+  "orbit": {
+    "first_seconds": 0.0,
+    "last_seconds": 32227200.0,
+    "samples": 374,
+    "all_centers": [
+      304400.0,
+      909200.0,
+      1514000.0,
+      2118800.0,
+      2723600.0,
+      3328400.0,
+      3933200.0,
+      4538000.0,
+      5142800.0,
+      5747600.0,
+      6352400.0,
+      6957200.0,
+      7562000.0,
+      8166800.0,
+      8771600.0,
+      9376400.0,
+      9981200.0,
+      10586000.0,
+      11190800.0,
+      11795600.0,
+      12400400.0,
+      13005200.0,
+      13610000.0,
+      14214800.0,
+      14819600.0,
+      15424400.0,
+      16029200.0,
+      16634000.0,
+      17238800.0,
+      17843600.0,
+      18448400.0,
+      19053200.0,
+      19658000.0,
+      20262800.0,
+      20867600.0,
+      21472400.0,
+      22077200.0,
+      22682000.0,
+      23286800.0,
+      23891600.0,
+      24496400.0,
+      25101200.0,
+      25706000.0,
+      26310800.0,
+      26915600.0,
+      27520400.0,
+      28125200.0,
+      28730000.0,
+      29334800.0,
+      29939600.0,
+      30544400.0,
+      31149200.0
+    ],
+    "light_travel_time_seconds": {
+      "12": {
+        "minimum": 9.941900713826868,
+        "maximum": 10.040092947055296
+      },
+      "13": {
+        "minimum": 9.891252444540708,
+        "maximum": 10.013521282379973
+      },
+      "23": {
+        "minimum": 9.918053156860697,
+        "maximum": 10.008002406342376
+      },
+      "21": {
+        "minimum": 9.943110348432493,
+        "maximum": 10.03734640650158
+      },
+      "31": {
+        "minimum": 9.889236365584795,
+        "maximum": 10.0155390620379
+      },
+      "32": {
+        "minimum": 9.916805295125407,
+        "maximum": 10.010313281023016
+      }
+    },
+    "structured_tt_fields_read_by_original_scipy_interface": true,
+    "no_extrapolation_at_original_analysis_times": true
+  },
+  "original_analysis_geometry": {
+    "trim_each_end_points": 400,
+    "trim_each_end_seconds": 2000,
+    "trimmed_samples": 6310829,
+    "weekly_samples": 120960,
+    "full_week_segments": 52,
+    "unused_tail_samples": 20909,
+    "original_frequency_bins_per_combined_bin": 6,
+    "actual_combined_bin_spacing_Hz": 9.92063492063492e-06,
+    "retained_frequency_bins": 4426,
+    "first_retained_frequency_Hz": 0.0001033399470899471,
+    "last_retained_frequency_Hz": 0.046998181216931216,
+    "geometry_only_no_STFT_executed": true
+  },
+  "all_checks_pass": true,
+  "elapsed_seconds": 1.3257830840011593
+}

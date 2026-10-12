@@ -1,0 +1,104 @@
+{
+  "url": "https://github.com/TriangleDataCenter/TDCII_Training_Sets/blob/6d5a0a273dafdc4212526be6c9b3189783be59bf/Scripts/TDCII2.8/Noise.ipynb",
+  "commit": "6d5a0a273dafdc4212526be6c9b3189783be59bf",
+  "original_notebook_sha256": "b29d673c5cc3c7c49ccff18959694589319bc75862fbcaba84ee0fdea64ced06",
+  "scope": "Source text only; upstream outputs excluded; notebook not executed locally.",
+  "cells": [
+    {
+      "index": 0,
+      "type": "code",
+      "source": "import os\n\nos.environ[\"OMP_NUM_THREADS\"] = \"1\"\nos.environ[\"OPENBLAS_NUM_THREADS\"] = \"1\"\nos.environ[\"MKL_NUM_THREADS\"] = \"1\"\nos.environ[\"NUMEXPR_NUM_THREADS\"] = \"1\"\nos.environ[\"VECLIB_MAXIMUM_THREADS\"] = \"1\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport pickle\n\nfrom Triangle.Constants import *\nfrom Triangle.FFTTools import *\nfrom Triangle.Data import *\nfrom Triangle.Orbit import *\nfrom Triangle.Offset import * \nfrom Triangle.Noise import *\nfrom Triangle.Interferometer import *\nfrom Triangle.TDI import *\n\nimport multiprocessing\nif __name__ == \"__main__\":\n    multiprocessing.set_start_method(\"fork\")\n\nncpu = multiprocessing.cpu_count()\npool = multiprocessing.Pool(processes=ncpu)\nprint(\"number of cpus =\", ncpu)\n\nnp.random.seed(114517) "
+    },
+    {
+      "index": 1,
+      "type": "markdown",
+      "source": "## Simulate instrumental noise "
+    },
+    {
+      "index": 2,
+      "type": "markdown",
+      "source": "### Data setting"
+    },
+    {
+      "index": 3,
+      "type": "code",
+      "source": "dt = 5. \nTobs = int(YEAR/dt)*dt \ndata_times = np.arange(int(Tobs/dt)) * dt "
+    },
+    {
+      "index": 4,
+      "type": "markdown",
+      "source": "### Model setting "
+    },
+    {
+      "index": 5,
+      "type": "code",
+      "source": "ORBIT_DIR = \"../../../Triangle-Simulator/OrbitData/MicroSateOrbitEclipticTCB\" # Path to TDC II orbit \norbit = Orbit(OrbitDir=ORBIT_DIR) \noffset = OffsetFunctions(laser_flag=False, clock_flag=False) # no clock and laser frequency drift \nnoise = InstrumentalPSDs(L=L_nominal) # nominal noise models \n\nsize = int(Tobs/dt)\ninterp_order = 31 "
+    },
+    {
+      "index": 6,
+      "type": "code",
+      "source": "# initialize interferometer class \nifo = Interferometers(\n    size=size,\n    fsample=1/dt,\n    time_frame=\"ProperTime\",\n    acc_noise=True, # ACC noise \n    ro_noise=True, # OMS noise \n    laser_noise=False,\n    clock_noise=False,\n    ob_noise=False,\n    bl_noise=False,\n    op_noise=False,\n    ranging_noise=False,\n    modulation_noise=False,\n    orbit_class=orbit,\n    offset_class=offset,\n    noise_class=noise,\n    gw_class=None,\n    fplan=None,\n    order=interp_order,\n    pool=pool,\n    clean_memory=True,\n)"
+    },
+    {
+      "index": 7,
+      "type": "markdown",
+      "source": "### Generate raw interferometer outputs "
+    },
+    {
+      "index": 8,
+      "type": "code",
+      "source": "# generate noise sources \nifo.SimulateBasicNoise()\n\n# modify noise amplitudes by up to +/- 20% \nacc_noise_amplitudes = dict() \noms_noise_amplitudes = dict() \nfor key in MOSA_labels:\n    acc_factor = np.random.uniform(0.8, 1.2)\n    acc_noise_amplitudes[key] = SACC_nominal * acc_factor \n    ifo.BasicNoise[\"acc_noise\"][key] *= acc_factor\n    \n    oms_factor = np.random.uniform(0.8, 1.2)\n    oms_noise_amplitudes[key] = SOMS_nominal * oms_factor \n    ifo.BasicNoise[\"ro_sci_c_noise\"][key] *= oms_factor\n    \n\n# finish interferometer simulation \nifo.SimulateRangeAndClock()\nifo.SimulateMeasurements()\n\n# output and synchronize to TCB\nm = ifo.OutputMeasurements(mode=\"decomposed\")\nm1 = TPStoTCB(m, orbit_class=orbit, order=interp_order, pool=pool)\nm1.keys()"
+    },
+    {
+      "index": 9,
+      "type": "markdown",
+      "source": "### Combine TDI variables "
+    },
+    {
+      "index": 10,
+      "type": "code",
+      "source": "# TDI combination\ntdi = TDI(measurements=m1, delays=m1[\"ltt\"], fsample=m1[\"fsample\"], order=31)\ntdi.CalculateXi(pool=pool)\ntdi.CalculateEta()\ntdi.FastMichelson(channel=\"XYZ\")\n\ntdi.measurements.keys()"
+    },
+    {
+      "index": 11,
+      "type": "code",
+      "source": "# set invalid points (caused by time delay) to 0 \ndrop_points = 200 \nchannel_names = [\"X2\", \"Y2\", \"Z2\"]\n\nfor channel in channel_names: \n    tdi.measurements[channel] *= 1. / F_LASER # convert to fractional frequency fluctuation, the same unit as signals \n    tdi.measurements[channel][:drop_points] *= 0. \n    tdi.measurements[channel][-drop_points:] *= 0. "
+    },
+    {
+      "index": 12,
+      "type": "markdown",
+      "source": "### Visualize in time domain "
+    },
+    {
+      "index": 13,
+      "type": "code",
+      "source": "for channel in channel_names: \n    plt.plot(data_times/DAY, tdi.measurements[channel], label=channel)\nplt.xlabel(\"Time (day)\")\nplt.ylabel(\"TDI\")\nplt.legend(loc=\"upper right\")"
+    },
+    {
+      "index": 14,
+      "type": "markdown",
+      "source": "### Visualize in frequency domain "
+    },
+    {
+      "index": 15,
+      "type": "code",
+      "source": "psd_kwargs = dict(\n    fsample=1./dt, \n    nbin=40, \n    window_type=\"hann\", \n)\n\nfor channel in channel_names:\n    f, xf = PSD_window(\n        data_array=tdi.measurements[channel], \n        **psd_kwargs, \n    )\n    plt.loglog(f, np.sqrt(xf), label=channel)\n\n\n# theoretical model for the equal-arm, equal-amplitude case is a good approximation \npsd_func = TDIPSDs()\nplot_freqs = np.logspace(-5, -1, 1000)\nplt.loglog(plot_freqs, np.sqrt(psd_func.PSD_X2(plot_freqs)), color=\"k\", linestyle=\"--\")\n\nplt.xlabel(\"Frequency (Hz)\")\nplt.ylabel(\"ASD \" + r\"${\\rm (1/\\sqrt{Hz})}$\")\nplt.legend(loc=\"upper left\")"
+    },
+    {
+      "index": 16,
+      "type": "markdown",
+      "source": "### Output "
+    },
+    {
+      "index": 17,
+      "type": "code",
+      "source": "out_dict = {\n    \"time\": data_times, \n    \"XYZ\": np.array([tdi.measurements[\"X2\"], tdi.measurements[\"Y2\"], tdi.measurements[\"Z2\"]]), \n    \"parameters\": {\n        \"ACC_noise_amplitudes\": acc_noise_amplitudes, \n        \"OMS_noise_amplitudes\": oms_noise_amplitudes, \n    },\n}\n\nwith open(\"../../ComponentData/TDCII2.8/noise_data.pkl\", \"wb\") as out_file: \n    pickle.dump(out_dict, out_file)"
+    },
+    {
+      "index": 18,
+      "type": "code",
+      "source": ""
+    }
+  ],
+  "license": "Original TDCII_Training_Sets GPL-3.0 LICENSE retained alongside source excerpts; these are not relicensed by the root MIT license."
+}

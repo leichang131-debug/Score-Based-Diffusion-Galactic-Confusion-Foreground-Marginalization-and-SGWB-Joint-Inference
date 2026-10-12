@@ -1,0 +1,83 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0
+100  9470  100  9470    0     0   1162      0  0:00:08  0:00:08 --:--:--  2237
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+100    99  100    99    0     0     55      0  0:00:01  0:00:01 --:--:--    55
+
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+100  9470  100  9470    0     0   2303      0  0:00:04  0:00:04 --:--:--  7136
+Downloaded range 183693312-217247743; 1/18 complete
+Downloaded range 150138880-183693311; 2/18 complete
+Downloaded range 116584448-150138879; 3/18 complete
+Downloaded range 83030016-116584447; 4/18 complete
+Downloaded range 217247744-250802175; 5/18 complete
+Downloaded range 250802176-284356607; 6/18 complete
+Downloaded range 284356608-317911039; 7/18 complete
+Downloaded range 317911040-351465471; 8/18 complete
+Downloaded range 351465472-385019903; 9/18 complete
+Downloaded range 385019904-418574335; 10/18 complete
+Downloaded range 418574336-452128767; 11/18 complete
+Downloaded range 452128768-485683199; 12/18 complete
+Downloaded range 485683200-519237631; 13/18 complete
+Downloaded range 519237632-552792063; 14/18 complete
+Downloaded range 552792064-586346495; 15/18 complete
+Downloaded range 653455360-658310879; 16/18 complete
+Downloaded range 619900928-653455359; 17/18 complete
+Downloaded range 586346496-619900927; 18/18 complete
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+ 10 54400   10  5503    0     0   3576      0  0:00:15  0:00:01  0:00:14  3575
+100 54400  100 54400    0     0  28236      0  0:00:01  0:00:01 --:--:-- 28230
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-12T14:10:22.801272+00:00",
+  "scope": "TDC II 2.8 realistic-orbit training set and matching published simulator orbit only.",
+  "official_link_index": "https://github.com/TriangleDataCenter/Taiji-Data-Challenge-II-Docs-Links",
+  "data": {
+    "path": "data/raw/taiji-sgwb/TDCII2.8.h5",
+    "official_filename": "TDCII2.8.h5",
+    "record_id": "17538642",
+    "download_url": "https://zenodo.org/api/records/17538642/files/TDCII2.8.h5/content",
+    "official_bytes": 658310880,
+    "official_checksum": "md5:a1975be6d933fae5fbf26da86a67049e",
+    "official_checksum_passed": true,
+    "existing_file_reused": false,
+    "bytes": 658310880,
+    "md5": "a1975be6d933fae5fbf26da86a67049e",
+    "sha256": "7bcf2d3df221667677628e96492c6bd9591419980c6d2a214914a0084bb5f7d5"
+  },
+  "orbit": {
+    "path": "data/raw/taiji-sgwb/MicroSateOrbitEclipticTCB/MicroSateOrbit.hdf5",
+    "official_filename": "MicroSateOrbit.hdf5",
+    "download_url": "https://raw.githubusercontent.com/TriangleDataCenter/Triangle-Simulator/ab796358e9a36c8987f6bb53a97230d603bfdfd5/OrbitData/MicroSateOrbitEclipticTCB/MicroSateOrbit.hdf5",
+    "source_commit": "ab796358e9a36c8987f6bb53a97230d603bfdfd5",
+    "source_git_blob": "a33227ec744cdddaee0fd0fb2be224e0354a6998",
+    "matches_pinned_official_git_blob": true,
+    "official_md5": null,
+    "official_md5_note": "GitHub does not publish a separate official MD5; verify pinned Git blob and local hashes.",
+    "bytes": 54400,
+    "md5": "0295b9011b978f498a2e37f3c91e2730",
+    "sha256": "eaf3491df20a0eb55dfcee7559048f483e06018286062733ab032626a2ba0946"
+  },
+  "wall_seconds": 122.0651941670003,
+  "all_download_checks_pass": true
+}
