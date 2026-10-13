@@ -1,6 +1,6 @@
 # TaijiSGWB formal template inference
 
-**RUNNING: original schedule not finished; no formal posterior result yet.**
+**Initial launch state: RUNNING. Read `status.json` for the current published outcome; posterior results are unavailable until sampling and analysis finish.**
 
 Configuration: 1000 unrecorded burn transitions + 350 saved ensembles at thin_by=12, six temperatures, 62 walkers, four CPU workers, full verified grid. The first ten real burn updates and numerical checks are archived in `initial-burn-check/`. `checkpoint-interface-check.json` is a separate synthetic recovery test.
 

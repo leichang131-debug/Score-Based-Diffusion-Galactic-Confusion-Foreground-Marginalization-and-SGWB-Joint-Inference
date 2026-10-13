@@ -1,6 +1,6 @@
 # TaijiSGWB Stage 9: original formal template schedule and posterior analysis
 
-**This stage is running, not completed.** Read `results/taiji-sgwb/template-formal/status.json` and the timestamped progress snapshot for published status. The latest live local state is in ignored `runs/taiji-sgwb/template-formal/progress.json`. Posterior outputs will be created only after the entire original sampling schedule finishes. They must then be interpreted with the diagnostic assessment.
+**Initial launch state: RUNNING; completion must be checked in the published status.** Read `results/taiji-sgwb/template-formal/status.json` and the timestamped progress snapshot for published status. The latest live local state is in ignored `runs/taiji-sgwb/template-formal/progress.json`. Posterior outputs will be created only after the entire original sampling schedule finishes. They must then be interpreted with the diagnostic assessment.
 
 ## Exact original schedule
 
