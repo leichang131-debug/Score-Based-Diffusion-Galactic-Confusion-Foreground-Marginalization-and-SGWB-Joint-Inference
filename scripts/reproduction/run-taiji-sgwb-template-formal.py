@@ -44,6 +44,11 @@ def main():
     except FileExistsError:raise RuntimeError('Supervisor lock exists; verify saved PID before recovery')
     os.write(fd,str(os.getpid()).encode());os.close(fd)
     start=time.perf_counter();samples=[];last_sync=start
+    session=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+    history=OUT/'sessions'/session;history.mkdir(parents=True,exist_ok=False)
+    for name in ['launch.json','run.json','resources.csv','status.json','progress-snapshot.json','execution.txt']:
+        if (OUT/name).exists():shutil.copyfile(OUT/name,history/('previous-'+name))
+    prior=json.loads((WORK/'progress.json').read_text())
     command=python('run-taiji-sgwb-template-formal-worker.py')+['--resume']
     write(WORK/'supervisor.json',{'pid':os.getpid(),'argv':command,'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'Original full formal inference. Live outputs ignored; portable progress/evidence snapshots synced hourly and on completion.'})
     caffeinate=None
@@ -52,7 +57,9 @@ def main():
             proc=subprocess.Popen(command,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT)
             try:caffeinate=subprocess.Popen(['caffeinate','-i','-w',str(proc.pid)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
             except FileNotFoundError:pass
-            write(OUT/'launch.json',{'supervisor_pid':os.getpid(),'worker_pid':proc.pid,'argv':command,'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'resume_from_burn':10,'target_burn':1000,'target_saved_samples':350,'thin_by':12,'idle_sleep_inhibited':caffeinate is not None})
+            write(OUT/'launch.json',{'supervisor_pid':os.getpid(),'worker_pid':proc.pid,'argv':command,'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'resume_from_burn':prior['burn_done'],'resume_from_production':prior['production_saved'],'target_burn':1000,'target_saved_samples':350,'thin_by':12,'idle_sleep_inhibited':caffeinate is not None})
+            shutil.copyfile(OUT/'launch.json',history/'launch.json')
+            write(OUT/'status.json',{'status':'RUNNING','sampling_complete':False,'note':'Resumed original full-data schedule; no posterior verdict yet.'})
             while proc.poll() is None:
                 raw=subprocess.check_output(['ps','-axo','pid=,ppid=,rss=']).decode()
                 entries=[tuple(map(int,x.split())) for x in raw.splitlines() if len(x.split())==3];family={proc.pid}
@@ -88,6 +95,8 @@ def main():
                 (OUT/'analysis-execution.txt').write_text(result.stdout+result.stderr)
                 if result.returncode:write(OUT/'status.json',{'status':'ANALYSIS_FAILED','sampling_complete':True,'note':'Read analysis-execution.txt; no convergence claim.'})
             else:write(OUT/'status.json',{'status':progress['status'],'sampling_complete':False,'note':'Checkpoint saved; original schedule not finished.'})
+        for name in ['run.json','resources.csv','status.json','progress-snapshot.json']:
+            if (OUT/name).exists():shutil.copyfile(OUT/name,history/name)
         if not args.no_sync:sync_evidence('Record TaijiSGWB formal template sampling outcome and posterior diagnostics')
     finally:
         if caffeinate and caffeinate.poll() is None:caffeinate.terminate()

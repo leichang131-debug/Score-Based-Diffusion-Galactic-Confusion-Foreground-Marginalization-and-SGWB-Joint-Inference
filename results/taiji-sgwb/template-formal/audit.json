@@ -12,10 +12,11 @@
     "input_cache_integrity": true,
     "checkpoint_state_finite": true,
     "installed_Eryn_source_unmodified": true,
+    "six_figure_plot_interface_ready": true,
     "paused_state_static_restore": true,
     "portable_paused_state_hashes": true
   },
   "all_checks_pass": true,
-  "latest_complete_checkpoint": "burn-0108-production-0000",
+  "latest_complete_checkpoint": "burn-0130-production-0000",
   "Eryn_files_checked": 33
 }

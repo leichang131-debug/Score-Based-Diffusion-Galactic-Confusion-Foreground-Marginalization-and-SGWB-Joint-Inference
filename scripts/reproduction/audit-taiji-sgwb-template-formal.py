@@ -33,9 +33,14 @@ def main():
         if str(item).startswith('eryn/') and str(item).endswith('.py') and item.hash:
             installed.append(base64.urlsafe_b64encode(bytes.fromhex(sha(dist.locate_file(item)))).rstrip(b'=').decode()==item.hash.value)
     checks['installed_Eryn_source_unmodified']=bool(installed) and all(installed)
+    if (OUT/'postprocessing-readiness.json').exists():
+        ready=json.loads((OUT/'postprocessing-readiness.json').read_text())
+        checks['six_figure_plot_interface_ready']=ready['all_checks_pass'] and ready['sampling_not_advanced'] and ready['plot_count']==6 and ready['analyzer_sha256']==sha(ROOT/'scripts/reproduction/analyze-taiji-sgwb-template-formal.py')
     if (OUT/'analysis.json').exists():
         analysis=json.loads((OUT/'analysis.json').read_text());checks['numerical_outcome_recorded_consistently']=analysis['numerical_checks_pass']==all(analysis['checks'].values())
         checks['complete_original_schedule']=analysis['sampling']['saved']==350 and analysis['sampling']['burn']==1000 and analysis['sampling']['thin_by']==12
+        checks['six_completed_figures_present']=all((OUT/n).exists() and (OUT/n).stat().st_size>10000 for n in ['posterior-sgwb.png','posterior-noise-spacecraft.png','posterior-spectrum.png','parameter-correlation.png','production-traces.png','production-traces-all.png'])
+        checks['completed_figure_provenance_present']=(OUT/'figure-provenance.json').exists() and (OUT/'posterior-spectrum.npz').exists()
     if (OUT/'pause-checkpoint/validation.json').exists():
         paused=json.loads((OUT/'pause-checkpoint/validation.json').read_text())
         state_record=json.loads((OUT/'pause-checkpoint/state.json').read_text())

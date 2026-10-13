@@ -12,8 +12,8 @@
     },
     {
       "path": "docs/reproduction/taiji-sgwb/template-formal.md",
-      "sha256": "8ba898b70556568834316db484dac1681e527898f6dd0a0c008f86a9533f238d",
-      "bytes": 9006
+      "sha256": "af5ddb4877700ecf9c61c959490515ca9c894ec02c7e64cf7aa37aa401e83930",
+      "bytes": 12059
     },
     {
       "path": "results/taiji-sgwb/template-formal/README.md",
@@ -32,8 +32,8 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/audit.json",
-      "sha256": "f8e0d090987d9b696bd132e09a7f8cf5ff27ebf6a0f3d7160270690a63bce166",
-      "bytes": 766
+      "sha256": "62c5afa7878f8303e104c75c33f9b0852ad478d7e61007e2eb86379335c45d10",
+      "bytes": 811
     },
     {
       "path": "results/taiji-sgwb/template-formal/checkpoint-interface-check.json",
@@ -77,8 +77,8 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/launch.json",
-      "sha256": "73edcc7fd5698f2014152063a583e76d7979c6e5ef86868274b25ef0f4ee8ab5",
-      "bytes": 399
+      "sha256": "bf1514b13fc869e9e70988f519180391b6aa428eb68339ef2348580afab3109d",
+      "bytes": 433
     },
     {
       "path": "results/taiji-sgwb/template-formal/pause-checkpoint/process-exit.json",
@@ -107,13 +107,18 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/pause-checkpoint/validation.json",
-      "sha256": "f8956fb5857ac790035130401823668d2d81b3adc79616a10b9da5769517c664",
+      "sha256": "945c4a9cf53fca913c8a694f469814766b61b21fec075b3f53f0e84f14d33e54",
       "bytes": 1061
     },
     {
+      "path": "results/taiji-sgwb/template-formal/postprocessing-readiness.json",
+      "sha256": "61b4054d43de67472883fb2d20a731da367a03768f3d2e5636ef77be25822ac3",
+      "bytes": 1447
+    },
+    {
       "path": "results/taiji-sgwb/template-formal/progress-snapshot.json",
-      "sha256": "9bbfa04dfb9856a1019d778aebe8eb1970bc46a935a3e84ec2f283b4fa5d32be",
-      "bytes": 2095
+      "sha256": "56937d8bcf85e30e56736dc17e04ce553305e37efc7312814cb5859c2ca6c38b",
+      "bytes": 2093
     },
     {
       "path": "results/taiji-sgwb/template-formal/resources.csv",
@@ -121,9 +126,49 @@
       "bytes": 1524
     },
     {
+      "path": "results/taiji-sgwb/template-formal/resume-process-verification.json",
+      "sha256": "e0be28a708798190d58f1b09be0bcbce2b686af3cd03277b213096e44de7960b",
+      "bytes": 2073
+    },
+    {
       "path": "results/taiji-sgwb/template-formal/run.json",
       "sha256": "3646cafb36999f1a7977ecbaea71d6afb9495af51de1722183fd309d3a838879",
       "bytes": 252
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/sessions/20261013T140454Z/launch.json",
+      "sha256": "bf1514b13fc869e9e70988f519180391b6aa428eb68339ef2348580afab3109d",
+      "bytes": 433
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/sessions/20261013T140454Z/previous-execution.txt",
+      "sha256": "a667d68715e6b1fefd8f5f93580e439c830831dc54527c4167e7431913c21138",
+      "bytes": 3353
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/sessions/20261013T140454Z/previous-launch.json",
+      "sha256": "73edcc7fd5698f2014152063a583e76d7979c6e5ef86868274b25ef0f4ee8ab5",
+      "bytes": 399
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/sessions/20261013T140454Z/previous-progress-snapshot.json",
+      "sha256": "9bbfa04dfb9856a1019d778aebe8eb1970bc46a935a3e84ec2f283b4fa5d32be",
+      "bytes": 2095
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/sessions/20261013T140454Z/previous-resources.csv",
+      "sha256": "a17a576e9a0d270b4e74fdc13cd0e3c8bb97ec1e20b50cdd315a3de44050f813",
+      "bytes": 1524
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/sessions/20261013T140454Z/previous-run.json",
+      "sha256": "3646cafb36999f1a7977ecbaea71d6afb9495af51de1722183fd309d3a838879",
+      "bytes": 252
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/sessions/20261013T140454Z/previous-status.json",
+      "sha256": "2e24f6c66ea4bb46ea2c50056e161ba48341234037ad39773822cfdfc148b3fb",
+      "bytes": 318
     },
     {
       "path": "results/taiji-sgwb/template-formal/source-execution.json",
@@ -132,8 +177,8 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/status.json",
-      "sha256": "2e24f6c66ea4bb46ea2c50056e161ba48341234037ad39773822cfdfc148b3fb",
-      "bytes": 318
+      "sha256": "05ccf6dad08ceacf9858a22d97d77ea654f200b778a7e5e9029ec2d18a1a926a",
+      "bytes": 132
     },
     {
       "path": "results/taiji-sgwb/template-formal/supervisor-launch.json",
@@ -142,13 +187,13 @@
     },
     {
       "path": "scripts/reproduction/analyze-taiji-sgwb-template-formal.py",
-      "sha256": "75560626a23272ac5d8b17b7a79e75b8456c61e28b4cb0664745f6dddf3d17d3",
-      "bytes": 9559
+      "sha256": "9a952034eb778a9fe33fec23957c9a0c3808cd449106723d32099317847d4fd3",
+      "bytes": 14035
     },
     {
       "path": "scripts/reproduction/audit-taiji-sgwb-template-formal.py",
-      "sha256": "1eb420ea0491f73455d8cde961ce03ca626a92b76ae4ce07bbf2599d87b131c0",
-      "bytes": 4740
+      "sha256": "43ca9988120b2c4a648a3a405b00993e63f9db3be86cad365288cc34b11e90a9",
+      "bytes": 5520
     },
     {
       "path": "scripts/reproduction/check-taiji-sgwb-formal-burn.py",
@@ -172,8 +217,8 @@
     },
     {
       "path": "scripts/reproduction/run-taiji-sgwb-template-formal.py",
-      "sha256": "63709441f4c059bf31efe49d82bf5ed1e7ee54f1768c7b34f837db8a2f8f40f5",
-      "bytes": 6756
+      "sha256": "d9259193c053241b2a2c9e40ad4f42438cea0740e06a012ef6114d1e0079083d",
+      "bytes": 7629
     },
     {
       "path": "scripts/reproduction/taiji_sgwb_formal_checkpoint.py",

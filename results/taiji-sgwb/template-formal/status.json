@@ -1,8 +1,5 @@
 {
-  "status": "PAUSED_BY_USER",
+  "status": "RUNNING",
   "sampling_complete": false,
-  "note": "Explicitly paused by user after complete checkpoint. 19/19 static restore checks passed without new transitions. Cluster deployment is planned, not executed.",
-  "burn_done": 108,
-  "production_saved": 0,
-  "formal_posterior_available": false
+  "note": "Resumed original full-data schedule; no posterior verdict yet."
 }

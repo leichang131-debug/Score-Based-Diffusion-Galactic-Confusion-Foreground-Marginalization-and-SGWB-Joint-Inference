@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-10-13T06:56:21.674505+00:00",
+  "created_utc": "2026-10-13T14:02:13.124750+00:00",
   "scope": "Restore actual paused burn-in into a new sampler without advancing any MCMC transition. Mac-to-Linux portability not yet tested.",
   "checks": {
     "paused_after_update": true,
