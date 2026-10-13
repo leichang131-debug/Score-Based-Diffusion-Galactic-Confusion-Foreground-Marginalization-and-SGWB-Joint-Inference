@@ -12,8 +12,8 @@
     },
     {
       "path": "docs/reproduction/taiji-sgwb/template-formal.md",
-      "sha256": "af5ddb4877700ecf9c61c959490515ca9c894ec02c7e64cf7aa37aa401e83930",
-      "bytes": 12059
+      "sha256": "2b70d43abe0aed77fdfd9d1bcdbf84cb6b08289208ad68774fec6ec735c240fa",
+      "bytes": 12904
     },
     {
       "path": "results/taiji-sgwb/template-formal/README.md",
@@ -32,8 +32,8 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/audit.json",
-      "sha256": "4877db505587f9149301b731628920f9aa6a6c2bb4fd18f7257854e8b892d680",
-      "bytes": 811
+      "sha256": "2a6fd883fa85d7cb8f81e2da8ecb3d99b20e49da74757165cc288e4f994c957d",
+      "bytes": 890
     },
     {
       "path": "results/taiji-sgwb/template-formal/checkpoint-interface-check.json",
@@ -79,6 +79,41 @@
       "path": "results/taiji-sgwb/template-formal/launch.json",
       "sha256": "bf1514b13fc869e9e70988f519180391b6aa428eb68339ef2348580afab3109d",
       "bytes": 433
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/overnight-pause-checkpoint/pause-request.json",
+      "sha256": "c9c9df9d35bc442fbf52a4d024a980da5f4c77acdd8fe395e2b260220115172b",
+      "bytes": 365
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/overnight-pause-checkpoint/process-exit.json",
+      "sha256": "9e60153df047e7c0d93b609e228fc36a591512601984e14f0c88bbb3945c90d7",
+      "bytes": 278
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/overnight-pause-checkpoint/state.json",
+      "sha256": "bb7482f838c259424a6b7a4654533939b301d780434f843cedd99add253a7bd6",
+      "bytes": 30214
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/overnight-pause-checkpoint/state.npz",
+      "sha256": "b159bc26c85ded5a450ce53fca531c39ff2b492481a957707cfb75cbf9e817f1",
+      "bytes": 42316
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/overnight-pause-checkpoint/template_AET_nofg.h5",
+      "sha256": "821847c33fa6de4f3f7caf3d9d91e2fa26ac5e91b945cc8d4e105881ea62a5db",
+      "bytes": 21328
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/overnight-pause-checkpoint/validation-execution.txt",
+      "sha256": "e138da45e8d1316c32d698c9f5166448d859eb3da078109aa3a89fcf333cacfd",
+      "bytes": 58
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/overnight-pause-checkpoint/validation.json",
+      "sha256": "d4bfaa3fd2bfbd54b0cdfc4314adfda89d6a6f4c12d20ce7b246942bf26c81c7",
+      "bytes": 1061
     },
     {
       "path": "results/taiji-sgwb/template-formal/pause-checkpoint/process-exit.json",
@@ -212,8 +247,8 @@
     },
     {
       "path": "scripts/reproduction/audit-taiji-sgwb-template-formal.py",
-      "sha256": "43ca9988120b2c4a648a3a405b00993e63f9db3be86cad365288cc34b11e90a9",
-      "bytes": 5520
+      "sha256": "5878419f82effcaaadeeaf1a59ba904ac5ad862385d5158dcab284064c68e9c1",
+      "bytes": 6200
     },
     {
       "path": "scripts/reproduction/check-taiji-sgwb-formal-burn.py",
@@ -224,6 +259,11 @@
       "path": "scripts/reproduction/check-taiji-sgwb-formal-checkpoint.py",
       "sha256": "3f5613c5cfe3c0f2f5327c5d491ea1d23b35c0f1f4ce7eb42f04acf802cb4cbe",
       "bytes": 3899
+    },
+    {
+      "path": "scripts/reproduction/check-taiji-sgwb-overnight-pause.py",
+      "sha256": "ecee4796f387ef5613c7175dea18b9de2a2b7303630f704d1b6c394062a4b34c",
+      "bytes": 3909
     },
     {
       "path": "scripts/reproduction/check-taiji-sgwb-paused-state.py",

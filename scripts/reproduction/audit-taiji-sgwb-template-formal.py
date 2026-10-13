@@ -46,11 +46,17 @@ def main():
         state_record=json.loads((OUT/'pause-checkpoint/state.json').read_text())
         checks['paused_state_static_restore']=paused['all_checks_pass'] and all(paused['checks'].values())
         checks['portable_paused_state_hashes']=sha(OUT/'pause-checkpoint/state.npz')==state_record['npz_sha256'] and sha(OUT/'pause-checkpoint/template_AET_nofg.h5')==state_record['backend_sha256']
+    if (OUT/'overnight-pause-checkpoint/validation.json').exists():
+        directory=OUT/'overnight-pause-checkpoint'
+        validation=json.loads((directory/'validation.json').read_text());saved=json.loads((directory/'state.json').read_text())
+        checks['overnight_static_restore']=validation['all_checks_pass'] and all(validation['checks'].values())
+        checks['overnight_checkpoint_hashes']=sha(directory/'state.npz')==saved['npz_sha256'] and sha(directory/'template_AET_nofg.h5')==saved['backend_sha256']
     checks={k:bool(v) for k,v in checks.items()}
     write_json(OUT/'audit.json',{'scope':'Integrity/readiness only while running; not a convergence verdict.','checks':checks,'all_checks_pass':all(checks.values()),'latest_complete_checkpoint':checkpoint.name,'Eryn_files_checked':len(installed)})
     files=[p for p in OUT.rglob('*') if p.is_file() and p.name!='manifest.json']
     files += [ROOT/'scripts/reproduction'/n for n in ['taiji_sgwb_formal_checkpoint.py','run-taiji-sgwb-template-formal-worker.py','run-taiji-sgwb-template-formal.py','check-taiji-sgwb-formal-checkpoint.py','analyze-taiji-sgwb-template-formal.py','audit-taiji-sgwb-template-formal.py','check-taiji-sgwb-formal-burn.py','check-taiji-sgwb-paused-state.py']]
     files += [ROOT/'configs/reproduction/taiji-sgwb/template-formal.json',ROOT/'docs/reproduction/taiji-sgwb/template-formal.md',ROOT/'docs/deployment/taiji-cluster-migration-plan.md']
+    if (ROOT/'scripts/reproduction/check-taiji-sgwb-overnight-pause.py').exists():files.append(ROOT/'scripts/reproduction/check-taiji-sgwb-overnight-pause.py')
     write_json(OUT/'manifest.json',{'files':[{'path':str(p.relative_to(ROOT)),'sha256':sha(p),'bytes':p.stat().st_size} for p in sorted(files)]})
     print(f'Formal evidence integrity: {sum(checks.values())}/{len(checks)} passed; this is an integrity audit, not a completed-posterior verdict.')
     if not all(checks.values()):raise SystemExit(1)

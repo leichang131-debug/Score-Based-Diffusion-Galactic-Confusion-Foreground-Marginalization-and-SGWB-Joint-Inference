@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-13T15:08:26.171822+00:00",
+  "scope": "Restore actual paused burn-in into a new sampler without advancing any MCMC transition. Mac-to-Linux portability not yet tested.",
+  "checks": {
+    "paused_after_update": true,
+    "production_not_started": true,
+    "checkpoint_array_hash": true,
+    "checkpoint_backend_hash": true,
+    "restored_coords_acc": true,
+    "restored_coords_ro": true,
+    "restored_coords_sgwb": true,
+    "restored_inds_acc": true,
+    "restored_inds_ro": true,
+    "restored_inds_sgwb": true,
+    "restored_log_like": true,
+    "restored_log_prior": true,
+    "restored_betas": true,
+    "sampler_rng_exact": true,
+    "global_rng_exact": true,
+    "adaptive_time_exact": true,
+    "move_counters_exact": true,
+    "paused_likelihood_original_reference": true,
+    "no_new_chain_steps": true
+  },
+  "all_checks_pass": true,
+  "burn_done": 337,
+  "production_done": 0,
+  "remaining_burn": 663,
+  "remaining_production_transitions": 4200,
+  "original_likelihood_recompute_error": 0.0,
+  "Cholesky_error": 0.0
+}

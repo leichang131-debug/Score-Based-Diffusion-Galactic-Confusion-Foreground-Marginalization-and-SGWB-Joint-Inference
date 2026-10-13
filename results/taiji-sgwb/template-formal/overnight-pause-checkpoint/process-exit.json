@@ -1,0 +1,8 @@
+{
+  "checked_utc": "2026-10-13T15:09:28.251094+00:00",
+  "all_original_processes_exited": true,
+  "ps_output": "  PID COMMAND\n",
+  "supervisor_lock_absent": true,
+  "stop_request_retained": true,
+  "note": "No overnight automatic resume; explicit user instruction required."
+}

@@ -14,7 +14,9 @@
     "installed_Eryn_source_unmodified": true,
     "six_figure_plot_interface_ready": true,
     "paused_state_static_restore": true,
-    "portable_paused_state_hashes": true
+    "portable_paused_state_hashes": true,
+    "overnight_static_restore": true,
+    "overnight_checkpoint_hashes": true
   },
   "all_checks_pass": true,
   "latest_complete_checkpoint": "burn-0337-production-0000",

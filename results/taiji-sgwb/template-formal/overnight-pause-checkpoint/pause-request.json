@@ -1,0 +1,16 @@
+{
+  "requested_utc": "2026-10-13T15:07:47.423430+00:00",
+  "reason": "User requested checkpoint pause overnight on battery; resume tomorrow only when authorized.",
+  "progress_at_request": {
+    "status": "RUNNING",
+    "burn_done": 336,
+    "production_saved": 0,
+    "pid": 18244,
+    "pool_pids": [
+      18263,
+      18264,
+      18265,
+      18266
+    ]
+  }
+}
