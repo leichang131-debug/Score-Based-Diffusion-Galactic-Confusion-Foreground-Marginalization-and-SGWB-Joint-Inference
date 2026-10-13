@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/run-taiji-sgwb-template-worker.py", line 106, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/run-taiji-sgwb-template-worker.py", line 73, in main
+    execute_nodes(source,original_setup,ns);sampler=ns['sampler'];pool=ns['pool']
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/taiji_sgwb_response.py", line 71, in execute_nodes
+    exec(compile(ast.Module(body=[node],type_ignores=[]), str(source), "exec"), namespace)
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/taiji-sgwb/demos/template_nofg_28t.py", line 211, in <module>
+    sampler = eryn.ensemble.EnsembleSampler(nwalker, ndim, log_likelihood, priors,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/eryn/ensemble.py", line 620, in __init__
+    if self.key_order != self.backend.key_order:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

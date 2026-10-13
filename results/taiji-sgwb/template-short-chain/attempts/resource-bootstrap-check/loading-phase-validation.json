@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "scope": "Actual original-template short chain, real process exit/restart, exact seeded continuous control and saved-state numerical checks; not a converged posterior.",
+  "checks": {
+    "initial_successful_process_exit": true,
+    "initial_two_worker_pool_observed": false,
+    "initial_resource_sampling": true,
+    "initial_original_ensemble_size": true,
+    "initial_all_numeric_arrays_finite": true,
+    "initial_finite_real_likelihood_and_prior": true,
+    "initial_actual_proposals_and_calls": true,
+    "initial_backend_file_integrity": true,
+    "initial_separate_process_HDF_readback": true,
+    "initial_backend_equals_NPZ_all_fields": true,
+    "initial_default_original_move": true,
+    "initial_working_original_identical": true,
+    "resume_successful_process_exit": true,
+    "resume_two_worker_pool_observed": true,
+    "resume_resource_sampling": true,
+    "resume_original_ensemble_size": true,
+    "resume_all_numeric_arrays_finite": true,
+    "resume_finite_real_likelihood_and_prior": true,
+    "resume_actual_proposals_and_calls": true,
+    "resume_backend_file_integrity": true,
+    "resume_separate_process_HDF_readback": true,
+    "resume_backend_equals_NPZ_all_fields": true,
+    "resume_default_original_move": true,
+    "resume_working_original_identical": true,
+    "continuous_successful_process_exit": true,
+    "continuous_two_worker_pool_observed": true,
+    "continuous_resource_sampling": true,
+    "continuous_original_ensemble_size": true,
+    "continuous_all_numeric_arrays_finite": true,
+    "continuous_finite_real_likelihood_and_prior": true,
+    "continuous_actual_proposals_and_calls": true,
+    "continuous_backend_file_integrity": true,
+    "continuous_separate_process_HDF_readback": true,
+    "continuous_backend_equals_NPZ_all_fields": true,
+    "continuous_default_original_move": true,
+    "continuous_working_original_identical": true,
+    "initial_0_to_4": true,
+    "resume_4_to_8": true,
+    "continuous_0_to_8": true,
+    "three_distinct_process_PIDs": true,
+    "initial_exit_precedes_resume_start": true,
+    "saved_restored_state_all_fields_exact": true,
+    "adaptation_time_restored": true,
+    "sampler_rng_restored_from_original_HDF": true,
+    "resumed_equals_continuous_chain_acc": true,
+    "initial_equals_continuous_prefix_chain_acc": true,
+    "resume_preserves_saved_prefix_chain_acc": true,
+    "resumed_equals_continuous_chain_ro": true,
+    "initial_equals_continuous_prefix_chain_ro": true,
+    "resume_preserves_saved_prefix_chain_ro": true,
+    "resumed_equals_continuous_chain_sgwb": true,
+    "initial_equals_continuous_prefix_chain_sgwb": true,
+    "resume_preserves_saved_prefix_chain_sgwb": true,
+    "resumed_equals_continuous_inds_acc": true,
+    "initial_equals_continuous_prefix_inds_acc": true,
+    "resume_preserves_saved_prefix_inds_acc": true,
+    "resumed_equals_continuous_inds_ro": true,
+    "initial_equals_continuous_prefix_inds_ro": true,
+    "resume_preserves_saved_prefix_inds_ro": true,
+    "resumed_equals_continuous_inds_sgwb": true,
+    "initial_equals_continuous_prefix_inds_sgwb": true,
+    "resume_preserves_saved_prefix_inds_sgwb": true,
+    "resumed_equals_continuous_log_like": true,
+    "initial_equals_continuous_prefix_log_like": true,
+    "resume_preserves_saved_prefix_log_like": true,
+    "resumed_equals_continuous_log_prior": true,
+    "initial_equals_continuous_prefix_log_prior": true,
+    "resume_preserves_saved_prefix_log_prior": true,
+    "resumed_equals_continuous_betas": true,
+    "initial_equals_continuous_prefix_betas": true,
+    "resume_preserves_saved_prefix_betas": true,
+    "resumed_equals_continuous_accepted": true,
+    "resumed_equals_continuous_swaps_accepted": true,
+    "final_rng_temperature_move_state_exact": true,
+    "accepted_some_proposals": true,
+    "accepted_some_temperature_swaps": true,
+    "accepted_counts_appended_not_reset": true,
+    "temperature_ladder_valid": true,
+    "all_branches_present": true,
+    "saved_state_0_0_0_likelihood_prior": true,
+    "saved_state_0_5_61_likelihood_prior": true,
+    "saved_state_3_0_31_likelihood_prior": true,
+    "saved_state_4_5_12_likelihood_prior": true,
+    "saved_state_7_0_0_likelihood_prior": true,
+    "saved_state_7_5_61_likelihood_prior": true,
+    "all_original_19_files_unchanged": true,
+    "all_3_run_provenance_identical": true,
+    "input_caches_unchanged": true
+  },
+  "all_checks_pass": false,
+  "array_comparisons": {
+    "chain_acc": {
+      "shape": [
+        8,
+        6,
+        62,
+        1,
+        6
+      ],
+      "bitwise_equal": true,
+      "max_absolute_difference": 0.0
+    },
+    "chain_ro": {
+      "shape": [
+        8,
+        6,
+        62,
+        1,
+        6
+      ],
+      "bitwise_equal": true,
+      "max_absolute_difference": 0.0
+    },
+    "chain_sgwb": {
+      "shape": [
+        8,
+        6,
+        62,
+        1,
+        2
+      ],
+      "bitwise_equal": true,
+      "max_absolute_difference": 0.0
+    },
+    "inds_acc": {
+      "shape": [
+        8,
+        6,
+        62,
+        1
+      ],
+      "bitwise_equal": true,
+      "max_absolute_difference": 0.0
+    },
+    "inds_ro": {
+      "shape": [
+        8,
+        6,
+        62,
+        1
+      ],
+      "bitwise_equal": true,
+      "max_absolute_difference": 0.0
+    },
+    "inds_sgwb": {
+      "shape": [
+        8,
+        6,
+        62,
+        1
+      ],
+      "bitwise_equal": true,
+      "max_absolute_difference": 0.0
+    },
+    "log_like": {
+      "shape": [
+        8,
+        6,
+        62
+      ],
+      "bitwise_equal": true,
+      "max_absolute_difference": 0.0
+    },
+    "log_prior": {
+      "shape": [
+        8,
+        6,
+        62
+      ],
+      "bitwise_equal": true,
+      "max_absolute_difference": 0.0
+    },
+    "betas": {
+      "shape": [
+        8,
+        6
+      ],
+      "bitwise_equal": true,
+      "max_absolute_difference": 0.0
+    },
+    "accepted": {
+      "shape": [
+        6,
+        62
+      ],
+      "bitwise_equal": true,
+      "max_absolute_difference": 0.0
+    },
+    "swaps_accepted": {
+      "shape": [
+        5
+      ],
+      "bitwise_equal": true,
+      "max_absolute_difference": 0.0
+    }
+  },
+  "recomputed_saved_states": [
+    {
+      "step": 1,
+      "temperature_index": 0,
+      "walker": 0,
+      "stored": 175328757.51179892,
+      "original": 175328757.51179892,
+      "reference": 175328757.51179892,
+      "prior_absolute_error": 5.684341886080802e-14,
+      "reference_absolute_error": 0.0,
+      "maximum_condition_number": 25013040.56625551
+    },
+    {
+      "step": 1,
+      "temperature_index": 5,
+      "walker": 61,
+      "stored": 175044905.6453019,
+      "original": 175044905.6453019,
+      "reference": 175044905.6453019,
+      "prior_absolute_error": 5.684341886080802e-14,
+      "reference_absolute_error": 0.0,
+      "maximum_condition_number": 25063874.264972173
+    },
+    {
+      "step": 4,
+      "temperature_index": 0,
+      "walker": 31,
+      "stored": 175350625.88155985,
+      "original": 175350625.88155985,
+      "reference": 175350625.88155985,
+      "prior_absolute_error": 5.684341886080802e-14,
+      "reference_absolute_error": 0.0,
+      "maximum_condition_number": 31214975.340311326
+    },
+    {
+      "step": 5,
+      "temperature_index": 5,
+      "walker": 12,
+      "stored": 173270546.68176875,
+      "original": 173270546.68176875,
+      "reference": 173270546.6817687,
+      "prior_absolute_error": 5.684341886080802e-14,
+      "reference_absolute_error": 5.960464477539063e-08,
+      "maximum_condition_number": 28081777.75047897
+    },
+    {
+      "step": 8,
+      "temperature_index": 0,
+      "walker": 0,
+      "stored": 175350437.9694585,
+      "original": 175350437.9694585,
+      "reference": 175350437.9694585,
+      "prior_absolute_error": 5.684341886080802e-14,
+      "reference_absolute_error": 0.0,
+      "maximum_condition_number": 27834441.50025359
+    },
+    {
+      "step": 8,
+      "temperature_index": 5,
+      "walker": 61,
+      "stored": 174551220.93326926,
+      "original": 174551220.93326926,
+      "reference": 174551220.93326926,
+      "prior_absolute_error": 5.684341886080802e-14,
+      "reference_absolute_error": 0.0,
+      "maximum_condition_number": 21944455.695871443
+    }
+  ],
+  "diagnostics": {
+    "saved_steps": 8,
+    "transitions_per_temperature_walker": 8,
+    "total_ensemble_walker_transition_attempts": 2976,
+    "acceptance_mean_all_temperatures": 0.3084677419354839,
+    "acceptance_mean_cold": 0.35080645161290325,
+    "walkers_with_at_least_one_accepted_proposal": 349,
+    "total_temperature_swaps_accepted": 683.0,
+    "median_step_seconds_resume": 12.016371437500084,
+    "warnings": "Known environment complex-det warnings are recorded as counts by the dispatcher; source outputs are unchanged.",
+    "convergence": "NOT ASSESSED: eight steps, no burn-in, insufficient for ESS/R-hat/credible intervals or unbiasedness."
+  },
+  "config": {
+    "upstream_commit": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+    "entry": "template_nofg_28t.py",
+    "seed": 20261013,
+    "processes": 2,
+    "initial_saved_steps": 4,
+    "resume_saved_steps": 4,
+    "burn": 0,
+    "thin_by": 1,
+    "preserve_original_ntemps": 6,
+    "preserve_original_nwalkers": 62,
+    "note": "Full original likelihood, priors, initialization and default StretchMove. Short execution/restart check, not a converged posterior."
+  }
+}

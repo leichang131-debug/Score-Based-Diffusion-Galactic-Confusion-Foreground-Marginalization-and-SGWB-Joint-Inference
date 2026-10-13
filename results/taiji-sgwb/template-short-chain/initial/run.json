@@ -1,0 +1,25 @@
+{
+  "mode": "initial",
+  "started_utc": "2026-10-13T02:16:57.748448+00:00",
+  "ended_utc": "2026-10-13T02:17:57.751078+00:00",
+  "argv": [
+    "bash",
+    "scripts/reproduction/run-taiji-sgwb-python.sh",
+    "scripts/reproduction/run-taiji-sgwb-template-worker.py",
+    "--mode",
+    "initial"
+  ],
+  "pid": 2399,
+  "observed_child_pids": [
+    2401,
+    2413,
+    2414
+  ],
+  "returncode": 0,
+  "wall_seconds": 60.00293399999987,
+  "process_exited_and_reaped": true,
+  "monitoring_error": null,
+  "peak_parent_rss_kib": 685744,
+  "peak_family_rss_sum_kib": 2226064,
+  "resource_note": "Parent and descendant RSS sampled every ~1 s. Sum double-counts fork-shared memory and is not physical memory usage; shorter peaks can be missed."
+}

@@ -1,0 +1,2 @@
+Stage 8 validation: 87/88 passed. Exact restart vs continuous comparisons: 11/11.
+Failed: ['resume_two_worker_pool_observed']

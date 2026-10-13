@@ -1,0 +1,14 @@
+{
+  "attempts": [
+    {
+      "directory": "attempts/original-HDF-key-order",
+      "kind": "actual restart failure",
+      "resolution": "External HDF key-order ndarray-to-list readback adapter; numerical code unchanged."
+    },
+    {
+      "directory": "attempts/resource-bootstrap-check",
+      "kind": "validation-only assumptions",
+      "resolution": "Distinguish bootstrap/loading phases from sustained parent+two-worker pool; chain arrays unchanged."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+initial: saved iteration 1; step 26.634 s; calls 537; temp_time 1
+initial: saved iteration 2; step 9.111 s; calls 175; temp_time 2
+initial: saved iteration 3; step 10.415 s; calls 203; temp_time 3
+initial: saved iteration 4; step 10.927 s; calls 209; temp_time 4
+{
+  "mode": "initial",
+  "pid": 2399,
+  "created_utc": "2026-10-13T02:17:57.599556+00:00",
+  "provenance": {
+    "upstream_commit": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+    "source_sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
+    "config_sha256": "dd5c6495480411bb7c2bf6c248357d16ea3aed8493895fc7aafdea37e5246241",
+    "input_sha256": {
+      "data/processed/taiji-sgwb/response/response.h5": "4e8f12c8371a6afa84fdb7f7b3401968d3d23c9433d201cbd14d5a8e0cd2ca13",
+      "data/processed/taiji-sgwb/preprocessing/template_nofg_28t/preprocessing.h5": "b519ba3cc8e3a6d05f16c22a2d6df2d27cab315c6c3c41693434b8a94f85be62"
+    }
+  },
+  "config": {
+    "upstream_commit": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+    "entry": "template_nofg_28t.py",
+    "seed": 20261013,
+    "processes": 2,
+    "initial_saved_steps": 4,
+    "resume_saved_steps": 4,
+    "burn": 0,
+    "thin_by": 1,
+    "preserve_original_ntemps": 6,
+    "preserve_original_nwalkers": 62,
+    "note": "Full original likelihood, priors, initialization and default StretchMove. Short execution/restart check, not a converged posterior."
+  },
+  "start_iteration": 0,
+  "end_iteration": 4,
+  "steps": [
+    {
+      "iteration": 1,
+      "seconds": 26.634362208999846,
+      "likelihood_calls": 537,
+      "numpy_det_warning_count_total": 1074,
+      "cold_log_like_min": 174933938.52755207,
+      "cold_log_like_max": 175374697.80723497,
+      "cold_log_like_median": 175335762.51148677,
+      "temperature_adaptation_time": 1
+    },
+    {
+      "iteration": 2,
+      "seconds": 9.111415749999878,
+      "likelihood_calls": 175,
+      "numpy_det_warning_count_total": 1424,
+      "cold_log_like_min": 175302367.17713493,
+      "cold_log_like_max": 175374697.80723497,
+      "cold_log_like_median": 175344041.2260574,
+      "temperature_adaptation_time": 2
+    },
+    {
+      "iteration": 3,
+      "seconds": 10.41505200000006,
+      "likelihood_calls": 203,
+      "numpy_det_warning_count_total": 1830,
+      "cold_log_like_min": 175302367.17713493,
+      "cold_log_like_max": 175374697.80723497,
+      "cold_log_like_median": 175347661.24227297,
+      "temperature_adaptation_time": 3
+    },
+    {
+      "iteration": 4,
+      "seconds": 10.927459292000094,
+      "likelihood_calls": 209,
+      "numpy_det_warning_count_total": 2248,
+      "cold_log_like_min": 175306690.69644797,
+      "cold_log_like_max": 175374697.80723497,
+      "cold_log_like_median": 175349684.07800722,
+      "temperature_adaptation_time": 4
+    }
+  ],
+  "before_restore": null,
+  "restored_state": null,
+  "final_state": {
+    "iteration": 4,
+    "array_sha256": {
+      "coords_acc": "a4b7884467fb32d7acd45bacd06165b35665f438df225f4d8f4b29606cba2d50",
+      "coords_ro": "c23d1bdb624b78fa89f87b7456dae380e37dd6fe4584a3aa862e07d4a6db919e",
+      "coords_sgwb": "c36da8f67bf91df43961d43c7091d20f0211426d7392d942ac03de0ebf9cf91e",
+      "inds_acc": "424591084a799c47f8449341b2d5ce1d8452e10f1e46ca7c21a61d42cabd17b5",
+      "inds_ro": "424591084a799c47f8449341b2d5ce1d8452e10f1e46ca7c21a61d42cabd17b5",
+      "inds_sgwb": "424591084a799c47f8449341b2d5ce1d8452e10f1e46ca7c21a61d42cabd17b5",
+      "log_like": "d08a933ed666aad3ccfd6b983914725a8332abc4c909bbf70e65b67d06d8458a",
+      "log_prior": "01ebfaa370038ded316c810f6f53b077fb50e6b32a1d2bb6ebb5c54e088f63d4",
+      "betas": "178134d641611480686435bc3eece6bd36ca112e9f49ff6ea37da083d32d230c"
+    },
+    "sampler_rng_sha256": "75edd34ffa4104e6fdd1c3c227fb76cd1143443d2dfdfd0218b9aa6541b40a99",
+    "numpy_rng_sha256": "73df14f01ec81923e6266ca71f0aa53e1912d549cfb5aeedef4109a5f98a0f8c",
+    "temperature_adaptation_time": 4,
+    "move_counters": [
+      {
+        "class": "StretchMove",
+        "num_proposals": 4,
+        "accepted_sha256": "1544ccb9df45f4425ec6852fa5204fa71c3c3468b5945d43e113dcf8f4f1fda8",
+        "time": 0
+      }
+    ]
+  },
+  "likelihood_calls_total": 1124,
+  "known_determinant_warnings_captured": 2248,
+  "chain_shapes": {
+    "acc": [
+      4,
+      6,
+      62,
+      1,
+      6
+    ],
+    "ro": [
+      4,
+      6,
+      62,
+      1,
+      6
+    ],
+    "sgwb": [
+      4,
+      6,
+      62,
+      1,
+      2
+    ]
+  },
+  "all_chain_values_finite": true,
+  "backend": {
+    "filename": "template_AET_nofg.h5",
+    "sha256": "6906403f00821c5d33503c161869c7a5245ccca7eae528e1b08487ee743cca6c",
+    "bytes": 6668360
+  },
+  "worker_seconds": 59.63226774999998,
+  "scope": "Real full-grid template short chain only; no convergence, coverage or scientific parameter-recovery claim."
+}

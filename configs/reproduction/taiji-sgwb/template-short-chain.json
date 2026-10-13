@@ -1,0 +1,13 @@
+{
+  "upstream_commit": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+  "entry": "template_nofg_28t.py",
+  "seed": 20261013,
+  "processes": 2,
+  "initial_saved_steps": 4,
+  "resume_saved_steps": 4,
+  "burn": 0,
+  "thin_by": 1,
+  "preserve_original_ntemps": 6,
+  "preserve_original_nwalkers": 62,
+  "note": "Full original likelihood, priors, initialization and default StretchMove. Short execution/restart check, not a converged posterior."
+}

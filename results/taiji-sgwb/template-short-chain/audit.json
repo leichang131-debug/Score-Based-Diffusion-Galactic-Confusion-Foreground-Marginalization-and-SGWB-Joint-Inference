@@ -1,0 +1,170 @@
+{
+  "checks": {
+    "all_chain_validation_checks_pass": true,
+    "fixed_upstream_commit": true,
+    "original_source_clean": true,
+    "all_19_original_files_preserved": true,
+    "installed_Eryn_Python_files_unmodified": true,
+    "initial_original_backend_filename": true,
+    "initial_backend_sidecar_bytes": true,
+    "initial_all_recorded_source_nodes_exact": true,
+    "initial_same_named_byte_identical_working_copy": true,
+    "initial_adapter_preserves_key_order_contents": true,
+    "initial_adapter_preserves_chain_and_rng": true,
+    "initial_checkpoint_summary_consistent": true,
+    "initial_raw_working_chain_ignored": true,
+    "resume_original_backend_filename": true,
+    "resume_backend_sidecar_bytes": true,
+    "resume_all_recorded_source_nodes_exact": true,
+    "resume_same_named_byte_identical_working_copy": true,
+    "resume_adapter_preserves_key_order_contents": true,
+    "resume_adapter_preserves_chain_and_rng": true,
+    "resume_checkpoint_summary_consistent": true,
+    "resume_raw_working_chain_ignored": true,
+    "continuous_original_backend_filename": true,
+    "continuous_backend_sidecar_bytes": true,
+    "continuous_all_recorded_source_nodes_exact": true,
+    "continuous_same_named_byte_identical_working_copy": true,
+    "continuous_adapter_preserves_key_order_contents": true,
+    "continuous_adapter_preserves_chain_and_rng": true,
+    "continuous_checkpoint_summary_consistent": true,
+    "continuous_raw_working_chain_ignored": true,
+    "unmodified_HDF_restart_failure_preserved": true
+  },
+  "all_checks_pass": true,
+  "installed_Eryn_Python_file_checks": [
+    {
+      "path": "eryn/__init__.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/backends/__init__.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/backends/backend.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/backends/hdfbackend.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/ensemble.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/model.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/__init__.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/combine.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/delayedrejection.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/distgen.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/distgenrj.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/gaussian.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/group.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/groupstretch.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/mh.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/move.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/mtdistgen.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/mtdistgenrj.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/multipletry.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/red_blue.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/rj.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/stretch.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/moves/tempering.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/pbar.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/prior.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/state.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/utils/__init__.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/utils/periodic.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/utils/plot.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/utils/stopping.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/utils/transform.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/utils/updates.py",
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": "eryn/utils/utility.py",
+      "matches_installed_RECORD": true
+    }
+  ],
+  "scope": "Stored evidence and source/library integrity; external key-order type adapter does not patch installed Eryn or original TaijiSGWB."
+}
