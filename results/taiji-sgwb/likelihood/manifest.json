@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "docs/reproduction/taiji-sgwb/likelihood.md",
+      "bytes": 9934,
+      "sha256": "019cc12c545b11e5090c06b09a1778ccd7ca1f0334234912552c14b55eec9ab7"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/README.md",
+      "bytes": 1001,
+      "sha256": "beab2a29f3550cb9b7d275c9bda93188db2996419b5839a5aec2ee1482bdd47e"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/determinant-warning-investigation/execution.txt",
+      "bytes": 2034,
+      "sha256": "e369453d6aa1dc0ce41bc8feed729cf7bba161f2821a84574e8af22dd4c99205"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/determinant-warning-investigation/resources.csv",
+      "bytes": 894,
+      "sha256": "17e00cf8532d73f8a5344854c4417452fbfa58ae85e02235d9382ff4fbe5b5a1"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/determinant-warning-investigation/run.json",
+      "bytes": 565,
+      "sha256": "ad34b22d0c6439ec489aef6cf9619b758719e6ebf1c518b7843739e780362e75"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/determinant-warning-investigation/validation.json",
+      "bytes": 30528,
+      "sha256": "34272df8e674ffb710acec14a305c4e89db9855443641e53b5984c355939b564"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/initial-interface-check/execution.txt",
+      "bytes": 4713,
+      "sha256": "142aa1847f71622e3494040f5647c634e297c24e6d8c08fe7a783e6e5f733a8c"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/initial-interface-check/resources.csv",
+      "bytes": 671,
+      "sha256": "ff885e6ec5ded68f91359efdf6aaf0b8ce6f5dedac5409026bb0dffafb0e850f"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/initial-interface-check/run.json",
+      "bytes": 565,
+      "sha256": "63d4360c4f2ca2e29e2d35eb15d688b9a76e8a91747b61518882a347fe954efa"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/pre-determinant-diagnostics/execution.txt",
+      "bytes": 2034,
+      "sha256": "68814b8019a8b92ed14be34e2fcd6d763216a2568f7752e8575cb33a9b16f6e9"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/pre-determinant-diagnostics/resources.csv",
+      "bytes": 789,
+      "sha256": "3b34b429831ceda406fbe929e884eb298f060a584ca944bb889f8530d62f8ca6"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/pre-determinant-diagnostics/run.json",
+      "bytes": 565,
+      "sha256": "11bcca31d71722484822ad3567acc5af29e06fae2196db2cb8ade9da8fb60b76"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/pre-determinant-diagnostics/validation.json",
+      "bytes": 22601,
+      "sha256": "ae64555958ac854fefc360c097229a5154138899fc5ad90687d42ce1f2c3cff1"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/report-serialization/execution.txt",
+      "bytes": 6254,
+      "sha256": "1a5736a96c8df0564eedd01655bc4f8736befd460b60723ba046acd81dfa082e"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/report-serialization/resources.csv",
+      "bytes": 938,
+      "sha256": "41486a7c7aa000026bd88531159bf0c4e3bfbbc72135baca196dcaec7f23f50d"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts/report-serialization/run.json",
+      "bytes": 565,
+      "sha256": "4ea61eb19d297c0faa699e76c8d55ef96ad6a019e05e8630ed6ab5e20aa6915b"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/attempts.json",
+      "bytes": 533,
+      "sha256": "35d101ccc8d68d786357331637908b3730982913273b99518cec22e98dda1c7e"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/audit.json",
+      "bytes": 1353,
+      "sha256": "1b9ce1dbb2418a22eec5b76f8ce82671b77ab5a78aead359471a1687f0b11d3d"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/determinant-warning-controls.json",
+      "bytes": 1907,
+      "sha256": "175c449af5955e2e96d83289903328c238b1ab9f30d085e8846b94257e16b587"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/execution.txt",
+      "bytes": 3380,
+      "sha256": "7ef1b9fbbab0694db5f6efca6c0f1d2dda5ff0e318483c789ff546994e08a480"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/likelihood-comparisons.csv",
+      "bytes": 5378,
+      "sha256": "5540ed01bb77659e09f2ad3a7fee10321a13f2907d7879f9139725a82ab5944a"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/report-execution.txt",
+      "bytes": 84,
+      "sha256": "7f99da6fef1ffba42a8a487f03874a5992070a5330db8785e75a9848a7e329b5"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/resources.csv",
+      "bytes": 970,
+      "sha256": "181444ac4618d64ef6d847b2b73d27e7f1174eb06c54a5c88163a2fb0643fcb0"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/rj_nofg_28t/source-execution.json",
+      "bytes": 6342,
+      "sha256": "6585e0b30a1c3f7e68a5cb3812c392bef74acdc73130a438e893f988a46d0844"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/run.json",
+      "bytes": 563,
+      "sha256": "0d74a4194cb22cd639d3ff8828222f6d1113d691c1ee2015cd6ed2ce59263881"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/spectral-likelihood-check.png",
+      "bytes": 153097,
+      "sha256": "2b6274e8ff9173d776dcec638e6f312caa191a16e0f8e9dc515592c7bcf1d251"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/spectral-summary.npz",
+      "bytes": 292093,
+      "sha256": "c0d1e512ada22cf3eabb05720e77cac858da3c20732db5209ad97acfbbabea9a"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/template_nofg_28t/source-execution.json",
+      "bytes": 4323,
+      "sha256": "21b4d4d4594f7b515466238c1fb934d5d5b667f5693aa0133ae8bef7ae7b81de"
+    },
+    {
+      "path": "results/taiji-sgwb/likelihood/validation.json",
+      "bytes": 35973,
+      "sha256": "0a6b9c425eccfe9c36850c04d0f54957b4b8578e9439c96e5e9eaa24adb5ea7c"
+    },
+    {
+      "path": "scripts/reproduction/audit-taiji-sgwb-likelihood.py",
+      "bytes": 5177,
+      "sha256": "1b526c1801cc17362156464453d485e6b21fdf472b55f3c644b767ab82885199"
+    },
+    {
+      "path": "scripts/reproduction/check-taiji-sgwb-likelihood.py",
+      "bytes": 18153,
+      "sha256": "f40aa21dfede4b0ac1bdd60a965c6fd374ed20dd2cf4319865beff0823aa531f"
+    },
+    {
+      "path": "scripts/reproduction/report-taiji-sgwb-likelihood.py",
+      "bytes": 2187,
+      "sha256": "540022580379d2ec0a6ef0a40de0f2fc612f053075ccdde7b5b5d0e2fcdb8ec1"
+    },
+    {
+      "path": "scripts/reproduction/run-taiji-sgwb-likelihood.py",
+      "bytes": 2012,
+      "sha256": "8f58c5b56b384b3bd15cd4996c19c9c1f2aa29f2486278f3c0f4f907af04dbd6"
+    },
+    {
+      "path": "scripts/reproduction/taiji_sgwb_likelihood.py",
+      "bytes": 6149,
+      "sha256": "5ccf628ab391c78be09164b551d0d45820d692d7345fc6b8716bf11216d8cfff"
+    }
+  ]
+}

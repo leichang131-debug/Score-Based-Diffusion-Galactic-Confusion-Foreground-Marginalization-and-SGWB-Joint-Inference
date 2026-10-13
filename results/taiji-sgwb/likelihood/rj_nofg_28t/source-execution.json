@@ -1,0 +1,188 @@
+{
+  "source": "external/taiji-sgwb/demos/rj_nofg_28t.py",
+  "sha256": "35ce56931ecda5fb350101a4fda43cee94dcce36772fdf8ab79ad8b9ad37f685",
+  "working_copy": "runs/taiji-sgwb/likelihood/rj_nofg_28t/demos/rj_nofg_28t.py",
+  "nodes": [
+    {
+      "line": 3,
+      "end_line": 3,
+      "source": "import multiprocessing"
+    },
+    {
+      "line": 5,
+      "end_line": 5,
+      "source": "import numpy as np"
+    },
+    {
+      "line": 6,
+      "end_line": 6,
+      "source": "from scipy.signal import windows, ShortTimeFFT"
+    },
+    {
+      "line": 7,
+      "end_line": 7,
+      "source": "from scipy.interpolate import interp1d"
+    },
+    {
+      "line": 8,
+      "end_line": 8,
+      "source": "import matplotlib.pyplot as plt"
+    },
+    {
+      "line": 9,
+      "end_line": 9,
+      "source": "import logging"
+    },
+    {
+      "line": 10,
+      "end_line": 10,
+      "source": "import h5py"
+    },
+    {
+      "line": 11,
+      "end_line": 11,
+      "source": "from pathlib import Path"
+    },
+    {
+      "line": 13,
+      "end_line": 13,
+      "source": "import eryn.ensemble"
+    },
+    {
+      "line": 14,
+      "end_line": 14,
+      "source": "import eryn.state"
+    },
+    {
+      "line": 15,
+      "end_line": 15,
+      "source": "import eryn.prior"
+    },
+    {
+      "line": 16,
+      "end_line": 16,
+      "source": "import eryn.moves"
+    },
+    {
+      "line": 17,
+      "end_line": 17,
+      "source": "import eryn.backends"
+    },
+    {
+      "line": 19,
+      "end_line": 19,
+      "source": "from taijisgwb.detector.tdi import tdi_X2, aet_from_xyz, tdi_aet_from_tdi_x"
+    },
+    {
+      "line": 20,
+      "end_line": 20,
+      "source": "from taijisgwb.detector.noise import TaijiNoisePSD"
+    },
+    {
+      "line": 21,
+      "end_line": 21,
+      "source": "from taijisgwb import Interferometer"
+    },
+    {
+      "line": 22,
+      "end_line": 22,
+      "source": "from taijisgwb.detector.orbit import InterpolationOrbit"
+    },
+    {
+      "line": 23,
+      "end_line": 23,
+      "source": "from taijisgwb.waveform import calc_omega_powerlaw"
+    },
+    {
+      "line": 24,
+      "end_line": 24,
+      "source": "from taijisgwb.utils import psd_from_omega"
+    },
+    {
+      "line": 35,
+      "end_line": 35,
+      "source": "f_analow, f_anaupp = 1e-4, 5e-2"
+    },
+    {
+      "line": 164,
+      "end_line": 169,
+      "source": "def create_omega_interp_fun(knot, edge):\n    log_f_interp = np.concatenate(([np.log10(f_analow)], knot[:, 0], [np.log10(f_anaupp)]))\n    log_omega_interp = np.concatenate(([edge[0, 0]],\n                                        knot[:, 1], [edge[0, 1]]))\n    interp_fun = interp1d(log_f_interp, log_omega_interp, kind=\"quadratic\", assume_sorted=False)\n    return interp_fun"
+    },
+    {
+      "line": 171,
+      "end_line": 194,
+      "source": "def log_likelihood(params):\n    a_acc, a_ro, params_knot, params_edge = params\n    a_acc = a_acc[0]\n    a_ro = a_ro[0]\n\n    psd_acc = a_acc[:, None]**2 * spectrum_acc\n    csd_hypo = np.sum(psd_acc[:, None, :] * acc_corr_factor, axis=2)\n    psd_ro = a_ro[:, None]**2 * spectrum_ro\n    csd_hypo += np.sum(psd_ro[:, None, :] * ro_corr_factor, axis=2)\n\n    omega_interp_fun = create_omega_interp_fun(params_knot, params_edge)\n    log_omega_hypo = omega_interp_fun(log_f_est)\n    if log_omega_hypo.min() < -14. or log_omega_hypo.max() > -9.:\n        return -1e50\n    csd_hypo += orf * psd_from_omega(f_est, 10**log_omega_hypo)\n\n    csd_hypo = np.moveaxis(csd_hypo, [0, 1], [-2, -1])\n    inv_csd_hypo = np.linalg.inv(csd_hypo)\n    inv_csd_hypo = np.moveaxis(inv_csd_hypo, [-2, -1], [0, 1])\n    ll_exp = -nperbin * np.sum(csd_est * inv_csd_hypo).real\n    ll_coef = -nperbin * np.sum(np.log(np.linalg.det(csd_hypo).real)) \n\n    ans = (ll_exp + ll_coef) / win_bw\n    return ans"
+    },
+    {
+      "line": 162,
+      "end_line": 162,
+      "source": "log_f_est = np.log10(f_est)"
+    },
+    {
+      "line": 197,
+      "end_line": 197,
+      "source": "nstep = 350"
+    },
+    {
+      "line": 198,
+      "end_line": 198,
+      "source": "ntemp = 6"
+    },
+    {
+      "line": 199,
+      "end_line": 199,
+      "source": "nwalker = npool"
+    },
+    {
+      "line": 200,
+      "end_line": 200,
+      "source": "branch_names = [\"acc\", \"ro\",  \"sgwb_knot\", \"sgwb_edge\"]"
+    },
+    {
+      "line": 201,
+      "end_line": 204,
+      "source": "ndim = {key: val for key, val in zip(\n    branch_names,\n    [6, 6, 2, 2]\n    )}"
+    },
+    {
+      "line": 205,
+      "end_line": 208,
+      "source": "nleaf_max = {key: val for key, val in zip(\n    branch_names,\n    [1, 1, 16, 1]\n    )}"
+    },
+    {
+      "line": 209,
+      "end_line": 212,
+      "source": "nleaf_min = {key: val for key, val in zip(\n    branch_names,\n    [1, 1, 1, 1]\n    )}"
+    },
+    {
+      "line": 215,
+      "end_line": 226,
+      "source": "priors = {\n    branch_names[0]: {},\n    branch_names[1]: {},\n    branch_names[2]: {\n        0: eryn.prior.uniform_dist(np.log10(f_analow), np.log10(f_anaupp)),\n        1: eryn.prior.uniform_dist(-14., -9.)\n    },\n    branch_names[3]: {\n        0: eryn.prior.uniform_dist(-14., -9.),\n        1: eryn.prior.uniform_dist(-14., -9.)\n    }\n}"
+    },
+    {
+      "line": 227,
+      "end_line": 229,
+      "source": "for i in range(6):\n    priors[branch_names[0]][i] = eryn.prior.uniform_dist(.75*3e-15, 1.25*3e-15)\n    priors[branch_names[1]][i] = eryn.prior.uniform_dist(.75*8e-12, 1.25*8e-12)"
+    },
+    {
+      "line": 254,
+      "end_line": 255,
+      "source": "noise_move = eryn.moves.StretchMove(live_dangerously=True,\n                                    gibbs_sampling_setup={branch_names[0]: None, branch_names[1]: None})"
+    },
+    {
+      "line": 256,
+      "end_line": 259,
+      "source": "cov = {\n    branch_names[2]: np.diag([0.02, 0.01])**2,\n    branch_names[3]: np.diag([0.02, 0.02])**2,\n}"
+    },
+    {
+      "line": 260,
+      "end_line": 260,
+      "source": "sgwb_move = eryn.moves.GaussianMove(cov, gibbs_sampling_setup={branch_names[2]: None, branch_names[3]: None})"
+    },
+    {
+      "line": 261,
+      "end_line": 261,
+      "source": "moves = eryn.moves.CombineMove([noise_move, sgwb_move])"
+    }
+  ],
+  "adaptation": "Unchanged original imports/functions/prior nodes; verified cached globals supplied externally. No sampler run, pool or backend."
+}

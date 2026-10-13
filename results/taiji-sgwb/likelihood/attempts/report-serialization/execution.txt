@@ -1,0 +1,60 @@
+template_truth: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+template_prior_0: LL=175290426.044534713, reference error=0, cond_max=3.13e+07
+template_prior_1: LL=174953540.819912344, reference error=2.98e-08, cond_max=2.77e+07
+template_prior_2: LL=173596685.166232765, reference error=0, cond_max=2.46e+07
+template_prior_3: LL=174976479.785141915, reference error=0, cond_max=3.5e+07
+template_prior_4: LL=175350222.228575081, reference error=2.98e-08, cond_max=3.28e+07
+template_prior_5: LL=175286053.304001778, reference error=0, cond_max=3.1e+07
+template_prior_6: LL=174702262.326865822, reference error=0, cond_max=2.91e+07
+template_prior_7: LL=175329298.950853884, reference error=0, cond_max=3.56e+07
+template_boundary_0: LL=175181701.318179309, reference error=0, cond_max=9.43e+06
+template_boundary_1: LL=172784162.820570618, reference error=0, cond_max=9.44e+06
+rj_powerlaw_1: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+rj_powerlaw_2: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+rj_powerlaw_4: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+rj_powerlaw_8: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+rj_powerlaw_16: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/numpy/linalg/linalg.py:2180: RuntimeWarning: divide by zero encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/numpy/linalg/linalg.py:2180: RuntimeWarning: invalid value encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+rj_prior_1_0: LL=175282939.429411888, reference error=2.98e-08, cond_max=2.24e+07
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/numpy/linalg/linalg.py:2180: RuntimeWarning: divide by zero encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/numpy/linalg/linalg.py:2180: RuntimeWarning: invalid value encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+rj_prior_1_1: LL=174909962.204671055, reference error=0, cond_max=2.7e+07
+rj_curved_spectrum: LL=175388113.584982604, reference error=2.98e-08, cond_max=3.31e+07
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/numpy/linalg/linalg.py:2180: RuntimeWarning: divide by zero encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/numpy/linalg/linalg.py:2180: RuntimeWarning: invalid value encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+Traceback (most recent call last):
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-taiji-sgwb-likelihood.py", line 227, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-taiji-sgwb-likelihood.py", line 223, in main
+    write(OUT/'validation.json',report)
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-taiji-sgwb-likelihood.py", line 24, in write
+    path.write_text(json.dumps(value,indent=2,allow_nan=False)+'\n')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool_ is not JSON serializable

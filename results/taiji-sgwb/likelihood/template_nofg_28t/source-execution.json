@@ -1,0 +1,143 @@
+{
+  "source": "external/taiji-sgwb/demos/template_nofg_28t.py",
+  "sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
+  "working_copy": "runs/taiji-sgwb/likelihood/template_nofg_28t/demos/template_nofg_28t.py",
+  "nodes": [
+    {
+      "line": 3,
+      "end_line": 3,
+      "source": "import multiprocessing"
+    },
+    {
+      "line": 5,
+      "end_line": 5,
+      "source": "import numpy as np"
+    },
+    {
+      "line": 6,
+      "end_line": 6,
+      "source": "from scipy.signal import windows, ShortTimeFFT"
+    },
+    {
+      "line": 7,
+      "end_line": 7,
+      "source": "import matplotlib.pyplot as plt"
+    },
+    {
+      "line": 8,
+      "end_line": 8,
+      "source": "import logging"
+    },
+    {
+      "line": 9,
+      "end_line": 9,
+      "source": "import h5py"
+    },
+    {
+      "line": 10,
+      "end_line": 10,
+      "source": "from pathlib import Path"
+    },
+    {
+      "line": 12,
+      "end_line": 12,
+      "source": "import eryn.ensemble"
+    },
+    {
+      "line": 13,
+      "end_line": 13,
+      "source": "import eryn.prior"
+    },
+    {
+      "line": 14,
+      "end_line": 14,
+      "source": "import eryn.backends"
+    },
+    {
+      "line": 16,
+      "end_line": 16,
+      "source": "from taijisgwb.detector.tdi import tdi_X2, aet_from_xyz, tdi_aet_from_tdi_x"
+    },
+    {
+      "line": 17,
+      "end_line": 17,
+      "source": "from taijisgwb.detector.noise import TaijiNoisePSD"
+    },
+    {
+      "line": 18,
+      "end_line": 18,
+      "source": "from taijisgwb import Interferometer"
+    },
+    {
+      "line": 19,
+      "end_line": 19,
+      "source": "from taijisgwb.detector.orbit import InterpolationOrbit"
+    },
+    {
+      "line": 20,
+      "end_line": 20,
+      "source": "from taijisgwb.waveform import calc_omega_powerlaw"
+    },
+    {
+      "line": 21,
+      "end_line": 21,
+      "source": "from taijisgwb.utils import psd_from_omega"
+    },
+    {
+      "line": 32,
+      "end_line": 32,
+      "source": "f_analow, f_anaupp = 1e-4, 5e-2"
+    },
+    {
+      "line": 158,
+      "end_line": 177,
+      "source": "def log_likelihood(params):\n    a_acc, a_ro, params_sgwb = params\n\n    psd_acc = a_acc[:, None]**2 * spectrum_acc\n    csd_hypo = np.sum(psd_acc[:, None, :] * acc_corr_factor, axis=2)\n    psd_ro = a_ro[:, None]**2 * spectrum_ro\n    csd_hypo += np.sum(psd_ro[:, None, :] * ro_corr_factor, axis=2)\n\n    omega_sgwb = calc_omega_powerlaw(f_est, *params_sgwb)\n    csd_hypo += orf * psd_from_omega(f_est, omega_sgwb)\n\n    csd_hypo = np.moveaxis(csd_hypo, [0, 1], [-2, -1])\n    inv_csd_hypo = np.linalg.inv(csd_hypo)\n    inv_csd_hypo = np.moveaxis(inv_csd_hypo, [-2, -1], [0, 1])\n    ll_exp = -nperbin * np.sum(csd_est * inv_csd_hypo).real\n    ll_coef = -nperbin * np.sum(np.log(np.linalg.det(csd_hypo).real)) \n\n    ans = ll_exp + ll_coef\n    ans /= win_bw\n    return ans"
+    },
+    {
+      "line": 180,
+      "end_line": 180,
+      "source": "nstep = 350"
+    },
+    {
+      "line": 181,
+      "end_line": 181,
+      "source": "ntemp = 6"
+    },
+    {
+      "line": 182,
+      "end_line": 182,
+      "source": "nwalker = 62"
+    },
+    {
+      "line": 183,
+      "end_line": 183,
+      "source": "branch_names = [\"acc\", \"ro\", \"sgwb\"]"
+    },
+    {
+      "line": 184,
+      "end_line": 187,
+      "source": "ndim = {key: val for key, val in zip(\n        branch_names,\n        [6, 6, 2]\n        )}"
+    },
+    {
+      "line": 188,
+      "end_line": 188,
+      "source": "nleaf_max = {key: 1 for key in branch_names}"
+    },
+    {
+      "line": 189,
+      "end_line": 189,
+      "source": "nleaf_min = {key: 1 for key in branch_names}"
+    },
+    {
+      "line": 191,
+      "end_line": 198,
+      "source": "priors = {\n    branch_names[0]: {},\n    branch_names[1]: {},\n    branch_names[2]: {\n        0: eryn.prior.uniform_dist(1e-14, 5e-11),\n        1: eryn.prior.uniform_dist(-1., 2.)\n    }\n}"
+    },
+    {
+      "line": 199,
+      "end_line": 201,
+      "source": "for i in range(6):\n    priors[branch_names[0]][i] = eryn.prior.uniform_dist(.75*3e-15, 1.25*3e-15)\n    priors[branch_names[1]][i] = eryn.prior.uniform_dist(.75*8e-12, 1.25*8e-12)"
+    }
+  ],
+  "adaptation": "Unchanged original imports/functions/prior nodes; verified cached globals supplied externally. No sampler run, pool or backend."
+}

@@ -1,0 +1,15 @@
+{
+  "started_utc": "2026-10-13T01:05:49.593816+00:00",
+  "argv": [
+    "bash",
+    "scripts/reproduction/run-taiji-sgwb-python.sh",
+    "scripts/reproduction/check-taiji-sgwb-likelihood.py"
+  ],
+  "pid": 2509,
+  "returncode": 1,
+  "wall_seconds": 12.687445959000115,
+  "peak_sampled_worker_rss_kib": 1701008,
+  "monitoring_error": null,
+  "resource_note": "RSS of the single CPU worker sampled approximately every 0.5 seconds; may miss shorter peaks.",
+  "scope": "Original spectral models and likelihood numerical checks; no MCMC updates or posterior sampling."
+}

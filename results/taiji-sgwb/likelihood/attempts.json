@@ -1,0 +1,21 @@
+{
+  "attempts": [
+    {
+      "directory": "attempts/determinant-warning-investigation",
+      "returncode": 1
+    },
+    {
+      "directory": "attempts/initial-interface-check",
+      "returncode": 1
+    },
+    {
+      "directory": "attempts/pre-determinant-diagnostics",
+      "returncode": 0
+    },
+    {
+      "directory": "attempts/report-serialization",
+      "returncode": 1
+    }
+  ],
+  "note": "Chronology and causes are described in the Stage 7 report. These are external verification issues; upstream source unchanged."
+}

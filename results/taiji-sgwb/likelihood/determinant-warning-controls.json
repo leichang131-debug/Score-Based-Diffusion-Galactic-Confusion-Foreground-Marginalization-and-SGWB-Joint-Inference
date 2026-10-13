@@ -1,0 +1,72 @@
+{
+  "numpy_version": "1.26.4",
+  "controls": [
+    {
+      "input": "real_identity",
+      "function": "det",
+      "warnings": [],
+      "all_returned_values_finite": true
+    },
+    {
+      "input": "real_identity",
+      "function": "slogdet",
+      "warnings": [],
+      "all_returned_values_finite": true
+    },
+    {
+      "input": "real_identity",
+      "function": "cholesky",
+      "warnings": [],
+      "all_returned_values_finite": true
+    },
+    {
+      "input": "complex_identity",
+      "function": "det",
+      "warnings": [
+        "divide by zero encountered in det",
+        "invalid value encountered in det"
+      ],
+      "all_returned_values_finite": true
+    },
+    {
+      "input": "complex_identity",
+      "function": "slogdet",
+      "warnings": [
+        "divide by zero encountered in slogdet",
+        "invalid value encountered in slogdet"
+      ],
+      "all_returned_values_finite": true
+    },
+    {
+      "input": "complex_identity",
+      "function": "cholesky",
+      "warnings": [],
+      "all_returned_values_finite": true
+    },
+    {
+      "input": "complex_positive_matrix",
+      "function": "det",
+      "warnings": [
+        "divide by zero encountered in det",
+        "invalid value encountered in det"
+      ],
+      "all_returned_values_finite": true
+    },
+    {
+      "input": "complex_positive_matrix",
+      "function": "slogdet",
+      "warnings": [
+        "divide by zero encountered in slogdet",
+        "invalid value encountered in slogdet"
+      ],
+      "all_returned_values_finite": true
+    },
+    {
+      "input": "complex_positive_matrix",
+      "function": "cholesky",
+      "warnings": [],
+      "all_returned_values_finite": true
+    }
+  ],
+  "conclusion": "Complex det/slogdet warnings also reproduce on a positive identity matrix, independent of physical data and scaling. Exact backend cause unresolved; original function retained."
+}

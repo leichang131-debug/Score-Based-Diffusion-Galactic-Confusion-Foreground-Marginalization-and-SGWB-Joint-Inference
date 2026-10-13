@@ -1,0 +1,54 @@
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/numpy/linalg/linalg.py:2180: RuntimeWarning: divide by zero encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/numpy/linalg/linalg.py:2180: RuntimeWarning: invalid value encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+template_truth: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+template_prior_0: LL=175290426.044534713, reference error=0, cond_max=3.13e+07
+template_prior_1: LL=174953540.819912344, reference error=2.98e-08, cond_max=2.77e+07
+template_prior_2: LL=173596685.166232765, reference error=0, cond_max=2.46e+07
+template_prior_3: LL=174976479.785141915, reference error=0, cond_max=3.5e+07
+template_prior_4: LL=175350222.228575081, reference error=2.98e-08, cond_max=3.28e+07
+template_prior_5: LL=175286053.304001778, reference error=0, cond_max=3.1e+07
+template_prior_6: LL=174702262.326865822, reference error=0, cond_max=2.91e+07
+template_prior_7: LL=175329298.950853884, reference error=0, cond_max=3.56e+07
+template_boundary_0: LL=175181701.318179309, reference error=0, cond_max=9.43e+06
+template_boundary_1: LL=172784162.820570618, reference error=0, cond_max=9.44e+06
+rj_powerlaw_1: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+rj_powerlaw_2: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+rj_powerlaw_4: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+rj_powerlaw_8: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+rj_powerlaw_16: LL=175388175.779523879, reference error=2.98e-08, cond_max=3.31e+07
+rj_curved_spectrum: LL=175388113.584982604, reference error=2.98e-08, cond_max=3.31e+07
+Traceback (most recent call last):
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/eryn/ensemble.py", line 1654, in __call__
+    out = self.f(*args_in, **kwargs_in)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/taiji-sgwb/demos/rj_nofg_28t.py", line 176, in log_likelihood
+    psd_acc = a_acc[:, None]**2 * spectrum_acc
+              ~~~~~^^^^^^^^^
+IndexError: invalid index to scalar variable.
+eryn: Exception while calling your likelihood function:
+  args added: [[array([3.13143974e-15, 2.96234073e-15, 3.36725927e-15, 3.42931003e-15,
+       3.26502284e-15, 2.96683546e-15]), array([7.73107738e-12, 6.56074401e-12, 8.64607732e-12, 7.67892447e-12,
+       8.59712549e-12, 6.41884363e-12]), array([ -2.650515, -11.76701 ]), array([-12.66666667, -10.86735333])]]
+  args: []
+  kwargs added: {}
+  kwargs: {}
+  exception:
+Traceback (most recent call last):
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-taiji-sgwb-likelihood.py", line 185, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/check-taiji-sgwb-likelihood.py", line 150, in main
+    t=time.perf_counter(); ll=sampler.compute_log_like(params,inds=inds)[0];seconds=time.perf_counter()-t
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/eryn/ensemble.py", line 1481, in compute_log_like
+    results = np.asarray(list(map_func(self.log_like_fn, args_in)))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/lib/python3.11/site-packages/eryn/ensemble.py", line 1654, in __call__
+    out = self.f(*args_in, **kwargs_in)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/external/taiji-sgwb/demos/rj_nofg_28t.py", line 176, in log_likelihood
+    psd_acc = a_acc[:, None]**2 * spectrum_acc
+              ~~~~~^^^^^^^^^
+IndexError: invalid index to scalar variable.

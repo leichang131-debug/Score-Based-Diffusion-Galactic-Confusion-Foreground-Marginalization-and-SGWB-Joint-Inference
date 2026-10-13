@@ -1,0 +1,954 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T01:09:54.443611+00:00",
+  "seed": 26010169,
+  "determinant_warning_note": "Unscaled NumPy complex det emits divide-by-zero/invalid RuntimeWarnings on this environment. All determinants are finite/positive and agree with scale-normalized slogdet; complex det/slogdet also warn on a unit identity matrix; Cholesky is warning-free. Exact backend cause is not established; original source is unchanged.",
+  "scope": "Both exact original likelihoods on complete 52 x 4426 grid; independent covariance/Cholesky checks, original priors and Eryn compute interfaces. No MCMC or posterior calibration.",
+  "checks": {
+    "template_nofg_28t_byte_identical_working_copy": true,
+    "rj_nofg_28t_byte_identical_working_copy": true,
+    "two_entry_data_arrays_identical": true,
+    "full_week_frequency_grid": true,
+    "response_link_order": true,
+    "powerlaw_formula": true,
+    "omega_to_strain_psd_formula": true,
+    "omega_psd_roundtrip": true,
+    "template_dimensions_and_original_priors": true,
+    "rj_dimensions_and_leaf_limits": true,
+    "template_truth_determinant_finite_positive": true,
+    "template_truth_determinant_scaled_reference": true,
+    "template_truth_scaled_determinant_finite": true,
+    "template_truth_finite": true,
+    "template_truth_independent_model": true,
+    "template_truth_cholesky_positive": true,
+    "template_truth_hermitian": true,
+    "template_truth_likelihood_reference": true,
+    "template_prior_0_determinant_finite_positive": true,
+    "template_prior_0_determinant_scaled_reference": true,
+    "template_prior_0_scaled_determinant_finite": true,
+    "template_prior_0_finite": true,
+    "template_prior_0_independent_model": true,
+    "template_prior_0_cholesky_positive": true,
+    "template_prior_0_hermitian": true,
+    "template_prior_0_likelihood_reference": true,
+    "template_prior_1_determinant_finite_positive": true,
+    "template_prior_1_determinant_scaled_reference": true,
+    "template_prior_1_scaled_determinant_finite": true,
+    "template_prior_1_finite": true,
+    "template_prior_1_independent_model": true,
+    "template_prior_1_cholesky_positive": true,
+    "template_prior_1_hermitian": true,
+    "template_prior_1_likelihood_reference": true,
+    "template_prior_2_determinant_finite_positive": true,
+    "template_prior_2_determinant_scaled_reference": true,
+    "template_prior_2_scaled_determinant_finite": true,
+    "template_prior_2_finite": true,
+    "template_prior_2_independent_model": true,
+    "template_prior_2_cholesky_positive": true,
+    "template_prior_2_hermitian": true,
+    "template_prior_2_likelihood_reference": true,
+    "template_prior_3_determinant_finite_positive": true,
+    "template_prior_3_determinant_scaled_reference": true,
+    "template_prior_3_scaled_determinant_finite": true,
+    "template_prior_3_finite": true,
+    "template_prior_3_independent_model": true,
+    "template_prior_3_cholesky_positive": true,
+    "template_prior_3_hermitian": true,
+    "template_prior_3_likelihood_reference": true,
+    "template_prior_4_determinant_finite_positive": true,
+    "template_prior_4_determinant_scaled_reference": true,
+    "template_prior_4_scaled_determinant_finite": true,
+    "template_prior_4_finite": true,
+    "template_prior_4_independent_model": true,
+    "template_prior_4_cholesky_positive": true,
+    "template_prior_4_hermitian": true,
+    "template_prior_4_likelihood_reference": true,
+    "template_prior_5_determinant_finite_positive": true,
+    "template_prior_5_determinant_scaled_reference": true,
+    "template_prior_5_scaled_determinant_finite": true,
+    "template_prior_5_finite": true,
+    "template_prior_5_independent_model": true,
+    "template_prior_5_cholesky_positive": true,
+    "template_prior_5_hermitian": true,
+    "template_prior_5_likelihood_reference": true,
+    "template_prior_6_determinant_finite_positive": true,
+    "template_prior_6_determinant_scaled_reference": true,
+    "template_prior_6_scaled_determinant_finite": true,
+    "template_prior_6_finite": true,
+    "template_prior_6_independent_model": true,
+    "template_prior_6_cholesky_positive": true,
+    "template_prior_6_hermitian": true,
+    "template_prior_6_likelihood_reference": true,
+    "template_prior_7_determinant_finite_positive": true,
+    "template_prior_7_determinant_scaled_reference": true,
+    "template_prior_7_scaled_determinant_finite": true,
+    "template_prior_7_finite": true,
+    "template_prior_7_independent_model": true,
+    "template_prior_7_cholesky_positive": true,
+    "template_prior_7_hermitian": true,
+    "template_prior_7_likelihood_reference": true,
+    "template_boundary_0_determinant_finite_positive": true,
+    "template_boundary_0_determinant_scaled_reference": true,
+    "template_boundary_0_scaled_determinant_finite": true,
+    "template_boundary_0_finite": true,
+    "template_boundary_0_independent_model": true,
+    "template_boundary_0_cholesky_positive": true,
+    "template_boundary_0_hermitian": true,
+    "template_boundary_0_likelihood_reference": true,
+    "template_boundary_1_determinant_finite_positive": true,
+    "template_boundary_1_determinant_scaled_reference": true,
+    "template_boundary_1_scaled_determinant_finite": true,
+    "template_boundary_1_finite": true,
+    "template_boundary_1_independent_model": true,
+    "template_boundary_1_cholesky_positive": true,
+    "template_boundary_1_hermitian": true,
+    "template_boundary_1_likelihood_reference": true,
+    "rj_1_knots_powerlaw_interpolation": true,
+    "rj_powerlaw_1_determinant_finite_positive": true,
+    "rj_powerlaw_1_determinant_scaled_reference": true,
+    "rj_powerlaw_1_scaled_determinant_finite": true,
+    "rj_powerlaw_1_finite": true,
+    "rj_powerlaw_1_independent_model": true,
+    "rj_powerlaw_1_cholesky_positive": true,
+    "rj_powerlaw_1_hermitian": true,
+    "rj_powerlaw_1_likelihood_reference": true,
+    "rj_1_template_equivalence": true,
+    "rj_1_unsorted_knots_supported": true,
+    "rj_2_knots_powerlaw_interpolation": true,
+    "rj_powerlaw_2_determinant_finite_positive": true,
+    "rj_powerlaw_2_determinant_scaled_reference": true,
+    "rj_powerlaw_2_scaled_determinant_finite": true,
+    "rj_powerlaw_2_finite": true,
+    "rj_powerlaw_2_independent_model": true,
+    "rj_powerlaw_2_cholesky_positive": true,
+    "rj_powerlaw_2_hermitian": true,
+    "rj_powerlaw_2_likelihood_reference": true,
+    "rj_2_template_equivalence": true,
+    "rj_2_unsorted_knots_supported": true,
+    "rj_4_knots_powerlaw_interpolation": true,
+    "rj_powerlaw_4_determinant_finite_positive": true,
+    "rj_powerlaw_4_determinant_scaled_reference": true,
+    "rj_powerlaw_4_scaled_determinant_finite": true,
+    "rj_powerlaw_4_finite": true,
+    "rj_powerlaw_4_independent_model": true,
+    "rj_powerlaw_4_cholesky_positive": true,
+    "rj_powerlaw_4_hermitian": true,
+    "rj_powerlaw_4_likelihood_reference": true,
+    "rj_4_template_equivalence": true,
+    "rj_4_unsorted_knots_supported": true,
+    "rj_8_knots_powerlaw_interpolation": true,
+    "rj_powerlaw_8_determinant_finite_positive": true,
+    "rj_powerlaw_8_determinant_scaled_reference": true,
+    "rj_powerlaw_8_scaled_determinant_finite": true,
+    "rj_powerlaw_8_finite": true,
+    "rj_powerlaw_8_independent_model": true,
+    "rj_powerlaw_8_cholesky_positive": true,
+    "rj_powerlaw_8_hermitian": true,
+    "rj_powerlaw_8_likelihood_reference": true,
+    "rj_8_template_equivalence": true,
+    "rj_8_unsorted_knots_supported": true,
+    "rj_16_knots_powerlaw_interpolation": true,
+    "rj_powerlaw_16_determinant_finite_positive": true,
+    "rj_powerlaw_16_determinant_scaled_reference": true,
+    "rj_powerlaw_16_scaled_determinant_finite": true,
+    "rj_powerlaw_16_finite": true,
+    "rj_powerlaw_16_independent_model": true,
+    "rj_powerlaw_16_cholesky_positive": true,
+    "rj_powerlaw_16_hermitian": true,
+    "rj_powerlaw_16_likelihood_reference": true,
+    "rj_16_template_equivalence": true,
+    "rj_16_unsorted_knots_supported": true,
+    "rj_prior_1_0_finite_or_original_rejection": true,
+    "rj_prior_1_0_determinant_finite_positive": true,
+    "rj_prior_1_0_determinant_scaled_reference": true,
+    "rj_prior_1_0_scaled_determinant_finite": true,
+    "rj_prior_1_0_finite": true,
+    "rj_prior_1_0_independent_model": true,
+    "rj_prior_1_0_cholesky_positive": true,
+    "rj_prior_1_0_hermitian": true,
+    "rj_prior_1_0_likelihood_reference": true,
+    "rj_prior_1_1_finite_or_original_rejection": true,
+    "rj_prior_1_1_determinant_finite_positive": true,
+    "rj_prior_1_1_determinant_scaled_reference": true,
+    "rj_prior_1_1_scaled_determinant_finite": true,
+    "rj_prior_1_1_finite": true,
+    "rj_prior_1_1_independent_model": true,
+    "rj_prior_1_1_cholesky_positive": true,
+    "rj_prior_1_1_hermitian": true,
+    "rj_prior_1_1_likelihood_reference": true,
+    "rj_prior_1_2_finite_or_original_rejection": true,
+    "rj_prior_2_0_finite_or_original_rejection": true,
+    "rj_prior_2_1_finite_or_original_rejection": true,
+    "rj_prior_2_2_finite_or_original_rejection": true,
+    "rj_prior_4_0_finite_or_original_rejection": true,
+    "rj_prior_4_1_finite_or_original_rejection": true,
+    "rj_prior_4_2_finite_or_original_rejection": true,
+    "rj_prior_8_0_finite_or_original_rejection": true,
+    "rj_prior_8_1_finite_or_original_rejection": true,
+    "rj_prior_8_2_finite_or_original_rejection": true,
+    "rj_prior_16_0_finite_or_original_rejection": true,
+    "rj_prior_16_1_finite_or_original_rejection": true,
+    "rj_prior_16_2_finite_or_original_rejection": true,
+    "rj_curved_spectrum_determinant_finite_positive": true,
+    "rj_curved_spectrum_determinant_scaled_reference": true,
+    "rj_curved_spectrum_scaled_determinant_finite": true,
+    "rj_curved_spectrum_finite": true,
+    "rj_curved_spectrum_independent_model": true,
+    "rj_curved_spectrum_cholesky_positive": true,
+    "rj_curved_spectrum_hermitian": true,
+    "rj_curved_spectrum_likelihood_reference": true,
+    "rj_out_of_range_original_sentinel": true,
+    "rj_quadratic_overshoot_rejected": true,
+    "duplicate_knot_failure_recorded": true,
+    "complex_contraction_orientation": true,
+    "identity_warning_control_all_outputs_finite": true,
+    "real_identity_warning_free": true,
+    "complex_identity_cholesky_warning_free": true,
+    "asimov_truth_beats_perturbed_model": true,
+    "template_nofg_28t_eryn_prior_interface": true,
+    "template_nofg_28t_eryn_likelihood_interface": true,
+    "rj_nofg_28t_eryn_prior_interface": true,
+    "rj_nofg_28t_eryn_likelihood_interface": true,
+    "conditional_scan_all_finite": true,
+    "all_original_19_file_hashes_preserved": true
+  },
+  "all_checks_pass": true,
+  "comparisons": [
+    {
+      "label": "template_truth",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 2.8542522398724586e-18,
+      "original_seconds": 0.11851341700003104,
+      "minimum_determinant_real": 4.706827039857843e-140,
+      "maximum_determinant_real": 1.7200904538885755e-117,
+      "max_determinant_relative_error": 6.821210263296962e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_0",
+      "original_log_likelihood": 175290426.0445347,
+      "reference_log_likelihood": 175290426.0445347,
+      "absolute_error": 0.0,
+      "model_relative_L2": 1.63810447885222e-18,
+      "original_seconds": 0.09163879199991243,
+      "minimum_determinant_real": 7.323707976120064e-140,
+      "maximum_determinant_real": 3.1295932996929485e-117,
+      "max_determinant_relative_error": 9.663381206337363e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -3465499.394671816,
+      "ll_coef": 382293276.99465203,
+      "minimum_scaled_eigenvalue": 3.350229857985367e-08,
+      "maximum_condition_number": 31323702.927396882,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_1",
+      "original_log_likelihood": 174953540.81991234,
+      "reference_log_likelihood": 174953540.8199123,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 3.8551354991412665e-17,
+      "original_seconds": 0.09149216699984208,
+      "minimum_determinant_real": 3.1198231183726028e-140,
+      "maximum_determinant_real": 2.2320233496316537e-117,
+      "max_determinant_relative_error": 6.252776074688882e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -3064239.5000583613,
+      "ll_coef": 381163959.76211214,
+      "minimum_scaled_eigenvalue": 3.7034387987589416e-08,
+      "maximum_condition_number": 27707899.120541476,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_2",
+      "original_log_likelihood": 173596685.16623276,
+      "reference_log_likelihood": 173596685.16623276,
+      "absolute_error": 0.0,
+      "model_relative_L2": 9.4098805965127e-17,
+      "original_seconds": 0.09115083399979085,
+      "minimum_determinant_real": 4.931609406383049e-140,
+      "maximum_determinant_real": 5.058915708191531e-116,
+      "max_determinant_relative_error": 6.252776074688882e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -1550728.3351795953,
+      "ll_coef": 376718088.7222177,
+      "minimum_scaled_eigenvalue": 4.113411604616771e-08,
+      "maximum_condition_number": 24615586.146580435,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_3",
+      "original_log_likelihood": 174976479.78514192,
+      "reference_log_likelihood": 174976479.78514192,
+      "absolute_error": 0.0,
+      "model_relative_L2": 3.659645441062618e-17,
+      "original_seconds": 0.09220441699994808,
+      "minimum_determinant_real": 6.521290838093604e-140,
+      "maximum_determinant_real": 3.247946172782313e-117,
+      "max_determinant_relative_error": 7.389644451905042e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -2749623.458457044,
+      "ll_coef": 380898918.1177809,
+      "minimum_scaled_eigenvalue": 2.862960119832149e-08,
+      "maximum_condition_number": 34991056.8968768,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_4",
+      "original_log_likelihood": 175350222.22857508,
+      "reference_log_likelihood": 175350222.22857505,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 2.3590761876556683e-18,
+      "original_seconds": 0.09051154100006897,
+      "minimum_determinant_real": 6.370996355004773e-140,
+      "maximum_determinant_real": 2.513848636239805e-117,
+      "max_determinant_relative_error": 6.821210263296962e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -3594711.344831607,
+      "ll_coef": 382551717.08362186,
+      "minimum_scaled_eigenvalue": 3.046063361176356e-08,
+      "maximum_condition_number": 32844392.360981308,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_5",
+      "original_log_likelihood": 175286053.30400178,
+      "reference_log_likelihood": 175286053.30400178,
+      "absolute_error": 0.0,
+      "model_relative_L2": 2.7272221605517834e-18,
+      "original_seconds": 0.09104116700018494,
+      "minimum_determinant_real": 2.5565367367527865e-140,
+      "maximum_determinant_real": 1.1710471714527099e-117,
+      "max_determinant_relative_error": 6.821210263296962e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -4563535.537762876,
+      "ll_coef": 383381863.0176453,
+      "minimum_scaled_eigenvalue": 3.2436014531230025e-08,
+      "maximum_condition_number": 31026206.520020705,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_6",
+      "original_log_likelihood": 174702262.32686582,
+      "reference_log_likelihood": 174702262.32686582,
+      "absolute_error": 0.0,
+      "model_relative_L2": 5.2906029182926606e-17,
+      "original_seconds": 0.09087037499989492,
+      "minimum_determinant_real": 4.622109760029288e-140,
+      "maximum_determinant_real": 3.1561689607514187e-117,
+      "max_determinant_relative_error": 7.958078640513122e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -2664150.9268806265,
+      "ll_coef": 380220822.2887321,
+      "minimum_scaled_eigenvalue": 3.4615070560224936e-08,
+      "maximum_condition_number": 29057646.402040005,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_7",
+      "original_log_likelihood": 175329298.95085388,
+      "reference_log_likelihood": 175329298.95085388,
+      "absolute_error": 0.0,
+      "model_relative_L2": 1.8545843158242423e-18,
+      "original_seconds": 0.09072629199999938,
+      "minimum_determinant_real": 4.7983938449016665e-140,
+      "maximum_determinant_real": 1.80895835405244e-117,
+      "max_determinant_relative_error": 5.115907697472721e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -4137074.909671139,
+      "ll_coef": 383048862.4412947,
+      "minimum_scaled_eigenvalue": 3.103039052030971e-08,
+      "maximum_condition_number": 35606907.88199119,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_boundary_0",
+      "original_log_likelihood": 175181701.3181793,
+      "reference_log_likelihood": 175181701.3181793,
+      "absolute_error": 0.0,
+      "model_relative_L2": 1.5179179182372272e-21,
+      "original_seconds": 0.09100429099999019,
+      "minimum_determinant_real": 1.999674228680822e-140,
+      "maximum_determinant_real": 7.665728353806484e-117,
+      "max_determinant_relative_error": 1.7053025658242404e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -2934002.9524265896,
+      "ll_coef": 381526810.80885154,
+      "minimum_scaled_eigenvalue": 1.0608724419964226e-07,
+      "maximum_condition_number": 9434388.596048912,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_boundary_1",
+      "original_log_likelihood": 172784162.82057062,
+      "reference_log_likelihood": 172784162.82057062,
+      "absolute_error": 0.0,
+      "model_relative_L2": 9.727061172428146e-17,
+      "original_seconds": 0.09172749999993357,
+      "minimum_determinant_real": 2.0005143942486867e-140,
+      "maximum_determinant_real": 2.721693553253303e-115,
+      "max_determinant_relative_error": 2.2737367544323206e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -1068080.7138732441,
+      "ll_coef": 374479463.6559178,
+      "minimum_scaled_eigenvalue": 1.0606505061031655e-07,
+      "maximum_condition_number": 9436359.755338203,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_powerlaw_1",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 3.02240037146939e-18,
+      "original_seconds": 0.0924532920000729,
+      "minimum_determinant_real": 4.706827039857843e-140,
+      "maximum_determinant_real": 1.7200904538885755e-117,
+      "max_determinant_relative_error": 6.821210263296962e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_powerlaw_2",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 2.8356785175155135e-18,
+      "original_seconds": 0.09440924999989875,
+      "minimum_determinant_real": 4.706827039857843e-140,
+      "maximum_determinant_real": 1.7200904538885755e-117,
+      "max_determinant_relative_error": 6.821210263296962e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_powerlaw_4",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 3.0760826799027992e-18,
+      "original_seconds": 0.09083600000008119,
+      "minimum_determinant_real": 4.706827039857843e-140,
+      "maximum_determinant_real": 1.7200904538885755e-117,
+      "max_determinant_relative_error": 6.821210263296962e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_powerlaw_8",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 3.0331025555485863e-18,
+      "original_seconds": 0.09163962499997069,
+      "minimum_determinant_real": 4.706827039857843e-140,
+      "maximum_determinant_real": 1.7200904538885755e-117,
+      "max_determinant_relative_error": 6.821210263296962e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_powerlaw_16",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 2.9921631284780676e-18,
+      "original_seconds": 0.08899054200014689,
+      "minimum_determinant_real": 4.706827039857843e-140,
+      "maximum_determinant_real": 1.7200904538885755e-117,
+      "max_determinant_relative_error": 6.821210263296962e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_prior_1_0",
+      "original_log_likelihood": 175282939.4294119,
+      "reference_log_likelihood": 175282939.42941192,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 6.3981974173519e-18,
+      "original_seconds": 0.09192091700015226,
+      "minimum_determinant_real": 2.770148806032056e-140,
+      "maximum_determinant_real": 2.2963030233994915e-117,
+      "max_determinant_relative_error": 5.115907697472721e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -3473024.8731571846,
+      "ll_coef": 382284622.8229836,
+      "minimum_scaled_eigenvalue": 4.724499064878256e-08,
+      "maximum_condition_number": 22369216.29993772,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_prior_1_1",
+      "original_log_likelihood": 174909962.20467106,
+      "reference_log_likelihood": 174909962.20467106,
+      "absolute_error": 0.0,
+      "model_relative_L2": 6.274561259504826e-18,
+      "original_seconds": 0.09228224999992563,
+      "minimum_determinant_real": 2.2681577517451243e-140,
+      "maximum_determinant_real": 1.341821291577164e-117,
+      "max_determinant_relative_error": 5.115907697472721e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -3972373.566061155,
+      "ll_coef": 381977914.1838796,
+      "minimum_scaled_eigenvalue": 4.13339135440804e-08,
+      "maximum_condition_number": 27042777.85553727,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_curved_spectrum",
+      "original_log_likelihood": 175388113.5849826,
+      "reference_log_likelihood": 175388113.58498263,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 2.8736486810196917e-18,
+      "original_seconds": 0.093132125000011,
+      "minimum_determinant_real": 4.706835660659792e-140,
+      "maximum_determinant_real": 1.719876593303788e-117,
+      "max_determinant_relative_error": 5.685452109105427e-13,
+      "raw_determinant_warning_count": 2,
+      "normalized_determinant_warning_count": 4,
+      "ll_exp": -4136448.3167728046,
+      "ll_coef": 383175342.71692383,
+      "minimum_scaled_eigenvalue": 3.045525619720445e-08,
+      "maximum_condition_number": 33101024.781886887,
+      "maximum_hermitian_error": 0.0
+    }
+  ],
+  "rj_prior_probes": [
+    {
+      "knots": 1,
+      "rep": 0,
+      "original_bounds_rejection": false,
+      "value": 175282939.4294119
+    },
+    {
+      "knots": 1,
+      "rep": 1,
+      "original_bounds_rejection": false,
+      "value": 174909962.20467106
+    },
+    {
+      "knots": 1,
+      "rep": 2,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 2,
+      "rep": 0,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 2,
+      "rep": 1,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 2,
+      "rep": 2,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 4,
+      "rep": 0,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 4,
+      "rep": 1,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 4,
+      "rep": 2,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 8,
+      "rep": 0,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 8,
+      "rep": 1,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 8,
+      "rep": 2,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 16,
+      "rep": 0,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 16,
+      "rep": 1,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    },
+    {
+      "knots": 16,
+      "rep": 2,
+      "original_bounds_rejection": true,
+      "value": -1e+50
+    }
+  ],
+  "interfaces": {
+    "template_nofg_28t": {
+      "nwalkers": 32,
+      "ntemps": 1,
+      "active_knot_leaves": null,
+      "log_like_shape": [
+        1,
+        32
+      ],
+      "maximum_error_from_direct_truth": 0.0,
+      "evaluation_seconds": 2.944266333000087,
+      "MCMC_updates": 0,
+      "original_RJ_mode_enabled": false,
+      "inactive_knot_storage": null
+    },
+    "rj_nofg_28t": {
+      "nwalkers": 32,
+      "ntemps": 1,
+      "active_knot_leaves": 1,
+      "log_like_shape": [
+        1,
+        32
+      ],
+      "maximum_error_from_direct_truth": 0.0,
+      "evaluation_seconds": 2.949242750000167,
+      "MCMC_updates": 0,
+      "original_RJ_mode_enabled": true,
+      "inactive_knot_storage": "zero placeholders masked out by original Eryn interface"
+    }
+  },
+  "inputs": {
+    "data/processed/taiji-sgwb/response/response.h5": {
+      "sha256": "4e8f12c8371a6afa84fdb7f7b3401968d3d23c9433d201cbd14d5a8e0cd2ca13",
+      "bytes": 430959976
+    },
+    "data/processed/taiji-sgwb/preprocessing/template_nofg_28t/preprocessing.h5": {
+      "sha256": "b519ba3cc8e3a6d05f16c22a2d6df2d27cab315c6c3c41693434b8a94f85be62",
+      "bytes": 222819488
+    },
+    "data/processed/taiji-sgwb/preprocessing/rj_nofg_28t/preprocessing.h5": {
+      "sha256": "4fa60c5012bafb79db7b41151839a344e889dcfa613c9fe263ccc698bba34285",
+      "bytes": 222819488
+    }
+  },
+  "truth_parameters": {
+    "link_order": [
+      "12",
+      "13",
+      "23",
+      "21",
+      "31",
+      "32"
+    ],
+    "acc": [
+      3.1314397410270625e-15,
+      2.9623407294826266e-15,
+      3.367259268208045e-15,
+      3.429310029752728e-15,
+      3.2650228449374037e-15,
+      2.9668354581461654e-15
+    ],
+    "ro": [
+      7.731077380570489e-12,
+      6.560744006423656e-12,
+      8.64607732297196e-12,
+      7.678924472883663e-12,
+      8.597125486567089e-12,
+      6.418843634624394e-12
+    ],
+    "omega0": 1e-12,
+    "alpha": 0.6666666666666666
+  },
+  "conjugation_control": {
+    "original_elementwise": 5.659656501927796,
+    "transpose_trace_reference": 5.659656501927795,
+    "incorrect_raw_trace": 7.510339992989836
+  },
+  "truth_covariance_diagonal_diagnostic": {
+    "A": {
+      "mean_data_model_diagonal_ratio": 0.9999547841024129,
+      "median_data_model_diagonal_ratio": 0.8476908089751505
+    },
+    "E": {
+      "mean_data_model_diagonal_ratio": 1.0002161104391387,
+      "median_data_model_diagonal_ratio": 0.8514832264041234
+    },
+    "T": {
+      "mean_data_model_diagonal_ratio": 1.0006430239656248,
+      "median_data_model_diagonal_ratio": 0.8508957453936568
+    }
+  },
+  "conditional_scan": {
+    "points": 13,
+    "scan_max_omega0": 9.486832980505137e-13,
+    "truth_omega0": 1e-12,
+    "median_original_call_seconds": 0.09181224999997539,
+    "note": "Noise and slope fixed at injection; finite realization may shift maximum. This is not a marginalized posterior or parameter recovery verdict."
+  },
+  "observations": [
+    {
+      "kind": "original_input_limit",
+      "issue": "Exactly duplicated knot frequencies raise ValueError in original quadratic interpolation; no exception handling exists in original likelihood. Continuous prior probability is zero, but external starts must use distinct knots. Near-duplicate knots can overshoot and receive the original -1e50 sentinel.",
+      "duplicate_error": "Expect x to not have duplicates",
+      "overshoot_log10_range": [
+        -53.045952509570284,
+        -8.980491283773627
+      ]
+    }
+  ],
+  "original_runtime_warnings": [
+    {
+      "label": "template_truth",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_truth",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_0",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_0",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_1",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_1",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_2",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_2",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_3",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_3",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_4",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_4",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_5",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_5",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_6",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_6",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_7",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_7",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_boundary_0",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_boundary_0",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_boundary_1",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_boundary_1",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_1",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_1",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_2",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_2",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_4",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_4",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_8",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_8",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_16",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_16",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_prior_1_0",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_prior_1_0",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_prior_1_1",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_prior_1_1",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_curved_spectrum",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_curved_spectrum",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    }
+  ],
+  "elapsed_seconds": 17.34805591700001
+}

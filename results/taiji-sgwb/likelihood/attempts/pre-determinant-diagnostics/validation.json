@@ -1,0 +1,635 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-13T01:06:44.348305+00:00",
+  "seed": 26010169,
+  "scope": "Both exact original likelihoods on complete 52 x 4426 grid; independent covariance/Cholesky checks, original priors and Eryn compute interfaces. No MCMC or posterior calibration.",
+  "checks": {
+    "template_nofg_28t_byte_identical_working_copy": true,
+    "rj_nofg_28t_byte_identical_working_copy": true,
+    "two_entry_data_arrays_identical": true,
+    "full_week_frequency_grid": true,
+    "response_link_order": true,
+    "powerlaw_formula": true,
+    "omega_to_strain_psd_formula": true,
+    "omega_psd_roundtrip": true,
+    "template_dimensions_and_original_priors": true,
+    "rj_dimensions_and_leaf_limits": true,
+    "template_truth_finite": true,
+    "template_truth_independent_model": true,
+    "template_truth_cholesky_positive": true,
+    "template_truth_hermitian": true,
+    "template_truth_likelihood_reference": true,
+    "template_prior_0_finite": true,
+    "template_prior_0_independent_model": true,
+    "template_prior_0_cholesky_positive": true,
+    "template_prior_0_hermitian": true,
+    "template_prior_0_likelihood_reference": true,
+    "template_prior_1_finite": true,
+    "template_prior_1_independent_model": true,
+    "template_prior_1_cholesky_positive": true,
+    "template_prior_1_hermitian": true,
+    "template_prior_1_likelihood_reference": true,
+    "template_prior_2_finite": true,
+    "template_prior_2_independent_model": true,
+    "template_prior_2_cholesky_positive": true,
+    "template_prior_2_hermitian": true,
+    "template_prior_2_likelihood_reference": true,
+    "template_prior_3_finite": true,
+    "template_prior_3_independent_model": true,
+    "template_prior_3_cholesky_positive": true,
+    "template_prior_3_hermitian": true,
+    "template_prior_3_likelihood_reference": true,
+    "template_prior_4_finite": true,
+    "template_prior_4_independent_model": true,
+    "template_prior_4_cholesky_positive": true,
+    "template_prior_4_hermitian": true,
+    "template_prior_4_likelihood_reference": true,
+    "template_prior_5_finite": true,
+    "template_prior_5_independent_model": true,
+    "template_prior_5_cholesky_positive": true,
+    "template_prior_5_hermitian": true,
+    "template_prior_5_likelihood_reference": true,
+    "template_prior_6_finite": true,
+    "template_prior_6_independent_model": true,
+    "template_prior_6_cholesky_positive": true,
+    "template_prior_6_hermitian": true,
+    "template_prior_6_likelihood_reference": true,
+    "template_prior_7_finite": true,
+    "template_prior_7_independent_model": true,
+    "template_prior_7_cholesky_positive": true,
+    "template_prior_7_hermitian": true,
+    "template_prior_7_likelihood_reference": true,
+    "template_boundary_0_finite": true,
+    "template_boundary_0_independent_model": true,
+    "template_boundary_0_cholesky_positive": true,
+    "template_boundary_0_hermitian": true,
+    "template_boundary_0_likelihood_reference": true,
+    "template_boundary_1_finite": true,
+    "template_boundary_1_independent_model": true,
+    "template_boundary_1_cholesky_positive": true,
+    "template_boundary_1_hermitian": true,
+    "template_boundary_1_likelihood_reference": true,
+    "rj_1_knots_powerlaw_interpolation": true,
+    "rj_powerlaw_1_finite": true,
+    "rj_powerlaw_1_independent_model": true,
+    "rj_powerlaw_1_cholesky_positive": true,
+    "rj_powerlaw_1_hermitian": true,
+    "rj_powerlaw_1_likelihood_reference": true,
+    "rj_1_template_equivalence": true,
+    "rj_1_unsorted_knots_supported": true,
+    "rj_2_knots_powerlaw_interpolation": true,
+    "rj_powerlaw_2_finite": true,
+    "rj_powerlaw_2_independent_model": true,
+    "rj_powerlaw_2_cholesky_positive": true,
+    "rj_powerlaw_2_hermitian": true,
+    "rj_powerlaw_2_likelihood_reference": true,
+    "rj_2_template_equivalence": true,
+    "rj_2_unsorted_knots_supported": true,
+    "rj_4_knots_powerlaw_interpolation": true,
+    "rj_powerlaw_4_finite": true,
+    "rj_powerlaw_4_independent_model": true,
+    "rj_powerlaw_4_cholesky_positive": true,
+    "rj_powerlaw_4_hermitian": true,
+    "rj_powerlaw_4_likelihood_reference": true,
+    "rj_4_template_equivalence": true,
+    "rj_4_unsorted_knots_supported": true,
+    "rj_8_knots_powerlaw_interpolation": true,
+    "rj_powerlaw_8_finite": true,
+    "rj_powerlaw_8_independent_model": true,
+    "rj_powerlaw_8_cholesky_positive": true,
+    "rj_powerlaw_8_hermitian": true,
+    "rj_powerlaw_8_likelihood_reference": true,
+    "rj_8_template_equivalence": true,
+    "rj_8_unsorted_knots_supported": true,
+    "rj_16_knots_powerlaw_interpolation": true,
+    "rj_powerlaw_16_finite": true,
+    "rj_powerlaw_16_independent_model": true,
+    "rj_powerlaw_16_cholesky_positive": true,
+    "rj_powerlaw_16_hermitian": true,
+    "rj_powerlaw_16_likelihood_reference": true,
+    "rj_16_template_equivalence": true,
+    "rj_16_unsorted_knots_supported": true,
+    "rj_curved_spectrum_finite": true,
+    "rj_curved_spectrum_independent_model": true,
+    "rj_curved_spectrum_cholesky_positive": true,
+    "rj_curved_spectrum_hermitian": true,
+    "rj_curved_spectrum_likelihood_reference": true,
+    "rj_out_of_range_original_sentinel": true,
+    "rj_quadratic_overshoot_rejected": true,
+    "duplicate_knot_failure_recorded": true,
+    "complex_contraction_orientation": true,
+    "asimov_truth_beats_perturbed_model": true,
+    "template_nofg_28t_eryn_prior_interface": true,
+    "template_nofg_28t_eryn_likelihood_interface": true,
+    "rj_nofg_28t_eryn_prior_interface": true,
+    "rj_nofg_28t_eryn_likelihood_interface": true,
+    "conditional_scan_all_finite": true,
+    "all_original_19_file_hashes_preserved": true
+  },
+  "all_checks_pass": true,
+  "comparisons": [
+    {
+      "label": "template_truth",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 2.8542522398724586e-18,
+      "original_seconds": 0.10665495800003555,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_0",
+      "original_log_likelihood": 175290426.0445347,
+      "reference_log_likelihood": 175290426.0445347,
+      "absolute_error": 0.0,
+      "model_relative_L2": 1.63810447885222e-18,
+      "original_seconds": 0.0850313329999608,
+      "ll_exp": -3465499.394671816,
+      "ll_coef": 382293276.99465203,
+      "minimum_scaled_eigenvalue": 3.350229857985367e-08,
+      "maximum_condition_number": 31323702.927396882,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_1",
+      "original_log_likelihood": 174953540.81991234,
+      "reference_log_likelihood": 174953540.8199123,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 3.8551354991412665e-17,
+      "original_seconds": 0.08506812500013439,
+      "ll_exp": -3064239.5000583613,
+      "ll_coef": 381163959.76211214,
+      "minimum_scaled_eigenvalue": 3.7034387987589416e-08,
+      "maximum_condition_number": 27707899.120541476,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_2",
+      "original_log_likelihood": 173596685.16623276,
+      "reference_log_likelihood": 173596685.16623276,
+      "absolute_error": 0.0,
+      "model_relative_L2": 9.4098805965127e-17,
+      "original_seconds": 0.08523808299992197,
+      "ll_exp": -1550728.3351795953,
+      "ll_coef": 376718088.7222177,
+      "minimum_scaled_eigenvalue": 4.113411604616771e-08,
+      "maximum_condition_number": 24615586.146580435,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_3",
+      "original_log_likelihood": 174976479.78514192,
+      "reference_log_likelihood": 174976479.78514192,
+      "absolute_error": 0.0,
+      "model_relative_L2": 3.659645441062618e-17,
+      "original_seconds": 0.08336108299999978,
+      "ll_exp": -2749623.458457044,
+      "ll_coef": 380898918.1177809,
+      "minimum_scaled_eigenvalue": 2.862960119832149e-08,
+      "maximum_condition_number": 34991056.8968768,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_4",
+      "original_log_likelihood": 175350222.22857508,
+      "reference_log_likelihood": 175350222.22857505,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 2.3590761876556683e-18,
+      "original_seconds": 0.08488383399981103,
+      "ll_exp": -3594711.344831607,
+      "ll_coef": 382551717.08362186,
+      "minimum_scaled_eigenvalue": 3.046063361176356e-08,
+      "maximum_condition_number": 32844392.360981308,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_5",
+      "original_log_likelihood": 175286053.30400178,
+      "reference_log_likelihood": 175286053.30400178,
+      "absolute_error": 0.0,
+      "model_relative_L2": 2.7272221605517834e-18,
+      "original_seconds": 0.08510133400000086,
+      "ll_exp": -4563535.537762876,
+      "ll_coef": 383381863.0176453,
+      "minimum_scaled_eigenvalue": 3.2436014531230025e-08,
+      "maximum_condition_number": 31026206.520020705,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_6",
+      "original_log_likelihood": 174702262.32686582,
+      "reference_log_likelihood": 174702262.32686582,
+      "absolute_error": 0.0,
+      "model_relative_L2": 5.2906029182926606e-17,
+      "original_seconds": 0.08465654199994788,
+      "ll_exp": -2664150.9268806265,
+      "ll_coef": 380220822.2887321,
+      "minimum_scaled_eigenvalue": 3.4615070560224936e-08,
+      "maximum_condition_number": 29057646.402040005,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_prior_7",
+      "original_log_likelihood": 175329298.95085388,
+      "reference_log_likelihood": 175329298.95085388,
+      "absolute_error": 0.0,
+      "model_relative_L2": 1.8545843158242423e-18,
+      "original_seconds": 0.08441791699988244,
+      "ll_exp": -4137074.909671139,
+      "ll_coef": 383048862.4412947,
+      "minimum_scaled_eigenvalue": 3.103039052030971e-08,
+      "maximum_condition_number": 35606907.88199119,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_boundary_0",
+      "original_log_likelihood": 175181701.3181793,
+      "reference_log_likelihood": 175181701.3181793,
+      "absolute_error": 0.0,
+      "model_relative_L2": 1.5179179182372272e-21,
+      "original_seconds": 0.08702866700014056,
+      "ll_exp": -2934002.9524265896,
+      "ll_coef": 381526810.80885154,
+      "minimum_scaled_eigenvalue": 1.0608724419964226e-07,
+      "maximum_condition_number": 9434388.596048912,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "template_boundary_1",
+      "original_log_likelihood": 172784162.82057062,
+      "reference_log_likelihood": 172784162.82057062,
+      "absolute_error": 0.0,
+      "model_relative_L2": 9.727061172428146e-17,
+      "original_seconds": 0.08670095899992702,
+      "ll_exp": -1068080.7138732441,
+      "ll_coef": 374479463.6559178,
+      "minimum_scaled_eigenvalue": 1.0606505061031655e-07,
+      "maximum_condition_number": 9436359.755338203,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_powerlaw_1",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 3.02240037146939e-18,
+      "original_seconds": 0.0888276670000323,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_powerlaw_2",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 2.8356785175155135e-18,
+      "original_seconds": 0.09092337500010217,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_powerlaw_4",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 3.0760826799027992e-18,
+      "original_seconds": 0.08855037499984064,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_powerlaw_8",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 3.0331025555485863e-18,
+      "original_seconds": 0.08735716700016383,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_powerlaw_16",
+      "original_log_likelihood": 175388175.77952388,
+      "reference_log_likelihood": 175388175.7795239,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 2.9921631284780676e-18,
+      "original_seconds": 0.08714416699990579,
+      "ll_exp": -4144620.2942852965,
+      "ll_coef": 383183649.1057694,
+      "minimum_scaled_eigenvalue": 3.045528324027391e-08,
+      "maximum_condition_number": 33100995.57793939,
+      "maximum_hermitian_error": 0.0
+    },
+    {
+      "label": "rj_curved_spectrum",
+      "original_log_likelihood": 175388113.5849826,
+      "reference_log_likelihood": 175388113.58498263,
+      "absolute_error": 2.9802322387695312e-08,
+      "model_relative_L2": 2.8736486810196917e-18,
+      "original_seconds": 0.0885545829999046,
+      "ll_exp": -4136448.3167728046,
+      "ll_coef": 383175342.71692383,
+      "minimum_scaled_eigenvalue": 3.045525619720445e-08,
+      "maximum_condition_number": 33101024.781886887,
+      "maximum_hermitian_error": 0.0
+    }
+  ],
+  "interfaces": {
+    "template_nofg_28t": {
+      "nwalkers": 32,
+      "ntemps": 1,
+      "active_knot_leaves": null,
+      "log_like_shape": [
+        1,
+        32
+      ],
+      "maximum_error_from_direct_truth": 0.0,
+      "evaluation_seconds": 2.762943082999982,
+      "MCMC_updates": 0,
+      "original_RJ_mode_enabled": false,
+      "inactive_knot_storage": null
+    },
+    "rj_nofg_28t": {
+      "nwalkers": 32,
+      "ntemps": 1,
+      "active_knot_leaves": 1,
+      "log_like_shape": [
+        1,
+        32
+      ],
+      "maximum_error_from_direct_truth": 0.0,
+      "evaluation_seconds": 2.722006125000007,
+      "MCMC_updates": 0,
+      "original_RJ_mode_enabled": true,
+      "inactive_knot_storage": "zero placeholders masked out by original Eryn interface"
+    }
+  },
+  "inputs": {
+    "data/processed/taiji-sgwb/response/response.h5": {
+      "sha256": "4e8f12c8371a6afa84fdb7f7b3401968d3d23c9433d201cbd14d5a8e0cd2ca13",
+      "bytes": 430959976
+    },
+    "data/processed/taiji-sgwb/preprocessing/template_nofg_28t/preprocessing.h5": {
+      "sha256": "b519ba3cc8e3a6d05f16c22a2d6df2d27cab315c6c3c41693434b8a94f85be62",
+      "bytes": 222819488
+    },
+    "data/processed/taiji-sgwb/preprocessing/rj_nofg_28t/preprocessing.h5": {
+      "sha256": "4fa60c5012bafb79db7b41151839a344e889dcfa613c9fe263ccc698bba34285",
+      "bytes": 222819488
+    }
+  },
+  "truth_parameters": {
+    "link_order": [
+      "12",
+      "13",
+      "23",
+      "21",
+      "31",
+      "32"
+    ],
+    "acc": [
+      3.1314397410270625e-15,
+      2.9623407294826266e-15,
+      3.367259268208045e-15,
+      3.429310029752728e-15,
+      3.2650228449374037e-15,
+      2.9668354581461654e-15
+    ],
+    "ro": [
+      7.731077380570489e-12,
+      6.560744006423656e-12,
+      8.64607732297196e-12,
+      7.678924472883663e-12,
+      8.597125486567089e-12,
+      6.418843634624394e-12
+    ],
+    "omega0": 1e-12,
+    "alpha": 0.6666666666666666
+  },
+  "conjugation_control": {
+    "original_elementwise": 5.659656501927796,
+    "transpose_trace_reference": 5.659656501927795,
+    "incorrect_raw_trace": 7.510339992989836
+  },
+  "truth_covariance_diagonal_diagnostic": {
+    "A": {
+      "mean_data_model_diagonal_ratio": 0.9999547841024129,
+      "median_data_model_diagonal_ratio": 0.8476908089751505
+    },
+    "E": {
+      "mean_data_model_diagonal_ratio": 1.0002161104391387,
+      "median_data_model_diagonal_ratio": 0.8514832264041234
+    },
+    "T": {
+      "mean_data_model_diagonal_ratio": 1.0006430239656248,
+      "median_data_model_diagonal_ratio": 0.8508957453936568
+    }
+  },
+  "conditional_scan": {
+    "points": 13,
+    "scan_max_omega0": 9.486832980505137e-13,
+    "truth_omega0": 1e-12,
+    "median_original_call_seconds": 0.08572174999994786,
+    "note": "Noise and slope fixed at injection; finite realization may shift maximum. This is not a marginalized posterior or parameter recovery verdict."
+  },
+  "observations": [
+    {
+      "kind": "original_input_limit",
+      "issue": "Exactly duplicated knot frequencies raise ValueError in original quadratic interpolation; no exception handling exists in original likelihood. Continuous prior probability is zero, but external starts must use distinct knots. Near-duplicate knots can overshoot and receive the original -1e50 sentinel.",
+      "duplicate_error": "Expect x to not have duplicates",
+      "overshoot_log10_range": [
+        -53.045952509570284,
+        -8.980491283773627
+      ]
+    }
+  ],
+  "original_runtime_warnings": [
+    {
+      "label": "template_truth",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_truth",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_0",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_0",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_1",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_1",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_2",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_2",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_3",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_3",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_4",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_4",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_5",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_5",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_6",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_6",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_prior_7",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_prior_7",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_boundary_0",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_boundary_0",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "template_boundary_1",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "template_boundary_1",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_1",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_1",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_2",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_2",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_4",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_4",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_8",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_8",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_16",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_powerlaw_16",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    },
+    {
+      "label": "rj_curved_spectrum",
+      "category": "RuntimeWarning",
+      "message": "divide by zero encountered in det"
+    },
+    {
+      "label": "rj_curved_spectrum",
+      "category": "RuntimeWarning",
+      "message": "invalid value encountered in det"
+    }
+  ],
+  "elapsed_seconds": 14.125974916999894
+}

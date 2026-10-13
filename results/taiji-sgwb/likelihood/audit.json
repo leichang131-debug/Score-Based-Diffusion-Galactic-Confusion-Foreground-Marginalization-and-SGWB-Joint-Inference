@@ -1,0 +1,33 @@
+{
+  "scope": "Evidence/source/cache integrity only; no physical likelihood recomputation or posterior sampling.",
+  "checks": {
+    "worker_success": true,
+    "all_numerical_checks_pass": true,
+    "real_local_resource_samples": true,
+    "no_MCMC_claim": true,
+    "all_19_original_files_preserved": true,
+    "original_source_clean": true,
+    "original_pin": true,
+    "template_nofg_28t_same_name_identical_source": true,
+    "template_nofg_28t_exact_original_AST_nodes": true,
+    "template_nofg_28t_original_likelihood_in_record": true,
+    "template_nofg_28t_actual_Eryn_interface": true,
+    "rj_nofg_28t_same_name_identical_source": true,
+    "rj_nofg_28t_exact_original_AST_nodes": true,
+    "rj_nofg_28t_original_likelihood_in_record": true,
+    "rj_nofg_28t_actual_Eryn_interface": true,
+    "response_unchanged_input_cache": true,
+    "response_bulk_cache_ignored": true,
+    "template_nofg_28t_unchanged_input_cache": true,
+    "template_nofg_28t_bulk_cache_ignored": true,
+    "rj_nofg_28t_unchanged_input_cache": true,
+    "rj_nofg_28t_bulk_cache_ignored": true,
+    "CSV_matches_validation": true,
+    "portable_spectra_finite": true,
+    "portable_scan_count": true,
+    "identity_warning_evidence": true,
+    "initial_interface_failure_retained": true,
+    "determinant_investigation_retained": true
+  },
+  "all_checks_pass": true
+}
