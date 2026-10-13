@@ -1,6 +1,5 @@
 {
-  "status": "RUNNING",
+  "status": "STOPPED_AT_CHECKPOINT",
   "sampling_complete": false,
-  "formal_posterior_available": false,
-  "note": "First 10 real burn transitions complete; persistent original schedule is being resumed. Published progress is a snapshot."
+  "note": "Checkpoint saved; original schedule not finished."
 }

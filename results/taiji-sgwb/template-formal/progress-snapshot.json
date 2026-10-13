@@ -1,7 +1,7 @@
 {
-  "created_utc": "2026-10-13T06:32:17.086754+00:00",
-  "status": "RUNNING",
-  "phase": "burn-in",
+  "created_utc": "2026-10-13T06:52:42.113242+00:00",
+  "status": "STOPPED_AT_CHECKPOINT",
+  "phase": "checkpoint-stop",
   "pid": 7592,
   "pool_pids": [
     7607,
@@ -9,21 +9,21 @@
     7609,
     7610
   ],
-  "burn_done": 14,
+  "burn_done": 108,
   "production_saved": 0,
   "production_target": 350,
-  "transitions_done": 14,
+  "transitions_done": 108,
   "transitions_target": 5200,
-  "latest_seconds": 8.697563208999782,
-  "latest_likelihood_calls": 266,
-  "process_likelihood_calls": 1048,
-  "known_determinant_warning_count": 2096,
-  "process_wall_seconds": 34.929489541000294,
+  "latest_seconds": 0,
+  "latest_likelihood_calls": 0,
+  "process_likelihood_calls": 28693,
+  "known_determinant_warning_count": 57386,
+  "process_wall_seconds": 1259.9518001659999,
   "checkpoint": {
-    "directory": "checkpoints/burn-0010-production-0000",
-    "state_json_sha256": "76edda14d59d7a46d8f39d58ab9e4970aa942ce4682e2056839334d50449106d"
+    "directory": "checkpoints/burn-0108-production-0000",
+    "state_json_sha256": "dc1414346c42bde53164107f32e5c2bc051f2e8bb03a01e6b065fdf7394b4e29"
   },
-  "remaining_transitions": 5186,
+  "remaining_transitions": 5092,
   "convergence": "NOT ASSESSED until completed analysis",
   "provenance": {
     "source_sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
@@ -40,8 +40,8 @@
       "scripts/reproduction/taiji_sgwb_checkpoint.py": "50918ac17255ba3b31cc1b745e01dca2c106d05c7de6c0b3a06b3f49cf843a3d"
     }
   },
-  "median_recent_seconds_per_transition": 8.65323591699962,
-  "estimated_remaining_hours": 12.465467073766675,
-  "cold_log_like_median": 175372827.93887502,
-  "cold_log_like_max": 175380001.99129733
+  "median_recent_seconds_per_transition": 15.431809104500644,
+  "estimated_remaining_hours": 21.82743665558813,
+  "cold_log_like_median": 175387407.18113163,
+  "cold_log_like_max": 175387704.56009945
 }

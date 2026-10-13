@@ -22,13 +22,18 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/audit.json",
-      "sha256": "eb00c2e00407916fc0b37f9e1c9257a980d052a46d3ed616940bc661d5d59e9e",
+      "sha256": "7a502d8582b9d9e060b52731a747fa1b3cad21956edb214032e24076569853bb",
       "bytes": 683
     },
     {
       "path": "results/taiji-sgwb/template-formal/checkpoint-interface-check.json",
       "sha256": "25d154672a16ebb767ca5e89bf956e69a00459151858b3b9ac74a288298d5c22",
       "bytes": 713
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/execution.txt",
+      "sha256": "a667d68715e6b1fefd8f5f93580e439c830831dc54527c4167e7431913c21138",
+      "bytes": 3353
     },
     {
       "path": "results/taiji-sgwb/template-formal/initial-burn-check/execution.txt",
@@ -67,8 +72,18 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/progress-snapshot.json",
-      "sha256": "ecb7f6aa2b2a74b8a5a0019398b609bc16560685e5899025a829f23b9bd1b467",
-      "bytes": 2086
+      "sha256": "9bbfa04dfb9856a1019d778aebe8eb1970bc46a935a3e84ec2f283b4fa5d32be",
+      "bytes": 2095
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/resources.csv",
+      "sha256": "a17a576e9a0d270b4e74fdc13cd0e3c8bb97ec1e20b50cdd315a3de44050f813",
+      "bytes": 1524
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/run.json",
+      "sha256": "3646cafb36999f1a7977ecbaea71d6afb9495af51de1722183fd309d3a838879",
+      "bytes": 252
     },
     {
       "path": "results/taiji-sgwb/template-formal/source-execution.json",
@@ -77,8 +92,8 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/status.json",
-      "sha256": "8fa8f3aa10bbf7738c9a8b75bb5d8a8e942bdf78ff0aaa8a174a2d0bd27a4f9f",
-      "bytes": 230
+      "sha256": "e9d42cbe421fd9d762097f9398f01d02dc7bc78812ce5997ab2e094005de276a",
+      "bytes": 133
     },
     {
       "path": "results/taiji-sgwb/template-formal/supervisor-launch.json",
