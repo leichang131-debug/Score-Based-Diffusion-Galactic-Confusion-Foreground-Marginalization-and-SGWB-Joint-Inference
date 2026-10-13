@@ -1,0 +1,6 @@
+{
+  "status": "RUNNING",
+  "sampling_complete": false,
+  "formal_posterior_available": false,
+  "note": "First 10 real burn transitions complete; persistent original schedule is being resumed. Published progress is a snapshot."
+}

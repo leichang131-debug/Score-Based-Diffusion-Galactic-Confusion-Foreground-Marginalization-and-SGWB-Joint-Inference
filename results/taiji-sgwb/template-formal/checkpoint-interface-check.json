@@ -1,0 +1,21 @@
+{
+  "scope": "Synthetic Gaussian kernel test for unrecorded-burn and production checkpoint semantics only; not SGWB scientific inference. Real Stage 8 exact restart remains the scientific-interface reference.",
+  "checks": {
+    "burn_never_stored": true,
+    "restored_unrecorded_burn_time": true,
+    "exact_acc": true,
+    "exact_ro": true,
+    "exact_sgwb": true,
+    "exact_log_like": true,
+    "exact_log_prior": true,
+    "exact_betas": true,
+    "exact_accepted": true,
+    "exact_swaps": true,
+    "production_storage_only": true,
+    "internal_rng_exact": true,
+    "global_rng_exact": true,
+    "adaptation_time_exact": true,
+    "production_checkpoint_metadata": true
+  },
+  "all_checks_pass": true
+}

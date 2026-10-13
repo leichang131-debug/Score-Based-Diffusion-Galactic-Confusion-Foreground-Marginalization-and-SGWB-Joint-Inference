@@ -1,0 +1,29 @@
+{
+  "scope": "Real unrecorded formal burn-in only; no production posterior yet.",
+  "checks": {
+    "ten_real_burn_no_production": true,
+    "exact_snapshot_hash": true,
+    "all_arrays_finite": true,
+    "four_pool_workers": true,
+    "six_temperatures_62_walkers": true,
+    "saved_state_0_0": true,
+    "saved_state_5_61": true
+  },
+  "all_checks_pass": true,
+  "recomputed": [
+    {
+      "temperature": 0,
+      "walker": 0,
+      "stored_original_absolute_error": 0.0,
+      "Cholesky_absolute_error": 0.0,
+      "prior_absolute_error": 5.684341886080802e-14
+    },
+    {
+      "temperature": 5,
+      "walker": 61,
+      "stored_original_absolute_error": 0.0,
+      "Cholesky_absolute_error": 0.0,
+      "prior_absolute_error": 5.684341886080802e-14
+    }
+  ]
+}

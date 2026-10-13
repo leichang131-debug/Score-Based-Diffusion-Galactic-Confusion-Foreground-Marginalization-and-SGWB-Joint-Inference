@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/run-taiji-sgwb-template-formal-worker.py", line 104, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/run-taiji-sgwb-template-formal-worker.py", line 72, in main
+    progress('initializing',0,0)
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/run-taiji-sgwb-template-formal-worker.py", line 71, in progress
+    write_json(root/'progress.json',record)
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/taiji_sgwb_formal_checkpoint.py", line 11, in write_json
+    p=Path(path);temp=p.with_suffix('.tmp');temp.write_text(json.dumps(value,indent=2,allow_nan=False)+'\n');temp.replace(p)
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/.python-runtimes/cpython-3.11.14-macos-aarch64-none/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable

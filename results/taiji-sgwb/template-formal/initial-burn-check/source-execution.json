@@ -1,0 +1,192 @@
+{
+  "likelihood": {
+    "source": "external/taiji-sgwb/demos/template_nofg_28t.py",
+    "sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
+    "working_copy": "runs/taiji-sgwb/likelihood/template_nofg_28t/demos/template_nofg_28t.py",
+    "nodes": [
+      {
+        "line": 3,
+        "end_line": 3,
+        "source": "import multiprocessing"
+      },
+      {
+        "line": 5,
+        "end_line": 5,
+        "source": "import numpy as np"
+      },
+      {
+        "line": 6,
+        "end_line": 6,
+        "source": "from scipy.signal import windows, ShortTimeFFT"
+      },
+      {
+        "line": 7,
+        "end_line": 7,
+        "source": "import matplotlib.pyplot as plt"
+      },
+      {
+        "line": 8,
+        "end_line": 8,
+        "source": "import logging"
+      },
+      {
+        "line": 9,
+        "end_line": 9,
+        "source": "import h5py"
+      },
+      {
+        "line": 10,
+        "end_line": 10,
+        "source": "from pathlib import Path"
+      },
+      {
+        "line": 12,
+        "end_line": 12,
+        "source": "import eryn.ensemble"
+      },
+      {
+        "line": 13,
+        "end_line": 13,
+        "source": "import eryn.prior"
+      },
+      {
+        "line": 14,
+        "end_line": 14,
+        "source": "import eryn.backends"
+      },
+      {
+        "line": 16,
+        "end_line": 16,
+        "source": "from taijisgwb.detector.tdi import tdi_X2, aet_from_xyz, tdi_aet_from_tdi_x"
+      },
+      {
+        "line": 17,
+        "end_line": 17,
+        "source": "from taijisgwb.detector.noise import TaijiNoisePSD"
+      },
+      {
+        "line": 18,
+        "end_line": 18,
+        "source": "from taijisgwb import Interferometer"
+      },
+      {
+        "line": 19,
+        "end_line": 19,
+        "source": "from taijisgwb.detector.orbit import InterpolationOrbit"
+      },
+      {
+        "line": 20,
+        "end_line": 20,
+        "source": "from taijisgwb.waveform import calc_omega_powerlaw"
+      },
+      {
+        "line": 21,
+        "end_line": 21,
+        "source": "from taijisgwb.utils import psd_from_omega"
+      },
+      {
+        "line": 32,
+        "end_line": 32,
+        "source": "f_analow, f_anaupp = 1e-4, 5e-2"
+      },
+      {
+        "line": 158,
+        "end_line": 177,
+        "source": "def log_likelihood(params):\n    a_acc, a_ro, params_sgwb = params\n\n    psd_acc = a_acc[:, None]**2 * spectrum_acc\n    csd_hypo = np.sum(psd_acc[:, None, :] * acc_corr_factor, axis=2)\n    psd_ro = a_ro[:, None]**2 * spectrum_ro\n    csd_hypo += np.sum(psd_ro[:, None, :] * ro_corr_factor, axis=2)\n\n    omega_sgwb = calc_omega_powerlaw(f_est, *params_sgwb)\n    csd_hypo += orf * psd_from_omega(f_est, omega_sgwb)\n\n    csd_hypo = np.moveaxis(csd_hypo, [0, 1], [-2, -1])\n    inv_csd_hypo = np.linalg.inv(csd_hypo)\n    inv_csd_hypo = np.moveaxis(inv_csd_hypo, [-2, -1], [0, 1])\n    ll_exp = -nperbin * np.sum(csd_est * inv_csd_hypo).real\n    ll_coef = -nperbin * np.sum(np.log(np.linalg.det(csd_hypo).real)) \n\n    ans = ll_exp + ll_coef\n    ans /= win_bw\n    return ans"
+      },
+      {
+        "line": 180,
+        "end_line": 180,
+        "source": "nstep = 350"
+      },
+      {
+        "line": 181,
+        "end_line": 181,
+        "source": "ntemp = 6"
+      },
+      {
+        "line": 182,
+        "end_line": 182,
+        "source": "nwalker = 62"
+      },
+      {
+        "line": 183,
+        "end_line": 183,
+        "source": "branch_names = [\"acc\", \"ro\", \"sgwb\"]"
+      },
+      {
+        "line": 184,
+        "end_line": 187,
+        "source": "ndim = {key: val for key, val in zip(\n        branch_names,\n        [6, 6, 2]\n        )}"
+      },
+      {
+        "line": 188,
+        "end_line": 188,
+        "source": "nleaf_max = {key: 1 for key in branch_names}"
+      },
+      {
+        "line": 189,
+        "end_line": 189,
+        "source": "nleaf_min = {key: 1 for key in branch_names}"
+      },
+      {
+        "line": 191,
+        "end_line": 198,
+        "source": "priors = {\n    branch_names[0]: {},\n    branch_names[1]: {},\n    branch_names[2]: {\n        0: eryn.prior.uniform_dist(1e-14, 5e-11),\n        1: eryn.prior.uniform_dist(-1., 2.)\n    }\n}"
+      },
+      {
+        "line": 199,
+        "end_line": 201,
+        "source": "for i in range(6):\n    priors[branch_names[0]][i] = eryn.prior.uniform_dist(.75*3e-15, 1.25*3e-15)\n    priors[branch_names[1]][i] = eryn.prior.uniform_dist(.75*8e-12, 1.25*8e-12)"
+      }
+    ],
+    "adaptation": "Unchanged original imports/functions/prior nodes; verified cached globals supplied externally. No sampler run, pool or backend."
+  },
+  "initialization_nodes": [
+    {
+      "line": 203,
+      "end_line": 204,
+      "source": "params0 = {branch_name: np.empty((ntemp, nwalker, 1, ndim[branch_name]))\n           for branch_name in branch_names}"
+    },
+    {
+      "line": 205,
+      "end_line": 207,
+      "source": "for branch_name in branch_names:\n    for d in range(ndim[branch_name]):\n        params0[branch_name][:, :, 0, d] = priors[branch_name][d].rvs(size=(ntemp, nwalker))"
+    }
+  ],
+  "constructor_nodes": [
+    {
+      "line": 209,
+      "end_line": 209,
+      "source": "pool = multiprocessing.Pool(processes=npool)"
+    },
+    {
+      "line": 210,
+      "end_line": 210,
+      "source": "backend = eryn.backends.HDFBackend(result_outdir/backend_name)"
+    },
+    {
+      "line": 211,
+      "end_line": 218,
+      "source": "sampler = eryn.ensemble.EnsembleSampler(nwalker, ndim, log_likelihood, priors,\n                                        tempering_kwargs = dict(ntemps=ntemp),\n                                        nbranches = len(branch_names),\n                                        branch_names = branch_names,\n                                        nleaves_min = nleaf_min,\n                                        nleaves_max = nleaf_max,\n                                        pool = pool,\n                                        backend = backend)"
+    }
+  ],
+  "original_final_call": "sampler.run_mcmc(params0, nstep, burn=1000, thin_by=12, progress=True)",
+  "working_copy": "runs/taiji-sgwb/template-formal/demos/template_nofg_28t.py",
+  "adaptation": "Original kernel and burn/store semantics; segmented calls permit immutable checkpoints. Pool size=4; external HDF key-order readback adapter and tested picklable dispatcher. No source or installed Eryn patch.",
+  "provenance": {
+    "source_sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
+    "config_sha256": "8628ea0d18dd9d92467490638a394c3c5e6b9687d47d8ef0ab4274b15034a382",
+    "upstream_commit": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+    "inputs": {
+      "data/processed/taiji-sgwb/response/response.h5": "4e8f12c8371a6afa84fdb7f7b3401968d3d23c9433d201cbd14d5a8e0cd2ca13",
+      "data/processed/taiji-sgwb/preprocessing/template_nofg_28t/preprocessing.h5": "b519ba3cc8e3a6d05f16c22a2d6df2d27cab315c6c3c41693434b8a94f85be62"
+    },
+    "adapter_sha256": {
+      "scripts/reproduction/taiji_sgwb_formal_checkpoint.py": "47033fe494de0ba30d9394a98f80400d2a70823fcb664e506d1d53d610950a5f",
+      "scripts/reproduction/run-taiji-sgwb-template-formal-worker.py": "df6ac9daa4e7a18a7652f64ddfcd7a9524ddc03f052c1a2b5ff275777dfcace4",
+      "scripts/reproduction/run-taiji-sgwb-template-worker.py": "a13dc363008bd9d2ef8f18876d8688523a6eade76ca54e3dd9d1ee61f57049ab",
+      "scripts/reproduction/taiji_sgwb_checkpoint.py": "50918ac17255ba3b31cc1b745e01dca2c106d05c7de6c0b3a06b3f49cf843a3d"
+    }
+  }
+}

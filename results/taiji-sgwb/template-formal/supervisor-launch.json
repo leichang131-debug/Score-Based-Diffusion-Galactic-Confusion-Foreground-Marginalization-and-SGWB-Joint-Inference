@@ -1,0 +1,9 @@
+{
+  "pid": 7591,
+  "argv": [
+    "python3",
+    "scripts/reproduction/run-taiji-sgwb-template-formal.py"
+  ],
+  "detached": true,
+  "log": "runs/taiji-sgwb/template-formal/supervisor-execution.log"
+}

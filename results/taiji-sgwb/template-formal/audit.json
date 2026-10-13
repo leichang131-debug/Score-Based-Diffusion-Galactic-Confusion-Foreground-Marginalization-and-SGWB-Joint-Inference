@@ -1,0 +1,19 @@
+{
+  "scope": "Integrity/readiness only while running; not a convergence verdict.",
+  "checks": {
+    "original_burn_and_thinning": true,
+    "original_ensemble_and_saved_length": true,
+    "19_original_source_files_identical": true,
+    "unrecorded_burn_restore_test": true,
+    "real_burn_initial_states_validated": true,
+    "checkpoint_pair_integrity": true,
+    "current_source_config_provenance": true,
+    "frozen_worker_adapters": true,
+    "input_cache_integrity": true,
+    "checkpoint_state_finite": true,
+    "installed_Eryn_source_unmodified": true
+  },
+  "all_checks_pass": true,
+  "latest_complete_checkpoint": "burn-0020-production-0000",
+  "Eryn_files_checked": 33
+}

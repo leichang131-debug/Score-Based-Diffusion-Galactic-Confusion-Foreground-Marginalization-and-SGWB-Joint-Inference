@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-13T06:32:17.086754+00:00",
+  "status": "RUNNING",
+  "phase": "burn-in",
+  "pid": 7592,
+  "pool_pids": [
+    7607,
+    7608,
+    7609,
+    7610
+  ],
+  "burn_done": 14,
+  "production_saved": 0,
+  "production_target": 350,
+  "transitions_done": 14,
+  "transitions_target": 5200,
+  "latest_seconds": 8.697563208999782,
+  "latest_likelihood_calls": 266,
+  "process_likelihood_calls": 1048,
+  "known_determinant_warning_count": 2096,
+  "process_wall_seconds": 34.929489541000294,
+  "checkpoint": {
+    "directory": "checkpoints/burn-0010-production-0000",
+    "state_json_sha256": "76edda14d59d7a46d8f39d58ab9e4970aa942ce4682e2056839334d50449106d"
+  },
+  "remaining_transitions": 5186,
+  "convergence": "NOT ASSESSED until completed analysis",
+  "provenance": {
+    "source_sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
+    "config_sha256": "8628ea0d18dd9d92467490638a394c3c5e6b9687d47d8ef0ab4274b15034a382",
+    "upstream_commit": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+    "inputs": {
+      "data/processed/taiji-sgwb/response/response.h5": "4e8f12c8371a6afa84fdb7f7b3401968d3d23c9433d201cbd14d5a8e0cd2ca13",
+      "data/processed/taiji-sgwb/preprocessing/template_nofg_28t/preprocessing.h5": "b519ba3cc8e3a6d05f16c22a2d6df2d27cab315c6c3c41693434b8a94f85be62"
+    },
+    "adapter_sha256": {
+      "scripts/reproduction/taiji_sgwb_formal_checkpoint.py": "47033fe494de0ba30d9394a98f80400d2a70823fcb664e506d1d53d610950a5f",
+      "scripts/reproduction/run-taiji-sgwb-template-formal-worker.py": "df6ac9daa4e7a18a7652f64ddfcd7a9524ddc03f052c1a2b5ff275777dfcace4",
+      "scripts/reproduction/run-taiji-sgwb-template-worker.py": "a13dc363008bd9d2ef8f18876d8688523a6eade76ca54e3dd9d1ee61f57049ab",
+      "scripts/reproduction/taiji_sgwb_checkpoint.py": "50918ac17255ba3b31cc1b745e01dca2c106d05c7de6c0b3a06b3f49cf843a3d"
+    }
+  },
+  "median_recent_seconds_per_transition": 8.65323591699962,
+  "estimated_remaining_hours": 12.465467073766675,
+  "cold_log_like_median": 175372827.93887502,
+  "cold_log_like_max": 175380001.99129733
+}

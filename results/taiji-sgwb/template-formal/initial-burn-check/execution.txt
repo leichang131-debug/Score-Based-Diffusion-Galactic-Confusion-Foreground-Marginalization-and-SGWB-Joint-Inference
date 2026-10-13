@@ -1,0 +1,11 @@
+burn 1/1000: 16.735 s; calls 534
+burn 2/1000: 6.225 s; calls 188
+burn 3/1000: 5.975 s; calls 186
+burn 4/1000: 6.991 s; calls 212
+burn 5/1000: 7.377 s; calls 216
+burn 6/1000: 7.550 s; calls 225
+burn 7/1000: 8.122 s; calls 242
+burn 8/1000: 8.532 s; calls 251
+burn 9/1000: 7.852 s; calls 233
+burn 10/1000: 8.764 s; calls 257
+STOPPED_AT_CHECKPOINT

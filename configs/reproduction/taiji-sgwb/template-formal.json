@@ -1,0 +1,16 @@
+{
+  "upstream_commit": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+  "entry": "template_nofg_28t.py",
+  "seed": 2026101309,
+  "processes": 4,
+  "burn": 1000,
+  "saved_samples": 350,
+  "thin_by": 12,
+  "ntemps": 6,
+  "nwalkers": 62,
+  "burn_checkpoint_every": 10,
+  "production_checkpoint_every": 5,
+  "minimum_chain_length_over_tau": 50,
+  "split_chain_window_fraction": 0.5,
+  "note": "Original full-grid template, priors and sampler kernel. Original 1000+350*12 transitions. No convergence claim from run length alone."
+}
