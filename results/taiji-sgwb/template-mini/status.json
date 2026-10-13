@@ -1,0 +1,8 @@
+{
+  "status": "SUBSET_WORKFLOW_COMPLETE_CONVERGENCE_NOT_CONFIRMED",
+  "workflow_complete": true,
+  "original_full_data_inference_complete": false,
+  "subset_convergence_confirmed": false,
+  "limited_diagnostic_flags_pass": false,
+  "numerical_checks_pass": true
+}

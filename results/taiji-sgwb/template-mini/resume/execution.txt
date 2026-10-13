@@ -1,0 +1,26 @@
+resume production: burn=300, stored=520; 0.2028 s
+resume production: burn=300, stored=540; 0.2001 s
+resume production: burn=300, stored=560; 0.2012 s
+resume production: burn=300, stored=580; 0.1933 s
+resume production: burn=300, stored=600; 0.2060 s
+resume production: burn=300, stored=620; 0.1968 s
+resume production: burn=300, stored=640; 0.1947 s
+resume production: burn=300, stored=660; 0.2060 s
+resume production: burn=300, stored=680; 0.1989 s
+resume production: burn=300, stored=700; 0.1915 s
+resume production: burn=300, stored=720; 0.2091 s
+resume production: burn=300, stored=740; 0.2033 s
+resume production: burn=300, stored=760; 0.1898 s
+resume production: burn=300, stored=780; 0.2049 s
+resume production: burn=300, stored=800; 0.2216 s
+resume production: burn=300, stored=820; 0.1855 s
+resume production: burn=300, stored=840; 0.1995 s
+resume production: burn=300, stored=860; 0.1770 s
+resume production: burn=300, stored=880; 0.2002 s
+resume production: burn=300, stored=900; 0.2123 s
+resume production: burn=300, stored=920; 0.1819 s
+resume production: burn=300, stored=940; 0.2113 s
+resume production: burn=300, stored=960; 0.1768 s
+resume production: burn=300, stored=980; 0.2127 s
+resume production: burn=300, stored=1000; 0.2215 s
+SAMPLING_COMPLETE

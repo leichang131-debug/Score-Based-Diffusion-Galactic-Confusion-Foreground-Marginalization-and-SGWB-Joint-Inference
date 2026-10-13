@@ -23,3 +23,5 @@ Each component uses a separate environment. Pin the upstream commit before execu
 - Runtime and resource use.
 - Logs, figures, checkpoints, and artifact manifest.
 - Validation outcome, convergence status, and unresolved limitations.
+
+A separate TaijiSGWB selected-data mini experiment has completed the real sampling, restart and analysis workflow ([report](taiji-sgwb/template-mini.md)). Its numerical checks pass while convergence is not confirmed. This does not resume or complete the paused full-data formal inference.

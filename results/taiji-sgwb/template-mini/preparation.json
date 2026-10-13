@@ -1,0 +1,103 @@
+{
+  "scope": "Selected-data posterior workflow reproduction, not original full-year inference or paper numerical results.",
+  "checks": {
+    "same_name_original_copy": true,
+    "all_selected_arrays_finite": true,
+    "full_complex_AET_csd": true,
+    "all_12_noise_factors": true,
+    "original_bin_and_window_weight": true,
+    "no_full_year_rescaling": true,
+    "frequency_time_exact_original": true,
+    "selected_original_f_est": true,
+    "selected_original_t_seg": true,
+    "selected_original_acc_corr_factor": true,
+    "selected_original_ro_corr_factor": true,
+    "selected_original_spectrum_acc": true,
+    "selected_original_spectrum_ro": true,
+    "selected_original_orf": true,
+    "selected_original_csd_est": true,
+    "small_loader_exact_arrays": true,
+    "case_0_same_original_function": true,
+    "case_0_model_and_likelihood": true,
+    "case_1_same_original_function": true,
+    "case_1_model_and_likelihood": true,
+    "case_2_same_original_function": true,
+    "case_2_model_and_likelihood": true,
+    "case_3_same_original_function": true,
+    "case_3_model_and_likelihood": true,
+    "case_4_same_original_function": true,
+    "case_4_model_and_likelihood": true,
+    "case_5_same_original_function": true,
+    "case_5_model_and_likelihood": true,
+    "selected_data_hermitian": true,
+    "selected_data_positive": true,
+    "all_19_original_files_preserved": true
+  },
+  "all_checks_pass": true,
+  "numerical_tests": [
+    {
+      "case": 0,
+      "original_log_likelihood": 3291462.8556753206,
+      "Cholesky_error": 0.0,
+      "model_relative_error": 1.612850453734388e-18,
+      "minimum_scaled_eigenvalue": 3.0460654616413166e-08,
+      "maximum_condition_number": 33091350.650199696
+    },
+    {
+      "case": 1,
+      "original_log_likelihood": 3286617.266012049,
+      "Cholesky_error": 0.0,
+      "model_relative_error": 3.4459499943927416e-17,
+      "minimum_scaled_eigenvalue": 2.5060434262931514e-08,
+      "maximum_condition_number": 41955740.322222516
+    },
+    {
+      "case": 2,
+      "original_log_likelihood": 3280245.1672136057,
+      "Cholesky_error": 0.0,
+      "model_relative_error": 3.9237095814062376e-17,
+      "minimum_scaled_eigenvalue": 3.070884641991332e-08,
+      "maximum_condition_number": 33258668.719337855
+    },
+    {
+      "case": 3,
+      "original_log_likelihood": 3290204.0386011093,
+      "Cholesky_error": 0.0,
+      "model_relative_error": 2.5965383127254003e-18,
+      "minimum_scaled_eigenvalue": 3.321540110419107e-08,
+      "maximum_condition_number": 31564981.53393868
+    },
+    {
+      "case": 4,
+      "original_log_likelihood": 3287477.7415658464,
+      "Cholesky_error": 4.656612873077393e-10,
+      "model_relative_error": 7.39936708617521e-18,
+      "minimum_scaled_eigenvalue": 3.6695527805548593e-08,
+      "maximum_condition_number": 28220331.259522285
+    },
+    {
+      "case": 5,
+      "original_log_likelihood": 3276261.6489290195,
+      "Cholesky_error": 9.313225746154785e-10,
+      "model_relative_error": 9.448574928409094e-17,
+      "minimum_scaled_eigenvalue": 3.253536427407777e-08,
+      "maximum_condition_number": 31793828.5671661
+    }
+  ],
+  "cache": {
+    "path": "data/processed/taiji-sgwb/template-mini/selected-inputs.h5",
+    "sha256": "ec277ceb58011f9193c291815b2a8c2aacbd899e9af89179812c2e3ee640e05e",
+    "bytes": 8278080
+  },
+  "array_sha256": {
+    "f_est": "4e2fb28282df013343b6b6a7f98ed008e7cb5ed6528119f03fa62dff9df87384",
+    "t_seg": "acf96bad0ee5f33c996d4a8efdef42b4e7f694b8fd870c2c704437ae6cff7e1c",
+    "acc_corr_factor": "a2b30474beccc2b779cc2c43dbcb69f31e081ec33b8c0a148892ea14513e3850",
+    "ro_corr_factor": "516adc3b9092d9246ca2fa80d12a6d44d5084d57f51ccab18f3c60278325eb26",
+    "spectrum_acc": "e0edb966931fa5e2d361be6678f5250b0a7dc247631ac6f93750ce962d176f48",
+    "spectrum_ro": "ec31b8ae625d1614cf31c8e6abb534fabf83f94d2d18c9c42fd89316930cc432",
+    "orf": "b86a62e3a954ac7e15e35ff2a7a7ea9030089e66b0a0d1552364dea4585e4e8d",
+    "csd_est": "8ece93801497c4afe6f9bf5cae70cca77370d95df57a19e513eb5119e9af5e5d"
+  },
+  "seconds": 0.6765676249997341
+}

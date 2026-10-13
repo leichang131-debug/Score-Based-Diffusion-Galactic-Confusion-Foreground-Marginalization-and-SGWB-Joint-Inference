@@ -1,0 +1,2 @@
+benchmark burn: burn=20, stored=0; 0.2293 s
+BENCHMARK_COMPLETE

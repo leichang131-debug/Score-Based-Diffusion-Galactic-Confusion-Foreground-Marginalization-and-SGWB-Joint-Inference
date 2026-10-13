@@ -1,0 +1,3 @@
+Initial preparation completed data selection and numerical reference probes, then failed in external source-audit path construction:
+TypeError: 'PosixPath' object is not subscriptable
+Resolution: change ROOT[...] to ROOT / ... in the new external validator. No original scientific code or source/cache contents changed.

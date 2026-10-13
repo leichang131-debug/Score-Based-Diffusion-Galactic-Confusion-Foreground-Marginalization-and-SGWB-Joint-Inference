@@ -1,0 +1,12 @@
+{
+  "attempts": [
+    {
+      "path": "attempts/preparation-path-check",
+      "issue": "External source-audit ROOT indexing typo; no scientific change."
+    },
+    {
+      "path": "attempts/initial-plot-layout",
+      "issue": "Corner-plot title overlap; rerendered from same stored sample."
+    }
+  ]
+}

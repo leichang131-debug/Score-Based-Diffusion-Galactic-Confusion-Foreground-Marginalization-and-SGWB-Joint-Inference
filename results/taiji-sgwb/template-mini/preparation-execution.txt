@@ -1,0 +1,1 @@
+Mini preparation: 31/31 passed; 292 low-frequency + 220 high-frequency bins; cache 8278080 bytes.

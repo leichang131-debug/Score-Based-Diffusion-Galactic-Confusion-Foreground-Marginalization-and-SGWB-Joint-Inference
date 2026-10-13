@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "bash",
+    "scripts/reproduction/run-taiji-sgwb-python.sh",
+    "scripts/reproduction/run-taiji-sgwb-mini-worker.py",
+    "--mode",
+    "first"
+  ],
+  "pid": 15051,
+  "returncode": 0,
+  "wall_seconds": 168.82956204199945,
+  "ended_utc": "2026-10-13T12:36:01.018955+00:00",
+  "peak_parent_rss_kib": 281008,
+  "peak_family_rss_sum_kib": 314880,
+  "resource_note": "~1 s sampled RSS; fork-shared pages double-counted in sum; no actual physical-RAM claim."
+}

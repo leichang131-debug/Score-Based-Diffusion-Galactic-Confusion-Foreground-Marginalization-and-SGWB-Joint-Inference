@@ -1,0 +1,9 @@
+{
+  "warm_iterations_excluded": 5,
+  "measured_updates": 20,
+  "median_seconds_per_transition": 0.21199370799877215,
+  "estimated_remaining_seconds": 271.35194623842835,
+  "budget_seconds": 2700,
+  "budget_fit": true,
+  "note": "Measured subset one-worker estimate, may vary with acceptance and sustained speed; budget checked during execution."
+}

@@ -1,0 +1,19 @@
+{
+  "upstream_commit": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+  "entry": "template_nofg_28t.py",
+  "seed": 2026101310,
+  "week_indices": [0, 7, 15, 22, 29, 36, 44, 51],
+  "frequency_points": 512,
+  "retain_all_below_Hz": 0.003,
+  "processes": 1,
+  "ntemps": 6,
+  "nwalkers": 32,
+  "burn": 300,
+  "production_steps": 1000,
+  "thin_by": 1,
+  "checkpoint_every": 20,
+  "first_speed_check_at": 20,
+  "restart_after_production": 500,
+  "sampling_wall_budget_seconds": 2700,
+  "scope": "Selected-data posterior workflow reproduction, not original full-year inference or paper numerical results."
+}
