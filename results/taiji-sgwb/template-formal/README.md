@@ -1,6 +1,8 @@
 # TaijiSGWB formal template inference
 
-**Initial launch state: RUNNING. Read `status.json` for the current published outcome; posterior results are unavailable until sampling and analysis finish.**
+**PAUSED BY USER at burn-in 108/1000, production 0/350. Compute processes exited; no completed formal posterior.**
+
+The complete paired state and 19/19 static restore evidence are in `pause-checkpoint/`. The cluster migration plan is in [deployment planning](../../../docs/deployment/taiji-cluster-migration-plan.md). Existing code, environments and data are preserved.
 
 Configuration: 1000 unrecorded burn transitions + 350 saved ensembles at thin_by=12, six temperatures, 62 walkers, four CPU workers, full verified grid. The first ten real burn updates and numerical checks are archived in `initial-burn-check/`. `checkpoint-interface-check.json` is a separate synthetic recovery test.
 

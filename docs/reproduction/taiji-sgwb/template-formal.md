@@ -1,6 +1,8 @@
 # TaijiSGWB Stage 9: original formal template schedule and posterior analysis
 
-**Initial launch state: RUNNING; completion must be checked in the published status.** Read `results/taiji-sgwb/template-formal/status.json` and the timestamped progress snapshot for published status. The latest live local state is in ignored `runs/taiji-sgwb/template-formal/progress.json`. Posterior outputs will be created only after the entire original sampling schedule finishes. They must then be interpreted with the diagnostic assessment.
+**Current state: PAUSED BY USER after 108 burn-in transitions, with no production samples.**
+
+The compute processes exited normally; 19/19 static restore checks passed. See [the cluster migration plan](../../deployment/taiji-cluster-migration-plan.md). No new MCMC transition was made during validation. Read `results/taiji-sgwb/template-formal/status.json` and the timestamped progress snapshot for published status. The latest live local state is in ignored `runs/taiji-sgwb/template-formal/progress.json`. Posterior outputs will be created only after the entire original sampling schedule finishes. They must then be interpreted with the diagnostic assessment.
 
 ## Exact original schedule
 

@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-13T07:04:37.789796+00:00",
+  "checked_original_task_pids": [
+    7591,
+    7592,
+    7607,
+    7608,
+    7609,
+    7610
+  ],
+  "ps_stdout": "",
+  "all_original_compute_and_supervisor_pids_absent": true,
+  "caffeinate_ps_output": "",
+  "no_idle_sleep_inhibitor_present": true,
+  "supervisor_lock_absent": true,
+  "stop_requested_preserved": true,
+  "worker_status": "STOPPED_AT_CHECKPOINT",
+  "burn_done": 108,
+  "production_saved": 0,
+  "new_transitions_during_restore_check": 0
+}

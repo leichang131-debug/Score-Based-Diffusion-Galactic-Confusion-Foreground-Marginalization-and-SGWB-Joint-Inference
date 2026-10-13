@@ -1,0 +1,4 @@
+The first inline pause validator failed before reading or restoring any checkpoint:
+ModuleNotFoundError: No module named 'taiji_sgwb_likelihood'
+Cause: stdin Python did not include scripts/reproduction on sys.path.
+Resolution: use a saved validator script in scripts/reproduction; scientific files and paused state unchanged.

@@ -6,14 +6,19 @@
       "bytes": 524
     },
     {
+      "path": "docs/deployment/taiji-cluster-migration-plan.md",
+      "sha256": "6f0315b54927319136832239567f3e280fcaec0545a6cd19dc78c911f3e45a49",
+      "bytes": 19928
+    },
+    {
       "path": "docs/reproduction/taiji-sgwb/template-formal.md",
-      "sha256": "b7867fc8f0f40f4ff3d2bebeb14950658711ceb32a44a949be627f0a341ac65b",
-      "bytes": 8789
+      "sha256": "8ba898b70556568834316db484dac1681e527898f6dd0a0c008f86a9533f238d",
+      "bytes": 9006
     },
     {
       "path": "results/taiji-sgwb/template-formal/README.md",
-      "sha256": "408010a9310d2b370f440137f4826f36d5b3dd41369a4c216225055f13c16b9b",
-      "bytes": 1080
+      "sha256": "a47dcf8b5f8d5fefa1f866adb18967acf86974846d2d856186a5e98968451e20",
+      "bytes": 1291
     },
     {
       "path": "results/taiji-sgwb/template-formal/attempts/initial-progress-serialization/execution.txt",
@@ -21,9 +26,14 @@
       "bytes": 2806
     },
     {
+      "path": "results/taiji-sgwb/template-formal/attempts/pause-validator-import/execution.txt",
+      "sha256": "4ff791f86ae382c3f5e94df7b1438d907536242d634ad17e3a9c525e6cb01d73",
+      "bytes": 326
+    },
+    {
       "path": "results/taiji-sgwb/template-formal/audit.json",
-      "sha256": "7a502d8582b9d9e060b52731a747fa1b3cad21956edb214032e24076569853bb",
-      "bytes": 683
+      "sha256": "f8e0d090987d9b696bd132e09a7f8cf5ff27ebf6a0f3d7160270690a63bce166",
+      "bytes": 766
     },
     {
       "path": "results/taiji-sgwb/template-formal/checkpoint-interface-check.json",
@@ -71,6 +81,36 @@
       "bytes": 399
     },
     {
+      "path": "results/taiji-sgwb/template-formal/pause-checkpoint/process-exit.json",
+      "sha256": "6818036562c91870e5ce6e3afb6da416824a66263a12beef0419ea425f986553",
+      "bytes": 509
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/pause-checkpoint/state.json",
+      "sha256": "dc1414346c42bde53164107f32e5c2bc051f2e8bb03a01e6b065fdf7394b4e29",
+      "bytes": 29854
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/pause-checkpoint/state.npz",
+      "sha256": "509d2d6c82b96dd993b94bb9bf3f137eee2dc603f80336f5d77fbbea3de16dc5",
+      "bytes": 42590
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/pause-checkpoint/template_AET_nofg.h5",
+      "sha256": "821847c33fa6de4f3f7caf3d9d91e2fa26ac5e91b945cc8d4e105881ea62a5db",
+      "bytes": 21328
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/pause-checkpoint/validation-execution.txt",
+      "sha256": "e138da45e8d1316c32d698c9f5166448d859eb3da078109aa3a89fcf333cacfd",
+      "bytes": 58
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/pause-checkpoint/validation.json",
+      "sha256": "f8956fb5857ac790035130401823668d2d81b3adc79616a10b9da5769517c664",
+      "bytes": 1061
+    },
+    {
       "path": "results/taiji-sgwb/template-formal/progress-snapshot.json",
       "sha256": "9bbfa04dfb9856a1019d778aebe8eb1970bc46a935a3e84ec2f283b4fa5d32be",
       "bytes": 2095
@@ -92,8 +132,8 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/status.json",
-      "sha256": "e9d42cbe421fd9d762097f9398f01d02dc7bc78812ce5997ab2e094005de276a",
-      "bytes": 133
+      "sha256": "2e24f6c66ea4bb46ea2c50056e161ba48341234037ad39773822cfdfc148b3fb",
+      "bytes": 318
     },
     {
       "path": "results/taiji-sgwb/template-formal/supervisor-launch.json",
@@ -107,8 +147,8 @@
     },
     {
       "path": "scripts/reproduction/audit-taiji-sgwb-template-formal.py",
-      "sha256": "a5a596641f1741657b971dc4e89553b2d599c78ed70df68f7588f9ac5f9f648e",
-      "bytes": 4094
+      "sha256": "1eb420ea0491f73455d8cde961ce03ca626a92b76ae4ce07bbf2599d87b131c0",
+      "bytes": 4740
     },
     {
       "path": "scripts/reproduction/check-taiji-sgwb-formal-burn.py",
@@ -119,6 +159,11 @@
       "path": "scripts/reproduction/check-taiji-sgwb-formal-checkpoint.py",
       "sha256": "3f5613c5cfe3c0f2f5327c5d491ea1d23b35c0f1f4ce7eb42f04acf802cb4cbe",
       "bytes": 3899
+    },
+    {
+      "path": "scripts/reproduction/check-taiji-sgwb-paused-state.py",
+      "sha256": "5d572d3441a53ab8c6cc23523e83205db00e44fabd56f168eb074a58325fb68b",
+      "bytes": 3843
     },
     {
       "path": "scripts/reproduction/run-taiji-sgwb-template-formal-worker.py",
