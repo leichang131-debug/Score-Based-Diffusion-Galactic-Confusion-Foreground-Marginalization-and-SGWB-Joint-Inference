@@ -32,7 +32,7 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/audit.json",
-      "sha256": "4866aaf3e86fe5d3ae89d70246281016a2334e5d7c5b166b86590e090b1f02f0",
+      "sha256": "2c055bf9b161221ade2934d09f6152d960fd8dbbe8bb297389ae574970ab21eb",
       "bytes": 890
     },
     {
@@ -172,8 +172,8 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/progress-snapshot.json",
-      "sha256": "caf95017a97630ece79779a7d52064bfe8d4140cf8dcd3b78a04b5ca482b5864",
-      "bytes": 2100
+      "sha256": "16e492e949d278f7d928ae5b21c59b788054fefc37e4c96f4d928392b19b5060",
+      "bytes": 2102
     },
     {
       "path": "results/taiji-sgwb/template-formal/resilience-interface-test.json",
