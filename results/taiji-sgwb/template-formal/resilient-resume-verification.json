@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-10-14T04:35:34.967116+00:00",
+  "status": "RUNNING",
+  "resume_from_burn": 610,
+  "observed_burn": 621,
+  "processes": "  PID  PPID ELAPSED  %CPU    RSS COMMAND\n 5645  5644   01:43   0.0  18960 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/run-taiji-sgwb-resilient.py\n 5651  5645   01:43   0.0  20544 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal.py\n 5656  5651   01:43   0.0 669056 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal-worker.py --resume\n 5675  5656   01:42  99.4 770416 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal-worker.py --resume\n 5676  5656   01:42  98.7 770368 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal-worker.py --resume\n 5677  5656   01:42  99.6 770800 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal-worker.py --resume\n 5678  5656   01:42  98.2 770304 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal-worker.py --resume\n",
+  "screen_session": "There is a screen on:\n\t5642.taiji-sgwb-formal\t(Detached)\n1 Socket in /var/folders/1b/lwtq73nn0s9263c3y9fss5b80000gn/T/.screen.\n\n",
+  "idle_sleep_inhibitor": "5657 caffeinate -is -w 5656\n",
+  "power_state": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=23396451)\t100%; discharging; 15:19 remaining present: true\n",
+  "recovery_control": {
+    "status": "RUNNING",
+    "pid": 5645,
+    "attempts": [
+      {
+        "attempt": 1,
+        "start_utc": "2026-10-14T04:33:51.617263+00:00",
+        "progress_before": 610,
+        "command": [
+          "bash",
+          "scripts/reproduction/run-taiji-sgwb-python.sh",
+          "scripts/reproduction/run-taiji-sgwb-template-formal.py"
+        ],
+        "supervisor_pid": 5651
+      }
+    ],
+    "maximum_automatic_retries": 3,
+    "updated_utc": "2026-10-14T04:33:51.618861+00:00"
+  },
+  "note": "Original frozen sampler adapters and scientific inputs unchanged. No uninterrupted-runtime guarantee."
+}

@@ -1,0 +1,11 @@
+{
+  "scope": "Synthetic supervisor control-flow tests only. No real posterior samples, no actual worker termination and no MCMC advancement.",
+  "checks": {
+    "user_stop_without_start": true,
+    "never_resample_completed_chain": true,
+    "duplicate_worker_refused": true,
+    "one_failure_then_resume_success": true,
+    "retries_bounded_to_three": true
+  },
+  "all_checks_pass": true
+}

@@ -1,14 +1,14 @@
 {
-  "supervisor_pid": 2034,
-  "worker_pid": 2039,
+  "supervisor_pid": 5651,
+  "worker_pid": 5656,
   "argv": [
     "bash",
     "scripts/reproduction/run-taiji-sgwb-python.sh",
     "scripts/reproduction/run-taiji-sgwb-template-formal-worker.py",
     "--resume"
   ],
-  "started_utc": "2026-10-14T00:47:31.302524+00:00",
-  "resume_from_burn": 337,
+  "started_utc": "2026-10-14T04:33:51.643017+00:00",
+  "resume_from_burn": 610,
   "resume_from_production": 0,
   "target_burn": 1000,
   "target_saved_samples": 350,

@@ -57,6 +57,7 @@ def main():
     files += [ROOT/'scripts/reproduction'/n for n in ['taiji_sgwb_formal_checkpoint.py','run-taiji-sgwb-template-formal-worker.py','run-taiji-sgwb-template-formal.py','check-taiji-sgwb-formal-checkpoint.py','analyze-taiji-sgwb-template-formal.py','audit-taiji-sgwb-template-formal.py','check-taiji-sgwb-formal-burn.py','check-taiji-sgwb-paused-state.py']]
     files += [ROOT/'configs/reproduction/taiji-sgwb/template-formal.json',ROOT/'docs/reproduction/taiji-sgwb/template-formal.md',ROOT/'docs/deployment/taiji-cluster-migration-plan.md']
     if (ROOT/'scripts/reproduction/check-taiji-sgwb-overnight-pause.py').exists():files.append(ROOT/'scripts/reproduction/check-taiji-sgwb-overnight-pause.py')
+    if (ROOT/'scripts/reproduction/run-taiji-sgwb-resilient.py').exists():files.append(ROOT/'scripts/reproduction/run-taiji-sgwb-resilient.py')
     write_json(OUT/'manifest.json',{'files':[{'path':str(p.relative_to(ROOT)),'sha256':sha(p),'bytes':p.stat().st_size} for p in sorted(files)]})
     print(f'Formal evidence integrity: {sum(checks.values())}/{len(checks)} passed; this is an integrity audit, not a completed-posterior verdict.')
     if not all(checks.values()):raise SystemExit(1)

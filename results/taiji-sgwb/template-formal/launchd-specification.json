@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-14T04:31:39.036173+00:00",
+  "job": {
+    "Label": "org.leichang.taijisgwb.formal",
+    "ProgramArguments": [
+      "/bin/bash",
+      "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/run-taiji-sgwb-python.sh",
+      "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/run-taiji-sgwb-resilient.py"
+    ],
+    "WorkingDirectory": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository",
+    "RunAtLoad": true,
+    "KeepAlive": false,
+    "StandardOutPath": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/runs/taiji-sgwb/template-formal/launchd-execution.log",
+    "StandardErrorPath": "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/runs/taiji-sgwb/template-formal/launchd-execution.log",
+    "ProcessType": "Background"
+  },
+  "scope": "Current macOS login session only. Not installed as a login/reboot startup item. Bounded supervisor-failure retries; no duplicate workers; user stop honored. No guarantee against power loss, forced sleep, shutdown or logout.",
+  "maximum_retries": 3
+}

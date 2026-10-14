@@ -1,0 +1,7 @@
+{
+  "checked_utc": "2026-10-14T04:33:51.518316+00:00",
+  "status": "BLOCKED_BY_MACOS_DOCUMENTS_PRIVACY",
+  "stderr": "shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted\n/bin/bash: /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/run-taiji-sgwb-python.sh: Operation not permitted\n",
+  "job_unregistered": true,
+  "fallback": "Detached screen session with bounded checkpoint recovery. No privacy setting changes."
+}

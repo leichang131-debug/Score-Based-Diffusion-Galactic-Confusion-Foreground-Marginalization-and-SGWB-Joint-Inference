@@ -28,7 +28,7 @@ def sync_evidence(message):
     for cmd in [['git','add','results/taiji-sgwb/template-formal'],['git','diff','--cached','--check','--','results/taiji-sgwb/template-formal']]:subprocess.run(cmd,cwd=ROOT,check=True)
     changed=subprocess.run(['git','diff','--cached','--quiet','--','results/taiji-sgwb/template-formal'],cwd=ROOT).returncode
     if changed==1:subprocess.run(['git','commit','--only','-m',message,'--','results/taiji-sgwb/template-formal'],cwd=ROOT,check=True)
-    subprocess.run(['git','push','origin','main'],cwd=ROOT,check=True)
+    subprocess.run(['git','push','origin','main'],cwd=ROOT,check=True,timeout=120)
 
 
 def snapshot():
@@ -55,7 +55,7 @@ def main():
     try:
         with (WORK/'formal-execution.log').open('a') as log:
             proc=subprocess.Popen(command,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT)
-            try:caffeinate=subprocess.Popen(['caffeinate','-i','-w',str(proc.pid)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+            try:caffeinate=subprocess.Popen(['caffeinate','-is','-w',str(proc.pid)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
             except FileNotFoundError:pass
             write(OUT/'launch.json',{'supervisor_pid':os.getpid(),'worker_pid':proc.pid,'argv':command,'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'resume_from_burn':prior['burn_done'],'resume_from_production':prior['production_saved'],'target_burn':1000,'target_saved_samples':350,'thin_by':12,'idle_sleep_inhibited':caffeinate is not None})
             shutil.copyfile(OUT/'launch.json',history/'launch.json')
