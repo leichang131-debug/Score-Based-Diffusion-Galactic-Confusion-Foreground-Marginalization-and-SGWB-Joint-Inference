@@ -56,8 +56,12 @@ def main():
                 raise RuntimeError(f'Lock PID {pid} is alive; manual inspection needed')
         command = ['bash', 'scripts/reproduction/run-taiji-sgwb-python.sh',
                    'scripts/reproduction/run-taiji-sgwb-template-formal.py']
+        pointer=json.loads((WORK/'latest-checkpoint.json').read_text())
+        checkpoint=json.loads((WORK/pointer['directory']/'state.json').read_text())
+        cfg=json.loads((ROOT/'configs/reproduction/taiji-sgwb/template-formal.json').read_text())
+        restored_done=checkpoint['burn_done']+checkpoint['production_done']*cfg['thin_by']
         entry = {'attempt': attempt, 'start_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-                 'progress_before': progress['transitions_done'], 'command': command}
+                 'progress_before': restored_done, 'progress_file_before': progress['transitions_done'], 'command': command}
         attempts.append(entry)
         write({'status': 'RUNNING', 'pid': os.getpid(), 'attempts': attempts,
                'maximum_automatic_retries': 3})

@@ -1,0 +1,21 @@
+{
+  "checked_utc": "2026-10-14T05:43:56.879634+00:00",
+  "status": "PROCESS_FAMILY_GONE",
+  "last_progress_beijing": "2026-10-14 13:33:19",
+  "last_logged_burn": 919,
+  "last_verified_checkpoint_burn": 910,
+  "original_pids": [
+    5642,
+    5645,
+    5651,
+    5656,
+    5675,
+    5676,
+    5677,
+    5678
+  ],
+  "screen_socket_gone": true,
+  "python_failure_record_absent": true,
+  "cause": "Unknown; no evidence sufficient to attribute to overheating, battery exhaustion, or a specific external termination mechanism.",
+  "recovery": "Native Terminal.app opens a tracked .command launcher; its detached screen session owns the recovery wrapper. No system privacy settings changed."
+}

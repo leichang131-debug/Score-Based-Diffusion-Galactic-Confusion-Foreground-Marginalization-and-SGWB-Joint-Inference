@@ -48,7 +48,9 @@ def main():
     history=OUT/'sessions'/session;history.mkdir(parents=True,exist_ok=False)
     for name in ['launch.json','run.json','resources.csv','status.json','progress-snapshot.json','execution.txt']:
         if (OUT/name).exists():shutil.copyfile(OUT/name,history/('previous-'+name))
-    prior=json.loads((WORK/'progress.json').read_text())
+    pointer=json.loads((WORK/'latest-checkpoint.json').read_text())
+    saved=json.loads((WORK/pointer['directory']/'state.json').read_text())
+    prior={'burn_done':saved['burn_done'],'production_saved':saved['production_done']}
     command=python('run-taiji-sgwb-template-formal-worker.py')+['--resume']
     write(WORK/'supervisor.json',{'pid':os.getpid(),'argv':command,'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'Original full formal inference. Live outputs ignored; portable progress/evidence snapshots synced hourly and on completion.'})
     caffeinate=None

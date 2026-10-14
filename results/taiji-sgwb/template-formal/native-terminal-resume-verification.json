@@ -1,0 +1,16 @@
+{
+  "checked_utc": "2026-10-14T05:45:26.505844+00:00",
+  "initiating_application": "Terminal.app via LaunchServices .command launcher",
+  "native_terminal_pid": 8071,
+  "screen_session": "There is a screen on:\n\t8094.taiji-sgwb-formal\t(Detached)\n1 Socket in /var/folders/1b/lwtq73nn0s9263c3y9fss5b80000gn/T/.screen.\n\n",
+  "verified_restored_burn": 910,
+  "latest_observed_burn": 924,
+  "latest_checkpoint": {
+    "directory": "checkpoints/burn-0920-production-0000",
+    "state_json_sha256": "eee1858993ec4fb2ac94c0e51364d86cdfad05b06223fd6f2c40a00a61b3da1e"
+  },
+  "ps": "  PID  PPID ELAPSED  %CPU    RSS COMMAND\n 8104  8096   02:27   0.0  10400 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/run-taiji-sgwb-resilient.py\n 8117  8104   02:24   0.0  17200 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal.py\n 8122  8117   02:24   0.0 187664 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal-worker.py --resume\n 8139  8122   02:23  99.1 768992 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal-worker.py --resume\n 8140  8122   02:23  98.9 769280 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal-worker.py --resume\n 8141  8122   02:23  99.9 769248 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal-worker.py --resume\n 8142  8122   02:23  99.7 769184 /Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/environments/taiji-sgwb/.venv/bin/python -B scripts/reproduction/run-taiji-sgwb-template-formal-worker.py --resume\n",
+  "idle_sleep_inhibitor": "8123 caffeinate -is -w 8122\n",
+  "power_state": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=23396451)\t68%; discharging; 10:28 remaining present: true\n",
+  "scope": "Actual native-terminal-owned full-data continuation. No guarantee against forced termination, sleep, logout or power loss. Unsaved burn 911-919 replayed."
+}

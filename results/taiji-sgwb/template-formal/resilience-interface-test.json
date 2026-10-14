@@ -1,10 +1,12 @@
 {
-  "scope": "Synthetic supervisor control-flow tests only. No real posterior samples, no actual worker termination and no MCMC advancement.",
+  "scope": "Synthetic control-flow tests only. No real worker termination or posterior generation.",
+  "script_sha256": "03c3a1a227d0d7845cc46495d8ae901299bc52761bf4a0a2cd20659cf65aa129",
   "checks": {
     "user_stop_without_start": true,
     "never_resample_completed_chain": true,
     "duplicate_worker_refused": true,
     "one_failure_then_resume_success": true,
+    "saved_checkpoint_offset_not_stale_progress": true,
     "retries_bounded_to_three": true
   },
   "all_checks_pass": true
