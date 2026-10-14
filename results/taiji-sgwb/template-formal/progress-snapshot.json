@@ -1,29 +1,29 @@
 {
-  "created_utc": "2026-10-13T15:07:49.568564+00:00",
-  "status": "STOPPED_AT_CHECKPOINT",
-  "phase": "checkpoint-stop",
-  "pid": 18244,
+  "created_utc": "2026-10-14T00:48:04.604819+00:00",
+  "status": "RUNNING",
+  "phase": "burn-in",
+  "pid": 2039,
   "pool_pids": [
-    18263,
-    18264,
-    18265,
-    18266
+    2056,
+    2057,
+    2058,
+    2059
   ],
-  "burn_done": 337,
+  "burn_done": 340,
   "production_saved": 0,
   "production_target": 350,
-  "transitions_done": 337,
+  "transitions_done": 340,
   "transitions_target": 5200,
-  "latest_seconds": 0,
-  "latest_likelihood_calls": 0,
-  "process_likelihood_calls": 80545,
-  "known_determinant_warning_count": 161090,
-  "process_wall_seconds": 3774.3632092499975,
+  "latest_seconds": 10.723220167000022,
+  "latest_likelihood_calls": 329,
+  "process_likelihood_calls": 997,
+  "known_determinant_warning_count": 1994,
+  "process_wall_seconds": 32.790503083999965,
   "checkpoint": {
-    "directory": "checkpoints/burn-0337-production-0000",
-    "state_json_sha256": "bb7482f838c259424a6b7a4654533939b301d780434f843cedd99add253a7bd6"
+    "directory": "checkpoints/burn-0340-production-0000",
+    "state_json_sha256": "080c312657b5b98e6e7f3ec09e139426036793c3bdf2fa4cabb22675f6fbdedb"
   },
-  "remaining_transitions": 4863,
+  "remaining_transitions": 4860,
   "convergence": "NOT ASSESSED until completed analysis",
   "provenance": {
     "source_sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
@@ -40,8 +40,8 @@
       "scripts/reproduction/taiji_sgwb_checkpoint.py": "50918ac17255ba3b31cc1b745e01dca2c106d05c7de6c0b3a06b3f49cf843a3d"
     }
   },
-  "median_recent_seconds_per_transition": 16.1188873125011,
-  "estimated_remaining_hours": 21.773930277970237,
-  "cold_log_like_median": 175388096.5403368,
-  "cold_log_like_max": 175388118.20503068
+  "median_recent_seconds_per_transition": 10.665447000000086,
+  "estimated_remaining_hours": 14.398353450000116,
+  "cold_log_like_median": 175388098.805087,
+  "cold_log_like_max": 175388118.88733786
 }

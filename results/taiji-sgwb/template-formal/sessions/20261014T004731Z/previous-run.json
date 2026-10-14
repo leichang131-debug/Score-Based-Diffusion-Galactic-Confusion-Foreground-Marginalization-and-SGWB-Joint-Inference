@@ -1,0 +1,8 @@
+{
+  "returncode": 0,
+  "worker_pid": 18244,
+  "wall_seconds": 3790.1067757499986,
+  "peak_parent_rss_kib": 327888,
+  "peak_family_rss_sum_kib": 3393120,
+  "resource_note": "RSS sums double-count fork-shared pages; ~30-second sampling may miss peaks."
+}

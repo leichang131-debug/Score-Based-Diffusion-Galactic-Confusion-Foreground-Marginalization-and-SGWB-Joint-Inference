@@ -1,5 +1,5 @@
 {
-  "status": "STOPPED_AT_CHECKPOINT",
+  "status": "RUNNING",
   "sampling_complete": false,
-  "note": "Checkpoint saved; original schedule not finished."
+  "note": "Resumed original full-data schedule; no posterior verdict yet."
 }
