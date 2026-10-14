@@ -1,5 +1,5 @@
 {
-  "status": "RUNNING",
-  "sampling_complete": false,
-  "note": "Resumed original full-data schedule; no posterior verdict yet."
+  "status": "ANALYSIS_FAILED",
+  "sampling_complete": true,
+  "note": "Read analysis-execution.txt; no convergence claim."
 }

@@ -327,3 +327,1026 @@ burn 335/1000: 16.197 s; calls 334
 burn 336/1000: 16.072 s; calls 332
 burn 337/1000: 16.806 s; calls 329
 STOPPED_AT_CHECKPOINT
+burn 338/1000: 10.665 s; calls 332
+burn 339/1000: 10.599 s; calls 336
+burn 340/1000: 10.723 s; calls 329
+burn 341/1000: 10.523 s; calls 324
+burn 342/1000: 11.052 s; calls 327
+burn 343/1000: 10.301 s; calls 316
+burn 344/1000: 10.640 s; calls 323
+burn 345/1000: 11.219 s; calls 328
+burn 346/1000: 10.919 s; calls 324
+burn 347/1000: 11.254 s; calls 325
+burn 348/1000: 10.616 s; calls 308
+burn 349/1000: 11.397 s; calls 324
+burn 350/1000: 11.461 s; calls 325
+burn 351/1000: 11.402 s; calls 325
+burn 352/1000: 11.131 s; calls 317
+burn 353/1000: 10.814 s; calls 305
+burn 354/1000: 11.004 s; calls 315
+burn 355/1000: 11.111 s; calls 309
+burn 356/1000: 11.078 s; calls 316
+burn 357/1000: 11.012 s; calls 307
+burn 358/1000: 10.773 s; calls 304
+burn 359/1000: 11.271 s; calls 308
+burn 360/1000: 11.093 s; calls 308
+burn 361/1000: 11.031 s; calls 308
+burn 362/1000: 11.089 s; calls 310
+burn 363/1000: 10.846 s; calls 301
+burn 364/1000: 11.668 s; calls 311
+burn 365/1000: 11.218 s; calls 303
+burn 366/1000: 10.927 s; calls 300
+burn 367/1000: 10.971 s; calls 298
+burn 368/1000: 11.105 s; calls 306
+burn 369/1000: 11.508 s; calls 301
+burn 370/1000: 11.451 s; calls 301
+burn 371/1000: 11.343 s; calls 315
+burn 372/1000: 11.027 s; calls 301
+burn 373/1000: 10.787 s; calls 295
+burn 374/1000: 10.853 s; calls 299
+burn 375/1000: 12.378 s; calls 294
+burn 376/1000: 11.639 s; calls 295
+burn 377/1000: 10.567 s; calls 284
+burn 378/1000: 11.733 s; calls 321
+burn 379/1000: 10.479 s; calls 288
+burn 380/1000: 11.103 s; calls 299
+burn 381/1000: 11.015 s; calls 295
+burn 382/1000: 11.331 s; calls 306
+burn 383/1000: 9.994 s; calls 273
+burn 384/1000: 10.348 s; calls 286
+burn 385/1000: 10.412 s; calls 284
+burn 386/1000: 10.976 s; calls 295
+burn 387/1000: 10.730 s; calls 288
+burn 388/1000: 10.856 s; calls 298
+burn 389/1000: 10.659 s; calls 290
+burn 390/1000: 10.506 s; calls 288
+burn 391/1000: 11.332 s; calls 295
+burn 392/1000: 10.940 s; calls 286
+burn 393/1000: 11.004 s; calls 286
+burn 394/1000: 10.621 s; calls 278
+burn 395/1000: 10.120 s; calls 268
+burn 396/1000: 10.884 s; calls 282
+burn 397/1000: 11.562 s; calls 296
+burn 398/1000: 11.211 s; calls 292
+burn 399/1000: 11.318 s; calls 289
+burn 400/1000: 10.964 s; calls 281
+burn 401/1000: 11.617 s; calls 288
+burn 402/1000: 11.654 s; calls 287
+burn 403/1000: 11.393 s; calls 278
+burn 404/1000: 11.480 s; calls 277
+burn 405/1000: 12.009 s; calls 284
+burn 406/1000: 11.045 s; calls 271
+burn 407/1000: 11.037 s; calls 277
+burn 408/1000: 10.967 s; calls 275
+burn 409/1000: 11.409 s; calls 281
+burn 410/1000: 11.705 s; calls 290
+burn 411/1000: 11.954 s; calls 294
+burn 412/1000: 11.978 s; calls 296
+burn 413/1000: 11.503 s; calls 282
+burn 414/1000: 11.621 s; calls 276
+burn 415/1000: 11.452 s; calls 272
+burn 416/1000: 10.979 s; calls 269
+burn 417/1000: 11.581 s; calls 282
+burn 418/1000: 11.605 s; calls 279
+burn 419/1000: 11.291 s; calls 278
+burn 420/1000: 11.578 s; calls 288
+burn 421/1000: 11.821 s; calls 284
+burn 422/1000: 11.798 s; calls 286
+burn 423/1000: 11.327 s; calls 274
+burn 424/1000: 11.288 s; calls 275
+burn 425/1000: 11.765 s; calls 279
+burn 426/1000: 11.513 s; calls 278
+burn 427/1000: 11.236 s; calls 272
+burn 428/1000: 11.406 s; calls 275
+burn 429/1000: 11.553 s; calls 280
+burn 430/1000: 11.279 s; calls 272
+burn 431/1000: 11.828 s; calls 282
+burn 432/1000: 11.534 s; calls 277
+burn 433/1000: 11.607 s; calls 280
+burn 434/1000: 11.286 s; calls 270
+burn 435/1000: 11.149 s; calls 271
+burn 436/1000: 11.391 s; calls 278
+burn 437/1000: 11.925 s; calls 283
+burn 438/1000: 11.928 s; calls 280
+burn 439/1000: 12.266 s; calls 280
+burn 440/1000: 11.321 s; calls 272
+burn 441/1000: 11.886 s; calls 279
+burn 442/1000: 11.643 s; calls 279
+burn 443/1000: 11.702 s; calls 275
+burn 444/1000: 11.423 s; calls 266
+burn 445/1000: 12.067 s; calls 268
+burn 446/1000: 11.530 s; calls 259
+burn 447/1000: 12.420 s; calls 290
+burn 448/1000: 11.893 s; calls 283
+burn 449/1000: 12.064 s; calls 285
+burn 450/1000: 12.398 s; calls 288
+burn 451/1000: 11.101 s; calls 255
+burn 452/1000: 11.814 s; calls 276
+burn 453/1000: 11.607 s; calls 270
+burn 454/1000: 11.697 s; calls 269
+burn 455/1000: 11.711 s; calls 269
+burn 456/1000: 11.947 s; calls 271
+burn 457/1000: 12.634 s; calls 290
+burn 458/1000: 11.842 s; calls 273
+burn 459/1000: 12.300 s; calls 290
+burn 460/1000: 11.366 s; calls 266
+burn 461/1000: 11.543 s; calls 276
+burn 462/1000: 11.525 s; calls 275
+burn 463/1000: 11.490 s; calls 273
+burn 464/1000: 10.773 s; calls 258
+burn 465/1000: 11.117 s; calls 267
+burn 466/1000: 11.766 s; calls 267
+burn 467/1000: 11.691 s; calls 268
+burn 468/1000: 11.972 s; calls 272
+burn 469/1000: 11.884 s; calls 272
+burn 470/1000: 12.191 s; calls 276
+burn 471/1000: 12.600 s; calls 281
+burn 472/1000: 11.531 s; calls 255
+burn 473/1000: 12.378 s; calls 274
+burn 474/1000: 12.134 s; calls 267
+burn 475/1000: 12.772 s; calls 278
+burn 476/1000: 12.646 s; calls 278
+burn 477/1000: 12.133 s; calls 268
+burn 478/1000: 12.185 s; calls 267
+burn 479/1000: 12.826 s; calls 278
+burn 480/1000: 13.242 s; calls 288
+burn 481/1000: 13.205 s; calls 273
+burn 482/1000: 11.867 s; calls 255
+burn 483/1000: 12.478 s; calls 268
+burn 484/1000: 12.179 s; calls 258
+burn 485/1000: 13.212 s; calls 281
+burn 486/1000: 12.683 s; calls 273
+burn 487/1000: 12.345 s; calls 260
+burn 488/1000: 12.688 s; calls 267
+burn 489/1000: 12.201 s; calls 262
+burn 490/1000: 13.084 s; calls 271
+burn 491/1000: 13.941 s; calls 284
+burn 492/1000: 12.351 s; calls 271
+burn 493/1000: 13.657 s; calls 282
+burn 494/1000: 12.185 s; calls 255
+burn 495/1000: 13.131 s; calls 271
+burn 496/1000: 12.888 s; calls 276
+burn 497/1000: 12.298 s; calls 262
+burn 498/1000: 13.234 s; calls 289
+burn 499/1000: 12.887 s; calls 280
+burn 500/1000: 11.392 s; calls 255
+burn 501/1000: 12.106 s; calls 255
+burn 502/1000: 12.513 s; calls 264
+burn 503/1000: 12.450 s; calls 277
+burn 504/1000: 12.346 s; calls 271
+burn 505/1000: 12.715 s; calls 284
+burn 506/1000: 12.490 s; calls 276
+burn 507/1000: 11.932 s; calls 264
+burn 508/1000: 11.872 s; calls 264
+burn 509/1000: 12.245 s; calls 272
+burn 510/1000: 12.275 s; calls 272
+burn 511/1000: 12.114 s; calls 265
+burn 512/1000: 13.092 s; calls 269
+burn 513/1000: 12.638 s; calls 268
+burn 514/1000: 12.491 s; calls 273
+burn 515/1000: 12.462 s; calls 265
+burn 516/1000: 13.088 s; calls 282
+burn 517/1000: 13.832 s; calls 288
+burn 518/1000: 12.025 s; calls 264
+burn 519/1000: 11.861 s; calls 251
+burn 520/1000: 13.385 s; calls 282
+burn 521/1000: 12.683 s; calls 271
+burn 522/1000: 12.461 s; calls 278
+burn 523/1000: 11.628 s; calls 257
+burn 524/1000: 12.146 s; calls 267
+burn 525/1000: 13.162 s; calls 275
+burn 526/1000: 12.241 s; calls 259
+burn 527/1000: 12.424 s; calls 269
+burn 528/1000: 12.502 s; calls 268
+burn 529/1000: 12.566 s; calls 268
+burn 530/1000: 13.316 s; calls 289
+burn 531/1000: 12.541 s; calls 270
+burn 532/1000: 12.650 s; calls 273
+burn 533/1000: 12.486 s; calls 267
+burn 534/1000: 12.335 s; calls 269
+burn 535/1000: 12.324 s; calls 262
+burn 536/1000: 12.316 s; calls 265
+burn 537/1000: 12.656 s; calls 275
+burn 538/1000: 12.723 s; calls 274
+burn 539/1000: 12.459 s; calls 265
+burn 540/1000: 12.537 s; calls 273
+burn 541/1000: 12.515 s; calls 271
+burn 542/1000: 12.370 s; calls 267
+burn 543/1000: 12.628 s; calls 273
+burn 544/1000: 12.385 s; calls 273
+burn 545/1000: 12.488 s; calls 278
+burn 546/1000: 11.657 s; calls 259
+burn 547/1000: 11.374 s; calls 259
+burn 548/1000: 12.104 s; calls 276
+burn 549/1000: 11.690 s; calls 267
+burn 550/1000: 11.871 s; calls 270
+burn 551/1000: 11.914 s; calls 270
+burn 552/1000: 11.042 s; calls 249
+burn 553/1000: 11.623 s; calls 267
+burn 554/1000: 12.084 s; calls 276
+burn 555/1000: 12.343 s; calls 279
+burn 556/1000: 12.436 s; calls 283
+burn 557/1000: 11.830 s; calls 269
+burn 558/1000: 12.088 s; calls 274
+burn 559/1000: 12.111 s; calls 275
+burn 560/1000: 11.638 s; calls 267
+burn 561/1000: 11.789 s; calls 268
+burn 562/1000: 10.720 s; calls 244
+burn 563/1000: 12.113 s; calls 280
+burn 564/1000: 11.550 s; calls 261
+burn 565/1000: 11.521 s; calls 264
+burn 566/1000: 11.633 s; calls 262
+burn 567/1000: 11.849 s; calls 270
+burn 568/1000: 11.611 s; calls 263
+burn 569/1000: 11.783 s; calls 265
+burn 570/1000: 11.404 s; calls 260
+burn 571/1000: 12.461 s; calls 279
+burn 572/1000: 11.971 s; calls 274
+burn 573/1000: 11.683 s; calls 266
+burn 574/1000: 13.147 s; calls 273
+burn 575/1000: 12.466 s; calls 271
+burn 576/1000: 11.396 s; calls 250
+burn 577/1000: 13.111 s; calls 282
+burn 578/1000: 12.341 s; calls 261
+burn 579/1000: 13.076 s; calls 270
+burn 580/1000: 12.695 s; calls 272
+burn 581/1000: 12.743 s; calls 274
+burn 582/1000: 12.510 s; calls 273
+burn 583/1000: 12.381 s; calls 267
+burn 584/1000: 12.633 s; calls 273
+burn 585/1000: 12.643 s; calls 275
+burn 586/1000: 12.392 s; calls 263
+burn 587/1000: 12.283 s; calls 272
+burn 588/1000: 14.586 s; calls 287
+burn 589/1000: 12.684 s; calls 264
+burn 590/1000: 13.654 s; calls 276
+burn 591/1000: 14.847 s; calls 277
+burn 592/1000: 13.793 s; calls 264
+burn 593/1000: 14.902 s; calls 254
+burn 594/1000: 15.286 s; calls 274
+burn 595/1000: 14.699 s; calls 274
+burn 596/1000: 14.007 s; calls 268
+burn 597/1000: 13.989 s; calls 273
+burn 598/1000: 13.940 s; calls 278
+burn 599/1000: 14.406 s; calls 275
+burn 600/1000: 14.940 s; calls 274
+burn 601/1000: 13.947 s; calls 261
+burn 602/1000: 14.564 s; calls 271
+burn 603/1000: 13.593 s; calls 274
+burn 604/1000: 13.604 s; calls 273
+burn 605/1000: 13.784 s; calls 277
+burn 606/1000: 13.824 s; calls 278
+burn 607/1000: 13.812 s; calls 279
+burn 608/1000: 14.264 s; calls 267
+burn 609/1000: 15.438 s; calls 292
+burn 610/1000: 14.440 s; calls 269
+burn 611/1000: 9.881 s; calls 291
+burn 612/1000: 8.602 s; calls 266
+burn 613/1000: 8.985 s; calls 277
+burn 614/1000: 9.054 s; calls 283
+burn 615/1000: 9.203 s; calls 271
+burn 616/1000: 9.334 s; calls 273
+burn 617/1000: 9.156 s; calls 273
+burn 618/1000: 8.934 s; calls 265
+burn 619/1000: 9.382 s; calls 272
+burn 620/1000: 8.754 s; calls 257
+burn 621/1000: 9.513 s; calls 276
+burn 622/1000: 9.701 s; calls 273
+burn 623/1000: 9.484 s; calls 266
+burn 624/1000: 9.744 s; calls 271
+burn 625/1000: 9.164 s; calls 264
+burn 626/1000: 9.366 s; calls 265
+burn 627/1000: 9.364 s; calls 254
+burn 628/1000: 9.469 s; calls 266
+burn 629/1000: 9.599 s; calls 274
+burn 630/1000: 9.547 s; calls 271
+burn 631/1000: 9.476 s; calls 263
+burn 632/1000: 9.708 s; calls 275
+burn 633/1000: 9.906 s; calls 278
+burn 634/1000: 9.787 s; calls 272
+burn 635/1000: 9.890 s; calls 278
+burn 636/1000: 9.964 s; calls 271
+burn 637/1000: 9.760 s; calls 264
+burn 638/1000: 9.854 s; calls 267
+burn 639/1000: 10.105 s; calls 279
+burn 640/1000: 9.997 s; calls 277
+burn 641/1000: 9.355 s; calls 258
+burn 642/1000: 9.629 s; calls 256
+burn 643/1000: 10.124 s; calls 276
+burn 644/1000: 9.782 s; calls 265
+burn 645/1000: 10.447 s; calls 282
+burn 646/1000: 10.339 s; calls 277
+burn 647/1000: 10.039 s; calls 269
+burn 648/1000: 10.304 s; calls 281
+burn 649/1000: 10.333 s; calls 278
+burn 650/1000: 10.658 s; calls 285
+burn 651/1000: 10.349 s; calls 280
+burn 652/1000: 10.917 s; calls 284
+burn 653/1000: 10.500 s; calls 279
+burn 654/1000: 10.574 s; calls 282
+burn 655/1000: 10.057 s; calls 271
+burn 656/1000: 10.383 s; calls 267
+burn 657/1000: 11.270 s; calls 262
+burn 658/1000: 10.042 s; calls 260
+burn 659/1000: 10.220 s; calls 264
+burn 660/1000: 10.319 s; calls 280
+burn 661/1000: 10.243 s; calls 275
+burn 662/1000: 10.357 s; calls 276
+burn 663/1000: 10.730 s; calls 283
+burn 664/1000: 10.767 s; calls 284
+burn 665/1000: 10.547 s; calls 281
+burn 666/1000: 9.830 s; calls 255
+burn 667/1000: 9.695 s; calls 258
+burn 668/1000: 10.041 s; calls 260
+burn 669/1000: 9.925 s; calls 266
+burn 670/1000: 9.805 s; calls 263
+burn 671/1000: 9.831 s; calls 265
+burn 672/1000: 9.896 s; calls 265
+burn 673/1000: 10.118 s; calls 276
+burn 674/1000: 9.901 s; calls 265
+burn 675/1000: 9.894 s; calls 268
+burn 676/1000: 10.420 s; calls 281
+burn 677/1000: 10.266 s; calls 280
+burn 678/1000: 9.894 s; calls 265
+burn 679/1000: 10.356 s; calls 281
+burn 680/1000: 10.133 s; calls 271
+burn 681/1000: 9.943 s; calls 265
+burn 682/1000: 10.118 s; calls 276
+burn 683/1000: 10.152 s; calls 275
+burn 684/1000: 10.055 s; calls 265
+burn 685/1000: 10.090 s; calls 264
+burn 686/1000: 10.032 s; calls 262
+burn 687/1000: 9.210 s; calls 240
+burn 688/1000: 10.826 s; calls 284
+burn 689/1000: 9.792 s; calls 253
+burn 690/1000: 10.717 s; calls 285
+burn 691/1000: 10.186 s; calls 265
+burn 692/1000: 10.611 s; calls 273
+burn 693/1000: 10.775 s; calls 271
+burn 694/1000: 10.993 s; calls 282
+burn 695/1000: 11.623 s; calls 293
+burn 696/1000: 10.541 s; calls 269
+burn 697/1000: 10.814 s; calls 270
+burn 698/1000: 10.677 s; calls 267
+burn 699/1000: 11.367 s; calls 284
+burn 700/1000: 10.375 s; calls 265
+burn 701/1000: 10.189 s; calls 259
+burn 702/1000: 11.056 s; calls 278
+burn 703/1000: 11.097 s; calls 278
+burn 704/1000: 10.900 s; calls 273
+burn 705/1000: 10.949 s; calls 271
+burn 706/1000: 11.230 s; calls 287
+burn 707/1000: 10.823 s; calls 267
+burn 708/1000: 11.108 s; calls 272
+burn 709/1000: 10.530 s; calls 265
+burn 710/1000: 11.422 s; calls 278
+burn 711/1000: 11.327 s; calls 282
+burn 712/1000: 11.046 s; calls 274
+burn 713/1000: 11.724 s; calls 286
+burn 714/1000: 11.193 s; calls 277
+burn 715/1000: 11.509 s; calls 282
+burn 716/1000: 11.343 s; calls 281
+burn 717/1000: 10.637 s; calls 265
+burn 718/1000: 11.677 s; calls 285
+burn 719/1000: 11.104 s; calls 273
+burn 720/1000: 11.958 s; calls 290
+burn 721/1000: 11.679 s; calls 279
+burn 722/1000: 11.323 s; calls 277
+burn 723/1000: 11.225 s; calls 269
+burn 724/1000: 11.102 s; calls 263
+burn 725/1000: 11.154 s; calls 270
+burn 726/1000: 11.036 s; calls 263
+burn 727/1000: 11.791 s; calls 287
+burn 728/1000: 11.073 s; calls 269
+burn 729/1000: 11.320 s; calls 274
+burn 730/1000: 11.504 s; calls 282
+burn 731/1000: 11.228 s; calls 270
+burn 732/1000: 11.147 s; calls 264
+burn 733/1000: 11.101 s; calls 262
+burn 734/1000: 11.540 s; calls 279
+burn 735/1000: 11.532 s; calls 278
+burn 736/1000: 11.623 s; calls 286
+burn 737/1000: 11.140 s; calls 267
+burn 738/1000: 11.044 s; calls 261
+burn 739/1000: 11.058 s; calls 261
+burn 740/1000: 11.889 s; calls 283
+burn 741/1000: 12.811 s; calls 295
+burn 742/1000: 11.783 s; calls 282
+burn 743/1000: 10.814 s; calls 255
+burn 744/1000: 11.625 s; calls 277
+burn 745/1000: 11.464 s; calls 272
+burn 746/1000: 11.598 s; calls 276
+burn 747/1000: 11.727 s; calls 277
+burn 748/1000: 12.550 s; calls 282
+burn 749/1000: 12.159 s; calls 277
+burn 750/1000: 12.114 s; calls 263
+burn 751/1000: 11.909 s; calls 273
+burn 752/1000: 12.119 s; calls 277
+burn 753/1000: 12.704 s; calls 282
+burn 754/1000: 12.550 s; calls 275
+burn 755/1000: 12.134 s; calls 275
+burn 756/1000: 11.816 s; calls 271
+burn 757/1000: 11.914 s; calls 275
+burn 758/1000: 12.089 s; calls 283
+burn 759/1000: 12.090 s; calls 280
+burn 760/1000: 11.450 s; calls 260
+burn 761/1000: 12.381 s; calls 283
+burn 762/1000: 11.587 s; calls 265
+burn 763/1000: 12.184 s; calls 281
+burn 764/1000: 11.778 s; calls 266
+burn 765/1000: 12.287 s; calls 280
+burn 766/1000: 11.887 s; calls 269
+burn 767/1000: 11.735 s; calls 275
+burn 768/1000: 12.082 s; calls 283
+burn 769/1000: 11.637 s; calls 278
+burn 770/1000: 11.319 s; calls 266
+burn 771/1000: 11.685 s; calls 282
+burn 772/1000: 10.678 s; calls 254
+burn 773/1000: 11.393 s; calls 278
+burn 774/1000: 11.846 s; calls 288
+burn 775/1000: 11.897 s; calls 286
+burn 776/1000: 11.831 s; calls 282
+burn 777/1000: 11.139 s; calls 266
+burn 778/1000: 11.494 s; calls 276
+burn 779/1000: 11.785 s; calls 282
+burn 780/1000: 11.759 s; calls 281
+burn 781/1000: 11.978 s; calls 283
+burn 782/1000: 11.503 s; calls 277
+burn 783/1000: 11.139 s; calls 267
+burn 784/1000: 11.877 s; calls 284
+burn 785/1000: 11.488 s; calls 277
+burn 786/1000: 11.430 s; calls 273
+burn 787/1000: 11.470 s; calls 273
+burn 788/1000: 11.439 s; calls 274
+burn 789/1000: 11.728 s; calls 279
+burn 790/1000: 11.437 s; calls 276
+burn 791/1000: 11.525 s; calls 277
+burn 792/1000: 11.501 s; calls 270
+burn 793/1000: 11.755 s; calls 280
+burn 794/1000: 11.898 s; calls 285
+burn 795/1000: 12.218 s; calls 293
+burn 796/1000: 11.263 s; calls 271
+burn 797/1000: 11.924 s; calls 282
+burn 798/1000: 11.879 s; calls 280
+burn 799/1000: 11.561 s; calls 276
+burn 800/1000: 11.556 s; calls 275
+burn 801/1000: 11.840 s; calls 279
+burn 802/1000: 11.819 s; calls 279
+burn 803/1000: 11.913 s; calls 280
+burn 804/1000: 11.859 s; calls 280
+burn 805/1000: 11.658 s; calls 282
+burn 806/1000: 11.869 s; calls 280
+burn 807/1000: 11.826 s; calls 276
+burn 808/1000: 12.330 s; calls 275
+burn 809/1000: 12.554 s; calls 285
+burn 810/1000: 12.773 s; calls 274
+burn 811/1000: 13.142 s; calls 293
+burn 812/1000: 12.768 s; calls 280
+burn 813/1000: 12.390 s; calls 273
+burn 814/1000: 12.596 s; calls 278
+burn 815/1000: 12.437 s; calls 280
+burn 816/1000: 12.459 s; calls 278
+burn 817/1000: 12.920 s; calls 284
+burn 818/1000: 12.134 s; calls 268
+burn 819/1000: 12.159 s; calls 273
+burn 820/1000: 13.104 s; calls 290
+burn 821/1000: 12.666 s; calls 280
+burn 822/1000: 12.410 s; calls 275
+burn 823/1000: 12.422 s; calls 278
+burn 824/1000: 12.522 s; calls 279
+burn 825/1000: 12.383 s; calls 277
+burn 826/1000: 12.321 s; calls 275
+burn 827/1000: 12.705 s; calls 285
+burn 828/1000: 12.255 s; calls 272
+burn 829/1000: 12.611 s; calls 278
+burn 830/1000: 12.679 s; calls 278
+burn 831/1000: 12.619 s; calls 274
+burn 832/1000: 12.529 s; calls 273
+burn 833/1000: 12.549 s; calls 281
+burn 834/1000: 12.105 s; calls 268
+burn 835/1000: 12.444 s; calls 275
+burn 836/1000: 12.619 s; calls 275
+burn 837/1000: 12.791 s; calls 281
+burn 838/1000: 13.154 s; calls 288
+burn 839/1000: 12.558 s; calls 274
+burn 840/1000: 12.854 s; calls 284
+burn 841/1000: 12.667 s; calls 269
+burn 842/1000: 13.249 s; calls 281
+burn 843/1000: 13.713 s; calls 283
+burn 844/1000: 12.831 s; calls 280
+burn 845/1000: 13.376 s; calls 290
+burn 846/1000: 13.323 s; calls 278
+burn 847/1000: 12.693 s; calls 281
+burn 848/1000: 12.716 s; calls 281
+burn 849/1000: 12.531 s; calls 275
+burn 850/1000: 12.549 s; calls 276
+burn 851/1000: 12.495 s; calls 275
+burn 852/1000: 12.507 s; calls 275
+burn 853/1000: 12.340 s; calls 271
+burn 854/1000: 12.962 s; calls 287
+burn 855/1000: 12.702 s; calls 282
+burn 856/1000: 12.430 s; calls 275
+burn 857/1000: 12.654 s; calls 281
+burn 858/1000: 12.390 s; calls 272
+burn 859/1000: 12.345 s; calls 275
+burn 860/1000: 12.681 s; calls 283
+burn 861/1000: 11.841 s; calls 263
+burn 862/1000: 11.941 s; calls 265
+burn 863/1000: 12.650 s; calls 283
+burn 864/1000: 12.196 s; calls 269
+burn 865/1000: 12.447 s; calls 278
+burn 866/1000: 12.389 s; calls 277
+burn 867/1000: 12.374 s; calls 273
+burn 868/1000: 13.137 s; calls 287
+burn 869/1000: 13.008 s; calls 287
+burn 870/1000: 12.327 s; calls 274
+burn 871/1000: 12.835 s; calls 285
+burn 872/1000: 12.588 s; calls 280
+burn 873/1000: 12.955 s; calls 286
+burn 874/1000: 12.427 s; calls 274
+burn 875/1000: 12.704 s; calls 284
+burn 876/1000: 12.437 s; calls 274
+burn 877/1000: 12.102 s; calls 262
+burn 878/1000: 12.526 s; calls 273
+burn 879/1000: 13.265 s; calls 289
+burn 880/1000: 12.691 s; calls 277
+burn 881/1000: 12.531 s; calls 272
+burn 882/1000: 12.500 s; calls 274
+burn 883/1000: 12.665 s; calls 279
+burn 884/1000: 12.562 s; calls 275
+burn 885/1000: 12.492 s; calls 272
+burn 886/1000: 12.696 s; calls 277
+burn 887/1000: 13.171 s; calls 281
+burn 888/1000: 12.725 s; calls 275
+burn 889/1000: 13.709 s; calls 294
+burn 890/1000: 12.539 s; calls 277
+burn 891/1000: 12.955 s; calls 283
+burn 892/1000: 12.853 s; calls 283
+burn 893/1000: 13.053 s; calls 286
+burn 894/1000: 12.968 s; calls 283
+burn 895/1000: 13.507 s; calls 298
+burn 896/1000: 13.745 s; calls 289
+burn 897/1000: 13.269 s; calls 287
+burn 898/1000: 12.905 s; calls 285
+burn 899/1000: 12.551 s; calls 274
+burn 900/1000: 11.995 s; calls 260
+burn 901/1000: 12.877 s; calls 281
+burn 902/1000: 12.708 s; calls 277
+burn 903/1000: 12.717 s; calls 280
+burn 904/1000: 13.091 s; calls 288
+burn 905/1000: 12.799 s; calls 278
+burn 906/1000: 12.778 s; calls 280
+burn 907/1000: 12.786 s; calls 280
+burn 908/1000: 12.875 s; calls 275
+burn 909/1000: 13.636 s; calls 295
+burn 910/1000: 12.871 s; calls 274
+burn 911/1000: 13.378 s; calls 287
+burn 912/1000: 13.383 s; calls 282
+burn 913/1000: 13.971 s; calls 285
+burn 914/1000: 13.453 s; calls 279
+burn 915/1000: 13.109 s; calls 286
+burn 916/1000: 13.007 s; calls 283
+burn 917/1000: 12.474 s; calls 257
+burn 918/1000: 13.512 s; calls 283
+burn 919/1000: 12.445 s; calls 266
+burn 911/1000: 9.135 s; calls 287
+burn 912/1000: 9.070 s; calls 282
+burn 913/1000: 9.544 s; calls 285
+burn 914/1000: 9.457 s; calls 279
+burn 915/1000: 9.619 s; calls 286
+burn 916/1000: 9.696 s; calls 283
+burn 917/1000: 8.996 s; calls 257
+burn 918/1000: 9.677 s; calls 283
+burn 919/1000: 9.251 s; calls 266
+burn 920/1000: 10.573 s; calls 293
+burn 921/1000: 9.786 s; calls 274
+burn 922/1000: 10.372 s; calls 286
+burn 923/1000: 10.178 s; calls 278
+burn 924/1000: 10.438 s; calls 283
+burn 925/1000: 10.944 s; calls 289
+burn 926/1000: 11.083 s; calls 287
+burn 927/1000: 11.399 s; calls 294
+burn 928/1000: 11.195 s; calls 285
+burn 929/1000: 10.749 s; calls 289
+burn 930/1000: 10.373 s; calls 276
+burn 931/1000: 11.205 s; calls 288
+burn 932/1000: 10.878 s; calls 279
+burn 933/1000: 11.408 s; calls 278
+burn 934/1000: 11.895 s; calls 284
+burn 935/1000: 12.869 s; calls 284
+burn 936/1000: 12.083 s; calls 290
+burn 937/1000: 11.747 s; calls 284
+burn 938/1000: 11.635 s; calls 277
+burn 939/1000: 11.565 s; calls 281
+burn 940/1000: 10.764 s; calls 261
+burn 941/1000: 11.881 s; calls 283
+burn 942/1000: 11.784 s; calls 279
+burn 943/1000: 11.349 s; calls 272
+burn 944/1000: 11.971 s; calls 285
+burn 945/1000: 11.520 s; calls 274
+burn 946/1000: 12.123 s; calls 287
+burn 947/1000: 11.691 s; calls 276
+burn 948/1000: 11.860 s; calls 271
+burn 949/1000: 12.137 s; calls 287
+burn 950/1000: 11.619 s; calls 273
+burn 951/1000: 12.170 s; calls 281
+burn 952/1000: 12.430 s; calls 289
+burn 953/1000: 11.886 s; calls 279
+burn 954/1000: 12.118 s; calls 282
+burn 955/1000: 12.417 s; calls 288
+burn 956/1000: 11.653 s; calls 270
+burn 957/1000: 12.612 s; calls 296
+burn 958/1000: 12.359 s; calls 285
+burn 959/1000: 11.872 s; calls 273
+burn 960/1000: 12.764 s; calls 289
+burn 961/1000: 12.015 s; calls 274
+burn 962/1000: 12.658 s; calls 287
+burn 963/1000: 12.008 s; calls 276
+burn 964/1000: 12.215 s; calls 283
+burn 965/1000: 13.062 s; calls 299
+burn 966/1000: 12.363 s; calls 282
+burn 967/1000: 12.706 s; calls 290
+burn 968/1000: 12.426 s; calls 290
+burn 969/1000: 12.228 s; calls 278
+burn 970/1000: 12.711 s; calls 291
+burn 971/1000: 12.406 s; calls 285
+burn 972/1000: 12.057 s; calls 280
+burn 973/1000: 12.303 s; calls 284
+burn 974/1000: 12.009 s; calls 279
+burn 975/1000: 12.494 s; calls 285
+burn 976/1000: 12.231 s; calls 285
+burn 977/1000: 12.537 s; calls 290
+burn 978/1000: 12.293 s; calls 280
+burn 979/1000: 12.204 s; calls 281
+burn 980/1000: 12.583 s; calls 289
+burn 981/1000: 12.913 s; calls 296
+burn 982/1000: 12.799 s; calls 291
+burn 983/1000: 12.488 s; calls 285
+burn 984/1000: 13.061 s; calls 294
+burn 985/1000: 12.462 s; calls 284
+burn 986/1000: 11.800 s; calls 272
+burn 987/1000: 12.237 s; calls 283
+burn 988/1000: 11.975 s; calls 277
+burn 989/1000: 12.040 s; calls 276
+burn 990/1000: 12.556 s; calls 287
+burn 991/1000: 12.069 s; calls 279
+burn 992/1000: 12.143 s; calls 280
+burn 993/1000: 11.833 s; calls 275
+burn 994/1000: 12.231 s; calls 285
+burn 995/1000: 12.550 s; calls 287
+burn 996/1000: 12.036 s; calls 277
+burn 997/1000: 12.579 s; calls 290
+burn 998/1000: 12.131 s; calls 278
+burn 999/1000: 12.211 s; calls 281
+burn 1000/1000: 12.041 s; calls 271
+production 1/350: 150.313 s
+production 2/350: 151.886 s
+production 3/350: 150.803 s
+production 4/350: 154.141 s
+production 5/350: 153.336 s
+production 6/350: 151.519 s
+production 7/350: 154.117 s
+production 8/350: 156.864 s
+production 9/350: 154.714 s
+production 10/350: 154.179 s
+production 11/350: 156.878 s
+production 12/350: 152.165 s
+production 13/350: 154.534 s
+production 14/350: 153.639 s
+production 15/350: 152.972 s
+production 16/350: 153.560 s
+production 17/350: 156.334 s
+production 18/350: 156.492 s
+production 19/350: 157.824 s
+production 20/350: 158.306 s
+production 21/350: 155.626 s
+production 22/350: 169.687 s
+production 23/350: 166.013 s
+production 24/350: 160.416 s
+production 25/350: 191.619 s
+production 26/350: 183.687 s
+production 27/350: 186.679 s
+production 28/350: 189.622 s
+production 29/350: 190.433 s
+production 30/350: 188.159 s
+production 31/350: 189.975 s
+production 32/350: 185.529 s
+production 33/350: 184.094 s
+production 34/350: 183.637 s
+production 35/350: 183.766 s
+production 36/350: 176.824 s
+production 37/350: 177.153 s
+production 38/350: 176.701 s
+production 39/350: 175.658 s
+production 40/350: 179.827 s
+production 41/350: 177.658 s
+production 42/350: 174.204 s
+production 43/350: 163.933 s
+production 44/350: 171.922 s
+production 45/350: 174.584 s
+production 46/350: 178.831 s
+production 47/350: 170.129 s
+production 48/350: 168.429 s
+production 49/350: 173.087 s
+production 50/350: 169.630 s
+production 51/350: 172.572 s
+production 52/350: 168.353 s
+production 53/350: 172.722 s
+production 54/350: 170.961 s
+production 55/350: 168.807 s
+production 56/350: 172.271 s
+production 57/350: 169.130 s
+production 58/350: 165.413 s
+production 59/350: 167.081 s
+production 60/350: 162.966 s
+production 61/350: 162.040 s
+production 62/350: 166.774 s
+production 63/350: 168.894 s
+production 64/350: 167.551 s
+production 65/350: 166.738 s
+production 66/350: 167.935 s
+production 67/350: 169.092 s
+production 68/350: 162.673 s
+production 69/350: 161.265 s
+production 70/350: 171.321 s
+production 71/350: 169.409 s
+production 72/350: 167.574 s
+production 73/350: 162.134 s
+production 74/350: 159.739 s
+production 75/350: 161.832 s
+production 76/350: 160.204 s
+production 77/350: 165.902 s
+production 78/350: 164.614 s
+production 79/350: 161.500 s
+production 80/350: 167.461 s
+production 81/350: 161.261 s
+production 82/350: 170.949 s
+production 83/350: 166.393 s
+production 84/350: 161.813 s
+production 85/350: 163.933 s
+production 86/350: 171.910 s
+production 87/350: 170.663 s
+production 88/350: 172.340 s
+production 89/350: 173.831 s
+production 90/350: 166.195 s
+production 91/350: 168.395 s
+production 92/350: 164.407 s
+production 93/350: 161.697 s
+production 94/350: 157.067 s
+production 95/350: 158.136 s
+production 96/350: 158.736 s
+production 97/350: 159.477 s
+production 98/350: 161.066 s
+production 99/350: 160.255 s
+production 100/350: 162.183 s
+production 101/350: 162.239 s
+production 102/350: 160.846 s
+production 103/350: 160.230 s
+production 104/350: 158.432 s
+production 105/350: 158.554 s
+production 106/350: 159.554 s
+production 107/350: 159.383 s
+production 108/350: 161.513 s
+production 109/350: 156.339 s
+production 110/350: 166.558 s
+production 111/350: 163.403 s
+production 112/350: 174.737 s
+production 113/350: 182.232 s
+production 114/350: 186.812 s
+production 115/350: 186.740 s
+production 116/350: 192.056 s
+production 117/350: 189.476 s
+production 118/350: 183.220 s
+production 119/350: 177.881 s
+production 120/350: 178.788 s
+production 121/350: 178.226 s
+production 122/350: 179.489 s
+production 123/350: 181.893 s
+production 124/350: 179.379 s
+production 125/350: 172.028 s
+production 126/350: 175.191 s
+production 127/350: 172.688 s
+production 128/350: 173.100 s
+production 129/350: 172.954 s
+production 130/350: 176.854 s
+production 131/350: 168.301 s
+production 132/350: 173.353 s
+production 133/350: 173.224 s
+production 134/350: 177.264 s
+production 135/350: 172.732 s
+production 136/350: 186.454 s
+production 137/350: 184.133 s
+production 138/350: 168.616 s
+production 139/350: 170.315 s
+production 140/350: 170.277 s
+production 141/350: 174.039 s
+production 142/350: 174.773 s
+production 143/350: 176.208 s
+production 144/350: 173.183 s
+production 145/350: 175.019 s
+production 146/350: 177.015 s
+production 147/350: 180.048 s
+production 148/350: 176.646 s
+production 149/350: 177.233 s
+production 150/350: 174.266 s
+production 151/350: 179.095 s
+production 152/350: 173.286 s
+production 153/350: 173.116 s
+production 154/350: 171.251 s
+production 155/350: 168.293 s
+production 156/350: 171.315 s
+production 157/350: 172.305 s
+production 158/350: 166.960 s
+production 159/350: 169.209 s
+production 160/350: 172.676 s
+production 161/350: 171.963 s
+production 162/350: 175.625 s
+production 163/350: 168.774 s
+production 164/350: 168.474 s
+production 165/350: 168.902 s
+production 166/350: 169.193 s
+production 167/350: 170.235 s
+production 168/350: 174.612 s
+production 169/350: 179.031 s
+production 170/350: 175.190 s
+production 171/350: 180.173 s
+production 172/350: 170.796 s
+production 173/350: 175.198 s
+production 174/350: 176.452 s
+production 175/350: 170.519 s
+production 176/350: 181.139 s
+production 177/350: 178.201 s
+production 178/350: 165.545 s
+production 179/350: 159.919 s
+production 180/350: 157.052 s
+production 181/350: 163.790 s
+production 182/350: 164.871 s
+production 183/350: 160.476 s
+production 184/350: 162.313 s
+production 185/350: 164.347 s
+production 186/350: 167.921 s
+production 187/350: 171.277 s
+production 188/350: 175.502 s
+production 189/350: 167.254 s
+production 190/350: 170.521 s
+production 191/350: 169.216 s
+production 192/350: 167.442 s
+production 193/350: 170.184 s
+production 194/350: 171.507 s
+production 195/350: 171.811 s
+production 196/350: 170.281 s
+production 197/350: 165.648 s
+production 198/350: 162.791 s
+production 199/350: 170.500 s
+production 200/350: 164.029 s
+production 201/350: 169.891 s
+production 202/350: 180.284 s
+production 203/350: 182.669 s
+production 204/350: 186.820 s
+production 205/350: 185.139 s
+production 206/350: 186.553 s
+production 207/350: 188.944 s
+production 208/350: 191.420 s
+production 209/350: 196.399 s
+production 210/350: 189.548 s
+production 211/350: 187.483 s
+production 212/350: 172.770 s
+production 213/350: 171.540 s
+production 214/350: 180.570 s
+production 215/350: 184.562 s
+production 216/350: 169.097 s
+production 217/350: 171.190 s
+production 218/350: 169.112 s
+production 219/350: 169.227 s
+production 220/350: 165.670 s
+production 221/350: 170.643 s
+production 222/350: 169.435 s
+production 223/350: 171.264 s
+production 224/350: 173.572 s
+production 225/350: 172.570 s
+production 226/350: 164.937 s
+production 227/350: 166.653 s
+production 228/350: 164.237 s
+production 229/350: 164.102 s
+production 230/350: 164.913 s
+production 231/350: 160.668 s
+production 232/350: 163.749 s
+production 233/350: 166.373 s
+production 234/350: 163.230 s
+production 235/350: 161.538 s
+production 236/350: 164.153 s
+production 237/350: 162.998 s
+production 238/350: 165.578 s
+production 239/350: 164.069 s
+production 240/350: 163.321 s
+production 241/350: 160.443 s
+production 242/350: 160.637 s
+production 243/350: 162.507 s
+production 244/350: 161.402 s
+production 245/350: 161.073 s
+production 246/350: 160.718 s
+production 247/350: 160.851 s
+production 248/350: 158.845 s
+production 249/350: 160.699 s
+production 250/350: 156.063 s
+production 251/350: 159.058 s
+production 252/350: 156.930 s
+production 253/350: 161.858 s
+production 254/350: 160.075 s
+production 255/350: 162.523 s
+production 256/350: 160.615 s
+production 257/350: 160.042 s
+production 258/350: 160.708 s
+production 259/350: 159.904 s
+production 260/350: 162.399 s
+production 261/350: 159.478 s
+production 262/350: 159.549 s
+production 263/350: 157.477 s
+production 264/350: 158.275 s
+production 265/350: 159.492 s
+production 266/350: 158.131 s
+production 267/350: 155.726 s
+production 268/350: 159.133 s
+production 269/350: 159.614 s
+production 270/350: 158.642 s
+production 271/350: 156.325 s
+production 272/350: 155.875 s
+production 273/350: 157.748 s
+production 274/350: 156.437 s
+production 275/350: 159.688 s
+production 276/350: 160.349 s
+production 277/350: 158.972 s
+production 278/350: 160.302 s
+production 279/350: 156.803 s
+production 280/350: 155.830 s
+production 281/350: 157.327 s
+production 282/350: 159.250 s
+production 283/350: 156.879 s
+production 284/350: 153.758 s
+production 285/350: 160.193 s
+production 286/350: 164.124 s
+production 287/350: 159.152 s
+production 288/350: 157.635 s
+production 289/350: 159.100 s
+production 290/350: 159.920 s
+production 291/350: 157.509 s
+production 292/350: 162.541 s
+production 293/350: 159.276 s
+production 294/350: 160.248 s
+production 295/350: 161.234 s
+production 296/350: 160.883 s
+production 297/350: 159.475 s
+production 298/350: 159.298 s
+production 299/350: 159.623 s
+production 300/350: 158.327 s
+production 301/350: 161.033 s
+production 302/350: 161.116 s
+production 303/350: 160.197 s
+production 304/350: 159.773 s
+production 305/350: 160.060 s
+production 306/350: 161.993 s
+production 307/350: 159.695 s
+production 308/350: 160.513 s
+production 309/350: 161.149 s
+production 310/350: 162.064 s
+production 311/350: 162.093 s
+production 312/350: 160.691 s
+production 313/350: 158.009 s
+production 314/350: 157.007 s
+production 315/350: 156.209 s
+production 316/350: 159.330 s
+production 317/350: 157.029 s
+production 318/350: 161.962 s
+production 319/350: 161.692 s
+production 320/350: 163.860 s
+production 321/350: 163.422 s
+production 322/350: 158.955 s
+production 323/350: 159.470 s
+production 324/350: 163.272 s
+production 325/350: 161.515 s
+production 326/350: 157.577 s
+production 327/350: 160.064 s
+production 328/350: 157.616 s
+production 329/350: 162.137 s
+production 330/350: 157.833 s
+production 331/350: 158.547 s
+production 332/350: 158.584 s
+production 333/350: 160.973 s
+production 334/350: 160.107 s
+production 335/350: 161.785 s
+production 336/350: 161.782 s
+production 337/350: 163.940 s
+production 338/350: 162.133 s
+production 339/350: 158.983 s
+production 340/350: 158.887 s
+production 341/350: 161.768 s
+production 342/350: 160.484 s
+production 343/350: 160.302 s
+production 344/350: 163.024 s
+production 345/350: 162.040 s
+production 346/350: 161.565 s
+production 347/350: 160.614 s
+production 348/350: 164.592 s
+production 349/350: 160.085 s
+production 350/350: 160.711 s
+SAMPLING_COMPLETE
