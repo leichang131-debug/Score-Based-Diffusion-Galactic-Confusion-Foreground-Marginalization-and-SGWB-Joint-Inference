@@ -1,5 +1,7 @@
 {
   "definition": "Arithmetic MOSA amplitude averages computed draw by draw, as in paper Section IV.",
+  "dataset": "2.8 flexing-arm, not 2.8_EQ.",
+  "markers": "Cyan dashed lines: actual sampled 16th, 50th, 84th percentiles; red solid: injection. Figure 4 marker convention applied to the available 2.8 template samples, not a claim of reproducing the EQ experiment.",
   "parameters": [
     {
       "parameter": "ACC_SC1_average",

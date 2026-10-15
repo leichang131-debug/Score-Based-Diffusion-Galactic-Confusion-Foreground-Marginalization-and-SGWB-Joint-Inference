@@ -9,5 +9,11 @@
     "posterior-noise-spacecraft.png": "Figure 8: spacecraft-averaged ACC/OMS amplitudes",
     "posterior-spectrum.png": "Figure 6: template component only; RJMCMC not run"
   },
-  "scope": "No EQ/2.9/RJMCMC/foreground-marginalization results; interpretation follows analysis.json."
+  "scope": "No EQ/2.9/RJMCMC/foreground-marginalization results; interpretation follows analysis.json.",
+  "noise_marker_refinement": "Actual 2.8 template samples with 16/50/84% cyan dashed lines from the Figure 4 marker convention. Figure 4 itself is 2.8_EQ and has not been reproduced.",
+  "unavailable_comparisons": {
+    "figure3_blue": "2.8_EQ template chain not executed",
+    "figure4_dataset": "2.8_EQ template chain not executed",
+    "figure6_pink": "2.8 RJMCMC interpolation chain not executed"
+  }
 }

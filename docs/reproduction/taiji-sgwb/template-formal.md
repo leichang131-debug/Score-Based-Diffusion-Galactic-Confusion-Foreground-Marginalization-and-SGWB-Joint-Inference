@@ -111,3 +111,8 @@ The new tracked launcher start-taiji-sgwb-background.command is opened with macO
 ## Completed schedule and postprocessing repair (2026-10-15)
 
 The original 5200 transitions completed at 06:13:36 Beijing time. HDF dimensions are acc/ro (350,6,62,1,6), sgwb (350,6,62,1,2); cold samples (350,62,14). The automatic external analyzer encountered a path-expression TypeError before rendering; the original error and source are archived. A path-only repair regenerated six figures, spectrum arrays, parameter tables and diagnostics without advancing MCMC or altering either HDF or final state (hash verified). All seven numerical checks pass; only two of fourteen conservative diagnostic flags pass, so the report explicitly retains CONVERGENCE_NOT_CONFIRMED. Final native-Terminal session runtime was 16.52 hours including supervision overhead; this excludes earlier interrupted attempts. No additional long-chain sampling was launched. See results/taiji-sgwb/template-formal/README.md and completion-summary.json for full scope, file inventory, and posterior summaries.
+
+
+## Figure 3/4/6 detail review
+
+The user supplied Figure 4 (2.8_EQ) rather than Figure 8 (2.8), which was the original noise plot reference. Actual 16/50/84% markers were added to the available 2.8 noise posterior, and the SGWB corner now explicitly labels 2.8 template. Figure 3 blue EQ and Figure 6 pink RJMCMC bands are unexecuted experiments, not missing plotting layers that can be recovered from the current power-law posterior. See results/taiji-sgwb/template-formal/paper-figure-correspondence.md for the exact mapping and unaltered sampling-artifact hashes.

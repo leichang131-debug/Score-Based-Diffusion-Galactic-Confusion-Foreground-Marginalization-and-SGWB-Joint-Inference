@@ -1,0 +1,21 @@
+{
+  "scope": "Sampling artifacts before drawing-only detail refinement. No extra data, EQ run or RJMCMC run.",
+  "files": [
+    {
+      "path": "results/taiji-sgwb/template-formal/template_AET_nofg.h5",
+      "sha256": "6949b1cb1f9cc2a5ae105ffefe5a99bf5ac64d69e8b5913b631481b3333bf7d3"
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/final-state.json",
+      "sha256": "dcd64cb3f177ec88ba5702a63946c877a8e56193bec7fd827c8289a0be83d5e7"
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/final-state.npz",
+      "sha256": "f2cb5a4b1b32946528b019df4b0b5e235304b9044c53aca8d566d614c7bfd637"
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/posterior-cold-chain.npz",
+      "sha256": "a4e90bf94b07f114c806535408c759d5fab333db7008477ed68cad3c653d6ae3"
+    }
+  ]
+}

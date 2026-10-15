@@ -12,13 +12,13 @@
     },
     {
       "path": "docs/reproduction/taiji-sgwb/template-formal.md",
-      "sha256": "ee9b096ca99c4fec5bfee286216832960bf5672319aa0d3c8b96971ab05d9b8a",
-      "bytes": 17448
+      "sha256": "ec93c21aa996f6fc607459bcaa994e71a485a3e186c753d1f7cd88c67d490906",
+      "bytes": 18016
     },
     {
       "path": "results/taiji-sgwb/template-formal/README.md",
-      "sha256": "9dcac62a573b151f4ae01375c78f7c2795d4bbbe9435d1786908689faecdccde",
-      "bytes": 4729
+      "sha256": "c4acf97794568040a05ab92568e9b42aa512263f307968511b92b4d87eaa6e0b",
+      "bytes": 5269
     },
     {
       "path": "results/taiji-sgwb/template-formal/analysis-execution.txt",
@@ -49,6 +49,21 @@
       "path": "results/taiji-sgwb/template-formal/attempts/automatic-postprocessing-path-error/status.json",
       "sha256": "0635294a96291f897afb4c27d18c912678bf42a2d437025191a0e64cbdda6111",
       "bytes": 127
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/attempts/before-paper-detail-review/figure-provenance.json",
+      "sha256": "71145778e525c67d7ef03905ece49a676e37e580ed349c483b6441933767082d",
+      "bytes": 1093
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/attempts/before-paper-detail-review/posterior-noise-spacecraft.png",
+      "sha256": "3b1fa5d0d12edd1ec762aa793d37912f7001d995ba88fb538ec7afacbb6c3f42",
+      "bytes": 126769
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/attempts/before-paper-detail-review/posterior-sgwb.png",
+      "sha256": "e3401f3822b31240b72cf0a03f594ad347819a088d0c42247cf6866c383d41a0",
+      "bytes": 74782
     },
     {
       "path": "results/taiji-sgwb/template-formal/attempts/initial-progress-serialization/execution.txt",
@@ -87,8 +102,8 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/figure-provenance.json",
-      "sha256": "71145778e525c67d7ef03905ece49a676e37e580ed349c483b6441933767082d",
-      "bytes": 1093
+      "sha256": "f654e0d7fc98609d12e8e363f6ebc70c67c3642ef0c336d4137503781f087d67",
+      "bytes": 1499
     },
     {
       "path": "results/taiji-sgwb/template-formal/final-state.json",
@@ -191,6 +206,16 @@
       "bytes": 1061
     },
     {
+      "path": "results/taiji-sgwb/template-formal/paper-detail-review-input-hashes.json",
+      "sha256": "c6ebb784240eebc91ec604e614fb8a06f7239cb5f547a8f9f326eefa0293b615",
+      "bytes": 800
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/paper-figure-correspondence.md",
+      "sha256": "5b09e34258b98e1ad3b01fa421741d9ebf2111708f8c3ec8718f264bf1a56f0a",
+      "bytes": 2693
+    },
+    {
       "path": "results/taiji-sgwb/template-formal/parameter-correlation.png",
       "sha256": "913c25316f44f852dd3251246559e6a8d19dd1841e65a1dfcca925a36665ee11",
       "bytes": 70655
@@ -232,13 +257,13 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/posterior-noise-spacecraft.json",
-      "sha256": "afd1598660330d6d548170a91bc70afe4b81d2c29dce8c3d3e71d50219709c2b",
-      "bytes": 2227
+      "sha256": "533518c43cf9fc0a1725882303b0c07d90072304ad8f2f75879123d5ada0b875",
+      "bytes": 2494
     },
     {
       "path": "results/taiji-sgwb/template-formal/posterior-noise-spacecraft.png",
-      "sha256": "3b1fa5d0d12edd1ec762aa793d37912f7001d995ba88fb538ec7afacbb6c3f42",
-      "bytes": 126769
+      "sha256": "05e2d94b45d86cb46f883c03da1e24d237eaa53060b0c2e6e2a7061cd7a6dfd9",
+      "bytes": 135869
     },
     {
       "path": "results/taiji-sgwb/template-formal/posterior-parameters.csv",
@@ -247,8 +272,8 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/posterior-sgwb.png",
-      "sha256": "e3401f3822b31240b72cf0a03f594ad347819a088d0c42247cf6866c383d41a0",
-      "bytes": 74782
+      "sha256": "6278f4035c8aec97a5dad5d70c618a8920b05cc588ee5baaa346b89bf891ec00",
+      "bytes": 85974
     },
     {
       "path": "results/taiji-sgwb/template-formal/posterior-spectrum.npz",
@@ -262,8 +287,8 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/postprocessing-readiness.json",
-      "sha256": "42c7a2bd1afce0cf30022826f8401ebfcfa7ab840d2f0b25488d2548549f2476",
-      "bytes": 2534
+      "sha256": "04456a1bc881d49ecd16226842dc460e023fe82a7f717c214d29a0c3484ebf5a",
+      "bytes": 2661
     },
     {
       "path": "results/taiji-sgwb/template-formal/postprocessing-repair-input-hashes.json",
@@ -527,8 +552,8 @@
     },
     {
       "path": "scripts/reproduction/analyze-taiji-sgwb-template-formal.py",
-      "sha256": "c7fadc295f8e8f541f9c5b1fc6662d2e0c442c40a66b106792a1786c7ded9ccc",
-      "bytes": 14562
+      "sha256": "94a09bc952c4628f1880925058d44c815a12d3e75277e4a3517094026c7026f4",
+      "bytes": 15147
     },
     {
       "path": "scripts/reproduction/audit-taiji-sgwb-template-formal.py",

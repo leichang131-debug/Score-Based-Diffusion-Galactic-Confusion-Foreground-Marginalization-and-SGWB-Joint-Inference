@@ -29,7 +29,7 @@ Cold production acceptance is 0.2942. Only 2 of 14 parameters pass the predeclar
 ## Figures
 
 - [SGWB posterior](posterior-sgwb.png): paper Figure 3's 2.8 component, pink 68%/95% contours and red injection.
-- [Noise posteriors](posterior-noise-spacecraft.png): paper Figure 8's template component, draw-by-draw spacecraft averages in physical fm/pm units.
+- [Noise posteriors](posterior-noise-spacecraft.png): paper Figure 8's available 2.8 template component, draw-by-draw spacecraft averages in physical fm/pm units. Cyan 16/50/84% dashed markers are added using Figure 4's marker convention; this is not the EQ experiment.
 - [SGWB spectrum](posterior-spectrum.png): paper Figure 6's template component, 95% pointwise band and fractional error panel. Display is 1–40 mHz; full numerical range is retained in NPZ.
 - [SGWB production traces](production-traces.png).
 - [All 14 production traces](production-traces-all.png).
@@ -42,3 +42,7 @@ All six figures were generated from this run and visually inspected. No upstream
 The automatic analysis initially stopped at an external analyzer path typo, ROOT[...] instead of ROOT / ..., before plotting. Original failure log, pre-fix analyzer and status are retained under attempts/automatic-postprocessing-path-error/. Corrected postprocessing was rerun against the unchanged completed chain. SHA-256 comparisons confirm both live/exported HDF and final NPZ/JSON were not altered. This was not a sampling failure or MCMC rerun. The completed-state audit now requires analysis, status consistency, all six figures and published final-state hashes; an integrity-only audit cannot stand in for postprocessing completion.
 
 [Detailed method and history](../../../docs/reproduction/taiji-sgwb/template-formal.md).
+
+## Reference-figure detail review
+
+See [figure-by-figure correspondence](paper-figure-correspondence.md). Paper Figure 3 also contains 2.8_EQ posteriors; Figure 4 is specifically 2.8_EQ; Figure 6 also contains a separate RJMCMC interpolation result. Those experiments have not been executed. Available-data quantile markers were added without changing sample values. Full-paper figure reproduction remains incomplete.

@@ -40,7 +40,7 @@
       "sha256": "e724f86ff9bda19dd5b4adac2444d9618332003d861f981bdd7111eff71222d0"
     }
   ],
-  "analyzer_sha256": "c7fadc295f8e8f541f9c5b1fc6662d2e0c442c40a66b106792a1786c7ded9ccc",
+  "analyzer_sha256": "94a09bc952c4628f1880925058d44c815a12d3e75277e4a3517094026c7026f4",
   "all_checks_pass": true,
   "actual_completed_data_figures": [
     {
@@ -50,13 +50,13 @@
     },
     {
       "name": "posterior-noise-spacecraft.png",
-      "bytes": 126769,
-      "sha256": "3b1fa5d0d12edd1ec762aa793d37912f7001d995ba88fb538ec7afacbb6c3f42"
+      "bytes": 135869,
+      "sha256": "05e2d94b45d86cb46f883c03da1e24d237eaa53060b0c2e6e2a7061cd7a6dfd9"
     },
     {
       "name": "posterior-sgwb.png",
-      "bytes": 74782,
-      "sha256": "e3401f3822b31240b72cf0a03f594ad347819a088d0c42247cf6866c383d41a0"
+      "bytes": 85974,
+      "sha256": "6278f4035c8aec97a5dad5d70c618a8920b05cc588ee5baaa346b89bf891ec00"
     },
     {
       "name": "posterior-spectrum.png",
@@ -74,5 +74,6 @@
       "sha256": "387caa235b821430d191a1be67aaa9202836a798072c6772f94346175951cdb0"
     }
   ],
-  "visually_inspected_all_six": true
+  "visually_inspected_all_six": true,
+  "paper_detail_review": "Two modified figures visually checked; missing EQ/RJMCMC results explicitly documented, not drawn."
 }

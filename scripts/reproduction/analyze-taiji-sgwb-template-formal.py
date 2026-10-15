@@ -78,7 +78,9 @@ def main():
     np.savez_compressed(OUT/'posterior-cold-chain.npz',cold_chain=cold,truth=injected,labels=np.array(labels),log_like_cold=b.get_log_like()[:,0,:],betas=b.get_betas())
     with plt.rc_context({'font.family':'serif','font.serif':['STIXGeneral','DejaVu Serif'],'mathtext.fontset':'stix','font.size':14,'axes.titlesize':11,'axes.labelsize':16,'legend.fontsize':12,'axes.grid':False,'axes.linewidth':.8,'lines.linewidth':1.0}):
         import corner
+        from matplotlib.lines import Line2D
         fig=corner.corner(flat[:,12:14],bins=50,smooth=.9,labels=[r'$A_{\mathrm{ap}}$',r'$\gamma_{\mathrm{ap}}$'],truths=injected[12:14],truth_color='red',color='#ff9da7',quantiles=[.16,.84],levels=[.68,.95],plot_datapoints=False,fill_contours=True,show_titles=False,max_n_ticks=4,hist_kwargs={'histtype':'step','linewidth':1})
+        fig.legend(handles=[Line2D([],[],color='#ff9da7',label='2.8 (template)'),Line2D([],[],color='red',label='injected')],loc='upper right',bbox_to_anchor=(.98,.97),frameon=False,fontsize=11)
         for ax in fig.axes:
             ax.tick_params(axis='both',labelsize=13)
             for tick in ax.get_xticklabels()+ax.get_yticklabels():tick.set_rotation(45)
@@ -94,7 +96,8 @@ def main():
                 values=(flat[:,offset+pair[0]]+flat[:,offset+pair[1]])/(2*unit)
                 true=(injected[offset+pair[0]]+injected[offset+pair[1]])/(2*unit)
                 q=np.quantile(values,[.025,.16,.5,.84,.975]);ax=axes[sc,col]
-                ax.hist(values,bins=50,density=True,histtype='step',color='#76b7b2',linewidth=1,label='template')
+                ax.hist(values,bins=50,density=True,histtype='step',color='#76b7b2',linewidth=1,label='2.8 template')
+                for value in q[1:4]:ax.axvline(value,color='#76b7b2',ls='--',lw=1)
                 ax.axvline(true,color='red',lw=1)
                 kind='ACC' if col==0 else 'OMS'
                 if sc==2:ax.set_xlabel(r'$A_i^{(\mathrm{acc})}\ (\mathrm{fm}/\mathrm{s}^2/\sqrt{\mathrm{Hz}})$' if col==0 else r'$A_i^{(\mathrm{oms})}\ (\mathrm{pm}/\sqrt{\mathrm{Hz}})$')
@@ -103,7 +106,7 @@ def main():
                 noise_rows.append({'parameter':f'{kind}_SC{sc+1}_average','links':[links[pair[0]],links[pair[1]]],'truth':float(true),'unit':'fm/s^2/sqrt(Hz)' if col==0 else 'pm/sqrt(Hz)','quantiles_025_16_50_84_975':q.tolist()})
         fig.text(.045,.55,'Density',rotation=90,va='center',fontsize=18)
         fig.savefig(OUT/'posterior-noise-spacecraft.png',dpi=300,bbox_inches='tight');plt.close(fig)
-        write_json(OUT/'posterior-noise-spacecraft.json',{'definition':'Arithmetic MOSA amplitude averages computed draw by draw, as in paper Section IV.','parameters':noise_rows})
+        write_json(OUT/'posterior-noise-spacecraft.json',{'definition':'Arithmetic MOSA amplitude averages computed draw by draw, as in paper Section IV.','dataset':'2.8 flexing-arm, not 2.8_EQ.','markers':'Cyan dashed lines: actual sampled 16th, 50th, 84th percentiles; red solid: injection. Figure 4 marker convention applied to the available 2.8 template samples, not a claim of reproducing the EQ experiment.','parameters':noise_rows})
         fig,axes=plt.subplots(7,2,figsize=(11,15),layout='constrained')
         for j,ax in enumerate(axes.flat):
             ax.plot(np.arange(1,351),cold[:,::4,j],alpha=.25,lw=.5);ax.axhline(injected[j],color='red',ls='--');ax.set(xlabel='Saved production step',ylabel=labels[j])
