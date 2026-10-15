@@ -1,0 +1,39 @@
+{
+  "schema_version": 2,
+  "integration": "fixed-source-snapshot",
+  "checked_at_utc": "2026-10-15T06:32:59.695330+00:00",
+  "scope": "Source preservation only; no package import, environment installation, data preparation or inference execution.",
+  "upstream_url": "https://github.com/DrizzleatDusk/TaijiSGWB.git",
+  "pinned_commit": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+  "tree_oid": "2e8b119ce0cd93f426b0b32081cd8347d2bb8e02",
+  "commit_date": "2025-12-19T14:07:36+08:00",
+  "tracked_files": 19,
+  "python_files": 15,
+  "demo_files": [
+    "demos/rj_nofg_28t.py",
+    "demos/template_nofg_28t.py"
+  ],
+  "remote": {
+    "checked": false,
+    "url": "https://github.com/DrizzleatDusk/TaijiSGWB.git"
+  },
+  "checks": {
+    "pinned_commit": true,
+    "origin_url": true,
+    "fixed_source_snapshot": true,
+    "no_nested_git_pointer": true,
+    "submodule_registration_removed": true,
+    "parent_tracks_all_original_files_directly": true,
+    "parent_gitlink_removed": true,
+    "complete_expected_tree": true,
+    "no_missing_or_extra_checkout_files": true,
+    "every_file_byte_identical": true,
+    "every_file_mode_matches": true,
+    "original_git_tree_reconstructed_exactly": true,
+    "clean_source_including_untracked": true,
+    "all_python_files_parse_without_execution": true,
+    "original_gpl3_license": true,
+    "declared_gpl3_or_later": true
+  },
+  "all_checks_pass": true
+}

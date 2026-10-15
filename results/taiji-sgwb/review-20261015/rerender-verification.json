@@ -1,0 +1,46 @@
+{
+  "sampling_advanced": false,
+  "plot_output_redirected_to_ignored_review_directory": true,
+  "seconds": 3.7625302500000544,
+  "plots": {
+    "posterior-sgwb.png": {
+      "same_shape": true,
+      "pixels_identical": true,
+      "sha256_matches": true
+    },
+    "posterior-noise-spacecraft.png": {
+      "same_shape": true,
+      "pixels_identical": true,
+      "sha256_matches": true
+    },
+    "posterior-spectrum.png": {
+      "same_shape": true,
+      "pixels_identical": true,
+      "sha256_matches": true
+    },
+    "production-traces.png": {
+      "same_shape": true,
+      "pixels_identical": true,
+      "sha256_matches": true
+    },
+    "production-traces-all.png": {
+      "same_shape": true,
+      "pixels_identical": true,
+      "sha256_matches": true
+    },
+    "parameter-correlation.png": {
+      "same_shape": true,
+      "pixels_identical": true,
+      "sha256_matches": true
+    }
+  },
+  "numerical_outputs_identical": {
+    "analysis.json": true,
+    "posterior-noise-spacecraft.json": true,
+    "posterior-cold-chain.npz": true,
+    "posterior-spectrum.npz": true,
+    "posterior-parameters.csv": true,
+    "sampling-diagnostics.csv": true
+  },
+  "all_checks_pass": true
+}

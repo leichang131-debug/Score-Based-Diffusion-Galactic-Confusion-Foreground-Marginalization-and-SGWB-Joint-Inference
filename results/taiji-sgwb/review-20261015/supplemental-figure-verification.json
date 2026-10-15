@@ -1,0 +1,12 @@
+{
+  "sampling_advanced": false,
+  "pixel_identical": {
+    "template_nofg_28t/ASD": true,
+    "rj_nofg_28t/ASD": true,
+    "likelihood": true,
+    "response": true,
+    "short_chain": true
+  },
+  "all_checks_pass": true,
+  "method": "Cached arrays and unchanged plotting AST including original imports; diagnostic scripts redirected to temporary output paths. No new sampling."
+}

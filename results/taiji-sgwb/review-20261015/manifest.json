@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "path": "results/taiji-sgwb/review-20261015/README.md",
+      "sha256": "99379f406a1973c40770139a5ec40024766c43876ebc2d2c027b4078d2c7748b",
+      "bytes": 7540
+    },
+    {
+      "path": "results/taiji-sgwb/review-20261015/manifest-verification.json",
+      "sha256": "b5971373be1b8e6c86ecbc2e43dac8a7be56c79a4d47a0641acf674518a23b45",
+      "bytes": 635
+    },
+    {
+      "path": "results/taiji-sgwb/review-20261015/rerender-verification.json",
+      "sha256": "797583158c9f8318e9b02b4ab316e4313c7621728b9771472f19fe7bd1bac63b",
+      "bytes": 1198
+    },
+    {
+      "path": "results/taiji-sgwb/review-20261015/source-audit.json",
+      "sha256": "5c4742c491ad590680e95eff809e959c187d9f10f7d7dee308cf6a91a5b1cfee",
+      "bytes": 1400
+    },
+    {
+      "path": "results/taiji-sgwb/review-20261015/supplemental-figure-verification.json",
+      "sha256": "9e4908c657f3ed1346e5c470b2a8ef119e40ad6a972f86cab205fd4be2ab49c6",
+      "bytes": 380
+    },
+    {
+      "path": "scripts/reproduction/analyze-taiji-sgwb-mini.py",
+      "sha256": "aa9bc38715cd85dedde3f01e632c11d321c3662d21c36178376c1015f35b4221",
+      "bytes": 11692
+    },
+    {
+      "path": "scripts/reproduction/analyze-taiji-sgwb-template-formal.py",
+      "sha256": "94a09bc952c4628f1880925058d44c815a12d3e75277e4a3517094026c7026f4",
+      "bytes": 15147
+    },
+    {
+      "path": "scripts/reproduction/report-taiji-sgwb-likelihood.py",
+      "sha256": "540022580379d2ec0a6ef0a40de0f2fc612f053075ccdde7b5b5d0e2fcdb8ec1",
+      "bytes": 2187
+    },
+    {
+      "path": "scripts/reproduction/report-taiji-sgwb-response.py",
+      "sha256": "e583b64e720849922c6fbdc1fb4f608728b46ee1f9d2d7fd334b1f4be24d8385",
+      "bytes": 1467
+    },
+    {
+      "path": "scripts/reproduction/report-taiji-sgwb-template-short-chain.py",
+      "sha256": "d642b50073a7e80f275ab82ef497071baf291e6d356fc80ec284cf50d25312f5",
+      "bytes": 1972
+    }
+  ]
+}

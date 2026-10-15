@@ -1,0 +1,38 @@
+{
+  "data": {
+    "artifacts_checked": 32,
+    "issues": []
+  },
+  "environment": {
+    "artifacts_checked": 25,
+    "issues": []
+  },
+  "likelihood": {
+    "artifacts_checked": 34,
+    "issues": []
+  },
+  "preprocessing": {
+    "artifacts_checked": 31,
+    "issues": []
+  },
+  "response": {
+    "artifacts_checked": 29,
+    "issues": []
+  },
+  "source": {
+    "artifacts_checked": 19,
+    "issues": []
+  },
+  "template-formal": {
+    "artifacts_checked": 121,
+    "issues": []
+  },
+  "template-mini": {
+    "artifacts_checked": 54,
+    "issues": []
+  },
+  "template-short-chain": {
+    "artifacts_checked": 46,
+    "issues": []
+  }
+}

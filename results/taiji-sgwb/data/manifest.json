@@ -143,8 +143,8 @@
     },
     {
       "path": "scripts/reproduction/check-taiji-sgwb-data.py",
-      "bytes": 12918,
-      "sha256": "692c34e88feb1db34955c9206bff0d9329674ba9735574a608b5933e248b594b"
+      "bytes": 13042,
+      "sha256": "95d50068573e66b49697c23ca44d40b7fcb459c2958ba15de55e559463e006e9"
     },
     {
       "path": "scripts/reproduction/download-taiji-sgwb-data.py",
