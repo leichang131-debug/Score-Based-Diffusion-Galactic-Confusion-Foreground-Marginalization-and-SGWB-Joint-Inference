@@ -135,3 +135,7 @@ Commit small curated figures, tables, and summaries under `results/`. Keep raw d
 Project-owned material is distributed under the [MIT License](LICENSE). Referenced or later incorporated third-party code retains its original license and attribution; the root MIT license does not relicense it.
 
 Maintained by [leichang131-debug](https://github.com/leichang131-debug). See [CONTRIBUTING.md](CONTRIBUTING.md) for collaboration and reporting conventions.
+
+### TaijiSGWB cluster handoff
+
+The local 2.8 full-template schedule is complete with convergence still unconfirmed. Further EQ-template and RJMCMC long-run reproduction, independent seeded inference and diagnostic-required extensions will move to an approved cluster/server after deployment and benchmark validation. No cluster deployment or further local long chain has been started. See [current status, remaining work and cluster handoff](docs/reproduction/taiji-sgwb/status-and-cluster-handoff.md).

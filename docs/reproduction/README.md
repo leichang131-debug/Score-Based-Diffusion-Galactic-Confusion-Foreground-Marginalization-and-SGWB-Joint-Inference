@@ -25,3 +25,7 @@ Each component uses a separate environment. Pin the upstream commit before execu
 - Validation outcome, convergence status, and unresolved limitations.
 
 A separate TaijiSGWB selected-data mini experiment has completed the real sampling, restart and analysis workflow ([report](taiji-sgwb/template-mini.md)). Its numerical checks pass while convergence is not confirmed. This mini experiment is separate from the subsequently completed full-data formal inference.
+
+## Current TaijiSGWB execution boundary (2026-10-15)
+
+No further EQ-template or RJMCMC long runs are planned on the local Mac. Completed work, convergence limits and the ordered cluster handoff are recorded in [current status and cluster work packages](taiji-sgwb/status-and-cluster-handoff.md). The current 2.8 template schedule is complete; the full paper and unknown-foreground research are not. Cluster hardware/access and runtime remain unconfirmed.
