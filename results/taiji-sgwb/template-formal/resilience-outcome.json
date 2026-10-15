@@ -1,0 +1,21 @@
+{
+  "status": "SAMPLING_COMPLETE",
+  "attempts": [
+    {
+      "attempt": 1,
+      "start_utc": "2026-10-14T05:43:02.063170+00:00",
+      "progress_before": 919,
+      "command": [
+        "bash",
+        "scripts/reproduction/run-taiji-sgwb-python.sh",
+        "scripts/reproduction/run-taiji-sgwb-template-formal.py"
+      ],
+      "supervisor_pid": 8117,
+      "returncode": 0,
+      "end_utc": "2026-10-14T22:29:36.349866+00:00",
+      "progress_after": 5200
+    }
+  ],
+  "note": "See formal status.json for posterior analysis and synchronization outcome.",
+  "updated_utc": "2026-10-14T22:29:36.350758+00:00"
+}

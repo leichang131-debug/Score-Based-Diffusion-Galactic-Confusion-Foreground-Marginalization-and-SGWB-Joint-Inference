@@ -1,0 +1,59 @@
+{
+  "completed_beijing": "2026-10-15T06:13:36.506085+08:00",
+  "original_schedule": {
+    "burn_transitions": 1000,
+    "production_saved": 350,
+    "thin_by": 12,
+    "total_transitions": 5200
+  },
+  "backend_branch_shapes": {
+    "acc": [
+      350,
+      6,
+      62,
+      1,
+      6
+    ],
+    "ro": [
+      350,
+      6,
+      62,
+      1,
+      6
+    ],
+    "sgwb": [
+      350,
+      6,
+      62,
+      1,
+      2
+    ]
+  },
+  "log_like_shape": [
+    350,
+    6,
+    62
+  ],
+  "cold_chain_shape": [
+    350,
+    62,
+    14
+  ],
+  "cold_draws_correlated": 21700,
+  "actual_local_sampling": true,
+  "final_native_terminal_session_wall_hours": 16.5155822265625,
+  "timing_scope": "Final native-Terminal continuation session only, not all earlier interrupted attempts or total end-to-end elapsed time.",
+  "sampling_artifacts_unchanged_by_repair": {
+    "runs/taiji-sgwb/template-formal/template_AET_nofg.h5": true,
+    "results/taiji-sgwb/template-formal/template_AET_nofg.h5": true,
+    "results/taiji-sgwb/template-formal/final-state.npz": true,
+    "results/taiji-sgwb/template-formal/final-state.json": true
+  },
+  "numerical_checks_passed": 7,
+  "numerical_checks_total": 7,
+  "limited_diagnostic_parameters_passed": 2,
+  "limited_diagnostic_parameters_total": 14,
+  "posterior_convergence_confirmed": false,
+  "status": "SAMPLING_COMPLETE_CONVERGENCE_NOT_CONFIRMED",
+  "postprocessing_repair": "External analyzer path expression ROOT[...] corrected to ROOT / ...; automatic failure log and pre-fix source retained. No upstream source, chain or final state modified."
+}

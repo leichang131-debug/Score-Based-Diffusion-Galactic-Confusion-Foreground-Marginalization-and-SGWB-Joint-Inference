@@ -55,7 +55,7 @@ def main():
         ll,cap=evaluate_original(ns,params);ref=stable_reference(cap['csd_hypo'],ns['csd_est'],6,ns['win_bw'])
         err=abs(ll-b.get_log_like()[step,temp,walker]);recomputed.append({'step':step,'temp':temp,'walker':walker,'original_stored_error':err,'Cholesky_error':abs(ll-ref['value']),'condition_number':ref['maximum_condition_number']})
         checks[f'saved_{step}_{temp}_{walker}']=err<1e-6 and abs(ll-ref['value'])<1e-6 and ref['minimum_scaled_eigenvalue']>0
-    sm=json.loads((ROOT/'results/taiji-sgwb/source/manifest.json').read_text());checks['original_source_unchanged']=all(sha(ROOT[x['repository_path']])==x['sha256'] for x in sm['files'])
+    sm=json.loads((ROOT/'results/taiji-sgwb/source/manifest.json').read_text());checks['original_source_unchanged']=all(sha(ROOT/x['repository_path'])==x['sha256'] for x in sm['files'])
     checks['original_schedule_complete']=b.iteration==350 and progress['burn_done']==1000 and progress['transitions_done']==5200
     checks['all_chain_values_finite']=all(np.all(np.isfinite(x)) for x in chain.values()) and np.all(np.isfinite(b.get_log_like()))
     snapshot_fraction=b.accepted/350

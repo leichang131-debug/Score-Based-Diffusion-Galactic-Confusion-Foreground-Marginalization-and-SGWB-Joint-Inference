@@ -1,0 +1,13 @@
+{
+  "source": "Actual completed full-data cold chain; no upstream figure or sample reuse.",
+  "style_reference": "arXiv:2601.00169v2 PDF pages 7,10,11 visually inspected. Serif/STIX fonts; Figure 3 pink 2.8, red truths, dashed 16/84% markers, 68/95% contours; Figure 8 cyan step histograms, 3x2 MOSA averages in fm/pm; Figure 6 orange template 95% band, red injection, contiguous 4:1 panels, fractional error, display 1-40 mHz. Axis limits for parameters adapt to actual samples; no clipping to force agreement. Diagnostic-only figures use the same typography.",
+  "cold_draws": 21700,
+  "spectrum_uses_all_cold_draws": true,
+  "intervals": "Pointwise, not simultaneous bands. Contours enclose 68% and 95% sampled mass.",
+  "paper_mapping": {
+    "posterior-sgwb.png": "Figure 3: 2.8 flexing-arm result only",
+    "posterior-noise-spacecraft.png": "Figure 8: spacecraft-averaged ACC/OMS amplitudes",
+    "posterior-spectrum.png": "Figure 6: template component only; RJMCMC not run"
+  },
+  "scope": "No EQ/2.9/RJMCMC/foreground-marginalization results; interpretation follows analysis.json."
+}

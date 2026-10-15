@@ -1,11 +1,1 @@
-Traceback (most recent call last):
-  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/analyze-taiji-sgwb-template-formal.py", line 132, in <module>
-    if __name__=='__main__':main()
-                            ^^^^^^
-  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/analyze-taiji-sgwb-template-formal.py", line 58, in main
-    sm=json.loads((ROOT/'results/taiji-sgwb/source/manifest.json').read_text());checks['original_source_unchanged']=all(sha(ROOT[x['repository_path']])==x['sha256'] for x in sm['files'])
-                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/leichang/Documents/Score-Based diffusion in TDC data anysis and parameter estimation/research-repository/scripts/reproduction/analyze-taiji-sgwb-template-formal.py", line 58, in <genexpr>
-    sm=json.loads((ROOT/'results/taiji-sgwb/source/manifest.json').read_text());checks['original_source_unchanged']=all(sha(ROOT[x['repository_path']])==x['sha256'] for x in sm['files'])
-                                                                                                                            ~~~~^^^^^^^^^^^^^^^^^^^^^^
-TypeError: 'PosixPath' object is not subscriptable
+SAMPLING_COMPLETE_CONVERGENCE_NOT_CONFIRMED

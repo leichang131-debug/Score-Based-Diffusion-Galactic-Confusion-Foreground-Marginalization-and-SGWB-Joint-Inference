@@ -1,5 +1,8 @@
 {
-  "status": "ANALYSIS_FAILED",
+  "status": "SAMPLING_COMPLETE_CONVERGENCE_NOT_CONFIRMED",
   "sampling_complete": true,
-  "note": "Read analysis-execution.txt; no convergence claim."
+  "numerical_checks_pass": true,
+  "posterior_convergence_confirmed": false,
+  "diagnostic_flags_pass": false,
+  "note": "Single-ensemble checks are limited; read analysis.json before interpreting intervals."
 }

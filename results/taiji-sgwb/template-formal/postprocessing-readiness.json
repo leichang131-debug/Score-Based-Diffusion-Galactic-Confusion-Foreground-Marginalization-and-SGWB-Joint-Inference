@@ -1,5 +1,5 @@
 {
-  "scope": "Plot-only smoke using existing selected-data mini samples. Not formal results. Images retained only in ignored runs/.",
+  "scope": "Original plot-only smoke retained under attempts/. After path-only repair, all six interfaces verified by actual completed full-data analysis. No MCMC advancement.",
   "sampling_not_advanced": true,
   "style_reference_pdf_sha256": "12492f3b06bc7627ba3bfb0e5929f06c7c718097a96d13c07d92d2d9e7009281",
   "paper_pages_visually_inspected": [
@@ -40,6 +40,39 @@
       "sha256": "e724f86ff9bda19dd5b4adac2444d9618332003d861f981bdd7111eff71222d0"
     }
   ],
-  "analyzer_sha256": "9a952034eb778a9fe33fec23957c9a0c3808cd449106723d32099317847d4fd3",
-  "all_checks_pass": true
+  "analyzer_sha256": "58d24de10f44729283584cd78912e80e16749f422ffec26f081b8218ae204ada",
+  "all_checks_pass": true,
+  "actual_completed_data_figures": [
+    {
+      "name": "parameter-correlation.png",
+      "bytes": 70655,
+      "sha256": "913c25316f44f852dd3251246559e6a8d19dd1841e65a1dfcca925a36665ee11"
+    },
+    {
+      "name": "posterior-noise-spacecraft.png",
+      "bytes": 126769,
+      "sha256": "3b1fa5d0d12edd1ec762aa793d37912f7001d995ba88fb538ec7afacbb6c3f42"
+    },
+    {
+      "name": "posterior-sgwb.png",
+      "bytes": 74782,
+      "sha256": "e3401f3822b31240b72cf0a03f594ad347819a088d0c42247cf6866c383d41a0"
+    },
+    {
+      "name": "posterior-spectrum.png",
+      "bytes": 163061,
+      "sha256": "968d040f7d9634a740b6a0b0365698d4acb760c0aea816a6cb6d5ee5359e7b69"
+    },
+    {
+      "name": "production-traces-all.png",
+      "bytes": 2471617,
+      "sha256": "52900052e6c1f4b5db983ede5e4792e82353feaa7a09b3534f689337b5c33299"
+    },
+    {
+      "name": "production-traces.png",
+      "bytes": 604118,
+      "sha256": "387caa235b821430d191a1be67aaa9202836a798072c6772f94346175951cdb0"
+    }
+  ],
+  "visually_inspected_all_six": true
 }

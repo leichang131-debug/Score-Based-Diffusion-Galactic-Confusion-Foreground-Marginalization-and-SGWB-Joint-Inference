@@ -1,6 +1,8 @@
 # TaijiSGWB Stage 9: original formal template schedule and posterior analysis
 
-**Current state: PAUSED BY USER after 108 burn-in transitions, with no production samples.**
+**Current state: original full-data schedule COMPLETE at 2026-10-15 06:13:36 Beijing time; 350 production ensembles saved. Numerical checks pass, posterior convergence remains unconfirmed.**
+
+See [completed results and evidence](../../../results/taiji-sgwb/template-formal/README.md). Earlier pause/restart notes below are historical records, not the current state.
 
 The compute processes exited normally; 19/19 static restore checks passed. See [the cluster migration plan](../../deployment/taiji-cluster-migration-plan.md). No new MCMC transition was made during validation. Read `results/taiji-sgwb/template-formal/status.json` and the timestamped progress snapshot for published status. The latest live local state is in ignored `runs/taiji-sgwb/template-formal/progress.json`. Posterior outputs will be created only after the entire original sampling schedule finishes. They must then be interpreted with the diagnostic assessment.
 
@@ -104,3 +106,8 @@ The supervisor now uses caffeinate -is: idle sleep is inhibited, and system idle
 At 13:40 Beijing time, the tool-started screen server and all recovery/sampling processes had disappeared. The last logged burn update was 919 at 13:33, but only burn 910 was saved completely. No Python exception record was present; the termination cause is unproven. The original scheduled sampler is restored from burn 910, replaying unsaved updates rather than claiming them as persisted progress.
 
 The new tracked launcher start-taiji-sgwb-background.command is opened with macOS LaunchServices in Terminal.app. Terminal starts a detached screen session; this changes the initiating application/process ownership rather than again using a tool-started Popen tree. Screen, bounded recovery and caffeinate remain enabled. No system-wide settings, full-disk access or login/reboot auto-start configuration were changed. Native terminal launch is a mitigation, not proof against future interruption. Runtime PIDs, timestamped sessions, latest checkpoint hashes and native-launch verification distinguish this attempt. Source/config/cache and frozen sampler adapters remain unchanged. Launch metadata now obtains restart offsets from the saved checkpoint, not the possibly stale progress file.
+
+
+## Completed schedule and postprocessing repair (2026-10-15)
+
+The original 5200 transitions completed at 06:13:36 Beijing time. HDF dimensions are acc/ro (350,6,62,1,6), sgwb (350,6,62,1,2); cold samples (350,62,14). The automatic external analyzer encountered a path-expression TypeError before rendering; the original error and source are archived. A path-only repair regenerated six figures, spectrum arrays, parameter tables and diagnostics without advancing MCMC or altering either HDF or final state (hash verified). All seven numerical checks pass; only two of fourteen conservative diagnostic flags pass, so the report explicitly retains CONVERGENCE_NOT_CONFIRMED. Final native-Terminal session runtime was 16.52 hours including supervision overhead; this excludes earlier interrupted attempts. No additional long-chain sampling was launched. See results/taiji-sgwb/template-formal/README.md and completion-summary.json for full scope, file inventory, and posterior summaries.

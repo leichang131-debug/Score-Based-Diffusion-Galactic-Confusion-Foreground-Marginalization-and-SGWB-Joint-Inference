@@ -41,6 +41,12 @@ def main():
         checks['complete_original_schedule']=analysis['sampling']['saved']==350 and analysis['sampling']['burn']==1000 and analysis['sampling']['thin_by']==12
         checks['six_completed_figures_present']=all((OUT/n).exists() and (OUT/n).stat().st_size>10000 for n in ['posterior-sgwb.png','posterior-noise-spacecraft.png','posterior-spectrum.png','parameter-correlation.png','production-traces.png','production-traces-all.png'])
         checks['completed_figure_provenance_present']=(OUT/'figure-provenance.json').exists() and (OUT/'posterior-spectrum.npz').exists()
+    progress=json.loads((root/'progress.json').read_text())
+    if progress['status']=='SAMPLING_COMPLETE':
+        checks['completion_requires_analysis']=(OUT/'analysis.json').exists()
+        checks['completion_analysis_numerics_pass']=checks['completion_requires_analysis'] and json.loads((OUT/'analysis.json').read_text())['numerical_checks_pass']
+        checks['completion_status_consistent']=checks['completion_requires_analysis'] and json.loads((OUT/'status.json').read_text())['status']==json.loads((OUT/'analysis.json').read_text())['status']
+        checks['published_final_checkpoint_hashes']=sha(OUT/'final-state.json')==sha(checkpoint/'state.json') and sha(OUT/'final-state.npz')==record['npz_sha256'] and sha(OUT/'template_AET_nofg.h5')==record['backend_sha256']
     if (OUT/'pause-checkpoint/validation.json').exists():
         paused=json.loads((OUT/'pause-checkpoint/validation.json').read_text())
         state_record=json.loads((OUT/'pause-checkpoint/state.json').read_text())

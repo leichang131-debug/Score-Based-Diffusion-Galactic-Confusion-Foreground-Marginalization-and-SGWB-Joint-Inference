@@ -1,0 +1,45 @@
+{
+  "scope": "Plot-only smoke using existing selected-data mini samples. Not formal results. Images retained only in ignored runs/.",
+  "sampling_not_advanced": true,
+  "style_reference_pdf_sha256": "12492f3b06bc7627ba3bfb0e5929f06c7c718097a96d13c07d92d2d9e7009281",
+  "paper_pages_visually_inspected": [
+    7,
+    10,
+    11
+  ],
+  "plot_count": 6,
+  "files": [
+    {
+      "name": "posterior-sgwb.png",
+      "bytes": 79606,
+      "sha256": "085cc2dbf51d4e7b89b20b849f386b8877d1f901735f7a18fecdd6487db6b23c"
+    },
+    {
+      "name": "posterior-noise-spacecraft.png",
+      "bytes": 116886,
+      "sha256": "8a84400288ec9a8ce78792fcefbf8fb9d2ceb903834e0a407c79c584781c368a"
+    },
+    {
+      "name": "posterior-spectrum.png",
+      "bytes": 141293,
+      "sha256": "5e2097e12f420257e2f1d258c3c8c7d904542316b363fbdb8a5d25a6bfa2dbc7"
+    },
+    {
+      "name": "production-traces.png",
+      "bytes": 400134,
+      "sha256": "9f86d332a5778fc276458072ee5575c3be7d38df8b75cd514553f35bd0fd6562"
+    },
+    {
+      "name": "production-traces-all.png",
+      "bytes": 1675868,
+      "sha256": "9fc0f8f7561b315ba1ea6394c256299fafb12bb8e567f373100ed6e60744ba5c"
+    },
+    {
+      "name": "parameter-correlation.png",
+      "bytes": 70783,
+      "sha256": "e724f86ff9bda19dd5b4adac2444d9618332003d861f981bdd7111eff71222d0"
+    }
+  ],
+  "analyzer_sha256": "9a952034eb778a9fe33fec23957c9a0c3808cd449106723d32099317847d4fd3",
+  "all_checks_pass": true
+}

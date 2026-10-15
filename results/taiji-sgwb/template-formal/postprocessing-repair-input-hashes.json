@@ -1,0 +1,25 @@
+{
+  "scope": "Immutable sampling artifacts hashed before postprocessing-only repair; no MCMC rerun.",
+  "files": [
+    {
+      "path": "runs/taiji-sgwb/template-formal/template_AET_nofg.h5",
+      "sha256": "6949b1cb1f9cc2a5ae105ffefe5a99bf5ac64d69e8b5913b631481b3333bf7d3",
+      "bytes": 20327976
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/template_AET_nofg.h5",
+      "sha256": "6949b1cb1f9cc2a5ae105ffefe5a99bf5ac64d69e8b5913b631481b3333bf7d3",
+      "bytes": 20327976
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/final-state.npz",
+      "sha256": "f2cb5a4b1b32946528b019df4b0b5e235304b9044c53aca8d566d614c7bfd637",
+      "bytes": 42130
+    },
+    {
+      "path": "results/taiji-sgwb/template-formal/final-state.json",
+      "sha256": "dcd64cb3f177ec88ba5702a63946c877a8e56193bec7fd827c8289a0be83d5e7",
+      "bytes": 30630
+    }
+  ]
+}
