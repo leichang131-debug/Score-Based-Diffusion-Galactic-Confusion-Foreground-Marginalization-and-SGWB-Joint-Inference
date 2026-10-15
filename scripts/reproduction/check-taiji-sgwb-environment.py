@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Check original imports and small CPU interfaces; never run full demos."""
+from taiji_sgwb_source import source_is_pristine, source_pin
 import ast
 import datetime
 import hashlib
@@ -262,8 +263,8 @@ def main():
     check("headless_plot_write", plot)
 
     def source():
-        status = subprocess.check_output(["git", "-C", str(SOURCE), "status", "--porcelain"]).decode().strip()
-        pin = subprocess.check_output(["git", "-C", str(SOURCE), "rev-parse", "HEAD"]).decode().strip()
+        status = "" if source_is_pristine() else "modified source snapshot"
+        pin = source_pin()
         assert not status and pin == "4afaad4044b08721e7f1ce29cba3b0d912636dce"
         return {"pin": pin, "clean": True}
     check("upstream_source_unchanged", source)

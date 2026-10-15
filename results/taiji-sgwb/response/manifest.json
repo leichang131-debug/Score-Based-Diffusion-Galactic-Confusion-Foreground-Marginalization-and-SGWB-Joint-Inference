@@ -123,8 +123,8 @@
     },
     {
       "path": "scripts/reproduction/audit-taiji-sgwb-response.py",
-      "bytes": 5194,
-      "sha256": "62cd5e7006efbd988b046da9600d8b643c116f446be335b0b49eaca24d8342f4"
+      "bytes": 5171,
+      "sha256": "ec054f362a514d4708e58e4c5b1900f6843837e19425387c0cd29fd0d84c3ed0"
     },
     {
       "path": "scripts/reproduction/check-taiji-sgwb-response.py",

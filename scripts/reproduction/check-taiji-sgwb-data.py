@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Validate complete official HDF5 inputs and the original demo read interfaces."""
+from taiji_sgwb_source import source_is_pristine, source_pin
 import ast
 import datetime
 import hashlib
@@ -209,7 +210,7 @@ def main():
     np.savez_compressed(OUT / "analysis-grid.npz", frequency=f, segment_center=centers, orbit_time=ot,
                         **{"ltt_"+m: ltt[m] for m in MOSA_LABELS})
     for folder in ["external/taiji-sgwb", "external/triangle-simulator"]:
-        report["checks"]["clean_" + folder.split("/")[-1]] = not subprocess.check_output(["git", "-C", str(ROOT/folder), "status", "--porcelain"]).strip()
+        report["checks"]["clean_" + folder.split("/")[-1]] = (source_is_pristine() if folder == "external/taiji-sgwb" else not subprocess.check_output(["git", "-C", str(ROOT/folder), "status", "--porcelain"]).strip())
     report["checks"] = {name: bool(passed) for name, passed in report["checks"].items()}
     report["all_checks_pass"] = all(report["checks"].values())
     report["elapsed_seconds"] = time.perf_counter() - started

@@ -148,8 +148,8 @@
     },
     {
       "path": "scripts/reproduction/audit-taiji-sgwb-likelihood.py",
-      "bytes": 5177,
-      "sha256": "1b526c1801cc17362156464453d485e6b21fdf472b55f3c644b767ab82885199"
+      "bytes": 5061,
+      "sha256": "2a054605637b1b536195858a9ea21b356c904f408ab1e332ff4ffa652ea354af"
     },
     {
       "path": "scripts/reproduction/check-taiji-sgwb-likelihood.py",

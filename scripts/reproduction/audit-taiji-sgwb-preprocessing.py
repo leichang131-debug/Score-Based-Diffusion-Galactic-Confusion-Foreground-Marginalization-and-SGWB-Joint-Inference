@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Audit source correspondence and saved Stage 5 arrays without FFT execution."""
+from taiji_sgwb_source import source_is_pristine, source_pin
 import ast
 import hashlib
 import json
@@ -64,7 +65,7 @@ def main():
     checks["initial_exact_zero_failure_retained"] = not first["all_checks_pass"] and not first["checks"]["diagonal_positive_and_real"]
     final = json.loads((OUT / "template_nofg_28t/validation.json").read_text())
     checks["roundoff_criterion_did_not_change_arrays"] = first["arrays"] == final["arrays"]
-    checks["upstream_worktree_clean"] = not subprocess.check_output(["git","-C",str(ROOT/"external/taiji-sgwb"),"status","--porcelain"]).strip()
+    checks["upstream_worktree_clean"] = source_is_pristine()
     checks = {name: bool(passed) for name, passed in checks.items()}
     report = {"scope": "Saved source/array/evidence integrity only; no FFT rerun or physical parameter inference.",
               "checks": checks, "all_checks_pass": all(checks.values())}

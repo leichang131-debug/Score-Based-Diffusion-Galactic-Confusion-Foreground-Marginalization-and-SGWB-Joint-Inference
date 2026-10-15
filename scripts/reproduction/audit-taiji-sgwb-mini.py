@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Original-source, actual local mini execution, restore and evidence audit."""
+from taiji_sgwb_source import source_is_pristine, source_pin
 import ast
 import datetime
 import base64
@@ -29,7 +30,7 @@ def main():
     check('full_input_caches_unchanged',all(sha(ROOT/p)==v for p,v in metadata['full_cache_sha256'].items()))
     check('subset_cache_ignored',subprocess.run(['git','check-ignore','--quiet',str(CACHE.relative_to(ROOT))],cwd=ROOT).returncode==0)
     manifest=json.loads((ROOT/'results/taiji-sgwb/source/manifest.json').read_text());check('all_original_19_files',len(manifest['files'])==19 and all(sha(ROOT/f['repository_path'])==f['sha256'] for f in manifest['files']))
-    check('original_tree_clean',not subprocess.check_output(['git','-C',str(ROOT/'external/taiji-sgwb'),'status','--porcelain']).strip())
+    check('original_tree_clean',source_is_pristine())
     source=ROOT/'external/taiji-sgwb/demos/template_nofg_28t.py';text=source.read_text();nodes={n.lineno:n for n in ast.parse(text).body}
     pids=[];wall=0
     for mode in ['benchmark','first','resume']:

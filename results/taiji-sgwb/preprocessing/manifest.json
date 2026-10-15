@@ -138,8 +138,8 @@
     },
     {
       "path": "scripts/reproduction/audit-taiji-sgwb-preprocessing.py",
-      "bytes": 5418,
-      "sha256": "dd883e593e9abd42ef41b3b7543c42e09b1a7b717eb1ca7b8871ecb4b1268373"
+      "bytes": 5395,
+      "sha256": "5f318306d18baf08f32e94078e2247b7b261c6a008af0fd21cea91884168465a"
     },
     {
       "path": "scripts/reproduction/check-taiji-sgwb-preprocessing.py",

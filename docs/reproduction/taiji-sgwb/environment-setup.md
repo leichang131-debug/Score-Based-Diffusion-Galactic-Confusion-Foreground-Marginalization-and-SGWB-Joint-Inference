@@ -53,3 +53,7 @@ See [environment commands](../../../environments/taiji-sgwb/README.md).
 ## Remaining work
 
 Stage 3 must obtain and validate the actual TDC II 2.8 dataset and associated orbit. Source-specific absolute paths, worker counts and full-grid response memory need a separately documented execution adapter. Existing synthetic checks do not prove full-year feasibility, converged posteriors, recovery/calibration, or complete paper reproduction.
+
+## Source storage update (2026-10-15)
+
+TaijiSGWB is now a directly tracked fixed source snapshot at the same external/taiji-sgwb/ path, not a submodule. Existing editable installation paths are unchanged. Source verification uses the committed configs/upstream/taiji-sgwb.json lock and shared snapshot helper. The original fixed commit and every scientific source byte are unchanged; other dependencies may still be submodules. No environment reinstall or long-chain rerun is required by this storage conversion.

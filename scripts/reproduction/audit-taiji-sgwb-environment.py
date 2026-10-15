@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Read-only evidence/source audit; refresh hashes without rerunning sampling."""
+from taiji_sgwb_source import source_is_pristine, source_pin
 import hashlib
 import json
 from pathlib import Path
@@ -22,7 +23,7 @@ def main():
     source = ROOT / "external/taiji-sgwb"
     manifest = json.loads((ROOT / "results/taiji-sgwb/source/manifest.json").read_text())
     checks["all_upstream_file_hashes_preserved"] = all(hashlib.sha256((source / f["path"]).read_bytes()).hexdigest() == f["sha256"] for f in manifest["files"])
-    checks["upstream_clean"] = not subprocess.check_output(["git", "-C", str(source), "status", "--porcelain"]).strip()
+    checks["upstream_clean"] = source_is_pristine()
     checks["all_checks_in_execution_log"] = all("PASS " + name in (OUT / "execution.txt").read_text() for name in report["checks"])
     first = json.loads((OUT / "first-check.json").read_text())
     checks["first_check_failure_retained"] = not first["all_checks_pass"] and not first["checks"]["original_editable_package"]["passed"]

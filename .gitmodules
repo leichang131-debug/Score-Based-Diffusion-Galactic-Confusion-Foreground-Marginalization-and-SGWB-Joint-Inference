@@ -10,6 +10,3 @@
 [submodule "external/triangle-bbh"]
 	path = external/triangle-bbh
 	url = https://github.com/TriangleDataCenter/Triangle-BBH.git
-[submodule "external/taiji-sgwb"]
-	path = external/taiji-sgwb
-	url = https://github.com/DrizzleatDusk/TaijiSGWB.git

@@ -1,0 +1,2 @@
+Independent staged-tree export; no upstream Git objects, submodule cache or network.
+TaijiSGWB source audit: 16/16 checks passed; 19 files, 15 Python files, 2 demos.

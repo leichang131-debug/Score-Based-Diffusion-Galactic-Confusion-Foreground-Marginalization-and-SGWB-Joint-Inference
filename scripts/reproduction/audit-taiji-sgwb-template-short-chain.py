@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Source, installed Eryn files, checkpoint and artifact integrity audit."""
+from taiji_sgwb_source import source_is_pristine, source_pin
 import ast
 import base64
 import importlib.metadata
@@ -18,8 +19,8 @@ def main():
     checks={};check=lambda k,x:checks.update({k:bool(x)})
     v=json.loads((OUT/'validation.json').read_text())
     check('all_chain_validation_checks_pass',v['all_checks_pass'] and all(v['checks'].values()))
-    check('fixed_upstream_commit',subprocess.check_output(['git','-C',str(ROOT/'external/taiji-sgwb'),'rev-parse','HEAD']).decode().strip()==v['config']['upstream_commit'])
-    check('original_source_clean',not subprocess.check_output(['git','-C',str(ROOT/'external/taiji-sgwb'),'status','--porcelain']).strip())
+    check('fixed_upstream_commit',source_pin()==v['config']['upstream_commit'])
+    check('original_source_clean',source_is_pristine())
     sm=json.loads((ROOT/'results/taiji-sgwb/source/manifest.json').read_text())
     check('all_19_original_files_preserved',len(sm['files'])==19 and all(sha(ROOT/x['repository_path'])==x['sha256'] for x in sm['files']))
     eryn=importlib.metadata.distribution('eryn');library_files=[]

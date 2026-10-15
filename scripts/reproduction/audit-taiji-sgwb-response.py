@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Audit full response cache, original source nodes and exact block coverage."""
+from taiji_sgwb_source import source_is_pristine, source_pin
 import ast
 import hashlib
 import json
@@ -33,7 +34,7 @@ def main():
         "original_sky_settings_preserved":v["original_sky_nside"]==14 and v["original_sky_pixels"]==2352}
     source_manifest=json.loads((ROOT/"results/taiji-sgwb/source/manifest.json").read_text())
     checks["all_original_sources_preserved"]=all(sha(ROOT/f["repository_path"])==f["sha256"] for f in source_manifest["files"])
-    checks["original_source_clean"]=not subprocess.check_output(["git","-C",str(ROOT/"external/taiji-sgwb"),"status","--porcelain"]).strip()
+    checks["original_source_clean"]=source_is_pristine()
     for entry in ["template_nofg_28t.py","rj_nofg_28t.py"]:
         source=ROOT/"external/taiji-sgwb/demos"/entry
         working=ROOT/"runs/taiji-sgwb/response"/Path(entry).stem/"demos"/entry

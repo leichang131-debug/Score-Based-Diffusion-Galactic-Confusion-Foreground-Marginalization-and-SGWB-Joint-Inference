@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "integration": "fixed-source-snapshot",
+  "upstream_url": "https://github.com/DrizzleatDusk/TaijiSGWB.git",
+  "pinned_commit": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+  "tree_oid": "2e8b119ce0cd93f426b0b32081cd8347d2bb8e02",
+  "commit_date": "2025-12-19T14:07:36+08:00",
+  "files": [
+    {
+      "path": ".gitignore",
+      "repository_path": "external/taiji-sgwb/.gitignore",
+      "git_mode": "100644",
+      "git_blob": "088dda4210c82ea84c2cf67ff0c768895e1daaa2",
+      "bytes": 4581,
+      "sha256": "e3553cd8c71ca964f535e09ef13e360f2bdefe421e40594ef517beee6c2934ee",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "LICENSE",
+      "repository_path": "external/taiji-sgwb/LICENSE",
+      "git_mode": "100644",
+      "git_blob": "e72bfddabc15be5718a7cc061ac10e47741d8219",
+      "bytes": 35148,
+      "sha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "README.md",
+      "repository_path": "external/taiji-sgwb/README.md",
+      "git_mode": "100644",
+      "git_blob": "12a89e799bb845d33175e8d924c1dde70747d0ad",
+      "bytes": 592,
+      "sha256": "b85bff1ab0ad5aacb9694a95fb53f487df838d20cf8581e16a69e0a2e312a6b5",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "demos/rj_nofg_28t.py",
+      "repository_path": "external/taiji-sgwb/demos/rj_nofg_28t.py",
+      "git_mode": "100644",
+      "git_blob": "1f643d5df2cd0ae21c95e65ac20fe68826d05489",
+      "bytes": 10556,
+      "sha256": "35ce56931ecda5fb350101a4fda43cee94dcce36772fdf8ab79ad8b9ad37f685",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "demos/template_nofg_28t.py",
+      "repository_path": "external/taiji-sgwb/demos/template_nofg_28t.py",
+      "git_mode": "100644",
+      "git_blob": "265c11e427bd892a956ba97cfe5e15b6d14570c9",
+      "bytes": 8089,
+      "sha256": "5a3e40230b4700b633661e39d37914c432fe8483ca9badd1555f76eda571f65b",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "pyproject.toml",
+      "repository_path": "external/taiji-sgwb/pyproject.toml",
+      "git_mode": "100644",
+      "git_blob": "cc1b001985055739132378cf1d9bc80cbc66cff6",
+      "bytes": 663,
+      "sha256": "70291a411ee50f9362b6f7d60da8e12b84b6058fba67299a68c6838deee6432f",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/__init__.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/__init__.py",
+      "git_mode": "100644",
+      "git_blob": "8e02104c22c57d912165931db8ae651a8e97e02a",
+      "bytes": 52,
+      "sha256": "a64f6d00284814a9bb081bc8d81d0288414cae898a7a7c93f48b9cc6bbfa014d",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/analyorf.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/analyorf.py",
+      "git_mode": "100644",
+      "git_blob": "2cca78e1ee3c242fe8ab59a0a4150208c4bb5b30",
+      "bytes": 9838,
+      "sha256": "ff4378e9a33abd1c263b6cd39817c9bfc6be06bce7a3569ce475e7dac1b8842a",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/constants.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/constants.py",
+      "git_mode": "100644",
+      "git_blob": "2c0187cc1a3c0613e5da0ed52cc29378fd8ee36c",
+      "bytes": 533,
+      "sha256": "a64104464298e91c8d70b94f4183f2c138d3965d782ae3ea3f45bb35c521df33",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/detector/__init__.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/detector/__init__.py",
+      "git_mode": "100644",
+      "git_blob": "dce0be01d5c7c73e97ce10be6c7b8d46f41012f6",
+      "bytes": 113,
+      "sha256": "278c4339c0578ec2b83459186775605e0d713e1380d99bc8ad2fe41bab4c07c8",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/detector/constants.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/detector/constants.py",
+      "git_mode": "100644",
+      "git_blob": "d4237c9b1a841c42affb1cb7a0841e1a90ffcfb9",
+      "bytes": 392,
+      "sha256": "8236c855763e6311ba84e3175189aabeefd4c9eb93b7ac3e71aa2d4114274cae",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/detector/data.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/detector/data.py",
+      "git_mode": "100644",
+      "git_blob": "36607fc63236ed6e123fb47129a8977d1c9d22e3",
+      "bytes": 5303,
+      "sha256": "be7458c8e49392a8f0bf42907e76c0c8de1e8e3258f50cd9b541e7b8e6fc139c",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/detector/interferometer.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/detector/interferometer.py",
+      "git_mode": "100644",
+      "git_blob": "f5f2c8a9021540f414a638c4146e6a3de886f678",
+      "bytes": 8112,
+      "sha256": "b96021ba05d141be6fd36b49df82c9778298b7ca7af93e8c748e7fbba3d7a5ff",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/detector/noise.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/detector/noise.py",
+      "git_mode": "100644",
+      "git_blob": "2e316458ebf2460c32c019de0e4e639a4d0d7256",
+      "bytes": 3354,
+      "sha256": "3155f15aa352bb32dadcc999f068fc9003439dcaa6cac9416888280697f28677",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/detector/orbit.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/detector/orbit.py",
+      "git_mode": "100644",
+      "git_blob": "cd1b87e2e03745e2edb5476501b76e6cc52c732a",
+      "bytes": 3540,
+      "sha256": "e3aab59f0b1a5743814265577ebf9a0fa114270a32f4686283e8f872178e1f07",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/detector/tdi.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/detector/tdi.py",
+      "git_mode": "100644",
+      "git_blob": "0238588ca113603e7b35fc628ddc698bd20eb8e4",
+      "bytes": 7469,
+      "sha256": "2f0f216cc306108703b01f26e7f77c40a20628d4b9a9f68f48922ae2c271f544",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/plotlib.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/plotlib.py",
+      "git_mode": "100644",
+      "git_blob": "b1948eb8bc1d5776d31dc66958067aceb9ed6773",
+      "bytes": 1519,
+      "sha256": "1603ca6b937e7ab79e65031e2985b0cce757403a2d114be6c52667dde4c9cfc5",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/utils.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/utils.py",
+      "git_mode": "100644",
+      "git_blob": "51c5a16dfa3d98a932898ccc917dd79309cb78c8",
+      "bytes": 1570,
+      "sha256": "8348ead58ded1fab3580f184ee7daa493f66e2bdfbe9e664a6aa56039206b1b1",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    },
+    {
+      "path": "src/taijisgwb/waveform.py",
+      "repository_path": "external/taiji-sgwb/src/taijisgwb/waveform.py",
+      "git_mode": "100644",
+      "git_blob": "0f29d3c2d4b47d5301e302924f967f014d963ae3",
+      "bytes": 851,
+      "sha256": "cec34f6d4cff8c1ac59b94a4bee64085a992b0849a6609b15a26884b764efa67",
+      "matches_pinned_blob": true,
+      "matches_git_mode": true
+    }
+  ]
+}

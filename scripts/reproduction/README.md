@@ -94,7 +94,7 @@ See [prerequisite completion](../../docs/reproduction/triangle-gb/prerequisites-
 
 ## TaijiSGWB source preservation
 
-`audit-taiji-sgwb-source.py` checks the complete pinned upstream tree, exact names and byte contents, Git file modes, clean checkout, submodule registration, Python syntax and original GPL license. It writes a file list, SHA-256 manifest and audit report under `results/taiji-sgwb/source/`. The default audit checks current upstream HEAD online; `--offline` skips only that network check. It uses the standard library and never imports or executes upstream programs.
+`audit-taiji-sgwb-source.py` checks the complete pinned upstream tree, exact names and byte contents, Git file modes, directly tracked snapshot files, reconstructed original Git tree, Python syntax and original GPL license. The shared `taiji_sgwb_source.py` reads `configs/upstream/taiji-sgwb.json`; no nested Git repository or submodule initialization is required for TaijiSGWB. It writes a file list, SHA-256 manifest and audit report under `results/taiji-sgwb/source/`. The default audit checks current upstream HEAD online; `--offline` skips only that network check. It uses the standard library and never imports or executes upstream programs.
 
 See [Stage 1 source integration](../../docs/reproduction/taiji-sgwb/source-integration.md).
 

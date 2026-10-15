@@ -203,8 +203,8 @@
     },
     {
       "path": "scripts/reproduction/audit-taiji-sgwb-template-short-chain.py",
-      "bytes": 5386,
-      "sha256": "47d278dad02e79a2b6e90ceffab11c46eda39a1f4e6f429e56e680d71f310fa7"
+      "bytes": 5270,
+      "sha256": "3ffebcadd9c6cd7f97a9525e5025583c6df8b9608b18216c26fedbae17d1bf21"
     },
     {
       "path": "scripts/reproduction/check-taiji-sgwb-template-short-chain.py",

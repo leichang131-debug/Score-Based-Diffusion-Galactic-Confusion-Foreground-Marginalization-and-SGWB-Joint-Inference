@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "taijisgwb"
+version = "0.1.0"
+authors = [
+    {name = "DrizzleatDusk", email = "xgxx1008@outlook.com"},
+]
+description = "Taiji data challenge 2: SGWB."
+readme = "README.md"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy==1.26.4",
+    "scipy==1.13.1",
+    "matplotlib",
+    "healpy>=1.17",
+    "corner>=2.2",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+sampler = ["eryn"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/taijisgwb"]

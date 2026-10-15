@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Audit saved Stage 7 evidence, original AST/source and prior cache provenance."""
+from taiji_sgwb_source import source_is_pristine, source_pin
 import ast
 import csv
 import hashlib
@@ -24,8 +25,8 @@ def main():
     checks={'worker_success':run['returncode']==0,'all_numerical_checks_pass':v['all_checks_pass'] and all(v['checks'].values()),'real_local_resource_samples':run['peak_sampled_worker_rss_kib']>0 and run['monitoring_error'] is None,'no_MCMC_claim':all(x['MCMC_updates']==0 for x in v['interfaces'].values())}
     sm=json.loads((ROOT/'results/taiji-sgwb/source/manifest.json').read_text())
     checks['all_19_original_files_preserved']=len(sm['files'])==19 and all(sha(ROOT/item['repository_path'])==item['sha256'] for item in sm['files'])
-    checks['original_source_clean']=not subprocess.check_output(['git','-C',str(ROOT/'external/taiji-sgwb'),'status','--porcelain']).strip()
-    checks['original_pin']=subprocess.check_output(['git','-C',str(ROOT/'external/taiji-sgwb'),'rev-parse','HEAD']).decode().strip()=='4afaad4044b08721e7f1ce29cba3b0d912636dce'
+    checks['original_source_clean']=source_is_pristine()
+    checks['original_pin']=source_pin()=='4afaad4044b08721e7f1ce29cba3b0d912636dce'
     for entry in ('template_nofg_28t.py','rj_nofg_28t.py'):
         name=Path(entry).stem;record=json.loads((OUT/name/'source-execution.json').read_text());source=ROOT/record['source'];working=ROOT/record['working_copy']
         checks[name+'_same_name_identical_source']=source.name==working.name==entry and sha(source)==sha(working)==record['sha256']
