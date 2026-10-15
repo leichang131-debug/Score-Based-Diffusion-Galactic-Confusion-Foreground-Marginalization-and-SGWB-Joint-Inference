@@ -1,6 +1,6 @@
 # TaijiSGWB independent macOS CPU environment
 
-Status: Stage 2 installed and checked locally on macOS ARM64. All 25 environment/interface checks passed. Full TDC data preparation and both upstream inference demos remain pending.
+Status: Stage 2 installed and checked locally on macOS ARM64. All 25 environment/interface checks passed. Official 2.8 data/orbit, both preprocessing entries, response and likelihood verification, template recovery and the original full-data template schedule have since completed. EQ/RJ sampling and convergence validation remain incomplete; see [current status](../../docs/reproduction/taiji-sgwb/status-and-cluster-handoff.md).
 
 ## Runtime and dependencies
 
@@ -39,8 +39,8 @@ The setup script reuses the project-local Python runtime, creating it if absent,
 bash scripts/reproduction/run-taiji-sgwb-python.sh -c 'from taijisgwb import Interferometer; import eryn.ensemble; print("Imports OK")'
 ```
 
-The launcher uses this environment, project-local Matplotlib cache, a headless plotting backend, disabled bytecode writes and one numerical thread per process by default. Arguments are forwarded to Python. It does not adapt the demo's absolute input paths, 62-worker defaults or full-grid response memory usage; those require the subsequent data and execution stages.
+The launcher uses this environment, project-local Matplotlib cache, a headless plotting backend, disabled bytecode writes and one numerical thread per process by default. Arguments are forwarded to Python. The launcher itself does not adapt the demo's absolute input paths, 62-worker defaults or full-grid response memory usage. These adaptations are now implemented in the separate, documented data/cache/execution stages; use those entry points rather than launching the unadapted full demo.
 
 ## Evidence and scope
 
-See [Stage 2 report](../../docs/reproduction/taiji-sgwb/environment-setup.md) and [local evidence](../../results/taiji-sgwb/environment/README.md). Synthetic sampler checks establish compatibility with the original branch/move/backend APIs. They do not establish a physical posterior, full checkpoint continuation, sampler calibration, or feasibility of the original full-year computation on 16 GB RAM. Linux/cluster deployment is not yet checked.
+See [Stage 2 report](../../docs/reproduction/taiji-sgwb/environment-setup.md) and [local evidence](../../results/taiji-sgwb/environment/README.md). Synthetic sampler checks establish compatibility with the original branch/move/backend APIs. Those environment-only checks do not establish a physical posterior or recovery/calibration. Separate later stages have completed real template checkpoint continuation and the original full-year template schedule on this Mac; convergence remains unconfirmed. Linux/cluster deployment is not yet checked.

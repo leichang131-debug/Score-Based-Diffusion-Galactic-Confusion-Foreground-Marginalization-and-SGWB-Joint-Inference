@@ -66,3 +66,7 @@ The original full-data 2.8 template pipeline has completed on the Mac, including
 - [Diagnostics](../../../results/taiji-sgwb/template-formal/analysis.json)
 - [SHA-256 artifact manifest](../../../results/taiji-sgwb/template-formal/manifest.json)
 - [Historical migration plan](../../deployment/taiji-cluster-migration-plan.md)
+
+## Documentation and analysis maintenance (2026-10-15)
+
+Repository-wide status summaries now distinguish current completion from historical preparation and pause records. The mini analyzer's obsolete live-paused requirement has been replaced by before/after artifact hashes and checked without new sampling. Current evidence and local-link checks are recorded in [maintenance evidence](../../../results/repository-maintenance-20261015/README.md). No scientific result, upstream source or convergence verdict changed.

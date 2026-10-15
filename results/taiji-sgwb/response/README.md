@@ -12,4 +12,4 @@ Full original-grid response calculation completed locally: 32/32 checks passed. 
 - `initial-benchmark.json`, `attempts/`, `attempts.json`: initial timing and retained parser-boundary issue.
 - `audit.json`, `manifest.json`: evidence/source/cache checks and portable artifact hashes.
 
-Full `response.h5` remains in ignored `data/processed/taiji-sgwb/response/`. [Stage 6 report](../../../docs/reproduction/taiji-sgwb/response.md). Physical likelihood and posterior sampling remain pending.
+Full `response.h5` remains in ignored `data/processed/taiji-sgwb/response/`. [Stage 6 report](../../../docs/reproduction/taiji-sgwb/response.md). Physical likelihood checks and the 2.8 template schedule have since completed; see [current status](../../../docs/reproduction/taiji-sgwb/status-and-cluster-handoff.md). This directory remains response-only evidence.

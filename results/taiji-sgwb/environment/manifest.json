@@ -3,13 +3,13 @@
   "files": [
     {
       "path": "docs/reproduction/taiji-sgwb/environment-setup.md",
-      "bytes": 6199,
-      "sha256": "8ce84164ac7ed588b5ba9769e77639140d1cce8f1e85af9a9706017bd5086740"
+      "bytes": 6383,
+      "sha256": "cd9ade96a80d353c0296a0fd37e018451f16287d0889ffaf414efa70385c94bd"
     },
     {
       "path": "environments/taiji-sgwb/README.md",
-      "bytes": 3243,
-      "sha256": "392eda7a4541540b21cdd0f313cd7cb384c79b0cb0e859e98cb9059b9f74a45c"
+      "bytes": 3715,
+      "sha256": "aa9b3895fbec02f9f9249710fd2894a65287c43feeba2854d6994a751a0d8f50"
     },
     {
       "path": "environments/taiji-sgwb/requirements-macos-arm64-py311.txt",

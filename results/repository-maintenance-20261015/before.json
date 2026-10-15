@@ -1,0 +1,16 @@
+{
+  "manifest_entries": 1083,
+  "manifest_issues": [
+    {
+      "manifest": "results/triangle-gb/environment/manifest.json",
+      "path": "docs/reproduction/triangle-gb/README.md",
+      "missing": false
+    },
+    {
+      "manifest": "results/triangle-gb/prerequisites/manifest.json",
+      "path": "docs/reproduction/triangle-gb/README.md",
+      "missing": false
+    }
+  ],
+  "broken_links": []
+}

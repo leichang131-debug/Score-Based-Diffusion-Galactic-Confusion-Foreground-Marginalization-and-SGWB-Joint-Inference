@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "path": "results/repository-maintenance-20261015/README.md",
+      "bytes": 5094,
+      "sha256": "0dd2048c6c41389d663611932d101ffdf234ee439d25c8aecb4562e43ea446d0"
+    },
+    {
+      "path": "results/repository-maintenance-20261015/before.json",
+      "bytes": 402,
+      "sha256": "515b2940df7c9ba07a1c4e80171482edd53b0c80a04329eac227fc0ea4fde2c1"
+    },
+    {
+      "path": "results/repository-maintenance-20261015/manifest-refresh.json",
+      "bytes": 13415,
+      "sha256": "289e2ddb00d226b1cf9553336c3318fffa1a483843002582cd433afdcf07ba46"
+    },
+    {
+      "path": "results/repository-maintenance-20261015/mini-guard-check.json",
+      "bytes": 744,
+      "sha256": "874ff0164955cf1bf6b46c679b45c2f1d165fa9dc00ddbca058d6cf3a2452e47"
+    },
+    {
+      "path": "results/repository-maintenance-20261015/updated-documents.json",
+      "bytes": 1522,
+      "sha256": "c68eb5e9477fea1a9c916426e4a4eac2d4e1d882300a4e52d53b434cad012c66"
+    },
+    {
+      "path": "scripts/reproduction/analyze-taiji-sgwb-mini.py",
+      "bytes": 12281,
+      "sha256": "08a023166fa9d008a37523593e72ef93d3726a9706566355cee72d99f14f9666"
+    },
+    {
+      "path": "scripts/reproduction/audit-repository-documentation.py",
+      "bytes": 4875,
+      "sha256": "0a0f6f9bdd4d6c33c6aa0b40fb7206e0523d7b8d48521e8b090ba9c5ad6dabca"
+    }
+  ]
+}

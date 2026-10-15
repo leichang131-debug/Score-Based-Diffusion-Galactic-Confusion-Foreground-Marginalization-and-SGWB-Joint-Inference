@@ -10,4 +10,4 @@
 | Joint inference | Four-scale posterior and SGWB marginal | Stable inference with calibration checks |
 | Attribution and realism | Covariance-matched controls and mismatch studies | Documented mechanism and applicability limits |
 
-Only the repository foundation is prepared at initialization. All experiment stages are pending. A publication venue is a research ambition, not a guaranteed outcome.
+The repository foundation and several reference workflows are now complete locally: Score-SDE small-scale training/recovery/sampling, four Triangle-Simulator tutorials, five Triangle-GB examples and the full TaijiSGWB 2.8 template schedule. Score-SDE quality reproduction, six Triangle-GB core-check failures, TaijiSGWB convergence and EQ/RJ comparisons remain unresolved. See [current reproduction status](reproduction/README.md). The conditional score model, unknown-foreground joint inference, calibration and attribution experiments remain future research. A publication venue is a research ambition, not a guaranteed outcome.

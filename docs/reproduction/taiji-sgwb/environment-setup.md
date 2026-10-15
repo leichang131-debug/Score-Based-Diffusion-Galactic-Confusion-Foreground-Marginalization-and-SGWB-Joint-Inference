@@ -52,7 +52,7 @@ See [environment commands](../../../environments/taiji-sgwb/README.md).
 
 ## Remaining work
 
-Stage 3 must obtain and validate the actual TDC II 2.8 dataset and associated orbit. Source-specific absolute paths, worker counts and full-grid response memory need a separately documented execution adapter. Existing synthetic checks do not prove full-year feasibility, converged posteriors, recovery/calibration, or complete paper reproduction.
+The official 2.8 inputs, external path/cache adapters, full response grid, both likelihoods, template recovery and full-data template schedule have since completed. These later outcomes are recorded in [current status](status-and-cluster-handoff.md); the Stage 2 synthetic checks alone do not establish them. EQ/RJ sampling, posterior convergence/calibration and Linux deployment remain incomplete. The 13-check source recheck above is the historical submodule audit; the current snapshot audit has 16 offline or 18 online checks.
 
 ## Source storage update (2026-10-15)
 

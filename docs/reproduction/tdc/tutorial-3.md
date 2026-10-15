@@ -87,4 +87,4 @@ Curated evidence contains the same-name executed notebook with real kernel times
 
 The original optional-backend notices (`phenomxpy`, `pyseobnr`, CuPy) and any original warnings remain in notebook outputs. No required backend or execution step failed. Completion means original-default GW injection/response tutorial reproduction on one realization, not inference convergence or statistical calibration.
 
-Tutorials 1–3 are complete. Tutorial 4 remains pending; Tutorial 5 is excluded following teacher guidance.
+Tutorials 1–4 are now complete; Tutorial 5 is excluded following teacher guidance.

@@ -13,13 +13,13 @@
     },
     {
       "path": "docs/reproduction/triangle-gb/README.md",
-      "bytes": 1049,
-      "sha256": "c7162a8d457ab59ae8f0fca0995704ce71d7fb069b964d9de8f975283ec696ec"
+      "bytes": 2338,
+      "sha256": "c9b70a3b80037f3b35773ae63e5f2e204c16fd17518799fa510acd167b2475e0"
     },
     {
       "path": "docs/reproduction/triangle-gb/data-preparation.md",
-      "bytes": 6902,
-      "sha256": "81389fad85e0357781a1be4b11921d02bd070c2fd908cef22360683165f309a8"
+      "bytes": 6987,
+      "sha256": "8526752dd01ab00a8f3c6ba507e5301d1b82ef3ce6e0714902d02f3e0485d0a9"
     },
     {
       "path": "docs/reproduction/triangle-gb/environment-setup.md",
@@ -28,18 +28,18 @@
     },
     {
       "path": "docs/reproduction/triangle-gb/prerequisites-completion.md",
-      "bytes": 9593,
-      "sha256": "0f19efa6475ea6131846205c2fd20c9102e5e3c7f54f4d3ea6cff227f7e1a724"
+      "bytes": 9850,
+      "sha256": "83afd3056bf301fa25c4db992eaffb81deab9a5d88890b64dad2fcf4f08a66c6"
     },
     {
       "path": "docs/reproduction/triangle-gb/source-integration.md",
-      "bytes": 3725,
-      "sha256": "ca1a2c57f47adc1e41b3a44863456f7be617e5ac2017d17aa4c85c399fc44290"
+      "bytes": 3834,
+      "sha256": "478ada1785f330096f550431d406f963af3e75772752d5de57ee8f00973378b6"
     },
     {
       "path": "environments/triangle-gb/README.md",
-      "bytes": 4309,
-      "sha256": "ba7de751895becd1e42111960e99e29fc3f4f3ef6bc958e2613deee107683c62"
+      "bytes": 4400,
+      "sha256": "4c2bfc940744d9cd1d75b3af733038065d8b55fa6a2fea27aedbfa9d80322bd3"
     },
     {
       "path": "environments/triangle-gb/requirements-macos-arm64-py311.txt",
@@ -128,8 +128,8 @@
     },
     {
       "path": "results/triangle-gb/prerequisites/README.md",
-      "bytes": 578,
-      "sha256": "270e5deb9970a61b82a92b5dfff0df186373c452cebce5602acc3d2083dad7f2"
+      "bytes": 709,
+      "sha256": "bb646d668ac058b8edfad50ab5ddc070db7271bde30aeda66b72eeb71b66a4c4"
     },
     {
       "path": "results/triangle-gb/prerequisites/readiness.json",

@@ -13,4 +13,4 @@ Stage 3: 24/24 actual data/orbit/interface checks passed. The official dataset a
 - Earlier download and validation logs: retained local transfer/tooling history explained in the report.
 - `audit.json`, `manifest.json`: input/evidence/source checks and portable file hashes.
 
-[Stage 3 report](../../../docs/reproduction/taiji-sgwb/data-preparation.md). Full preprocessing, response grids and inference remain pending.
+[Stage 3 report](../../../docs/reproduction/taiji-sgwb/data-preparation.md). Full preprocessing, response grids and the 2.8 template schedule have since completed; see [current status](../../../docs/reproduction/taiji-sgwb/status-and-cluster-handoff.md). This directory remains input-preparation evidence.

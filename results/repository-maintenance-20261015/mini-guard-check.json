@@ -1,0 +1,17 @@
+{
+  "scope": "Analysis-only lifecycle guard update; canonical historical mini analysis and images are preserved. No sampling.",
+  "analyzer_sha256": "08a023166fa9d008a37523593e72ef93d3726a9706566355cee72d99f14f9666",
+  "formal_artifact_guard": "full_formal_artifacts_unchanged_by_analysis",
+  "checks": {
+    "new_numerical_checks_all_pass": true,
+    "posterior_unchanged": true,
+    "diagnostics_unchanged": true,
+    "sampling_unchanged": true,
+    "sampling-diagnostics.png_pixels_unchanged": true,
+    "sgwb-sample-distribution.png_pixels_unchanged": true,
+    "parameter-correlations.png_pixels_unchanged": true,
+    "sampled-spectrum.png_pixels_unchanged": true,
+    "cold_sample_arrays_unchanged": true
+  },
+  "all_checks_pass": true
+}

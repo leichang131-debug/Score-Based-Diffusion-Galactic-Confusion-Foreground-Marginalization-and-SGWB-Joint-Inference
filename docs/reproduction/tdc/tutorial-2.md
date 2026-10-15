@@ -64,4 +64,4 @@ Saved evidence includes all three PNG figures, notebook outputs with kernel exec
 
 Optional `phenomxpy`, `pyseobnr` and CuPy notices are preserved in outputs; no related optional path was used. No notebook execution error occurred. Completion means original-default single-realization tutorial reproduction, not ensemble calibration or an SGWB posterior-inference result.
 
-Tutorials 1–2 are complete. Tutorials 3–4 remain pending. Tutorial 5 is excluded from the current scope following teacher guidance.
+Tutorials 1–4 are now complete, each with a separate original-default execution report. Tutorial 5 is excluded from the current scope following teacher guidance.

@@ -101,4 +101,4 @@ bash scripts/reproduction/run-taiji-sgwb-python.sh scripts/reproduction/check-ta
 bash scripts/reproduction/run-taiji-sgwb-python.sh scripts/reproduction/audit-taiji-sgwb-template-short-chain.py
 ```
 
-Reusable checkpoint interfaces are `save_sidecar()`, `restore_sidecar()` and `RestartCompatibleHDFBackend`. Later long-run workers must carry the same pairing/provenance checks and persist both RNG streams and tempering state, with new formal-run configurations recorded separately. **Stage 9 formal template sampling and posterior diagnostics remain pending**, followed by RJ reconstruction and paper comparison.
+Reusable checkpoint interfaces are `save_sidecar()`, `restore_sidecar()` and `RestartCompatibleHDFBackend`. Later long-run workers must carry the same pairing/provenance checks and persist both RNG streams and tempering state, with new formal-run configurations recorded separately. **Stage 9 has since completed its original full-data template schedule and posterior diagnostics, with convergence unconfirmed.** RJ sampling and EQ/paper comparisons remain incomplete; see [current status](status-and-cluster-handoff.md).

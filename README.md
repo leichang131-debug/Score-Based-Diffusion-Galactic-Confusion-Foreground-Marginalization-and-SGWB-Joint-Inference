@@ -2,7 +2,9 @@
 
 Research workspace for probabilistic marginalization of the Galactic confusion foreground and joint inference of a target stochastic gravitational-wave background (SGWB) using score-based diffusion models.
 
-**Status:** original Score-SDE is preserved as pinned recursive Git submodules. The macOS CPU workflow passed data preparation, 200 original-network updates, typed optimizer/EMA continuation and four finite EMA sampling calls. Sample previews remain saturated noise; converged training, standard image metrics and reproduction of the teacher's 214k result are not established.
+TaijiSGWB: the full-data 2.8 template schedule completed 5200 transitions, with six saved figures and convergence still unconfirmed. The complete original source is directly tracked under `external/taiji-sgwb/`. EQ-template and RJMCMC sampling remain for the cluster. See [current status](docs/reproduction/taiji-sgwb/status-and-cluster-handoff.md) and [source/figure verification](results/taiji-sgwb/review-20261015/README.md).
+
+**Status updated: 2026-10-15.** Original Score-SDE is preserved as pinned recursive Git submodules. The macOS CPU workflow passed data preparation, 200 original-network updates, typed optimizer/EMA continuation and four finite EMA sampling calls. Sample previews remain saturated noise; converged training, standard image metrics and reproduction of the teacher's 214k result are not established.
 
 Triangle-GB: five original examples executed locally. Subsequent [core CPU verification](docs/reproduction/triangle-gb/core-validation.md) passed 22 of 28 checks and retained six failures, including original time-output and frequency-band boundary defects. Package-wide numerical acceptance is not established.
 
@@ -51,6 +53,7 @@ Time modulation and nonstationarity do not automatically imply non-Gaussianity. 
 │   ├── score-sde-reproduction/
 │   ├── triangle-simulator/
 │   ├── triangle-gb/
+│   ├── triangle-bbh/
 │   └── taiji-sgwb/
 ├── environments/                 # Separate component/platform environments
 │   ├── score-sde/
@@ -60,7 +63,9 @@ Time modulation and nonstationarity do not automatically imply non-Gaussianity. 
 ├── configs/                      # Local, cluster, and inference configurations
 │   ├── local/
 │   ├── cluster/
-│   └── inference/
+│   ├── inference/
+│   ├── reproduction/
+│   └── upstream/
 ├── scripts/                      # Reproduction and cluster execution entry points
 │   ├── reproduction/
 │   └── cluster/
@@ -81,11 +86,24 @@ Time modulation and nonstationarity do not automatically imply non-Gaussianity. 
 ├── results/                      # Curated results and artifact inventories
 │   ├── figures/
 │   ├── tables/
-│   └── manifests/
+│   ├── manifests/
+│   ├── score-sde/
+│   ├── tdc/
+│   ├── triangle-gb/
+│   └── taiji-sgwb/
 └── runs/                         # Local generated outputs; ignored by Git
 ```
 
-Score-SDE is now integrated as an unmodified, pinned Git submodule, with environment and launch scripts. Triangle-Simulator is also integrated as an unmodified pinned submodule with a dedicated macOS CPU environment. Triangle-GB is now preserved as an unmodified submodule pinned to `cbc0a1b0cbf4ec05ec969fa39405394168c3e06c`, with the full package, five examples and orbit files; its dedicated CPU environment is installed; validation and remaining example prerequisites are recorded in [environment setup](docs/reproduction/triangle-gb/environment-setup.md). All five Triangle-GB example notebooks have now completed fresh local execution at their original defaults, with source correspondence and sampler diagnostics recorded in the [execution reports](docs/reproduction/triangle-gb/README.md). All input/dependency prerequisites are prepared, including full Sangria dgb cache and the original network Fisher interfaces; see [prerequisite completion](docs/reproduction/triangle-gb/prerequisites-completion.md). Examples 1/2 public inputs are downloaded and verified locally; [data preparation](docs/reproduction/triangle-gb/data-preparation.md) records the outstanding orbit-coverage gap. See [Triangle-GB source integration](docs/reproduction/triangle-gb/source-integration.md). TaijiSGWB is preserved as a complete, unmodified fixed source snapshot at upstream commit `4afaad4044b08721e7f1ce29cba3b0d912636dce`, directly tracked under `external/taiji-sgwb/` with all 19 original files; see `configs/upstream/taiji-sgwb.json` for provenance. Stages 1–2 are complete: original source is preserved and the independent macOS CPU environment passed 25/25 import/interface checks. The official 2.8 training data and orbit are prepared and passed 24/24 data/interface checks; see [input preparation](docs/reproduction/taiji-sgwb/data-preparation.md). Full original preprocessing has completed for both demo entries with 20/20 checks each; see [Stage 5](docs/reproduction/taiji-sgwb/preprocessing.md). The complete original response grid is cached with 32/32 checks passed; see [Stage 6](docs/reproduction/taiji-sgwb/response.md). Both original full-grid spectral likelihoods passed 206/206 checks; see [Stage 7](docs/reproduction/taiji-sgwb/likelihood.md). Template short-chain save/exit/restart passed 88/88 checks and matches the same-seed continuous control exactly; see [Stage 8](docs/reproduction/taiji-sgwb/template-short-chain.md). The original full-data formal template run completed all 5200 transitions and 350 saved production ensembles on 2026-10-15; numerical checks pass and six result/diagnostic figures are saved, while posterior convergence remains unconfirmed; see [Stage 9](docs/reproduction/taiji-sgwb/template-formal.md) and [completed evidence](results/taiji-sgwb/template-formal/README.md). A separate selected-data short experiment completed the template sampling/restart/analysis workflow in about 4.6 minutes, with convergence explicitly unconfirmed; see [mini workflow](docs/reproduction/taiji-sgwb/template-mini.md). Completed full-year template sampling is recorded; full-paper reproduction and sufficient posterior convergence are not claimed. See [local/cluster execution plan](docs/deployment/taiji-cluster-migration-plan.md). See [environment deployment](docs/reproduction/taiji-sgwb/environment-setup.md). See [TaijiSGWB source integration](docs/reproduction/taiji-sgwb/source-integration.md). See [the reproduction roadmap](docs/reproduction/README.md).
+## Current reproduction status
+
+| Component | Completed locally | Remaining limits and evidence |
+| --- | --- | --- |
+| Score-SDE | Original network: 200 updates, typed optimizer/EMA recovery and four finite EMA sampling calls | Previews remain saturated noise; 214k quality and standard image metrics are not reproduced. [Final report](docs/reproduction/score-sde/final-report.md) |
+| Triangle-Simulator | All four in-scope tutorials executed at original default scales, with unchanged source/Markdown and local outputs | Tutorial 5 excluded by teacher guidance. [Tutorial index](notebooks/reproduction/triangle-simulator/README.md) |
+| Triangle-GB | All five example notebooks executed with original defaults; Sangria and Fisher prerequisites prepared | Core verification: 22/28 pass, six retained failures; orbit-coverage and posterior-calibration limits remain. [Reports](docs/reproduction/triangle-gb/README.md) |
+| TaijiSGWB | Original 2.8 data/orbit, both preprocessing entries, response cache, both likelihood interfaces, template recovery and full 5200-transition template schedule | Six formal plots re-render exactly; convergence unconfirmed (2/14 diagnostic flags pass). EQ/RJ sampling and full-paper reproduction remain incomplete. [Current status](docs/reproduction/taiji-sgwb/status-and-cluster-handoff.md) |
+
+Score-SDE (including its nested original source), Triangle-Simulator, Triangle-GB and Triangle-BBH retain pinned submodules. TaijiSGWB is an unmodified 19-file fixed source snapshot at `4afaad4044b08721e7f1ce29cba3b0d912636dce`, included directly in ordinary clones; [its source lock](configs/upstream/taiji-sgwb.json) records the upstream tree and file hashes. See [source integration](external/README.md) and [the reproduction roadmap](docs/reproduction/README.md).
 
 ## Research plan
 
@@ -114,7 +132,7 @@ Use pinned upstream commits and preserve upstream licenses when integrating code
 
 Use independent environments for Score-SDE, TDC, Triangle-GB, and TaijiSGWB. Validate and lock the dependency versions for each platform before publishing installation commands.
 
-Local macOS CPU runs will establish minimal functionality and support learning. Linux cluster resources will support full training, large simulations, posterior sampling, and repeated injection studies. Apple GPU compatibility has not been validated. Score-SDE environment setup, command-line configuration parsing, and synthetic CPU execution have been validated on macOS. See [Score-SDE setup](environments/score-sde/README.md). See [Triangle-Simulator setup](environments/tdc/README.md) and its [validation record](docs/reproduction/tdc/environment-setup.md). Original-default Tutorials 1–4 have completed; Triangle-GB now has a separate CPU environment; see its [setup and remaining example prerequisites](environments/triangle-gb/README.md). The independent TaijiSGWB macOS ARM64 Python 3.11.14 environment is deployed and checked; see [Stage 2](docs/reproduction/taiji-sgwb/environment-setup.md).
+Local macOS CPU runs will establish minimal functionality and support learning. Linux cluster resources will support full training, large simulations, posterior sampling, and repeated injection studies. Apple GPU compatibility has not been validated. Score-SDE environment setup, command-line configuration parsing, and synthetic CPU execution have been validated on macOS. See [Score-SDE setup](environments/score-sde/README.md). See [Triangle-Simulator setup](environments/tdc/README.md) and its [validation record](docs/reproduction/tdc/environment-setup.md). Original-default Tutorials 1–4 have completed; Triangle-GB now has a separate CPU environment; see its [setup and dependency record](environments/triangle-gb/README.md). The independent TaijiSGWB macOS ARM64 Python 3.11.14 environment is deployed and checked; see [Stage 2](docs/reproduction/taiji-sgwb/environment-setup.md).
 
 ## Score-SDE local reproduction results
 

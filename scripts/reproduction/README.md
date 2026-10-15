@@ -74,7 +74,7 @@ See [data preparation and orbit issue](../../docs/reproduction/triangle-gb/data-
 
 See [prerequisite completion](../../docs/reproduction/triangle-gb/prerequisites-completion.md). None of these scripts claims complete posterior-sampling reproduction.
 
-- `check-triangle-gb-prerequisites.py`: consolidate actual validated data/import readiness and verify all five same-name working notebook source/Markdown cells, with full reproduction explicitly pending.
+- `check-triangle-gb-prerequisites.py`: consolidate actual validated data/import readiness and verify all five same-name working notebook source/Markdown cells, without executing the examples in that preparation check. All five examples have since executed; current reports remain authoritative.
 
 ## Triangle-GB Example 0
 
@@ -136,3 +136,9 @@ Both original full-year prefixes passed 20/20 checks. See [Stage 5 report](../..
 - `audit-taiji-sgwb-response.py`: verify original node/source correspondence, full-cache/array hashes and exact block coverage.
 
 All 32 response checks passed. Both original examples share a verified full response cache; [Stage 6 report](../../docs/reproduction/taiji-sgwb/response.md). No parameter likelihood or posterior sampling is executed here.
+
+## Repository-wide documentation and evidence audit
+
+`audit-repository-documentation.py` checks tracked JSON syntax, Python syntax, local Markdown link targets and SHA-256 records in supported artifact manifests. It does not rerun simulations, MCMC, training, scientific acceptance tests or remote-link checks. Historical preparation/pause/failure reports retain their original dates and scope; current summaries link to them.
+
+The mini analyzer now checks before/after formal-artifact hashes rather than requiring a live paused status. Historical analysis and its original analyzer remain preserved; the updated analysis-only verification reproduced all four mini figures and numerical summaries. See `results/repository-maintenance-20261015/`.

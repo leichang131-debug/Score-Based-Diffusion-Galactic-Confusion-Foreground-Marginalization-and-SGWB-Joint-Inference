@@ -1,6 +1,6 @@
 # TaijiSGWB Stage 5: complete original preprocessing
 
-Completed locally for both original programs: **20/20 numerical/interface checks passed per entry**, at full original one-year input scale. The independent runs produce byte-identical final frequency, complex FFT and CSD arrays. Full response construction and inference remain pending.
+Completed locally for both original programs: **20/20 numerical/interface checks passed per entry**, at full original one-year input scale. The independent runs produce byte-identical final frequency, complex FFT and CSD arrays. Full response construction and template inference have since completed; see [current status](status-and-cluster-handoff.md). This report remains scoped to preprocessing.
 
 ## Exact correspondence to original programs
 

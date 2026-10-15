@@ -1,11 +1,24 @@
 # Upstream source integration
 
-Score-SDE reproduction is integrated as an unmodified Git submodule at commit `8c399ccd8079e5fe7e264f8a72ec97a598b33be1`. Its original Score-SDE submodule is pinned to `0acb9e0ea3b8cccd935068cd9c657318fbc6ce4c`.
+Updated: 2026-10-15. All upstream scientific source remains unmodified and retains its original license. Project-owned path, cache, checkpoint and plotting adapters live outside the source directories.
+
+| Component | Integration | Fixed upstream commit |
+| --- | --- | --- |
+| Score-SDE reproduction | Recursive submodule | `8c399ccd8079e5fe7e264f8a72ec97a598b33be1` |
+| Nested original Score-SDE | Submodule inside the wrapper | `0acb9e0ea3b8cccd935068cd9c657318fbc6ce4c` |
+| Triangle-Simulator | Submodule | `ab796358e9a36c8987f6bb53a97230d603bfdfd5` |
+| Triangle-GB | Submodule | `cbc0a1b0cbf4ec05ec969fa39405394168c3e06c` |
+| Triangle-BBH | Submodule, including bundled modified WF4Py | `f99b0a34ea8d085aff67220bdc165a746ba5ceda` |
+| TaijiSGWB | Directly tracked fixed source snapshot, 19 original files | `4afaad4044b08721e7f1ce29cba3b0d912636dce` |
+
+For components that remain submodules:
 
 ```bash
 git submodule update --init --recursive
 ```
 
-Triangle-Simulator is integrated at `ab796358e9a36c8987f6bb53a97230d603bfdfd5` with all five notebooks and bundled orbit/waveform data. Its GPL-3.0 license is preserved. The source checkout is shallow but contains the complete pinned file tree. Triangle-GB is now a complete unmodified submodule pinned to `cbc0a1b0cbf4ec05ec969fa39405394168c3e06c`, including its package, five examples, orbit files and GPL-3.0 license. Its independent environment is installed; full example execution remains pending. TaijiSGWB is integrated as a complete, unmodified submodule pinned to `4afaad4044b08721e7f1ce29cba3b0d912636dce`. Both original `demos/` programs and all `src/taijisgwb/` modules retain their names, paths and byte content. Source integration and independent macOS environment deployment are complete; official 2.8 data and orbit preparation are complete with 24/24 checks; both original preprocessing prefixes have completed with 20/20 checks each; the complete original response grid is cached with 32/32 checks; physical likelihood and inference remain pending. See [Stage 6](../docs/reproduction/taiji-sgwb/response.md). See [Stage 5](../docs/reproduction/taiji-sgwb/preprocessing.md). See [input evidence](../docs/reproduction/taiji-sgwb/data-preparation.md). See [environment evidence](../docs/reproduction/taiji-sgwb/environment-setup.md). See [source preservation evidence](../results/taiji-sgwb/source/README.md). Preserve upstream licenses and notices. Project-owned launch adapters live under `scripts/reproduction/`; upstream source is unchanged.
+TaijiSGWB's `demos/` and `src/taijisgwb/` arrive with an ordinary clone; do not initialize that path as a submodule. [The lock](../configs/upstream/taiji-sgwb.json) and [source audit](../results/taiji-sgwb/source/README.md) record exact names, bytes, modes and the reconstructed Git tree. Other component source checkouts may be shallow but contain their complete pinned trees.
 
-Triangle-BBH is pinned at `f99b0a34ea8d085aff67220bdc165a746ba5ceda` to provide the GB network Fisher dependency. Its complete 80-file tree and bundled modified WF4Py are preserved with original licenses; both are installed editable in the Triangle-GB CPU environment.
+The four Triangle-Simulator tutorials and all five Triangle-GB examples have executed locally. Triangle-GB core checks retain six failures; example execution does not certify every interface. Triangle-BBH/WF4Py provide the installed Fisher dependency. See [Triangle-GB status](../docs/reproduction/triangle-gb/README.md).
+
+TaijiSGWB source/environment/data/preprocessing/response/likelihood and template restart validation are complete. The full 2.8 template schedule and six figures are saved, with convergence unconfirmed. EQ-template/RJMCMC sampling and full-paper reproduction remain incomplete; see [current status](../docs/reproduction/taiji-sgwb/status-and-cluster-handoff.md).

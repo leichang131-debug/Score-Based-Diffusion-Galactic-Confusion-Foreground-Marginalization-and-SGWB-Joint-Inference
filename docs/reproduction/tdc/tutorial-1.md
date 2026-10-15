@@ -74,4 +74,4 @@ Optional `phenomxpy`, `pyseobnr` and CuPy notices appeared, including worker imp
 
 ## Remaining scope
 
-Tutorial 1 original-default execution is complete. Tutorials 2–4 still need separate full execution and output checks. Tutorial 5 is excluded from the current reproduction scope following the teacher's guidance; its external data are not a blocker. No SGWB joint-inference or posterior-reconstruction result is claimed by this instrument/noise tutorial.
+Tutorial 1 original-default execution is complete. Tutorials 2–4 have since completed separate full executions and output checks; see the [current tutorial index](../../../notebooks/reproduction/triangle-simulator/README.md). Tutorial 5 is excluded from the current reproduction scope following the teacher's guidance; its external data are not a blocker. No SGWB joint-inference or posterior-reconstruction result is claimed by this instrument/noise tutorial.

@@ -7,13 +7,13 @@
     },
     {
       "path": "docs/deployment/taiji-cluster-migration-plan.md",
-      "sha256": "90ef2b2d4c57dc019b88ac9b40d35d0680d4a8363c3961c36e455e1e62e6c3e5",
-      "bytes": 20245
+      "sha256": "0495b0450aca59aafe54ac9ea28e6b00b7b840c4a1af3a1dc5bd2d4d55b4afed",
+      "bytes": 20535
     },
     {
       "path": "docs/reproduction/taiji-sgwb/template-formal.md",
-      "sha256": "ec93c21aa996f6fc607459bcaa994e71a485a3e186c753d1f7cd88c67d490906",
-      "bytes": 18016
+      "sha256": "fe55faafe46f00ca5d5b11a831886ffc18bcee30a24c85de261169b99330eb98",
+      "bytes": 18318
     },
     {
       "path": "results/taiji-sgwb/template-formal/README.md",

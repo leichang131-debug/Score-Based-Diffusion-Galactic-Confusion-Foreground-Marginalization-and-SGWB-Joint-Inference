@@ -1,10 +1,12 @@
 # TaijiSGWB Stage 9: original formal template schedule and posterior analysis
 
+Current status and commands below describe the completed experiment. Sections explicitly dated 2026-10-13/14 preserve historical launch/pause/recovery events; their old PIDs, stop requests and remaining-step counts are not current instructions. Do not restart the finished schedule.
+
 **Current state: original full-data schedule COMPLETE at 2026-10-15 06:13:36 Beijing time; 350 production ensembles saved. Numerical checks pass, posterior convergence remains unconfirmed.**
 
 See [completed results and evidence](../../../results/taiji-sgwb/template-formal/README.md). Earlier pause/restart notes below are historical records, not the current state.
 
-The compute processes exited normally; 19/19 static restore checks passed. See [the cluster migration plan](../../deployment/taiji-cluster-migration-plan.md). No new MCMC transition was made during validation. Read `results/taiji-sgwb/template-formal/status.json` and the timestamped progress snapshot for published status. The latest live local state is in ignored `runs/taiji-sgwb/template-formal/progress.json`. Posterior outputs will be created only after the entire original sampling schedule finishes. They must then be interpreted with the diagnostic assessment.
+The final compute processes exited normally. Completed posterior outputs, six figures and numerical diagnostics are saved; the final status is `SAMPLING_COMPLETE_CONVERGENCE_NOT_CONFIRMED`. The 19/19 static-restore checks refer to earlier pauses, not to posterior convergence. Read [current status and cluster handoff](status-and-cluster-handoff.md), `results/taiji-sgwb/template-formal/status.json` and the completed analysis for present results. Timestamped sessions and ignored `runs/` progress preserve execution history.
 
 ## Exact original schedule
 
@@ -47,7 +49,7 @@ Current published progress is a snapshot, not a continuously updated GitHub dash
 
 ## Completion analysis and limitations
 
-After 1000+4200 updates have finished, `analyze-taiji-sgwb-template-formal.py` will:
+After the completed 1000+4200 updates, `analyze-taiji-sgwb-template-formal.py` performed the following; it remains reusable for analysis-only checks:
 
 1. Verify the original schedule, complete finite 350 × 6 × 62 chain, original-source preservation and several actual stored likelihoods against independent Cholesky calculations.
 2. Analyze the **cold chain only**, retaining all 14 original parameters and original link order 12,13,23,21,31,32. Export medians, 16/84 and 2.5/97.5 percentiles, injection percentile and truth inclusion flags. Simultaneous 95% truth inclusion across 14 parameters is not assumed.
@@ -55,7 +57,7 @@ After 1000+4200 updates have finished, `analyze-taiji-sgwb-template-formal.py` w
 4. Estimate ensemble-mean ACF/IAT with a Sokal window, assess the 50*tau time-length requirement, use a covariance-aware heuristic mean MCSE/ESS, and compare first/second-half mean drift to posterior standard deviation. These single-ensemble diagnostics can flag a run as insufficient, but cannot establish rigorous convergence or calibration.
 5. Explicitly avoid treating interacting walkers or temperatures as independent chains for R-hat. Independently seeded ensembles and repeated-injection coverage tests are still needed for stronger claims.
 
-A completed schedule can produce `SAMPLING_COMPLETE_CONVERGENCE_NOT_CONFIRMED`. If the limited checks pass, the label is `SAMPLING_COMPLETE_DIAGNOSTICS_PASS_LIMITED`, not proven convergence. Quantiles always describe the obtained samples; their scientific reliability depends on diagnostics. No burn-in/startup traces will be presented as final posterior results.
+A completed schedule can produce `SAMPLING_COMPLETE_CONVERGENCE_NOT_CONFIRMED`. If the limited checks pass, the label is `SAMPLING_COMPLETE_DIAGNOSTICS_PASS_LIMITED`, not proven convergence. Quantiles always describe the obtained samples; their scientific reliability depends on diagnostics. Burn-in/startup traces are not presented as final posterior results.
 
 This remains the upstream oracle-foreground-subtraction baseline. It does not implement unknown Galactic foreground marginalization, diffusion training, RJ spectral reconstruction or all cases in the paper. Those remain separate subsequent work.
 

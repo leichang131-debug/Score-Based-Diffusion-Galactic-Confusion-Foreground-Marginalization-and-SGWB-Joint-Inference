@@ -21,7 +21,7 @@ For every upstream path `P`, the exact project path is `external/score-sde-repro
 | `compat_patch.py` | Wrapper root | Imported unchanged by every real original-network stage; extra Estimator-import bootstrap is separate |
 | `run_train.py` | Wrapper root | Original wrapper imported; training stages call its original `run_lib.train`; general CLI launcher retained |
 | `compute_cifar10_stats.py` | Wrapper root | Fully preserved; not executed; uses random-weight Inception, not standard pretrained metric features |
-| `plot_loss.py` | Wrapper root | Original `extract_losses` executed to audit all three local TensorBoard runs; final merged plotting/export remains pending |
+| `plot_loss.py` | Wrapper root | Original `extract_losses` executed to audit all three local TensorBoard runs; final merged plotting/export has since completed; see [final report](final-report.md) |
 | `score_sde/` | Complete nested submodule | All models, SDEs, losses, samplers, configurations, evaluation, likelihood and demo files preserved; selected VP/DDPM++ path executed |
 | `exp/vp_cifar10_ncsnpp/loss_history.npz` | Exact same relative path under wrapper | Teacher reference data: 4,281 training and 2,141 evaluation records; last logged training label 214000 |
 | `exp/vp_cifar10_ncsnpp/loss_curve.png` | Exact same relative path under wrapper | Teacher reference figure; not a project-generated result |

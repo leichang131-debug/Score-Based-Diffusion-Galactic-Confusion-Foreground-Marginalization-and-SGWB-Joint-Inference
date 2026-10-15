@@ -2,8 +2,8 @@
   "files": [
     {
       "path": "results/taiji-sgwb/review-20261015/README.md",
-      "sha256": "99379f406a1973c40770139a5ec40024766c43876ebc2d2c027b4078d2c7748b",
-      "bytes": 7540
+      "sha256": "850309619f7d8457c98dc6ac2d212920d83cf9e672498adb9526d123e884f844",
+      "bytes": 8069
     },
     {
       "path": "results/taiji-sgwb/review-20261015/manifest-verification.json",
@@ -27,8 +27,8 @@
     },
     {
       "path": "scripts/reproduction/analyze-taiji-sgwb-mini.py",
-      "sha256": "aa9bc38715cd85dedde3f01e632c11d321c3662d21c36178376c1015f35b4221",
-      "bytes": 11692
+      "sha256": "08a023166fa9d008a37523593e72ef93d3726a9706566355cee72d99f14f9666",
+      "bytes": 12281
     },
     {
       "path": "scripts/reproduction/analyze-taiji-sgwb-template-formal.py",

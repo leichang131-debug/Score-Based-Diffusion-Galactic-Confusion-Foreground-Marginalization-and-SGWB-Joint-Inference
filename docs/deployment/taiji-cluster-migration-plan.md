@@ -1,5 +1,7 @@
 # Taiji laboratory cluster migration and execution plan
 
+For all current deployment decisions and remaining work, use [status and cluster handoff](../reproduction/taiji-sgwb/status-and-cluster-handoff.md). The burn-108 commands, budgets and continuation plan below are preserved historical planning, not instructions to resume the completed run.
+
 **Historical planning document from the burn-108 pause.** The local formal schedule was later resumed and completed on 2026-10-15; see [current results](../../results/taiji-sgwb/template-formal/README.md). The preserved burn-108 migration example and resource planning below remain historical, not current progress.
 
 Status: planning and local preparation only. No cluster hostname, scheduler, account, partition or hardware inventory has been confirmed; no cluster login, environment installation or job submission has been performed. The local formal chain was deliberately stopped at a complete checkpoint after **108 burn-in transitions**, with zero production samples. Its state was restored into a newly constructed sampler without advancing it; **19/19 checks passed**. This is the same-platform restore result, not a claim that Linux migration is already validated.

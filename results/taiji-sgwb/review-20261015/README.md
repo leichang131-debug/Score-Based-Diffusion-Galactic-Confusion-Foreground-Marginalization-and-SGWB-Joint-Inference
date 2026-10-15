@@ -58,3 +58,7 @@ The historical mini analyzer still records `full_formal_run_still_paused` by rea
 - `source-audit.json`: current fixed-source identity check.
 
 All temporary images remain under ignored `runs/taiji-sgwb/review-20261015/`. This review does not advance sampling.
+
+## Subsequent maintenance
+
+The historical mini status-guard limitation identified above was subsequently fixed during the repository-wide documentation/evidence review. The original mini analyzer was archived; the updated analyzer checks actual before/after formal-artifact identities. All four mini figures and numerical summaries were reproduced without changing canonical results or sampling. See `results/repository-maintenance-20261015/` for the newer check. The earlier finding and its original evidence remain preserved.

@@ -48,6 +48,6 @@ environments/triangle-gb/.venv/bin/python scripts/reproduction/check-triangle-gb
 
 The downloader reuses only verified complete files, writes new downloads to `.part`, and renames after size/MD5 checks. Re-running with existing files reports verification/reuse timing rather than the first download time. The checker intentionally exits 2 for the current coverage gap; inspect the structured report rather than relabeling it as a passing scientific test.
 
-Curated evidence is in `results/triangle-gb/data/`; source preservation is separately audited by `audit-triangle-gb-source.py`. Local absolute paths are namespace adapters only. The bulk data are not in GitHub, but scripts, metadata, checksums and actual checks are reproducible from the public links. No Example 3 data or network Fisher package was downloaded.
+Curated evidence is in `results/triangle-gb/data/`; source preservation is separately audited by `audit-triangle-gb-source.py`. Local absolute paths are namespace adapters only. The bulk data are not in GitHub, but scripts, metadata, checksums and actual checks are reproducible from the public links. No Example 3 data or network Fisher package was downloaded during this input milestone; both prerequisites were completed later as linked below.
 
 Subsequent Sangria and Fisher prerequisites are completed in [the prerequisite report](prerequisites-completion.md). The VGB orbit issue recorded here remains unchanged.

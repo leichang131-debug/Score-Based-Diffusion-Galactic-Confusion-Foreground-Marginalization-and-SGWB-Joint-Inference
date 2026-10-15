@@ -7,13 +7,13 @@
     },
     {
       "path": "docs/reproduction/taiji-sgwb/template-mini.md",
-      "bytes": 12401,
-      "sha256": "8eafcd092e7756a9f24f324446a7b359b63ccf9b3fa294e4cae3ac28b5a4e101"
+      "bytes": 13472,
+      "sha256": "3e74e2d36f2af49bcae8c85608b55f6d58aff6c2700d62b4c580d5b64cd105c1"
     },
     {
       "path": "results/taiji-sgwb/template-mini/README.md",
-      "bytes": 1072,
-      "sha256": "2099c2f6885ec8b66767aab5b671e89561ca8d9decf6fc9d98459163f0325c1c"
+      "bytes": 1992,
+      "sha256": "de13f50ab8c4f4e0d0f2cfb24beda0ecf49738d7481ff8f150cb390db06c6a14"
     },
     {
       "path": "results/taiji-sgwb/template-mini/analysis-execution.txt",
@@ -24,6 +24,11 @@
       "path": "results/taiji-sgwb/template-mini/analysis.json",
       "bytes": 16961,
       "sha256": "1d1083c7a610d40ca79f7faccc0155c695fb64c862bc44cde2811e224d70a357"
+    },
+    {
+      "path": "results/taiji-sgwb/template-mini/attempts/before-lifecycle-guard-update/analyzer.py",
+      "bytes": 11692,
+      "sha256": "aa9bc38715cd85dedde3f01e632c11d321c3662d21c36178376c1015f35b4221"
     },
     {
       "path": "results/taiji-sgwb/template-mini/attempts/initial-plot-layout/sgwb-sample-distribution.png",
@@ -242,8 +247,8 @@
     },
     {
       "path": "scripts/reproduction/analyze-taiji-sgwb-mini.py",
-      "bytes": 11692,
-      "sha256": "aa9bc38715cd85dedde3f01e632c11d321c3662d21c36178376c1015f35b4221"
+      "bytes": 12281,
+      "sha256": "08a023166fa9d008a37523593e72ef93d3726a9706566355cee72d99f14f9666"
     },
     {
       "path": "scripts/reproduction/audit-taiji-sgwb-mini.py",

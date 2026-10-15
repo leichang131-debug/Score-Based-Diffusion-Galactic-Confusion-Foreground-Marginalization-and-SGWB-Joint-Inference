@@ -1,5 +1,9 @@
-# Triangle-GB evidence
+# Triangle-GB reproduction evidence
 
-Only source-integration evidence is available now, under `source/`. No waveform, search, reconstruction or posterior result is claimed.
+Updated: 2026-10-15. All five upstream example notebooks have completed fresh local execution with original source, Markdown, filenames and defaults.
 
-Future per-example evidence must include configuration, data and source hashes, environment versions, cleared-and-executed notebook outputs, numerical diagnostics, logs, timings and resource measurements. Original reference images must be identified separately. Keep bulk data and chains outside Git.
+- `source/`, `environment/`, `data/`, `sangria/`, `fisher/`, `prerequisites/`: source pins, installed dependencies, official checksums, input validation and Fisher interfaces. These folders record preparation stages.
+- `example-0/`, `example-1/`, `example-2/`, `example-3/`, `network/`: actual local execution, original-named notebooks, figures, diagnostics, commands, logs, timings and artifact manifests.
+- `core-validation/`: 22/28 checks passed; six original interface/precision failures retained. Successful notebook execution does not establish package-wide acceptance or posterior calibration.
+
+The original VGB strict orbit-coverage gap and sampler/angle-degeneracy limitations remain documented. Original reference images are separate from local outputs. Bulk inputs/caches remain ignored. See [current reports](../../docs/reproduction/triangle-gb/README.md).

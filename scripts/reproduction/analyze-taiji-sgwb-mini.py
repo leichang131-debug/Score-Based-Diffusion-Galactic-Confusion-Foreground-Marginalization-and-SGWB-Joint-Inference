@@ -25,6 +25,15 @@ def iat_from_acf(a):
 
 
 def main():
+    # Guard the full-data artifacts themselves, independent of whether the
+    # separate formal run is paused or has subsequently completed.
+    formal_root=ROOT/'results/taiji-sgwb/template-formal'
+    assert (formal_root/'status.json').is_file()
+    candidates=['status.json','template_AET_nofg.h5','final-state.json','final-state.npz',
+                'pause-checkpoint/state.json','pause-checkpoint/state.npz',
+                'pause-checkpoint/template_AET_nofg.h5']
+    formal_files=[formal_root/n for n in candidates if (formal_root/n).is_file()]
+    formal_before={str(p.relative_to(ROOT)):sha(p) for p in formal_files}
     cfg=json.loads(CFG.read_text());progress=json.loads((WORK/'progress.json').read_text());assert progress['status']=='SAMPLING_COMPLETE'
     backend=HDFBackend(WORK/'template_AET_nofg.h5',read_only=True);N=int(backend.iteration);W=cfg['nwalkers']
     assert N==cfg['production_steps'] and progress['burn_done']==cfg['burn']
@@ -65,7 +74,7 @@ def main():
     numerical_checks['configured_schedule_complete']=N==1000 and progress['burn_done']==300
     passed=all(d['limited_diagnostic_flags_pass'] for d in diagnostics)
     sm=json.loads((ROOT/'results/taiji-sgwb/source/manifest.json').read_text());numerical_checks['all_original_19_files_unchanged']=all(sha(ROOT/x['repository_path'])==x['sha256'] for x in sm['files'])
-    numerical_checks['full_formal_run_still_paused']=json.loads((ROOT/'results/taiji-sgwb/template-formal/status.json').read_text())['status']=='PAUSED_BY_USER'
+    numerical_checks['full_formal_artifacts_unchanged_by_analysis']=all(sha(ROOT/p)==h for p,h in formal_before.items())
     result={'status':'SUBSET_WORKFLOW_COMPLETE_DIAGNOSTICS_LIMITED_PASS' if passed else 'SUBSET_WORKFLOW_COMPLETE_CONVERGENCE_NOT_CONFIRMED','scope':cfg['scope'],'subset_posterior_target':'p(theta | selected 8 weeks and 512 original frequency bins), original priors and original weighted likelihood. Not p(theta | full original data).','numerical_checks':{k:bool(v) for k,v in numerical_checks.items()},'all_numerical_checks_pass':bool(all(numerical_checks.values())),'posterior':rows,'diagnostics':diagnostics,'recomputed_saved_states':recomputed,'sampling':{'burn':cfg['burn'],'stored_production':N,'thin_by':1,'cold_draws':len(flat),'ntemps':6,'nwalkers':W,'mean_production_acceptance_by_temperature':fractions.mean(axis=1).tolist(),'swaps_accepted':backend.swaps_accepted.tolist()},'R_hat':'Not computed for interacting walkers in a single ensemble. Independent initialized ensembles are required.','interpretation':'Quantiles and bands describe this finite selected-data sample. Failed length/mixing/drift checks prohibit claiming a reliable converged posterior; no extension beyond the approved small experiment.','MCSE_note':'Ensemble-mean MCSE/ESS are heuristic. Standard walker-averaged ACF/IAT is also reported; number of stored draws is not the number of independent draws.'}
     write_json(OUT/'analysis.json',result)
     np.savez_compressed(OUT/'posterior-cold-chain.npz',cold_chain=cold,truth=injected,labels=np.array(labels),log_like_cold=backend.get_log_like()[:,0,:],betas=backend.get_betas(),walker_averaged_acf=np.array(acf_summary),acceptance_fraction=fractions)

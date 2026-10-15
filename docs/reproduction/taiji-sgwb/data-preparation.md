@@ -102,4 +102,4 @@ Download is resumable and verifies original byte counts/MD5. Existing accepted f
 
 Raw HDF5 inputs, range chunks and runtime links are ignored by Git. Scripts, path configuration, official metadata, compact previews/grids, full-scan diagnostics and execution logs are tracked under `results/taiji-sgwb/data/`. Clone users obtain the original filenames by rerunning the downloader.
 
-This stage prepares 2.8, shared by the two published TaijiSGWB demos. The 2.8_EQ, 2.9 and 2.9_EQ datasets are not downloaded or validated in this stage. Full STFT/CSD preprocessing, response caching/memory adaptation and SGWB posterior inference remain subsequent work.
+This stage prepares 2.8, shared by the two published TaijiSGWB demos. The 2.8_EQ, 2.9 and 2.9_EQ datasets are not downloaded or validated in this stage. Subsequent stages have completed full STFT/CSD preprocessing, response caching and the original 2.8 template schedule. Convergence is unconfirmed and EQ/RJ sampling remain incomplete; see [current status](status-and-cluster-handoff.md).

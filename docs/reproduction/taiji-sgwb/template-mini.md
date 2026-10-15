@@ -21,7 +21,7 @@ Original preprocessing and full response calculations from earlier stages remain
 | Bin/window weights | nperbin=6 and original Kaiser ENBW | Unchanged; no full-year rescaling or extra frequency weights |
 | Temperatures / walkers | 6 / 62 | 6 / 32 |
 | Default move | StretchMove(a=2), adaptive ladder | Unchanged; 32 walkers actually passed initialization/proposal execution |
-| Parallel worker processes | 62 upstream, 4 paused-local formal | One fork worker, numerical library threads=1 |
+| Parallel worker processes | 62 upstream, 4 full-data formal | One fork worker, numerical library threads=1 |
 | Burn-in | 1000 | 300, unrecorded in production HDF |
 | Saved production | 350, thin_by=12 | 1000, thin_by=1 |
 | Seed | Upstream unspecified | 2026101310, fresh original uniform-prior draws |
@@ -30,7 +30,7 @@ The selected likelihood is precisely the original formula on selected cached inp
 
 ## The five actual execution steps
 
-1. **Prepare a separate experiment.** Read the verified full caches, select original indices and produce ignored `data/processed/taiji-sgwb/template-mini/selected-inputs.h5` (8278080 bytes). Selected input indexes/axes/order/full-source hashes and array hashes are archived. Original formal state remains paused at burn-in 108.
+1. **Prepare a separate experiment.** Read the verified full caches, select original indices and produce ignored `data/processed/taiji-sgwb/template-mini/selected-inputs.h5` (8278080 bytes). Selected input indexes/axes/order/full-source hashes and array hashes are archived. The formal state was paused at burn-in 108 during this mini experiment; it subsequently completed on 2026-10-15.
 2. **Validate the selected likelihood.** Six actual prior/truth parameter probes compare the original function from the full-loader namespace with the exact original function from the mini-loader namespace, independent einsum model assembly and scaled Cholesky trace/logdet. Shapes, finiteness, Hermitian/positive covariances, original source hashes and selection readback pass 31/31. No prior restriction, true-noise fixing, covariance diagonalization or source likelihood rewrite was introduced.
 3. **Measure 20 actual warmup transitions.** Stable median excluding the first five was **0.21199 s/update**. Measured budget gate estimated remaining sampling at about 271 s, well below the 2700 s cap. These transitions count toward the 300 mini burn updates; they are not discarded/repeated for timing.
 4. **Complete the bounded short chain with a restart.** Continue burn to 300, save 500 production samples, cleanly exit the process, then reconstruct a new sampler from the paired checkpoint and append another 500. The selected dataset requires a fresh chain; the full-data burn108 checkpoint was not reused or overwritten.
@@ -46,7 +46,7 @@ The selected likelihood is precisely the original formula on selected cached inp
 
 Successful phase wall times sum to **276.708 s**, about **4.61 min**. Preparation and analysis/rendering are separate. The run stayed well within the 45-minute hard cap. Later transitions remained around 0.2 s despite varied valid-proposal call counts.
 
-Largest sampled parent RSS was **292.1 MiB**; parent-plus-descendant RSS sum peaked at **308.5 MiB**. The sum double-counts fork-shared pages and is not physical RAM consumption. Samples were approximately once per second and can miss short peaks. Only one process computes likelihoods; the parent manages the chain/HDF. There is no sustained four-worker formal run left running.
+Largest sampled parent RSS was **292.1 MiB**; parent-plus-descendant RSS sum peaked at **308.5 MiB**. The sum double-counts fork-shared pages and is not physical RAM consumption. Samples were approximately once per second and can miss short peaks. Only one process computes likelihoods; the parent manages the chain/HDF. The formal run was paused during this mini experiment; its later completion is recorded separately in [current status](status-and-cluster-handoff.md).
 
 ## Recovery and numerical evidence
 
@@ -94,8 +94,12 @@ bash scripts/reproduction/run-taiji-sgwb-python.sh scripts/reproduction/analyze-
 bash scripts/reproduction/run-taiji-sgwb-python.sh scripts/reproduction/audit-taiji-sgwb-mini.py
 ```
 
-No full-data long-chain restart or extra diagnostic-driven chain extension was performed. The user-prioritized end-to-end workflow is complete; rigorous posterior convergence/full paper reproduction remains separate work.
+No full-data long-chain restart or extra diagnostic-driven extension was performed as part of this mini experiment. A later, separately authorized full-data continuation completed the original template schedule. The user-prioritized end-to-end workflow is complete; rigorous posterior convergence/full paper reproduction remains separate work.
 
 ## Paper hardware statement
 
 The paper states that its analysis pipeline requires approximately **O(10) hours using 64 AMD EPYC cores**, while its RJ analysis needs about **50 hours**. O(10) here describes elapsed-time order with an explicit hours unit, not an algorithmic complexity in data size. These paper timings are not benchmarks of this selected-data run. [Jiang and Huang, Section IV](https://arxiv.org/html/2601.00169v2).
+
+## Analysis-only maintenance (2026-10-15)
+
+The historical mini analysis recorded that the separate formal run was paused at that time. The formal run later completed. The current analyzer now checks before/after identity of the existing formal status, final artifacts and saved pause checkpoint instead of requiring a permanently paused live status. Its pre-update source is archived under `results/taiji-sgwb/template-mini/attempts/before-lifecycle-guard-update/analyzer.py`. Canonical mini samples, analysis JSON, figures and execution logs remain historical and unchanged. A redirected analysis-only check passes all 11 numerical checks and reproduces all four PNGs and posterior/diagnostic values exactly; the new evidence is in `results/repository-maintenance-20261015/`. No MCMC was launched.

@@ -1,8 +1,8 @@
 [
   {
     "path": "docs/reproduction/triangle-gb/example-0.md",
-    "bytes": 5441,
-    "sha256": "c560da80432ff22c8320ffe68ea701467f224d140c468cb7f45d2ed457b6aebf"
+    "bytes": 5523,
+    "sha256": "86f96fa89d6ba3869736541819fe7d30919c973ebd88107b9df2d43af42a1ea1"
   },
   {
     "path": "environments/triangle-gb/requirements-macos-arm64-py311.txt",

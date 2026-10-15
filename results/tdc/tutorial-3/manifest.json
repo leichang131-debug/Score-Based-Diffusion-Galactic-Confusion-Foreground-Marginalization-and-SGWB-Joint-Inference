@@ -1,8 +1,8 @@
 [
   {
     "path": "docs/reproduction/tdc/tutorial-3.md",
-    "bytes": 10268,
-    "sha256": "b89284494a0ba8bb039087467fb50a1c9941c2fe15d0462cc2b468f58dcc1d9e"
+    "bytes": 10244,
+    "sha256": "7468c4bdfe031d503fd37ce4d8f2adf8bde76f2ea46b34e1b6323d895d8edeca"
   },
   {
     "path": "environments/tdc/installed-macos-arm64.json",

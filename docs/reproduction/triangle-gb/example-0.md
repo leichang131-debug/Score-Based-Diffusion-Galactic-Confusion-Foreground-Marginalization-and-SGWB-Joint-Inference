@@ -42,4 +42,4 @@ environments/triangle-gb/.venv/bin/python scripts/reproduction/run-triangle-gb-e
 environments/triangle-gb/.venv/bin/python scripts/reproduction/audit-triangle-gb-example-0.py
 ```
 
-Local Jupyter kernel startup requires loopback socket permission. The runner clears original code outputs before execution and records diagnostics outside the retained notebook cells. Later examples remain separate pending reproduction stages.
+Local Jupyter kernel startup requires loopback socket permission. The runner clears original code outputs before execution and records diagnostics outside the retained notebook cells. The other four examples have since completed as separate runs; see [current reports](README.md), including the six later core-check failures.

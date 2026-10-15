@@ -8,13 +8,13 @@
     },
     {
       "path": "docs/reproduction/taiji-sgwb/response.md",
-      "bytes": 10392,
-      "sha256": "51af8b9e6a70f6b68c640e321fdf3668b609f1c2193ec0c91f8933e4ac2cb86c"
+      "bytes": 10537,
+      "sha256": "f459b6f2e774bb994c81f7991d951ef93321c5a238744691df9fd375f9d01ed2"
     },
     {
       "path": "results/taiji-sgwb/response/README.md",
-      "bytes": 1441,
-      "sha256": "3b0afaf18d57e910864f781acbe64fc9bcf76c60b5f80fa2718a6209069fc0c9"
+      "bytes": 1599,
+      "sha256": "c60657201bdcf8402552393d4c31a2fdfad755d425159bb66b580e0b04339a8f"
     },
     {
       "path": "results/taiji-sgwb/response/attempts/initial-boundary-check/execution.txt",

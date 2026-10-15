@@ -1,5 +1,7 @@
 # TaijiSGWB source-only evidence
 
+Current storage: directly tracked fixed source snapshot under `external/taiji-sgwb/`, with [lock metadata](../../../configs/upstream/taiji-sgwb.json). The current audit passes 16 offline / 18 online checks. Earlier submodule-only evidence remains archived under `submodule-before-conversion/`; it is historical.
+
 Pinned upstream commit: `4afaad4044b08721e7f1ce29cba3b0d912636dce`.
 
 - `file-list.txt`: exact original paths for all 19 files.

@@ -30,7 +30,7 @@ All six `Examples/LDCEqualArmOrbit/*.dat` files are retained. The pinned Triangl
 ## Prepared project-owned directories
 
 - `environments/triangle-gb/`: future isolated environment and dependency locks.
-- `notebooks/reproduction/triangle-gb/Examples/`: future same-name executed notebooks; currently README only.
+- `notebooks/reproduction/triangle-gb/Examples/`: all five same-name notebooks now have fresh local outputs, with unchanged source and Markdown.
 - `scripts/reproduction/audit-triangle-gb-source.py`: source-only audit, not a scientific runner.
 - `results/triangle-gb/source/`: source audit and complete file manifest.
 - `docs/reproduction/triangle-gb/`: stage reports and scope.
@@ -47,6 +47,6 @@ python3 scripts/reproduction/audit-triangle-gb-source.py
 
 The script compares every working-tree file with the pinned Git blob, verifies clean source, checks the five original notebooks and required core classes, and hashes all tracked files. It parses Python/JSON as data without importing or executing upstream code. This establishes complete source preservation, not waveform accuracy or posterior convergence.
 
-The original notebooks contain sibling `Triangle-Simulator` relative paths and author-specific data paths. Resolve and document these interfaces before execution; do not imply the README-only execution directories are runnable notebooks. Example 1/2 download links are present in their first Markdown cells; see [data provenance](../../../data/triangle-gb/README.md).
+The original notebooks contain sibling `Triangle-Simulator` relative paths and author-specific data paths. These interfaces were subsequently resolved by external path adapters and all five notebooks executed; see [current reports](README.md). The historical source-only audit itself does not execute notebooks. Example 1/2 download links are present in their first Markdown cells; see [data provenance](../../../data/triangle-gb/README.md).
 
 The subsequent independent environment milestone is recorded in [environment setup](environment-setup.md); statements above describe the source-only milestone.

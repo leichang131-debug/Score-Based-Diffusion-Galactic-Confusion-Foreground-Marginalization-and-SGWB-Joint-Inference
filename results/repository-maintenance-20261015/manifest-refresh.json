@@ -1,0 +1,222 @@
+{
+  "scope": "Current-file inventory changes relative to the pre-maintenance commit; no historical scientific outcomes or upstream source/data/samples were rewritten.",
+  "entries": [
+    {
+      "manifest": "results/taiji-sgwb/data/manifest.json",
+      "path": "docs/reproduction/taiji-sgwb/data-preparation.md",
+      "previous_sha256": "ca6afc2771ba245d57c35f5eccf44a277fd447622181343861b50b76b10836db",
+      "current_sha256": "588ffc9a7579e55b956079e332f853fbde7a7a595aa30cf20d898bced038d529",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/data/manifest.json",
+      "path": "results/taiji-sgwb/data/README.md",
+      "previous_sha256": "cf35abef3d552e6c9549fc931f9636d072bd25720a19ff7c854ff92ede45a0ae",
+      "current_sha256": "55434c9984513fcb600a315965f72036169c5f7b18f466eb58044d8685afbe9d",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/environment/manifest.json",
+      "path": "docs/reproduction/taiji-sgwb/environment-setup.md",
+      "previous_sha256": "8ce84164ac7ed588b5ba9769e77639140d1cce8f1e85af9a9706017bd5086740",
+      "current_sha256": "cd9ade96a80d353c0296a0fd37e018451f16287d0889ffaf414efa70385c94bd",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/environment/manifest.json",
+      "path": "environments/taiji-sgwb/README.md",
+      "previous_sha256": "392eda7a4541540b21cdd0f313cd7cb384c79b0cb0e859e98cb9059b9f74a45c",
+      "current_sha256": "aa9b3895fbec02f9f9249710fd2894a65287c43feeba2854d6994a751a0d8f50",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/likelihood/manifest.json",
+      "path": "docs/reproduction/taiji-sgwb/likelihood.md",
+      "previous_sha256": "019cc12c545b11e5090c06b09a1778ccd7ca1f0334234912552c14b55eec9ab7",
+      "current_sha256": "547926ad42a43f8aebfc1c633c336e60de6057d25e1ee25a47409bf0d9c1f2b4",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/preprocessing/manifest.json",
+      "path": "docs/reproduction/taiji-sgwb/preprocessing.md",
+      "previous_sha256": "f8c3050629988c5f143cea716643487cc4b73c80cfaae6b55e7bd1f6a93b0c94",
+      "current_sha256": "7431ed20b1fa903d6e3e25c063458bf20181fef2c795bf53b00513cbb32ddbd7",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/response/manifest.json",
+      "path": "docs/reproduction/taiji-sgwb/response.md",
+      "previous_sha256": "51af8b9e6a70f6b68c640e321fdf3668b609f1c2193ec0c91f8933e4ac2cb86c",
+      "current_sha256": "f459b6f2e774bb994c81f7991d951ef93321c5a238744691df9fd375f9d01ed2",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/response/manifest.json",
+      "path": "results/taiji-sgwb/response/README.md",
+      "previous_sha256": "3b0afaf18d57e910864f781acbe64fc9bcf76c60b5f80fa2718a6209069fc0c9",
+      "current_sha256": "c60657201bdcf8402552393d4c31a2fdfad755d425159bb66b580e0b04339a8f",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/review-20261015/manifest.json",
+      "path": "results/taiji-sgwb/review-20261015/README.md",
+      "previous_sha256": "99379f406a1973c40770139a5ec40024766c43876ebc2d2c027b4078d2c7748b",
+      "current_sha256": "850309619f7d8457c98dc6ac2d212920d83cf9e672498adb9526d123e884f844",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/review-20261015/manifest.json",
+      "path": "scripts/reproduction/analyze-taiji-sgwb-mini.py",
+      "previous_sha256": "aa9bc38715cd85dedde3f01e632c11d321c3662d21c36178376c1015f35b4221",
+      "current_sha256": "08a023166fa9d008a37523593e72ef93d3726a9706566355cee72d99f14f9666",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/template-formal/manifest.json",
+      "path": "docs/deployment/taiji-cluster-migration-plan.md",
+      "previous_sha256": "90ef2b2d4c57dc019b88ac9b40d35d0680d4a8363c3961c36e455e1e62e6c3e5",
+      "current_sha256": "0495b0450aca59aafe54ac9ea28e6b00b7b840c4a1af3a1dc5bd2d4d55b4afed",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/template-formal/manifest.json",
+      "path": "docs/reproduction/taiji-sgwb/template-formal.md",
+      "previous_sha256": "ec93c21aa996f6fc607459bcaa994e71a485a3e186c753d1f7cd88c67d490906",
+      "current_sha256": "fe55faafe46f00ca5d5b11a831886ffc18bcee30a24c85de261169b99330eb98",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/template-mini/manifest.json",
+      "path": "docs/reproduction/taiji-sgwb/template-mini.md",
+      "previous_sha256": "8eafcd092e7756a9f24f324446a7b359b63ccf9b3fa294e4cae3ac28b5a4e101",
+      "current_sha256": "3e74e2d36f2af49bcae8c85608b55f6d58aff6c2700d62b4c580d5b64cd105c1",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/template-mini/manifest.json",
+      "path": "results/taiji-sgwb/template-mini/README.md",
+      "previous_sha256": "2099c2f6885ec8b66767aab5b671e89561ca8d9decf6fc9d98459163f0325c1c",
+      "current_sha256": "de13f50ab8c4f4e0d0f2cfb24beda0ecf49738d7481ff8f150cb390db06c6a14",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/template-mini/manifest.json",
+      "path": "results/taiji-sgwb/template-mini/attempts/before-lifecycle-guard-update/analyzer.py",
+      "previous_sha256": null,
+      "current_sha256": "aa9bc38715cd85dedde3f01e632c11d321c3662d21c36178376c1015f35b4221",
+      "reason": "New archived pre-fix analyzer"
+    },
+    {
+      "manifest": "results/taiji-sgwb/template-mini/manifest.json",
+      "path": "scripts/reproduction/analyze-taiji-sgwb-mini.py",
+      "previous_sha256": "aa9bc38715cd85dedde3f01e632c11d321c3662d21c36178376c1015f35b4221",
+      "current_sha256": "08a023166fa9d008a37523593e72ef93d3726a9706566355cee72d99f14f9666",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/taiji-sgwb/template-short-chain/manifest.json",
+      "path": "docs/reproduction/taiji-sgwb/template-short-chain.md",
+      "previous_sha256": "7cc79daf557c5ddf89afe07b6f651f75f7e93e4f78ebb07033fb8665af84b1de",
+      "current_sha256": "08c1e43ddf988b052b677dad2c4a601531fe4d59cfd21fab10fd970779b1cb7d",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/tdc/tutorial-1/manifest.json",
+      "path": "docs/reproduction/tdc/tutorial-1.md",
+      "previous_sha256": "027db56ca7ea3b074844fc961404c0462fecde74329760665ab8ed38b32839ea",
+      "current_sha256": "a627f01e3423f46bf392e44d4ca07d88b71ba7c8247d5c8b0858c3669f4582d6",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/tdc/tutorial-2/manifest.json",
+      "path": "docs/reproduction/tdc/tutorial-2.md",
+      "previous_sha256": "fb2c53da9b1e53ab8e7726ff2db4cbafec133aea8a5500d34c23c6f78d4521fc",
+      "current_sha256": "5ff4856a800fdf7627ffbc32fc2b832c76a2e2c01e63ec88072a3ce90ce11515",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/tdc/tutorial-3/manifest.json",
+      "path": "docs/reproduction/tdc/tutorial-3.md",
+      "previous_sha256": "b89284494a0ba8bb039087467fb50a1c9941c2fe15d0462cc2b468f58dcc1d9e",
+      "current_sha256": "7468c4bdfe031d503fd37ce4d8f2adf8bde76f2ea46b34e1b6323d895d8edeca",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/triangle-gb/data/manifest.json",
+      "path": "docs/reproduction/triangle-gb/data-preparation.md",
+      "previous_sha256": "81389fad85e0357781a1be4b11921d02bd070c2fd908cef22360683165f309a8",
+      "current_sha256": "8526752dd01ab00a8f3c6ba507e5301d1b82ef3ce6e0714902d02f3e0485d0a9",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/triangle-gb/environment/manifest.json",
+      "path": "docs/reproduction/triangle-gb/README.md",
+      "previous_sha256": "c7162a8d457ab59ae8f0fca0995704ce71d7fb069b964d9de8f975283ec696ec",
+      "current_sha256": "c9b70a3b80037f3b35773ae63e5f2e204c16fd17518799fa510acd167b2475e0",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/triangle-gb/environment/manifest.json",
+      "path": "docs/reproduction/triangle-gb/source-integration.md",
+      "previous_sha256": "ca1a2c57f47adc1e41b3a44863456f7be617e5ac2017d17aa4c85c399fc44290",
+      "current_sha256": "478ada1785f330096f550431d406f963af3e75772752d5de57ee8f00973378b6",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/triangle-gb/environment/manifest.json",
+      "path": "environments/triangle-gb/README.md",
+      "previous_sha256": "ba7de751895becd1e42111960e99e29fc3f4f3ef6bc958e2613deee107683c62",
+      "current_sha256": "4c2bfc940744d9cd1d75b3af733038065d8b55fa6a2fea27aedbfa9d80322bd3",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/triangle-gb/example-0/manifest.json",
+      "path": "docs/reproduction/triangle-gb/example-0.md",
+      "previous_sha256": "c560da80432ff22c8320ffe68ea701467f224d140c468cb7f45d2ed457b6aebf",
+      "current_sha256": "86f96fa89d6ba3869736541819fe7d30919c973ebd88107b9df2d43af42a1ea1",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/triangle-gb/prerequisites/manifest.json",
+      "path": "docs/reproduction/triangle-gb/README.md",
+      "previous_sha256": "c7162a8d457ab59ae8f0fca0995704ce71d7fb069b964d9de8f975283ec696ec",
+      "current_sha256": "c9b70a3b80037f3b35773ae63e5f2e204c16fd17518799fa510acd167b2475e0",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/triangle-gb/prerequisites/manifest.json",
+      "path": "docs/reproduction/triangle-gb/data-preparation.md",
+      "previous_sha256": "81389fad85e0357781a1be4b11921d02bd070c2fd908cef22360683165f309a8",
+      "current_sha256": "8526752dd01ab00a8f3c6ba507e5301d1b82ef3ce6e0714902d02f3e0485d0a9",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/triangle-gb/prerequisites/manifest.json",
+      "path": "docs/reproduction/triangle-gb/prerequisites-completion.md",
+      "previous_sha256": "0f19efa6475ea6131846205c2fd20c9102e5e3c7f54f4d3ea6cff227f7e1a724",
+      "current_sha256": "83afd3056bf301fa25c4db992eaffb81deab9a5d88890b64dad2fcf4f08a66c6",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/triangle-gb/prerequisites/manifest.json",
+      "path": "docs/reproduction/triangle-gb/source-integration.md",
+      "previous_sha256": "ca1a2c57f47adc1e41b3a44863456f7be617e5ac2017d17aa4c85c399fc44290",
+      "current_sha256": "478ada1785f330096f550431d406f963af3e75772752d5de57ee8f00973378b6",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/triangle-gb/prerequisites/manifest.json",
+      "path": "environments/triangle-gb/README.md",
+      "previous_sha256": "ba7de751895becd1e42111960e99e29fc3f4f3ef6bc958e2613deee107683c62",
+      "current_sha256": "4c2bfc940744d9cd1d75b3af733038065d8b55fa6a2fea27aedbfa9d80322bd3",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    },
+    {
+      "manifest": "results/triangle-gb/prerequisites/manifest.json",
+      "path": "results/triangle-gb/prerequisites/README.md",
+      "previous_sha256": "270e5deb9970a61b82a92b5dfff0df186373c452cebce5602acc3d2083dad7f2",
+      "current_sha256": "bb646d668ac058b8edfad50ab5ddc070db7271bde30aeda66b72eeb71b66a4c4",
+      "reason": "Updated project documentation, lifecycle analyzer or dependent current-file inventory"
+    }
+  ]
+}
