@@ -262,7 +262,7 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/postprocessing-readiness.json",
-      "sha256": "91126e1d26369c95bf0a3686a3008aec0b02bb18716e7579228140f93e1b21e2",
+      "sha256": "42c7a2bd1afce0cf30022826f8401ebfcfa7ab840d2f0b25488d2548549f2476",
       "bytes": 2534
     },
     {
@@ -317,8 +317,8 @@
     },
     {
       "path": "results/taiji-sgwb/template-formal/sampling-diagnostics.csv",
-      "sha256": "d8d3e7ec748b34c89c960b2bb6805655d9fa2f2469008c027bcd57660adfda83",
-      "bytes": 1343
+      "sha256": "6fb379f2c3737a5e9b6a19d7ce3600759e86206cdca626cbba17bf3cc5b4aee9",
+      "bytes": 1328
     },
     {
       "path": "results/taiji-sgwb/template-formal/sessions/20261013T140454Z/launch.json",
@@ -527,8 +527,8 @@
     },
     {
       "path": "scripts/reproduction/analyze-taiji-sgwb-template-formal.py",
-      "sha256": "58d24de10f44729283584cd78912e80e16749f422ffec26f081b8218ae204ada",
-      "bytes": 14034
+      "sha256": "c7fadc295f8e8f541f9c5b1fc6662d2e0c442c40a66b106792a1786c7ded9ccc",
+      "bytes": 14562
     },
     {
       "path": "scripts/reproduction/audit-taiji-sgwb-template-formal.py",

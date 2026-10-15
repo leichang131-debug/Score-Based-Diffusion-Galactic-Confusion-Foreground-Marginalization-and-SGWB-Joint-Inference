@@ -49,6 +49,9 @@ def main():
         diagnostics.append({'parameter':label,'ensemble_mean_iat_saved_units':iat,'heuristic_mean_MCSE':mcse,'heuristic_mean_ESS':ess,'half_chain_mean_shift_over_posterior_sd':shift,'adequate':bool(iat['adequate_length'] and ess is not None and ess>=500 and shift is not None and shift<.25)})
     with (OUT/'posterior-parameters.csv').open('w') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n');w.writeheader();w.writerows(rows)
+    diagnostic_rows=[{'parameter':d['parameter'],'tau_saved_steps':d['ensemble_mean_iat_saved_units']['tau'],'length_over_tau':d['ensemble_mean_iat_saved_units']['length_over_tau'],'heuristic_mean_ESS':d['heuristic_mean_ESS'],'half_chain_shift_sd':d['half_chain_mean_shift_over_posterior_sd'],'adequate':d['adequate']} for d in diagnostics]
+    with (OUT/'sampling-diagnostics.csv').open('w') as f:
+        w=csv.DictWriter(f,fieldnames=list(diagnostic_rows[0]),lineterminator='\n');w.writeheader();w.writerows(diagnostic_rows)
     ns,_=load_original_likelihood('template_nofg_28t.py');checks={};recomputed=[]
     for step,temp,walker in [(0,0,0),(174,0,31),(349,0,0),(349,5,61)]:
         params=[chain[k][step,temp,walker,0,:] for k in ['acc','ro','sgwb']]
