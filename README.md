@@ -4,7 +4,7 @@ Research workspace for probabilistic marginalization of the Galactic confusion f
 
 TaijiSGWB: the full-data 2.8 template schedule completed 5200 transitions, with six saved figures and convergence still unconfirmed. The complete original source is directly tracked under `external/taiji-sgwb/`. EQ-template and RJMCMC sampling remain for the cluster. See [current status](docs/reproduction/taiji-sgwb/status-and-cluster-handoff.md) and [source/figure verification](results/taiji-sgwb/review-20261015/README.md).
 
-**Status updated: 2026-10-15.** Original Score-SDE is preserved as pinned recursive Git submodules. The macOS CPU workflow passed data preparation, 200 original-network updates, typed optimizer/EMA continuation and four finite EMA sampling calls. Sample previews remain saturated noise; converged training, standard image metrics and reproduction of the teacher's 214k result are not established.
+**Status updated: 2026-10-20.** Original Score-SDE is preserved as pinned recursive Git submodules. The macOS CPU workflow passed data preparation, 200 original-network updates, typed optimizer/EMA continuation and four finite EMA sampling calls. Sample previews remain saturated noise; converged training, standard image metrics and reproduction of the teacher's 214k result are not established.
 
 Triangle-GB: five original examples executed locally. Subsequent [core CPU verification](docs/reproduction/triangle-gb/core-validation.md) passed 22 of 28 checks and retained six failures, including original time-output and frequency-band boundary defects. Package-wide numerical acceptance is not established.
 
@@ -20,14 +20,11 @@ Foreground marginalization accounts for possible foreground realizations; it doe
 
 ## Initial inference model
 
-The first controlled experiment fixes the SGWB spectral index and jointly estimates four power scales:
+The current Route B plan starts with an analytically solvable Gaussian control and a single additional foreground amplitude. It first fixes noise amplitudes and the SGWB spectral index for one- or two-dimensional conditional inference, then releases the index, shared noise scales, and finally twelve link-noise amplitudes for a fifteen-dimensional model. This supersedes the earlier four-scale starting proposal; no Route B implementation or experiment is complete yet.
 
-- Target SGWB amplitude.
-- Galactic foreground amplitude.
-- Acceleration-noise amplitude.
-- Optical-metrology-noise amplitude.
+Known orbit and processing states are conditioning variables. Unknown physical quantities belong in the inference model. Marginal inference requires integrating nuisance parameters; fixing them only gives a conditional posterior.
 
-Known orbit and processing states are conditioning variables. Unknown physical quantities belong in the inference model. Later experiments can release spectral and population parameters and incorporate source-subtraction errors.
+An A800 80 GB server is accessible through VS Code SSH and its resource snapshot has been checked. Project deployment, Linux environments, GPU-framework validation and background recovery remain planned. Shared host resources are not an exclusive allocation. Connection credentials and addresses are not published.
 
 ## Method and validation
 
@@ -106,6 +103,9 @@ Time modulation and nonstationarity do not automatically imply non-Gaussianity. 
 Score-SDE (including its nested original source), Triangle-Simulator, Triangle-GB and Triangle-BBH retain pinned submodules. TaijiSGWB is an unmodified 19-file fixed source snapshot at `4afaad4044b08721e7f1ce29cba3b0d912636dce`, included directly in ordinary clones; [its source lock](configs/upstream/taiji-sgwb.json) records the upstream tree and file hashes. See [source integration](external/README.md) and [the reproduction roadmap](docs/reproduction/README.md).
 
 ## Research plan
+
+- [Current Route B research and A800 implementation plan (PDF)](docs/research-plan/route-b-implementation-plan/route-b-research-and-server-implementation-plan.pdf).
+- [Route B source, provenance, build and verification](docs/research-plan/route-b-implementation-plan/README.md).
 
 - [Research framework and implementation plan (PDF)](docs/research-plan/research-framework-and-implementation-plan.pdf).
 - [Standalone LaTeX source](docs/research-plan/research-framework-and-implementation-plan.tex).

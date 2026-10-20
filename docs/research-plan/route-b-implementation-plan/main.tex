@@ -1,0 +1,460 @@
+\documentclass[UTF8,fontset=none,a4paper,11pt]{ctexart}
+\IfFontExistsTF{Songti SC}{\setCJKmainfont{Songti SC}\setCJKsansfont{Heiti SC}\setCJKmonofont{Songti SC}}{\setCJKmainfont{FandolSong-Regular}[BoldFont=FandolSong-Bold]\setCJKsansfont{FandolHei-Regular}[BoldFont=FandolHei-Bold]\setCJKmonofont{FandolFang-Regular}}
+\usepackage[margin=23mm,headheight=16pt]{geometry}
+\usepackage{amsmath,amssymb,bm,booktabs,tabularx,longtable,array,xcolor,graphicx,enumitem,fancyhdr,xurl,tikz,tcolorbox,listings,needspace}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\tcbuselibrary{breakable}
+\usepackage[unicode,hidelinks]{hyperref}\usepackage{bookmark}
+\definecolor{navy}{HTML}{183A53}\definecolor{teal}{HTML}{176B74}\definecolor{light}{HTML}{F0F5F8}\definecolor{muted}{HTML}{526674}
+\hypersetup{pdftitle={路线B：得分匹配似然修正研究与A800服务器实施计划},pdfauthor={研究工作计划},pdfsubject={TaijiSGWB基线、前景边缘化、残差score与可验证推断}}
+\setlength{\parskip}{0.35em}\setlength{\emergencystretch}{4em}\renewcommand{\arraystretch}{1.17}
+\setlist{nosep,leftmargin=2em,topsep=0.3em}\clubpenalty=10000\widowpenalty=10000
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small 路线 B：研究计划与服务器实施}\fancyhead[R]{\small 2026-10-20}\fancyfoot[C]{\small\thepage}
+\ctexset{section={format=\Large\bfseries\color{navy}},subsection={format=\large\bfseries\color{teal}}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\code}[1]{\texttt{\nolinkurl{#1}}}
+\newcommand{\Tr}{\operatorname{Tr}}\newcommand{\dd}{\mathrm{d}}
+\newtcolorbox{keybox}[1][执行要点]{breakable,colback=light,colframe=teal,boxrule=0.4pt,arc=1mm,title=#1,fonttitle=\bfseries,colbacktitle=teal,coltitle=white}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,backgroundcolor=\color{light}}
+\begin{document}
+\begin{titlepage}
+\vspace*{10mm}
+{\Huge\bfseries\color{navy}路线 B\par}
+\vspace{5mm}{\LARGE\bfseries 得分匹配似然修正研究\par 与 A800 服务器实施计划\par}
+\vspace{7mm}{\large 基于得分扩散模型的银河混淆前景边缘化\par 与随机引力波背景联合推断\par}
+\vspace{8mm}
+\begin{keybox}[研究主线]
+保留姜洋基线中的物理响应、噪声与背景谱模型；加入未知前景的参考协方差；通过 score matching 学习目标模拟分布相对高斯参考密度的修正；验证修正能否改善 SGWB 后验与覆盖率。先完成低保真、单参数前景的小规模闭环，再逐级提高保真度。
+\end{keybox}
+\vspace{4mm}
+\par\noindent\begin{tabularx}{\linewidth}{p{28mm}Y}
+文档版本 & v1.0，2026年10月20日；用于实施、讨论与阶段验收。\\
+来源 & 王赫老师提供的三份教程、《关于路线B.pdf》、路线图与会议摘要；TaijiSGWB 固定源码、论文；现有复现证据与服务器检查。\\
+主仓库快照 & \code{13210dd95af32cdb376d4bcedebeb262334308eb}；本计划创建前，本地与远端 main 一致。\\
+基线源码 & \code{DrizzleatDusk/TaijiSGWB}：\code{4afaad4044b08721e7f1ce29cba3b0d912636dce}；2026-10-20查询上游 HEAD 相同。\\
+公开范围 & 公开 PDF、TeX、来源哈希与检查记录；连接地址、密码、访问令牌和私人会议图片不纳入发布。\\
+\end{tabularx}\par
+\vfill
+\begin{keybox}[事实与计划的边界]
+当前已建立本机复现与服务器 SSH 连接。路线 B 的模拟器、残差网络、ODE 密度和校准实验仍待实现；服务器项目环境与 GPU 框架尚未验收。本计划中的规模、阈值与日程是可调整的执行建议，不是已完成实验结果或性能承诺。
+\end{keybox}
+\end{titlepage}
+\setcounter{tocdepth}{1}\tableofcontents\clearpage
+
+\section{一页执行结论：下一步先完成什么}
+\subsection{第一轮要回答的三个问题}
+\begin{enumerate}
+\item 若参考分布本来正确，残差学习是否不会制造系统性修正？
+\item 若目标与参考存在可解析的失配，能否恢复正确的 score 与 $\log R$？
+\item 将学习修正接入推断后，是否得到接近精确答案的后验，而非仅有下降的训练损失？
+\end{enumerate}
+最小交付是一个含前景幅度 $a_{\rm fg}$ 的可解高斯实验，以及同一实验的条件残差 score、概率流 ODE 与低维后验对照。先用少量周、频带及16或32个相邻频箱组成小块，不把全年张量一次送入网络。
+\begin{center}
+\begin{tikzpicture}[node distance=4mm,b/.style={draw=teal,fill=light,rounded corners=1mm,text width=140mm,align=center,inner sep=2mm},a/.style={-{Stealth[length=2mm]},draw=teal}]
+\node[b](a){P0：服务器可复现部署、资源检查与后台恢复};
+\node[b,below=of a](b){P1：冻结数据表示、归一化、参数及独立模拟划分};
+\node[b,below=of b](c){P2：正确高斯负对照 + 已知窗相关正对照 + 精确后验};
+\node[b,below=of c](d){P3：直接／残差 score 训练，解析 score 与密度对照};
+\node[b,below=of d](e){P4：ODE 似然修正、低维推断、独立重复模拟};
+\node[b,below=of e](f){P5：加入时变前景包络；P6：受控非高斯与族群不确定性};
+\node[b,below=of f](g){P7：释放噪声参数、扩大频带和时间；保留盲测};
+\foreach \x/\y in {a/b,b/c,c/d,d/e,e/f,f/g}\draw[a](\x)--(\y);
+\end{tikzpicture}
+\end{center}
+\begin{keybox}[优先级]
+接收前景包络脚本、确认服务器配额、完成解析闭环优先。EQ／RJMCMC 全论文补充复现可以独立安排，不作为启动路线 B 的必经前置任务。CIFAR-10 的214k训练也不是路线 B 的前置验收要求。
+\end{keybox}
+\clearpage
+
+\section{资料如何转化为研究决策}
+\subsection{各份材料的作用与证据级别}
+\par\noindent\begin{tabularx}{\linewidth}{p{43mm}YY}\toprule
+材料 & 提供的信息 & 本计划中的处理\\\midrule
+\code{TaijiSGWB_analysis_notes.md} & 基线结构、接口、另一个环境的运行笔记 & 与本机固定源码及证据逐项对照\\
+\code{baseline_limitations_tutorial.md} & 六项局限、前景统计与窗相关诊断 & 作为待复核诊断，避免把局部指标当成全分布证明\\
+\code{ai_approaches_tutorial.md} & A/B/C/D路线、包络模块与资源地图 & 采用B为主线，A0作强物理参考，其他路线作备选\\
+《关于路线B.pdf》及架构图 & 残差score、DSM、白化与ODE密度 & 保留主线，补齐归一化、条件与联合密度定义\\
+会议摘要图 & 低保真、单幅度前景、先验证后升级 & 转化为P0--P4第一轮交付；不把期刊目标当验收指标\\
+当前主仓库 & 固定源码、可追踪复现、预留研究模块 & 复用适配接口，研究扩展写入自有模块\\\bottomrule
+\end{tabularx}\par
+\subsection{不能直接继承的结论}
+三份教程出现的\code{/home/main/}路径、32核／125 GB／A6000环境、\code{fg_envelope.py}、\code{withfg_profile_check.py}及日志，不能自动视为本机或新服务器已有。本次本地检索未找到这些配套脚本。包络1--2\%精度、固定噪声剖面偏差由约30倍降至4\%等，暂列为\textbf{老师材料报告、待取得实现与证据后复核}。
+
+单次固定噪声的网格结果不能替代噪声自由的联合后验；单数据真值落入区间不能替代重复模拟覆盖率；功率变异系数和相邻周相关不能证明完整联合高斯。截图提及的\code{diffusion_denoising/AGENT.md}原文目前未取得，不能宣称已执行其所有门槛。
+\subsection{六项局限的研究分工}
+前景真值相减：加入前景模型；非平稳与各向异性：先进入时变全通道协方差；窗相关与似然近似：路线B首个可解失配；噪声谱形：独立受控失配；计算：测量后优化。不同机制逐项开关，不让一次网络实验同时补偿所有误差。
+\clearpage
+
+\section{当前代码与复现状态：可以复用到哪一步}
+\begin{longtable}{p{29mm}p{62mm}p{59mm}}\toprule
+部分 & 已完成事实 & 尚未建立的结论\\\midrule
+Score-SDE & 原网络200次更新、优化器／EMA恢复、4次有限样本输出 & 214k质量、收敛及正式图像指标未复现；当前样本仍为饱和噪声\\
+Triangle-Simulator & 前四个教程按原默认规模运行；说明和源码保持一致 & 第五个按老师意见排除；不代表所有仿真配置已验证\\
+Triangle-GB & 五个示例运行；核心检查22/28通过 & 六项失败保留，不能假设所有边界与时域接口可靠\\
+TaijiSGWB & 2.8数据、两入口预处理、响应缓存与似然检查；模板5200次更新完成 & 收敛未确认；EQ／RJ采样、独立种子与完整论文复现未完成\\
+路线B & 自有模块目录与研究边界已预留 & 无已完成的含前景参考、残差训练、ODE密度或校准实验\\
+服务器 & VS Code SSH和远程终端可用，打开\code{/home/disk} & 未部署主仓库研究环境；未验证JAX／PyTorch GPU运算\\\bottomrule
+\end{longtable}
+\subsection{固定源码与扩展边界}
+\code{external/taiji-sgwb/}为19文件固定源码快照，保留GPL许可；其他复现组件保留固定子模块。自有研究代码写入\code{src/sgwb_diffusion/}，不修改上游后仍声称原代码完全一致。
+
+原始模板入口\code{demos/template_nofg_28t.py}：53--64行读数据并减前景、转AET和掐边；67--97行分段加窗及互谱合并；107--126行剔除频带；129--155行响应；158--177行似然；180--219行先验与采样。本计划引用的是固定版本行号。
+\subsection{必须继续保留的科学边界}
+现有Taiji正式结果状态为\code{SAMPLING_COMPLETE_CONVERGENCE_NOT_CONFIRMED}，不是精确后验标准答案。路线B采用解析高斯模型构建最初的精确参考；物理实验再用经过独立诊断的数值参考。模板原采样的14维、nofg、合并CSD后验不能直接用于新15维、withfg、未分箱模型的简单重加权。
+\clearpage
+
+\section{研究对象与参考模型的统一定义}
+观测由仪器噪声、目标SGWB与银河混淆前景组成。$i$为周序号，$k$为原始频箱，$c$为已知轨道／频率上下文。第一阶段保留一个前景幅度；完整条件参数为
+\[
+\theta=(a_{{\rm acc},1:6},a_{{\rm oms},1:6},\Omega_0,\alpha,a_{\rm fg}).
+\]
+\[
+C_{ik}(\theta)=C_{{\rm noise},ik}(\theta_n)
+ +\Gamma_{ik}S_h(f_k;\Omega_0,\alpha)+a_{\rm fg}^2F_{ik}.
+\]
+$F$是完整$3\times3$ Hermitian协方差／单边谱矩阵，包含AE、AT、ET互谱；$a_{\rm fg}$定义为信号幅度倍率，因此功率乘平方。谱为
+\[
+\Omega(f)=\Omega_0(f/f_0)^\alpha,\quad f_0=1\,\mathrm{mHz},\qquad
+S_h(f)=\frac{3H_0^2}{2\pi^2f^3}\Omega(f).
+\]
+\subsection{三个不同的baseline}
+\begin{enumerate}
+\item 历史复现：先减真实前景，研究噪声与SGWB。
+\item 新参考$p_0$：保留前景，加入时变包络，使用明确归一化的系数空间高斯密度。
+\item 修正模型$p_\phi=p_0R_\phi$：与新参考使用同一观测、先验与参数定义。
+\end{enumerate}
+Whittle近似不等于白噪声。它允许有色谱与通道互谱，但通常近似忽略不同频箱间依赖。原合并CSD的\code{/win_bw}目标是近似似然；不能未经数据空间与归一化推导，就把其数值当作原始复系数上的正规密度。
+\subsection{目标分布由模拟器定义}
+\[
+p_\star(x\mid\theta,c)=\int p(x\mid\theta,\lambda,c)\,
+ p(\lambda\mid\theta,c)\,\dd\lambda.
+\]
+$\lambda$是未显式推断的源相位、星表实现等。条件模拟中如何抽取$\lambda$，决定了网络在边缘化什么。固定一条真实前景只做缩放，不等于对族群实现边缘化。第一阶段的$p_\star$是明确的低保真分布，不称作真实宇宙似然。
+\clearpage
+
+\section{修正架构图：采样、形状与归一化}
+\subsection{首轮沿用5秒采样}
+图中15 s采样、60,481频箱与约210万年采样点不自洽。原数据$\Delta t=5$ s，7天段有120,960点，单边FFT为60,481点；15 s时为40,320点及20,161频箱，Nyquist约33.3 mHz，不能保持原50 mHz上限。首轮通过选周和选频减规模，不暗中改变采样率。后续降采样必须加入抗混叠滤波并验证。
+\subsection{固定白化约定}
+设$u$是原\code{scale_to="psd"}输出。远离DC／Nyquist，局部平稳近似下，单边谱模型$C$对应
+\[
+\mathbb E[uu^\dagger]\simeq C/2,\qquad x=\sqrt2u,\quad C=LL^\dagger,
+\quad z=L^{-1}x.
+\]
+于是$z\sim\mathcal{CN}(0,I_3)$，再令
+\[
+y=\sqrt2\,[\Re z,\Im z]\in\mathbb R^6,\qquad q_0(y)=\mathcal N(0,I_6).
+\]
+以上单边因子须用模拟闭合；一般有色谱、去均值、窗泄漏与边缘频率采用实际线性处理算子的协方差，不把近似等式当严格恒等式。实虚顺序固定为$(\Re A,\Re E,\Re T,\Im A,\Im E,\Im T)$。
+\subsection{数据契约必须机器可读}
+\par\noindent\begin{tabularx}{\linewidth}{p{35mm}Y}\toprule
+字段 & 定义\\\midrule
+\code{stft_complex} & $[B,W,K,3]$，物理复系数；保留单位与归一化说明\\
+\code{whitened_real} & $[B,W,K,6]$，标准实参考；$W$为所选周，不必52\\
+\code{theta}／\code{context} & 参数名、顺序、单位、变换、先验；频率、轨道与周标签\\
+\code{frequency}／\code{mask} & 原始频率坐标、剔除和块边界；不能用合并网格冒充\\
+\code{provenance} & 输入哈希、处理版本、随机种子、模拟实现ID、划分ID\\\bottomrule
+\end{tabularx}\par
+现有预处理缓存含\code{strain_segs}但来自nofg；既有响应缓存位于合并网格。新研究必须明确生成withfg输入，并在所选原始频率上计算／核验响应，不能直接错位复用缓存。
+\clearpage
+
+\section{残差score训练：学什么、给哪些条件}
+\subsection{参考score与DSM}
+采用加性实高斯扰动$y_t=y+\sigma_t\epsilon$，$\epsilon\sim\mathcal N(0,I)$，从$\sigma(0)=0$的VE过程定义起；数值可从$\varepsilon>0$开始，但须评估小噪声截断误差。
+\[
+s_0(y_t,t)=-\frac{y_t}{1+\sigma_t^2},\qquad
+s_\phi=s_0+\Delta s_\phi(y_t,t\mid\theta,c),
+\]
+\[
+\mathcal L=\mathbb E\left[\lambda(t)
+\left\|s_0(y_t,t)+\Delta s_\phi(y_t,t\mid\theta,c)
++\frac{\epsilon}{\sigma_t}\right\|^2\right].
+\]
+理想极限下$\Delta s=\nabla_y\log q_{\star,t}-\nabla_y\log q_{0,t}$；$t\to0$为$\nabla_y\log R$。它不是$\log R$，也不是参数梯度。若在复坐标写score，必须声明Wirtinger或实梯度约定，不与上式混用。
+\subsection{条件完整性}
+对$p_0$，参数通过$C$即可确定分布；对非高斯$p_\star$，同协方差不代表同高阶统计。初期保留完整$\theta$条件与$c$，按标称值／对数尺度归一化。已知轨道和频率是上下文；待推断物理量不能用注入真值代替。使用数据摘要作条件时，须明确条件密度／联合密度，否则可能重复使用观测。
+\subsection{模型与消融}
+M1直接score、M2原坐标残差、M3白化残差使用相同模拟划分、训练预算、网络容量量级与评估样本。首轮优先M3；M1作必要对照，M2在归一化稳定后补充。建议小MLP验证96维实验，再用1D CNN沿频率建模；时间嵌入、条件MLP和残差输出零初始化。卷积感受野比较$\pm3,\pm7,\pm15$或整块，不预设$\pm3$足够。
+
+推荐首测16／32箱、宽度32／64的候选小网；在线模拟、3个训练种子、小批量起步，测显存与每步耗时后决定批量与步数。选择损失权重、噪声日程与终端尺度需写入配置，通过解析验证决定，不能直接沿用图像训练的超参数。
+\clearpage
+
+\section{从score到正规密度与修正因子}
+同一可逆白化变换$y=T_\theta x$满足
+\[
+\log p_\phi(x\mid\theta)=\log q_\phi(T_\theta x\mid\theta)
+ +\log|\det T_\theta|.
+\]
+参考项使用同一$T_\theta$，故
+\[
+\boxed{\log R_\phi(x,\theta)=\log q_\phi(T_\theta x\mid\theta)
+ -\log q_0(T_\theta x).}
+\]
+Jacobian只在该比值中抵消。线积分score可能遗漏依赖$\theta$的常数；若用未归一化残差能量，必须处理参数相关归一化$Z(\theta)$。
+\subsection{概率流ODE的数值定义}
+对VE过程$g(t)^2=\dd\sigma_t^2/\dd t$，概率流速度
+\[
+v_t(y)=-\tfrac12g(t)^2s_\phi(y,t\mid\theta,c),\qquad
+\frac{\dd\log q_t(y_t)}{\dd t}=-\nabla\cdot v_t(y_t).
+\]
+把观测从小噪声端积分到$T$，有
+\[
+\log q_{\varepsilon}(y_\varepsilon)=\log q_T(y_T)
++\int_{\varepsilon}^{T}\nabla\cdot v_t(y_t)\,\dd t.
+\]
+终端$q_T$的高斯近似、有限$T$、$\varepsilon$截断、score误差与求解容差均需核对。ODE提供所定义流模型的正规密度；不能宣称神经模型等于模拟器的精确密度。
+\subsection{计算控制}
+首轮低维使用精确自动微分散度；扩大后用Hutchinson迹估计，并记录探针分布、数量与种子。固定探针可形成可重复的近似目标，但不会自动消除误差；每次随机返回近似log-likelihood不自动构成正确的伪边际MCMC。采用相同数值配置，检查$\Delta\log R(\theta)$对容差／探针数的敏感性。
+
+训练的局部score不保证局部联合密度可直接相乘。窗口协方差的逆可有较长程项；重叠块log-density相加会重复计数。首轮在单个完整小块上定义联合密度；扩展时选择不重叠块的可检验近似、条件链分解或更完整模型，并报告校准误差。
+\clearpage
+
+\section{P0：服务器部署、环境隔离与恢复验收}
+\subsection{已观察到的资源，仅作快照}
+2026-10-20约09:01北京时间：一张A800 80GB PCIe，可见总显存81,920 MiB、已用441 MiB、空闲80,598 MiB，GPU利用率0\%；驱动550.144.03。\code{nvidia-smi}显示CUDA兼容版本12.4，不代表已安装工具链或框架可用。
+
+可见96逻辑CPU；检查到cpuset为0--95、CPU quota为$-1$；系统内存1.5 TiB、可用约1.4 TiB；当前cgroup v1内存上限为无限哨兵值，使用约1.22 GiB。宿主资源共享及父层／管理策略未确认，不能当作独占分配。\code{/home/disk}约7.0 TiB，空闲约1.7 TiB，使用75\%。所有数值会变化。
+\subsection{建议目录及环境}
+\begin{lstlisting}
+/home/disk/sgwb-research/
+  research-repository/   # fixed git source + curated evidence
+  environments/          # separate Linux environments
+  data/                  # raw inputs, processed shards, response cache
+  runs/                  # checkpoints and complete logs
+  cache/                 # compiler, package and temporary caches
+\end{lstlisting}
+本机macOS ARM64的虚拟环境不能直接复制到Linux x86\_64。保持\code{taiji-sgwb-linux-cpu}等基线环境与\code{route-b-linux-gpu}研究环境分离；Score-SDE旧版本复现再独立。首轮建议JAX／Flax保持方法连续性，但实际版本以官方安装兼容说明、驱动及GPU验收为准；不假定旧JAX pin与任意新CUDA安装可兼容。
+\subsection{部署验收顺序}
+先检查配额／磁盘，再克隆固定提交与递归子模块，验证上游快照；校验迁移数据SHA-256；安装最小环境；运行CPU导入与小矩阵参考；验证GPU设备、矩阵及梯度、首步训练；做10分钟级短测并记录显存峰值、RSS、编译／稳定速度。数值参考用float64，网络可float32；实际容差依dtype和CPU／GPU比较确定。
+
+后台采用\code{tmux}或实验室调度器，先查是否已有调度要求。测试断开SSH、重连、恢复与状态核对。\code{tmux}只保证终端分离，不保证容器／宿主重启后继续；还需周期检查点和显式恢复入口。首轮目标：CPU不超过4--8进程、RSS预算16 GiB、GPU预算8--16 GiB，逐步测量后扩大，均为建议上限。
+\clearpage
+
+\section{P1：数据表示、前景接口与训练划分}
+\subsection{先做数据契约，不先堆模拟数量}
+实现\code{RepresentationSpec}：采样率、段长、去均值、Kaiser参数、FFT归一化、单边因子、频率及实虚顺序。固定原始输入、处理器版本与mask；与原基线在nofg场景逐项对账，withfg新增入口需单独标识。
+
+前景接口应支持：合成正定协方差；老师的星表包络；独立前景实现。没有包络脚本时，首轮采用合成$F$并明确模型性质；取得脚本后检查输入星表、bright扣除定义、轨道、单位和互谱约定，复核报告的精度。真值前景分量只用于训练或诊断，不从待推断观测中相减。
+\subsection{训练与测试的随机性}
+对每个模拟抽$\theta$，再独立抽噪声、SGWB与前景实现／隐变量。按\code{realization_id}分train/validation/test，之后才能从同一实现切patch；相邻周／相邻频率不得跨集合泄漏。建议训练／验证／测试种子空间分离；独立测试集冻结后不参与调参。多物理分布留作外推测试。
+\subsection{首轮规模建议}
+从一个已知周、一个小频带的16箱开始，$D=96$；再32箱，$D=192$。随后选若干不重叠块与不同轨道相位。选择前景占比变化与SGWB有灵敏度的区域组合，避免单一极窄频带下参数完全简并。周数和带宽是研究变量，不能在目标／参考间不一致。
+
+在线解析高斯模拟先不落盘全年样本。单个全年$[52,60481,6]$ float32张量约72 MiB，10,000个约703 GiB，仅一种表示就有大成本；三通道complex128约144 MiB／实现。额外缓存、重复表示、优化器与自动微分还会放大内存。先缓存协方差因子和小规模评估集，按块生成训练数据。
+\begin{keybox}[验收输出]
+\code{representation.json}、参数表、划分清单、输入哈希、白化均值／协方差／伪协方差诊断、原始与处理频率图、模拟器版本。因子2、共轭和轴顺序未通过时暂停网络训练。
+\end{keybox}
+\clearpage
+
+\section{P2：答案已知的解析高斯实验}
+\subsection{E0：零修正负对照}
+目标与参考同为$\mathcal N(0,K_0(\theta))$，含合成前景幅度。精确$R=1$、精确残差score为0。闭合包括：解析白化、高斯采样、ODE参考密度和参数后验。网络零输出只是初始化，不是完成训练的证据；独立测试应检验训练后是否引入系统偏差。
+\subsection{E1：窗相关正对照}
+参考$K_0$保留每箱全通道协方差，但忽略箱间相关；目标$K_\star$来自有限时域高斯过程经同一线性处理算子$A$：
+\[
+K_\star=A K_{\rm time}(\theta)A^{\mathsf T}.
+\]
+$A$包含去均值、窗、FFT实虚表示与频率选择。先在小时间长度构造精确矩阵；物理7天实验再验证扩大方式。该构造同时处理实虚与可能的非proper复统计，不把独立实虚当普遍事实。
+\[
+\log R_{\rm exact}(x,\theta)=-\frac12\left[
+ x^{\mathsf T}(K_\star^{-1}-K_0^{-1})x
+ +\log\frac{\det K_\star}{\det K_0}\right].
+\]
+令$B_\theta K_0B_\theta^{\mathsf T}=I$，$K_y=B_\theta K_\star B_\theta^{\mathsf T}$，则加噪后的精确残差score为
+\[
+\Delta s_{\rm exact}(y_t,t)=-(K_y+\sigma_t^2I)^{-1}y_t
+ +\frac{y_t}{1+\sigma_t^2}.
+\]
+\subsection{必须给出的对照}
+同一观测和先验，比较独立箱$p_0$、精确相关高斯$p_\star$、学习修正$p_\phi$。先固定噪声／谱指数，对$(\Omega_0,a_{\rm fg})$做二维条件后验；若简并严重，先一维验证并扩大信息频带，再释放参数。已知相关高斯是科学强基线，不能仅战胜故意漏项的$p_0$就声称AI优于最佳传统方法。
+\clearpage
+
+\section{P3--P4：训练、密度与后验的逐级验收}
+\subsection{训练流程}
+固定模拟与测试划分；分别训练M1和M3，记录配置、初始化、优化器、学习率、EMA、数据种子及所有失败；验证集选择检查点，测试集仅评估。建议先做百步运行／恢复检查，再做$10^3$级短训练测可学性，正式步数由独立验证误差和稳定速度决定。重复3个网络种子，所有比较计入相同计算预算。
+\subsection{验收指标与建议初值}
+以下为\textbf{预注册建议阈值}，不是现有通过结果。先用数值参考误差确定可达底线；调整时记录理由并在测试前冻结。
+\par\noindent\begin{tabularx}{\linewidth}{p{31mm}YY}\toprule
+层级 & 指标 & 建议首轮标准\\\midrule
+线性代数 & 对称、正定、白化、解析密度一致性 & float64相对残差约$10^{-8}$级；按条件数解释\\
+ODE解析控制 & 解析score积分与直接密度差 & 中心测试区域$|\Delta\log p|<0.05$；缩小容差后稳定\\
+学习score & 多噪声尺度残差RMSE、相对参考变化 & 显著优于零修正；E0使用绝对误差\\
+学习密度 & 参数点间$\Delta\log R$误差 & 后验核心区域RMSE建议$<0.2$；另报尾部和绝对误差\\
+后验 & 网格TV、均值偏差、区间与形状 & TV建议$<0.05$，均值差$<0.1$个参考标准差\\
+重复模拟 & 68\%／95\%覆盖率、SBC秩 & 报二项不确定度；E0不得系统恶化\\\bottomrule
+\end{tabularx}\par
+高斯闭合的经验均值／协方差偏差用Monte Carlo标准误判断，不能要求有限样本达到矩阵计算的$10^{-8}$。极端尾部另外评估；平均误差不能掩盖某些参数区的失败。
+\subsection{覆盖率样本量}
+20次注入只作冒烟检查；100次探索，300--500次作为较稳定评估候选。若$n=500$，95\%覆盖率的二项标准误约$0.98$个百分点，68\%约$2.09$个百分点。报告置信区间，不把每个实验都要求真值在1$\sigma$内。SBC需按训练先验抽参数，避免训练／验证实现复用。推断噪声和网络种子不确定性分开报告。
+\clearpage
+
+\section{P5--P7：物理前景升级与联合推断}
+\subsection{E2：加入时变包络的物理高斯参考}
+接收并固定包络模块，或自有实现并与原响应对照。验证$F_{ik}$ Hermitian、半正定、非负自谱、互谱相干度边界和单位；比较独立模拟的周功率与通道互谱。不只调一个平均自谱。使用总数据，不减真值；先固定噪声，再逐步释放。
+\subsection{E3：协方差匹配的非高斯前景}
+以有限源、随机相位叠加构造可控目标，与参考前景匹配二阶协方差；改变源数／强度分布，检验高阶信息能否带来可辨识收益。匹配误差本身必须测量，否则网络可能只修正功率偏差。先在合成实验实现，再用Triangle-GB独立实现升级；其已知六项核心失败相关路径必须绕开或先修复并留证。
+\subsection{E4：逐项物理失配}
+分别测试包络误差、单类噪声谱形变形、周中点响应近似、不同段长／轨道。每次只开一项，再组合；保留时变各向异性高斯、频箱相关高斯、可变谱形噪声等强对照。九类原始测量噪声不等于九类独立TDI残余谱，训练集与blind的效应要按官方配置核对。
+\subsection{E5：完整推断与独立验证}
+从2维到3维$(\Omega_0,\alpha,a_{\rm fg})$，再到共用ACC／OMS尺度的5维，最后释放12个链路幅度形成15维。旧README的四尺度起点保留为历史计划，由本路线的逐级释放顺序替代。训练可以条件于15维而首轮推断只释放少数维，但结果必须称为条件后验。
+
+边缘后验需积分噪声与前景参数；固定参数不是边缘化。学习分布对隐变量的边缘化与后验对$a_{\rm fg}$的边缘化也需区分。\textbf{R不一定有显著物理收益}：若强高斯模型已足够，报告修正对后验的影响上限，或需要哪类失配才有收益；不人为增加不物理的难度以制造改进。是否提高保真度由误差归因决定。
+\clearpage
+
+\section{推断策略、重要性重加权与null检验}
+\subsection{先低维网格，再选择采样器}
+二维网格先用$41\times41$并以更细网格／更宽边界验证；记录归一化积分及边界质量。固定噪声得到条件后验；逐点最大化nuisance为profile likelihood；积分nuisance才为边缘后验。图注必须写清。
+
+低维阶段无需把ODE嵌入长链。扩大后可先从新$p_0$后验抽样，计算
+\[
+w_k\propto R_\phi(x_{\rm obs},\theta_k),\qquad
+\mathrm{ESS}_w=\frac{(\sum_kw_k)^2}{\sum_kw_k^2}.
+\]
+仅当同一数据、同一参数空间和先验、明确相同参考密度时适用。旧nofg14维链不满足。若$p_0$缺乏目标支撑，即使很长链也可能重加权失败。
+\subsection{重加权稳定性}
+报告最大权重、权重ESS、基线链自相关／多链诊断、重复子样本与独立链稳定性。权重ESS建议低于独立有效样本的10\%或少数点主导时停止把它作为最终结果，改进提议、桥接分布或目标采样；10\%为诊断触发值，不是普遍正确性定理。权重平坦只说明该观测后验区内影响小，不证明所有数据的$R=1$。
+\subsection{零背景与检测}
+先做参数估计的校准，再做零注入／弱注入。原$\Omega_0>0$先验不含严格null；需要零模型与备择模型、检验统计量或明确模型选择方案，不能把正幅度后验当作校准检测。对比相同假警率下的检出率，记录背景幅度、前景强度与噪声误差范围。最终blind set及答案隔离；已用于调参的数据不能再称真正盲测。
+\subsection{停止条件}
+E0持续偏离：检查归一化、score参数化与密度求解；E1失败：先修数学／实现；E1通过而E3无收益：测统计可辨识性；训练仅单实现有效：增加独立前景实现；ODE过贵：比较判别密度比估计作为廉价对照，仍保留score路线的核心验证。
+\clearpage
+
+\section{代码接口、目录与科学证据契约}
+以下路径为\textbf{拟新增设计}，不是本次已实现代码。文件名和文档说明用英文；中文PDF用于研究交流。
+\begin{lstlisting}
+src/sgwb_diffusion/
+  data/representation.py       # RepresentationSpec, transforms
+  data/simulators.py           # sample(theta, seed, spec)
+  data/foreground.py           # covariance and realization adapters
+  models/residual_score.py     # score(y_t, t, theta, context)
+  likelihoods/gaussian.py      # normalized log_prob, exact log_ratio
+  likelihoods/probability_flow.py
+  inference/grid.py           # posterior on controlled grids
+  inference/reweight.py        # stable weights and diagnostics
+  validation/closure.py
+  validation/calibration.py
+configs/route-b/               # versioned experiment specifications
+scripts/route-b/               # simulate/train/evaluate/report entry points
+results/route-b/               # curated tables, plots and manifests
+\end{lstlisting}
+\par\noindent\begin{tabularx}{\linewidth}{p{31mm}Y}\toprule
+接口 & 输入／输出要求\\\midrule
+模拟器 & $\theta$, seed, spec $\to$ 系数、上下文、实现ID；可复用固定样本\\
+白化 & $x,C\to y$, 变换元数据与log-Jacobian；可逆并有单元验证\\
+参考密度 & $x,\theta\to\log p_0$；返回有限状态、正定与条件数诊断\\
+学习score & $y_t,t,\theta,c\to$ 同形状实score；参数名与扩散时间分开\\
+密度评估 & $x,\theta\to\log p_\phi,\log R$, NFE, 容差和迹估计配置\\
+推断 & 后验样本／网格、先验、固定参数与归一化记录\\\bottomrule
+\end{tabularx}\par
+基线适配继续复用\code{scripts/reproduction/taiji_sgwb_preprocessing.py}、\code{taiji_sgwb_response.py}、\code{taiji_sgwb_likelihood.py}的约定与缓存思想。研究接口提取公共模块时写等价检查，不为复用而运行原长链；不得自动删除旧backend。
+\clearpage
+
+\section{运行证据、检查点和GitHub发布规范}
+\subsection{每个实验的最小证据包}
+\code{run_id}、UTC与北京时间、Git提交、脏工作区状态、上游pin、环境锁／包列表、设备与驱动、配置哈希、全部随机种子、划分清单、输入SHA-256、原始指标表、完整命令与退出码、运行日志、峰值RSS／显存、阶段耗时、检查点清单、图生成脚本和图表数据。
+
+检查点保存模型、优化器、EMA、学习率状态、更新数、随机数状态与数据迭代位置；临时文件写完后原子重命名，保留最近几个版本。恢复测试比较下一步loss与更新，不只检查文件存在。CPU／GPU及不同并行规模可能非逐比特一致，预先声明数值容差。
+\subsection{每阶段图表清单}
+\begin{enumerate}
+\item 数据／白化：协方差热图、实虚方差、频箱相关与频率mask。
+\item 解析控制：$\log R$真值与预测散点、参数方向的$\Delta\log R$误差。
+\item 学习：训练／验证loss、分噪声尺度score误差、不同种子分布。
+\item 推断：参考／精确／修正后验叠图，频谱区间与相对误差。
+\item 校准：覆盖率带误差条、SBC秩、bias／width及null统计。
+\item 成本：编译、训练、密度NFE、推断、模拟成本与峰值资源。
+\end{enumerate}
+\subsection{发布与隐私}
+小型配置、TeX／PDF、关键图表、指标和校验记录入Git；原始数据、大模型和完整backend放忽略目录或获批准的数据存储。公开记录不包含SSH主机地址、密码、私钥、令牌、个人绝对路径或私人会议原图。本计划仅保留非敏感硬件摘要与来源哈希。
+
+本次只发布计划与构建证据，不把规划接口写成完成状态；历史证据保持原样。推送前检查暂存差异、PDF提取文本与敏感字段；推送后核对本地HEAD与远端main。每两天的进展汇报由研究者组织，本文不创建自动通知或向他人发送信息。
+\clearpage
+
+\section{计算预算与建议日程：先测量再承诺}
+\subsection{预算模型}
+\[
+T_{\rm total}=T_{\rm setup}+T_{\rm sim}+T_{\rm compile}
+ +N_{\rm train}t_{\rm train}+N_{\rm eval}t_{\rm density}+T_{\rm post}.
+\]
+$t_{\rm density}$由NFE、散度求导、batch与设备决定，不能用纯前向次数直接推断。对每个阶段记录首次编译与稳定速度；用5--15分钟短测外推并留资源波动范围。训练模拟与密度评估费用都计入，不能只报告单次推断加速。
+
+原TaijiSGWB主要是CPU NumPy／Eryn，A800不会自动加速。独立矩阵批量、训练及ODE可能受益GPU；数据搬运与小矩阵规模可能抵消收益，需测量。暂不承诺96核线性扩展，不预分配80 GB显存。
+\subsection{建议工作量窗口}
+以下按研究者有效工作日估计，非服务器实测运行时；可并行准备材料，门槛有依赖。
+\par\noindent\begin{tabularx}{\linewidth}{p{17mm}p{25mm}YY}\toprule
+阶段 & 工作量窗口 & 核心交付 & 决策\\\midrule
+P0 & 0.5--1天 & 环境、GPU、数据、恢复短测 & 失败则只修部署\\
+P1 & 0.5--1天 & 契约、归一化、划分 & 因子／网格未闭合不训练\\
+P2 & 1--2天 & E0／E1精确答案与网格 & 无可辨识性则调整频带\\
+P3 & 1--3天 & M1／M3训练与独立误差 & score失败先诊断\\
+P4 & 1--2天 & ODE、后验及初步覆盖率 & 通过后评估大批重复\\
+P5 & 1--3天 & 前景包络接入与物理高斯对照 & 依赖取得包络脚本／实现\\
+P6--P7 & 1--3周起 & 非高斯、族群、15维及外推 & 按结果决定，不设完成保证\\\bottomrule
+\end{tabularx}\par
+\subsection{第一轮汇报内容}
+向老师展示一页定义、E0／E1解析图、未修正／精确／学习后验、误差和成本；明确哪些机制已验证、哪些失败。论文定位由可复现科学贡献决定，不能由低保真闭环直接推断达到某期刊要求。
+\clearpage
+
+\section{六项局限的验收问题与老师接口}
+\begin{longtable}{p{26mm}p{57mm}p{67mm}}\toprule
+局限 & 当前应问的问题 & 最小可执行检查\\\midrule
+前景扣除 & 前景是全星表、不可分辨部分还是扣源残差？ & withfg与nofg、包络加入／省略对照；真值只诊断\\
+高斯／独立 & 单箱高斯与联合依赖分别有多大？ & 白化实虚分布、伪协方差、跨箱及跨周依赖；多实现\\
+似然近似 & 窗、去均值、分箱和响应近似的贡献？ & 线性算子精确高斯、原近似及学习修正三方对照\\
+噪声形状 & 哪些效应实际进入当前TDI数据？ & 单一形变开关；强可变谱形基线；不盲加九种PSD\\
+各向异性 & 时变全通道包络已解释多少？ & 各向异性高斯与协方差匹配非高斯分开\\
+计算 & 成本究竟在模拟、网络、ODE还是采样？ & 分阶段profile、NFE、ESS／秒、总预算\\\bottomrule
+\end{longtable}
+\subsection{需与王老师确认的优先接口}
+\begin{enumerate}
+\item 获取\code{fg_envelope.py}、验证脚本、输入星表版本与日志；确认可否公开或仅内部使用。
+\item 确认第一轮以窗相关的可解失配为正对照，合成前景协方差是否符合“低保真单参数”预期。
+\item 确认初始$p_0$是否已含A0前景包络；保留故意省略包络的模型仅作可学性对照。
+\item 确认最终目标前景的随机化范围与星表／相位先验；是否固定明亮源扣除阈值。
+\item 获取服务器CPU／内存／GPU分配规则、作业调度、备份与长期存储政策。
+\item 确认输出优先级：后验校准、bias、检出能力或计算摊销；具体实验先验证哪一项。
+\end{enumerate}
+\begin{keybox}[无需等待这些答案的工作]
+P0基础部署、数据契约、合成高斯E0／E1、白化与解析密度实现可以先做。真实星表、精确源族群及blind配置依赖材料，不能用假定值写成确认事实。
+\end{keybox}
+\clearpage
+
+\section{会议用一页逻辑链与第一轮完成定义}
+\begin{center}
+\begin{tikzpicture}[node distance=5mm,b/.style={draw=teal,fill=light,rounded corners=1mm,text width=139mm,align=center,inner sep=2.4mm},a/.style={-{Stealth[length=2mm]},draw=teal}]
+\node[b](a){观测：仪器噪声 + SGWB + 未知银河前景\quad 固定数据表示与隐变量先验};
+\node[b,below=of a](b){强物理参考：时变轨道／AET全互谱 + 单幅度前景包络\quad 明确正规高斯密度 $p_0$};
+\node[b,below=of b](c){目标模拟器：从已知 $\theta$ 生成独立实现\quad 先可解高斯失配，再物理非高斯};
+\node[b,below=of c](d){标准实白化 + 加噪\quad $s_\phi=s_0+\Delta s_\phi$\quad DSM训练};
+\node[b,below=of d](e){概率流ODE + 密度数值验收\quad 得 $\log R=\log p_\phi-\log p_0$};
+\node[b,below=of e](f){同一数据／先验的参考、精确、修正后验比较\quad 再释放nuisance并积分};
+\node[b,below=of f](g){独立重复模拟：bias、coverage、null、成本\quad 判断是否值得提高保真度};
+\foreach \x/\y in {a/b,b/c,c/d,d/e,e/f,f/g}\draw[a](\x)--(\y);
+\end{tikzpicture}
+\end{center}
+\subsection{可直接用于汇报的表述}
+“我们以姜洋的物理响应和噪声—SGWB联合推断为基础，把未知前景加入参考模型。先在答案可计算的实验中，验证残差score是否能恢复已知似然修正，且不破坏正确模型。再检验真实前景下超出强高斯基线的信息，是否改善后验校准与参数约束。A800承担训练，服务器CPU承担模拟与数值参考，所有阶段保留可恢复与可追溯证据。”
+\subsection{第一轮交付清单}
+可重建的服务器环境与数据契约；E0／E1精确实现；M1／M3检查点与恢复证据；ODE误差报告；三方后验图与独立模拟校准；总成本表；下一阶段继续／停止的理由。\textbf{训练loss下降、单次真值落入区间、服务器成功启动均不单独构成科学完成。}
+\clearpage
+
+\appendix
+\section{来源、版本与复核索引}
+\subsection{公开依据}
+\begin{enumerate}
+\item Jiang与Huang，\emph{Isotropic stochastic gravitational wave background reconstruction for Taiji constellation}，arXiv:2601.00169v2。\url{https://arxiv.org/html/2601.00169v2}。本文用于定位原方法及前景排除范围。
+\item TaijiSGWB上游：\url{https://github.com/DrizzleatDusk/TaijiSGWB}，固定提交\code{4afaad4044b08721e7f1ce29cba3b0d912636dce}。具体代码事实以上游快照为准。
+\item Song等，\emph{Score-Based Generative Modeling through Stochastic Differential Equations}，arXiv:2011.13456。\url{https://arxiv.org/abs/2011.13456}。残差训练与数值密度评估以本文所定义坐标和控制实验具体验证。
+\item 研究主仓库：\url{https://github.com/leichang131-debug/Score-Based-Diffusion-Galactic-Confusion-Foreground-Marginalization-and-SGWB-Joint-Inference}。
+\end{enumerate}
+\subsection{项目内证据入口}
+\begin{itemize}
+\item \code{configs/upstream/taiji-sgwb.json}：固定源码逐文件哈希。
+\item \code{results/taiji-sgwb/template-formal/README.md}：原模板采样与未确认收敛边界。
+\item \code{docs/reproduction/taiji-sgwb/status-and-cluster-handoff.md}：历史剩余工作。
+\item \code{scripts/reproduction/check-taiji-sgwb-preprocessing.py}：原STFT／CSD保存与核对。
+\item \code{scripts/reproduction/taiji_sgwb_likelihood.py}：原似然载入、独立模型与稳定参考。
+\item 本目录\code{source-provenance.json}、\code{manifest.json}与\code{quality-check.json}：输入来源、交付哈希与构建检查。
+\end{itemize}
+\subsection{输入材料与发布边界}
+三份教程、《关于路线B.pdf》、两张图片记录SHA-256和角色，不公开其原始内容、连接信息或个人路径。会议摘要作为用户提供的研究方向材料，不视作可执行程序、自动消息或访问授权。保留原研究框架PDF，新增本文并明确新旧范围。本文不包含任何已完成路线B实验的虚构结果。
+\end{document}

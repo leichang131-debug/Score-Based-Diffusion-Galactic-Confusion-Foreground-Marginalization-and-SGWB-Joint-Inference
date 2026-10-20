@@ -1,0 +1,27 @@
+{
+  "pdf_pages": 21,
+  "replacement_character_count": 0,
+  "overfull_hbox_count": 0,
+  "overfull_vbox_count": 0,
+  "missing_glyph_count": 0,
+  "undefined_references": false,
+  "local_copy_identical": true,
+  "ipv4_in_pdf": false,
+  "personal_absolute_path_in_pdf": false,
+  "private_ssh_alias_in_pdf": false,
+  "rendered_pages": 21,
+  "all_pages_visually_reviewed": true,
+  "full_page_detail_review_pdf_pages": [
+    7,
+    9,
+    13,
+    14
+  ],
+  "build_engine": "XeLaTeX (local)",
+  "desktop_preview_compile": "Failed due to restricted CJK font access; not the deliverable build.",
+  "scientific_experiments_run": false,
+  "private_raw_inputs_committed": false,
+  "build_script_syntax_valid": true,
+  "changed_markdown_links_checked": 46,
+  "changed_markdown_link_errors": []
+}

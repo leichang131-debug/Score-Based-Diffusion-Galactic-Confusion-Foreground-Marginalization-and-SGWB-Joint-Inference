@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "document_version": "1.0",
+  "date": "2026-10-20",
+  "plan_only": true,
+  "files": [
+    {
+      "path": "main.tex",
+      "bytes": 41349,
+      "sha256": "28e8a797476f70bb6b3a94f154459965a82822e7851d924d33cd4b46e8ef8017"
+    },
+    {
+      "path": "route-b-research-and-server-implementation-plan.pdf",
+      "bytes": 370560,
+      "sha256": "61adcfa270c91346ebaa60e30858de46abed7ce39ccaf9cc5d8b592da80a5118"
+    },
+    {
+      "path": "build.py",
+      "bytes": 1359,
+      "sha256": "72f67bcec13d8107471b0fc07ee7dcbad432276b388c270f20ff1a15a4079f35"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2770,
+      "sha256": "86133326e9f851e9bbc511aca6481bfaca6d0b760118d0cc7393685308354500"
+    },
+    {
+      "path": "source-provenance.json",
+      "bytes": 2470,
+      "sha256": "5d95d65c29899085fcedadc9860c1596165051077ae9df70563a731b23a01dac"
+    },
+    {
+      "path": "quality-check.json",
+      "bytes": 781,
+      "sha256": "61b969debe8a0c1c03febbda5b47e2a86f8f36ad49bae27bd4fbab2a18009b58"
+    }
+  ]
+}

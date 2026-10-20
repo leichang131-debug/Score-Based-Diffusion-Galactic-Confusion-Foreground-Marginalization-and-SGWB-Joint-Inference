@@ -1,7 +1,13 @@
-# Archived research plan
+# Research plans
 
-The PDF and standalone TeX source preserve the existing Chinese-language research framework and implementation plan, version 1.0 dated October 7, 2026. Their filenames are in English for repository navigation; their content has not been translated or changed.
+## Current implementation plan (2026-10-20)
 
-This is a design document. Statements about future experiments must not be read as completed results. Use XeLaTeX with the required Chinese fonts and packages to compile the standalone source. This repository does not include generated build intermediates.
+[Route B: score-based likelihood correction and A800 implementation plan](route-b-implementation-plan/route-b-research-and-server-implementation-plan.pdf) turns the teacher-provided methodology notes, meeting direction, fixed TaijiSGWB baseline, current reproduction evidence and server resource snapshot into gated experiments. See [source, provenance and verification](route-b-implementation-plan/README.md).
 
-`manifest.json` records SHA-256 hashes of both archived files.
+The PDF is in Chinese for research discussion; repository navigation and metadata are in English. This is a plan, not evidence that Route B or server deployment has been completed.
+
+## Archived framework (2026-10-07)
+
+The original PDF and standalone TeX source preserve the Chinese-language research framework and implementation plan, version 1.0 dated October 7, 2026. Their content is unchanged. `manifest.json` records the original archived hashes.
+
+The current Route B plan supersedes the earlier starting parameter schedule while retaining the scientific objective and historical reproduction limits.

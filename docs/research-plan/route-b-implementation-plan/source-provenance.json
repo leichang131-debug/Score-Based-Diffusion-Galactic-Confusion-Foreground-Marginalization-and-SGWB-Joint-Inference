@@ -1,0 +1,63 @@
+{
+  "document_version": "1.0",
+  "as_of": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "repository_pre_plan_commit": "13210dd95af32cdb376d4bcedebeb262334308eb",
+  "remote_main_verified_equal": true,
+  "taijisgwb_upstream_head": "4afaad4044b08721e7f1ce29cba3b0d912636dce",
+  "sources": [
+    {
+      "label": "ai_approaches_tutorial.md",
+      "role": "Teacher-provided methodology and resource map",
+      "bytes": 28361,
+      "sha256": "5a3d98c87053e6da6d741a1d2a20e180a4e19bb0c4667b57a7afe74279d096a7",
+      "raw_input_published": false
+    },
+    {
+      "label": "baseline_limitations_tutorial.md",
+      "role": "Teacher-provided six-limitations tutorial",
+      "bytes": 26988,
+      "sha256": "d234e13fadca363ffa89cea6bb470abd332b377501646144a1813b3afc284b79",
+      "raw_input_published": false
+    },
+    {
+      "label": "TaijiSGWB_analysis_notes.md",
+      "role": "Teacher-provided baseline code and analysis notes",
+      "bytes": 40530,
+      "sha256": "dfcdfaeb56c8316ce12838bfd36255b00665424816bc6f47c015990e6526e304",
+      "raw_input_published": false
+    },
+    {
+      "label": "关于路线B.pdf",
+      "role": "Teacher-provided Route B definition",
+      "bytes": 512849,
+      "sha256": "2d941148c75b383cd1ed9959e93225e4c774cb3f26bf34c5b9d8ab2b823e49a9",
+      "raw_input_published": false
+    },
+    {
+      "label": "User-supplied Route B architecture image",
+      "bytes": 1412946,
+      "sha256": "851f23dce25c24d7531865349ebbfecc2c5b12478b6a22b5feb173c9e57b1eaa",
+      "raw_input_published": false
+    },
+    {
+      "label": "User-supplied meeting summary image",
+      "bytes": 444247,
+      "sha256": "0db25a644848029d201f7884ba0990c056037fb39e68887a8a689f7699590b66",
+      "raw_input_published": false
+    },
+    {
+      "label": "Local server resource snapshot 2026-10-20",
+      "role": "Read-only resource and connection evidence; sanitized hardware summary only",
+      "sha256": "fb35df6631ce3fc1205b72a817f2056f38011a9452b1c75ae5c6495af5b13d7d",
+      "raw_input_published": false
+    }
+  ],
+  "public_references": [
+    "https://arxiv.org/html/2601.00169v2",
+    "https://github.com/DrizzleatDusk/TaijiSGWB",
+    "https://arxiv.org/abs/2011.13456"
+  ],
+  "distinction": "Teacher-reported measurements from another environment are not newly reproduced here. New experiments and API paths in the PDF are proposed.",
+  "privacy": "No raw private inputs, credentials, host addresses or personal absolute paths are included."
+}
