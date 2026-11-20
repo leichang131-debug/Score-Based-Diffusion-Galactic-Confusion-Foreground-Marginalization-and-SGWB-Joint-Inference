@@ -1,97 +1,38 @@
-# Joint Inference of Galactic Confusion Foreground Marginalization and Stochastic Gravitational-Wave Background Based on Score-Based Diffusion Models
+# Galactic Foreground and SGWB Joint Inference
 
-Research workspace for probabilistic marginalization of the Galactic confusion foreground and joint inference of a target stochastic gravitational-wave background (SGWB) using score-based diffusion models.
+Research on joint inference of the Galactic foreground, stochastic gravitational-wave background (SGWB), and instrument noise. The current baseline is the full-covariance Taiji framework of Liang et al. Score-based likelihood correction remains a future research direction.
 
-TaijiSGWB: the full-data 2.8 template schedule completed 5200 transitions, with six saved figures and convergence still unconfirmed. The complete original source is directly tracked under `external/taiji-sgwb/`. EQ-template and RJMCMC sampling remain for the cluster. See [current status](docs/reproduction/taiji-sgwb/status-and-cluster-handoff.md) and [source/figure verification](results/taiji-sgwb/review-20261015/README.md).
+## Current baseline
 
-**Status updated: 2026-10-20.** Original Score-SDE is preserved as pinned recursive Git submodules. The macOS CPU workflow passed data preparation, 200 original-network updates, typed optimizer/EMA continuation and four finite EMA sampling calls. Sample previews remain saturated noise; converged training, standard image metrics and reproduction of the teacher's 214k result are not established.
+The immediate task is to reproduce Figure 8 of [Full-Covariance Bayesian Inference of Stochastic Gravitational-Wave Backgrounds with Time-Domain Simulations for Taiji-like Missions](https://arxiv.org/abs/2608.11276v2) using the [authors' code](https://github.com/Eric-Friedman-666/taiji-sgwb-time-domain/tree/e5ebd75639c3433717ff2cafe52e7f2f5a3f34bb). The paper and source have been reviewed. Source integration, environment validation, and fresh production sampling for this baseline are pending.
 
-Triangle-GB: five original examples executed locally. Subsequent [core CPU verification](docs/reproduction/triangle-gb/core-validation.md) passed 22 of 28 checks and retained six failures, including original time-output and frequency-band boundary defects. Package-wide numerical acceptance is not established.
+The model combines two instrument-noise amplitudes, four effective Galactic double white dwarf foreground parameters, two astrophysical SGWB parameters, and two phase-transition sound-wave parameters. It uses complex XYZ spectral covariance and Bilby/Dynesty nested sampling.
 
-Triangle-Simulator source and its shared Python 3.9.19 macOS ARM64 CPU environment are now installed and smoke-validated. All five upstream notebooks are preserved. Tutorials 1–4 completed locally at their original default scales with unchanged source cells and regenerated figures; Tutorial 4 is complete; see [Tutorial 4 report](docs/reproduction/tdc/tutorial-4.md). See [Tutorial 3 results](docs/reproduction/tdc/tutorial-3.md). See [Tutorial 2 results](docs/reproduction/tdc/tutorial-2.md). Tutorial 5 is excluded from the current scope following teacher guidance. See [Tutorial 1 results](docs/reproduction/tdc/tutorial-1.md). See [TDC environment evidence](docs/reproduction/tdc/environment-setup.md).
+| Configuration | Ten-parameter posterior | Eight-parameter no-sound-wave fit |
+| --- | --- | --- |
+| Static equal-arm frequency domain | `fit_079` | `fit_078` |
+| Equal-arm time domain | `fit_081` | `fit_080` |
+| Unequal-arm time domain | `fit_083` | `fit_082` |
 
-The [final small-scale reproduction report](docs/reproduction/score-sde/final-report.md) collects loss curves, runtime/issues and configuration/log/restoration/sampling evidence. See the [complete source and evidence audit](docs/reproduction/score-sde/source-alignment.md), [training/speed report](docs/reproduction/score-sde/original-200-updates.md) and [sampling report](docs/reproduction/score-sde/sampling-check.md).
-
-## Scientific objective
-
-The observed data contain a Galactic foreground, a target SGWB, and instrument noise. The goal is to propagate uncertainty in the foreground and noise into calibrated SGWB parameter constraints, and to determine whether the learned distribution uses information beyond a strong second-order statistical baseline.
-
-Foreground marginalization accounts for possible foreground realizations; it does not assume that the true foreground can be subtracted from observed data. The primary outputs are parameter posteriors and component spectra with uncertainty, rather than a uniquely recovered random waveform.
-
-## Initial inference model
-
-The current Route B plan starts with an analytically solvable Gaussian control and a single additional foreground amplitude. It first fixes noise amplitudes and the SGWB spectral index for one- or two-dimensional conditional inference, then releases the index, shared noise scales, and finally twelve link-noise amplitudes for a fifteen-dimensional model. This supersedes the earlier four-scale starting proposal; no Route B implementation or experiment is complete yet.
-
-Known orbit and processing states are conditioning variables. Unknown physical quantities belong in the inference model. Marginal inference requires integrating nuisance parameters; fixing them only gives a conditional posterior.
-
-An A800 80 GB server is accessible through VS Code SSH and its resource snapshot has been checked. Project deployment, Linux environments, GPU-framework validation and background recovery remain planned. Shared host resources are not an exclusive allocation. Connection credentials and addresses are not published.
-
-## Method and validation
-
-1. Define the physical model, observational representation, and independent simulation splits.
-2. Establish solvable controls and strong Gaussian and flexible-foreground baselines.
-3. Generate conditional samples with independently drawn foreground, background, and noise realizations.
-4. Train a conditional score model; compare direct and residual-score implementations.
-5. Use a probability-flow ODE to evaluate a normalized flow-model density. A score vector alone is not a parameter likelihood.
-6. Obtain the joint posterior and marginalize nuisance parameters.
-7. Assess numerical closure, posterior calibration, parameter bias, false alarms, detection power, and computational cost.
-8. Use covariance-matched Gaussian controls and realistic mismatch experiments to identify the source and limits of any improvement.
-
-Time modulation and nonstationarity do not automatically imply non-Gaussianity. Any scientific benefit must be demonstrated against fair baselines on independent data.
+The three full fits supply the joint posteriors. Each matched null fit supplies the reference evidence for the corresponding Bayes factor. The [baseline plan](docs/research-plan/full-covariance-baseline.md) defines the acceptance criteria. The [reproduction index](docs/reproduction/taiji-sgwb-time-domain/README.md) tracks progress.
 
 ## Repository layout
 
-```text
-.
-├── README.md
-├── LICENSE
-├── CONTRIBUTING.md
-├── external/                     # Upstream source slots and provenance
-│   ├── score-sde-reproduction/
-│   ├── triangle-simulator/
-│   ├── triangle-gb/
-│   ├── triangle-bbh/
-│   └── taiji-sgwb/
-├── environments/                 # Separate component/platform environments
-│   ├── score-sde/
-│   ├── tdc/
-│   ├── triangle-gb/
-│   └── taiji-sgwb/
-├── configs/                      # Local, cluster, and inference configurations
-│   ├── local/
-│   ├── cluster/
-│   ├── inference/
-│   ├── reproduction/
-│   └── upstream/
-├── scripts/                      # Reproduction and cluster execution entry points
-│   ├── reproduction/
-│   └── cluster/
-├── src/                          # Future project-owned research implementation
-│   └── sgwb_diffusion/
-│       ├── data/
-│       ├── models/
-│       ├── likelihoods/
-│       ├── inference/
-│       └── validation/
-├── notebooks/                    # Explanatory and exploratory notebooks
-├── tests/                        # Future scientific and numerical checks
-├── docs/                         # Plan, methodology, notes, and meetings
-│   ├── research-plan/
-│   ├── reproduction/
-│   └── meetings/
-├── data/                         # Data documentation; bulk data kept outside Git
-├── results/                      # Curated results and artifact inventories
-│   ├── figures/
-│   ├── tables/
-│   ├── manifests/
-│   ├── score-sde/
-│   ├── tdc/
-│   ├── triangle-gb/
-│   └── taiji-sgwb/
-└── runs/                         # Local generated outputs; ignored by Git
-```
+| Location | Purpose |
+| --- | --- |
+| [`external/`](external/README.md) | Pinned upstream source and attribution |
+| [`environments/`](environments/README.md) | Independent component environments |
+| [`configs/`](configs/README.md) | Experiment definitions and execution settings |
+| [`scripts/`](scripts/README.md) | Project-owned reproduction and cluster tools |
+| [`src/`](src/README.md) | Project-owned research implementation |
+| [`docs/`](docs/research-plan/README.md) | Research plans, methods, references, and reproduction reports |
+| [`data/`](data/README.md) | Dataset and cache documentation |
+| [`results/`](results/README.md) | Curated figures, summaries, and artifact records |
+| [`notebooks/`](notebooks/README.md), [`tests/`](tests/README.md), [`runs/`](runs/README.md) | Notebooks, validation, and local run storage |
 
-## Current reproduction status
+Baseline-specific directories use `taiji-sgwb-time-domain`. The earlier Jiang TaijiSGWB study uses `taiji-sgwb`. See the [methodology](docs/methodology.md) and [roadmap](docs/roadmap.md) for the sequence from the current baseline to follow-up experiments.
+
+## Prior reproduction work
 
 | Component | Completed locally | Remaining limits and evidence |
 | --- | --- | --- |
@@ -102,58 +43,14 @@ Time modulation and nonstationarity do not automatically imply non-Gaussianity. 
 
 Score-SDE (including its nested original source), Triangle-Simulator, Triangle-GB and Triangle-BBH retain pinned submodules. TaijiSGWB is an unmodified 19-file fixed source snapshot at `4afaad4044b08721e7f1ce29cba3b0d912636dce`, included directly in ordinary clones; [its source lock](configs/upstream/taiji-sgwb.json) records the upstream tree and file hashes. See [source integration](external/README.md) and [the reproduction roadmap](docs/reproduction/README.md).
 
-## Research plan
+Jiang and Huang's [TaijiSGWB study](https://arxiv.org/abs/2601.00169) remains a reference for spectral reconstruction. Earlier [Route B and research plans](docs/research-plan/README.md) record the motivation for learned likelihood correction. Local A800 preparation for the earlier workflow included environment and restart checks. The Liang baseline requires its own deployment and timing measurements.
 
-- [Current Route B research and A800 implementation plan (PDF)](docs/research-plan/route-b-implementation-plan/route-b-research-and-server-implementation-plan.pdf).
-- [Route B source, provenance, build and verification](docs/research-plan/route-b-implementation-plan/README.md).
+## Reproducibility
 
-- [Research framework and implementation plan (PDF)](docs/research-plan/research-framework-and-implementation-plan.pdf).
-- [Standalone LaTeX source](docs/research-plan/research-framework-and-implementation-plan.tex).
-- [Scientific workflow](docs/methodology.md).
-- [Research milestones](docs/roadmap.md).
-
-The archived PDF and LaTeX source are the existing Chinese-language planning document, preserved without translation. New repository documentation and path names are in English. The plan is a design document, not a report of completed experiments.
-
-## Referenced upstream projects
-
-| Component | Source | Planned role |
-| --- | --- | --- |
-| Score-SDE reproduction | [iphysresearch/score-sde-reproduction](https://github.com/iphysresearch/score-sde-reproduction) | Compatibility layer and reference image-generation workflow |
-| Original Score-SDE | [yang-song/score_sde at 0acb9e0](https://github.com/yang-song/score_sde/tree/0acb9e0ea3b8cccd935068cd9c657318fbc6ce4c) | Reference SDE, score training, sampling, and likelihood implementation |
-| Triangle-Simulator | [TriangleDataCenter/Triangle-Simulator](https://github.com/TriangleDataCenter/Triangle-Simulator) | Space-based detector simulations |
-| Triangle-GB | [TriangleDataCenter/Triangle-GB](https://github.com/TriangleDataCenter/Triangle-GB) | Galactic-binary response calculations |
-| TaijiSGWB | [DrizzleatDusk/TaijiSGWB](https://github.com/DrizzleatDusk/TaijiSGWB) | SGWB inference reference workflow |
-
-Related reference: [Isotropic stochastic gravitational wave background reconstruction for Taiji constellation](https://arxiv.org/abs/2601.00169).
-
-Use pinned upstream commits and preserve upstream licenses when integrating code. Keep project adapters and patches separate from reference sources.
-
-## Environment and execution policy
-
-Use independent environments for Score-SDE, TDC, Triangle-GB, and TaijiSGWB. Validate and lock the dependency versions for each platform before publishing installation commands.
-
-Local macOS CPU runs will establish minimal functionality and support learning. Linux cluster resources will support full training, large simulations, posterior sampling, and repeated injection studies. Apple GPU compatibility has not been validated. Score-SDE environment setup, command-line configuration parsing, and synthetic CPU execution have been validated on macOS. See [Score-SDE setup](environments/score-sde/README.md). See [Triangle-Simulator setup](environments/tdc/README.md) and its [validation record](docs/reproduction/tdc/environment-setup.md). Original-default Tutorials 1–4 have completed; Triangle-GB now has a separate CPU environment; see its [setup and dependency record](environments/triangle-gb/README.md). The independent TaijiSGWB macOS ARM64 Python 3.11.14 environment is deployed and checked; see [Stage 2](docs/reproduction/taiji-sgwb/environment-setup.md).
-
-## Score-SDE local reproduction results
-
-The original-method workflow completed 200 updates and four EMA sampling calls. Training, validation, typed restoration and finite-output checks passed. Generated previews remain saturated noise; numerical reproduction of the teacher's 214k run is not established.
-
-![Local 200-update loss views](results/score-sde/final-summary/loss_curve.png)
-
-[Final report](docs/reproduction/score-sde/final-report.md) · [Portable evidence package](results/score-sde/final-summary/) · [Source correspondence](docs/reproduction/score-sde/source-alignment.md)
-
-## Reproducibility and results
-
-For each experiment, record the source commit, environment lock, configuration, seed, dataset provenance and split, hardware, runtime, diagnostics, and artifact hashes. Distinguish installation, smoke-test completion, converged inference, and faithful numerical reproduction.
-
-Commit small curated figures, tables, and summaries under `results/`. Keep raw datasets, checkpoints, and large chains outside normal Git history; register them with checksums and retrieval locations in `results/manifests/`, and use an appropriate release, Git LFS, or laboratory storage when needed. No repository-wide rule excludes all research results.
+Track source revisions, inputs, effective settings, sampling seeds, run diagnostics, and artifact hashes. Put large data, response caches, sampler states, and posterior archives on research storage. Keep figures, compact summaries, and artifact inventories under `results/`.
 
 ## License and attribution
 
 Project-owned material is distributed under the [MIT License](LICENSE). Referenced or later incorporated third-party code retains its original license and attribution; the root MIT license does not relicense it.
 
 Maintained by [leichang131-debug](https://github.com/leichang131-debug). See [CONTRIBUTING.md](CONTRIBUTING.md) for collaboration and reporting conventions.
-
-### TaijiSGWB cluster handoff
-
-The local 2.8 full-template schedule is complete with convergence still unconfirmed. Further EQ-template and RJMCMC long-run reproduction, independent seeded inference and diagnostic-required extensions will move to an approved cluster/server after deployment and benchmark validation. No cluster deployment or further local long chain has been started. See [current status, remaining work and cluster handoff](docs/reproduction/taiji-sgwb/status-and-cluster-handoff.md).

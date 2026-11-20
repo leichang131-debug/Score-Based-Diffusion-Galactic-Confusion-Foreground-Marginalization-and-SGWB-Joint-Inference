@@ -1,21 +1,9 @@
 # Scientific workflow
 
-## Observation and uncertainty
+The current baseline uses daily segments of second-generation XYZ TDI data. The time-domain cases simulate and transform the streams to spectral observations. The static equal-arm frequency-domain case generates spectral observations directly. A complex Hermitian three-channel covariance models each retained segment and frequency. Its terms describe acceleration noise, optical metrology noise, an effective isotropic Galactic binary foreground, an astrophysical power law, and sound waves from a phase transition.
 
-Analyze a consistent multichannel representation of Galactic foreground, target SGWB, and instrument noise. Preserve the relevant channel, frequency, and epoch correlations. Condition on known detector states and jointly infer unknown physical scales.
+A complex Gaussian spectral likelihood uses the XYZ auto- and cross-spectra. The factorization over segments and frequency bins is an approximation. Static detector tables permit an exact sum over observations across segments within that likelihood. The unequal-arm case retains segment-dependent detector tables. Bilby/Dynesty returns marginal posteriors and log evidences. Joint inference propagates uncertainty in foreground and noise parameters to the target background.
 
-## Two marginalizations
+Compare each full fit with a no-sound-wave fit on the same input and compare runtime across the three matched detector configurations. Keep data preparation, compilation, sampling, and post-processing measurements distinct. See the [baseline plan](research-plan/full-covariance-baseline.md).
 
-At fixed physical parameters, integrate over possible foreground realizations. Conditional training simulations can represent this distribution by repeatedly drawing foreground realizations. The foreground amplitude remains an inference parameter.
-
-After obtaining the joint posterior, integrate over foreground and noise parameters to report the target SGWB posterior. Do not replace these integrations with a single estimated foreground waveform.
-
-## Density interface
-
-Learn conditional scores across artificial diffusion times. Use a probability-flow ODE with a known terminal density and divergence integration to define the flow-model likelihood. Validate endpoint approximation, normalization, standardization Jacobians, and numerical error. The learned density is approximate and requires independent checks.
-
-## Validation
-
-Start with analytically tractable Gaussian, non-Gaussian-mixture, and non-identifiable controls. Establish strong second-order and flexible-foreground baselines. Check inference calibration, bias, false alarms, and detection power at comparable false-alarm rates.
-
-Covariance-matched Gaussian foreground controls can help attribute gains to higher-order information. Test source-population changes, subtraction errors, and detector mismatch before extending claims.
+Future work will test detector and foreground mismatch with controlled simulations. Score-based likelihood correction will be evaluated against covariance-matched controls and physically informed foreground models using held-out simulations and posterior calibration.

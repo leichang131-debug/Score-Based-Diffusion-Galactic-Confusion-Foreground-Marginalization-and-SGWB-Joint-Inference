@@ -1,5 +1,7 @@
 # Reproduction scripts
 
+The current full-covariance baseline has a dedicated [workflow slot](taiji-sgwb-time-domain/README.md).
+
 Score-SDE has completed environment/data checks, original-network training to 200 updates, typed checkpoint continuation, and four original EMA sampling calls. These establish functionality; converged image generation and standard generative metrics remain unvalidated.
 
 All teacher source lives unchanged in `external/score-sde-reproduction/`, including its original `score_sde` submodule. Project scripts provide macOS setup, execution settings and diagnostics. See [the source-to-workflow map](../../docs/reproduction/score-sde/source-alignment.md).

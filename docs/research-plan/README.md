@@ -1,6 +1,10 @@
 # Research plans
 
-## Current implementation plan (2026-10-20)
+## Current baseline
+
+[Full-covariance Taiji baseline plan](full-covariance-baseline.md) defines the Figure 8 campaign and its runtime deliverables.
+
+## Earlier Route B implementation plan (2026-10-20)
 
 [Route B: score-based likelihood correction and A800 implementation plan](route-b-implementation-plan/route-b-research-and-server-implementation-plan.pdf) turns the teacher-provided methodology notes, meeting direction, fixed TaijiSGWB baseline, current reproduction evidence and server resource snapshot into gated experiments. See [source, provenance and verification](route-b-implementation-plan/README.md).
 
@@ -10,4 +14,4 @@ The PDF is in Chinese for research discussion; repository navigation and metadat
 
 The original PDF and standalone TeX source preserve the Chinese-language research framework and implementation plan, version 1.0 dated October 7, 2026. Their content is unchanged. `manifest.json` records the original archived hashes.
 
-The current Route B plan supersedes the earlier starting parameter schedule while retaining the scientific objective and historical reproduction limits.
+The October Route B plan documents the earlier parameter schedule and likelihood-correction design.

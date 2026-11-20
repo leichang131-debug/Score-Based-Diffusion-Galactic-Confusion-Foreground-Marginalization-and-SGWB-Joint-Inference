@@ -1,17 +1,15 @@
 # Research roadmap
 
-| Stage | Planned deliverable | Completion criterion |
+The current milestone is the ten-parameter full-covariance Taiji baseline. See the [Figure 8 reproduction plan](research-plan/full-covariance-baseline.md).
+
+| Stage | Deliverable | Completion criterion |
 | --- | --- | --- |
-| Repository foundation | English architecture and archived research plan | Files and version history accessible |
-| Reference reproduction | Score-SDE, TDC, and TaijiSGWB reports | Minimal workflows and exact environment records |
-| Numerical controls | Solvable likelihood and posterior experiments | Agreement with independently known results |
-| Physical baselines | Consistent data adapter and fair baselines | Correct units, response, covariance, and validation |
-| Conditional score model | Training and normalized density evaluation | Numerical closure and held-out diagnostics |
-| Joint inference | Gated conditional inference followed by nuisance-marginalized joint inference | Stable inference with calibration checks |
-| Attribution and realism | Covariance-matched controls and mismatch studies | Documented mechanism and applicability limits |
+| Repository preparation | Baseline documentation and directory layout | Study, scope, and artifact locations are discoverable |
+| Source and environment | Fixed upstream snapshot, separate environment, and six-fit campaign | Source identity and dependency checks pass |
+| Reference replay and regenerated inputs | Archived Figure 8 reference and three fresh input bundles | Shapes, conventions, and original truth likelihoods agree |
+| Production inference | Three full fits and three paired null fits | Sampler completion, restart and provenance records, posterior and evidence summaries |
+| Benchmark and figure | Fresh Figure 8 and per-configuration runtime report | Recorded sample sources, evidence errors, and comparable timing |
+| Foreground realism | Controlled anisotropy and data-model mismatch studies | Bias, coverage, and cost evaluated against the baseline |
+| Score-based extensions | Conditional likelihood correction experiments | Independent validation against calibrated physical baselines |
 
-The repository foundation and several reference workflows are now complete locally: Score-SDE small-scale training/recovery/sampling, four Triangle-Simulator tutorials, five Triangle-GB examples and the full TaijiSGWB 2.8 template schedule. Score-SDE quality reproduction, six Triangle-GB core-check failures, TaijiSGWB convergence and EQ/RJ comparisons remain unresolved. See [current reproduction status](reproduction/README.md). The conditional score model, unknown-foreground joint inference, calibration and attribution experiments remain future research. A publication venue is a research ambition, not a guaranteed outcome.
-
-## Current Route B sequence (2026-10-20)
-
-Follow the [implementation plan](research-plan/route-b-implementation-plan/route-b-research-and-server-implementation-plan.pdf): P0 server deployment and recovery; P1 representation and simulation splits; P2 exact Gaussian controls; P3 residual-score training; P4 flow density and posterior calibration; P5 physical foreground envelope; P6 controlled non-Gaussian/mismatch tests; P7 expanded joint inference. Server access is verified; research environments and experiments remain to be implemented.
+Earlier reproduction milestones remain documented in the [reproduction index](reproduction/README.md). The [Route B plan](research-plan/README.md) records the earlier sequence for learned corrections.

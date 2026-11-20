@@ -1,1 +1,1 @@
-Research on score-based diffusion for Galactic confusion foreground marginalization and joint SGWB inference, with reproducible simulations, statistical baselines, and calibrated uncertainty.
+Joint inference of Galactic foregrounds and stochastic gravitational-wave backgrounds, with a full-covariance Taiji baseline, ten-parameter posterior reproduction, runtime benchmarks, and planned score-based extensions.

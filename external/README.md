@@ -1,5 +1,7 @@
 # Upstream source integration
 
+The current full-covariance baseline has a dedicated [source slot](taiji-sgwb-time-domain/README.md).
+
 Updated: 2026-10-15. All upstream scientific source remains unmodified and retains its original license. Project-owned path, cache, checkpoint and plotting adapters live outside the source directories.
 
 | Component | Integration | Fixed upstream commit |
