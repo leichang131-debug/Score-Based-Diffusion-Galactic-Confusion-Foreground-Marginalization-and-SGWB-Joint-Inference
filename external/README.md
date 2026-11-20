@@ -1,6 +1,6 @@
 # Upstream source integration
 
-The current full-covariance baseline has a dedicated [source slot](taiji-sgwb-time-domain/README.md).
+The current full-covariance baseline uses the complete [taiji-sgwb-time-domain source snapshot](taiji-sgwb-time-domain/README.md). Its [source lock](../configs/upstream/taiji-sgwb-time-domain.json) records the upstream Git tree, file modes, blob IDs, and SHA-256 hashes.
 
 Updated: 2026-10-15. All upstream scientific source remains unmodified and retains its original license. Project-owned path, cache, checkpoint and plotting adapters live outside the source directories.
 
@@ -11,6 +11,7 @@ Updated: 2026-10-15. All upstream scientific source remains unmodified and retai
 | Triangle-Simulator | Submodule | `ab796358e9a36c8987f6bb53a97230d603bfdfd5` |
 | Triangle-GB | Submodule | `cbc0a1b0cbf4ec05ec969fa39405394168c3e06c` |
 | Triangle-BBH | Submodule, including bundled modified WF4Py | `f99b0a34ea8d085aff67220bdc165a746ba5ceda` |
+| taiji-sgwb-time-domain | Directly tracked fixed source snapshot, 91 original files, including vendored Triangle-Simulator | `e5ebd75639c3433717ff2cafe52e7f2f5a3f34bb` |
 | TaijiSGWB | Directly tracked fixed source snapshot, 19 original files | `4afaad4044b08721e7f1ce29cba3b0d912636dce` |
 
 For components that remain submodules:

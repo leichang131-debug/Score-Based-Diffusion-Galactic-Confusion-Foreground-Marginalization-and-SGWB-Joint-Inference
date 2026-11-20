@@ -1,0 +1,648 @@
+{
+  "schema_version": 1,
+  "integration": "fixed-source-snapshot",
+  "upstream_url": "https://github.com/Eric-Friedman-666/taiji-sgwb-time-domain.git",
+  "pinned_commit": "e5ebd75639c3433717ff2cafe52e7f2f5a3f34bb",
+  "tree_oid": "302234a30c3210eafc62412a633410bb9dfd8fda",
+  "repository_path": "external/taiji-sgwb-time-domain",
+  "file_count": 91,
+  "files": [
+    {
+      "path": ".gitignore",
+      "git_mode": "100644",
+      "git_blob": "ff1a45996fb718e6ff9d9b1035fc423d680ff5be",
+      "bytes": 212,
+      "sha256": "6a8b7b94234afa4bb9d5b962b34486ce968a6a60234150da029d8d53103c537f"
+    },
+    {
+      "path": "LICENSE",
+      "git_mode": "100644",
+      "git_blob": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "NOTICE",
+      "git_mode": "100644",
+      "git_blob": "c209faaddc8c2c34174ec04981c98ec12041ad7d",
+      "bytes": 942,
+      "sha256": "20e0e42d91a9fc2519178c6e967e52eee61eecb8f944ceb5d8892376d3c03f51"
+    },
+    {
+      "path": "README.md",
+      "git_mode": "100644",
+      "git_blob": "1819047b904164018a16bcc5b4c563a6b839852a",
+      "bytes": 10450,
+      "sha256": "c675b1a061287beb825563cad661e8b4e3ed636fd91818746dc02d0697936c85"
+    },
+    {
+      "path": "constraints-tested.txt",
+      "git_mode": "100644",
+      "git_blob": "14c4b542e0e1479e95bea169cda4ac6bb1970951",
+      "bytes": 838,
+      "sha256": "991b1a54c9fd7c91444c2ebb19b0a6a3c0d5c4fd564cdb8812679b460702c723"
+    },
+    {
+      "path": "data/cases.json",
+      "git_mode": "100644",
+      "git_blob": "9f418fcde6a3e8dafdd9f64048cd8524bd9cbdcf",
+      "bytes": 68511,
+      "sha256": "8fa208d60d409e227b2ceb77279e80344d662cb459b41fc3735802ddbf13e465"
+    },
+    {
+      "path": "data/releases.json",
+      "git_mode": "100644",
+      "git_blob": "1a84d2382b09381680ff5b0ea78879823504d50e",
+      "bytes": 6149,
+      "sha256": "0f079874a7e85039e7c0d5f0235fa359cade742c4fd5a3957d723da3c548c27d"
+    },
+    {
+      "path": "diagnostics.py",
+      "git_mode": "100644",
+      "git_blob": "fd3c36c1361122c3478ceaacd26bf629382e0ec1",
+      "bytes": 3699,
+      "sha256": "c56cdd365b8c1a9380d3ce1f502da691d8ea89e59c032d8005bdbf2185bf8fb1"
+    },
+    {
+      "path": "docs/SOURCE_LIST.txt",
+      "git_mode": "100644",
+      "git_blob": "3673bcc9d52294bf257ed218f62ad8516ac9ea53",
+      "bytes": 2829,
+      "sha256": "ea59b505bbf5284035e42ea4ff9fbc174f012e6ec707e6e6fe40d01bd0d654d6"
+    },
+    {
+      "path": "docs/fit-index.md",
+      "git_mode": "100644",
+      "git_blob": "305733187cca69a950fbf5d93a761cffb5a9807f",
+      "bytes": 17479,
+      "sha256": "49280a31c05abf7ba784959b0e2096d463db10976eb67e9abf57a8f823ffa85c"
+    },
+    {
+      "path": "docs/reproduction-details.md",
+      "git_mode": "100644",
+      "git_blob": "8d59d6c04ae7bc5f66aa45c8e7119121e493fa90",
+      "bytes": 5765,
+      "sha256": "8888e400e17f3e208e9c6e237fb3cc3d46e6bbfd62f29b498388077a4f8b919b"
+    },
+    {
+      "path": "docs/verification.md",
+      "git_mode": "100644",
+      "git_blob": "a0eaed3c6633c33fcd0678a0d20a70324d299b11",
+      "bytes": 4680,
+      "sha256": "fab57ff034137e335fe1d532d5d0b68d939a26d2e32297778e0c2bf75aa51149"
+    },
+    {
+      "path": "get_data.py",
+      "git_mode": "100644",
+      "git_blob": "50392e37ad4f0b38f5268adb8ae71414bfb89a3e",
+      "bytes": 4022,
+      "sha256": "5ec159403cc4b9e8ea5bd559d04a016acd9b5e56485f18621dc01e066e849999"
+    },
+    {
+      "path": "infer.py",
+      "git_mode": "100644",
+      "git_blob": "31a7946ee792738156d8e13547f14023cec6ad2f",
+      "bytes": 13570,
+      "sha256": "bc6fd0d0f9f8c8679c077035924e41837bbb07327a59e48c0c74443368217ace"
+    },
+    {
+      "path": "paper_cells/cell_03.py",
+      "git_mode": "100644",
+      "git_blob": "a838efa67819122f301f4f0a6e52213f6dd9b93f",
+      "bytes": 733,
+      "sha256": "f263502657218c64e79260ad28a86f288ac04c64c21f9c185180cec004a5bdd5"
+    },
+    {
+      "path": "paper_cells/cell_05.py",
+      "git_mode": "100644",
+      "git_blob": "eda1f7a0097d8664818225db1691e4c0a5f0c76f",
+      "bytes": 210,
+      "sha256": "9a703b2412b1d76cb02446e1db8a29f1e910976bb9d10c557756f0842794bdbf"
+    },
+    {
+      "path": "paper_cells/cell_07.py",
+      "git_mode": "100644",
+      "git_blob": "567f6b8e6a5f88ceb7402c9d15d8f8c9070efadc",
+      "bytes": 5056,
+      "sha256": "cd381753857ae6d016dfc3c8030636dc0a9b7771424dc100ef9339e1eaacdcd8"
+    },
+    {
+      "path": "paper_cells/cell_09.py",
+      "git_mode": "100644",
+      "git_blob": "fe0781a370cdf82833531c6d78deaa067007e2d4",
+      "bytes": 5056,
+      "sha256": "65897d3bf365f20eeaec9230f16d1a01b17a871f0fd8a5bf3b3fef39275c018e"
+    },
+    {
+      "path": "paper_cells/cell_11.py",
+      "git_mode": "100644",
+      "git_blob": "7657ae37ac9c40a9f3311b1c9a6aac52cce587ed",
+      "bytes": 5048,
+      "sha256": "604c9185899784e7c916fbd4a1960eff148668829dc4d60e009af048acfd7c0d"
+    },
+    {
+      "path": "paper_cells/cell_13.py",
+      "git_mode": "100644",
+      "git_blob": "320e35ab8291aec992d504a373f026cfe74d21eb",
+      "bytes": 3655,
+      "sha256": "09f3cb821b41726aada2964e204462e960453aaadb8c5cf4e47b6e4ca9c65123"
+    },
+    {
+      "path": "paper_cells/cell_15.py",
+      "git_mode": "100644",
+      "git_blob": "309df7f1e5df2e7f96f24593059fd43de57271b3",
+      "bytes": 3655,
+      "sha256": "8855a72e6c3a32129e1c446a06bf6c6ded6e4867ed5d1e654299b15cf223230c"
+    },
+    {
+      "path": "paper_cells/cell_17.py",
+      "git_mode": "100644",
+      "git_blob": "cef44c4e6483cfaf545730c9ab359e4991ebc8af",
+      "bytes": 3649,
+      "sha256": "ff829908b2fa489608ff69e2b3c697296a1f10eb8ebcba996644943fc037976b"
+    },
+    {
+      "path": "paper_cells/cell_19.py",
+      "git_mode": "100644",
+      "git_blob": "fe842de23da330566ef28b53f56860e427d21272",
+      "bytes": 5004,
+      "sha256": "344e8f98214c2b4a8c63b27961014ba5f2bb24e4adab6d5ed092c2be6d1c4a54"
+    },
+    {
+      "path": "paper_cells/cell_21.py",
+      "git_mode": "100644",
+      "git_blob": "664f0c47ff7d783c0c6bac512a60fdddb40a7d08",
+      "bytes": 6374,
+      "sha256": "88e88ef391e828a6c956ae38d266059a190c0525bb4e48fb0c414137dc30b915"
+    },
+    {
+      "path": "paper_cells/cell_23.py",
+      "git_mode": "100644",
+      "git_blob": "ff0d8cc2b64635215ed1fd528d63a796e6f288c2",
+      "bytes": 6458,
+      "sha256": "3e0d85d2aeb910fc0533ac5b201e566ee1e966ea8ede0f9cc4a8dfef2bbeae0b"
+    },
+    {
+      "path": "paper_cells/cell_27.py",
+      "git_mode": "100644",
+      "git_blob": "f1070f9735198d23ac3010a96d03989e33399dcb",
+      "bytes": 3556,
+      "sha256": "6fffc2c56e36b1733d2ee8bcd6d70e89a80fa1d1a8a8cd9f5699ac5332049a78"
+    },
+    {
+      "path": "paper_cells/cell_29.py",
+      "git_mode": "100644",
+      "git_blob": "8508009d74d3b9fd1f3778579a9b79012116bd5c",
+      "bytes": 4875,
+      "sha256": "f97117f4a10ca2b1bcdb4d5d5af6d868ff8b51f6db045d36ba39e00b2a46dd25"
+    },
+    {
+      "path": "paper_cells/cell_33.py",
+      "git_mode": "100644",
+      "git_blob": "d55b7079c14e7c7643af6aa54b78585083cb34ad",
+      "bytes": 11049,
+      "sha256": "c0fdec3f2516d6f30a9a083604dd04ca951e60362a9037acd73f7c587f03de9c"
+    },
+    {
+      "path": "paper_cells/cell_35.py",
+      "git_mode": "100644",
+      "git_blob": "2a12df37080aff7b8ab1f1175ee33c3686f96282",
+      "bytes": 10499,
+      "sha256": "ad1a3cb136c8f24bf24717cb21352e5fd1427dd5950f5e189856521ae736e556"
+    },
+    {
+      "path": "paper_cells/cell_37.py",
+      "git_mode": "100644",
+      "git_blob": "d3c5025724a3fed93397a3f5c4489fadd0ae1ad0",
+      "bytes": 3147,
+      "sha256": "5ee92e50da9ae7b8ae1e4e6c029b2173f3500db5e43428a5534649e0550d838f"
+    },
+    {
+      "path": "paper_cells/cell_39.py",
+      "git_mode": "100644",
+      "git_blob": "702c03601fb4cf1169d21e6f2c2a16109754015b",
+      "bytes": 1126,
+      "sha256": "52b0c454672986ac3b0080332ea5525a7d688c865e1f23d9a3d2d69b965654c9"
+    },
+    {
+      "path": "paper_cells/cell_41.py",
+      "git_mode": "100644",
+      "git_blob": "5aff658d8bf74aa76533342106026b83135b44a2",
+      "bytes": 6261,
+      "sha256": "2dc0fa8f8d5a2e35216a13e496b0435e4a3081d8ecb71e1790a4d85ba3d6fc1e"
+    },
+    {
+      "path": "paper_cells/cell_43.py",
+      "git_mode": "100644",
+      "git_blob": "be08b3c451d44db339f6d7a511609c5629bfe3e1",
+      "bytes": 8321,
+      "sha256": "bfff37434f0a95d729ce367230a4a479788c0d41702b88f38be757cbf3466048"
+    },
+    {
+      "path": "paper_io.py",
+      "git_mode": "100644",
+      "git_blob": "a1c585d869469724237b678b2b7d4d55ef71a9cc",
+      "bytes": 2746,
+      "sha256": "d31ac9aeeb60b01b6386ff202d58b76653fc9b4183cfe12f17af898e22824855"
+    },
+    {
+      "path": "py_code/__init__.py",
+      "git_mode": "100644",
+      "git_blob": "1ae9b77604cdd0c72915a006a18041ca002d03e4",
+      "bytes": 281,
+      "sha256": "dc914e911d7698ec527bc4ef7815abcda6025aba0ab1272fe7990f68aeadd9ed"
+    },
+    {
+      "path": "py_code/lisa_generate.py",
+      "git_mode": "100644",
+      "git_blob": "e5e1613d223a4e3c3881223bdcd7a85f5503ad0b",
+      "bytes": 10181,
+      "sha256": "ba548badc9b63f90ab916c37efdf06e7d3f7ec0cecb0e74205d5886d5ad8e9e2"
+    },
+    {
+      "path": "py_code/model.py",
+      "git_mode": "100644",
+      "git_blob": "4f18c0ede88f6cf0734209f9a6afee81f6a80442",
+      "bytes": 9611,
+      "sha256": "740d1892921eed920b12869199bd5a02fdbd6857f756a80993a7a3980d5fdab8"
+    },
+    {
+      "path": "py_code/parameters.py",
+      "git_mode": "100644",
+      "git_blob": "e26a569461b3ffd8e5d549e068f51ecd5aeabc8c",
+      "bytes": 2455,
+      "sha256": "ceccbd742640f410b33657f4ebc4a89ff04b155075701e2467c90efd458a3281"
+    },
+    {
+      "path": "py_code/sample.py",
+      "git_mode": "100644",
+      "git_blob": "8ed3dbb9d36df524c095f33e29029b089df10482",
+      "bytes": 8501,
+      "sha256": "5623ccd56870cbd4abb25d8d672bffff6fbac63bb41996a8109b687c80df1265"
+    },
+    {
+      "path": "py_code/triangle_code.py",
+      "git_mode": "100644",
+      "git_blob": "6339470e9e0366f5519dc088f72ec32dcec14eec",
+      "bytes": 86038,
+      "sha256": "f7acd54e30ee4cded2cbd43b3102ee9f6fe29e397eea3b4a7886880d5d9bb62f"
+    },
+    {
+      "path": "reference/data_manifest.json",
+      "git_mode": "100644",
+      "git_blob": "0e6cc3862e6342201c2aefb4a4860fdfee03a94b",
+      "bytes": 696105,
+      "sha256": "004e8d36c02c0dbc3aef233f284640e8351c6db8954956ff7e0cf0226237f0ab"
+    },
+    {
+      "path": "reference/figure_code_map.json",
+      "git_mode": "100644",
+      "git_blob": "1805320472ed8244edb388a0a3e5b101d3aa10b6",
+      "bytes": 3136,
+      "sha256": "74ced18a1f675afb39c8f0f0ff207b9d5fe0cd515a490ee99a7c2445e907f50d"
+    },
+    {
+      "path": "reference/inference_manifest.json",
+      "git_mode": "100644",
+      "git_blob": "4993351496337de591ca81c44628263ef3c7674e",
+      "bytes": 324186,
+      "sha256": "44d331810c119c9c2333cec121972043425cd7680e4869a6106963b6065a0b9c"
+    },
+    {
+      "path": "reference/manuscript_artifacts.json",
+      "git_mode": "100644",
+      "git_blob": "ffba8c7b3bbc386196e532a28563d03e2cebb86f",
+      "bytes": 2493,
+      "sha256": "7eec9c28389470b6c5cbaacde47a7ea477f18e1e34bb7a5953d8bdfc4f129c18"
+    },
+    {
+      "path": "reference/mismatch_precision.json",
+      "git_mode": "100644",
+      "git_blob": "da3f94ee1033aa127a23b795862263a877171c99",
+      "bytes": 1631,
+      "sha256": "b653c5b53a21c9e3c85b3630bae7b7af6fb329062ab4c61ce29cf84007d2b64f"
+    },
+    {
+      "path": "reference/original_paper_tables.json",
+      "git_mode": "100644",
+      "git_blob": "8940c2702322cafc3090980c41e6decccf7d31f9",
+      "bytes": 13115,
+      "sha256": "d5803a973ee304a07808b684fdd5b0a03767a660270c613c590a859b6e250074"
+    },
+    {
+      "path": "reference/original_runtime_and_settings.json",
+      "git_mode": "100644",
+      "git_blob": "336e232adeadb899b38f07f89f360cdb2f8fa327",
+      "bytes": 17813,
+      "sha256": "7c4c149ff54165ef61babca90cbfe54dbbc0d61616c0f964402d9b550d660b9c"
+    },
+    {
+      "path": "reference/paper_tables.json",
+      "git_mode": "100644",
+      "git_blob": "8940c2702322cafc3090980c41e6decccf7d31f9",
+      "bytes": 13115,
+      "sha256": "d5803a973ee304a07808b684fdd5b0a03767a660270c613c590a859b6e250074"
+    },
+    {
+      "path": "reference/production_source_manifest.json",
+      "git_mode": "100644",
+      "git_blob": "5bec8613614719d3dfa75ba43108922c38169dfe",
+      "bytes": 4788,
+      "sha256": "ec7cd102ba5814e0967b709b6ea741ff3916d18600b887147ac0c1f1181b2659"
+    },
+    {
+      "path": "reference/rounding_corrections.json",
+      "git_mode": "100644",
+      "git_blob": "313a12c23de6e6e3d8b10219c2bb03f674ed0194",
+      "bytes": 2288,
+      "sha256": "c98b499dfba2ace0e07fb0df07f28bf83009f6e580efa7261ff6d26cc4a35ede"
+    },
+    {
+      "path": "reference/table4_rounding_correction.patch",
+      "git_mode": "100644",
+      "git_blob": "b1da481367687e2f441c6f63a82605fc557a948d",
+      "bytes": 2670,
+      "sha256": "d5023d140db1e828296fa14dc5e9651c5537cb70e0a67ae61dbf339ea5679cb7"
+    },
+    {
+      "path": "reference/tested_all_inference_inputs.json",
+      "git_mode": "100644",
+      "git_blob": "b90bc6c5ab308f76c02cee283ae0d5425a2ba065",
+      "bytes": 46879,
+      "sha256": "9d8ce519c6a2963d9f50d3b945701152a7d15e0ae79d61823872c8099e8ca9bf"
+    },
+    {
+      "path": "reference/tested_four_parameter_simulation.json",
+      "git_mode": "100644",
+      "git_blob": "1971cd8632d45e37982f242bd4611ce1fb2b45a9",
+      "bytes": 216,
+      "sha256": "231ce81fc54aaf3afdf7b7e3db0a6cc78ee8d99101ce9a1c70681fc9dd1e28df"
+    },
+    {
+      "path": "reference/tested_pipeline.json",
+      "git_mode": "100644",
+      "git_blob": "277cbf4a92a61159d6aa0f60e96bc64140a1967d",
+      "bytes": 7023,
+      "sha256": "ee01c30398a4e9ed535a1d63788552dcabceb611256e21406581ee06689d8c16"
+    },
+    {
+      "path": "reference/tested_replay_latex.json",
+      "git_mode": "100644",
+      "git_blob": "3f82fbc16ae61cd055b6b0520a810c49b9ae24e0",
+      "bytes": 500,
+      "sha256": "13db6a027f35d85039cc41ae841edbf7bce3a5469f2c252e5dba878329f16a86"
+    },
+    {
+      "path": "reference/tested_replay_linux.json",
+      "git_mode": "100644",
+      "git_blob": "74fe887a4ac8d50b472bdf9e5b18d4124ac1e408",
+      "bytes": 500,
+      "sha256": "148cc2ab92958d90a6c79c3dbb2b13453e629ea0d0346ea1470e523197bb2d42"
+    },
+    {
+      "path": "reference/tested_replay_macos.json",
+      "git_mode": "100644",
+      "git_blob": "362af4cfd49d9c84e60de7a69b4149e3a023200b",
+      "bytes": 113986,
+      "sha256": "525d62e3b9a1ffe18711f935b2c0492eb2b353d918a93da05c1957a8022e838d"
+    },
+    {
+      "path": "reference/triangle_lazy_waveform_imports.patch",
+      "git_mode": "100644",
+      "git_blob": "eea6ea7dea5d80c31049f7714fdc4d8ffe881bc5",
+      "bytes": 1920,
+      "sha256": "66e951807ce1d10377bd63a1c338ce713f3912f1341d799c4040446fc1f6b4ff"
+    },
+    {
+      "path": "reference/triangle_server_modifications.patch",
+      "git_mode": "100644",
+      "git_blob": "f2baf5e50debbf68551b7cdc3b0ee0bae31e94bc",
+      "bytes": 24190,
+      "sha256": "13e2850a0193523448485f9ff1aad37251d3d8503134395948930a1b1f4c6ee6"
+    },
+    {
+      "path": "reproduce.py",
+      "git_mode": "100644",
+      "git_blob": "2cf9f48ed6e33b69ede34c4b27123c96865e5405",
+      "bytes": 12242,
+      "sha256": "ad3147dc48280671ec7a38f16ddbe3386967d13e64876a2a196c03cee36c8494"
+    },
+    {
+      "path": "requirements-inference.txt",
+      "git_mode": "100644",
+      "git_blob": "ade0d0a939ccfb389da2e20c322a5c7cd90870e8",
+      "bytes": 97,
+      "sha256": "45e398a635a5d26afcace6c4795ebcab15f3cb04beaadf7bccdf1a9eae97b6ea"
+    },
+    {
+      "path": "requirements-replay.txt",
+      "git_mode": "100644",
+      "git_blob": "4263374e90b678ceb32b754ccd849721413701f5",
+      "bytes": 157,
+      "sha256": "c7c778d91e6f4da5ecdaeacb632271f516d01d3c1f3bb13657457bae7e28d9ba"
+    },
+    {
+      "path": "scripts/astro/ast4_control_diagnostics_20260508.py",
+      "git_mode": "100644",
+      "git_blob": "1f31a7cda5dd914b4d8b8c21ed88378497383194",
+      "bytes": 50658,
+      "sha256": "7a52bf513d3b5f82db96ee11305b583902f2d7b810d286fd16be19c3c1a8f0ac"
+    },
+    {
+      "path": "scripts/astro/ch32_astro_formal_20260520.py",
+      "git_mode": "100644",
+      "git_blob": "24d84e732fbdee39ab4a09c9e7c472cbeabf779b",
+      "bytes": 71668,
+      "sha256": "de7c22cc408e7a10e5a909beee03c53c1499c46bd9b0bc09f493b76d7a5ff093"
+    },
+    {
+      "path": "scripts/astro/ch32_precompute_response_noise_tables_20260521.py",
+      "git_mode": "100644",
+      "git_blob": "5e9d05f0ee77051ef2e88119f9ba72b03770c54c",
+      "bytes": 14024,
+      "sha256": "dcdfabe701b8fd020dd3bf8ee9b7db9ddbf29e00390e95f3d14814b4b4de5170"
+    },
+    {
+      "path": "scripts/astro/ch33_sw10_fullxyz_20260531.py",
+      "git_mode": "100644",
+      "git_blob": "2a2c8e23480f7f5c8adbe3f264debce67679b0d0",
+      "bytes": 87208,
+      "sha256": "e7a1199256d7acdb8188ce96c3e1c8eb1cd5c96d3db20dde847c415c948924d3"
+    },
+    {
+      "path": "scripts/astro/firstday_xyz_simulated_csd_20260512.py",
+      "git_mode": "100644",
+      "git_blob": "5d54fe7f9075a24a91e238bc1f5440f73c7155cc",
+      "bytes": 20409,
+      "sha256": "b2b1089f7c90790689a825e2661966365e0c94e5b2989c5289484ccb1d15066e"
+    },
+    {
+      "path": "scripts/astro/plot_ch22_detector_matrix_xyz_compare_20260603.py",
+      "git_mode": "100644",
+      "git_blob": "8c35cf6e8e628787d452f6d62c28fba455ae07a9",
+      "bytes": 35709,
+      "sha256": "8352f5bf2a7db85f2538f43600af1d5e5233b817e5f07f69bcd00d4dc83a1921"
+    },
+    {
+      "path": "scripts/astro/plot_ch31_xyz_validation_20260520.py",
+      "git_mode": "100644",
+      "git_blob": "9d275fa30c35bee0ac9a908894f4b535d1c4548e",
+      "bytes": 17642,
+      "sha256": "8cb7c39f43e07a59714de81cf237e920a14edd58c630819f2ce97afc67d625ab"
+    },
+    {
+      "path": "scripts/astro/run_ast4_covariance_validation_parallel_20260511.py",
+      "git_mode": "100644",
+      "git_blob": "fc246672fe9902224e029aae56f6f17dd8bc0683",
+      "bytes": 45053,
+      "sha256": "5b3f1883d9e89291c54d4e010c2a6b1e58004afc21c884f12424168ef410b25b"
+    },
+    {
+      "path": "scripts/astro/xyz4_direct_fullcov_pe_dailyavg_20260506.py",
+      "git_mode": "100644",
+      "git_blob": "4b7a116dc3c1c9437c7b537931ffaa9ee938fb34",
+      "bytes": 30378,
+      "sha256": "151a8873f78d8caf8520674813061dae0c8a735e4a22b82f2550c417a78ecd63"
+    },
+    {
+      "path": "scripts/astro/xyz4_multirealization_fullcov.py",
+      "git_mode": "100644",
+      "git_blob": "579b56bffaa326010437d1d00b1f25e12cf63a18",
+      "bytes": 24442,
+      "sha256": "75c702262a0ce8b043925ddca89477c2d1e5ff7cc4d8e1978aa72f7b6ed79038"
+    },
+    {
+      "path": "validate_pipeline.py",
+      "git_mode": "100644",
+      "git_blob": "4763799364734f198fe18c2f178f845ba2c45508",
+      "bytes": 7654,
+      "sha256": "66dde3da723924b9dde5046a78f0a238822fba3c70b23dea44536d39aa998e08"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/LICENSE",
+      "git_mode": "100644",
+      "git_blob": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/README.md",
+      "git_mode": "100644",
+      "git_blob": "68bce0c2822dfe421f7ee3181dd9fb720f7df60a",
+      "bytes": 3046,
+      "sha256": "3f24ecf844cc7f34deb916814f7b3628f88907fead2a9b447db753b90096bb35"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/Constants.py",
+      "git_mode": "100644",
+      "git_blob": "eeab72a31760df5248609912abf8daec599b27b3",
+      "bytes": 3877,
+      "sha256": "7c6070cff005acd46e843b00864b1890a3b8c59319fcf94894325f2fd0caa760"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/Cosmology.py",
+      "git_mode": "100644",
+      "git_blob": "7a083ba8dfc1624616209b4c31b806a6a3d9dd83",
+      "bytes": 651,
+      "sha256": "6a5b84fb65a99ff34d5135b9796b9e4eb43207d2b365a7e024a6e4ced8c39a2c"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/Data.py",
+      "git_mode": "100644",
+      "git_blob": "e07716cb99183def5f317abd02428b10c97ab08d",
+      "bytes": 30763,
+      "sha256": "3927960258a6a0e4c98f843997abd2538db363a83b8c94859e2f51b5706cf719"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/FFTTools.py",
+      "git_mode": "100644",
+      "git_blob": "1d61bfb0190437add25b396c059a233a4bc16f6b",
+      "bytes": 5606,
+      "sha256": "f3c4a7245df9ca727885fa115872730d8ca0c92cc463547d9cfb55d991e0458e"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/GW.py",
+      "git_mode": "100644",
+      "git_blob": "b1834368522c99b77162d35890f192dea6573456",
+      "bytes": 76974,
+      "sha256": "24321b444ab6fa75a83a39563071520450260831f4d6eb99dcd068d90b00f0c1"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/Glitch.py",
+      "git_mode": "100644",
+      "git_blob": "ec410728651c91b75532139670a976dccdba1a03",
+      "bytes": 967,
+      "sha256": "f97e8c61ee3f07235fd847d8ad2adb9ca3b8b53ae50f419918f119ba92fee1bd"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/Interferometer.py",
+      "git_mode": "100644",
+      "git_blob": "4a48b5d3b1155f0a83a3586b80322adeae5c45f0",
+      "bytes": 55248,
+      "sha256": "418e836babdc14a0bd1e383b6493ddb7a99548c2f0f9e5bef2d3040732794187"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/Noise.py",
+      "git_mode": "100644",
+      "git_blob": "f841c4577d23d5015f8acaeb93fd8cecbcdf687b",
+      "bytes": 35381,
+      "sha256": "245938297b3511c9792bdef4163877f8140e70464a8795695ac67275d7ec2daa"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/Offset.py",
+      "git_mode": "100644",
+      "git_blob": "15b4520d706b2eaa8ab90b65900b6f479ec8f0c0",
+      "bytes": 1972,
+      "sha256": "e03841bcc645239e79c0ace9b593bc1f2676c36be03b254a7bd7839d76a55e3d"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/Orbit.py",
+      "git_mode": "100644",
+      "git_blob": "042e9863e742983270eec0353eb01111346d9315",
+      "bytes": 10899,
+      "sha256": "5a20a34bdaf64596f653ba01f0a58bfa399b01e79cab9ad0ec4bfbf188ae20a0"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/Plot.py",
+      "git_mode": "100644",
+      "git_blob": "f8db583f18e6704feaaafc34adf6f5025bfcf9b5",
+      "bytes": 3770,
+      "sha256": "ace78dfc28870465c03c8c052a0d07d935338d901e76b69382a38c9f10d3a3d5"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/TDI.py",
+      "git_mode": "100644",
+      "git_blob": "d090b195b2ec058ff0b5f3f664420126916b76ac",
+      "bytes": 49673,
+      "sha256": "df80d1ab2c5bce9a6aa998b5cdf42129e8853d9075a8df9bb89919e4e5b988d6"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/TDIFly.py",
+      "git_mode": "100755",
+      "git_blob": "934521802b60e3dc3f7ef2494172e6e0a531ae33",
+      "bytes": 37887,
+      "sha256": "b96455f55cb1d1642aa4dd141d294f7740d9a2cb5e31e1645560ee41845c0e29"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/TTL.py",
+      "git_mode": "100644",
+      "git_blob": "4f87a2a46150a53fa881c3f5304ffad22425d468",
+      "bytes": 5907,
+      "sha256": "14fabcc80c26f27a862153374a179e5b8b35efff2735b824d16d506101e89621"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/Triangle/__init__.py",
+      "git_mode": "100644",
+      "git_blob": "2d8c632b0026f6980c37e65a8256183d3b5a08c9",
+      "bytes": 428,
+      "sha256": "ee514af9cc26642d1345a41ad827abb8d278ea83dc9a13a338ea882acc657d96"
+    },
+    {
+      "path": "vendor/Triangle-Simulator/pyproject.toml",
+      "git_mode": "100644",
+      "git_blob": "0d3552ebf44005a3ebc673d0a2f3332087c6c170",
+      "bytes": 2554,
+      "sha256": "506d950dd6205c489a0287ef7197f97c2a5167344dd77ac5d870cb03eebf7f74"
+    }
+  ]
+}

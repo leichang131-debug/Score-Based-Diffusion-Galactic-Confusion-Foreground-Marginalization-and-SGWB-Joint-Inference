@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "scope": "local environment and synthetic likelihoods",
+  "upstream_commit": "e5ebd75639c3433717ff2cafe52e7f2f5a3f34bb",
+  "python": "3.12.14",
+  "os": "Darwin",
+  "architecture": "arm64",
+  "macos_version": "27.0",
+  "jax_backend": "cpu",
+  "jax_x64": true,
+  "versions": {
+    "jax": "0.4.30",
+    "jaxlib": "0.4.30",
+    "bilby": "2.6.0",
+    "dynesty": "2.1.5",
+    "healpy": "1.17.3",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "h5py": "3.14.0",
+    "matplotlib": "3.10.6",
+    "corner": "2.2.3",
+    "getdist": "1.7.2"
+  },
+  "triangle_import": "vendor/Triangle-Simulator/Triangle/__init__.py",
+  "dependency_check": "pass",
+  "inference_fit_count": 84,
+  "figure_8_fits": {
+    "fit_078": 8,
+    "fit_079": 10,
+    "fit_080": 8,
+    "fit_081": 10,
+    "fit_082": 8,
+    "fit_083": 10
+  },
+  "driver_help": "pass",
+  "replay_help": "pass",
+  "synthetic_likelihoods": {
+    "static": {
+      "numpy": 732.8843789513045,
+      "jax": 732.8843789513045,
+      "absolute_difference": 0.0
+    },
+    "segmented": {
+      "numpy": 732.357480770775,
+      "jax": 732.357480770775,
+      "absolute_difference": 0.0
+    }
+  },
+  "absolute_tolerance": 1e-09,
+  "official_data_loaded": false,
+  "production_sampling_run": false,
+  "observations": [
+    "The vendored CPU import printed \"no cupy\".",
+    "NumPy emitted divide-by-zero and invalid warnings inside slogdet on this platform. Both synthetic likelihood values were finite and matched JAX. Production numerical validation remains pending."
+  ]
+}
