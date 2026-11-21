@@ -1,0 +1,17 @@
+Downloading lisa_td_paper_replay_data_20261017.tar.gz (56.3 MB)
+Downloading part 1/14
+Downloading part 2/14
+Downloading part 3/14
+Downloading part 4/14
+Downloading part 5/14
+Downloading part 6/14
+Downloading part 7/14
+Downloading part 8/14
+Downloading part 9/14
+Downloading part 10/14
+Downloading part 11/14
+Downloading part 12/14
+Downloading part 13/14
+Downloading part 14/14
+Verified SHA256 and unpacked 4484 files into <repo>/external/taiji-sgwb-time-domain
+Next: python reproduce.py all --output outputs

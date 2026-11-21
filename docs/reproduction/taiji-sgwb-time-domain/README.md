@@ -1,6 +1,6 @@
 # Full-covariance Taiji reproduction
 
-The current scope is the three ten-parameter Figure 8 posteriors, three matched null fits, and per-configuration runtime records. The fixed upstream source and a local CPU environment are ready. Official data preparation, Figure 8 replay, bundle validation, and formal sampling are pending. See the [baseline plan](../../research-plan/full-covariance-baseline.md).
+The current scope is the three ten-parameter Figure 8 posteriors, three matched null fits, and per-configuration runtime records. The fixed upstream source and a local CPU environment are ready. The official archive was verified and Figure 8 was rendered locally with the upstream LaTeX option. See the [reference replay and evidence](../../../results/taiji-sgwb-time-domain/reference-replay/README.md). Production bundle validation and formal sampling are pending. See the [baseline plan](../../research-plan/full-covariance-baseline.md).
 
 | Area | Repository location |
 | --- | --- |

@@ -1,0 +1,75 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_DIFFERENCES",
+  "posterior_source": "archived production chains",
+  "production_inference_rerun": false,
+  "replay_seconds": 64.51723041699995,
+  "input_files_verified": 4502,
+  "figure": {
+    "file": "10para_corner.png",
+    "sha256": "9785ec32eb0ab967fc3f181f5bd2cd610ddab61d327c6d0307fad59fd5eb8aed",
+    "width": 5039,
+    "height": 5203
+  },
+  "configurations": [
+    {
+      "configuration": "fd_equal",
+      "full_fit": "fit_079",
+      "null_fit": "fit_078",
+      "full_input": "data/ch33_sw10_fullxyz_20260531/fd_equal/results/fd_equal_fullxyz_r00_seed2026060255_seg360_fmin1em04_fmax0p15_w0p01_ch33_sw10_fd_equal_fullxyz_20260531_om0m11p5_bundle_formal_nlive1000_full10.h5",
+      "full_sha256": "3737d26ced38243db18d2700a83b3c22dde205c55f0090c9a01caedb34c2455f",
+      "null_input": "data/ch33_sw10_fullxyz_20260531/fd_equal/results/fd_equal_fullxyz_r00_seed2026060255_seg360_fmin1em04_fmax0p15_w0p01_ch33_sw10_fd_equal_fullxyz_20260531_om0m11p5_bundle_bf_nlive1000_no_sw.h5",
+      "null_sha256": "5fc2414606ca92085cabbd834cee51f95e35e41871fa932c00c03a1fbae11d8d",
+      "posterior_shape": [
+        5664,
+        10
+      ],
+      "log_z_full": 299392923.01156896,
+      "log_z_null": 299392912.36304075,
+      "log_bayes_factor": 10.648528218269348,
+      "paper_log_bayes_factor": 10.65
+    },
+    {
+      "configuration": "td_equal",
+      "full_fit": "fit_081",
+      "null_fit": "fit_080",
+      "full_input": "data/ch33_sw10_fullxyz_20260531/td_equal/results/td_equal_fullxyz_r00_seed2026069815_seg360_fmin1em04_fmax0p15_w0p01_ch33_sw10_td_equal_fullxyz_20260531_om0m11p5_bundle_formal_nlive1000_full10.h5",
+      "full_sha256": "28ac1495d0200f4fa8c66ccc155273e93848a4357201fb306bae4200b31e070a",
+      "null_input": "data/ch33_sw10_fullxyz_20260531/td_equal/results/td_equal_fullxyz_r00_seed2026069815_seg360_fmin1em04_fmax0p15_w0p01_ch33_sw10_td_equal_fullxyz_20260531_om0m11p5_bundle_bf_nlive1000_no_sw.h5",
+      "null_sha256": "1183225d835527103d2b61bb2f1b1fdbb83c402ec4203817fd3e1b2c7ccd82ac",
+      "posterior_shape": [
+        5921,
+        10
+      ],
+      "log_z_full": 299390441.4255296,
+      "log_z_null": 299390431.4664179,
+      "log_bayes_factor": 9.95911169052124,
+      "paper_log_bayes_factor": 9.96
+    },
+    {
+      "configuration": "td_unequal",
+      "full_fit": "fit_083",
+      "null_fit": "fit_082",
+      "full_input": "data/ch33_sw10_fullxyz_20260531/td_unequal/results/td_unequal_fullxyz_r00_seed2026069415_seg360_fmin1em04_fmax0p15_w0p01_ch33_sw10_td_unequal_fullxyz_20260531_om0m11p5_bundle_formal_nlive1000_full10.h5",
+      "full_sha256": "81b3887b0d789cc58dfdda235e63a27c52e57054c1ba7b45b87c78db761d9005",
+      "null_input": "data/ch33_sw10_fullxyz_20260531/td_unequal/results/td_unequal_fullxyz_r00_seed2026069415_seg360_fmin1em04_fmax0p15_w0p01_ch33_sw10_td_unequal_fullxyz_20260531_om0m11p5_bundle_bf_nlive1000_no_sw.h5",
+      "null_sha256": "bc9498890cc15bd878c9e749dc6b57a60a4a8df8751f4cdd972de945017f418d",
+      "posterior_shape": [
+        5743,
+        10
+      ],
+      "log_z_full": 299400356.4317544,
+      "log_z_null": 299400350.6229968,
+      "log_bayes_factor": 5.8087576031684875,
+      "paper_log_bayes_factor": 5.81
+    }
+  ],
+  "paper_comparison": {
+    "paper": "https://arxiv.org/pdf/2608.11276v2",
+    "reference": "Figure 8 image extracted from the author PDF",
+    "reference_png_sha256": "c3261d95aab0e0664ea8325125b800819737c50bb588ca6784962612fa4675c0",
+    "method": "Compare dimensions and SHA-256 of decoded RGB pixel bytes",
+    "paper_rgb_sha256": "5b011754221c454ab1f773f3ec15bc51e1cdca3a8eeee28e46e3dfc1b4985272",
+    "replay_rgb_sha256": "5b011754221c454ab1f773f3ec15bc51e1cdca3a8eeee28e46e3dfc1b4985272",
+    "exact_rgb_match": true
+  }
+}

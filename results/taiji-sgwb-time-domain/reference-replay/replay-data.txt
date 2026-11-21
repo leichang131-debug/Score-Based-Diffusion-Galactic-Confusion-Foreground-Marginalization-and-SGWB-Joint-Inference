@@ -1,0 +1,2 @@
+Verified SHA256 and unpacked 4484 files into <repo>/external/taiji-sgwb-time-domain
+Next: python reproduce.py all --output outputs
