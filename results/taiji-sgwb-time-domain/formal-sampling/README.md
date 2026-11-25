@@ -14,7 +14,7 @@ Each fit archive preserves `production/<fit_id>/` from the server, including the
 
 The archive SHA-256 values were generated on the server and verified locally. Local readback confirmed that each Dynesty likelihood count agrees with the Bilby JSON and campaign record, each ten-parameter HDF5 posterior is finite and has the recorded shape, and evidence values agree across the saved formats. These checks establish the integrity of the newly sampled products. Comparison to the authors' archived posteriors and the matched null runs `fit_078`, `fit_080`, and `fit_082` remain separate steps for reproducing the full Figure 8 annotations.
 
-The [fresh posterior and component spectrum plots](posterior-figures/README.md) use the paper layout and label the configurations without Bayes factors.
+The [fresh posterior and component spectrum plots](posterior-figures/README.md) use the paper layout and label the configurations without Bayes factors. The [side-by-side Figure 8 comparison](posterior-figures/figure-8-comparison.png) places the author-archive replay next to the fresh three-run overlay.
 
 ## Verify and extract
 
