@@ -1,0 +1,99 @@
+{
+  "upstream": "https://github.com/Eric-Friedman-666/taiji-sgwb-time-domain",
+  "upstream_commit": "e5ebd75639c3433717ff2cafe52e7f2f5a3f34bb",
+  "upstream_cell_sha256": {
+    "cell_03.py": "f263502657218c64e79260ad28a86f288ac04c64c21f9c185180cec004a5bdd5",
+    "cell_41.py": "2dc0fa8f8d5a2e35216a13e496b0435e4a3081d8ecb71e1790a4d85ba3d6fc1e",
+    "cell_43.py": "bfff37434f0a95d729ce367230a4a479788c0d41702b88f38be757cbf3466048"
+  },
+  "text_usetex": true,
+  "contour_probability": [
+    0.393,
+    0.865
+  ],
+  "display_ranges": [
+    [
+      2.8992644160245713,
+      3.0761752192905902
+    ],
+    [
+      7.9849404409816795,
+      8.018305787610498
+    ],
+    [
+      -15.778250108625501,
+      -15.11819074807227
+    ],
+    [
+      -6.091016179899959,
+      -5.405265945693458
+    ],
+    [
+      -6.649794143853993,
+      -6.055336718240295
+    ],
+    [
+      -6.549179818042744,
+      -5.927178920071258
+    ],
+    [
+      -11.871607931007878,
+      -11.211256020883454
+    ],
+    [
+      0.40294243372360433,
+      1.0124747068995321
+    ],
+    [
+      -12.1,
+      -11.1
+    ],
+    [
+      -2.35,
+      -2.12
+    ]
+  ],
+  "bayes_factor_annotated": false,
+  "posterior_inputs": {
+    "fit_079": {
+      "file": "production/fit_079/posterior.h5",
+      "sha256": "61a0a518427bac2a345023e9ec73733de4b14ef461730948d842953a6e4859aa",
+      "samples": 5926,
+      "outside_paper_fixed_ranges": {
+        "log_Omega_0": 1,
+        "log_fp": 7
+      }
+    },
+    "fit_081": {
+      "file": "production/fit_081/posterior.h5",
+      "sha256": "03fee1afba20d671ef83c31977896c0adbe1b9ee7fff59ae886f413057a73303",
+      "samples": 5615,
+      "outside_paper_fixed_ranges": {
+        "log_Omega_0": 0,
+        "log_fp": 15
+      }
+    },
+    "fit_083": {
+      "file": "production/fit_083/posterior.h5",
+      "sha256": "8311f3ee7e637060a0eac88aab01086943224b9758cf67ddaad473e8ebda7deb",
+      "samples": 5581,
+      "outside_paper_fixed_ranges": {
+        "log_Omega_0": 11,
+        "log_fp": 8
+      }
+    }
+  },
+  "spectrum_source": {
+    "file": "data/ch33_sw10_fullxyz_20260531/td_equal/results/td_equal_fullxyz_r00_seed2026069815_seg360_fmin1em04_fmax0p15_w0p01_ch33_sw10_td_equal_fullxyz_20260531_om0m11p5_bundle_formal_nlive1000_full10.h5",
+    "sha256": "28ac1495d0200f4fa8c66ccc155273e93848a4357201fb306bae4200b31e070a",
+    "shared": "Injected spectra and equivalent Taiji XX noise from the archived TD equal response tables"
+  },
+  "outputs": {
+    "10para_corner.png": "abfef5ea99fd2812abb7eab93aea3459e494654d62c90a46016063f2d5188bff",
+    "fit_079_corner.png": "f1191215ab2b104105fa0cb4f08e4f9c8a805e574cabfe52db6f94f9fc96d8c4",
+    "fit_081_corner.png": "675424f35321753dc680472ba969be8496042cff1468a70f143382addf599668",
+    "fit_083_corner.png": "28e8e179b2af61c8a6c25365d5cdc2ac9d3361976a661fc1dbbd9b5697e18c5b",
+    "component_spectra.png": "6d2dbeb76a9de65cbf1b4ca68d03c626e944115cff725f643d0c57f20097ce8f",
+    "component_spectra.csv": "45f92368400595f51fa0d92d33ee699b8f874a5aae5ee14747ec1ec124cb6f8f"
+  }
+}
