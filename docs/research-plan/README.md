@@ -1,5 +1,9 @@
 # Research plans
 
+## Active research plan
+
+[Route A and Route B v1.1](route-ab/README.md) defines the shared ten-parameter study, algorithm steps, acceptance gates and planned figures.
+
 ## Current baseline
 
 [Full-covariance Taiji baseline plan](full-covariance-baseline.md) defines the Figure 8 campaign and its runtime deliverables.

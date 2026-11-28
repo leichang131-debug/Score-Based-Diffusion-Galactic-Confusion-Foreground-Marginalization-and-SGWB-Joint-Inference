@@ -1,5 +1,7 @@
 # Route B research and A800 implementation plan
 
+For the active ten-parameter study, see the [Route A/B v1.1 plan](../route-ab/README.md). This directory records the earlier Route B design.
+
 Version 1.0, October 20, 2026. The Chinese-language PDF is for detailed research discussion; repository metadata and navigation remain in English.
 
 - [Read the PDF](route-b-research-and-server-implementation-plan.pdf).

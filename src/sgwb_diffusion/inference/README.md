@@ -1,5 +1,5 @@
-# Inference
+# Posterior inference
 
-Joint posterior sampling and nuisance marginalization.
+Own the prior interface, Route A sampling and Route B surrogate proposals with full-likelihood correction. Save chain state, random state, diagnostics and wall time.
 
-Status: reserved structure; no completed experiment or implementation is present.
+Status: planned. This directory reserves a location for the implementation or experimental evidence described here.

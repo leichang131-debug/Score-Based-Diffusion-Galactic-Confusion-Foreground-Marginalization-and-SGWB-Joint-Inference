@@ -1,5 +1,5 @@
-# Data
+# Shared simulation and data
 
-Consistent data adapters and provenance handling.
+Build DWD source weights and coherent source sums, combine signal and noise components, and preserve complex XYZ Fourier data for both routes. Own provenance and split data by independent physical realization.
 
-Status: reserved structure; no completed experiment or implementation is present.
+Status: planned. This directory reserves a location for the implementation or experimental evidence described here.

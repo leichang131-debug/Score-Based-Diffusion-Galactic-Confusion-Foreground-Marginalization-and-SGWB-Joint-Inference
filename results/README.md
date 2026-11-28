@@ -1,5 +1,7 @@
 # Research results
 
+The [Route A/B research index](research/README.md) reserves separate destinations for shared validation, each route's evidence, and paired comparisons.
+
 The current full-covariance baseline has a dedicated [evidence index](taiji-sgwb-time-domain/README.md).
 
 Track curated figures, tables, summaries, and artifact manifests here. Each result must point to its configuration, source version, environment, seed, data provenance, and validation status. Results are now available for Score-SDE, TDC, Triangle-GB and TaijiSGWB; see the status table below.

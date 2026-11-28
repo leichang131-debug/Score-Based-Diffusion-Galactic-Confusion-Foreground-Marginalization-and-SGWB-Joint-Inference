@@ -1,0 +1,526 @@
+\documentclass[UTF8,fontset=none,a4paper,11pt]{ctexart}
+\setCJKmainfont{Songti SC}\setCJKsansfont{Heiti SC}\setCJKmonofont{Songti SC}
+\usepackage[margin=22mm,headheight=16pt]{geometry}
+\usepackage{amsmath,amssymb,bm,booktabs,longtable,tabularx,array,graphicx,xcolor,fancyhdr,enumitem}
+\usepackage{tikz}\usetikzlibrary{arrows.meta,positioning}
+\usepackage{xurl}\usepackage[colorlinks,linkcolor=teal,urlcolor=teal,citecolor=teal]{hyperref}
+\definecolor{deep}{HTML}{18445A}
+\pagestyle{fancy}\fancyhf{}\lhead{路线 A/B：十参数联合推断}\rhead{研究实施方案 v1.1}\cfoot{\thepage}
+\raggedbottom
+\setlength{\parskip}{4pt}\setlength{\parindent}{2em}
+\setlist{nosep,leftmargin=2em}\renewcommand{\arraystretch}{1.22}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\dd}{\mathrm d}\newcommand{\GB}{\mathrm{DWD}}\newcommand{\AST}{\mathrm{ast}}\newcommand{\SW}{\mathrm{SW}}
+\newcommand{\E}{\mathbb E}\newcommand{\R}{\mathbb R}\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\chapterpage}[1]{\section{#1}}
+\hypersetup{pdftitle={路线A与路线B：十参数联合推断研究实施与验收方案},pdfauthor={研究规划},pdfsubject={银河双白矮星前景与SGWB的条件扩散似然修正}}
+\begin{document}
+\begin{titlepage}
+\centering\vspace*{17mm}
+{\small\color{deep}SGWB RESEARCH\quad /\quad EXECUTION PLAN}\par\vspace{12mm}
+{\Huge\bfseries 路线 A 与路线 B}\par\vspace{6mm}
+{\LARGE\bfseries 十参数联合推断研究\\[5pt]实施与验收方案}\par\vspace{12mm}
+{\large 离散银河双白矮星前景、全协方差高斯基线\\[5pt]与条件得分扩散似然修正}\par\vspace{14mm}
+\rule{\linewidth}{0.7pt}\par\vspace{4mm}
+\begin{minipage}{0.91\linewidth}
+\textbf{研究主线}\quad 保留原论文十参数：两类仪器噪声幅度、四参数银河前景谱、两参数天体物理背景与两参数相变声波背景。在同一物理生成模型与同一测试观测上，比较高斯似然与学习似然的偏差、校准和计算成本。\par
+\textbf{路线 A}\quad 用源级双星叠加产生复杂前景；建立原始高斯与二阶统计匹配高斯两级对照，定位近似失准。\par
+\textbf{路线 B}\quad 训练条件残差得分，通过概率流构造归一化密度；用代理导引与完整似然校正获得可靠后验。\par
+\textbf{本版定位}\quad 后续研究的宏观执行依据。实验结果尚待生成；阈值分为固定数学要求和可经预实验修订的工程标准。\par
+\textbf{范围}\quad 面向 PRD 论文准备；首篇以参数推断与校准为主，不默认包含模型选择或一般天空图重建。
+\end{minipage}\par\vfill
+{\large 版本 1.1\quad 2026 年 11 月 28 日}\par\vspace{3mm}
+{\small 基线：Full-Covariance Bayesian Inference of Stochastic Gravitational-Wave\\ Backgrounds with Time-Domain Simulations for Taiji-like Missions}
+\end{titlepage}
+{\small\tableofcontents}\clearpage
+\chapterpage{总方案：必须保持一致的研究约定}
+\subsection{研究问题与可检验结论}
+研究问题是：离散双星、有限窗和时变探测器响应产生的观测结构，何时超出分段复高斯近似的描述能力？在相同物理模型、先验和数据条件下，扩散似然能否改善参数后验的偏差与覆盖，并保持可承受的推断成本？
+\par 路线 A 的目标是量化近似影响，不能把“必须跑出较差结果”作为验收标准。路线 B 的目标是获得更可靠的后验，不能将更窄区间或更靠近某一次真值作为唯一成功标准。正确的宽后验也是有效结果。
+\par\noindent
+\begin{tabularx}{\linewidth}{p{29mm}YY}\toprule
+约定 & 固定部分 & 可调整部分\\\midrule
+物理模型 & 原论文十参数及四类成分；不重复加入有效银河背景 & 仪器扰动测试强度、目录扩展\\
+公平比较 & 同一测试观测、先验、频带与预处理 & 工程测试的时长，但 A/B 同步改变\\
+统计目标 & B 使用归一化条件密度；正式链目标固定 & 代理形式、提议尺度、内层步数\\
+数据隔离 & 测试数据不参与训练、白化或模型选择 & 训练样本数及增量批次\\
+科学验证 & 独立注入、二阶匹配对照、计算成本 & 校准例数，须报告统计误差\\
+证据保存 & 配置、源码、种子、输入、权重、链、日志、绘图可追溯 & 存储格式、缓存组织\\\bottomrule
+\end{tabularx}
+\subsection{版本与变更规则}
+本版 v1.1 统一原论文噪声及谱指数符号，并新增三章算法实施细则，给出 A1--A3、B1--B4 的具体计算流程。宏观科学目标与十参数配置保持不变。
+改变十参数、先验、频带、源分布、窗函数或推断目标，属于科学配置变更，必须升版本并重做受影响的 A/B 比较。网络宽度、batch size、优化器学习率和 ODE 容差属于工程变更，也要记录；可能改变后验时须重新验收。正式测试集解锁后，不以该集合选择模型；调整后使用新的锁定测试集。
+\par 本版依据截至 2026 年 11 月 28 日的讨论及本地主仓库提交 \texttt{ad07145} 的固定上游文件核对。文中计划不代表已部署或已通过的实验。先前六参数银河权重方案的训练权重不能直接作为本版十参数正式模型。
+\subsection{总体链路}
+\begin{center}\begin{tikzpicture}[>=Latex,node distance=5mm,box/.style={draw=deep,rounded corners,align=center,text width=13.2cm,minimum height=9mm,font=\small}]
+\node[box](a){冻结十参数、先验、目录、响应和数据约定};
+\node[box,below=of a](b){共同模拟器：离散双星 + AST + 声波背景 + ACC/OMS};
+\node[box,below=of b](c){一次预处理：保存复 FFT、互谱和独立验证摘要};
+\node[box,below=of c](d){路线 A：原始/匹配高斯\qquad 路线 B：得分训练、概率流密度};
+\node[box,below=of d](e){同一观测上的十参数采样、谱恢复与链诊断};
+\node[box,below=of e](f){独立注入校准、消融、稳健性、成本\; $\longrightarrow$\; 论文结果};
+\foreach \x/\y in {a/b,b/c,c/d,d/e,e/f}{\draw[->](\x)--(\y);}
+\end{tikzpicture}\end{center}
+\chapterpage{物理模型：参数、先验与谱成分}
+\subsection{十参数合同}
+固定参数顺序为
+\begin{align}
+\theta=(&N_{\rm acc},\delta x,\log_{10}A_1,\alpha_1,
+\log_{10}A_2,\alpha_2,\nonumber\\
+&\log_{10}\Omega_{\AST},\varepsilon,\log_{10}\Omega_0,\log_{10}(f_p/\mathrm{Hz})).
+\end{align}
+\par\noindent
+\begin{tabularx}{\linewidth}{p{38mm}p{38mm}Y}\toprule
+参数 & 均匀先验 & 物理含义\\\midrule
+$N_{\rm acc}/10^{-15}$ & $[0,20]$ & 加速度幅度，单位 $10^{-15}\,\mathrm{m\,s^{-2}/\sqrt{Hz}}$\\
+$\delta x/10^{-12}$ & $[0,20]$ & 位移幅度，单位 $10^{-12}\,\mathrm{m/\sqrt{Hz}}$\\
+$\log_{10}A_1,\alpha_1$ & $[-18,-12],[-8,-2]$ & 银河谱分子幅度与指数\\
+$\log_{10}A_2,\alpha_2$ & $[-10,-2],[-8,-2]$ & 银河谱转折项幅度与指数\\
+$\log_{10}\Omega_{\AST}$ & $[-14,-9]$ & AST 在 $1\,\mathrm{mHz}$ 的能量密度\\
+$\varepsilon$ & $[-1,3]$ & AST 谱指数\\
+$\log_{10}\Omega_0$ & $[-13,-10]$ & 声波谱峰值幅度\\
+$\log_{10}(f_p/\mathrm{Hz})$ & $[-3,-0.5]$ & 声波峰值频率，$f_p$ 以 Hz 计\\\bottomrule
+\end{tabularx}
+\par 先验在表列缩放坐标上均匀。似然中的 $\log$ 使用自然对数。两个噪声幅度以平方进入功率。宽先验包含峰值在有效频带外、不同成分高度退化的情形；不要求所有注入的十参数都得到紧约束。局部先验工程试验必须另作标记，不能替代完整先验结果。
+\subsection{论文符号、代码坐标与网络坐标的转换}
+本版按原论文式 (2.24) 保留 $N_{\rm acc}$、$\delta x$、$\varepsilon$ 及 $\log_{10}(f_p/\mathrm{Hz})$，不再用 $a_{\rm acc}$、$a_{\rm oms}$ 替代。论文把 $N_{\rm acc}$、$\delta x$ 写作以 SI 单位计的谱幅度数值，单位在噪声 ASD 式中显式给出；表 1 展示其缩放坐标。为避免将物理量、单位数值及代码数组混为一谈，定义代码向量 $\vartheta$：
+\begin{align}
+\vartheta_1&=N_{\rm acc}/10^{-15},&\vartheta_2&=\delta x/10^{-12},\\
+\vartheta_{3:10}&=\theta_{3:10},&q_i&=2(\vartheta_i-l_i)/(u_i-l_i)-1.
+\end{align}
+其中 $l_i,u_i$ 是表中数值边界。模型和模拟器适配层只转换一次：$N_{\rm acc}=10^{-15}\vartheta_1$、$\delta x=10^{-12}\vartheta_2$。不要先转换成 SI 数值，再调用一个内部仍乘 $10^{-15}$ 或 $10^{-12}$ 的旧接口。
+\par\noindent
+\begin{tabularx}{\linewidth}{p{39mm}p{43mm}Y}\toprule
+论文符号或坐标 & 保留的上游代码字段 & 本文/绘图规则\\\midrule
+$N_{\rm acc}/10^{-15}$ & \texttt{N\_acc\_amp} & 图轴显示原论文缩放符号，原始数组存 3 而非 $3\times10^{-15}$\\
+$\delta x/10^{-12}$ & \texttt{delta\_x\_amp} & 图轴显示原论文缩放符号，原始数组存 8\\
+$\varepsilon$ & \texttt{alpha\_ast} & 数值不变，论文与图不写 $\alpha_{\rm ast}$\\
+$\log_{10}(f_p/\mathrm{Hz})$ & \texttt{log\_fp} & 先还原 $f_p=10^{\vartheta_{10}}\,\mathrm{Hz}$ 再计算谱\\\bottomrule
+\end{tabularx}
+\par 全文人工扩散噪声统一记为 $\xi\sim\mathcal N(0,I)$，与天体谱指数 $\varepsilon$ 区分。数值积分下限另记 $\epsilon_{\rm num}$。段索引 $j$ 对应论文 $\kappa$；$\Gamma^{\rm iso}$ 对应论文响应 $\mathcal R^\kappa$，新增源级银河协方差不能被误认为原各向同性响应。新增 $R_{\rm corr}$ 专指密度比，避免与 $\mathcal R^\kappa$ 混淆。
+\par 论文式 (2.13)--(2.15) 的写法为
+\begin{align}
+\sqrt{S_{\rm acc}(f)}&=N_{\rm acc}\sqrt{1+(0.4\,\mathrm{mHz}/f)^2}\sqrt{1+(f/8\,\mathrm{mHz})^4}\;\frac{\mathrm m}{\mathrm{s^2\sqrt{Hz}}},\\
+\sqrt{S_{\rm OMS}(f)}&=\delta x\sqrt{1+(2\,\mathrm{mHz}/f)^4}\;\frac{\mathrm m}{\sqrt{\mathrm{Hz}}},\\
+N^\kappa_{IJ}(f)&=N_{\rm acc}^{2}\mathcal N^{\rm acc,\kappa}_{IJ}(f)+(\delta x)^2\mathcal N^{\rm OMS,\kappa}_{IJ}(f).
+\end{align}
+先验在 $\vartheta$ 上均匀。由于 $\theta\leftrightarrow\vartheta\leftrightarrow q$ 是固定仿射变换，盒内 Jacobian 是常数；绝对证据或密度报告仍须声明所用坐标。新增接口不改动上游字段名，以保证已有链可读取。
+\subsection{源端能量密度谱}
+定义 $\Omega(f)=\rho_c^{-1}\dd\rho_{\rm GW}/\dd\ln f$，并保留原式
+\begin{align}
+\Omega_{\GB}(f)&=\frac{A_1(f/f_0)^{\alpha_1}}{1+A_2(f/f_0)^{\alpha_2}},\quad f_0=0.016\,\mathrm{Hz},\\
+\Omega_{\mathrm{GW,ast}}(f)&=\Omega_{\AST}\left(\frac{f}{10^{-3}\,\mathrm{Hz}}\right)^{\varepsilon},\\
+\Omega_{\SW}(f)&=\Omega_0 x^3\left(\frac{7}{4+3x^2}\right)^{7/2},\quad x=f/f_p.
+\end{align}
+总引力波源谱为三项之和；仪器噪声不是源端 $\Omega$ 的一个物理背景，须经自己的传递函数进入数据协方差。
+\par 声波谱在低频按 $f^3$ 上升、高频按 $f^{-4}$ 下降；峰值位于 $f_p$。这两个参数是有效谱参数，并非对相变温度、持续时间和强度等微观参数的唯一测量。银河谱的渐近斜率取决于分母中哪项占主导，不能在所有先验点机械称 $\alpha_1$ 为低频斜率。
+\subsection{用于复核的原始注入点}
+原代码：$N_{\rm acc}=3\times10^{-15}$，$\delta x=8\times10^{-12}$，$A_1=3.98\times10^{-16}$，$\alpha_1=-5.7$，$A_2=4.79\times10^{-7}$，$\alpha_2=-6.2$；$\log_{10}\Omega_{\AST}=\log_{10}\Omega_0=-11.5$，$\varepsilon=2/3$，$\log_{10}(f_p/\mathrm{Hz})=-2.25$。先用此点做配对验证，再覆盖先验；不能只在此点训练或校准。
+\chapterpage{从双星波形到四参数银河前景}
+\subsection{物理波形与随机变量}
+近圆双星的示意波形为
+\begin{align}
+h_{+,k}(t)&=\mathcal A_k(1+\cos^2\iota_k)\cos\Phi_k(t),\\
+h_{\times,k}(t)&=-2\mathcal A_k\cos\iota_k\sin\Phi_k(t),\\
+\Phi_k(t)&=\phi_k+2\pi\left(f_k t+\tfrac12\dot f_k t^2+\cdots\right).
+\end{align}
+幅度约定与实际波形库保持一致；上述式子不取代库内响应。传播、轨道多普勒和 TDI 延迟通过线性响应算子 $\mathcal D_I^A$ 施加：
+\begin{equation}
+h_I^{\GB}(t;\theta_{\GB},\eta)=\sum_{k=1}^{N_{\rm src}}w_k(\theta_{\GB})\sum_{A=+,\times}\mathcal D_I^A[h_{A,k}](t).
+\end{equation}
+目录固定频率、演化、位置和取向；每份观测可随机化源初相位，整段观测连续演化。源池包含护栏频带，护栏根据 Doppler、频率漂移、窗泄漏和延迟处理确定，并通过扩大护栏的收敛实验选择。
+\par 首轮目标是百万量级的\textbf{物理模拟双星}，不把它们称为百万个实测源。保留原银河天空位置时，方向结构和调制已自然存在，但本版不推断天空图参数。亮源首轮保留并明确标签；若改为扣除可分辨源，须另定义选择函数和残差模型。
+\subsection{谱包络到源权重的构造}
+四参数必须是生成真值，而非对任意固定目录事后拟合得到的伪真值。采用受控源功率重加权：在源端参考时刻，将频率划成比原生 FFT bin 更宽的校准带 $b$。用统一极化和 PSD 约定定义基准带功率 $P_b^{\rm cat}$ 与目标带功率
+\begin{equation}
+P_b^{\rm tar}(\theta_{\GB})=\int_b K(f)\Omega_{\GB}(f;\theta_{\GB})\,\dd f,
+\qquad K(f)=\frac{3H_0^2}{4\pi^2f^3}.
+\end{equation}
+若 $P_b^{\rm cat}$ 按相同定义归一，初版可取
+\begin{equation}
+w_k^2=P_b^{\rm tar}/P_b^{\rm cat},\qquad k\in b.
+\end{equation}
+权重作用于波形振幅的平方根关系必须保留。必要时使用正的平滑基函数权重，重新解带功率约束；平滑后不能默认仍满足原约束。源端谱包络的定义固定在参考历元，后续时变由源演化与响应产生。
+\par 不能依据某次观测的随机谱归一；这会人为压制本来希望学习的随机波动。不能把有效高斯银河背景与这批源再次相加。空带不除零，先扩充目录或调整声明的支持范围。
+\subsection{物理意义与验收}
+本方案是带有真实波形结构的\textbf{受控重加权种群}，不保证任意先验点均对应自洽银河演化历史。记录权重范围及极端值；不能静默裁剪权重，因为裁剪改变参数定义。广先验生成失效须公开修订科学配置。
+\par 对至少三个前景谱点、多个独立相位，实现源端带功率、响应后平均自谱/复互谱与预期的一致性检查。最初可用不少于 32 个实现估计 Monte Carlo 误差；不足以区分系统误差时继续增加。报告误差条、频率相关与护栏收敛；单次实现不必逐点等于目标谱。另留未重加权或扰动目录用于外推测试。
+\chapterpage{共同模拟器、探测器响应与仪器扰动}
+\subsection{数据分量与边缘化对象}
+\begin{equation}
+d_I=h_I^{\GB}+h_I^{\AST}+h_I^{\SW}+n_I^{\rm acc}+n_I^{\rm oms}.
+\end{equation}
+AST 与 SW 首轮均为各向同性、无偏振高斯背景，各物理成分独立。源相位、随机波场、仪器实现等记为 $\eta$，目标条件分布是
+\begin{equation}
+p_{\rm sim}(d\mid\theta)=\int p(d\mid\theta,\eta)\pi(\eta\mid\theta)\,\dd\eta.
+\end{equation}
+B 从模拟实现学习这一边缘化分布；不把源相位或真实分量作为条件泄露给网络。固定目录只能支持对该目录及权重家族的条件泛化，目录外测试另行报告。
+\subsection{响应、谱与通道协方差}
+原代码采用 $H_0=2.18429\times10^{-18}\,\mathrm{s^{-1}}$ 和上节 $K(f)$。$K$、偏振求和、单/双边谱和响应归一必须成套继承。各向同性项预测
+\begin{equation}
+S^{\rm iso}_{IJ}(f,t)=K(f)[\Omega_{\mathrm{GW,ast}}(f)+\Omega_{\SW}(f)]\Gamma^{\rm iso}_{IJ}(f,t).
+\end{equation}
+离散银河项的二阶结构应从源响应计算或独立实现估计，不默认等于同一个 $\Gamma^{\rm iso}$ 乘银河标量谱。若均匀独立相位消除不同源的集合平均交叉项，则可对逐源二阶响应求和，避免每个参数点做大量完整模拟；验证有限窗和演化后该表仍准确。
+\par ACC 与 OMS 基础谱形分别包含 $\sqrt{1+(0.4\,\mathrm{mHz}/f)^2}\sqrt{1+(f/8\,\mathrm{mHz})^4}$ 与 $\sqrt{1+(2\,\mathrm{mHz}/f)^4}$ 的幅度因子。原传递表含所需频率转换时，不再次乘同一因子。
+\begin{equation}
+S_{IJ}^{n}= N_{\rm acc}^{2}\mathcal N^{\rm acc}_{IJ}
++(\delta x)^2\mathcal N^{\rm OMS}_{IJ}.
+\end{equation}
+\subsection{三层实验复杂度}
+\par\noindent
+\begin{tabularx}{\linewidth}{p{16mm}YY}\toprule
+层级 & 银河前景 & 仪器噪声\\\midrule
+G & 与模型匹配的高斯控制 & 原 ACC/OMS\\
+P & 离散源叠加 & 原 ACC/OMS\\
+PN & 与 P 相同 & 首先只增加慢变幅度；瞬态作为可选扩展\\\bottomrule
+\end{tabularx}
+\par 慢变噪声可在原始链路级定义 $n(t)=a(t)n_0(t)$，$a(t)=\exp[u(t)-s_u^2]$，其中 $u$ 为零均值、方差 $s_u^2$ 的高斯过程，则 $\E[a^2]=1$。固定并登记相关时间、幅度分布和链路间相关结构。乘法调制改变频谱相关性，即使平均方差归一，平均 PSD 也未必不变；A-matched 应重新校准。
+\par 随机扰动超参数首轮作为预先指定场景而非新增待估参数，因此仍是十参数；其取值是否已知是模型假设。训练外强度用于失配测试。不开启全部九类噪声，以便归因。
+\chapterpage{观测配置、预处理与数据合同}
+\subsection{分阶段数据配置}
+工程验证使用短时长和子频带；主实验采用 90 日、等臂时域作为闭环起点，代表性结果迁移到不等臂时域。原有三配置复现保留为基线证据，不要求每次方法修改都重跑三套长任务。90 日属于新实验设计，不冒称与原论文观测时长完全相同。
+\par 主实验频率掩码从固定上游正式输入派生，并登记端点、notch 和有效 bin。此前 0.5--12 mHz、988 bin 仅作历史工程配置，不锁定为本版科学频带。宽先验下 $f_p$ 可达 $0.316\,\mathrm{Hz}$，超过 $f_s=0.4\,\mathrm{Hz}$ 的 Nyquist；频带外峰值必须允许弱约束和退化，不通过删掉这类测试来提高结果。
+\subsection{单一预处理实现}
+建议继承原每日分段和已验证裁边/窗流程；若采用每天 $34560$ 点、两端各裁 $100$ 点，则 $N=34360$、$\Delta f=f_s/N$。任何与原输入不同的选择都作为显式配置。操作次序固定：裁边、去均值、对称 Hann 窗、FFT、频率筛选。保留复数 $\tilde d_{jf}\in\mathbb C^3$，再生成互谱；不能仅从互谱重建 B 输入。
+\par 若 DFT 为 $D_k=\sum_n w_n d_n e^{-2\pi i nk/N}$，对白噪声内部正频率，单边 PSD 对应因子为 $q_w=(f_s/2)\sum_n w_n^2$。实际有色谱应通过窗卷积计算期望；$q_w S(f)$ 只是缓变谱近似。若使用窗能量归一或不同 DFT，重新推导对应因子；不能混用原程序的 $Tf_s^2/2$ 与未经归一的窗。
+\subsection{共轭与数据维数}
+本文使用 $C=\E[DD^\dagger]$；原文件中的 \texttt{obs\_csd\_star} 使用左共轭约定时，须在适配层显式转换，连同响应表一起测试。Hermitian 正定矩阵用 Cholesky 检查；正行列式不足以证明正定。单次外积秩一不应被要求正定。
+\par 网络实通道顺序固定为 $(\Re X,\Re Y,\Re Z,\Im X,\Im Y,\Im Z)$，维数 $D=6N_{\rm day}N_f$。保持 XYZ，不在 A/B 中使用不同信息压缩。若改 AET，须用同一可逆变换转换数据和协方差。
+\par\noindent
+\begin{tabularx}{\linewidth}{p{44mm}Y}\toprule
+字段 & 合同\\\midrule
+\texttt{theta, parameter\_names} & 顺序、单位、先验及真值标签\\
+\texttt{fft\_xyz, frequency, time} & complex128，形状与精确频率/时间向量\\
+\texttt{obs\_csd\_star} & 从同一 FFT 生成；共轭约定写入属性\\
+\texttt{config, seeds, hashes} & 目录/轨道/源码哈希、窗、FFT 标度、随机流\\
+\texttt{diagnostic\_components} & 仅验证使用，训练与推断接口不可读取真值分量\\\bottomrule
+\end{tabularx}
+\chapterpage{路线 A：两个高斯基线与误差归因}
+\subsection{复高斯似然}
+令 $C_{jf}$ 为包含 FFT 标度后的复协方差，零均值 proper complex Gaussian 近似给出
+\begin{equation}
+\ell_G(\theta)=-\sum_{j,f}\left[D_{jf}^{\dagger}C_{jf}^{-1}D_{jf}+\ln\det C_{jf}+3\ln\pi\right].
+\end{equation}
+若存在不可忽略均值，应建模均值；若 $\E[DD^T]$ 非零，则 proper 假设本身需检验，可在更强对照中使用实六维协方差。原框架“全协方差”保留 XYZ 的复互谱，不表示包含所有时间、频率坐标的联合协方差。
+\subsection{A-original 与 A-matched}
+\textbf{A-original：}保留原各向同性响应与高斯谱似然，分析新的源叠加数据，回答原方法的实际表现。\par
+\textbf{A-matched：}保持同一十参数与分段高斯框架，但将逐段逐频二阶统计校准到新生成模型，包括银河空间响应与窗效应的可计算部分，回答仅修正二阶结构能够改善多少。
+\par 校准只使用独立模拟或解析源求和，不从测试观测的真实分量反推协方差。缓存采用正定保真的参数化或逐源正权重叠加；盲目逐元素插值可能破坏正定。静态充分统计求和只有在协方差确实与段无关时可使用。
+\subsection{执行次序与图形诊断}
+先 G：检查原似然与控制生成器匹配。再 P：固定同一注入及配对随机种子，运行 A-original 和 A-matched。最后 PN：逐项打开仪器扰动。所有链先短测和恢复，再正式运行；若沿用 dynesty，记录证据误差、终止状态、有效后验权重及独立重复，不把 MCMC 的 $\widehat R$ 直接套在嵌套采样点上。
+\par 诊断至少包括白化 QQ/尾部、跨频与跨日相关、逐日功率、参数联合退化及成分谱。高斯控制同样经过真实窗与预处理；否则会把窗诱导相关误认为前景非高斯。长时调制、随机尖峰和不匹配协方差需要分别归因。
+\subsection{停止或调整条件}
+若 A-matched 在给定场景已校准且信息充分，记录其适用范围，不强行制造偏差。若三种推断全部失准，先检查共同模拟和单位。若只有某次注入偏离，增加独立实现再判断。若 A-original 差而 A-matched 与 B 相当，结论主要是二阶模型修正，不能宣称高阶结构优势。
+\chapterpage{路线 B：条件残差得分训练}
+\subsection{固定输入缩放与参考分布}
+实数化 $y=\operatorname{pack}(D)$，用仅由训练集确定的可逆矩阵 $W$ 构造 $x=Wy$。优先采用逐段逐频 $6\times6$ 缩放并收缩病态估计，固定后应用于所有集合。$W$ 与候选 $\theta$ 无关，故数据 Jacobian 是同一观测下的常数；仍须保存以复现绝对密度。
+\par 对 proper 复协方差 $C$，对应实协方差为
+\begin{equation}
+\Sigma_y=\frac12\begin{pmatrix}\Re C&-\Im C\\\Im C&\Re C\end{pmatrix}.
+\end{equation}
+因子 $1/2$ 不能遗漏。参考模型取 A-matched 的块对角实协方差 $\Sigma_G(\theta)=W\Sigma_y(\theta)W^T$；B 通过残差学习剩余结构。不显式分配 $D\times D$ 稠密矩阵。
+\subsection{扩散日程与目标}
+VP 扩散满足
+\begin{align}
+\dd x&=-\tfrac12\beta(t)x\dd t+\sqrt{\beta(t)}\dd B_t,\\
+x_t&=\alpha_t x_0+\sigma_t\xi,\quad \xi\sim\mathcal N(0,I),\\
+\alpha_t&=\exp[-\tfrac12\int_0^t\beta(u)\dd u],\quad \sigma_t^2=1-\alpha_t^2.
+\end{align}
+可从 $\beta(t)=0.1+99.9t$ 起步，日程最终由端点和数值测试决定。参考噪声时协方差及 score 为
+\begin{equation}
+\Sigma_{G,t}=\alpha_t^2\Sigma_G+\sigma_t^2I,\qquad s_{G,t}=-\Sigma_{G,t}^{-1}x_t.
+\end{equation}
+学习 $s_\phi=s_{G,t}+\Delta s_\phi(x_t,\theta,t)$，损失
+\begin{equation}
+\mathcal L=\E\left[\frac{\sigma_t^2}{D}\left\|s_{G,t}+\Delta s_\phi+\frac{\xi}{\sigma_t}\right\|^2\right].
+\end{equation}
+总体最优解对应 $\nabla_{x_t}\ln p_t(x_t\mid\theta)$，并不是 $\nabla_\theta\ln p(\theta\mid d)$。人工扩散噪声不同于仪器噪声；$x_0$ 本身包含全部物理成分。
+\subsection{网络与训练起始配置}
+初版采用十参数条件嵌入、扩散时间嵌入、局部跨通道/日/频耦合、多尺度与低秩全局项；全局秩 8、约数万参数可作为起点，不作为已验证容量。为似然计算优先使用可解析散度的结构，并在小维度与自动微分迹核对。结构不能仅对每个 bin 独立运算而声称学习了跨 bin 相关。
+\par 工程阶段 batch size 1、AdamW、学习率 $10^{-3}$、20,000 次更新作为起始设置，保存 EMA 与原权重并预先指定模型选择规则；若不使用 EMA，也须固定规则。独立物理样本按 64/16、256/64、1024 起逐级增加训练/验证规模。20,000 次加噪更新不等于 20,000 个物理实现。学习曲线同时看 DSM、条件敏感性、解析似然控制和后验稳定性。
+\chapterpage{概率流密度、修正因子与数值正确性}
+\subsection{归一化密度定义}
+使用概率流 ODE 与散度积分
+\begin{align}
+\dot x_t&=v_\phi(x_t,\theta,t)=-\frac{\beta(t)}2[x_t+s_\phi(x_t,\theta,t)],\\
+\dot J_t&=\nabla_x\cdot v_\phi(x_t,\theta,t),\quad J_0=0.
+\end{align}
+从观测积分到高斯终端，模型定义
+\begin{equation}
+\ell_\phi(d\mid\theta)=-\tfrac12\|x_1\|^2-\tfrac D2\ln(2\pi)+J_1+\ln|\det W|.
+\end{equation}
+在流可逆、密度变换有效的条件下，指定终端密度得到归一化流模型；它接近真实模拟器的程度由训练和校准决定。最终修正严格定义为
+\begin{equation}
+\ln R_{\rm corr}(d,\theta)=\ell_\phi(d\mid\theta)-\ell_G(d\mid\theta),\qquad p_B=p_G R_{\rm corr}.
+\end{equation}
+相对于标准高斯的 ODE 积分项不是 $\ln R_{\rm corr}$ 本身。不能在完整 $\ell_\phi$ 上再加一次 $\ell_G$。若另学任意能量修正 $r$，则需处理 $Z(\theta)=\int p_G(d\mid\theta)e^{r(d,\theta)}\dd d$；数据 score 不能识别依赖参数的归一化常数。
+\subsection{端点与散度处理}
+训练覆盖实际积分使用的噪声范围。采用连续、有有限低噪声极限的 score 参数化，在 $(0,1]$ 训练并增加低噪声采样；数值下限 $\epsilon_{\rm num}$ 的影响通过逐次减小验证。若积分从 $\epsilon_{\rm num}$ 起，得到的是相应平滑模型，必须处理与原数据密度的差别。禁止未经检验在未训练端点区间外推。
+\par 高噪声端检查条件均值和协方差残差，确认高斯终端近似不会导致显著参数相关误差。小维度高斯控制可使用精确终端协方差，再与标准高斯近似对比。加严 ODE 容差不能替代端点物理检查。
+\par 解析散度首选。若使用 Hutchinson 随机迹，固定探针仅形成可重复近似，仍需检验偏差；每次随机重抽对数似然并不自动构成正确 pseudo-marginal MCMC。无偏对数似然不等于无偏似然。
+\subsection{数值验证集}
+固定代表性参数对：原注入、先验内部、边界附近、退化方向与尾部。对比直接端点公式与积分恒等式
+\begin{equation}
+\ell_\phi=\ln\mathcal N(x_0;0,I)+\int_0^1[-x_t^Tv_\phi+\nabla\cdot v_\phi]\dd t+\ln|\det W|.
+\end{equation}
+逐级加严容差，检查 $\Delta\ell$ 而非仅绝对巨量对数密度。首轮工程目标 $|\Delta\ell_{\rm fast}-\Delta\ell_{\rm ref}|<0.1$；这是需验证的精度目标，不是后验正确性定理。最终要求后验区间和均值在 Monte Carlo 误差内稳定。
+\chapterpage{路线 B 的推断加速与正式采样}
+\subsection{固定目标，代理只负责提议}
+定义 $\ell(\theta)=\ell_\phi(d\mid\theta)+\ln\pi(\theta)$。用预热期完整评价拟合便宜代理
+\begin{equation}
+g(\theta)=\ell_G(d\mid\theta)+\widehat{\ln R}(d,\theta)+\ln\pi(\theta).
+\end{equation}
+将参数线性映射到先验盒 $[-1,1]^{10}$，先用正则化二次代理，明显多峰时再扩展。预热可用原高斯后验初始化，但同时加入分散初值，避免漏掉修正后的区域。保留样本阶段冻结代理及超参数。
+\par 从当前点用对 $e^g$ 可逆的核走 $K$ 步，终点 $\theta'$ 只计算一次完整似然，接受率
+\begin{equation}
+\alpha=\min\{1,\exp[\ell(\theta')-\ell(\theta)-g(\theta')+g(\theta)]\}.
+\end{equation}
+可用随机扫描 Gibbs 或正/逆序对称混合保证需要的可逆性，必须在已知分布上测试。中间便宜状态不是后验样本；拒绝保留重复状态。缓存当前位置完整似然。$K=1,4,16$ 按最差参数 ESS/小时择优。
+\subsection{延迟接受对照}
+一般提议 $q$ 可先按
+\begin{align}
+\alpha_1&=\min\{1,e^{g(\theta')-g(\theta)}q(\theta\mid\theta')/q(\theta'\mid\theta)\},\\
+\alpha_2&=\min\{1,e^{\ell(\theta')-\ell(\theta)-g(\theta')+g(\theta)}\}
+\end{align}
+筛选与校正。代理必须覆盖目标支持；代理过差会导致低效率。任意交替高斯与扩散接受率没有上述保证。直接重加权仅在重叠充分时使用并报告权重 ESS。
+\subsection{系统优化和可恢复运行}
+观测、缩放、网络和响应表常驻 GPU；避免每次文件读取和大数组传输。记录 NFE、前向和散度成本，GPU 计时显式同步。测试独立链小批量并行，不对同一 MH 链的依赖步骤作错误并行。float64 作为参考，降精度必须经似然比和后验检验。
+\par 每次运行先检查服务器 RAM、GPU 显存、磁盘及其他任务。工作路径使用授权磁盘下独立项目目录，不在报告和仓库写凭据。后台运行通过已有会话管理器或任务系统，不依赖 SSH 终端存活。检查点以临时文件加原子重命名写入，保存模型/代理版本、链状态、当前完整似然、RNG、预热状态、计数与累计墙钟。
+\par 必须实际停止进程、重新启动并恢复；比较固定随机流的短段结果，或在后端不确定运算下核对状态一致性与声明的数值容差。只有看到首个完整检查点和恢复记录才启动长任务。
+\chapterpage{算法实施细则 I：从目录到路线 A 的可执行流程}
+本章给出拟实现的模块边界、循环、缓存和数值算法。下列名称是研究适配接口，不声称上游已有同名函数。以固定上游的 \texttt{infer.py}、\texttt{py\_code/model.py}、\texttt{py\_code/parameters.py} 为参照，所有新增实现放独立模块；原文件只读保存。
+\subsection{参数合同与输入输出}
+定义三个不同的数据对象：\texttt{theta\_paper} 用论文符号和 SI 数值；\texttt{theta\_code} 保存 $\vartheta$，与原采样链一致；\texttt{theta\_net} 保存 $q\in[-1,1]^{10}$。实现互逆转换并测试边界、中点与原注入点；禁止用猜测单位的自动转换。模型接口只接收一种明确对象。
+\begin{enumerate}
+\item \texttt{validate\_config}：检查十参数顺序、TDI 代数、轨道、观测起点、采样率、裁边、窗、频率掩码和单位约定。输出配置哈希。
+\item \texttt{build\_source\_weights(theta\_code, catalogue)}：返回正权重、带功率误差、空带及极端权重诊断。
+\item \texttt{simulate\_observation}：返回 XYZ 时序或分块时序及随机流清单；模拟接口不负责选择网络训练集。
+\item \texttt{preprocess}：返回复 FFT、互谱和准确的窗归一化。源端标签与观测数组分组保存。
+\item \texttt{build\_covariance(theta\_code, mode)}：返回与 FFT 同单位的 $C_{jf}$，明确 mode 为 original 或 matched。
+\item \texttt{evaluate\_loglike}：返回标量、有效性、失败原因和计时；非法参数返回 $-\infty$，真实编程错误不能被吞掉。
+\end{enumerate}
+验收包括 $q\to\vartheta\to q$ 误差在浮点容差内，原注入转换后为 $N_{\rm acc}=3\times10^{-15}$、$\delta x=8\times10^{-12}$，以及单噪声幅度乘二后功率乘四。
+\subsection{算法 A1：流式源叠加与随机实现}
+百万源不能缓存为“源数乘整个观测维数”的稠密数组。首版按时间块与源块双重循环，输出聚合流；块大小由内存实测决定。
+\begin{enumerate}
+\item 读取冻结目录，计算频带护栏，固定源 ID 排序。由主种子和成分标签派生相互独立的随机流；每颗源的初相位由源 ID 决定，使改变块大小不改变物理实现。
+\item 在参考历元按目标四参数计算源振幅权重。源块只加载当前需要的频率、演化、方向、取向及权重。
+\item 以全局时间计算源相位和响应，累加到 XYZ 或原链路时序。时间块保留足够延迟/插值边缘，完成 TDI 后只取有效中间区；不能每块把时间和相位重新置零。
+\item AST/SW 使用独立随机波场，分别按目标谱生成并通过响应。跨块使用连续底层实现或经过验证的相关分块法，不按每天独立重抽来模拟长期相关过程。
+\item ACC/OMS 按原链路生成并经过 TDI。PN 的慢变系数在链路层施加；其随机流独立，链路间是否共享扰动必须配置化。
+\item 合成各项后执行唯一预处理。若采用“各成分分别 FFT 后相加”，必须验证全部操作线性且窗、边界和单位完全相同。
+\end{enumerate}
+优化顺序是先小源数直接时域参考，再验证缓存/频域波形计算和分块聚合；加速方法不能只匹配 PSD 而丢失跨日相位。记录总源数和每频带有效源占比，解释百万源与非高斯性之间并非一一对应。
+\subsection{算法 A2：A-matched 协方差表的构造}
+对初相位均匀的第 $k$ 个源，用零相位与四分之一周期相位定义复 FFT 向量 $c_{jf,k}$ 和 $s_{jf,k}$，使
+\begin{equation}
+D_{jf,k}(\phi_k)=c_{jf,k}\cos\phi_k+s_{jf,k}\sin\phi_k.
+\end{equation}
+线性响应成立且相位独立时，
+\begin{equation}
+C^{\rm DWD}_{jf}(\theta)=\frac12\sum_k w_k^2(\theta)
+[c_{jf,k}c_{jf,k}^{\dagger}+s_{jf,k}s_{jf,k}^{\dagger}].
+\end{equation}
+这个计算保留有限窗与频率演化产生的单 bin 二阶结构，不表示已保留所有跨 bin 协方差。分块累加每个校准带的矩阵 $Q_{b,jf}$；若带内权重相同，则每次调用只计算 $\sum_b w_b^2Q_{b,jf}$。如使用平滑权重，则应为选定基函数建立对应表或使用已验证插值；不能继续假设带内常数。
+\par 缓存总量约为 $N_bN_jN_f\times9$ 个复数；先计算字节预算再选择分块/磁盘映射。源级两相位波形不必全部保留。若某生成环节对初相位非线性，上式不能直接使用，改为独立模拟估计并报告 Monte Carlo 误差。
+\par 仪器及各向同性 AST/SW 表单独缓存。每次候选组合各项后作 Hermitian 对称化消除舍入误差；真正的非 Hermitian 或负特征值问题必须追查来源，不能依赖大 jitter 修补。完整 PN 场景的 matched 表须重新验证。
+\subsection{算法 A3：稳定计算高斯似然}
+对每个 $j,f$，取正标度 $s=\max_I C_{II}$，令 $\bar C=C/s$，Cholesky 分解 $\bar C=LL^\dagger$。计算
+\begin{equation}
+Q=\|L^{-1}D\|^2/s,\qquad
+\ln\det C=3\ln s+2\sum_{I=1}^3\ln L_{II}.
+\end{equation}
+累加 $-[Q+\ln\det C+3\ln\pi]$；不显式求逆。批量运算仅跨保留频点和分段，内存不足时分块求和。用 float64/complex128 作为参考，改变分块顺序时记录舍入误差。
+\par 对同一输入验证：复 FFT 二次型与互谱 trace 公式一致，XYZ 与可逆 AET 变换后的对数密度差符合 Jacobian，物理幅度转换仅执行一次。原 \texttt{infer.py} 的静态段求和优化只在协方差与段无关时开启。
+\subsection{A 的正式运行与证据导出}
+先测试有限性和短采样，再执行真实退出/恢复。原论文对照使用 Bilby/dynesty 的原设置；用于与 B 比较后验时可另运行相同 MCMC 核，但必须标注采样器不同。每次保存完整采样产物、总似然调用数、累计时间、数据和配置哈希。A1--A5 绘图从这些产物生成，不直接读取作者归档 posterior 作为新实验结果。
+\chapterpage{算法实施细则 II：结构化残差 score 与训练循环}
+\subsection{数据管道与固定缩放}
+观测复数组形状固定为 $[N_j,N_f,3]$，打包成 $[6,N_j,N_f]$。先按完整实现划分 train/validation/test，再仅用训练集估计缩放。可对每个位置的六维二阶矩采用
+\begin{equation}
+M_\lambda=(1-\lambda)\widehat M+\lambda\,\tr(\widehat M)I/6,
+\quad M_\lambda=LL^T,\quad W=L^{-1}.
+\end{equation}
+$\lambda=0.05$ 可作为起点，并记录最小特征值和条件数；若存在实质均值，先在训练集估计固定均值 $\mu$，使用 $x=W(y-\mu)$，并把参考高斯均值同步变换。本文零均值公式对应 $\mu=0$。缩放不能用测试集重新估计。
+\par 构建参考块 $\Sigma_G(\theta)$ 后，对每块特征分解一次：$\Sigma_G=V\Lambda V^T$。同一候选沿 ODE 的各时间点复用 $V,\Lambda$，仅更新 $\alpha_t^2\Lambda+\sigma_t^2$，避免每次网络调用重复分解。块大小为 6，不分配全维稠密矩阵。
+\subsection{一个可直接实现并核对散度的残差结构}
+可采用以下具体首版，而非只写“使用 CNN”：
+\begin{equation}
+\Delta s_\phi(x,\theta,t)= -M x+b+
+\sum_{r=1}^{R} a_r u_r\tanh(u_r^Tx+c_r)
++V^T[\gamma\odot\tanh(Vx+e)].
+\end{equation}
+$M$ 取对称块局部算子；$u_r$ 是低秩全局方向；$V$ 是稀疏局部卷积/差分算子。系数可依赖 $q,t$ 和固定日/频位置编码，不能在计算本式散度时忽略额外的数据依赖。全局方向使用可分离日频基或共享结构生成，避免引入 $D\times R$ 个自由参数。局部核覆盖六通道，并通过扩张日频尺度表达长程联系。
+\par 只要这些系数对当前 $x$ 不再变化，其散度为
+\begin{align}
+\nabla\cdot\Delta s_\phi={}&-\tr M+
+\sum_r a_r\operatorname{sech}^2(u_r^Tx+c_r)\|u_r\|^2\nonumber\\
+&+\sum_m\gamma_m\operatorname{sech}^2((Vx+e)_m)\|V_{m,:}\|^2.
+\end{align}
+该结构是势函数梯度的一种表达，非线性系数可带符号；用有界参数化控制大小，避免不稳定的巨大 Jacobian。它不是对任意物理分布的充分表达保证，必须通过容量/全局项消融判断。若改为一般 U-Net 或数据依赖门控，不能继续沿用本解析迹。
+\par 单元测试在 $D=12,48,192$ 等小问题上，将解析散度与自动微分完整 Jacobian 的 trace 比较；再测试不同边界 padding、共享权重和通道顺序。测试训练梯度与密度散度时，区分对模型参数求导与对数据求导。
+\subsection{算法 B1：一次训练更新}
+\begin{enumerate}
+\item 从训练实现中抽取 $(y,\vartheta)$，应用冻结 $W$ 得到 $x_0$，将 $\vartheta$ 转换为网络条件 $q$。只读取完整观测及参数，不读取分量真值或初相位。
+\item 抽人工时间 $t$ 与标准正态 $\xi$。默认先采用均匀时间；如增加低噪声分层抽样，记录目标时间权重。若声称保持原均匀积分目标，应乘相应重要性权重。
+\item 计算 $\alpha_t,\sigma_t$ 和 $x_t=\alpha_t x_0+\sigma_t\xi$；评估参考 score 与残差。
+\item 用数值稳定形式计算损失：$D^{-1}\|\sigma_t(s_{G,t}+\Delta s_\phi)+\xi\|^2$，避免先构造低噪声下巨大的 $\xi/\sigma_t$。
+\item 反向传播、检查有限梯度、优化器更新；可做全局梯度范数裁剪但记录阈值与触发比例。按预设衰减更新 EMA，不从测试后验挑选 EMA 或原权重。
+\item 日志记录训练实现 ID、时间区间、损失、梯度范数、学习率、步耗时和峰值显存；定期保存完整可恢复状态。
+\end{enumerate}
+验证时固定独立实现、噪声种子和若干时间层，报告按频段/噪声层分解的误差；使用参数打乱负控检查条件是否被利用。模型选择规则在正式测试前冻结。低噪声的最小训练时间及 ODE 起点须作为联合配置检查，不能隐藏外推区间。
+\subsection{训练恢复与小规模到正式规模}
+检查点包含网络、EMA、优化器、学习率调度器、所有 RNG、数据划分/缩放哈希和更新数。先连续运行若干步，再用同种子停机恢复，对比下一批样本、损失与权重；GPU 非确定算子导致差异时声明原因并测试容差。64 份训练只验工程；256、1024 及更多实现的扩大由独立泛化和后验变化决定，不以单一训练 loss 宣布收敛。
+\chapterpage{算法实施细则 III：概率流评价、加速采样与批量校准}
+\subsection{算法 B2：一次完整似然调用}
+输入固定观测 $x_0$、候选 $\vartheta$、冻结模型与数值配置，输出 $\ell_\phi$、NFE、耗时及状态。
+\begin{enumerate}
+\item 检查参数支持；盒外直接返回 $-\infty$。构建参考协方差和块特征分解，缓存本候选的条件嵌入。观测和网络常驻 GPU。
+\item 定义 ODE 右端：返回 $v=-\beta(x+s)/2$ 及 $\operatorname{div}v=-\beta[D+\operatorname{div}s]/2$。参考 score 的散度是 $-\tr\Sigma_{G,t}^{-1}$，残差使用已验证公式。
+\item 用自适应嵌入 Runge--Kutta 作为参考求解器，状态为 $(x,J)$。向量与标量累积量单独设绝对误差标度；不能让高维向量误差平均掩盖 $J$ 的误差。记录拒绝步数、NFE 和终止原因。
+\item 若需要正的数值起点，明确所定义的平滑分布或端点连接方法；用降低起点和已知高斯控制验证。未解决时不输出“已验证的原始观测似然”。
+\item 合并终端高斯、$J$ 和固定数据 Jacobian，返回标量。以直接端点公式和积分恒等式作配对测试。
+\end{enumerate}
+求解器失败不能按“物理先验为零”悄悄拒绝：先以参考容差重试并保存失败点，持续失败则暂停正式链定位问题，否则可能把数值失败区域切出目标后验。参考计算使用 float64，尝试混合精度前先检查退化方向上的 $\Delta\ell$。
+\subsection{算法 B3：预热、代理拟合与冻结}
+先在原高斯高概率区域及分散先验点进行完整评价；重用已有合格评价，不只从单一高斯最优点开始。将这些数据分成代理拟合与留出检查点，拟合 $g(q)=c+b^Tq-\tfrac12q^THq$ 或“高斯基线加标量残差代理”。二次系数正则化，使用尺度良好的 $q$，报告拟合残差随位置变化。
+\par 对二次代理，若 $H_{ii}>0$，盒内条件分布是截断正态，均值为 $(b_i-\sum_{j\ne i}H_{ij}q_j)/H_{ii}$、方差 $1/H_{ii}$。若不满足该条件，可用盒内一维 MH 替代，不能强行调用无效正态。随机扫描坐标形成可逆内核；固定次数 $K$ 的同一可逆内核复合仍可逆。固定正序扫描通常不能直接当作可逆核，须使用与逆序配对的对称混合。
+\par 预热可更新代理、尺度和步数，正式保留阶段全部冻结；每条链分别标记预热结束状态。若发现新模态需要重拟合，应启动新的预热阶段并清晰划分，而不是在旧正式样本中混入不断改变的近似目标。
+\subsection{算法 B4：外层精确校正循环}
+\begin{enumerate}
+\item 载入当前 $(q,\ell,g)$ 与 RNG。内层运行 $K$ 步，生成 $q'$；全过程在先验盒内处理边界，不用截断后不校正的随机游走。
+\item 对新点计算完整 $\ell'$，计算 $g'$。若候选与当前位置完全相同，可复用评价。
+\item 计算 $\log\alpha=\min(0,\ell'-\ell-g'+g)$，抽 $\log U$ 并决定是否接受。
+\item 无论接受与否都保存一条外层状态；缓存当前位置完整似然。记录内层步数、外层接受、NFE 和累计耗时。
+\item 定期原子写入检查点；恢复后不能丢弃拒绝重复点，也不能重复计算已记入的墙钟。
+\end{enumerate}
+如果混合一个宽支持提议，应为该分量使用其正确 MH 比值；不能将多种提议的接受率混用。校正对冻结数值目标有效；它不能修正扩散密度相对于物理模拟器的偏差。
+\subsection{性能实验与正式评估循环}
+先对相同目标比较：调好尺度的完整 MH、多步导引 $K=1,4,16$、两阶段延迟接受。至少使用分散初值和独立重复，报告最差参数 bulk/tail ESS 每小时及 MCSE。再测试独立链 GPU 小批量，区分单次延迟和总吞吐。不能将同一链连续依赖的提议当作独立 GPU 批次。
+\par 校准驱动对预登记测试列表逐例执行：读取独立数据，盲化真值给推断接口，运行诊断，保存成功/失败状态，最后才读取真值计算覆盖、秩和谱误差。对于同一注入，A/B 共用观测、先验和频带；推断随机种子分别记录。锁定图脚本从联合后验计算分位带和关键二维面板。
+\par 端到端证据包含三个可运行的验收入口：\path{test_conventions} 检查单位、参数、共轭和 FFT；\path{test_density} 检查 score、散度、ODE 和 Jacobian；\path{test_sampler} 检查已知答案、冻结代理、拒绝状态与恢复。这些是计划中的命令/模块名，开发完成后在 README 记录真实调用方法和产物路径。
+
+\clearpage\chapterpage{验收矩阵与统计评价}
+\begin{longtable}{p{21mm}p{64mm}p{60mm}}\toprule
+关口 & 检查内容 & 通过标准与行动\\\midrule\endhead
+P1 合同 & 参数、先验、源池、预处理、目标一致 & 自动检查 names/units/shapes/hashes；不一致不得混合比较\\
+P2 模拟 & 独立分量、功率归一、护栏、相位连续 & 无 NaN/Inf；控制谱在模拟误差内一致；扩大护栏结果稳定\\
+A 高斯 & 协方差 Hermitian/正定、共轭、单位 & Cholesky 有效；解析控制通过；不以额外 jitter 掩盖模型错误\\
+B 得分 & 解析高斯、条件输入、数据隔离 & 参考残差及 score 误差随训练改善；打乱条件对照检验条件有效性\\
+B 密度 & 散度、Jacobian、端点、ODE 容差 & 解析密度/比值一致；工程 $\Delta\ell$ 误差目标 0.1，再验证后验稳定\\
+B 采样 & 分散四链、多模态、恢复 & rank-normalized $\widehat R\le1.01$，bulk ESS$\ge400$，tail ESS$\ge200$，并检查轨迹/MCSE\\
+科学校准 & 独立注入偏差、覆盖与宽度 & 不预设一定改善；报告不确定性、失败率及不可辨识参数\\
+效率 & 单次成本、ESS/小时、训练成本 & 同目标、同硬件条件比较；加速不改变可信后验\\\bottomrule
+\end{longtable}
+门槛是首版执行约定，数值阈值可根据预实验修订并在正式测试前冻结。MCMC 指标不能机械用于 dynesty 输出；嵌套采样另报告终止、权重 ESS、证据不确定性和重复运行稳定性。
+\subsection{多注入指标}
+对第 $r$ 个注入，记录偏差 $b_{ri}=\widehat\theta_{ri}-\theta_{ri}^{\rm true}$、区间宽度、覆盖标记及计算状态。标准化偏差可除以后验标准差，但偏斜/多峰时须同时展示原单位偏差，不能只用一个 z-score。
+\begin{equation}
+\widehat c_{i,\gamma}=\frac1N\sum_r\mathbf1\{\theta_{ri}^{\rm true}\in I_{ri,\gamma}\},\qquad
+\operatorname{SE}(\widehat c)\simeq\sqrt{c(1-c)/N}.
+\end{equation}
+先验预测抽样的边缘贝叶斯区间在模型正确时有名义平均覆盖；固定单一真值的频率学覆盖不必精确等于名义值。两类试验分开标注。$N=200$、$c=0.95$ 时近似标准误约 1.5 个百分点，20 例 pilot 不能精确确认 95\% 覆盖。正式报告使用二项区间。
+\par SBC 从先验抽参数与观测，使用近独立后验样本计算秩；链未混合时不能把秩偏离全部归因于学习模型。单参数边缘校准不等于十维联合校准，补充关键二维关系和后验预测。失败例进入总任务分母并单列，不静默剔除；成功例覆盖和全流程成功率分别报告。
+\subsection{图谱恢复与无声波情形}
+对每个联合后验样本计算三类 $\Omega(f)$，形成逐频点分位带；保留参数相关，不把独立边缘样本随意拼接。逐点带不是整条曲线同时可信带。无声波真值不在有限 $\log\Omega_0$ 先验支持内；检出研究须另设无声波八参数模型或明确的包含零模型，本版主结论不要求 Bayes factor。
+\chapterpage{结果图计划：路线 A 的证据}
+每张图由固定脚本读取版本化结果，不手工选取更有利的实例。图样统一 LaTeX 数学字体、单位、颜色和置信水平；真实值用同一标识。以下是必需图组，可组合为投稿正文图与附录。
+\begin{longtable}{p{12mm}p{58mm}p{75mm}}\toprule
+编号 & 内容与坐标 & 数据、比较和支持结论\\\midrule\endhead
+A1 & 各成分谱：$f$--$\Omega$ 或通道 PSD；下栏比例残差 & 目标谱、独立源实现均值、实现间波动及 Monte Carlo 误差；区分两种误差带。验证四参数与模拟器对应\\
+A2 & 日--频功率图、白化 QQ、尾部与跨 bin/跨日相关 & G/P/PN 共用窗；按频段展示。定位调制、非高斯性与相关，不能只以视觉尖峰判断\\
+A3 & 十参数 corner 与二维关键退化 & 固定预登记注入，A-original/A-matched 与真值；绘图范围相同。揭示声波、AST、银河退化\\
+A4 & 参数偏差与 68\%/95\% 覆盖；横轴场景或参数 & 独立注入集合、二项误差条、失败率；区分固定真值与先验预测试验。验证可重复性\\
+A5 & GB/AST/SW 后验谱带及声波峰附近放大 & 同一注入谱与 A 两版本；分位带从联合样本计算。揭示成分间误分配\\\bottomrule
+\end{longtable}
+\subsection{图形实现细则}
+A1 前景源端功率和响应后通道 PSD 分开，不把 PSD 直接标作 $\Omega$。A2 的基准白化使用独立校准协方差；窗效应与前景效应通过 G 控制分离。A3 展示代表性固定例，不仅展示最大偏差例；全体结果进入 A4。A4 不把“误差条与名义覆盖有重叠”作为唯一自动通过规则，还需检查系统模式与统计功效。
+\par A5 对银河重加权模型画的是参数化的集合谱包络；单次离散谱线作为另一个对象绘制，不能要求所有线都落在平滑后验带内。对于峰值在带外的 SW 注入，展示先验与后验并说明不可辨识性。
+\subsection{必要辅助产物}
+每图配套：图源数据或摘要表、绘图配置、输入链哈希、代码版本、真值、有效样本数、图注草稿。完整大数组存数据目录；Git 保存脚本、摘要和路径/哈希清单。图的结论标签在实验结束后填写，不提前标注“无偏”或“已改进”。
+\clearpage\chapterpage{结果图计划：路线 B 与论文主图组织}
+\begin{longtable}{p{12mm}p{58mm}p{75mm}}\toprule
+编号 & 内容与坐标 & 必需对照和用途\\\midrule\endhead
+B1 & 物理模拟--残差 score--ODE--采样架构 & 标注数据空间/参数空间、冻结权重、端点密度；澄清学习对象\\
+B2 & 已知高斯 $\Delta\ell$、散度误差、端点与容差曲线 & 解析/数值实现对照；小维度及生产维度；验证密度计算而非生成观感\\
+B3 & 独立物理样本数--验证性能；网络消融 & 残差/直接 score，局部/含全局，训练种子；同时报告推断指标，不只有 DSM loss\\
+B4 & A-original/A-matched/B 十参数 corner & 完全相同观测和先验，标出真值；声波二维面板正文突出，完整图可附录\\
+B5 & 配对偏差、覆盖与区间宽度 & 多独立注入、失败率和误差条；关键科学证据，防止只追求窄区间\\
+B6 & 成分谱恢复与相对误差 & 同 A5 设置，含注入、点态 68\%/95\% 带；强调 AST/SW/GB 分离\\
+B7 & ESS--墙钟、ESS--完整调用、链轨迹 & 完整 MH、多步导引、延迟接受，同目标；含预热/代理成本与独立重复\\
+B8 & 外推场景--偏差/覆盖/计算失败 & 新种群扰动、训练外噪声强度、代表性不等臂；定义适用边界\\\bottomrule
+\end{longtable}
+\subsection{正文建议与论证顺序}
+正文可合并为：图 1 方法与数据流程；图 2 谱匹配和非高斯诊断；图 3 解析/数值控制；图 4 代表性后验；图 5 集合覆盖和偏差；图 6 成分谱与声波恢复；图 7 消融/外推；图 8 效率。完整十维 corner、全部链诊断和细分场景放附录。图数是组织建议，不是 PRD 的硬性要求。
+\par 主论证依次回答：生成模型正确吗？原高斯近似遗漏了什么？学习密度实现正确吗？后验是否改善且校准？改善是否超过二阶修正？代价与局限是什么？若主要优势来自二阶响应修正，应据实收敛论点，而不强称高阶非高斯优势。
+\subsection{预先限定论文声明}
+本版主论文讨论参数估计，不以十参数后验直接声称探测到相变。若新增检出结论，另计算同输入无声波模型、无信号注入、误报与检出率，并验证学习密度归一及模型间可比较性。修改观测频带、先验和源种群后，不将新结果当作原论文图 8 的简单重绘。
+\chapterpage{代码接口、目录与证据链}
+\subsection{固定上游与新增实现分离}
+保持 \texttt{external/taiji-sgwb-time-domain/} 原目录及许可证；新增模块放研究代码区域，通过适配层调用。若必须修复上游，保留补丁和数值对照。以下是拟建立接口，不代表当前已经实现：
+\par\noindent
+\begin{tabularx}{\linewidth}{p{48mm}Y}\toprule
+模块/接口 & 职责与输出\\\midrule
+\texttt{parameter\_contract} & 十参数顺序、单位、先验、序列化和配置检查\\
+\texttt{population\_foreground} & 目录、源权重、护栏与逐源响应；返回源级或聚合结果\\
+\texttt{simulate(theta, seed, config)} & 返回含 raw FFT 的数据 bundle 与 provenance\\
+\texttt{preprocess(raw, config)} & 唯一 FFT/互谱实现；可复用测试固定输入\\
+\texttt{gaussian\_likelihood} & A-original/A-matched；显式 covariance convention\\
+\texttt{score\_model} & 条件 score、参考项、解析散度及训练状态\\
+\texttt{loglik(theta, observation)} & 返回 value、NFE、耗时、容差、有限性状态\\
+\texttt{posterior\_sampling} & 代理、MH 校正、多链、恢复、诊断\\
+\texttt{calibration / paper\_figures} & 测试列表、成功/失败、指标与正式图\\\bottomrule
+\end{tabularx}
+\subsection{运行清单}
+每次任务生成 \texttt{run\_manifest.json}，包含：run ID、源码提交、脏补丁哈希、环境锁定、参数/数据配置、种子及 RNG 算法、硬件、输入/模型哈希、开始/结束时间、累计墙钟、恢复次数、输出清单与状态。避免重启后重复计时；编译/加载、训练/采样、后处理分别计时。
+\par 原始数据、检查点、大链不必直接进入普通 Git。仓库保存索引、哈希、轻量摘要、图和脚本；服务器保留受管理大文件并验证备份。禁止把登录凭据、内部访问令牌或非公开个人信息写入结果清单。
+\subsection{三个运行级别}
+\textbf{smoke：}维度小、计算短，检查 finite、输入输出、恢复；不能报告科学结论。\par
+\textbf{pilot：}完整参数和代表性规模，选择容差、网络与采样参数；可调配置，不进入最终锁定测试。\par
+\textbf{science：}冻结模型与配置、独立数据、多种子与完整诊断，用于正文。不同级别输出目录和图注显式区分。
+\par 本文保存在工作文件夹，属于指导文件；生成文档不代表授权启动服务器训练或改动主仓库。本次不推送代码。
+\chapterpage{阶段排期、交付物与决策门}
+\begin{longtable}{p{15mm}p{52mm}p{61mm}p{16mm}}\toprule
+阶段 & 工作与交付 & 下一步条件 & 估计\\\midrule\endhead
+P1 & 冻结参数/预处理/源合同；资源测速表 & 单位、形状、先验、配置可机器核对 & 1 周\\
+P2 & 源重加权与共同模拟器；A1/A2 初版 & 控制谱、响应、护栏、相位及数据隔离通过 & 2--3 周\\
+P3 & A-original/A-matched；基线链与 A3--A5 & 能区分模型失配与采样误差 & 1--2 周\\
+P4 & 残差得分、散度和 ODE；B2 & 已知答案控制与端点/容差检查通过 & 2--3 周\\
+P5 & B 训练学习曲线、代理加速、单例四链 & 独立观测采样诊断通过；可重复 & 2--4 周\\
+P6 & 独立校准、消融、稳健性；B4--B8 & 科学结论有集合证据与误差条 & 3--5 周\\
+P7 & 论文图表、方法与结果、内部修订 & 结论、图和证据逐项对应 & 2--3 周\\\bottomrule
+\end{longtable}
+P4 的解析控制可与 P2 并行，方法写作与 P3 并行；完整物理训练依赖 P2，锁定测试依赖 P5。上述是工作量估计，不是当前 A800 实测排期。按稳定投入和资源可用估计：首轮可信 A/B 对照约 6--10 周，较完整投稿准备约 12--18 周；重大模拟/算法重构可能延至 4--6 个月。
+\subsection{用实测替代猜测}
+先测每份模拟 $t_{\rm sim}$、训练每步成本、一次似然的 NFE/秒、达到诊断门槛的后验成本 $t_{\rm post}$。粗预算
+\begin{equation}
+T_{\rm data}\approx N_{\rm sim}t_{\rm sim}/P_{\rm eff},\qquad
+T_{\rm cal}\approx N_{\rm test}t_{\rm post}/P_{\rm eff}.
+\end{equation}
+有效并行度受内存、I/O、GPU 批量与共享资源限制，不等于理论核心数。20 例独立 pilot 用于识别问题；正式集合例数由精度和预算共同确定，初步以 200 例作为规划点而非硬承诺。缩短观测的大集合不能冒充完整 90 日覆盖证据。
+\subsection{关键决策门}
+若 P2 参数真值映射失败，先修复生成模型；若 A-matched 已足够好，收敛适用范围而不人为恶化；若 B2 失败，不启动正式 MCMC；若单例链不混合，先调整导引和预算；若模型校准失败，查训练覆盖与物理失配，不能仅延长链。若全规模校准过贵，明确降低研究范围、增加算力或改进似然评估，而非降低诊断标准。
+\par 以 2026 年 11 月 28 日为起点，12 月上旬完成合同/测速、12 月下旬形成 A 与 B 原型是工作目标；2027 年 1--2 月形成主要结果，2 月下旬至 4 月上旬完成较完整投稿准备是当前估计。每阶段用实际数据修订时间，不以日期替代验收。
+\chapterpage{首轮执行清单与参考依据}
+\subsection{第一批实际工作}
+\begin{enumerate}
+\item 建立十参数合同和机器检查，记录原论文注入点及全先验；从正式输入导出频率掩码和预处理约定。
+\item 固定目录及轨道版本，确认源功率定义、初相位、护栏和亮源处理；实现小源数逐源响应测试。
+\item 建立四参数目标带功率与权重映射，检查空带和极端先验权重；先小规模验证再扩到百万源。
+\item 生成 G/P 配对控制，验证源端谱、通道自谱/互谱、共轭与 FFT 标度，保存 A1/A2。
+\item 同时实现低维高斯 score/ODE/采样控制，核对 Jacobian、散度和恢复，不等待大数据全部生成。
+\item 填写单份模拟、单次似然和储存预算，随后冻结首轮 A 正式配置与 B 训练配置。
+\end{enumerate}
+\subsection{复核来源及其使用边界}
+\begin{enumerate}[label={[\arabic*]}]
+\item Liang 等，\emph{Full-Covariance Bayesian Inference of Stochastic Gravitational-Wave Backgrounds with Time-Domain Simulations for Taiji-like Missions}。本版符号核对论文式 (2.9)--(2.15)、(2.24) 与表 1：\url{https://arxiv.org/html/2608.11276v2}；实现核对作者固定代码：\url{https://github.com/Eric-Friedman-666/taiji-sgwb-time-domain}。
+\item 本地主仓库提交 \texttt{ad07145} 下的 \path{external/taiji-sgwb-time-domain/py_code/parameters.py}、\texttt{py\_code/model.py}、\texttt{infer.py}。本文新模拟器、代理和验收设计属于计划，不冒称上游已有功能。
+\item Song 等，\emph{Score-Based Generative Modeling through Stochastic Differential Equations}，ICLR 2021。\url{https://arxiv.org/abs/2011.13456}。支持 score 与概率流密度框架；本项目条件残差结构需独立实现和验证。
+\item \emph{Multilevel Delayed Acceptance MCMC}。\url{https://doi.org/10.1137/22M1476770}。作为可逆代理转移与延迟接受方法依据；实际代码仍须已知答案控制。
+\item Zheng 等，\emph{Improved Techniques for Maximum Likelihood Estimation for Diffusion ODEs}，ICML 2023。\url{https://proceedings.mlr.press/v202/zheng23c.html}。
+\item Talts 等，\emph{Validating Bayesian Inference with Simulation-Based Calibration}。\url{https://arxiv.org/abs/1804.06788}。用于区分实现诊断、后验采样与模拟校准。
+\item 路线 B 训练讨论：\url{https://chatgpt.com/s/cx_6b083c0379dc8191b6ec92320d295238}；推断讨论：\url{https://chatgpt.com/s/cx_6b083ba045d881918242139986236f9e}。历史方案的六参数银河模型和训练/耗时记录只作工程参考，不能直接转移为本版成果。
+\end{enumerate}
+\subsection{本版固定结论}
+研究推进以共同物理生成器为基础，以原论文十参数为接口，以 A-original/A-matched/B 的公平比较为主线，以独立校准与成分谱恢复为科学证据。采样加速保持同一冻结目标后验。训练规模和计算配置允许调整，但每次调整均保留可追溯证据，并在正式结果中准确声明使用范围。
+\end{document}

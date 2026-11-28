@@ -1,3 +1,3 @@
 # Project implementation
 
-Project-owned implementation will be organized under `sgwb_diffusion/`. The current directories reserve module boundaries; they do not contain an implemented model or pipeline.
+The [sgwb_diffusion package](sgwb_diffusion/README.md) defines shared and route-specific implementation boundaries for the ten-parameter study. Experiment definitions are listed in [research configurations](../configs/research/README.md) and execution entry points in [research scripts](../scripts/research/README.md). The original full-covariance reproduction uses its separately pinned upstream code.

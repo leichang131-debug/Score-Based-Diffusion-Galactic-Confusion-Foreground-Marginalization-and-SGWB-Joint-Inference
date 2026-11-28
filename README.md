@@ -1,10 +1,10 @@
 # Galactic Foreground and SGWB Joint Inference
 
-Research on joint inference of the Galactic foreground, stochastic gravitational-wave background (SGWB), and instrument noise. The current baseline is the full-covariance Taiji framework of Liang et al. Score-based likelihood correction remains a future research direction.
+Research on joint inference of the Galactic foreground, stochastic gravitational-wave background (SGWB), and instrument noise. The current baseline is the full-covariance Taiji framework of Liang et al. The next research phase is a paired study of Gaussian inference and score-based likelihood correction under the same ten-parameter model.
 
-## Current baseline
+## Full-covariance reference baseline
 
-The immediate task is to reproduce Figure 8 of [Full-Covariance Bayesian Inference of Stochastic Gravitational-Wave Backgrounds with Time-Domain Simulations for Taiji-like Missions](https://arxiv.org/abs/2608.11276v2) using the [authors' code](https://github.com/Eric-Friedman-666/taiji-sgwb-time-domain/tree/e5ebd75639c3433717ff2cafe52e7f2f5a3f34bb). The paper and source have been reviewed. The complete upstream source is tracked in [`external/taiji-sgwb-time-domain/`](external/taiji-sgwb-time-domain/README.md). See the [local environment setup and checks](environments/taiji-sgwb-time-domain/README.md). The [archived Figure 8 replay](results/taiji-sgwb-time-domain/reference-replay/README.md) is complete. All three [formal ten-parameter fits and timing records](results/taiji-sgwb-time-domain/formal-sampling/README.md) are archived. Matched null runs remain pending.
+The reference campaign reproduced Figure 8 of [Full-Covariance Bayesian Inference of Stochastic Gravitational-Wave Backgrounds with Time-Domain Simulations for Taiji-like Missions](https://arxiv.org/abs/2608.11276v2) using the [authors' code](https://github.com/Eric-Friedman-666/taiji-sgwb-time-domain/tree/e5ebd75639c3433717ff2cafe52e7f2f5a3f34bb). The paper and source have been reviewed. The complete upstream source is tracked in [`external/taiji-sgwb-time-domain/`](external/taiji-sgwb-time-domain/README.md). See the [local environment setup and checks](environments/taiji-sgwb-time-domain/README.md). The [archived Figure 8 replay](results/taiji-sgwb-time-domain/reference-replay/README.md) is complete. All three [formal ten-parameter fits and timing records](results/taiji-sgwb-time-domain/formal-sampling/README.md) are archived. Matched null runs remain pending.
 
 The model combines two instrument-noise amplitudes, four effective Galactic double white dwarf foreground parameters, two astrophysical SGWB parameters, and two phase-transition sound-wave parameters. It uses complex XYZ spectral covariance and Bilby/Dynesty nested sampling.
 
@@ -15,6 +15,19 @@ The model combines two instrument-noise amplitudes, four effective Galactic doub
 | Unequal-arm time domain | `fit_083` | `fit_082` |
 
 The three full fits supply the joint posteriors. Each matched null fit supplies the reference evidence for the corresponding Bayes factor. The [baseline plan](docs/research-plan/full-covariance-baseline.md) defines the acceptance criteria. The [reproduction index](docs/reproduction/taiji-sgwb-time-domain/README.md) tracks progress.
+
+## Active research program
+
+The [Route A/B implementation plan v1.1](docs/research-plan/route-ab/README.md) specifies the shared ten-parameter physical model, numerical acceptance gates, and planned figures. Both routes use the same priors and locked test observations for paired evaluation.
+
+| Workstream | Scope | Configuration and evidence |
+| --- | --- | --- |
+| Shared | Coherent DWD simulation, the original ten-parameter contract, complex XYZ preprocessing and validation | [Configuration](configs/research/shared/README.md) · [Evidence](results/research/shared/README.md) |
+| Route A | Original and covariance-matched Gaussian likelihoods on the new simulated observations | [Configuration](configs/research/route-a/README.md) · [Evidence](results/research/route-a/README.md) |
+| Route B | Conditional residual score training, probability-flow likelihood and corrected posterior sampling | [Configuration](configs/research/route-b/README.md) · [Evidence](results/research/route-b/README.md) |
+| Paired comparison | Posterior recovery, injection calibration, component spectra and compute cost | [Evidence index](results/research/comparison/README.md) |
+
+The directory structure and technical plan are available. [Research execution](scripts/research/README.md) and the route-specific results indices describe the planned implementation and outputs.
 
 ## Repository layout
 
